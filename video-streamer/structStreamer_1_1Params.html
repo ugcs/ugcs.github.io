@@ -78,8 +78,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a2586ab3a5f67b8fec5da59d92575cd78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd8c10d4984ceb056fe8797fc675c1d"><td class="memItemLeft" align="right" valign="top">Optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structStreamer_1_1Params.html#a7cd8c10d4984ceb056fe8797fc675c1d">tailNumber</a></td></tr>
 <tr class="separator:a7cd8c10d4984ceb056fe8797fc675c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aa59b08e0199447faa347172b779ba4"><td class="memItemLeft" align="right" valign="top"><a id="a3aa59b08e0199447faa347172b779ba4"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>targetUri</b></td></tr>
+<tr class="memitem:a3aa59b08e0199447faa347172b779ba4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structStreamer_1_1Params.html#a3aa59b08e0199447faa347172b779ba4">targetUri</a></td></tr>
 <tr class="separator:a3aa59b08e0199447faa347172b779ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53296e88b0c7be35b49a33ebd9bf1596"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structStreamer_1_1Params.html#a53296e88b0c7be35b49a33ebd9bf1596">transcodeBitrate</a> = 0</td></tr>
 <tr class="separator:a53296e88b0c7be35b49a33ebd9bf1596"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,6 +102,24 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>targetUri</b><
       </table>
 </div><div class="memdoc">
 <p>User-defined tail number, may be empty. </p>
+
+</div>
+</div>
+<a id="a3aa59b08e0199447faa347172b779ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa59b08e0199447faa347172b779ba4">&#9670;&nbsp;</a></span>targetUri</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Streamer::Params::targetUri</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Target URI for streaming. Examples:</p><ul>
+<li><code>udp://1.2.3.4:3338</code> - Plain UDP streaming, suitable for external MISP-compliant players such as GIS software or just a regular media player (metadata will not be available in such case).</li>
+<li><code>urtp+connect://1.2.3.4://3341</code> - URTP streaming with outgoing connection. URTP is UgCS proprietary protocol supported by its Command Center components. It ensures better quality on non-reliable links. </li>
+</ul>
 
 </div>
 </div>
