@@ -70,7 +70,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a7283eaacfb62b252b8ac1e9815ec27a9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVsParams.html#a7283eaacfb62b252b8ac1e9815ec27a9">opaque</a></td></tr>
+<tr class="memitem:a7283eaacfb62b252b8ac1e9815ec27a9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVsParams.html#a7283eaacfb62b252b8ac1e9815ec27a9">opaque</a> = nullptr</td></tr>
 <tr class="separator:a7283eaacfb62b252b8ac1e9815ec27a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a074625007994bb67c36457aef8c1e88c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVsParams.html#a074625007994bb67c36457aef8c1e88c">vehicleId</a></td></tr>
 <tr class="separator:a074625007994bb67c36457aef8c1e88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -95,7 +95,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* VsParams::opaque</td>
+          <td class="memname">void* VsParams::opaque = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -131,7 +131,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Target URI for streaming. Examples:</p><ul>
 <li><code>udp://1.2.3.4:3338</code> - Plain UDP streaming, suitable for external MISP-compliant players such as GIS software or just a regular media player (metadata will not be available in such case).</li>
-<li>`urtp+connect://1.2.3.4://3341 - URTP streaming with outgoing connection. URTP is UgCS proprietary protocol supported by its Command Center components. It ensures better quality on non-reliable links. </li>
+<li>`urtp+connect://1.2.3.4://3341 - URTP streaming with outgoing connection. URTP is UgCS proprietary protocol supported by its Command Center components. It ensures better quality on unreliable links. </li>
 </ul>
 
 </div>
