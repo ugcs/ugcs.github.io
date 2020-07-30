@@ -1,0 +1,96 @@
+# This is a basic workflow to help you get started with Actions
+
+name: MultiDoc
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  #schedule:
+#    - cron: '0 */12 * * *'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build-docs:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:  
+        
+    # checkout cpp-sdk
+    - name: CPP-SDK CHECKOUT
+      uses: actions/checkout@v2
+      with:
+        #repository: ugcs/vsm-cpp-sdk
+        repository: ugcs/vsm-cpp-sdk
+        path: './cpp-sdk/'
+   
+    # checkout doxyrest
+    - name: DOXYREST CHECKOUT
+      uses: actions/checkout@v2
+      with:
+        #repository: ugcs/vsm-cpp-sdk
+        repository: ugcs/doxyrest-bin
+        path: './doxyrest-bin/'
+        
+    - name: MAKE DIAGRAMS
+      run: |
+        sudo apt-get install graphviz -y
+        cd ./cpp-sdk/doc
+        java -jar ../tools/plantuml.jar -o ${GITHUB_WORKSPACE}/cpp-sdk/doc/images/diagrams diagrams/*.uml
+        ls images
+        ls images/diagrams
+      shell: bash
+
+    - name: CPP-SDK DOXYGEN BUILD
+      uses: mattnotmitt/doxygen-action@v1
+      with:
+        working-directory: 'cpp-sdk/doc/'
+        doxyfile-path: default.conf
+
+    - name: CPP-SDK DOXYREST BUILD
+      run: |
+        chmod +x doxyrest-bin/bin/doxyrest
+        cd cpp-sdk/doc
+        ../../doxyrest-bin/bin/doxyrest -c doxyrest-config.lua
+      shell: bash
+
+    - name: CPP-SDK SPHINX BUILD
+      run: |
+        sudo pip3 install sphinx
+        sudo pip3 install pydata-sphinx-theme
+        cd cpp-sdk/doc
+        sphinx-build -b html -c . rst html2
+      shell: bash
+
+    - name: CHECKOUT PAGES
+      uses: actions/checkout@v2
+      with:
+        path: './pages/'
+
+
+    - name: UPDATE REPO
+      run: |
+        # remove all from 
+      
+        rm -rf ./pages/cpp-sdk
+        mkdir -p ./pages/cpp-sdk
+              
+        cp -r ./cpp-sdk/doc/html2/* ./pages/cpp-sdk
+      shell: bash
+
+    - name: COMMIT REPO
+      uses: EndBug/add-and-commit@v4
+      with:
+        add: '.'
+        author_name: GA
+        author_email: GA@ugcs.com
+        cwd: './pages/'
+        message: 'auto update'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
