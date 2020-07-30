@@ -1,0 +1,84 @@
+.. index:: pair: class; ugcs::vsm::internal::Singleton_creator
+.. _doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator:
+
+template class ugcs::vsm::internal::Singleton_creator
+=====================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Helper class for singletons instantiation. :ref:`More...<details-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <singleton.h>
+	
+	template <class T, class = void>
+	class Singleton_creator
+	{
+	public:
+		// methods
+	
+		static std::shared_ptr<T> :ref:`Create<doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1af3d0203ee388b5c02349131798bee770>`();
+	
+		template <typename... Args>
+		static std::shared_ptr<T> :ref:`Create<doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1ae604bb3061e08e8a4e4615f2da6d60d7>`(Args&&... args);
+	};
+.. _details-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Helper class for singletons instantiation.
+
+It deals with classes both having and not having default constructor.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1af3d0203ee388b5c02349131798bee770:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static std::shared_ptr<T> Create()
+
+Get singleton instance for a class which does not have default constructor.
+
+It is never created without arguments, so return null.
+
+.. index:: pair: function; Create
+.. _doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1ae604bb3061e08e8a4e4615f2da6d60d7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static std::shared_ptr<T> Create(Args&&... args)
+
+Create singleton instance.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- args
+
+		- Arguments for singleton class constructor.
+
+
+
+.. rubric:: Returns:
+
+Pointer to the created object.
+

@@ -1,0 +1,66 @@
+.. index:: pair: enum; Field_type_id
+.. _doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24:
+
+enum ugcs::vsm::mavlink::Field_type_id
+======================================
+
+Overview
+~~~~~~~~
+
+ID for field type in MAVLink message. :ref:`More...<details-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <mavlink.h>
+
+	enum Field_type_id
+	{
+	    :ref:`NONE<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24a082365d8d0d0c19ffe59a02b42b7bd0e>`,
+	    :target:`CHAR<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24ac58892313aa0e54d78a7512cf896a11b>`,
+	    :target:`INT8<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24ab11c217dc23a268ffbcf70726dcfcaab>`,
+	    :target:`UINT8<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24acc79d10597e4abdc87b8727be0ddc59e>`,
+	    :target:`INT16<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24a435d901590df003f0260bf2899ddc607>`,
+	    :target:`UINT16<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24a9a8abf5e775505b332ee1ec1c1c4c90d>`,
+	    :target:`INT32<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24a6ada263ce43ded08bfa94ccefc7f348a>`,
+	    :target:`UINT32<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24afe9e4be5c284e78233add1be0c3629e9>`,
+	    :target:`INT64<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24a6726ff83a4572e1d49edd4bde9c43607>`,
+	    :target:`UINT64<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24a9b3b0c1083c42c693644314d2d9be88e>`,
+	    :target:`FLOAT<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24ab1fd49702a2a2d4938fa022ea070953e>`,
+	    :target:`DOUBLE<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24ad039f6e6c3e3315879edf9984753393f>`,
+	    :target:`UINT8_VERSION<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24abc295135b6644ce9b2c156a0b9330a27>`,
+	    :ref:`FIELD_TYPE_MAX<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24adc89fa81977fd9be73d4b5db92f7ca0f>`,
+	};
+
+.. _details-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+ID for field type in MAVLink message.
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; NONE
+.. _doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24a082365d8d0d0c19ffe59a02b42b7bd0e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	NONE
+
+Special value for internal usage.
+
+Indicates that value not present.
+
+.. index:: pair: enumvalue; FIELD_TYPE_MAX
+.. _doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24adc89fa81977fd9be73d4b5db92f7ca0f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	FIELD_TYPE_MAX
+
+Number of valid types.
+

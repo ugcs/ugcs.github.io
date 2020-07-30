@@ -1,0 +1,22 @@
+.. index:: pair: enum; Camera_trigger_state
+.. _doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1acd6d8b58a57c088a5aef98b24173a504:
+
+enum ugcs::vsm::Vehicle_command::Camera_trigger_state
+=====================================================
+
+Camera trigger state.
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <vehicle_command.h>
+
+	enum Camera_trigger_state
+	{
+	    :target:`SINGLE_SHOT<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1acd6d8b58a57c088a5aef98b24173a504aefdc99dee0381881dbc1483a1dbd2429>`,
+	    :target:`VIDEO_START<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1acd6d8b58a57c088a5aef98b24173a504a5e2ad1656420fde8829cc92d633cb3ac>`,
+	    :target:`VIDEO_STOP<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1acd6d8b58a57c088a5aef98b24173a504a8d5ab82f53c2c1c52a13575a2bde22ae>`,
+	    :target:`VIDEO_TOGGLE<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1acd6d8b58a57c088a5aef98b24173a504abb43db4cebf301371e4c02144d094ba0>`,
+	    :target:`UNKNOWN<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1acd6d8b58a57c088a5aef98b24173a504a696b031073e74bf2cb98e5ef201d4aa3>`,
+	};
+

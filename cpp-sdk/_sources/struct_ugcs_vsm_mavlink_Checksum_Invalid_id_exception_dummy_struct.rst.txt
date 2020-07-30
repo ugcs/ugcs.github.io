@@ -1,0 +1,23 @@
+.. index:: pair: struct; ugcs::vsm::mavlink::Checksum::Invalid_id_exception_dummy_struct
+.. _doxid-dd/dad/structugcs_1_1vsm_1_1mavlink_1_1_checksum_1_1_invalid__id__exception__dummy__struct:
+
+struct ugcs::vsm::mavlink::Checksum::Invalid_id_exception_dummy_struct
+======================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`Exception <doxid-de/de2/classugcs_1_1vsm_1_1_exception>` for unknown message ID. :ref:`More...<details-dd/dad/structugcs_1_1vsm_1_1mavlink_1_1_checksum_1_1_invalid__id__exception__dummy__struct>`
+
+.. _details-dd/dad/structugcs_1_1vsm_1_1mavlink_1_1_checksum_1_1_invalid__id__exception__dummy__struct:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Exception <doxid-de/de2/classugcs_1_1vsm_1_1_exception>` for unknown message ID.
+
+Type for a new exception class differentiation.
+

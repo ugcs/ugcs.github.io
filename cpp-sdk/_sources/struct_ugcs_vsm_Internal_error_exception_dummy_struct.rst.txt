@@ -1,0 +1,23 @@
+.. index:: pair: struct; ugcs::vsm::Internal_error_exception_dummy_struct
+.. _doxid-d5/d7f/structugcs_1_1vsm_1_1_internal__error__exception__dummy__struct:
+
+struct ugcs::vsm::Internal_error_exception_dummy_struct
+=======================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Some unexpected internal error occurred. :ref:`More...<details-d5/d7f/structugcs_1_1vsm_1_1_internal__error__exception__dummy__struct>`
+
+.. _details-d5/d7f/structugcs_1_1vsm_1_1_internal__error__exception__dummy__struct:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Some unexpected internal error occurred.
+
+Potential SW bug.
+

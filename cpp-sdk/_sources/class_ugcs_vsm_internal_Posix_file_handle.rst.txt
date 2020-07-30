@@ -1,0 +1,114 @@
+.. index:: pair: class; ugcs::vsm::internal::Posix_file_handle
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle:
+
+class ugcs::vsm::internal::Posix_file_handle
+============================================
+
+.. toctree::
+	:hidden:
+
+	struct_ugcs_vsm_internal_Posix_file_handle_Io_cb.rst
+
+Overview
+~~~~~~~~
+
+POSIX-specific implementation of system native file handle. :ref:`More...<details-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <posix_file_handle.h>
+	
+	class Posix_file_handle: public :ref:`ugcs::vsm::File_processor::Stream::Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`
+	{
+	public:
+		// structs
+	
+		struct :ref:`Io_cb<doxid-d8/d53/structugcs_1_1vsm_1_1internal_1_1_posix__file__handle_1_1_io__cb>`;
+
+		// construction
+	
+		:ref:`Posix_file_handle<doxid-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle_1a564cdd3b364b5f639cd1ccce84a1ceeb>`(int fd, int write_fd = -1);
+	
+		:ref:`Posix_file_handle<doxid-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle_1aae06a11978af6f33df54730f91358725>`(
+			const std::string& path,
+			const :ref:`File_processor::Stream::Mode<doxid-de/d57/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_mode>`& mode,
+			mode_t permissions = S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH
+			);
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// typedefs
+	
+		typedef std::unique_ptr<:ref:`Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`> :ref:`Unique_ptr<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a2de77c6c5a0cf7fbcbeb655f5577acd6>`;
+
+		// classes
+	
+		class :ref:`Stream_ref_holder<doxid-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder>`;
+
+		// fields
+	
+		:ref:`Read_request::Ptr<doxid-d1/d78/classugcs_1_1vsm_1_1_read__request_1a2a58c202f3c3991a521d684d37eb2170>` :ref:`cur_read_request<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a536ef3b73eb8a98cfa83502e306436cb>`;
+		:ref:`Write_request::Ptr<doxid-d4/df0/classugcs_1_1vsm_1_1_write__request_1a06372238c834f4b54582985c1738539a>` :ref:`cur_write_request<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a59304841b836b8a28c2293c78b9f1090>`;
+		:ref:`Io_request::Ptr<doxid-d8/dbb/classugcs_1_1vsm_1_1_io__request_1a9b14e2f98e56cbeed5c7ba3549b62541>` :ref:`cur_lock_request<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a31858b5a1e9239809a77539e094a4090>`;
+		:ref:`Io_request::Ptr<doxid-d8/dbb/classugcs_1_1vsm_1_1_io__request_1a9b14e2f98e56cbeed5c7ba3549b62541>` :ref:`cur_unlock_request<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a16b798c47d786edccf69d60600a53232>`;
+		bool :ref:`is_closed<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1af9825e9560ff5d1915e7a0552aa6e301>` = false;
+		:ref:`Stream::Ptr<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a1ded5e2b5857bbb1b626998818eb47a0>` :ref:`stream<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1ab8bdb884e6cdeace78e42263940b1261>`;
+		:ref:`Stream::Ptr<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a1ded5e2b5857bbb1b626998818eb47a0>` :ref:`write_active<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a810a6838e9f8f09013355f7a4c9dde3d>`;
+		:ref:`Stream::Ptr<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a1ded5e2b5857bbb1b626998818eb47a0>` :ref:`read_active<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1aec0618ac644e1e1aacbb27380bf2acd6>`;
+
+		// methods
+	
+		void :ref:`Set_stream<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a18eaa9e16f9f0683853cf1f722e25db1>`(:ref:`Stream::Ptr<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a1ded5e2b5857bbb1b626998818eb47a0>` stream);
+		virtual void :ref:`Write<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a1f6b9eab57510db56615f3c4f8b45cbb>`() = 0;
+		virtual void :ref:`Read<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a1cad461643bf051493d4e363403ce9f0>`() = 0;
+		virtual :ref:`Lock_result<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3>` :ref:`Try_lock<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a361c3c69d2b3e8d11a5c67f6901f86c6>`() = 0;
+		virtual bool :ref:`Lock<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1afb4f1ab73aba38885d9c9f65d24bd7a8>`() = 0;
+		virtual bool :ref:`Unlock<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1aec02471d5b9235637c18ab3d09b8e732>`() = 0;
+		virtual bool :ref:`Cancel_write<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a482f6d5aa1dc38e7c4fcb378fd909017>`() = 0;
+		virtual bool :ref:`Cancel_read<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a0f20ce6f1fde425ad8ccbbec4cf0205b>`() = 0;
+		virtual void :ref:`Close<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a6205971499052eb729f04ab1695c64b3>`() = 0;
+		void :ref:`Handle_write_abort<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1afb43a987e84eecc0f64513e7bbbb38f3>`();
+		void :ref:`Handle_read_abort<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1a0103d1be17dd0f2f2f13e5f15c6f8f4a>`();
+
+.. _details-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+POSIX-specific implementation of system native file handle.
+
+Construction
+------------
+
+.. index:: pair: function; Posix_file_handle
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle_1a564cdd3b364b5f639cd1ccce84a1ceeb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Posix_file_handle(int fd, int write_fd = -1)
+
+Construct an instance based on already opened descriptors.
+
+.. index:: pair: function; Posix_file_handle
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle_1aae06a11978af6f33df54730f91358725:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Posix_file_handle(
+		const std::string& path,
+		const :ref:`File_processor::Stream::Mode<doxid-de/d57/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_mode>`& mode,
+		mode_t permissions = S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH
+		)
+
+Construct an instance by opening a file specified by path.
+

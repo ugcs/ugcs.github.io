@@ -1,0 +1,86 @@
+.. index:: pair: class; ugcs::vsm::Geodetic_tuple
+.. _doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple:
+
+class ugcs::vsm::Geodetic_tuple
+===============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Coordinates tuple for geodetic CS. :ref:`More...<details-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <coordinates.h>
+	
+	class Geodetic_tuple
+	{
+	public:
+		// fields
+	
+		double :ref:`latitude<doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1aa3640ccfae673e2056b918a7c558643a>`;
+		double :ref:`longitude<doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1a80e181bdf76f930bacde63cec6ab6f21>`;
+		double :ref:`altitude<doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1a3726286567b21cd4fcd16e8e2cad2ffa>`;
+
+		// construction
+	
+		:ref:`Geodetic_tuple<doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1a3582b0298705c953f4a3df96ce99e2d7>`(double latitude, double longitude, double altitude);
+	};
+.. _details-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Coordinates tuple for geodetic CS.
+
+Fields
+------
+
+.. index:: pair: variable; latitude
+.. _doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1aa3640ccfae673e2056b918a7c558643a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	double latitude
+
+Latitude value, radians.
+
+.. index:: pair: variable; longitude
+.. _doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1a80e181bdf76f930bacde63cec6ab6f21:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	double longitude
+
+Longitude value, radians.
+
+.. index:: pair: variable; altitude
+.. _doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1a3726286567b21cd4fcd16e8e2cad2ffa:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	double altitude
+
+Altitude value, meters.
+
+Construction
+------------
+
+.. index:: pair: function; Geodetic_tuple
+.. _doxid-dc/d3b/classugcs_1_1vsm_1_1_geodetic__tuple_1a3582b0298705c953f4a3df96ce99e2d7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Geodetic_tuple(double latitude, double longitude, double altitude)
+
+Construct the tuple with specific values.
+

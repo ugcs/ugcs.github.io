@@ -1,0 +1,97 @@
+.. index:: pair: page; Overview
+.. _doxid-dc/d98/ucs_vsm_overview_page:
+
+Overview
+========
+
+
+
+.. _doxid-dc/d98/ucs_vsm_overview_page_1purpose_section:
+
+Purpose
+~~~~~~~
+
+The purpose of VSM C++ SDK (further referred as SDK) is to create *Vehicle Specific Modules* (VSM) for Universal Ground Control Software(UgCS). Most importantly, SDK can be considered as a "glue" layer between VSM application user code which is able to interact with physical vehicles and UgCS infrastructure:
+
+.. image:: ../../sdk_high_level.png
+
+
+
+.. image:: ../../sdk_high_level.png
+	:width: 10
+	:alt: SDK infrastructure
+
+However, SDK is not limited to that. It facilitates (but not forces) developers to create cross-platform VSM applications using only features provided by SDK itself without using 3rd party libraries like `Boost <http://www.boost.org>`__, `Qt <http://qt-project.org/>`__ and similar.
+
+
+
+
+
+.. _doxid-dc/d98/ucs_vsm_overview_page_1goals_section:
+
+Design goals
+~~~~~~~~~~~~
+
+* **Efficiency**
+  
+  To achieve that, C++ programming language (C++14 standard) is used for SDK implementation and also is a requirement for VSM application development.
+
+* **Universality**
+  
+  SDK provides additional cross-platform features which are considered to be demanded in a typical VSM application, for example:
+  
+  * File I/O using :ref:`ugcs::vsm::File_processor <doxid-d9/dc7/classugcs_1_1vsm_1_1_file__processor>`.
+  
+  * Networking I/O using :ref:`ugcs::vsm::Socket_processor <doxid-d0/d76/classugcs_1_1vsm_1_1_socket__processor>`.
+  
+  * Serial I/O using :ref:`ugcs::vsm::Serial_processor <doxid-dc/dc8/classugcs_1_1vsm_1_1_serial__processor>`.
+  
+  * Logging using :ref:`ugcs::vsm::Log <doxid-d4/da6/classugcs_1_1vsm_1_1_log>`.
+  
+  * Asynchronous programming (see :ref:`Asynchronous programming framework <doxid-d4/da8/async_programming_page>`).
+  
+  * Coordinates manipulation using :ref:`ugcs::vsm::Position <doxid-df/d50/classugcs_1_1vsm_1_1_position>`.
+  
+  * Configuration file management using :ref:`ugcs::vsm::Properties <doxid-d8/d68/classugcs_1_1vsm_1_1_properties>`.
+  
+  The usage of additional features, however, is not mandated. VSM application developer is free to use platform-specific methods or any other libraries to communicate with vehicles and for other purposes. To facilitate cross-platform compilation, `CMake <http://www.cmake.org>`__ build system is utilized by SDK.
+
+* **Developer friendliness**
+  
+  SDK is mainly targeted for experienced developers and complex VSM applications and scenarios, but in the same time SDK can be used in a simple way by beginners or when one wants to play around with the simplest possible VSM application and gradually extend it:
+  
+  :ref:`"Hello world" VSM application <doxid-d8/db6/hello_world_vsm_page>`
+
+
+
+
+
+.. _doxid-dc/d98/ucs_vsm_overview_page_1usage_section:
+
+Usage
+~~~~~
+
+The usage of SDK consists of the following:
+
+* **General guidelines**
+  
+  Start here.
+  
+  * building_page
+  
+  * :ref:`"Hello world" VSM application <doxid-d8/db6/hello_world_vsm_page>`
+
+* **Vehicle interface**
+  
+  Should be used by VSM application developer to communicate with UgCS.
+  
+  * :ref:`Device interface <doxid-da/d5e/vehicle_interface_page>`
+
+* **Additional functionality**
+  
+  
+  
+  Functionality not specific to UgCS, but provided for convenient cross-platform VSM application development. It is technically possible to develop a VSM application without using of additional functionality provided by SDK. Please note, that some additional features are dependent, for example, in order to use :ref:`ugcs::vsm::Mavlink_decoder <doxid-d5/da3/classugcs_1_1vsm_1_1_mavlink__decoder>`, the :ref:`ugcs::vsm::Io_buffer <doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer>` should also be used. Following tutorials explains the usage of additional functionality:
+  
+  * :ref:`Asynchronous programming framework <doxid-d4/da8/async_programming_page>`
+

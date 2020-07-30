@@ -1,0 +1,413 @@
+.. index:: pair: class; ugcs::vsm::Log
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log:
+
+class ugcs::vsm::Log
+====================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Log_Level.rst
+	struct_ugcs_vsm_Log_Exception_dummy_struct.rst
+	class_ugcs_vsm_Log_Platform_logger.rst
+
+Overview
+~~~~~~~~
+
+Class for handling log output. :ref:`More...<details-d4/da6/classugcs_1_1vsm_1_1_log>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <log.h>
+	
+	class Log
+	{
+	public:
+		// typedefs
+	
+		typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`Exception_dummy_struct<doxid-db/d03/structugcs_1_1vsm_1_1_log_1_1_exception__dummy__struct>`,> :target:`Exception<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1acc5a756451d3ad588df404ed83fe901e>`;
+
+		// enums
+	
+		enum :ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>`;
+
+		// structs
+	
+		struct :ref:`Exception_dummy_struct<doxid-db/d03/structugcs_1_1vsm_1_1_log_1_1_exception__dummy__struct>`;
+
+		// classes
+	
+		class :ref:`Platform_logger<doxid-db/dfd/classugcs_1_1vsm_1_1_log_1_1_platform__logger>`;
+
+		// methods
+	
+		void :ref:`Write_message_inst<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a332b26d41d622294ede55679c63b6c6c>`(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, ...);
+		void :ref:`Write_message_v_inst<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a71f2cd4486fe93e9018a9cfd125a2c42>`(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, std::va_list args);
+		void :ref:`Set_custom_log_inst<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a0787799605aecb6e6b211bb5529773c7>`(const std::string& log_file);
+		void :ref:`Set_max_custom_log_size_inst<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a9dd501e4a127910a8cdafc2e333c1790>`(ssize_t size);
+		void :ref:`Set_max_custom_log_count_inst<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a007b4ddb78993d010ce063e183f5d076>`(size_t count);
+		static const char* :ref:`Get_level_str<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1aad04a079fc561c06ecfc352913bedb4a>`(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level);
+		static std::string :ref:`Get_basename<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a2b01e045d1b55932ae2e46917bcea136>`(const char* path);
+		static std::string :ref:`Get_system_error<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a5b85661d7971c9e9a9ec8ae639df4e7d>`();
+		static void :ref:`Write_message<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1ad77755f5797a2c0f7deb5bf0029056ad>`(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, ...);
+		static void :ref:`Write_message_v<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a3b46f5546e0d1c7396b78f3db1a144d0>`(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, std::va_list args);
+		static void :ref:`Set_level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a67fab13e657953a3af513ba0d0fe196e>`(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level);
+		static void :ref:`Set_level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1ae65824a9ce273ed50410fbc3553ed611>`(const std::string& level);
+		static void :ref:`Set_custom_log<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a9fa97ed8b03079c252adff0cf7c3f74b>`(const std::string& log_file);
+		static void :ref:`Set_max_custom_log_size<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a350fc5db7b8291eb8b9a6aeaba3546b9>`(const std::string& size_str);
+		static void :ref:`Set_max_custom_log_count<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a7881e41d2aca28374fc193020f5fb7af>`(size_t count);
+	};
+.. _details-d4/da6/classugcs_1_1vsm_1_1_log:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Class for handling log output.
+
+A singleton object of this class is created when the first log output occurs. :ref:`Log <doxid-d4/da6/classugcs_1_1vsm_1_1_log>` output is written to a custom log file (if set by the Set_custom_log method) and to the platform specific logging facilities (if present and implemented).
+
+Methods
+-------
+
+.. index:: pair: function; Write_message_inst
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a332b26d41d622294ede55679c63b6c6c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Write_message_inst(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, ...)
+
+Write formatted message to the log.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- level
+
+		- :ref:`Log <doxid-d4/da6/classugcs_1_1vsm_1_1_log>` level.
+
+	*
+		- msg
+
+		- Message format similar to format used in printf() function.
+
+.. index:: pair: function; Write_message_v_inst
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a71f2cd4486fe93e9018a9cfd125a2c42:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Write_message_v_inst(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, std::va_list args)
+
+Write formatted message to the log.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- level
+
+		- :ref:`Log <doxid-d4/da6/classugcs_1_1vsm_1_1_log>` level.
+
+	*
+		- msg
+
+		- Message format similar to format used in printf() function.
+
+	*
+		- args
+
+		- Variable arguments list for format string.
+
+.. index:: pair: function; Set_custom_log_inst
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a0787799605aecb6e6b211bb5529773c7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_custom_log_inst(const std::string& log_file)
+
+Set custom file path for the instance itself, behaves like Set_custom_log.
+
+.. index:: pair: function; Set_max_custom_log_size_inst
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a9dd501e4a127910a8cdafc2e333c1790:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_max_custom_log_size_inst(ssize_t size)
+
+The same as Set_max_custom_log_size, but for the instance.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- size
+
+		- Max size in bytes.
+
+.. index:: pair: function; Set_max_custom_log_count_inst
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a007b4ddb78993d010ce063e183f5d076:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_max_custom_log_count_inst(size_t count)
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- size
+
+		- Max number of log files to keep.
+
+.. index:: pair: function; Get_level_str
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1aad04a079fc561c06ecfc352913bedb4a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static const char* Get_level_str(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level)
+
+Convert level value to readable string.
+
+.. index:: pair: function; Get_basename
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a2b01e045d1b55932ae2e46917bcea136:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static std::string Get_basename(const char* path)
+
+Get base name (without leading directories) of file path.
+
+.. index:: pair: function; Get_system_error
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a5b85661d7971c9e9a9ec8ae639df4e7d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static std::string Get_system_error()
+
+Platform-dependent convenience method to get descriptive string for last system error.
+
+.. index:: pair: function; Write_message
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1ad77755f5797a2c0f7deb5bf0029056ad:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Write_message(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, ...)
+
+Write formatted message to the log.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- level
+
+		- :ref:`Log <doxid-d4/da6/classugcs_1_1vsm_1_1_log>` level.
+
+	*
+		- msg
+
+		- Message format similar to format used in printf() function.
+
+.. index:: pair: function; Write_message_v
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a3b46f5546e0d1c7396b78f3db1a144d0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Write_message_v(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level, const char* msg, std::va_list args)
+
+Write formatted message to the log.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- level
+
+		- :ref:`Log <doxid-d4/da6/classugcs_1_1vsm_1_1_log>` level.
+
+	*
+		- msg
+
+		- Message format similar to format used in printf() function.
+
+	*
+		- args
+
+		- Variable arguments list for format string.
+
+.. index:: pair: function; Set_level
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a67fab13e657953a3af513ba0d0fe196e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Set_level(:ref:`Level<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>` level)
+
+Set current log level for the application.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- level
+
+		- New global log level.
+
+.. index:: pair: function; Set_level
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1ae65824a9ce273ed50410fbc3553ed611:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Set_level(const std::string& level)
+
+Set current log level.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- level
+
+		- Level symbolic name. Valid names: error, warning, info, debug.
+
+	*
+		- Invalid_param_exception
+
+		- if invalid name specified.
+
+.. index:: pair: function; Set_custom_log
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a9fa97ed8b03079c252adff0cf7c3f74b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Set_custom_log(const std::string& log_file)
+
+Set log file path for a custom (i.e.
+
+non system standard) logging. Custom logging is disabled until file name is set.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- log_file
+
+		- Full log file path.
+
+	*
+		- :ref:`Log::Exception <doxid-d4/da6/classugcs_1_1vsm_1_1_log_1acc5a756451d3ad588df404ed83fe901e>`
+
+		- if log file could not be opened/created for appending.
+
+.. index:: pair: function; Set_max_custom_log_size
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a350fc5db7b8291eb8b9a6aeaba3546b9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Set_max_custom_log_size(const std::string& size_str)
+
+Set maximum size of a single custom log file.
+
+When this size is reached, current log file is closed, re-named by appending a time stamp and a new custom log file is opened.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- size_str
+
+		- 
+		  Human readable size, which is a number postfixed with a case insensitive multiplier:
+		  
+		  * Gb, G, Gbyte, Gbytes - for Giga-bytes;
+		  
+		  * Mb, M, Mbyte, Mbytes - for Mega-bytes;
+		  
+		  * Kb, K, Kbyte, Kbytes - for Kilo-bytes;
+		  
+		  * no postfix - for bytes;
+
+	*
+		- Invalid_param_exception
+
+		- exception if multiplier is not recognized.
+
+.. index:: pair: function; Set_max_custom_log_count
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a7881e41d2aca28374fc193020f5fb7af:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Set_max_custom_log_count(size_t count)
+
+Set maximum number of log files to keep.
+
+Older log files will be deleted.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- count
+
+		- Number of old log files to keep. Default is 1.
+

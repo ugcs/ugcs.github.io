@@ -1,0 +1,207 @@
+.. index:: pair: class; ugcs::vsm::Shared_mutex_file
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file:
+
+class ugcs::vsm::Shared_mutex_file
+==================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Cross-platform named mutex. :ref:`More...<details-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <shared_mutex_file.h>
+	
+	class Shared_mutex_file: public std::enable_shared_from_this< Shared_mutex_file >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Shared_mutex_file> :ref:`Ptr<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aaeb61b482c9a57271a96de5a04b1f800>`;
+		typedef std::weak_ptr<Shared_mutex_file> :ref:`Weak_ptr<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a93783469b322290d427136da2f946843>`;
+		typedef :ref:`File_processor::Stream::Lock_handler<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a6242dd592dfa1baa8d3087d6e6f7998d>` :ref:`Acquire_handler<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02>`;
+
+		// construction
+	
+		:ref:`Shared_mutex_file<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aa2c84afd5d7066ec790e292aaef51ef0>`(const std::string& name, :ref:`File_processor::Ptr<doxid-d9/dc7/classugcs_1_1vsm_1_1_file__processor_1a4c9978888643e693d235cce357e75c73>` = :ref:`File_processor::Get_instance<doxid-d9/dc7/classugcs_1_1vsm_1_1_file__processor_1a75e498bb9c7aad1307b300fa0c016fb5>`());
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aaeb61b482c9a57271a96de5a04b1f800>` :ref:`Create<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aff6e769ffeb6e33c971ada6d4f25bd27>`(Args&&... args);
+	
+		template <class __Callable, typename... __Args>
+		:ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a5b1d5c295a98431122a25119597b75a9>`(Make_acquire_handler, (:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`));
+	
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Acquire<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1ad4137a16a157f1660f91f34a3053373d>`(:ref:`Acquire_handler<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02>` completion_handler, :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`());
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Release<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a7f93e7c984d8e1badf667b01e65449ce>`(:ref:`Acquire_handler<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`());
+	};
+.. _details-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Cross-platform named mutex.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aaeb61b482c9a57271a96de5a04b1f800:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Shared_mutex_file> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a93783469b322290d427136da2f946843:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Shared_mutex_file> Weak_ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Acquire_handler
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`File_processor::Stream::Lock_handler<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a6242dd592dfa1baa8d3087d6e6f7998d>` Acquire_handler
+
+Acquire :ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` prototype.
+
+void Callback(result, void\* mem_pointer, ...) It is ok to call :ref:`Release() <doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a7f93e7c984d8e1badf667b01e65449ce>` from this function, too.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- result
+
+		- See Acquire_result above
+
+	*
+		- mem_pointer
+
+		- Pointer to memory region. If the mem_pointer is not nullptr then user can freely access mem_size count bytes. User is free to use the memory from any thread.
+
+	*
+		- ...
+
+		- Any other user supplied arguments
+
+Construction
+------------
+
+.. index:: pair: function; Shared_mutex_file
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aa2c84afd5d7066ec790e292aaef51ef0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Shared_mutex_file(const std::string& name, :ref:`File_processor::Ptr<doxid-d9/dc7/classugcs_1_1vsm_1_1_file__processor_1a4c9978888643e693d235cce357e75c73>` = :ref:`File_processor::Get_instance<doxid-d9/dc7/classugcs_1_1vsm_1_1_file__processor_1a75e498bb9c7aad1307b300fa0c016fb5>`())
+
+Creates shared memory region which can be accessed via Acquire call.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- name
+
+		- Name of shared memory region.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aff6e769ffeb6e33c971ada6d4f25bd27:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aaeb61b482c9a57271a96de5a04b1f800>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; __DEFINE_CALLBACK_BUILDER_BODY
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a5b1d5c295a98431122a25119597b75a9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class __Callable, typename... __Args>
+	__DEFINE_CALLBACK_BUILDER_BODY(
+		Make_acquire_handler,
+		(:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`),
+		(:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`)
+		)
+
+Builder for acquire handler.
+
+.. index:: pair: function; Acquire
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1ad4137a16a157f1660f91f34a3053373d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Acquire(:ref:`Acquire_handler<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02>` completion_handler, :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`())
+
+Acquires exclusive lock.
+
+IMPORTANT: :ref:`Operation_waiter <doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` timoeut or cancelation DOES NOT prevent completion_handler from being called.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- completion_handler
+
+		- User supplied callback. See above.
+
+	*
+		- comp_ctx
+
+		- User supplied completion context in which completion_handler will execute.
+
+
+
+.. rubric:: Returns:
+
+:ref:`Operation_waiter <doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Can be used to acquire memory synchronously or with timeout.
+
+.. index:: pair: function; Release
+.. _doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a7f93e7c984d8e1badf667b01e65449ce:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Release(:ref:`Acquire_handler<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`())
+
+Releases previously acquired lock.
+

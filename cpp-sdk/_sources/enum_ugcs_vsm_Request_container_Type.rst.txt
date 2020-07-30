@@ -1,0 +1,96 @@
+.. index:: pair: enum; Type
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab:
+
+enum ugcs::vsm::Request_container::Type
+=======================================
+
+Overview
+~~~~~~~~
+
+Container type. :ref:`More...<details-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <request_container.h>
+
+	enum Type
+	{
+	    :ref:`NONE<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1abab50339a10e1de285ac99d4c3990b8693>`                    = 0x0,
+	    :ref:`PROCESSOR<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1abaee77ccb2e3ca1666637eb898b108fc41>`               = 0x1,
+	    :ref:`COMPLETION_CONTEXT<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba72a501db2ccc22e1275099cb7adecd3c>`      = 0x2,
+	    :ref:`ANY<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba8e1bde3c3d303163521522cf1d62f21f>`                     = PROCESSOR | COMPLETION_CONTEXT,
+	    :ref:`TEMPORAL<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba59e56344cdb2d3e17705f7a75e7f1b9d>`                = 0x4,
+	    :ref:`TEMP_COMPLETION_CONTEXT<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba96ffb49595a187a731f44eab1de3b2e9>` = COMPLETION_CONTEXT | TEMPORAL,
+	};
+
+.. _details-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Container type.
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; NONE
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1abab50339a10e1de285ac99d4c3990b8693:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	NONE
+
+None type used in base class.
+
+.. index:: pair: enumvalue; PROCESSOR
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1abaee77ccb2e3ca1666637eb898b108fc41:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PROCESSOR
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` processor.
+
+.. index:: pair: enumvalue; COMPLETION_CONTEXT
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba72a501db2ccc22e1275099cb7adecd3c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	COMPLETION_CONTEXT
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` completion context.
+
+.. index:: pair: enumvalue; ANY
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba8e1bde3c3d303163521522cf1d62f21f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ANY
+
+Container capable of handling both requests and completions.
+
+.. index:: pair: enumvalue; TEMPORAL
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba59e56344cdb2d3e17705f7a75e7f1b9d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	TEMPORAL
+
+Temporal context used for a separate request synchronization.
+
+.. index:: pair: enumvalue; TEMP_COMPLETION_CONTEXT
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1aba96ffb49595a187a731f44eab1de3b2e9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	TEMP_COMPLETION_CONTEXT
+
+Temporal completion context.
+

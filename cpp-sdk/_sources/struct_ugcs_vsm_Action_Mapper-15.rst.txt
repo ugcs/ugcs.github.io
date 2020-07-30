@@ -1,0 +1,47 @@
+.. index:: pair: struct; ugcs::vsm::Action::Mapper<Action::Type::CAMERA_SERIES_BY_DISTANCE>
+.. _doxid-dd/d32/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___d_i_s_t_a_n_c_e_01_4:
+
+template struct ugcs::vsm::Action::Mapper<Action::Type::CAMERA_SERIES_BY_DISTANCE>
+==================================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Type mapper for camera control action. :ref:`More...<details-dd/d32/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___d_i_s_t_a_n_c_e_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <camera_series_by_distance_action.h>
+	
+	template <>
+	struct Mapper<Action::Type::CAMERA_SERIES_BY_DISTANCE>
+	{
+		// typedefs
+	
+		typedef :ref:`Camera_series_by_distance_action<doxid-d3/d3d/classugcs_1_1vsm_1_1_camera__series__by__distance__action>` :ref:`type<doxid-dd/d32/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___d_i_s_t_a_n_c_e_01_4_1af729d4becccdc1275c41bb898765a70c>`;
+	};
+.. _details-dd/d32/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___d_i_s_t_a_n_c_e_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Type mapper for camera control action.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; type
+.. _doxid-dd/d32/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___d_i_s_t_a_n_c_e_01_4_1af729d4becccdc1275c41bb898765a70c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Camera_series_by_distance_action<doxid-d3/d3d/classugcs_1_1vsm_1_1_camera__series__by__distance__action>` type
+
+Real type.
+

@@ -1,0 +1,11 @@
+.. index:: pair: struct; ugcs::vsm::Nullptr_exception_dummy_struct
+.. _doxid-d7/d65/structugcs_1_1vsm_1_1_nullptr__exception__dummy__struct:
+
+struct ugcs::vsm::Nullptr_exception_dummy_struct
+================================================
+
+.. toctree::
+	:hidden:
+
+Indicates that some object is not longer exists while its service is invoked.
+

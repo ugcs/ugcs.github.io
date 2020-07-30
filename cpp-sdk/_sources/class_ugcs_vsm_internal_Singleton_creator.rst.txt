@@ -1,0 +1,50 @@
+.. index:: pair: class; ugcs::vsm::internal::Singleton_creator<T, typename std::enable_if<std::is_default_constructible<T>::value>::type>
+.. _doxid-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4:
+
+template class ugcs::vsm::internal::Singleton_creator<T, typename std::enable_if<std::is_default_constructible<T>::value>::type>
+================================================================================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Specialization for class which has default constructor. :ref:`More...<details-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <singleton.h>
+	
+	template <class T>
+	class Singleton_creator<T, typename std::enable_if<std::is_default_constructible<T>::value>::type>
+	{
+	public:
+		// methods
+	
+		template <typename... Args>
+		static std::shared_ptr<T> :ref:`Create<doxid-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4_1ac2d22e3136c47698663fb259338a2e6a>`(Args&&... args);
+	};
+.. _details-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Specialization for class which has default constructor.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4_1ac2d22e3136c47698663fb259338a2e6a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static std::shared_ptr<T> Create(Args&&... args)
+
+Always can create an instance.
+

@@ -1,0 +1,64 @@
+.. index:: pair: struct; ugcs::vsm::callback_internal::Callback_args_checker<Callback, idx, Arg, Args...>
+.. _doxid-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4:
+
+template struct ugcs::vsm::callback_internal::Callback_args_checker<Callback, idx, Arg, Args...>
+================================================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Recursion unrolling template. :ref:`More...<details-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <callback.h>
+	
+	template <class Callback, size_t idx, typename Arg, typename... Args>
+	struct Callback_args_checker<Callback, idx, Arg, Args...>
+	{
+		// typedefs
+	
+		typedef typename Callback::template Arg_type<idx> :ref:`Cbk_arg<doxid-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4_1a10a695f1570099fa04c20edfd664e310>`;
+
+		// fields
+	
+		static constexpr static bool :ref:`value<doxid-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4_1a3ecc153dfe530912ea00221b17355c40>` = std::is_convertible<:ref:`Cbk_arg<doxid-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4_1a10a695f1570099fa04c20edfd664e310>`, Arg>::value&&         :ref:`Callback_args_checker<doxid-de/d3f/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker>`<:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`, idx + 1, Args...>::value;
+	};
+.. _details-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Recursion unrolling template.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Cbk_arg
+.. _doxid-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4_1a10a695f1570099fa04c20edfd664e310:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef typename Callback::template Arg_type<idx> Cbk_arg
+
+Corresponding real argument type in the callback.
+
+Fields
+------
+
+.. index:: pair: variable; value
+.. _doxid-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4_1a3ecc153dfe530912ea00221b17355c40:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr static bool value = std::is_convertible<:ref:`Cbk_arg<doxid-dd/da4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_01idx_00_01_arg_00_01_args_8_8_8_01_4_1a10a695f1570099fa04c20edfd664e310>`, Arg>::value&&         :ref:`Callback_args_checker<doxid-de/d3f/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker>`<:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`, idx + 1, Args...>::value
+
+Indicates whether the check passed or failed.
+

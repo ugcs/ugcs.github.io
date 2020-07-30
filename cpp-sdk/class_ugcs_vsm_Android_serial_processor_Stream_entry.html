@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Android_serial_processor::Stream_entry &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum ugcs::vsm::Android_serial_processor::Stream_entry::State" href="enum_ugcs_vsm_Android_serial_processor_Stream_entry_State.html" />
+    <link rel="prev" title="class ugcs::vsm::Android_serial_processor::Stream" href="class_ugcs_vsm_Android_serial_processor_Stream.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#typedefs" class="nav-link">Typedefs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fields" class="nav-link">Fields</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-android-serial-processor-stream-entry">
+<span id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry"></span><span id="index-0"></span><h1>class ugcs::vsm::Android_serial_processor::Stream_entry<a class="headerlink" href="#class-ugcs-vsm-android-serial-processor-stream-entry" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">class</span> <span class="n">Stream_entry</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Stream_entry</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1addf64708204b6f4c9b90213e3bd74333"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Stream_entry</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a85500adf49a99001970b16698c4f71d3"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_Android_serial_processor_Stream_entry_State.html#doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a3324bb4cc9938e555854a2f6cceaed25"><span class="std std-ref">State</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor_Stream.html#doxid-d6-d1a-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-1a38706bbb937427478ebbfcc327a06da8"><span class="std std-ref">Stream::Ref</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a269349300b73c2c3d4cc87df1cb82f8b"><span></span><span class="n">stream</span></span><span></span><span class="p">;</span>
+    <span class="n">State</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a9b3ec67736cf5fa018bc1ceb92fa36f9"><span></span><span class="n">state</span></span><span></span> <span class="o">=</span> <span class="n">State</span><span class="o">::</span><span class="n">INITIAL</span><span class="p">;</span>
+    <span class="n">Open_request</span><span class="o">::</span><span class="n">Ptr</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a5787c2920592d02d3ab2433d2a043b8c"><span></span><span class="n">open_req</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Write_request.html#doxid-d4-df0-classugcs-1-1vsm-1-1-write-request-1a06372238c834f4b54582985c1738539a"><span class="std std-ref">Write_request::Ptr</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1ac3196519b88007cce4ea1551dc11d670"><span class="std std-ref">write_queue</span></a><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Read_request.html#doxid-d1-d78-classugcs-1-1vsm-1-1-read-request-1a2a58c202f3c3991a521d684d37eb2170"><span class="std std-ref">Read_request::Ptr</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a3a3635ece7b15bbdb1aea10973ec291e"><span class="std std-ref">read_queue</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1aea31d813f229acfd0ea8adb4890d5919"><span></span><span class="n">Stream_entry</span></span><span></span><span class="p">(</span>
+        <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor.html#doxid-d4-d2c-classugcs-1-1vsm-1-1-android-serial-processor-1a0c5600db737660bae2e2cecd50cc5e1d"><span class="std std-ref">Android_serial_processor::Ptr</span></a><span></span> <span class="n">processor</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor_Stream.html#doxid-d6-d1a-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-1ad7b48d86f3fa6a1339be2b7b8e9c4400"><span class="std std-ref">Stream::Mode</span></a><span></span><span class="o">&amp;</span> <span class="n">mode</span><span class="p">,</span>
+        <span class="n">Open_request</span><span class="o">::</span><span class="n">Ptr</span> <span class="n">open_req</span>
+        <span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor.html#doxid-d4-d2c-classugcs-1-1vsm-1-1-android-serial-processor-1a0c5600db737660bae2e2cecd50cc5e1d"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a13979ea00c719cb2f8674b3edc84b411"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a293920ea554202cb61fd5fc0e3b6e494"><span></span><span class="n">Complete_open</span></span><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">succeeded</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1acda8a30da68f0ba3b2c44cec05d6a1e9"><span></span><span class="n">Push_write</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Write_request.html#doxid-d4-df0-classugcs-1-1vsm-1-1-write-request-1a06372238c834f4b54582985c1738539a"><span class="std std-ref">Write_request::Ptr</span></a><span></span> <span class="n">req</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a4e8511700bb2a683c97f8cfb62c3e9ec"><span></span><span class="n">Write_done</span></span><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">succeeded</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1ab15a861d714078079b5946e30fb69da0"><span></span><span class="n">Push_read</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Read_request.html#doxid-d1-d78-classugcs-1-1vsm-1-1-read-request-1a2a58c202f3c3991a521d684d37eb2170"><span class="std std-ref">Read_request::Ptr</span></a><span></span> <span class="n">req</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a845cfc6a2cbf8ddbbeb5e207b80ec3da"><span></span><span class="n">Read_done</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Io_buffer.html#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Io_buffer::Ptr</span></a><span></span> <span class="n">data</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a867ebbee407b9c5c67b606392fdc06f0"><span></span><span class="n">Close</span></span><span></span><span class="p">();</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1addf64708204b6f4c9b90213e3bd74333"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Stream_entry</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a85500adf49a99001970b16698c4f71d3"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Stream_entry</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
+<p>Pointer type.</p>
+</div>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1ac3196519b88007cce4ea1551dc11d670"><span id="index-3"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Write_request.html#doxid-d4-df0-classugcs-1-1vsm-1-1-write-request-1a06372238c834f4b54582985c1738539a"><span class="std std-ref">Write_request::Ptr</span></a><span></span><span class="o">&gt;</span> <span class="n">write_queue</span></pre>
+<p>Front element is the current active request.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a3a3635ece7b15bbdb1aea10973ec291e"><span id="index-4"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Read_request.html#doxid-d1-d78-classugcs-1-1vsm-1-1-read-request-1a2a58c202f3c3991a521d684d37eb2170"><span class="std std-ref">Read_request::Ptr</span></a><span></span><span class="o">&gt;</span> <span class="n">read_queue</span></pre>
+<p>Front element is the current active request.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a13979ea00c719cb2f8674b3edc84b411"><span id="index-5"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor.html#doxid-d4-d2c-classugcs-1-1vsm-1-1-android-serial-processor-1a0c5600db737660bae2e2cecd50cc5e1d"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Create an instance.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Android_serial_processor_Stream.html" title="previous page">class ugcs::vsm::Android_serial_processor::Stream</a>
+    <a class='right-next' id="next-link" href="enum_ugcs_vsm_Android_serial_processor_Stream_entry_State.html" title="next page">enum ugcs::vsm::Android_serial_processor::Stream_entry::State</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

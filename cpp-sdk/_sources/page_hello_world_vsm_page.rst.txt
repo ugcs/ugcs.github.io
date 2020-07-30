@@ -1,0 +1,332 @@
+.. index:: pair: page; "Hello world" VSM application
+.. _doxid-d8/db6/hello_world_vsm_page:
+
+"Hello world" VSM application
+=============================
+
+Here is an example of a simple VSM application which demonstrates basic usage of the SDK. The source code of this example consists of two files:
+
+* CMake makefile :ref:`Hello_world_VSM/CMakeLists.txt <doxid-dc/d9c/_hello_world__v_s_m_2_c_make_lists_8txt-example>`.
+
+* C++ source code file :ref:`hello_world_vsm.cpp <doxid-d5/d58/hello_world_vsm_8cpp-example>`.
+
+
+
+.. _doxid-d8/db6/hello_world_vsm_page_1c_plus_plus_hello_world:
+
+C++ code
+~~~~~~~~
+
+Single header file should be included to get an access to the whole SDK functionality:
+
+.. ref-code-block:: cpp
+
+	#include <ugcs/vsm/vsm.h>
+
+All the SDK functionality resides under :ref:`ugcs::vsm <doxid-dd/def/namespaceugcs_1_1vsm>` namespace.
+
+Custom vehicle class should be defined by deriving from a :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>` class:
+
+.. ref-code-block:: cpp
+
+	class Custom_vehicle:public :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`
+	{
+	    /* To add shared pointer capability to this class. */
+	    :ref:`DEFINE_COMMON_CLASS <doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d>`(Custom_vehicle, :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`)
+
+To pass the instance of custom class to SDK, shared pointer of the form `std::shared_ptr<Custom_vehicle> <http://en.cppreference.com/w/cpp/memory/ shared_ptr>`__ should be used. Macro :ref:`DEFINE_COMMON_CLASS <doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d>` defines methods and member types needed for shared pointers usage:
+
+* *Class::Ptr* member type which effectively is *std::shared_ptr<Class>*.
+
+* *Class::Weak_ptr* member type which effectively is *std::weak_ptr<Class>*.
+
+* *static Class::Create()* template method for convenient creation of shared classes dynamically:
+  
+  .. ref-code-block:: cpp
+  
+  
+  	/* Create vehicle instance with hard-coded serial number. */
+  	Custom_vehicle::Ptr vehicle = Custom_vehicle::Create("asd123456");
+
+* *Class::Shared_from_this()* method which returns appropriate *Class::Ptr* shared pointer:
+  
+  .. ref-code-block:: cpp
+  
+  	:ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(&Custom_vehicle::Send_telemetry, Shared_from_this()),
+
+UgCS differentiates vehicles based on serial number and name. We use required parameters for that in our vehicle constructor:
+
+.. ref-code-block:: cpp
+
+	Custom_vehicle(const std::string& serial_number):
+	    Device(:ref:`ugcs <doxid-d1/d6b/namespaceugcs>`::vsm::proto::DEVICE_TYPE_VEHICLE)
+	{
+
+Currently, vehicle and autopilot types are defined by using types from :ref:`ugcs::vsm::mavlink <doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink>` namespace, but it will be changed in next releases. It is fully up to VSM application developer to decide about custom vehicle constructor arguments, but usually at least vehicle serial number is configurable while vehicle/autopilot types, model name and capabilities are fixed.
+
+Next step is to decide whether override of :ref:`ugcs::vsm::Device::On_enable <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a38228457ccd1b320bb91c6f2313dd890>` method is needed or not. As a general rule, override is needed if some class-level initialization actions require *this* shared pointer usage, for example, telemetry simulation timer creation and setting of system status:
+
+.. ref-code-block:: cpp
+
+	virtual void
+	On_enable() override
+	{
+	    timer = :ref:`ugcs::vsm::Timer_processor::Get_instance <doxid-dc/dae/classugcs_1_1vsm_1_1_timer__processor_1a19a7b34dd02aba6468e644d1c91026aa>`()->Create_timer(
+	            /* Telemetry with 1 second granularity. */
+	            std::chrono::seconds(1),
+	            /* Send_telemetry method will be called on timer. Smart pointer
+	             * is used to reference vehicle instance. Plain 'this' could also
+	             * be used here, but it is generally not recommended. */
+	            :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(&Custom_vehicle::Send_telemetry, Shared_from_this()),
+	            /* Execution will be done in default vehicle context,
+	             * which is served by dedicated vehicle thread together with
+	             * vehicle requests so additional synchronization is not necessary.
+	             */
+	            Get_completion_ctx());
+
+	    /* Report current control mode to the UgCS */
+	    t_control_mode->Set_value(ugcs::vsm::proto::CONTROL_MODE_MANUAL);
+
+	    /* Report link state to the UgCS */
+	    t_downlink_present->Set_value(true);
+	    t_uplink_present->Set_value(true);
+
+	    /* Tell UgCS about available commands.
+	     * Command availability can be changed during runtime via this call and
+	     * VSM can determine which command buttons to show in the client UI. */
+	    c_arm->Set_available();
+	    c_disarm->Set_available();
+	    c_mission_upload->Set_available();
+
+	    /* Mission upload is always enabled.
+	    * Command state (enabled/disabled) can be changed during runtime via this call and
+	    * VSM can determine which command buttons to show as enabled in the client UI. */
+	    c_mission_upload->Set_enabled();
+	    Commit_to_ucs();
+	}
+
+As a rule, :ref:`ugcs::vsm::Device::On_disable <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a4739000876fd6baede39204a415b25f2>` method override is also necessary if :ref:`ugcs::vsm::Device::On_enable <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a38228457ccd1b320bb91c6f2313dd890>` is overridden. In the example, the counterpart action is performed in *On_disable* method, namely timer cancellation to avoid memory leaks:
+
+.. ref-code-block:: cpp
+
+	virtual void
+	On_disable() override
+	{
+	    /* Turn off the timer. */
+	    timer->Cancel();
+	}
+
+Timer created in the *On_enable* method is used to simulate the telemetry generation by the vehicle and to make the "Hello world" example to be more interesting and 'alive'.
+
+All custom vehicles should override ugcs::vsm::Vehicle::Handle_ucs_request processing methods (see :ref:`Vehicle commands <doxid-da/d5e/vehicle_interface_page_1vehicle_requests_section>`) to provide vehicle specific implementation of processing logic.
+
+In a real application, all saved missions should be erased from the vehicle. In this example vehicle requests are processed synchronously, i.e. in the scope of the ugcs::vsm::Vehicle::Handle_ucs_request method itself. This is not mandatory. VSM application developer may save a copy of the request handle for deferred processing and return from the overridden method without completing the request. This way, multiple vehicle related activities can be processed in parallel, for example sending telemetry to UgCS and in the same time processing the VSM request as a complex sequence of actions executed with, probably, notable delays.
+
+:ref:`ugcs::vsm::Ucs_request <doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request>` contains a parsed protobuf message and user is able to access all its fields directly. Later there will be a wrapper to hide the housekeeping code (native protobuf calls and exceptions).
+
+Here some interesting behavior is simulated. Namely, vehicle yaw spinning and altitude climbing is started/stopped based on command.
+
+The most complex and important vehicle command is mission_upload which denotes a mission to be loaded into the vehicle for latter execution. The payload of the request contains a list of sub-commands which are previously registered in Fill_register_msg() call.
+
+.. ref-code-block:: cpp
+
+	void
+	Handle_ucs_command(:ref:`ugcs::vsm::Ucs_request::Ptr <doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a652d814cf8c5922dad29094a80be313c>` ucs_request)
+	{
+	    for (int c = 0; c < ucs_request->request.device_commands_size(); c++) {
+	        auto &vsm_cmd = ucs_request->request.device_commands(c);
+
+	        auto cmd = Get_command(vsm_cmd.command_id());
+
+	        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("COMMAND %s (%d) received",
+	            cmd->Get_name().c_str(),
+	            vsm_cmd.command_id());
+
+	        :ref:`ugcs::vsm::Property_list <doxid-d2/d2d/classugcs_1_1vsm_1_1_property__list>` params;
+
+	        try {
+	            if        (cmd == c_arm) {
+
+	                :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Vehicle armed!");
+	                /* Start yaw spinning and climbing. */
+	                yaw_speed = 0.1;
+	                climb_speed = 0.5;
+
+	                /* Simulate armed vehicle */
+	                is_armed = true;
+
+	            } else if (cmd == c_disarm) {
+
+	                :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Vehicle disarmed.");
+	                /* Stop yaw spinning and climbing. */
+	                yaw_speed = 0;
+	                climb_speed = 0;
+
+	                /* Simulate disarmed vehicle */
+	                is_armed = false;
+
+	            } else if (cmd == c_disarm) {
+
+	                :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Vehicle disarmed.");
+	                /* Stop yaw spinning and climbing. */
+	                yaw_speed = 0;
+	                climb_speed = 0;
+
+	                /* Simulate disarmed vehicle */
+	                is_armed = false;
+
+	            } else if (cmd == c_mission_upload) {
+
+	                /* Iterate over all mission commands */
+	                for (int item_count = 0; item_count < vsm_cmd.sub_commands_size(); item_count++) {
+	                    auto vsm_scmd = vsm_cmd.sub_commands(item_count);
+	                    auto cmd = Get_command(vsm_scmd.command_id());
+	                    if (cmd == c_move) {
+	                        /* Only move is supported by this vehicle */
+	                        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("MISSION item %d %s (%d)",
+	                            item_count, cmd->Get_name().c_str(),
+	                            vsm_scmd.command_id());
+	                        params = cmd->Build_parameter_list(vsm_scmd);
+	                        float alt;
+	                        params.:ref:`Get_value <doxid-d2/d2d/classugcs_1_1vsm_1_1_property__list_1a55157bda7d2d9c2523fcaf9582885533>`("altitude", alt);
+	                        :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Move to altitude of %.2f meters.", alt);
+	                    }
+	                }
+
+	            } else {
+	                :ref:`VSM_EXCEPTION <doxid-dd/d2d/exception_8h_1a7fc579418b7ef463578555dcb09e31a4>`(:ref:`ugcs::vsm::Action::Format_exception <doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`, "Unsupported command");
+	            }
+	            ucs_request->Complete();
+	        } catch (const std::exception& ex) {
+	            ucs_request->Complete(ugcs::vsm::proto::STATUS_INVALID_PARAM, std::string(ex.what()));
+	        }
+	    }
+	}
+
+Telemetry simulation is done in a single method which is regularly called by timer:
+
+.. ref-code-block:: cpp
+
+	bool
+	Send_telemetry()
+	{
+
+	    /* Report current heading. */
+	    t_heading->Set_value(yaw);
+
+	    /* Simulate some spinning between [-Pi;+Pi]. */
+	    if ((yaw += yaw_speed) >= :ref:`M_PI <doxid-df/db1/math_8h_1ae71449b1cc6e6250b91f539153a7a0d3>`) {
+	        yaw = -:ref:`M_PI <doxid-df/db1/math_8h_1ae71449b1cc6e6250b91f539153a7a0d3>`;
+	    }
+
+	    /* Simulate climbing high to the sky. */
+	    altitude += climb_speed;
+	    t_altitude_raw->Set_value(altitude);
+
+	    /* Report also some battery value. */
+	    t_main_voltage->Set_value(13.5);
+
+	    /* Enable ARM command if vehicle is disarmed. */
+	    c_arm->Set_enabled(!is_armed);
+
+	    /* Enable DISARM command if vehicle is armed. */
+	    c_disarm->Set_enabled(is_armed);
+
+	    /* Report armed state to the UgCS */
+	    t_is_armed->Set_value(is_armed);
+
+	    /* Send the updated telemetry fields and command states to UgCS
+	     * SDK will send only modified values thus saving bandwidth */
+	    Commit_to_ucs();
+
+	    :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("send tm");
+	    /* Return true to reschedule the same timer again. */
+	    return true;
+	}
+
+Telemetry is sent to UgCS by populating the previously registered telemetry fileds with values and then issuing Commit_to_ucs() call. , then filling it with telemetry parameters.
+
+In the example yaw, absolute altitude and battery voltage parameters are sent every second. *yaw_speed* and *climb_speed* control the current delta of related parameters to simulate some activity on a vehicle. This activity will be visible in telemetry window when mission is launched.
+
+Now, custom vehicle class is ready to be instantiated and used, but VSM should be initialized before any other VSM services can be used. It is usually done somewhere in the beginning of *main* function:
+
+.. ref-code-block:: cpp
+
+	/* First of all, initialize SDK infrastructure and services. */
+	:ref:`ugcs::vsm::Initialize <doxid-dd/def/namespaceugcs_1_1vsm_1a6a4d1d5dbdddf89a76e16382defa66fa>`();
+
+In a real world VSM application there should be some vehicle specific mechanism which monitors the presence of a vehicle(-s) connection(-s), does initial identifications of a connected vehicle, like serial number and model name reading and then instantiation of a custom vehicle class instance. In the example, however, it is assumed that vehicle is always connected, so instantiation is done immediately after VSM initialization:
+
+.. ref-code-block:: cpp
+
+	/* Create vehicle instance with hard-coded serial number. */
+	Custom_vehicle::Ptr vehicle = Custom_vehicle::Create("asd123456");
+	/* Should be always called right after vehicle instance creation. */
+	vehicle->Enable();
+	/* Should be always called after Enable once all the necessary detection is done
+	 * and parameters set.
+	 */
+	vehicle->Register();
+
+:ref:`ugcs::vsm::Device::Enable <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a6d1d13dd8ae61480c6a063b6e085d844>` method should be always called to complete the vehicle instance initialization. As a rule, it should be called right after instance creation with *Class::Create* method.
+
+After vehicle is enabled, VSM application should control the connection with a vehicle and disable it when connection is totally lost. This logic is VSM specific, but as a general rule, short-term telemetry breaks shouldn't be considered as connection lost situation. In the example, there is just an infinite wait, assuming that vehicle is always connected and stays alive
+
+.. ref-code-block:: cpp
+
+	/* Now vehicle is visible to UgCS. Requests for the vehicle will be executed
+	 * in a dedicated vehicle thread. In a real VSM, there should be some
+	 * supervision logic which monitors the connection with a vehicle and
+	 * disables it when connection is totally lost. Here it is assumed that
+	 * vehicle is always connected, so just wait indefinitely.
+	 */
+	std::condition_variable cond;
+	std::mutex mutex;
+	std::unique_lock<std::mutex> lock(mutex);
+	cond.wait(lock); /* Infinite wait. */
+
+To gracefully shutdown VSM application, all vehicles should be disabled and VSM terminated:
+
+.. ref-code-block:: cpp
+
+
+	/* Disable the vehicle, considered to be deleted after that. */
+	vehicle->Disable();
+	/* Gracefully terminate SDK infrastructure and services. */
+	:ref:`ugcs::vsm::Terminate <doxid-dd/def/namespaceugcs_1_1vsm_1a68e200f95017008b9119e042a114f587>`();
+
+
+
+
+
+.. _doxid-d8/db6/hello_world_vsm_page_1cmake_hello_world:
+
+CMake makefile
+~~~~~~~~~~~~~~
+
+:ref:`Hello_world_VSM/CMakeLists.txt <doxid-dc/d9c/_hello_world__v_s_m_2_c_make_lists_8txt-example>` is a minimal makefile for VSM application which provides static linkage with SDK library defined by *VSM_SDK_DIR* variable (either CMake or environment) and a default VSM configuration file via Build_vsm_config() function, which can be given custom source and destination config file locations. It can be considered as a template makefile for VSM applications. Makefile should be self-explanatory. For additional details refer to `CMake official site <http://www.cmake.org>`__.
+
+
+
+
+
+.. _doxid-d8/db6/hello_world_vsm_page_1hello_world_vsm_compilation:
+
+Compilation
+~~~~~~~~~~~
+
+Prior to compiling the VSM application, SDK should be compiled and installed according to building_page. In the example, it is assumed that source and make file reside in the same directory and *VSM_SDK_DIR* *environment variable* points to the SDK installation folder.
+
+
+
+.. _doxid-d8/db6/hello_world_vsm_page_1hello_world_vsm_compilation_build:
+
+Building
+--------
+
+Now VSM application can be compiled and built in the same way as SDK using a single command with a build folder argument, for example:
+
+.. code-block:: cpp
+
+	cmake --build build-debug-win -- -j4
+

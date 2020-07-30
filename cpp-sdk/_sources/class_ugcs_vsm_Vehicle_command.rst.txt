@@ -1,0 +1,83 @@
+.. index:: pair: class; ugcs::vsm::Vehicle_command
+.. _doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command:
+
+class ugcs::vsm::Vehicle_command
+================================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Vehicle_command_Camera_power_state.rst
+	enum_ugcs_vsm_Vehicle_command_Camera_trigger_state.rst
+	enum_ugcs_vsm_Vehicle_command_Type.rst
+
+Overview
+~~~~~~~~
+
+Information about a command for a vehicle. :ref:`More...<details-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <vehicle_command.h>
+	
+	class Vehicle_command
+	{
+	public:
+		// enums
+	
+		enum :ref:`Camera_power_state<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1aabe8655ba92424d549ad65f0a0d1fc79>`;
+		enum :ref:`Camera_trigger_state<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1acd6d8b58a57c088a5aef98b24173a504>`;
+		enum :ref:`Type<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a07dd4b4d66ac4603e51ae602c34e8184>`;
+
+		// construction
+	
+		:target:`Vehicle_command<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a1ef359bb9ccf2b2db13f00da9a8c2915>`(
+			:ref:`Type<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a07dd4b4d66ac4603e51ae602c34e8184>` type,
+			const :ref:`Property_list<doxid-d2/d2d/classugcs_1_1vsm_1_1_property__list>`& params
+			);
+
+		// methods
+	
+		:ref:`Type<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a07dd4b4d66ac4603e51ae602c34e8184>` :ref:`Get_type<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1aba1d62dd181f6468b63da187e1f0d4a5>`() const;
+		float :target:`Get_acceptance_radius<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a86892361914b41454409daa28c366388>`() const;
+		float :target:`Get_speed<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a9883fb87f7c15f290e44c3bcd12b3752>`() const;
+		float :target:`Get_heading<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a29dc11ffe8d7d73dd8b12ffd0083f2d1>`() const;
+		float :target:`Get_takeoff_altitude<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1ac4c5e80b7aecec1e8decde3e982ad08d>`() const;
+		float :target:`Get_latitude<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1ae0998826f48a5c39085ce755550c5020>`() const;
+		float :target:`Get_longitude<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1adee829e121ab1ba7c8cb9966c29d0ff7>`() const;
+		float :target:`Get_altitude<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a47f66f5aca0b6c12f7693b88185584bb>`() const;
+		std::string :target:`Get_adsb_flight_id<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a1cc371991dc18c3414f7b9c016598ad0>`() const;
+		std::string :target:`Get_adsb_registration<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a9289904e827c9ca4b931f52e92579b65>`() const;
+		uint32_t :target:`Get_adsb_icao_code<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a8fab792bbb8b6ae8c0dad667a80449d9>`() const;
+		:ref:`mavlink::Int32<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1a6e49bc92302ebbcdac3732996e5abf92>` :target:`Get_adsb_operating_mode<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a640def4645ec6c769d5ac6dbfe8358ef>`() const;
+		:ref:`mavlink::Int32<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1a6e49bc92302ebbcdac3732996e5abf92>` :target:`Get_adsb_ident_on<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1aeb14e492ff9ebe73677f1b9193b37c55>`() const;
+		:ref:`mavlink::Int32<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1a6e49bc92302ebbcdac3732996e5abf92>` :target:`Get_adsb_squawk<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1aea062b85e6ed930e72531d67959bd8c2>`() const;
+		float :target:`Get_pitch<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a9805828c90d94695d704e4a44e579461>`() const;
+		float :target:`Get_roll<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1ac8b1d5ecd172b38055520bf67103fad2>`() const;
+		float :target:`Get_yaw<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1afa59f7525559fad1b12d124d71d2aa19>`() const;
+		float :target:`Get_throttle<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a08febe54eca41b86734696aa5b03a522>`() const;
+		float :target:`Get_zoom<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a4d6dc6d86b3092f2828aa5d4fe9b59f9>`() const;
+		int :target:`Get_payload_id<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a9348c703f5721d49a7e74cd55b19ac3c>`() const;
+	};
+.. _details-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Information about a command for a vehicle.
+
+Methods
+-------
+
+.. index:: pair: function; Get_type
+.. _doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1aba1d62dd181f6468b63da187e1f0d4a5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Type<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command_1a07dd4b4d66ac4603e51ae602c34e8184>` Get_type() const
+
+Get type of the command.
+

@@ -1,0 +1,89 @@
+.. index:: pair: class; ugcs::vsm::param_setter_internal::Param_setter
+.. _doxid-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter:
+
+template class ugcs::vsm::param_setter_internal::Param_setter
+=============================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Callable setter object. :ref:`More...<details-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <param_setter.h>
+	
+	template <typename... Params>
+	class Param_setter
+	{
+	public:
+		// construction
+	
+		:ref:`Param_setter<doxid-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter_1a8bf4e3ffb78b09c01ae3c88fb72d1538>`(Params&... params);
+
+		// methods
+	
+		void :ref:`operator ()<doxid-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter_1a5ced9b2b9e87b1ba6aad2391ad8e6e35>` (Params... values);
+	};
+.. _details-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Callable setter object.
+
+Construction
+------------
+
+.. index:: pair: function; Param_setter
+.. _doxid-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter_1a8bf4e3ffb78b09c01ae3c88fb72d1538:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Param_setter(Params&... params)
+
+Construct the setter.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- params
+
+		- Variables which will be linked to the setter object. References to them are stored in the setter and value is modified when the setter is called.
+
+Methods
+-------
+
+.. index:: pair: function; operator()
+.. _doxid-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter_1a5ced9b2b9e87b1ba6aad2391ad8e6e35:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void operator () (Params... values)
+
+Set values to the linked variables.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- values
+
+		- Values to set. Should correspond to the variables list provided to the constructor.
+

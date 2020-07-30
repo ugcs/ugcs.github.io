@@ -1,0 +1,48 @@
+.. index:: pair: class; ugcs::vsm::internal::Shared_getter<T, T>
+.. _doxid-d9/dd0/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01_t_01_4:
+
+template class ugcs::vsm::internal::Shared_getter<T, T>
+=======================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Specialization for class which is directly derived from std::enable_shared_from_this. :ref:`More...<details-d9/dd0/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01_t_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <utils.h>
+	
+	template <class T>
+	class Shared_getter<T, T>
+	{
+	public:
+		// methods
+	
+		static std::shared_ptr<T> :ref:`Get<doxid-d9/dd0/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01_t_01_4_1a918f367667ef9090912650705055ea5e>`(T* this_ptr);
+	};
+.. _details-d9/dd0/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01_t_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Specialization for class which is directly derived from std::enable_shared_from_this.
+
+Methods
+-------
+
+.. index:: pair: function; Get
+.. _doxid-d9/dd0/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01_t_01_4_1a918f367667ef9090912650705055ea5e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static std::shared_ptr<T> Get(T* this_ptr)
+
+Get shared pointer to itself.
+

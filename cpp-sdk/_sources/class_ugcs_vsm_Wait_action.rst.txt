@@ -1,0 +1,208 @@
+.. index:: pair: class; ugcs::vsm::Wait_action
+.. _doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action:
+
+class ugcs::vsm::Wait_action
+============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Wait action. :ref:`More...<details-dc/daf/classugcs_1_1vsm_1_1_wait__action>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <wait_action.h>
+	
+	class Wait_action: public :ref:`ugcs::vsm::Action<doxid-dc/d7a/classugcs_1_1vsm_1_1_action>`
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Wait_action> :ref:`Ptr<doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1a846c90dc77d740255b70262166403c61>`;
+		typedef std::weak_ptr<Wait_action> :ref:`Weak_ptr<doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1af19b4b73a18227b02db8937aba0bccff>`;
+
+		// fields
+	
+		double :ref:`wait_time<doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1a2b00c46ce9d142ea8ea3a3c441be6b21>`;
+
+		// construction
+	
+		:ref:`Wait_action<doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1a3e5b353551277797a61caeecabf32987>`(double wait_time);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a>` :ref:`Create<doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1ab0ae785dd32a379f9bc99e22437f2ae2>`(Args&&... args);
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<:ref:`Action<doxid-dc/d7a/classugcs_1_1vsm_1_1_action>`> :ref:`Ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a>`;
+		typedef std::weak_ptr<:ref:`Action<doxid-dc/d7a/classugcs_1_1vsm_1_1_action>`> :ref:`Weak_ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a9798e1bd2f6fd447f2e1b2e0f32a3763>`;
+		typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`Format_exception_dummy_struct<doxid-d8/d4a/structugcs_1_1vsm_1_1_action_1_1_format__exception__dummy__struct>`,> :ref:`Format_exception<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1ac00b4775ae858fca8fc9c2907a644b8a>`;
+
+		// enums
+	
+		enum :ref:`Type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>`;
+
+		// structs
+	
+		struct :ref:`Format_exception_dummy_struct<doxid-d8/d4a/structugcs_1_1vsm_1_1_action_1_1_format__exception__dummy__struct>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::REPEAT_SERVO><doxid-d4/d0a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_r_e_p_e_a_t___s_e_r_v_o_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::POI><doxid-d1/d31/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_p_o_i_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::PAYLOAD_STEERING><doxid-d6/d93/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_p_a_y_l_o_a_d___s_t_e_e_r_i_n_g_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::PANORAMA><doxid-d9/d36/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_p_a_n_o_r_a_m_a_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::SET_HOME><doxid-da/dc6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___h_o_m_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::TAKEOFF><doxid-df/db7/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_t_a_k_e_o_f_f_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::SET_SERVO><doxid-de/d1a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___s_e_r_v_o_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::TASK_ATTRIBUTES><doxid-d3/d94/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_t_a_s_k___a_t_t_r_i_b_u_t_e_s_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::VTOL_TRANSITION><doxid-d5/d10/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_v_t_o_l___t_r_a_n_s_i_t_i_o_n_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::MOVE><doxid-da/de6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_m_o_v_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::HEADING><doxid-d4/dbe/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_h_e_a_d_i_n_g_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_CONTROL><doxid-dc/d57/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___c_o_n_t_r_o_l_01_4>`;
+	
+		template <Type type_val>
+		struct :ref:`Mapper<doxid-da/d7c/structugcs_1_1vsm_1_1_action_1_1_mapper>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::LANDING><doxid-d5/d51/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_l_a_n_d_i_n_g_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_SERIES_BY_DISTANCE><doxid-dd/d32/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___d_i_s_t_a_n_c_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_TRIGGER><doxid-d1/d04/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___t_r_i_g_g_e_r_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_SERIES_BY_TIME><doxid-d4/d8c/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___t_i_m_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CHANGE_SPEED><doxid-da/d96/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_h_a_n_g_e___s_p_e_e_d_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::WAIT><doxid-df/d7a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_w_a_i_t_01_4>`;
+
+		// fields
+	
+		int :ref:`command_id<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a0417c592be2e060264012c7dd7aebfbd>` = -1;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a>` :ref:`Create<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1aa9cf43a60d1c94283a102604c0d1b287>`(Args&&... args);
+	
+		:ref:`Type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>` :ref:`Get_type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1abf94ade9dc8302843e174f2ce20e9133>`() const;
+		void :ref:`Set_id<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a0da4be7ed684d474669fdb5e3427ba20>`(int id);
+		std::string :ref:`Get_name<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1ab175b3e364b4aadd05f614301b14de43>`();
+	
+		template <Type type_val>
+		:ref:`Mapper<doxid-da/d7c/structugcs_1_1vsm_1_1_action_1_1_mapper>`<type_val>::type::Ptr :ref:`Get_action<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1afa1b44b7522526e19d771946cd2c5dff>`();
+
+.. _details-dc/daf/classugcs_1_1vsm_1_1_wait__action:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Wait action.
+
+Hold at the current position for specified amount of time. Implementation depends on vehicle type.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1a846c90dc77d740255b70262166403c61:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Wait_action> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1af19b4b73a18227b02db8937aba0bccff:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Wait_action> Weak_ptr
+
+Pointer type.
+
+Fields
+------
+
+.. index:: pair: variable; wait_time
+.. _doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1a2b00c46ce9d142ea8ea3a3c441be6b21:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	double wait_time
+
+Time to wait in seconds.
+
+Construction
+------------
+
+.. index:: pair: function; Wait_action
+.. _doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1a3e5b353551277797a61caeecabf32987:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Wait_action(double wait_time)
+
+Construct wait action explicitly.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action_1ab0ae785dd32a379f9bc99e22437f2ae2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a>` Create(Args&&... args)
+
+Create an instance.
+

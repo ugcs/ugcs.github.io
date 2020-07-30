@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Namespace &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="namespace std" href="namespace_std.html" />
+    <link rel="prev" title="hello_world_vsm.cpp" href="example_hello_world_vsm.cpp.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#global-functions" class="nav-link">Global Functions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#macros" class="nav-link">Macros</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <span class="target" id="global"></span><div class="section" id="global-namespace">
+<span id="index-0"></span><h1>Global Namespace<a class="headerlink" href="#global-namespace" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_std.html#doxid-d8-dcc-namespacestd"><span class="std std-ref">std</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs.html#doxid-d1-d6b-namespaceugcs"><span class="std std-ref">ugcs</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm"><span class="std std-ref">ugcs::vsm</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_callback_internal.html#doxid-df-d35-namespaceugcs-1-1vsm-1-1callback-internal"><span class="std std-ref">ugcs::vsm::callback_internal</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_internal.html#doxid-d5-de6-namespaceugcs-1-1vsm-1-1internal"><span class="std std-ref">ugcs::vsm::internal</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_java_internals.html#doxid-d7-df7-namespaceugcs-1-1vsm-1-1java-internals"><span class="std std-ref">ugcs::vsm::java_internals</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_mavlink.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink"><span class="std std-ref">ugcs::vsm::mavlink</span></a><span></span><span class="p">;</span>
+            <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_mavlink_internal.html#doxid-de-d90-namespaceugcs-1-1vsm-1-1mavlink-1-1internal"><span class="std std-ref">ugcs::vsm::mavlink::internal</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_param_setter_internal.html#doxid-d1-dda-namespaceugcs-1-1vsm-1-1param-setter-internal"><span class="std std-ref">ugcs::vsm::param_setter_internal</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_sockets.html#doxid-d1-d2a-namespaceugcs-1-1vsm-1-1sockets"><span class="std std-ref">ugcs::vsm::sockets</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_glob_t.html#doxid-d6-d23-structglob-t"><span class="std std-ref">glob_t</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Adsb_vehicle.html#doxid-d0-dfd-class-adsb-vehicle"><span class="std std-ref">Adsb_vehicle</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<a class="reference internal" href="#doxid-d1-d84-endian-8h-1aa993c0a2e0f092f4b5fb58e274a917ab"><span class="std std-ref">Bo_value</span></a><span></span><span class="p">(</span><span class="n">T</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+<a class="reference internal" href="#doxid-d1-d84-endian-8h-1aa993c0a2e0f092f4b5fb58e274a917ab"><span class="std std-ref">Bo_value</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d1-d84-endian-8h-1a8b17e7641addcdb6d377215d36289549"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+<a class="reference internal" href="#doxid-d1-d84-endian-8h-1a275aa2d8855aae848819828dcf3f34e4"><span class="std std-ref">operator T</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-d1-d84-endian-8h-1a3cb7f9ac778b4f6ec0e3f258ce6b0998"><span class="std std-ref">Get</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">static</span> <span class="n">T</span> <a class="reference internal" href="#doxid-d1-d84-endian-8h-1a80b5658a5aefe3bcc081071f83d7d00f"><span class="std std-ref">Get</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d1-d84-endian-8h-1a33d034f06cf8eba53f7c0ebb58935458"><span class="std std-ref">Set</span></a><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+<span class="n">__BEGIN_DECLS</span> <span class="kt">int</span> <span class="n">glob</span> <span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a88d363ceb306376beee83e705aff6037"><span></span><span class="n">__P</span></span><span></span><span class="p">((</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">),</span> <a class="reference internal" href="struct_glob_t.html#doxid-d6-d23-structglob-t"><span class="std std-ref">glob_t</span></a><span></span><span class="o">*</span><span class="p">));</span>
+<span class="kt">void</span> <span class="n">globfree</span> <span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a0052db154d8b6426467e55e7065d9a70"><span></span><span class="n">__P</span></span><span></span><span class="p">((</span><a class="reference internal" href="struct_glob_t.html#doxid-d6-d23-structglob-t"><span class="std std-ref">glob_t</span></a><span></span><span class="o">*</span><span class="p">));</span>
+<a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a5c326d542ab0bdc7cf2ccc3cb3066dbd"><span class="std std-ref">Value</span></a><span></span><span class="p">(</span><span class="n">T</span> <span class="n">value</span> <span class="o">=</span> <span class="n">initial_value</span><span class="p">);</span>
+<a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a5c326d542ab0bdc7cf2ccc3cb3066dbd"><span class="std std-ref">Value</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a56f6586eeeafef8830663a91fbc99d92"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+<a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a275aa2d8855aae848819828dcf3f34e4"><span class="std std-ref">operator T</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a3cb7f9ac778b4f6ec0e3f258ce6b0998"><span class="std std-ref">Get</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">constexpr</span> <span class="n">Field_type_id</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a4166176e614a6a0d9946b8f86450e55b"><span class="std std-ref">Get_type_id</span></a><span></span><span class="p">();</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a372de693ad40b3f42839c8ec6ac845f4"><span class="std std-ref">Reset</span></a><span></span><span class="p">();</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1ab367bbfca7625e68cc333292922a55e3"><span class="std std-ref">Is_reset</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">TValue</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a58bf90709dea176358511a9cbf95f921"><span class="std std-ref">operator []</span></a><span></span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">);</span>
+<span class="kt">size_t</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a4d68cf96e386fb940d9a0bdb85dad250"><span class="std std-ref">Get_length</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a0100f76b74b3a6a9bda87b437393aea3"><span class="std std-ref">Get_string</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1ab6604ba6eb234ea5515c11ef8186f227"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a97dd24b1597aacdaef2d977dd90aff5e"><span class="std std-ref">operator !=</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">);</span>
+<span class="n">Value_array</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a5dfc0eed1d9de3006e6eea51c90b281b"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">);</span>
+<span class="n">Value_array</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a83d3560cf5f156c87f42672e0227fe52"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+
+<span class="c1">// macros</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-db-d16-debug-8h-1a32627e8b3d49ab3731191d9fe21128e9"><span class="std std-ref">ASSERT_IMPL</span></a><span></span><span class="p">(</span><span class="n">cond_str</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-db-de9-device-8h-1ac5107c64417e14b78b7ba4d339b118a5"><span></span><span class="n">CREATE_COMMIT_SCOPE</span></span><span></span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-da-d05-callback-8h-1aa8f8b02e868d6b8ae25772a955b6d7d7"><span class="std std-ref">DEFINE_CALLBACK_BUILDER</span></a><span></span><span class="p">(</span> \
+    <span class="n">__name</span><span class="p">,</span> \
+    <span class="n">__types</span><span class="p">,</span> \
+    <span class="n">__values</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-da-d05-callback-8h-1a6508ddc2172ef25d99b345eec3d18da6"><span class="std std-ref">DEFINE_CALLBACK_BUILDER_TEMPLATE</span></a><span></span><span class="p">(</span> \
+    <span class="n">__name</span><span class="p">,</span> \
+    <span class="n">__template</span><span class="p">,</span> \
+    <span class="n">__types</span><span class="p">,</span> \
+    <span class="n">__values</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d5-d60-utils-8h-1add7ad4e26c0e697e6eadb8da66c3e60d"><span class="std std-ref">DEFINE_COMMON_CLASS</span></a><span></span><span class="p">(</span> \
+    <span class="n">__class_name</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d5-d64-defs-8h-1ab7a7a41e616d883b2be558184217fff1"><span></span><span class="n">DEFINE_DEFAULT_VSM_NAME</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d5-d64-defs-8h-1a1a1c786236b821b9df9f48aa381db72c"><span></span><span class="n">DEFINE_VSM_NAME</span></span><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-db-de9-device-8h-1a30ae55b64a7786e2a310e2f82b2f7389"><span class="std std-ref">DEVICE_LOG</span></a><span></span><span class="p">(</span> \
+    <span class="n">level_</span><span class="p">,</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-db-de9-device-8h-1a301e386eeda266f1624a728f44830abf"><span class="std std-ref">DEVICE_LOG_DBG</span></a><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-db-de9-device-8h-1a9a3db00053b990007571e209d61957a6"><span></span><span class="n">DEVICE_LOG_ERR</span></span><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-db-de9-device-8h-1a6709a3894a8cc7cdad698ca75afaafd4"><span></span><span class="n">DEVICE_LOG_INF</span></span><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-db-de9-device-8h-1a32bb8829c577193891474be02205ae2b"><span></span><span class="n">DEVICE_LOG_WRN</span></span><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-da-d31-win-2ugcs-2vsm-2platform-sockets-8h-1a86c5dbf5a99358e288f573d6a1e0873f"><span></span><span class="n">FD_SETSIZE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a234444240a7d268f31c141b9710c59da"><span></span><span class="n">GLOB_ABEND</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1aa40f63eb7a510f61854e80c8aed76df2"><span></span><span class="n">GLOB_ALTDIRFUNC</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a7e586df07bb159e904a61d8470f1fda2"><span></span><span class="n">GLOB_APPEND</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a8e2d3aba9a154bf55f242e4c7806dd61"><span></span><span class="n">GLOB_BRACE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a8ae13e97ae5da0993fe526c406337c62"><span></span><span class="n">GLOB_DOOFFS</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a9e77b0b20a1c1d66cdf924a07776f360"><span></span><span class="n">GLOB_ERR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1acc6e4ea8a4442b7781000ce2ac38bfc8"><span></span><span class="n">GLOB_MAGCHAR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1ac6ec2b6ae844d895de9685a689dd27f0"><span></span><span class="n">GLOB_MARK</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1af183b2f40936442579be8d62b87e6fc6"><span></span><span class="n">GLOB_NOCHECK</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1acbd3685c584a9741e4cf6dab1cab0e17"><span></span><span class="n">GLOB_NOMAGIC</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a4eba6cedebdfe13f924d9b4a489bfe83"><span></span><span class="n">GLOB_NOSORT</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1ab53de39e075e6fb9a11678341772930b"><span></span><span class="n">GLOB_NOSPACE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a267b9d6763cefa072ccdf507ecb813d1"><span></span><span class="n">GLOB_QUOTE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d7-d04-glob-8h-1a4f1c6c0dae8dfefcf3032fed1b5cd0fe"><span></span><span class="n">GLOB_TILDE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d9-d16-mac-2ugcs-2vsm-2platform-sockets-8h-1a26769957ec1a2beaf223f33b66ee64ab"><span></span><span class="n">INVALID_SOCKET</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d2-dea-android-linux-2ugcs-2vsm-2platform-sockets-8h-1a26769957ec1a2beaf223f33b66ee64ab"><span></span><span class="n">INVALID_SOCKET</span></span><span></span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d4-d6c-java-8h-1aa223a8ab6c2821ff6391b94825bba666"><span></span><span class="n">JAVA_DEF_METHOD_SELECTOR</span></span><span></span><span class="p">(</span> \
+    <span class="n">__type</span><span class="p">,</span> \
+    <span class="n">__name</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d4-d6c-java-8h-1af7d6521dd1801731b9ac39046e224e6d"><span></span><span class="n">JAVA_EXCEPTION_CHECK</span></span><span></span><span class="p">(</span><span class="n">__env</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d2-db0-android-linux-mac-2ugcs-2vsm-2platform-8h-1a293c66373c30ab91218314002e7ed3e1"><span class="std std-ref">LINE_TERMINATOR</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-de-dd3-win-2ugcs-2vsm-2platform-8h-1a293c66373c30ab91218314002e7ed3e1"><span class="std std-ref">LINE_TERMINATOR</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1a159ca84d25a5487d8e81e4438725df19"><span class="std std-ref">LOG</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1a82193f01b56c77d97198ad1e55c0858c"><span class="std std-ref">LOG_DBG</span></a><span></span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1a5c01521cd0033d3db4fb914d19865125"><span class="std std-ref">LOG_DEBUG</span></a><span></span><span class="p">(</span> \
+    <span class="n">msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1a96fad55b3f5adf08c39e4c877cf185e3"><span class="std std-ref">LOG_ERR</span></a><span></span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1ad9c73bc78b8b2564e47a037b5a6ca226"><span class="std std-ref">LOG_ERROR</span></a><span></span><span class="p">(</span> \
+    <span class="n">msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1a3a355e1f39a113ebe9476236e571e5d8"><span class="std std-ref">LOG_INFO</span></a><span></span><span class="p">(</span> \
+    <span class="n">msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1aea3f57d6dcc5b4ac957e2679e87dde27"><span class="std std-ref">LOG_WARN</span></a><span></span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1a203d27f91125d1d538cd25b1bb9e5d7f"><span class="std std-ref">LOG_WARNING</span></a><span></span><span class="p">(</span> \
+    <span class="n">msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-df-db1-math-8h-1ae71449b1cc6e6250b91f539153a7a0d3"><span></span><span class="n">M_PI</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-df-db1-math-8h-1a958e4508ed28ee5cc04249144312c15f"><span></span><span class="n">M_PI_2</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-de-dd3-win-2ugcs-2vsm-2platform-8h-1a256a5721249aa3309437212cc21a9fe4"><span class="std std-ref">PATH_SEPARATOR</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d2-db0-android-linux-mac-2ugcs-2vsm-2platform-8h-1a256a5721249aa3309437212cc21a9fe4"><span class="std std-ref">PATH_SEPARATOR</span></a><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d9-d16-mac-2ugcs-2vsm-2platform-sockets-8h-1a633b0396ff93d336a088412a190a5072"><span></span><span class="n">SOCKET_ERROR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d2-dea-android-linux-2ugcs-2vsm-2platform-sockets-8h-1a633b0396ff93d336a088412a190a5072"><span></span><span class="n">SOCKET_ERROR</span></span><span></span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d8-d37-vehicle-8h-1a99c3716429187493d18cee03f90827a3"><span class="std std-ref">VEHICLE_LOG</span></a><span></span><span class="p">(</span> \
+    <span class="n">level_</span><span class="p">,</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d8-d37-vehicle-8h-1a8f142e6b39654e799adc07e9ff49ad15"><span class="std std-ref">VEHICLE_LOG_DBG</span></a><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d8-d37-vehicle-8h-1a1ed537d108507d8fccb898473e200ba7"><span></span><span class="n">VEHICLE_LOG_ERR</span></span><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d8-d37-vehicle-8h-1a62ef5bc917e5a6c5b143156bce8014b4"><span></span><span class="n">VEHICLE_LOG_INF</span></span><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d8-d37-vehicle-8h-1afa4bae56bdcee74b2a463a738daea44a"><span></span><span class="n">VEHICLE_LOG_WRN</span></span><span></span><span class="p">(</span> \
+    <span class="n">vehicle_</span><span class="p">,</span> \
+    <span class="n">fmt_</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-db-d16-debug-8h-1af7b3f37572fd59f7a701917b8703035f"><span class="std std-ref">VERIFY</span></a><span></span><span class="p">(</span> \
+    <span class="n">x</span><span class="p">,</span> \
+    <span class="n">expected</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d1-d84-endian-8h-1abf998fff62e298eefbc7bdfecb8c1177"><span class="std std-ref">VSM_BSWAP16</span></a><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d1-d84-endian-8h-1a4b218acac0cf85728e545acf498a892d"><span class="std std-ref">VSM_BSWAP32</span></a><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d1-d84-endian-8h-1aa5e6279fae102699172de28a8512a50d"><span class="std std-ref">VSM_BSWAP64</span></a><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-dd-d2d-exception-8h-1aea3ebd1ebfb777ffb5b8bcbe7d1720ad"><span class="std std-ref">VSM_DEFINE_DERIVED_EXCEPTION</span></a><span></span><span class="p">(</span> \
+    <span class="n">__base_class</span><span class="p">,</span> \
+    <span class="n">__exc_class</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-dd-d2d-exception-8h-1abfef19141b3703aa942d34d3d872ebd3"><span class="std std-ref">VSM_DEFINE_EXCEPTION</span></a><span></span><span class="p">(</span> \
+    <span class="n">__exc_class</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d1-d84-endian-8h-1a6fa9bc2b8159d20feef5f8b27a488993"><span></span><span class="n">VSM_DEF_BO_CONV</span></span><span></span><span class="p">(</span><span class="n">type_size</span><span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-dd-d2d-exception-8h-1a7fc579418b7ef463578555dcb09e31a4"><span class="std std-ref">VSM_EXCEPTION</span></a><span></span><span class="p">(</span> \
+    <span class="n">__exc_class</span><span class="p">,</span> \
+    <span class="n">__msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-dd-d2d-exception-8h-1abd124dad36c9ad8cd88af74a8e851701"><span class="std std-ref">VSM_PARAM_EXCEPTION</span></a><span></span><span class="p">(</span> \
+    <span class="n">__exc_class</span><span class="p">,</span> \
+    <span class="n">__param</span><span class="p">,</span> \
+    <span class="n">__msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-dd-d2d-exception-8h-1a863faa852d17750d5aff2c28470c3d5c"><span class="std std-ref">VSM_SYS_EXCEPTION</span></a><span></span><span class="p">(</span> \
+    <span class="n">__msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d7-d7f-log-8h-1ab0fd6051f712d03f80118193cd6894be"><span class="std std-ref">_LOG_WRITE_MSG</span></a><span></span><span class="p">(</span> \
+    <span class="n">level</span><span class="p">,</span> \
+    <span class="n">msg</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d1-d84-endian-8h-1a254ec185a294ff0b4600bebce9f62b91"><span></span><span class="n">_VSM_DEF_BO_CONV</span></span><span></span><span class="p">(</span> \
+    <span class="n">type_size</span><span class="p">,</span> \
+    <span class="n">type_name</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d4-d6c-java-8h-1a8469f130ebaa0ece2309a49e34bf99d9"><span></span><span class="n">__JAVA_CONCAT</span></span><span></span><span class="p">(</span> \
+    <span class="n">x</span><span class="p">,</span> \
+    <span class="n">y</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d4-d6c-java-8h-1a5c7cd81a4a29483ff6951bc1b900405c"><span></span><span class="n">__JAVA_CONCAT_</span></span><span></span><span class="p">(</span> \
+    <span class="n">x</span><span class="p">,</span> \
+    <span class="n">y</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d5-d64-defs-8h-1abe8996d3d985ee1529475443cc635bf1"><span class="std std-ref">__PACKED</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-da-d05-callback-8h-1ab758900bd3deef417d94277dabdcce10"><span class="std std-ref">__UNPACK_PARAMS</span></a><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d5-d64-defs-8h-1a6c30d490cd2302ff05d355f3ec844c1f"><span class="std std-ref">__UNUSED</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-d1-d84-endian-8h-1a601280e0b1e3c0a94a338e25b9c26a9b"><span class="std std-ref">__VSM_BO_INT</span></a><span></span><span class="p">(</span><span class="n">type_size</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-d1-d84-endian-8h-1adf518bded8b24043c452a3b1150439a4"><span></span><span class="n">__VSM_BO_UINT</span></span><span></span><span class="p">(</span><span class="n">type_size</span><span class="p">)</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-global"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1aa993c0a2e0f092f4b5fb58e274a917ab"><span id="index-1"></span><span></span><span class="n">Bo_value</span><span class="p">(</span><span class="n">T</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></pre>
+<p>Construct value.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>Value in host byte order.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1a8b17e7641addcdb6d377215d36289549"><span id="index-2"></span><a class="reference internal" href="#doxid-d1-d84-endian-8h-1aa993c0a2e0f092f4b5fb58e274a917ab"><span class="std std-ref">Bo_value</span></a><span></span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">)</span></pre>
+<p>Assign new value.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>Value in host byte order.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1a275aa2d8855aae848819828dcf3f34e4"><span id="index-3"></span><span></span><span class="k">operator</span> <span class="n">T</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Cast to underlying type.</p>
+<p class="rubric">Returns:</p>
+<p>Value in host byte order.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1a3cb7f9ac778b4f6ec0e3f258ce6b0998"><span id="index-4"></span><span></span><span class="n">T</span> <span class="n">Get</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get the value of underlying type.</p>
+<p class="rubric">Returns:</p>
+<p>Value in host byte order.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1a80b5658a5aefe3bcc081071f83d7d00f"><span id="index-5"></span><span></span><span class="k">static</span> <span class="n">T</span> <span class="n">Get</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">)</span></pre>
+<p>Interpret byte buffer as a storage for underlying type and return host byte order value.</p>
+<p>Caller is responsible for the size of the input buffer.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>buffer</p></td>
+<td><p>Input buffer with original value.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>Value in host byte order.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1a33d034f06cf8eba53f7c0ebb58935458"><span id="index-6"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Set</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">)</span></pre>
+<p>Save value given in host order to byte buffer.</p>
+<p>Caller is responsible for the size of the buffer.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>buffer</p></td>
+<td><p>Output buffer to save value to.</p></td>
+</tr>
+<tr class="row-even"><td><p>value</p></td>
+<td><p>value in host byte order.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a5c326d542ab0bdc7cf2ccc3cb3066dbd"><span id="index-7"></span><span></span><span class="n">Value</span><span class="p">(</span><span class="n">T</span> <span class="n">value</span> <span class="o">=</span> <span class="n">initial_value</span><span class="p">)</span></pre>
+<p>Construct value.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>Value in host byte order.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a56f6586eeeafef8830663a91fbc99d92"><span id="index-8"></span><a class="reference internal" href="#doxid-d6-d18-mavlink-8h-1a5c326d542ab0bdc7cf2ccc3cb3066dbd"><span class="std std-ref">Value</span></a><span></span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">)</span></pre>
+<p>Assign new value.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>Value in host byte order.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a275aa2d8855aae848819828dcf3f34e4"><span id="index-9"></span><span></span><span class="k">operator</span> <span class="n">T</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Cast to underlying type.</p>
+<p class="rubric">Returns:</p>
+<p>Value in host byte order.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a3cb7f9ac778b4f6ec0e3f258ce6b0998"><span id="index-10"></span><span></span><span class="n">T</span> <span class="n">Get</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get the value of underlying type.</p>
+<p class="rubric">Returns:</p>
+<p>Value in host byte order.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a4166176e614a6a0d9946b8f86450e55b"><span id="index-11"></span><span></span><span class="k">constexpr</span> <span class="n">Field_type_id</span> <span class="n">Get_type_id</span><span class="p">()</span></pre>
+<p>Get type ID for this value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a372de693ad40b3f42839c8ec6ac845f4"><span id="index-12"></span><span></span><span class="kt">void</span> <span class="n">Reset</span><span class="p">()</span></pre>
+<p>Reset to default value used in UgCS as a “not present” indication.</p>
+<p>Reset all array values to UgCS default values (zeros for string).</p>
+<p>Reset all array values to UgCS default values.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1ab367bbfca7625e68cc333292922a55e3"><span id="index-13"></span><span></span><span class="kt">bool</span> <span class="n">Is_reset</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check, if the field is reset.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a58bf90709dea176358511a9cbf95f921"><span id="index-14"></span><span></span><span class="n">TValue</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="p">[]</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></pre>
+<p>Access operator.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a4d68cf96e386fb940d9a0bdb85dad250"><span id="index-15"></span><span></span><span class="kt">size_t</span> <span class="n">Get_length</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get string length.</p>
+<p>In MAVLink character string may be NULL terminated or may not be if it fully occupies the array.</p>
+<p class="rubric">Returns:</p>
+<p>String length in bytes.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a0100f76b74b3a6a9bda87b437393aea3"><span id="index-16"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Get_string</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get string value for the characters array.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1ab6604ba6eb234ea5515c11ef8186f227"><span id="index-17"></span><span></span><span class="kt">bool</span> <span class="k">operator</span> <span class="o">==</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Compare with string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a97dd24b1597aacdaef2d977dd90aff5e"><span id="index-18"></span><span></span><span class="kt">bool</span> <span class="k">operator</span> <span class="o">!=</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Compare with string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a5dfc0eed1d9de3006e6eea51c90b281b"><span id="index-19"></span><span></span><span class="n">Value_array</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Assign string to the characters array.</p>
+<p>In case the string exceeds the array size it is truncated without terminated NULL character (as per MAVLink strings description).</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>str</p></td>
+<td><p>String to assign.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d18-mavlink-8h-1a83d3560cf5f156c87f42672e0227fe52"><span id="index-20"></span><span></span><span class="n">Value_array</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Assign string to the characters array.</p>
+<p>In case the string exceeds the array size it is truncated without terminated NULL character (as per MAVLink strings description).</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>str</p></td>
+<td><p>String to assign.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="macros">
+<h3>Macros<a class="headerlink" href="#macros" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d16-debug-8h-1a32627e8b3d49ab3731191d9fe21128e9"><span id="index-21"></span><span></span><span class="cp">#define ASSERT_IMPL(cond_str)</span></pre>
+<p>Assertion action which is done when assertion fires.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>cond_str</p></td>
+<td><p>Stringified condition expression.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-da-d05-callback-8h-1aa8f8b02e868d6b8ae25772a955b6d7d7"><span id="index-22"></span><span></span><span class="cp">#define DEFINE_CALLBACK_BUILDER(__name, __types, __values)</span></pre>
+<p>Define callback builder function. Use when forced arguments required. Usage example:</p>
+<pre class="highlight literal-block"><span></span><span class="n">DEFINE_CALLBACK_BUILDER</span><span class="p">(</span><span class="n">Make_data_handler</span><span class="p">,</span>
+                        <span class="p">(</span><span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">Io_result</span><span class="p">,</span> <span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">Io_buffer</span><span class="o">::</span><span class="n">Ptr</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">Io_result</span><span class="o">::</span><span class="n">OK</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">));</span></pre>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__name</p></td>
+<td><p>Name for a created function.</p></td>
+</tr>
+<tr class="row-even"><td><p>__types</p></td>
+<td><p>Types of forced arguments (parenthesis-enclosed comma-separated list).</p></td>
+</tr>
+<tr class="row-odd"><td><p>__values</p></td>
+<td><p>Initial values for the forced arguments (parenthesis-enclosed comma-separated list).</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-da-d05-callback-8h-1a6508ddc2172ef25d99b345eec3d18da6"><span id="index-23"></span><span></span><span class="cp">#define DEFINE_CALLBACK_BUILDER_TEMPLATE(__name, __template, __types, __values)</span></pre>
+<p>The same as DEFINE_CALLBACK_BUILDER, but allows specifying additional template parameters for builders which arguments depend on templates.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__name</p></td>
+<td><p>See DEFINE_CALLBACK_BUILDER</p></td>
+</tr>
+<tr class="row-even"><td><p>__template</p></td>
+<td><p>Additional template parameters (parenthesis-enclosed comma-separated list).</p></td>
+</tr>
+<tr class="row-odd"><td><p>__types</p></td>
+<td><p>See DEFINE_CALLBACK_BUILDER</p></td>
+</tr>
+<tr class="row-even"><td><p>__values</p></td>
+<td><p>See DEFINE_CALLBACK_BUILDER</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d60-utils-8h-1add7ad4e26c0e697e6eadb8da66c3e60d"><span id="index-24"></span><span></span><span class="cp">#define DEFINE_COMMON_CLASS(__class_name, ...)</span></pre>
+<p>Use this macro to define some common attributes for a class.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__class_name</p></td>
+<td><p>Name for the class being defined.</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>Name of the class used as a template parameter when deriving from std::enable_shared_from_this.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-de9-device-8h-1a30ae55b64a7786e2a310e2f82b2f7389"><span id="index-25"></span><span></span><span class="cp">#define DEVICE_LOG(level_, vehicle_, fmt_, ...)</span></pre>
+<p>Convenience vehicle logging macro.</p>
+<p>Vehicle should be given by value (no copies will be made).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-de9-device-8h-1a301e386eeda266f1624a728f44830abf"><span id="index-26"></span><span></span><span class="cp">#define DEVICE_LOG_DBG(vehicle_, fmt_, ...)</span></pre>
+<p>Different level convenience vehicle logging macros.</p>
+<p>Vehicle should be given by value (no copies will be made).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-db0-android-linux-mac-2ugcs-2vsm-2platform-8h-1a293c66373c30ab91218314002e7ed3e1"><span id="index-27"></span><span></span><span class="cp">#define LINE_TERMINATOR</span></pre>
+<p>Characters sequence used as line terminator in text streams.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-de-dd3-win-2ugcs-2vsm-2platform-8h-1a293c66373c30ab91218314002e7ed3e1"><span id="index-28"></span><span></span><span class="cp">#define LINE_TERMINATOR</span></pre>
+<p>Characters sequence used as line terminator in text streams.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1a159ca84d25a5487d8e81e4438725df19"><span id="index-29"></span><span></span><span class="cp">#define LOG</span></pre>
+<p>Short name.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1a82193f01b56c77d97198ad1e55c0858c"><span id="index-30"></span><span></span><span class="cp">#define LOG_DBG</span></pre>
+<p>Short name.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1a5c01521cd0033d3db4fb914d19865125"><span id="index-31"></span><span></span><span class="cp">#define LOG_DEBUG(msg, ...)</span></pre>
+<p>Write debug message to the application log.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1a96fad55b3f5adf08c39e4c877cf185e3"><span id="index-32"></span><span></span><span class="cp">#define LOG_ERR</span></pre>
+<p>Short name.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1ad9c73bc78b8b2564e47a037b5a6ca226"><span id="index-33"></span><span></span><span class="cp">#define LOG_ERROR(msg, ...)</span></pre>
+<p>Write error message to the application log.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1a3a355e1f39a113ebe9476236e571e5d8"><span id="index-34"></span><span></span><span class="cp">#define LOG_INFO(msg, ...)</span></pre>
+<p>Write informational message to the application log.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1aea3f57d6dcc5b4ac957e2679e87dde27"><span id="index-35"></span><span></span><span class="cp">#define LOG_WARN</span></pre>
+<p>Short name.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1a203d27f91125d1d538cd25b1bb9e5d7f"><span id="index-36"></span><span></span><span class="cp">#define LOG_WARNING(msg, ...)</span></pre>
+<p>Write warning message to the application log.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-de-dd3-win-2ugcs-2vsm-2platform-8h-1a256a5721249aa3309437212cc21a9fe4"><span id="index-37"></span><span></span><span class="cp">#define PATH_SEPARATOR</span></pre>
+<p>Symbol used as file-system path separator on a target platform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-db0-android-linux-mac-2ugcs-2vsm-2platform-8h-1a256a5721249aa3309437212cc21a9fe4"><span id="index-38"></span><span></span><span class="cp">#define PATH_SEPARATOR</span></pre>
+<p>Symbol used as file-system path separator on a target platform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-d37-vehicle-8h-1a99c3716429187493d18cee03f90827a3"><span id="index-39"></span><span></span><span class="cp">#define VEHICLE_LOG(level_, vehicle_, fmt_, ...)</span></pre>
+<p>Convenience vehicle logging macro.</p>
+<p>Vehicle should be given by value (no copies will be made).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-d37-vehicle-8h-1a8f142e6b39654e799adc07e9ff49ad15"><span id="index-40"></span><span></span><span class="cp">#define VEHICLE_LOG_DBG(vehicle_, fmt_, ...)</span></pre>
+<p>Different level convenience vehicle logging macros.</p>
+<p>Vehicle should be given by value (no copies will be made).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d16-debug-8h-1af7b3f37572fd59f7a701917b8703035f"><span id="index-41"></span><span></span><span class="cp">#define VERIFY(x, expected)</span></pre>
+<p>Evaluate in release, but don’t compare.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1abf998fff62e298eefbc7bdfecb8c1177"><span id="index-42"></span><span></span><span class="cp">#define VSM_BSWAP16(x)</span></pre>
+<p>Swap bytes in 16-bits integer value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1a4b218acac0cf85728e545acf498a892d"><span id="index-43"></span><span></span><span class="cp">#define VSM_BSWAP32(x)</span></pre>
+<p>Swap bytes in 32-bits integer value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1aa5e6279fae102699172de28a8512a50d"><span id="index-44"></span><span></span><span class="cp">#define VSM_BSWAP64(x)</span></pre>
+<p>Swap bytes in 64-bits integer value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-d2d-exception-8h-1aea3ebd1ebfb777ffb5b8bcbe7d1720ad"><span id="index-45"></span><span></span><span class="cp">#define VSM_DEFINE_DERIVED_EXCEPTION(__base_class, __exc_class)</span></pre>
+<p>Define custom derived exception.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__base_class</p></td>
+<td><p>Type of base exception class.</p></td>
+</tr>
+<tr class="row-even"><td><p>__exc_class</p></td>
+<td><p>Name for new exception type.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-d2d-exception-8h-1abfef19141b3703aa942d34d3d872ebd3"><span id="index-46"></span><span></span><span class="cp">#define VSM_DEFINE_EXCEPTION(__exc_class, ...)</span></pre>
+<p>Define custom exception type.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__exc_class</p></td>
+<td><p>Name for new exception type.</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>Parameter type can be specified as second argument.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">See also:</p>
+<p>Param_exception</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-d2d-exception-8h-1a7fc579418b7ef463578555dcb09e31a4"><span id="index-47"></span><span></span><span class="cp">#define VSM_EXCEPTION(__exc_class, __msg, ...)</span></pre>
+<p>Throw VSM exception instance.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__exc_class</p></td>
+<td><p>Exception class name.</p></td>
+</tr>
+<tr class="row-even"><td><p>__msg</p></td>
+<td><p>Formatted description message.</p></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p>Message format parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-d2d-exception-8h-1abd124dad36c9ad8cd88af74a8e851701"><span id="index-48"></span><span></span><span class="cp">#define VSM_PARAM_EXCEPTION(__exc_class, __param, __msg, ...)</span></pre>
+<p>Throw VSM exception instance with parameter.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__exc_class</p></td>
+<td><p>Exception class name.</p></td>
+</tr>
+<tr class="row-even"><td><p>__param</p></td>
+<td><p>Parameter value.</p></td>
+</tr>
+<tr class="row-odd"><td><p>__msg</p></td>
+<td><p>Formatted description message.</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>Message format parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-d2d-exception-8h-1a863faa852d17750d5aff2c28470c3d5c"><span id="index-49"></span><span></span><span class="cp">#define VSM_SYS_EXCEPTION(__msg, ...)</span></pre>
+<p>Throw VSM system exception - i.e.</p>
+<p>the one caused by system call failure. Special handling is required because system error code might be overwritten by exception allocation functions, so it must be taken as soon as possible.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>__msg</p></td>
+<td><p>Descriptive message of the failure context.</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>Message format parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-d7f-log-8h-1ab0fd6051f712d03f80118193cd6894be"><span id="index-50"></span><span></span><span class="cp">#define _LOG_WRITE_MSG(level, msg, ...)</span></pre>
+<p>Write message to log.</p>
+<p>For internal usage only.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d64-defs-8h-1abe8996d3d985ee1529475443cc635bf1"><span id="index-51"></span><span></span><span class="cp">#define __PACKED</span></pre>
+<p>Pack structure or class, i.e.</p>
+<p>do not allow the compiler to insert paddings for members alignment.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-da-d05-callback-8h-1ab758900bd3deef417d94277dabdcce10"><span id="index-52"></span><span></span><span class="cp">#define __UNPACK_PARAMS(...)</span></pre>
+<p>Internal helper for unpacking parenthesis-enclosed parameters lists.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d64-defs-8h-1a6c30d490cd2302ff05d355f3ec844c1f"><span id="index-53"></span><span></span><span class="cp">#define __UNUSED</span></pre>
+<p>Use with unused arguments if you like to declare that it is not (yet) used a the function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d84-endian-8h-1a601280e0b1e3c0a94a338e25b9c26a9b"><span id="index-54"></span><span></span><span class="cp">#define __VSM_BO_INT(type_size)</span></pre>
+<p>Definitions for byte order conversions for all integer types.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="example_hello_world_vsm.cpp.html" title="previous page">hello_world_vsm.cpp</a>
+    <a class='right-next' id="next-link" href="namespace_std.html" title="next page">namespace std</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+.. index:: pair: struct; ugcs::vsm::Action::Mapper<Action::Type::SET_SERVO>
+.. _doxid-de/d1a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___s_e_r_v_o_01_4:
+
+template struct ugcs::vsm::Action::Mapper<Action::Type::SET_SERVO>
+==================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Type mapper for wait action. :ref:`More...<details-de/d1a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___s_e_r_v_o_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <set_servo_action.h>
+	
+	template <>
+	struct Mapper<Action::Type::SET_SERVO>
+	{
+		// typedefs
+	
+		typedef :ref:`Set_servo_action<doxid-d7/dab/classugcs_1_1vsm_1_1_set__servo__action>` :ref:`type<doxid-de/d1a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___s_e_r_v_o_01_4_1aa0a4dec442e75341be22b5363ed5593c>`;
+	};
+.. _details-de/d1a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___s_e_r_v_o_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Type mapper for wait action.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; type
+.. _doxid-de/d1a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___s_e_r_v_o_01_4_1aa0a4dec442e75341be22b5363ed5593c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Set_servo_action<doxid-d7/dab/classugcs_1_1vsm_1_1_set__servo__action>` type
+
+Real type.
+

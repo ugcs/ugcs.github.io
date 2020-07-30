@@ -1,0 +1,1192 @@
+.. _global:
+.. index:: pair: namespace; global
+
+Global Namespace
+================
+
+.. toctree::
+	:hidden:
+
+	namespace_std.rst
+	namespace_ugcs.rst
+	struct_glob_t.rst
+	class_Adsb_vehicle.rst
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	// namespaces
+
+	namespace :ref:`std<doxid-d8/dcc/namespacestd>`;
+	namespace :ref:`ugcs<doxid-d1/d6b/namespaceugcs>`;
+		namespace :ref:`ugcs::vsm<doxid-dd/def/namespaceugcs_1_1vsm>`;
+			namespace :ref:`ugcs::vsm::callback_internal<doxid-df/d35/namespaceugcs_1_1vsm_1_1callback__internal>`;
+			namespace :ref:`ugcs::vsm::internal<doxid-d5/de6/namespaceugcs_1_1vsm_1_1internal>`;
+			namespace :ref:`ugcs::vsm::java_internals<doxid-d7/df7/namespaceugcs_1_1vsm_1_1java__internals>`;
+			namespace :ref:`ugcs::vsm::mavlink<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink>`;
+				namespace :ref:`ugcs::vsm::mavlink::internal<doxid-de/d90/namespaceugcs_1_1vsm_1_1mavlink_1_1internal>`;
+			namespace :ref:`ugcs::vsm::param_setter_internal<doxid-d1/dda/namespaceugcs_1_1vsm_1_1param__setter__internal>`;
+			namespace :ref:`ugcs::vsm::sockets<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets>`;
+
+	// structs
+
+	struct :ref:`glob_t<doxid-d6/d23/structglob__t>`;
+
+	// classes
+
+	class :ref:`Adsb_vehicle<doxid-d0/dfd/class_adsb__vehicle>`;
+
+	// global functions
+
+	:ref:`Bo_value<doxid-d1/d84/endian_8h_1aa993c0a2e0f092f4b5fb58e274a917ab>`(T value = 0);
+	:ref:`Bo_value<doxid-d1/d84/endian_8h_1aa993c0a2e0f092f4b5fb58e274a917ab>`& :ref:`operator =<doxid-d1/d84/endian_8h_1a8b17e7641addcdb6d377215d36289549>` (T value);
+	:ref:`operator T<doxid-d1/d84/endian_8h_1a275aa2d8855aae848819828dcf3f34e4>` () const;
+	T :ref:`Get<doxid-d1/d84/endian_8h_1a3cb7f9ac778b4f6ec0e3f258ce6b0998>`() const;
+	static T :ref:`Get<doxid-d1/d84/endian_8h_1a80b5658a5aefe3bcc081071f83d7d00f>`(const void* buffer);
+	static void :ref:`Set<doxid-d1/d84/endian_8h_1a33d034f06cf8eba53f7c0ebb58935458>`(void* buffer, const T value);
+	__BEGIN_DECLS int glob :target:`__P<doxid-d7/d04/glob_8h_1a88d363ceb306376beee83e705aff6037>`((const char*, int, int(*)(const char*, int), :ref:`glob_t<doxid-d6/d23/structglob__t>`*));
+	void globfree :target:`__P<doxid-d7/d04/glob_8h_1a0052db154d8b6426467e55e7065d9a70>`((:ref:`glob_t<doxid-d6/d23/structglob__t>`*));
+	:ref:`Value<doxid-d6/d18/mavlink_8h_1a5c326d542ab0bdc7cf2ccc3cb3066dbd>`(T value = initial_value);
+	:ref:`Value<doxid-d6/d18/mavlink_8h_1a5c326d542ab0bdc7cf2ccc3cb3066dbd>`& :ref:`operator =<doxid-d6/d18/mavlink_8h_1a56f6586eeeafef8830663a91fbc99d92>` (T value);
+	:ref:`operator T<doxid-d6/d18/mavlink_8h_1a275aa2d8855aae848819828dcf3f34e4>` () const;
+	T :ref:`Get<doxid-d6/d18/mavlink_8h_1a3cb7f9ac778b4f6ec0e3f258ce6b0998>`() const;
+	constexpr Field_type_id :ref:`Get_type_id<doxid-d6/d18/mavlink_8h_1a4166176e614a6a0d9946b8f86450e55b>`();
+	void :ref:`Reset<doxid-d6/d18/mavlink_8h_1a372de693ad40b3f42839c8ec6ac845f4>`();
+	bool :ref:`Is_reset<doxid-d6/d18/mavlink_8h_1ab367bbfca7625e68cc333292922a55e3>`() const;
+	TValue& :ref:`operator []<doxid-d6/d18/mavlink_8h_1a58bf90709dea176358511a9cbf95f921>` (size_t index);
+	size_t :ref:`Get_length<doxid-d6/d18/mavlink_8h_1a4d68cf96e386fb940d9a0bdb85dad250>`() const;
+	std::string :ref:`Get_string<doxid-d6/d18/mavlink_8h_1a0100f76b74b3a6a9bda87b437393aea3>`() const;
+	bool :ref:`operator ==<doxid-d6/d18/mavlink_8h_1ab6604ba6eb234ea5515c11ef8186f227>` (const char* str);
+	bool :ref:`operator !=<doxid-d6/d18/mavlink_8h_1a97dd24b1597aacdaef2d977dd90aff5e>` (const char* str);
+	Value_array& :ref:`operator =<doxid-d6/d18/mavlink_8h_1a5dfc0eed1d9de3006e6eea51c90b281b>` (const char* str);
+	Value_array& :ref:`operator =<doxid-d6/d18/mavlink_8h_1a83d3560cf5f156c87f42672e0227fe52>` (const std::string& str);
+
+	// macros
+
+	#define :ref:`ASSERT_IMPL<doxid-db/d16/debug_8h_1a32627e8b3d49ab3731191d9fe21128e9>`(cond_str)
+	#define :target:`CREATE_COMMIT_SCOPE<doxid-db/de9/device_8h_1ac5107c64417e14b78b7ba4d339b118a5>`
+
+	#define :ref:`DEFINE_CALLBACK_BUILDER<doxid-da/d05/callback_8h_1aa8f8b02e868d6b8ae25772a955b6d7d7>`( \
+		__name, \
+		__types, \
+		__values \
+		)
+
+	#define :ref:`DEFINE_CALLBACK_BUILDER_TEMPLATE<doxid-da/d05/callback_8h_1a6508ddc2172ef25d99b345eec3d18da6>`( \
+		__name, \
+		__template, \
+		__types, \
+		__values \
+		)
+
+	#define :ref:`DEFINE_COMMON_CLASS<doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d>`( \
+		__class_name, \
+		... \
+		)
+
+	#define :target:`DEFINE_DEFAULT_VSM_NAME<doxid-d5/d64/defs_8h_1ab7a7a41e616d883b2be558184217fff1>`
+	#define :target:`DEFINE_VSM_NAME<doxid-d5/d64/defs_8h_1a1a1c786236b821b9df9f48aa381db72c>`(x)
+
+	#define :ref:`DEVICE_LOG<doxid-db/de9/device_8h_1a30ae55b64a7786e2a310e2f82b2f7389>`( \
+		level_, \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :ref:`DEVICE_LOG_DBG<doxid-db/de9/device_8h_1a301e386eeda266f1624a728f44830abf>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :target:`DEVICE_LOG_ERR<doxid-db/de9/device_8h_1a9a3db00053b990007571e209d61957a6>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :target:`DEVICE_LOG_INF<doxid-db/de9/device_8h_1a6709a3894a8cc7cdad698ca75afaafd4>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :target:`DEVICE_LOG_WRN<doxid-db/de9/device_8h_1a32bb8829c577193891474be02205ae2b>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :target:`FD_SETSIZE<doxid-da/d31/win_2ugcs_2vsm_2platform__sockets_8h_1a86c5dbf5a99358e288f573d6a1e0873f>`
+	#define :target:`GLOB_ABEND<doxid-d7/d04/glob_8h_1a234444240a7d268f31c141b9710c59da>`
+	#define :target:`GLOB_ALTDIRFUNC<doxid-d7/d04/glob_8h_1aa40f63eb7a510f61854e80c8aed76df2>`
+	#define :target:`GLOB_APPEND<doxid-d7/d04/glob_8h_1a7e586df07bb159e904a61d8470f1fda2>`
+	#define :target:`GLOB_BRACE<doxid-d7/d04/glob_8h_1a8e2d3aba9a154bf55f242e4c7806dd61>`
+	#define :target:`GLOB_DOOFFS<doxid-d7/d04/glob_8h_1a8ae13e97ae5da0993fe526c406337c62>`
+	#define :target:`GLOB_ERR<doxid-d7/d04/glob_8h_1a9e77b0b20a1c1d66cdf924a07776f360>`
+	#define :target:`GLOB_MAGCHAR<doxid-d7/d04/glob_8h_1acc6e4ea8a4442b7781000ce2ac38bfc8>`
+	#define :target:`GLOB_MARK<doxid-d7/d04/glob_8h_1ac6ec2b6ae844d895de9685a689dd27f0>`
+	#define :target:`GLOB_NOCHECK<doxid-d7/d04/glob_8h_1af183b2f40936442579be8d62b87e6fc6>`
+	#define :target:`GLOB_NOMAGIC<doxid-d7/d04/glob_8h_1acbd3685c584a9741e4cf6dab1cab0e17>`
+	#define :target:`GLOB_NOSORT<doxid-d7/d04/glob_8h_1a4eba6cedebdfe13f924d9b4a489bfe83>`
+	#define :target:`GLOB_NOSPACE<doxid-d7/d04/glob_8h_1ab53de39e075e6fb9a11678341772930b>`
+	#define :target:`GLOB_QUOTE<doxid-d7/d04/glob_8h_1a267b9d6763cefa072ccdf507ecb813d1>`
+	#define :target:`GLOB_TILDE<doxid-d7/d04/glob_8h_1a4f1c6c0dae8dfefcf3032fed1b5cd0fe>`
+	#define :target:`INVALID_SOCKET<doxid-d9/d16/mac_2ugcs_2vsm_2platform__sockets_8h_1a26769957ec1a2beaf223f33b66ee64ab>`
+	#define :target:`INVALID_SOCKET<doxid-d2/dea/android-linux_2ugcs_2vsm_2platform__sockets_8h_1a26769957ec1a2beaf223f33b66ee64ab>`
+
+	#define :target:`JAVA_DEF_METHOD_SELECTOR<doxid-d4/d6c/java_8h_1aa223a8ab6c2821ff6391b94825bba666>`( \
+		__type, \
+		__name \
+		)
+
+	#define :target:`JAVA_EXCEPTION_CHECK<doxid-d4/d6c/java_8h_1af7d6521dd1801731b9ac39046e224e6d>`(__env)
+	#define :ref:`LINE_TERMINATOR<doxid-d2/db0/android-linux-mac_2ugcs_2vsm_2platform_8h_1a293c66373c30ab91218314002e7ed3e1>`
+	#define :ref:`LINE_TERMINATOR<doxid-de/dd3/win_2ugcs_2vsm_2platform_8h_1a293c66373c30ab91218314002e7ed3e1>`
+	#define :ref:`LOG<doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`
+	#define :ref:`LOG_DBG<doxid-d7/d7f/log_8h_1a82193f01b56c77d97198ad1e55c0858c>`
+
+	#define :ref:`LOG_DEBUG<doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`( \
+		msg, \
+		... \
+		)
+
+	#define :ref:`LOG_ERR<doxid-d7/d7f/log_8h_1a96fad55b3f5adf08c39e4c877cf185e3>`
+
+	#define :ref:`LOG_ERROR<doxid-d7/d7f/log_8h_1ad9c73bc78b8b2564e47a037b5a6ca226>`( \
+		msg, \
+		... \
+		)
+
+	#define :ref:`LOG_INFO<doxid-d7/d7f/log_8h_1a3a355e1f39a113ebe9476236e571e5d8>`( \
+		msg, \
+		... \
+		)
+
+	#define :ref:`LOG_WARN<doxid-d7/d7f/log_8h_1aea3f57d6dcc5b4ac957e2679e87dde27>`
+
+	#define :ref:`LOG_WARNING<doxid-d7/d7f/log_8h_1a203d27f91125d1d538cd25b1bb9e5d7f>`( \
+		msg, \
+		... \
+		)
+
+	#define :target:`M_PI<doxid-df/db1/math_8h_1ae71449b1cc6e6250b91f539153a7a0d3>`
+	#define :target:`M_PI_2<doxid-df/db1/math_8h_1a958e4508ed28ee5cc04249144312c15f>`
+	#define :ref:`PATH_SEPARATOR<doxid-de/dd3/win_2ugcs_2vsm_2platform_8h_1a256a5721249aa3309437212cc21a9fe4>`
+	#define :ref:`PATH_SEPARATOR<doxid-d2/db0/android-linux-mac_2ugcs_2vsm_2platform_8h_1a256a5721249aa3309437212cc21a9fe4>`
+	#define :target:`SOCKET_ERROR<doxid-d9/d16/mac_2ugcs_2vsm_2platform__sockets_8h_1a633b0396ff93d336a088412a190a5072>`
+	#define :target:`SOCKET_ERROR<doxid-d2/dea/android-linux_2ugcs_2vsm_2platform__sockets_8h_1a633b0396ff93d336a088412a190a5072>`
+
+	#define :ref:`VEHICLE_LOG<doxid-d8/d37/vehicle_8h_1a99c3716429187493d18cee03f90827a3>`( \
+		level_, \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :ref:`VEHICLE_LOG_DBG<doxid-d8/d37/vehicle_8h_1a8f142e6b39654e799adc07e9ff49ad15>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :target:`VEHICLE_LOG_ERR<doxid-d8/d37/vehicle_8h_1a1ed537d108507d8fccb898473e200ba7>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :target:`VEHICLE_LOG_INF<doxid-d8/d37/vehicle_8h_1a62ef5bc917e5a6c5b143156bce8014b4>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :target:`VEHICLE_LOG_WRN<doxid-d8/d37/vehicle_8h_1afa4bae56bdcee74b2a463a738daea44a>`( \
+		vehicle_, \
+		fmt_, \
+		... \
+		)
+
+	#define :ref:`VERIFY<doxid-db/d16/debug_8h_1af7b3f37572fd59f7a701917b8703035f>`( \
+		x, \
+		expected \
+		)
+
+	#define :ref:`VSM_BSWAP16<doxid-d1/d84/endian_8h_1abf998fff62e298eefbc7bdfecb8c1177>`(x)
+	#define :ref:`VSM_BSWAP32<doxid-d1/d84/endian_8h_1a4b218acac0cf85728e545acf498a892d>`(x)
+	#define :ref:`VSM_BSWAP64<doxid-d1/d84/endian_8h_1aa5e6279fae102699172de28a8512a50d>`(x)
+
+	#define :ref:`VSM_DEFINE_DERIVED_EXCEPTION<doxid-dd/d2d/exception_8h_1aea3ebd1ebfb777ffb5b8bcbe7d1720ad>`( \
+		__base_class, \
+		__exc_class \
+		)
+
+	#define :ref:`VSM_DEFINE_EXCEPTION<doxid-dd/d2d/exception_8h_1abfef19141b3703aa942d34d3d872ebd3>`( \
+		__exc_class, \
+		... \
+		)
+
+	#define :target:`VSM_DEF_BO_CONV<doxid-d1/d84/endian_8h_1a6fa9bc2b8159d20feef5f8b27a488993>`(type_size)
+
+	#define :ref:`VSM_EXCEPTION<doxid-dd/d2d/exception_8h_1a7fc579418b7ef463578555dcb09e31a4>`( \
+		__exc_class, \
+		__msg, \
+		... \
+		)
+
+	#define :ref:`VSM_PARAM_EXCEPTION<doxid-dd/d2d/exception_8h_1abd124dad36c9ad8cd88af74a8e851701>`( \
+		__exc_class, \
+		__param, \
+		__msg, \
+		... \
+		)
+
+	#define :ref:`VSM_SYS_EXCEPTION<doxid-dd/d2d/exception_8h_1a863faa852d17750d5aff2c28470c3d5c>`( \
+		__msg, \
+		... \
+		)
+
+	#define :ref:`_LOG_WRITE_MSG<doxid-d7/d7f/log_8h_1ab0fd6051f712d03f80118193cd6894be>`( \
+		level, \
+		msg, \
+		... \
+		)
+
+	#define :target:`_VSM_DEF_BO_CONV<doxid-d1/d84/endian_8h_1a254ec185a294ff0b4600bebce9f62b91>`( \
+		type_size, \
+		type_name \
+		)
+
+	#define :target:`__JAVA_CONCAT<doxid-d4/d6c/java_8h_1a8469f130ebaa0ece2309a49e34bf99d9>`( \
+		x, \
+		y \
+		)
+
+	#define :target:`__JAVA_CONCAT_<doxid-d4/d6c/java_8h_1a5c7cd81a4a29483ff6951bc1b900405c>`( \
+		x, \
+		y \
+		)
+
+	#define :ref:`__PACKED<doxid-d5/d64/defs_8h_1abe8996d3d985ee1529475443cc635bf1>`
+	#define :ref:`__UNPACK_PARAMS<doxid-da/d05/callback_8h_1ab758900bd3deef417d94277dabdcce10>`(...)
+	#define :ref:`__UNUSED<doxid-d5/d64/defs_8h_1a6c30d490cd2302ff05d355f3ec844c1f>`
+	#define :ref:`__VSM_BO_INT<doxid-d1/d84/endian_8h_1a601280e0b1e3c0a94a338e25b9c26a9b>`(type_size)
+	#define :target:`__VSM_BO_UINT<doxid-d1/d84/endian_8h_1adf518bded8b24043c452a3b1150439a4>`(type_size)
+
+.. _details-global:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Global Functions
+----------------
+
+.. index:: pair: function; Bo_value
+.. _doxid-d1/d84/endian_8h_1aa993c0a2e0f092f4b5fb58e274a917ab:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Bo_value(T value = 0)
+
+Construct value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- Value in host byte order.
+
+.. index:: pair: function; operator=
+.. _doxid-d1/d84/endian_8h_1a8b17e7641addcdb6d377215d36289549:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Bo_value<doxid-d1/d84/endian_8h_1aa993c0a2e0f092f4b5fb58e274a917ab>`& operator = (T value)
+
+Assign new value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- Value in host byte order.
+
+.. index:: pair: function; operator T
+.. _doxid-d1/d84/endian_8h_1a275aa2d8855aae848819828dcf3f34e4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator T () const
+
+Cast to underlying type.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Get
+.. _doxid-d1/d84/endian_8h_1a3cb7f9ac778b4f6ec0e3f258ce6b0998:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	T Get() const
+
+Get the value of underlying type.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Get
+.. _doxid-d1/d84/endian_8h_1a80b5658a5aefe3bcc081071f83d7d00f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static T Get(const void* buffer)
+
+Interpret byte buffer as a storage for underlying type and return host byte order value.
+
+Caller is responsible for the size of the input buffer.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buffer
+
+		- Input buffer with original value.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Set
+.. _doxid-d1/d84/endian_8h_1a33d034f06cf8eba53f7c0ebb58935458:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Set(void* buffer, const T value)
+
+Save value given in host order to byte buffer.
+
+Caller is responsible for the size of the buffer.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buffer
+
+		- Output buffer to save value to.
+
+	*
+		- value
+
+		- value in host byte order.
+
+.. index:: pair: function; Value
+.. _doxid-d6/d18/mavlink_8h_1a5c326d542ab0bdc7cf2ccc3cb3066dbd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Value(T value = initial_value)
+
+Construct value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- Value in host byte order.
+
+.. index:: pair: function; operator=
+.. _doxid-d6/d18/mavlink_8h_1a56f6586eeeafef8830663a91fbc99d92:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Value<doxid-d6/d18/mavlink_8h_1a5c326d542ab0bdc7cf2ccc3cb3066dbd>`& operator = (T value)
+
+Assign new value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- Value in host byte order.
+
+.. index:: pair: function; operator T
+.. _doxid-d6/d18/mavlink_8h_1a275aa2d8855aae848819828dcf3f34e4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator T () const
+
+Cast to underlying type.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Get
+.. _doxid-d6/d18/mavlink_8h_1a3cb7f9ac778b4f6ec0e3f258ce6b0998:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	T Get() const
+
+Get the value of underlying type.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Get_type_id
+.. _doxid-d6/d18/mavlink_8h_1a4166176e614a6a0d9946b8f86450e55b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	constexpr Field_type_id Get_type_id()
+
+Get type ID for this value.
+
+.. index:: pair: function; Reset
+.. _doxid-d6/d18/mavlink_8h_1a372de693ad40b3f42839c8ec6ac845f4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Reset()
+
+Reset to default value used in UgCS as a "not present" indication.
+
+Reset all array values to UgCS default values (zeros for string).
+
+Reset all array values to UgCS default values.
+
+.. index:: pair: function; Is_reset
+.. _doxid-d6/d18/mavlink_8h_1ab367bbfca7625e68cc333292922a55e3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_reset() const
+
+Check, if the field is reset.
+
+.. index:: pair: function; operator[]
+.. _doxid-d6/d18/mavlink_8h_1a58bf90709dea176358511a9cbf95f921:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	TValue& operator [] (size_t index)
+
+Access operator.
+
+.. index:: pair: function; Get_length
+.. _doxid-d6/d18/mavlink_8h_1a4d68cf96e386fb940d9a0bdb85dad250:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t Get_length() const
+
+Get string length.
+
+In MAVLink character string may be NULL terminated or may not be if it fully occupies the array.
+
+
+
+.. rubric:: Returns:
+
+String length in bytes.
+
+.. index:: pair: function; Get_string
+.. _doxid-d6/d18/mavlink_8h_1a0100f76b74b3a6a9bda87b437393aea3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string Get_string() const
+
+Get string value for the characters array.
+
+.. index:: pair: function; operator==
+.. _doxid-d6/d18/mavlink_8h_1ab6604ba6eb234ea5515c11ef8186f227:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator == (const char* str)
+
+Compare with string.
+
+.. index:: pair: function; operator!=
+.. _doxid-d6/d18/mavlink_8h_1a97dd24b1597aacdaef2d977dd90aff5e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator != (const char* str)
+
+Compare with string.
+
+.. index:: pair: function; operator=
+.. _doxid-d6/d18/mavlink_8h_1a5dfc0eed1d9de3006e6eea51c90b281b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Value_array& operator = (const char* str)
+
+Assign string to the characters array.
+
+In case the string exceeds the array size it is truncated without terminated NULL character (as per MAVLink strings description).
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- str
+
+		- String to assign.
+
+.. index:: pair: function; operator=
+.. _doxid-d6/d18/mavlink_8h_1a83d3560cf5f156c87f42672e0227fe52:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Value_array& operator = (const std::string& str)
+
+Assign string to the characters array.
+
+In case the string exceeds the array size it is truncated without terminated NULL character (as per MAVLink strings description).
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- str
+
+		- String to assign.
+
+Macros
+------
+
+.. index:: pair: define; ASSERT_IMPL
+.. _doxid-db/d16/debug_8h_1a32627e8b3d49ab3731191d9fe21128e9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define ASSERT_IMPL(cond_str)
+
+Assertion action which is done when assertion fires.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- cond_str
+
+		- Stringified condition expression.
+
+.. index:: pair: define; DEFINE_CALLBACK_BUILDER
+.. _doxid-da/d05/callback_8h_1aa8f8b02e868d6b8ae25772a955b6d7d7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define DEFINE_CALLBACK_BUILDER(__name, __types, __values)
+
+Define callback builder function. Use when forced arguments required. Usage example:
+
+.. ref-code-block:: cpp
+
+	DEFINE_CALLBACK_BUILDER(Make_data_handler,
+	                        (ugcs::vsm::Io_result, ugcs::vsm::Io_buffer::Ptr),
+	                        (ugcs::vsm::Io_result::OK, nullptr));
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__name
+
+		- Name for a created function.
+
+	*
+		- \__types
+
+		- Types of forced arguments (parenthesis-enclosed comma-separated list).
+
+	*
+		- \__values
+
+		- Initial values for the forced arguments (parenthesis-enclosed comma-separated list).
+
+.. index:: pair: define; DEFINE_CALLBACK_BUILDER_TEMPLATE
+.. _doxid-da/d05/callback_8h_1a6508ddc2172ef25d99b345eec3d18da6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define DEFINE_CALLBACK_BUILDER_TEMPLATE(__name, __template, __types, __values)
+
+The same as DEFINE_CALLBACK_BUILDER, but allows specifying additional template parameters for builders which arguments depend on templates.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__name
+
+		- See DEFINE_CALLBACK_BUILDER
+
+	*
+		- \__template
+
+		- Additional template parameters (parenthesis-enclosed comma-separated list).
+
+	*
+		- \__types
+
+		- See DEFINE_CALLBACK_BUILDER
+
+	*
+		- \__values
+
+		- See DEFINE_CALLBACK_BUILDER
+
+.. index:: pair: define; DEFINE_COMMON_CLASS
+.. _doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define DEFINE_COMMON_CLASS(__class_name, ...)
+
+Use this macro to define some common attributes for a class.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__class_name
+
+		- Name for the class being defined.
+
+	*
+		- ...
+
+		- Name of the class used as a template parameter when deriving from std::enable_shared_from_this.
+
+.. index:: pair: define; DEVICE_LOG
+.. _doxid-db/de9/device_8h_1a30ae55b64a7786e2a310e2f82b2f7389:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define DEVICE_LOG(level_, vehicle_, fmt_, ...)
+
+Convenience vehicle logging macro.
+
+Vehicle should be given by value (no copies will be made).
+
+.. index:: pair: define; DEVICE_LOG_DBG
+.. _doxid-db/de9/device_8h_1a301e386eeda266f1624a728f44830abf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define DEVICE_LOG_DBG(vehicle_, fmt_, ...)
+
+Different level convenience vehicle logging macros.
+
+Vehicle should be given by value (no copies will be made).
+
+.. index:: pair: define; LINE_TERMINATOR
+.. _doxid-d2/db0/android-linux-mac_2ugcs_2vsm_2platform_8h_1a293c66373c30ab91218314002e7ed3e1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LINE_TERMINATOR
+
+Characters sequence used as line terminator in text streams.
+
+.. index:: pair: define; LINE_TERMINATOR
+.. _doxid-de/dd3/win_2ugcs_2vsm_2platform_8h_1a293c66373c30ab91218314002e7ed3e1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LINE_TERMINATOR
+
+Characters sequence used as line terminator in text streams.
+
+.. index:: pair: define; LOG
+.. _doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG
+
+Short name.
+
+.. index:: pair: define; LOG_DBG
+.. _doxid-d7/d7f/log_8h_1a82193f01b56c77d97198ad1e55c0858c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG_DBG
+
+Short name.
+
+.. index:: pair: define; LOG_DEBUG
+.. _doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG_DEBUG(msg, ...)
+
+Write debug message to the application log.
+
+.. index:: pair: define; LOG_ERR
+.. _doxid-d7/d7f/log_8h_1a96fad55b3f5adf08c39e4c877cf185e3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG_ERR
+
+Short name.
+
+.. index:: pair: define; LOG_ERROR
+.. _doxid-d7/d7f/log_8h_1ad9c73bc78b8b2564e47a037b5a6ca226:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG_ERROR(msg, ...)
+
+Write error message to the application log.
+
+.. index:: pair: define; LOG_INFO
+.. _doxid-d7/d7f/log_8h_1a3a355e1f39a113ebe9476236e571e5d8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG_INFO(msg, ...)
+
+Write informational message to the application log.
+
+.. index:: pair: define; LOG_WARN
+.. _doxid-d7/d7f/log_8h_1aea3f57d6dcc5b4ac957e2679e87dde27:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG_WARN
+
+Short name.
+
+.. index:: pair: define; LOG_WARNING
+.. _doxid-d7/d7f/log_8h_1a203d27f91125d1d538cd25b1bb9e5d7f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define LOG_WARNING(msg, ...)
+
+Write warning message to the application log.
+
+.. index:: pair: define; PATH_SEPARATOR
+.. _doxid-de/dd3/win_2ugcs_2vsm_2platform_8h_1a256a5721249aa3309437212cc21a9fe4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define PATH_SEPARATOR
+
+Symbol used as file-system path separator on a target platform.
+
+.. index:: pair: define; PATH_SEPARATOR
+.. _doxid-d2/db0/android-linux-mac_2ugcs_2vsm_2platform_8h_1a256a5721249aa3309437212cc21a9fe4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define PATH_SEPARATOR
+
+Symbol used as file-system path separator on a target platform.
+
+.. index:: pair: define; VEHICLE_LOG
+.. _doxid-d8/d37/vehicle_8h_1a99c3716429187493d18cee03f90827a3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VEHICLE_LOG(level_, vehicle_, fmt_, ...)
+
+Convenience vehicle logging macro.
+
+Vehicle should be given by value (no copies will be made).
+
+.. index:: pair: define; VEHICLE_LOG_DBG
+.. _doxid-d8/d37/vehicle_8h_1a8f142e6b39654e799adc07e9ff49ad15:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VEHICLE_LOG_DBG(vehicle_, fmt_, ...)
+
+Different level convenience vehicle logging macros.
+
+Vehicle should be given by value (no copies will be made).
+
+.. index:: pair: define; VERIFY
+.. _doxid-db/d16/debug_8h_1af7b3f37572fd59f7a701917b8703035f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VERIFY(x, expected)
+
+Evaluate in release, but don't compare.
+
+.. index:: pair: define; VSM_BSWAP16
+.. _doxid-d1/d84/endian_8h_1abf998fff62e298eefbc7bdfecb8c1177:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_BSWAP16(x)
+
+Swap bytes in 16-bits integer value.
+
+.. index:: pair: define; VSM_BSWAP32
+.. _doxid-d1/d84/endian_8h_1a4b218acac0cf85728e545acf498a892d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_BSWAP32(x)
+
+Swap bytes in 32-bits integer value.
+
+.. index:: pair: define; VSM_BSWAP64
+.. _doxid-d1/d84/endian_8h_1aa5e6279fae102699172de28a8512a50d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_BSWAP64(x)
+
+Swap bytes in 64-bits integer value.
+
+.. index:: pair: define; VSM_DEFINE_DERIVED_EXCEPTION
+.. _doxid-dd/d2d/exception_8h_1aea3ebd1ebfb777ffb5b8bcbe7d1720ad:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_DEFINE_DERIVED_EXCEPTION(__base_class, __exc_class)
+
+Define custom derived exception.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__base_class
+
+		- Type of base exception class.
+
+	*
+		- \__exc_class
+
+		- Name for new exception type.
+
+.. index:: pair: define; VSM_DEFINE_EXCEPTION
+.. _doxid-dd/d2d/exception_8h_1abfef19141b3703aa942d34d3d872ebd3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_DEFINE_EXCEPTION(__exc_class, ...)
+
+Define custom exception type.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__exc_class
+
+		- Name for new exception type.
+
+	*
+		- ...
+
+		- Parameter type can be specified as second argument.
+
+
+
+.. rubric:: See also:
+
+Param_exception
+
+.. index:: pair: define; VSM_EXCEPTION
+.. _doxid-dd/d2d/exception_8h_1a7fc579418b7ef463578555dcb09e31a4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_EXCEPTION(__exc_class, __msg, ...)
+
+Throw VSM exception instance.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__exc_class
+
+		- Exception class name.
+
+	*
+		- \__msg
+
+		- Formatted description message.
+
+	*
+		- ...
+
+		- Message format parameters.
+
+.. index:: pair: define; VSM_PARAM_EXCEPTION
+.. _doxid-dd/d2d/exception_8h_1abd124dad36c9ad8cd88af74a8e851701:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_PARAM_EXCEPTION(__exc_class, __param, __msg, ...)
+
+Throw VSM exception instance with parameter.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__exc_class
+
+		- Exception class name.
+
+	*
+		- \__param
+
+		- Parameter value.
+
+	*
+		- \__msg
+
+		- Formatted description message.
+
+	*
+		- ...
+
+		- Message format parameters.
+
+.. index:: pair: define; VSM_SYS_EXCEPTION
+.. _doxid-dd/d2d/exception_8h_1a863faa852d17750d5aff2c28470c3d5c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define VSM_SYS_EXCEPTION(__msg, ...)
+
+Throw VSM system exception - i.e.
+
+the one caused by system call failure. Special handling is required because system error code might be overwritten by exception allocation functions, so it must be taken as soon as possible.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- \__msg
+
+		- Descriptive message of the failure context.
+
+	*
+		- ...
+
+		- Message format parameters.
+
+.. index:: pair: define; _LOG_WRITE_MSG
+.. _doxid-d7/d7f/log_8h_1ab0fd6051f712d03f80118193cd6894be:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define _LOG_WRITE_MSG(level, msg, ...)
+
+Write message to log.
+
+For internal usage only.
+
+.. index:: pair: define; __PACKED
+.. _doxid-d5/d64/defs_8h_1abe8996d3d985ee1529475443cc635bf1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define __PACKED
+
+Pack structure or class, i.e.
+
+do not allow the compiler to insert paddings for members alignment.
+
+.. index:: pair: define; __UNPACK_PARAMS
+.. _doxid-da/d05/callback_8h_1ab758900bd3deef417d94277dabdcce10:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define __UNPACK_PARAMS(...)
+
+Internal helper for unpacking parenthesis-enclosed parameters lists.
+
+.. index:: pair: define; __UNUSED
+.. _doxid-d5/d64/defs_8h_1a6c30d490cd2302ff05d355f3ec844c1f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define __UNUSED
+
+Use with unused arguments if you like to declare that it is not (yet) used a the function.
+
+.. index:: pair: define; __VSM_BO_INT
+.. _doxid-d1/d84/endian_8h_1a601280e0b1e3c0a94a338e25b9c26a9b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define __VSM_BO_INT(type_size)
+
+Definitions for byte order conversions for all integer types.
+

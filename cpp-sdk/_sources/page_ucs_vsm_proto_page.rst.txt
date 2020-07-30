@@ -1,0 +1,708 @@
+.. index:: pair: page; ucs_vsm.proto
+.. _doxid-d0/dba/ucs_vsm_proto_page:
+
+ucs_vsm.proto
+=============
+
+
+
+.. _doxid-d0/dba/ucs_vsm_proto_page_1proto_files:
+
+Protobuf definition files
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+.. _doxid-d0/dba/ucs_vsm_proto_page_1proto_messages:
+
+Protobuf Message definitions
+----------------------------
+
+.. ref-code-block:: cpp
+
+	syntax = "proto2";
+	option optimize_for = LITE_RUNTIME;
+	
+	package ugcs.vsm.proto;
+	
+	option java_package = "com.ugcs.ucs.vsm.proto";
+	option java_outer_classname = "VsmMessagesProto";
+	
+	import "ucs_vsm_defs.proto";
+	
+	// VSM-UCS Transport protocol wire format definition
+	//
+	// Frame wire format:
+	// <length><data>
+	// length   Size of data in bytes encoded as LEB128 (https://en.wikipedia.org/wiki/LEB128)
+	// data     Message data of type Vsm_message
+	//
+	// Having only one message type allows us to avoid sending message ID on the wire with each message.
+	
+	// Generic message
+	message Vsm_message {
+	
+	    // Uniquely identifies the connected device. Exception is register_peer payload when this field is zero.
+	    // This id is generated when Register_device message is created.
+	    // It defines the context (session) for all subsequent communications with the device (in both directions). 
+	    required uint32 device_id = 1;
+	
+	    // Unique message id. This will be put into response if response is required. Can be omitted if response is not required.
+	    // Request message_id if this message is a response to particular request.
+	    optional uint32 message_id = 2;
+	
+	    // Indicates that peer will wait for response on this command.
+	    optional bool response_required = 3;
+	
+	    // Used to detect duplicate connections between ucs and vsm.
+	    // This must be the first message sent from ucs and VSM on new connection.
+	    // In this case device_id==0 which means this message is for peer application not device.
+	    // No device specific payloads can be present if device_id==0.
+	    optional Register_peer register_peer = 4;
+	
+	    optional Register_device register_device = 5;
+	
+	    optional Unregister_device unregister_device = 6;
+	
+	    repeated Device_command device_commands = 7;
+	
+	    // If this field is present then this is a response to previously sent request.
+	    // If message_id is present, too then it contains the message_id from the corresponding request.
+	    optional Device_response device_response = 8;
+	
+	    // Device can send this message any time it wants to report some info to ucs.
+	    optional Device_status device_status = 9;
+	}
+	
+	// Used to tell the unique application ID to detect concurrent connections and for version compatibility.
+	message Register_peer {
+	
+	    required uint32 peer_id = 1;
+	
+	    // Type and version of peer. 
+	    // Application can use this information to detect the level of compatibility.
+	    // It can decide to continue to use, close or ignore the connection.
+	    optional Peer_type peer_type = 2;
+	    optional uint32 version_minor = 3;
+	    optional uint32 version_major = 4;
+	    optional string version_build = 5;
+	
+	    // Peer name
+	    optional string name = 6;
+	}
+	
+	// Register various kinds of devices.
+	message Register_device {
+	
+	    // begin_of_epoch is used to optimize space used for timestamp in each telemetry field.
+	    // the absolute time is calculated as begin_of_epoch + timestamp.
+	    // Milliseconds since 1970-01-01 00:00:00 UTC.
+	    // This value is vehicle registration time. Thus UCS
+	    // could show a warning about out of sync time between ucs and VSM if the value
+	    // differs from current time a lot.
+	    required uint64 begin_of_epoch = 1;
+	    
+	    // Vehicle, Adsb receiver, RTK base station, etc...
+	    required Device_type type = 2;
+	    
+	    // User definable key-value pairs
+	    repeated Property_field properties = 3;
+	
+	    // flight controller, gimbal, cameras, etc...
+	    repeated Register_subsystem subsystems = 4;
+	}
+	
+	// Invalidates the specified Vsm_message.device_id
+	// Presence of this payload means that device has disconnected and all its state should be dropped.
+	// Use this to drop any context established via Register_device message.
+	// Important: Automatically unregisters all subsystems registered under this device.
+	message Unregister_device {
+	}
+	
+	message Device_status {
+	
+	    // place to put raw data received from vehicle or debug messages from VSM.
+	    repeated string status_messages = 1;
+	
+	    // Device telemetry
+	    repeated Telemetry_field telemetry_fields = 2;
+	
+	    // current command availability
+	    repeated Command_availability command_availability = 3;
+	}
+	
+	message Device_response {
+	
+	    // Response code. on previously sent request.
+	    required Status_code code = 1;
+	
+	    // array of values to create localized error string for given Status_code.
+	    repeated string arguments = 2;
+	
+	    // place to put raw data received from vehicle or debug messages from VSM.
+	    optional string status = 3;
+	
+	    // VSM generated mission ID which is later reported in telemetry as current_mission_id
+	    // It is used to tell the server the validity of mission_command_map.
+	    // Server should drop the mission map as soon as VSM reports different current_mission_id.
+	    // Server must ignore the reported curent_command values until it gets a valid current_mission_id.
+	    optional uint32 mission_id = 4;
+	
+	    // Command mapping between mission uploaded to the vehicle and mission received by server.
+	    // Server must keep this map tied to specific vehicle instance until vehicle
+	    // explicitly reports current_mission_id different from this one.
+	    // Server should use this map to map reported current_command only while VSM reports the same current_mission_id.
+	    // I.e. server should keep the map but not use it if VSM reports current_mission_id==N/A.
+	    repeated Mission_command_map mission_command_map = 5;
+	    
+	    // Used to report progress of a pending command.
+	    // Peer can send this any number of times before sending final response.
+	    // Range: [0..1]
+	    optional float progress = 6;
+	}
+	
+	message Mission_command_map {
+	
+	    // Current command ID reported by the VSM as current_command telemetry field.
+	    required uint32 vehicle_command_id = 1;
+	
+	    // Corresponding command index in mission_upload sub_commands array. 0-based.
+	    required uint32 mission_command_idx = 2;
+	}
+	
+	message Device_command {
+	
+	    // Command id (Must be from previously registered commands)
+	    required uint32 command_id = 1;
+	
+	    // list of command parameters.
+	    repeated Parameter_field parameters = 2;
+	
+	    // List of subcommands (E.g. mission items)
+	    repeated Device_command sub_commands = 3;
+	}
+	
+	message Telemetry_field {
+	
+	    // Session wide unique field id defined via Register_field message
+	    required uint32 field_id = 1;
+	
+	    // Time in ms this value was gathered since begin_of_epoch which set in Register_device message.
+	    // NOTE: this value is calculated using system_clock and must not be assumed monotonic.
+	    // It can have negative values if system_clock is turned back while VSM is running.
+	    required sint64 ms_since_epoch = 2;
+	
+	    required Field_value value = 3;
+	}
+	
+	message Parameter_field {
+	
+	    // Unique field id defined via Register_field message
+	    required uint32 field_id = 1;
+	
+	    required Field_value value = 2;
+	}
+	
+	message Property_field {
+	
+	    // parameter name used to send some value without registering first.
+	    required string name = 1;
+	
+	    required Field_value value = 2;
+	
+	    // Specifies the value type.
+	    required Field_semantic semantic = 3;
+	}
+	
+	message Field_value {
+	
+	    // If this is present field value is one of supported "meta" values.
+	    optional Meta_value meta_value = 1;
+	
+	    // value holders for various regular field types.
+	    optional sint64 int_value = 2;
+	
+	    optional float float_value = 3;
+	
+	    optional double double_value = 4;
+	
+	    optional string string_value = 5;
+	
+	    optional bool bool_value = 6;
+	
+	    optional List_value list_value = 7;
+	
+	    optional bytes bytes_value = 8;
+	}
+	
+	message List_value {
+	
+	    repeated Field_value values = 1;
+	}
+	
+	
+	// VSM can enable/disable specific command at runtime
+	message Command_availability {
+	
+	    // command_id
+	    required uint32 id = 1;
+	
+	    // capability is supported by vehicle
+	    optional bool is_available = 2;
+	
+	    // capability can be used on the vehicle, currently
+	    optional bool is_enabled = 3;
+	}
+	
+	// VSM must send this message before it can be used or Command_availability can be sent.
+	message Register_command {
+	
+	    // Name of command
+	    required string name = 1;
+	
+	    // Session specific id for name.
+	    required uint32 id = 2;
+	
+	    // parameters supported by command.
+	    repeated Register_field parameters = 3;
+	    
+	    // this command is available as mission item
+	    optional bool available_in_mission = 4;
+	}
+	
+	message Register_subsystem {
+	
+	    // Type of subsystem
+	    required Subsystem_type type = 1;
+	
+	    // Subsystem properties
+	    repeated Property_field properties = 2;
+	
+	    // Telemetry fields supported by subsystem
+	    repeated Register_field telemetry_fields = 3;
+	
+	    // Commands supported by subsystem
+	    repeated Register_command commands = 4;
+	}
+	
+	// Used to send definitions of vehicle supported parameters and telemetry fields to UCS
+	message Register_field {
+	
+	    // Name of telemetry field.
+	    required string name = 1;
+	
+	    // Session specific field id.
+	    required uint32 field_id = 2;
+	
+	    // Required for any defined field. Specifies the value type.
+	    required Field_semantic semantic = 3;
+	
+	    // Default value to show in client.
+	    // If min_value == max_value it means that parameter is not user changeable and should be set to default_value.
+	    optional Field_value default_value = 4;
+	
+	    // Minimum value of field
+	    optional Field_value min_value = 5;
+	
+	    // Maximum value of field
+	    optional Field_value max_value = 6;
+	
+	    // User defined enumeration when field_semantic == FIELD_SEMANTIC_ENUM.
+	    repeated Field_enumeration enumeration = 7;
+	}
+	
+	// Used to send definitions of user-defined enumerations used in telemetry and parameters.
+	message Field_enumeration {
+	
+	    // Value of enum field
+	    // The value of id must be constant for the field it is defined for.
+	    // I.e. it cannot be session specific. These values are saved directly in telemetry database.
+	    required int32 id = 1;
+	
+	    // Description of the value
+	    required string description = 2;
+	}
+
+
+
+
+
+.. _doxid-d0/dba/ucs_vsm_proto_page_1proto_enums:
+
+Protobuf enumerations
+---------------------
+
+.. ref-code-block:: cpp
+
+	syntax = "proto2";
+	option optimize_for = LITE_RUNTIME;
+	
+	package ugcs.vsm.proto;
+	
+	option java_package = "com.ugcs.ucs.vsm.proto";
+	option java_outer_classname = "VsmDefinitionsProto";
+	
+	enum Peer_type {
+	    PEER_TYPE_SERVER = 0;
+	    PEER_TYPE_VSM = 1;
+	    PEER_TYPE_VSM_ANDROID = 2;
+	    PEER_TYPE_VSM_IOS = 3;
+	}
+	
+	// Response code sent by VSM to UCS
+	enum Status_code {
+	    STATUS_OK = 0;
+	    // Generic error
+	    STATUS_FAILED = 1;
+	    // Command is not supported 
+	    STATUS_INVALID_COMMAND = 2;
+	    // Command parameters are invalid 
+	    // Cannot use STATUS_INVALID_PARAMETER because it clashes with define in winnt.h
+	    STATUS_INVALID_PARAM = 3;
+	    // Invalid session id
+	    STATUS_INVALID_SESSION_ID = 4;
+	    // Used to notify peer that command is in progress.
+	    STATUS_IN_PROGRESS = 5;
+	}
+	
+	// Used in property "vehicle_type" for Device of type DEVICE_TYPE_VEHICLE
+	enum Vehicle_type {
+	    VEHICLE_TYPE_GROUND = 0;
+	    VEHICLE_TYPE_FIXED_WING = 1;
+	    VEHICLE_TYPE_MULTICOPTER = 2;
+	    VEHICLE_TYPE_HELICOPTER = 3;
+	    VEHICLE_TYPE_VTOL = 4;          // Vehicle is capable of both fixed wing and multicopter style of flight.
+	}
+	
+	enum Meta_value {
+	    META_VALUE_NA = 0;
+	}
+	
+	// Built in subsystem types natively supported by UgCS. Used in Register_subsystem.type field.
+	// Each subsystem can register a arbitrary set of properties, commands and telemetry.
+	// Each subsystem has a set of properties, commands and telemetry fields which are supported natively by UgCS.
+	// Refer to UCS-VSM protocol documentation.
+	enum Subsystem_type {
+	    SUBSYSTEM_TYPE_USER = 0;    // Can be used for any other subsystem not mentioned below.
+	    SUBSYSTEM_TYPE_FLIGHT_CONTROLLER = 1;
+	    SUBSYSTEM_TYPE_GIMBAL = 2;
+	    SUBSYSTEM_TYPE_CAMERA = 3;
+	    SUBSYSTEM_TYPE_ADSB_TRANSPONDER = 4;
+	    SUBSYSTEM_TYPE_WINCH = 5;   // Airmast winch
+	    SUBSYSTEM_TYPE_HANGAR = 6;
+	    SUBSYSTEM_TYPE_GPR = 7; //  Ground penetrating radar
+	    SUBSYSTEM_TYPE_ADSB_RECEIVER = 8;    // Onboard adsb receiver for vehicle
+	    SUBSYSTEM_TYPE_ADSB_VEHICLE = 9;    // Used to report telemetry for devices of type DEVICE_TYPE_ADSB_VEHICLE
+	    SUBSYSTEM_TYPE_WEATHER_STATION = 10;
+	}
+	
+	// Built in device types natively supported by UgCS. Used in Register_device.type field.
+	// Each device can register a arbitrary sets of properties and subsystems.
+	// Some device types have properties which are supported natively by UgCS. Some of them are required.
+	// Refer to UCS-VSM protocol documentation.
+	enum Device_type {
+	
+	    // Real vehicle which can be controlled by UgCS
+	    DEVICE_TYPE_VEHICLE = 0;
+	
+	    // Device capable of executing vehicle specific commands but does not represent real vehicle.
+	    // Used to provide vehicle specific functionality without an actual vehicle.
+	    // The native route file is returned via Device_response.status field.
+	    DEVICE_TYPE_VEHICLE_COMMAND_PROCESSOR = 1;
+	
+	    // Adsb receiver connected directly to VSM
+	    DEVICE_TYPE_ADSB_RECEIVER = 2;
+	
+	    // Vehicle reported by ADSB receiver with its own telemetry
+	    DEVICE_TYPE_ADSB_VEHICLE = 3;
+	
+	    // Device capable of sending RTK
+	    DEVICE_TYPE_RTK_BASE_STATION = 4;
+	}
+	
+	// Built in telemetry enums
+	
+	enum Gps_fix_type {
+	    GPS_FIX_TYPE_NONE = 0;
+	    GPS_FIX_TYPE_2D = 1;
+	    GPS_FIX_TYPE_3D = 2;
+	    GPS_FIX_TYPE_DIFF = 3;
+	    GPS_FIX_TYPE_RTK_FIXED = 4;
+	    GPS_FIX_TYPE_RTK_FLOAT = 5;
+	}
+	
+	enum Control_mode {
+	    CONTROL_MODE_MANUAL = 0;
+	    CONTROL_MODE_AUTO = 1;
+	    CONTROL_MODE_CLICK_GO = 2;
+	    CONTROL_MODE_JOYSTICK = 3;
+	    CONTROL_MODE_ACTIVE_TRACK = 4;
+	}
+	
+	enum Flight_mode {
+	    FLIGHT_MODE_WAYPOINTS = 0;  // Vehicle is navigating mission waypoints
+	    FLIGHT_MODE_RTH = 1;        // Vehicle is returning home
+	    FLIGHT_MODE_LAND = 2;       // Vehicle is landing
+	    FLIGHT_MODE_TAKEOFF = 3;    // Vehicle is taking off
+	    FLIGHT_MODE_HOLD = 4;       // Vehicle is holding position.
+	}
+	
+	enum Autopilot_status {
+	    AUTOPILOT_STATUS_STANDBY = 0;   // Vehicle is standby, grounded
+	    AUTOPILOT_STATUS_ACTIVE = 1;    // Vehicle is active, airborne
+	    AUTOPILOT_STATUS_CRITICAL = 2;  // Vehicle is in critical state, failsafe is on
+	    AUTOPILOT_STATUS_EMERGENCY = 3; // Vehicle is in emergency or crashed
+	}
+	
+	enum Dock_part_status {
+	    DOCK_PART_OPENED = 0;
+	    DOCK_PART_CLOSED = 1;
+	    DOCK_PART_OPENING = 2;
+	    DOCK_PART_CLOSING = 3;
+	}
+	
+	// These types match the Type Code/Emitter Category byte of ADSB message.
+	// Do not modify the values!
+	enum Adsb_emitter_type {
+	    // Category A subtypes
+	    ADSB_EMITTER_TYPE_NO_INFO_A = 0;
+	    ADSB_EMITTER_TYPE_LIGHT = 1;
+	    ADSB_EMITTER_TYPE_SMALL = 2;
+	    ADSB_EMITTER_TYPE_LARGE = 3;
+	    ADSB_EMITTER_TYPE_HIGH_VORTEX_LARGE = 4;
+	    ADSB_EMITTER_TYPE_HEAVY = 5;
+	    ADSB_EMITTER_TYPE_HIGH_PERFORMANCE = 6;
+	    ADSB_EMITTER_TYPE_ROTORCRAFT = 7;
+	    // Category B subtypes
+	    ADSB_EMITTER_TYPE_NO_INFO_B = 8;
+	    ADSB_EMITTER_TYPE_GLIDER_SAILPLANE = 9;
+	    ADSB_EMITTER_TYPE_LIGHTER_THAN_AIR = 10;
+	    ADSB_EMITTER_TYPE_SKYDIVER = 11;
+	    ADSB_EMITTER_TYPE_ULTRALIGHT_PARAGLIDER = 12;
+	    ADSB_EMITTER_TYPE_RESERVED_13 = 13;
+	    ADSB_EMITTER_TYPE_UAV = 14;
+	    ADSB_EMITTER_TYPE_SPACE_TRANS_ATMOSPHERIC = 15;
+	    // Category C subtypes
+	    ADSB_EMITTER_TYPE_NO_INFO_C = 16;
+	    ADSB_EMITTER_TYPE_SURFACE_EMERGENCY = 17;
+	    ADSB_EMITTER_TYPE_SURFACE_SERVICE = 18;
+	    ADSB_EMITTER_TYPE_POINT_OBSTACLE = 19;
+	    ADSB_EMITTER_TYPE_CLUSTER_OBSTACLE = 20;
+	    ADSB_EMITTER_TYPE_LINE_OBSTACLE = 21;
+	    ADSB_EMITTER_TYPE_RESERVED_22 = 22;
+	    ADSB_EMITTER_TYPE_RESERVED_23 = 23;
+	    // Category D subtypes
+	    ADSB_EMITTER_TYPE_NO_INFO_D = 24;
+	    ADSB_EMITTER_TYPE_RESERVED_25 = 25;
+	    ADSB_EMITTER_TYPE_RESERVED_26 = 26;
+	    ADSB_EMITTER_TYPE_RESERVED_27 = 27;
+	    ADSB_EMITTER_TYPE_RESERVED_28 = 28;
+	    ADSB_EMITTER_TYPE_RESERVED_29 = 29;
+	    ADSB_EMITTER_TYPE_RESERVED_30 = 30;
+	    ADSB_EMITTER_TYPE_RESERVED_31 = 31;
+	}
+	
+	enum Adsb_altitude_source {
+	    ADSB_ALTITUDE_SOURCE_BARO = 0;
+	    ADSB_ALTITUDE_SOURCE_GNSS = 1;
+	}
+	
+	// Built in command parameter enums
+	
+	enum Adsb_mode {
+	    ADSB_MODE_OFF = 0;
+	    ADSB_MODE_STBY = 1;
+	    ADSB_MODE_ON = 2;
+	    ADSB_MODE_ALT = 3;
+	}
+	
+	enum Failsafe_action {
+	    FAILSAFE_ACTION_RTH = 0;
+	    FAILSAFE_ACTION_LAND = 1;
+	    FAILSAFE_ACTION_WAIT = 2;
+	    FAILSAFE_ACTION_CONTINUE = 3;
+	}
+	
+	// Action after RTH
+	enum Rth_action {
+	    RTH_ACTION_LAND = 0;
+	    RTH_ACTION_WAIT = 1;
+	}
+	
+	enum Camera_power_state {
+	    CAMERA_POWER_STATE_ON = 0;
+	    CAMERA_POWER_STATE_OFF = 1;
+	    CAMERA_POWER_STATE_TOGGLE = 2;
+	}
+	
+	enum Camera_video_source {
+	    CAMERA_VIDEO_SOURCE_PRIMARY = 0;
+	    CAMERA_VIDEO_SOURCE_SECONDARY = 1;
+	}
+	
+	enum Camera_command_trigger_state {
+	    CAMERA_COMMAND_TRIGGER_STATE_SINGLE_SHOT = 0;
+	    CAMERA_COMMAND_TRIGGER_STATE_VIDEO_START = 1;
+	    CAMERA_COMMAND_TRIGGER_STATE_VIDEO_STOP = 2;
+	    CAMERA_COMMAND_TRIGGER_STATE_VIDEO_TOGGLE = 3;
+	}
+	
+	enum Camera_mission_trigger_state {
+	    CAMERA_MISSION_TRIGGER_STATE_ON = 0;
+	    CAMERA_MISSION_TRIGGER_STATE_OFF = 1;
+	    CAMERA_MISSION_TRIGGER_STATE_SINGLE_PHOTO = 2;
+	    CAMERA_MISSION_TRIGGER_STATE_SERIAL_PHOTO = 3;
+	}
+	
+	enum Panorama_mode {
+	    PANORAMA_MODE_PHOTO = 0;
+	    PANORAMA_MODE_VIDEO = 1;
+	}
+	
+	enum Turn_type {
+	    TURN_TYPE_STOP_AND_TURN = 0;
+	    TURN_TYPE_STRAIGHT = 1;
+	    TURN_TYPE_SPLINE = 2;
+	    TURN_TYPE_BANK_TURN = 3;
+	}
+	
+	// Field/parameter type (semantic)
+	enum Field_semantic {
+	
+	    // Used internally.
+	    FIELD_SEMANTIC_DEFAULT = 0;
+	    // Description, Units, Data type, Range, Origin, Positive direction
+	
+	    // Geodetic latitude, radians, double, -Pi/2..Pi/2, equator, north
+	    FIELD_SEMANTIC_LATITUDE = 1;
+	
+	    // Geodetic longitude, radians, double, -Pi..Pi, Greenwich meridian, East
+	    FIELD_SEMANTIC_LONGITUDE = 2;
+	
+	    // WGS84 altitude, meters, numeric
+	    FIELD_SEMANTIC_ALTITUDE_AMSL = 3;
+	
+	    // Altitude AGL, meters, numeric
+	    FIELD_SEMANTIC_ALTITUDE_AGL = 4;
+	
+	    // Raw altitude reading from vehicle. Typically above home location., meters, numeric
+	    FIELD_SEMANTIC_ALTITUDE_RAW = 5;
+	
+	    // Vehicle nose angle, radians, numeric, 0..2Pi, North, East
+	    FIELD_SEMANTIC_HEADING = 6;
+	
+	    // Battery voltage, volts, numeric
+	    FIELD_SEMANTIC_VOLTAGE = 8;
+	
+	    // Air speed, m/s, numeric
+	    FIELD_SEMANTIC_AIR_SPEED = 9;
+	
+	    // Ground speed, m/s, numeric
+	    FIELD_SEMANTIC_GROUND_SPEED = 10;
+	
+	    // Climb speed, m/s, numeric
+	    FIELD_SEMANTIC_VERTICAL_SPEED = 11;
+	
+	    // GNSS satellite count, numeric
+	    FIELD_SEMANTIC_SATELLITE_COUNT = 12;
+	
+	    // Fix type, numeric, enum Gps_fix_type
+	    FIELD_SEMANTIC_GPS_FIX_TYPE = 13;
+	
+	    // Roll angle, radians, numeric, -Pi..Pi, Horizon, right
+	    FIELD_SEMANTIC_ROLL = 14;
+	
+	    // Pitch angle, radians, numeric, -Pi..Pi, Horizon, up
+	    FIELD_SEMANTIC_PITCH = 15;
+	
+	    // Yaw angle, radians, numeric, 0..2Pi, unspecified, East
+	    FIELD_SEMANTIC_YAW = 16;
+	
+	    // RC link quality, , numeric, [0..1]
+	    FIELD_SEMANTIC_RC_LINK_QUALITY = 17;
+	
+	    // Battery current, amperes, numeric
+	    FIELD_SEMANTIC_CURRENT = 18;
+	
+	    // Groundstation datalink quality, , numeric, [0..1]
+	    FIELD_SEMANTIC_GCS_LINK_QUALITY = 19;
+	
+	    // Camera Field-of-view horizontal angle, radians, numeric, 0..Pi
+	    FIELD_SEMANTIC_FOV_H = 23;
+	
+	    // Camera Field-of-view veritcal angle, radians, numeric, 0..Pi
+	    FIELD_SEMANTIC_FOV_V = 24;
+	
+	    // Current control mode, int, enum Control_mode
+	    FIELD_SEMANTIC_CONTROL_MODE = 26;
+	
+	    // Terrain elevation AMSL, meters, numeric
+	    FIELD_SEMANTIC_GROUND_ELEVATION = 27;
+	
+	    // Waypoint acceptance radius, meters, numeric
+	    FIELD_SEMANTIC_ACCEPTANCE_RADIUS = 28;
+	
+	    // Waypoint loiter radius, meters, numeric
+	    FIELD_SEMANTIC_LOITER_RADIUS = 29;
+	
+	    // ADSB icao code, 24 bits, numeric, represented as hex
+	    FIELD_SEMANTIC_ICAO = 30;
+	
+	    // ADSB transponder mode, enum, Adsb_mode, numeric
+	    FIELD_SEMANTIC_ADSB_MODE = 31;
+	
+	    // ADSB squawk code, 12 bits, numeric, represented as octal
+	    FIELD_SEMANTIC_SQUAWK = 32;
+	
+	    // Time interval, milliseconds, numeric, represented as time
+	    FIELD_SEMANTIC_MILLISECONDS = 33;
+	
+	    // Battery capacity percentage, numeric, [0..1]
+	    FIELD_SEMANTIC_CAPACITY_LEVEL = 34;
+	
+	    // Vehicle flight mode, enum, Flight_mode
+	    FIELD_SEMANTIC_FLIGHT_MODE = 35;
+	
+	    // Autopilot status, enum
+	    FIELD_SEMANTIC_AUTOPILOT_STATUS = 36;
+	
+	    // Time since Unix epoch (1970-01-01T00:00:00Z), int64, milliseconds
+	    FIELD_SEMANTIC_TIMESTAMP = 37;
+	
+	    // Temperature, celsius, numeric
+	    FIELD_SEMANTIC_TEMPERATURE = 38;
+	
+	    // Humidity, percentage, numeric, [0..100]
+	    FIELD_SEMANTIC_HUMIDITY = 39;
+	
+	    // Precipitation, mm/hour, numeric, [0,2..150]
+	    FIELD_SEMANTIC_PRECIPITATION = 42;
+	
+	
+	    // Generic types used for user-defined telemetry fields.
+	
+	    // Value can be of any type. Field can hold any one of supported values.
+	    // VSM will determine the value type depending on which value is present in Field_value.
+	    // The order is: double, int, string, bool, list.
+	    // For example, if field contains both int and string values then string value will be ignored.
+	    FIELD_SEMANTIC_ANY = 100;
+	
+	    // Generic number type. Exact type (float, int, etc...) will be detected automatically
+	    FIELD_SEMANTIC_NUMERIC = 101;
+	
+	    // boolean
+	    FIELD_SEMANTIC_BOOL = 104;
+	
+	    // utf8 string
+	    FIELD_SEMANTIC_STRING = 105;
+	
+	    // enum. Possible values defined via Register_enumeration message.
+	    FIELD_SEMANTIC_ENUM = 106;
+	
+	    // list.
+	    FIELD_SEMANTIC_LIST = 107;
+	
+	    // Unformatted binary data
+	    FIELD_SEMANTIC_BINARY = 108;
+	}
+

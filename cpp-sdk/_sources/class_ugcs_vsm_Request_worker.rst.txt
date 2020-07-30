@@ -1,0 +1,201 @@
+.. index:: pair: class; ugcs::vsm::Request_worker
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker:
+
+class ugcs::vsm::Request_worker
+===============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Class for convenient worker thread instantiation for processing requests in a set request containers. :ref:`More...<details-d4/dcf/classugcs_1_1vsm_1_1_request__worker>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <request_worker.h>
+	
+	class Request_worker: public :ref:`ugcs::vsm::Request_context<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context>`
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Request_worker> :ref:`Ptr<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a24f61987e7b9b6cfd179e9a1c86125de>`;
+		typedef std::weak_ptr<Request_worker> :ref:`Weak_ptr<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1af94c0e6ff7667cdacc5cee79eb5d1afc>`;
+
+		// construction
+	
+		:ref:`Request_worker<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1aa6246f71529457ecf8f714140dc3f9ee>`(const std::string& name);
+		:ref:`Request_worker<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a9a27db5a2bfe141e2650621d4a14bbb1>`(const std::string& name, const std::initializer_list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers);
+		:ref:`Request_worker<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a06080916c0cf4100beb5fe675a539ba1>`(const std::string& name, const std::list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` :ref:`Create<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1abe7b9cf9d6e427c71e7c1e52d373b527>`(Args&&... args);
+	
+		virtual :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` :ref:`Get_type<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1ac34742e450b21e79e4a0b2ae8862a3ac>`() const;
+		void :ref:`Enable_containers<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a56cf0b94a2700ad2b739651fab0156a2>`();
+		void :ref:`Disable_containers<doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a36cfc796a7a1c505457edb613ad5929d>`();
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<:ref:`Request_container<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container>`> :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`;
+		typedef std::weak_ptr<:ref:`Request_container<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container>`> :ref:`Weak_ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a77243b55b39633082db0c3728a8a85b0>`;
+		typedef std::shared_ptr<:ref:`Request_context<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context>`> :ref:`Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>`;
+		typedef std::weak_ptr<:ref:`Request_context<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context>`> :ref:`Weak_ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1adbab27f2c1072dce5c5c2486ee9ecb07>`;
+
+		// enums
+	
+		enum :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>`;
+
+		// classes
+	
+		class :ref:`Request<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>`;
+		class :ref:`Request_waiter<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter>`;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` :ref:`Create<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ad29f54929b9e5f8645ec52a1e45adb12>`(Args&&... args);
+	
+		virtual :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` :ref:`Get_type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a0d3beca821012a86a256c28e7dfc4fde>`() const;
+		bool :ref:`Check_type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ac38d8f9f00ad0a9d4b449dff33b0cdab>`(:ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` mask);
+		void :ref:`Submit_request<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aeee82d0de5351f069e41e3317a3f5ba8>`(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request);
+		void :ref:`Submit_request_locked<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a6aae7a556f97447859ea1cd406ca90f1>`(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request, :ref:`Request_waiter::Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` locker);
+		int :ref:`Process_requests<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a580718bc6c93f68817a75779c269c7c0>`(int requests_limit = 0);
+		int :ref:`Process_requests<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a9101999857946b533c5473db74995dcb>`(std::unique_lock<std::mutex>& lock, int requests_limit = 0);
+		void :ref:`Set_waiter<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ae5bc52cbb72f4009abbdb749c84ea9d8>`(:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter);
+		:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` :ref:`Get_waiter<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a97a3a455484bfd258139f1d9b69ea0c8>`() const;
+		const std::string& :ref:`Get_name<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ab9745410bec2e31145de2ad61aec1038>`();
+		void :ref:`Enable<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aad7864e6f1e03e84d869cbca8dc3df06>`();
+		void :ref:`Disable<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aa68b072400c148d77a5fab4529e68d8e>`();
+		bool :ref:`Is_enabled<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a787201d195b1038a816d4c81785f2765>`() const;
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` :ref:`Create<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1aa503edaf7008fa1a923113518e074018>`(Args&&... args);
+	
+		virtual :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` :ref:`Get_type<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a93add2d34731e5e8a0450e555fac5479>`() const;
+		:ref:`Request_container<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a6f987fcab9f10ab1812601dbad9316e3>`(const std::string& name, :ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter = :ref:`Request_waiter::Create<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a091f8971c953ca128e84d91567b00b52>`());
+
+.. _details-d4/dcf/classugcs_1_1vsm_1_1_request__worker:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Class for convenient worker thread instantiation for processing requests in a set request containers.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a24f61987e7b9b6cfd179e9a1c86125de:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Request_worker> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1af94c0e6ff7667cdacc5cee79eb5d1afc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Request_worker> Weak_ptr
+
+Pointer type.
+
+Construction
+------------
+
+.. index:: pair: function; Request_worker
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1aa6246f71529457ecf8f714140dc3f9ee:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Request_worker(const std::string& name)
+
+Construct worker.
+
+.. index:: pair: function; Request_worker
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a9a27db5a2bfe141e2650621d4a14bbb1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Request_worker(
+		const std::string& name,
+		const std::initializer_list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers
+		)
+
+Construct request worker by list of containers to work with.
+
+.. index:: pair: function; Request_worker
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a06080916c0cf4100beb5fe675a539ba1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Request_worker(const std::string& name, const std::list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers)
+
+Construct request worker by list of containers to work with.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1abe7b9cf9d6e427c71e7c1e52d373b527:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Get_type
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1ac34742e450b21e79e4a0b2ae8862a3ac:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` Get_type() const
+
+Get this container type.
+
+.. index:: pair: function; Enable_containers
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a56cf0b94a2700ad2b739651fab0156a2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Enable_containers()
+
+Enable all containers belonging to this worker.
+
+.. index:: pair: function; Disable_containers
+.. _doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a36cfc796a7a1c505457edb613ad5929d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Disable_containers()
+
+Disable all containers belonging to this worker.
+

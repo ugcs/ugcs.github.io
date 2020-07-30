@@ -1,0 +1,12 @@
+.. index:: pair: page; UCS-VSM protocol wire format
+.. _doxid-d0/d88/ucs_vsm_protocol_wire_format_page:
+
+UCS-VSM protocol wire format
+============================
+
+The protocol data is sent over TCP connection. Protobuf does not specify message boundaries, so the simplest way to send multiple messages is to delimit them with message length. Data format is:
+
+.. code-block:: cpp
+
+	<message_size><proto_message><message_size><proto_message><message_size><proto_message>...
+

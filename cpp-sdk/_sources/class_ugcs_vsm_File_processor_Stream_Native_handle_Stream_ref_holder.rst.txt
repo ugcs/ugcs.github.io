@@ -1,0 +1,58 @@
+.. index:: pair: class; ugcs::vsm::File_processor::Stream::Native_handle::Stream_ref_holder
+.. _doxid-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder:
+
+class ugcs::vsm::File_processor::Stream::Native_handle::Stream_ref_holder
+=========================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Helper class to hold reference to a stream and optionally release a lock before releasing the reference to a stream. :ref:`More...<details-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <file_processor.h>
+	
+	class Stream_ref_holder
+	{
+	public:
+		// construction
+	
+		:ref:`Stream_ref_holder<doxid-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder_1aec4be11eb5a0753f797e6f894238f27c>`(:ref:`Stream::Ptr<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a1ded5e2b5857bbb1b626998818eb47a0>` stream, std::unique_lock<std::mutex>&& lock);
+		:ref:`Stream_ref_holder<doxid-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder_1a86ee3f2c2a4da21b4e72a33faa10e39a>`(Stream_ref_holder&&);
+	};
+.. _details-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Helper class to hold reference to a stream and optionally release a lock before releasing the reference to a stream.
+
+Construction
+------------
+
+.. index:: pair: function; Stream_ref_holder
+.. _doxid-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder_1aec4be11eb5a0753f797e6f894238f27c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Stream_ref_holder(:ref:`Stream::Ptr<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a1ded5e2b5857bbb1b626998818eb47a0>` stream, std::unique_lock<std::mutex>&& lock)
+
+Constructor.
+
+.. index:: pair: function; Stream_ref_holder
+.. _doxid-dd/d35/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle_1_1_stream__ref__holder_1a86ee3f2c2a4da21b4e72a33faa10e39a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Stream_ref_holder(Stream_ref_holder&&)
+
+Default move constructor.
+

@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemetry protocol &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="UCS-VSM Commands" href="page_ucs_vsm_commands_page.html" />
+    <link rel="prev" title="Field types and semantics" href="page_ucs_vsm_fields_page.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="page_vehicle_interface_page.html">Device interface</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="page_async_programming_page.html">Asynchronous programming framework</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="page_service_discovery_page.html">Automatic Service Discovery</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="page_ucs_vsm_protocol_page.html">UCS-VSM communications protocol</a>
+                  <ul>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_proto_page.html">ucs_vsm.proto</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_registration_page.html">Vehicle registration with UCS</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_fields_page.html">Field types and semantics</a>
+                      </li>
+                  
+                      <li class="active">
+                          <a href="">Telemetry protocol</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_commands_page.html">UCS-VSM Commands</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_protocol_examples_page.html">UCS-VSM protocol example</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_protocol_wire_format_page.html">UCS-VSM protocol wire format</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#telemetry-field-registration" class="nav-link">Telemetry field registration</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#built-in-telemetry-field-names" class="nav-link">Built in telemetry field names</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#sending-telemetry-data" class="nav-link">Sending telemetry data</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="telemetry-protocol">
+<span id="doxid-de-d20-ucs-vsm-telemetry-page"></span><span id="index-0"></span><h1>Telemetry protocol<a class="headerlink" href="#telemetry-protocol" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="telemetry-field-registration">
+<span id="doxid-de-d20-ucs-vsm-telemetry-page-1telemetry-registration"></span><h2>Telemetry field registration<a class="headerlink" href="#telemetry-field-registration" title="Permalink to this headline">¶</a></h2>
+<p>Before any telemetry can be sent to the UCS it must be registered.</p>
+<p>Each telemetry field supported by the vehicle should be registered via <strong>Register_vehicle.register_flight_controller.telemetry_fields</strong> message (See <a class="reference internal" href="page_ucs_vsm_fields_page.html#doxid-d3-d7e-ucs-vsm-fields-page-1register-field"><span class="std std-ref">Register_field message</span></a>).</p>
+<p>All telemetry values are considered valid until explicitly reported as N/A by the VSM.</p>
+<p>VSM will send N/A automatically depending on timeout upon field creation. This timeout value is used only by VSM-SDK and not communicated to UCS.</p>
+<div class="section" id="built-in-telemetry-field-names">
+<span id="doxid-de-d20-ucs-vsm-telemetry-page-1telemetry-fields"></span><h3>Built in telemetry field names<a class="headerlink" href="#built-in-telemetry-field-names" title="Permalink to this headline">¶</a></h3>
+<p>VSM can register any set of telemetry fields but there are some built in telemetry field names which are treated specially by UCS.</p>
+<p>Registering different semantic for these values will lead to undesired results.</p>
+<table class="table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Semantic</p></th>
+<th class="head"><p>Subsystem</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>adsb_altitude</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_altitude_internal</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>adsb_error_gps</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_error_icao</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>adsb_error_squitter</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_error_temperature</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>adsb_error_xpdr</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_flight</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>adsb_icao</p></td>
+<td><p>FIELD_SEMANTIC_ICAO</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_ident_active</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>adsb_registration</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_squawk</p></td>
+<td><p>FIELD_SEMANTIC_SQUAWK</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>adsb_transponder_mode</p></td>
+<td><p>FIELD_SEMANTIC_ADSB_MODE</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_version</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>ADSB</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>air_speed</p></td>
+<td><p>FIELD_SEMANTIC_AIR_SPEED</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>altitude_agl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AGL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>altitude_origin</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>altitude_raw</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_RAW</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>autopilot_status</p></td>
+<td><p>FIELD_SEMANTIC_AUTOPILOT_STATUS</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>autopilot_status_text</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>control_mode</p></td>
+<td><p>FIELD_SEMANTIC_CONTROL_MODE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>course</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>FC</p></td>
+<td><p>Course over ground relative to North. Range 0..2Pi, East is positive</p></td>
+</tr>
+<tr class="row-odd"><td><p>current</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td><p>Main battery current in Amperes</p></td>
+</tr>
+<tr class="row-even"><td><p>current_command</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td><p>Current command_id vehicle is executing now. Command number in mission as sent to the vehicle.</p></td>
+</tr>
+<tr class="row-odd"><td><p>current_mission_id</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td><p>Mission ID reported by VSM. VSM generates this on mission upload.</p></td>
+</tr>
+<tr class="row-even"><td><p>downlink_present</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>fence_enabled</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>FC</p></td>
+<td><p>True if fence is enabled</p></td>
+</tr>
+<tr class="row-even"><td><p>field_of_view</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Camera</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>flight_mode</p></td>
+<td><p>FIELD_SEMANTIC_FLIGHT_MODE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>gcs_link_quality</p></td>
+<td><p>FIELD_SEMANTIC_LINK_QUALITY</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>gps_fix</p></td>
+<td><p>FIELD_SEMANTIC_GPS_FIX_TYPE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ground_speed</p></td>
+<td><p>FIELD_SEMANTIC_GROUND_SPEED</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>heading</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>FC</p></td>
+<td><p>Yaw relative to North. Range 0..2Pi, East is positive</p></td>
+</tr>
+<tr class="row-even"><td><p>home_altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>home_altitude_raw</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_RAW</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>home_latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>home_longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>is_armed</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>remaining_power_level</p></td>
+<td><p>FIELD_SEMANTIC_CAPACITY_LEVEL</p></td>
+<td><p>FC</p></td>
+<td><p>0..1</p></td>
+</tr>
+<tr class="row-even"><td><p>main_voltage</p></td>
+<td><p>FIELD_SEMANTIC_MAIN_VOLTAGE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>motor_pwm_1</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>motor_pwm_2</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>motor_pwm_3</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>motor_pwm_4</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>motor_pwm_5</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>motor_pwm_6</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>motor_pwm_7</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>motor_pwm_8</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>motors_ok</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>FC</p></td>
+<td><p>true - ok, false - not ok.</p></td>
+</tr>
+<tr class="row-even"><td><p>native_flight_mode</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>FC</p></td>
+<td><p>Autopilot specific flight mode name</p></td>
+</tr>
+<tr class="row-odd"><td><p>pitch</p></td>
+<td><p>FIELD_SEMANTIC_PITCH</p></td>
+<td><p>FC</p></td>
+<td><p>Pitch relative to horizon. Range -Pi..Pi, pitch up is positive</p></td>
+</tr>
+<tr class="row-even"><td><p>payload_status</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>PAYLOAD_CONTROLLER</p></td>
+<td><p>Status of an attached payload.</p></td>
+</tr>
+<tr class="row-odd"><td><p>payload_data</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>PAYLOAD_CONTROLLER</p></td>
+<td><p>Any payload telemetry.</p></td>
+</tr>
+<tr class="row-even"><td><p>rc_link_quality</p></td>
+<td><p>FIELD_SEMANTIC_LINK_QUALITY</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>roll</p></td>
+<td><p>FIELD_SEMANTIC_ROLL</p></td>
+<td><p>FC</p></td>
+<td><p>Roll relative to horizon. Range -Pi..Pi, roll right is positive</p></td>
+</tr>
+<tr class="row-even"><td><p>safety_battery_active</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>Winch</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>safety_battery_voltage</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Winch</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>satellite_count</p></td>
+<td><p>FIELD_SEMANTIC_SATELLITE_COUNT</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>standby</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>FC</p></td>
+<td><p>Standby means system is grounded and on standby. It can be launched any time.</p></td>
+</tr>
+<tr class="row-even"><td><p>takeoff_latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>takeoff_longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>target_altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>target_altitude_raw</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_RAW</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>target_latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>target_longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>uplink_present</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vertical_speed</p></td>
+<td><p>FIELD_SEMANTIC_VERTICAL_SPEED</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vibration_x</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vibration_y</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vibration_z</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>winch_connected</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>Winch</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="sending-telemetry-data">
+<span id="doxid-de-d20-ucs-vsm-telemetry-page-1telemetry-sending"></span><h2>Sending telemetry data<a class="headerlink" href="#sending-telemetry-data" title="Permalink to this headline">¶</a></h2>
+<p>Any message from VSM can contain a set of telemetry fields from vehicle specified by <strong>device_id</strong> (Vsm_message.device_status.telemetry_fields).</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="page_ucs_vsm_fields_page.html" title="previous page">Field types and semantics</a>
+    <a class='right-next' id="next-link" href="page_ucs_vsm_commands_page.html" title="next page">UCS-VSM Commands</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+.. index:: pair: class; ugcs::vsm::internal::Shared_getter<T, void>
+.. _doxid-d0/d30/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01void_01_4:
+
+template class ugcs::vsm::internal::Shared_getter<T, void>
+==========================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Specialization for class which is not derived from std::enable_shared_from_this. :ref:`More...<details-d0/d30/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01void_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <utils.h>
+	
+	template <class T>
+	class Shared_getter<T, void>
+	{
+	public:
+		// methods
+	
+		static std::shared_ptr<T> :ref:`Get<doxid-d0/d30/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01void_01_4_1a7a1f8a4b26d9d1e560872c8ae7a63a37>`(T*this_ptr  __attribute__(unused));
+	};
+.. _details-d0/d30/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01void_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Specialization for class which is not derived from std::enable_shared_from_this.
+
+Methods
+-------
+
+.. index:: pair: function; Get
+.. _doxid-d0/d30/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01void_01_4_1a7a1f8a4b26d9d1e560872c8ae7a63a37:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static std::shared_ptr<T> Get(T*this_ptr  __attribute__(unused))
+
+Get which leads to runtime failure.
+

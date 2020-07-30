@@ -1,0 +1,167 @@
+.. index:: pair: class; ugcs::vsm::Vehicle_request_spec
+.. _doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec:
+
+template class ugcs::vsm::Vehicle_request_spec
+==============================================
+
+.. toctree::
+	:hidden:
+
+	class_ugcs_vsm_Vehicle_request_spec_Handle.rst
+
+Overview
+~~~~~~~~
+
+:ref:`Vehicle <doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle>` request with specific payload. :ref:`More...<details-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <vehicle_request.h>
+	
+	template <class Payload>
+	class Vehicle_request_spec: public :ref:`ugcs::vsm::Vehicle_request<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request>`
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Vehicle_request_spec> :ref:`Ptr<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1ae6c2ab59752393bc8496eb71ff6b4c01>`;
+		typedef std::weak_ptr<Vehicle_request_spec> :ref:`Weak_ptr<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1a05205252c44579885ddf4b4825544c7f>`;
+
+		// classes
+	
+		class :ref:`Handle<doxid-d6/d6a/classugcs_1_1vsm_1_1_vehicle__request__spec_1_1_handle>`;
+
+		// fields
+	
+		Payload :ref:`payload<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1a3b58159bbef2e7674e2aefbf5c4174ef>`;
+
+		// construction
+	
+		template <typename... Args>
+		:ref:`Vehicle_request_spec<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1ae9d76b6817fb6b7bfa713519014f53e4>`(
+			:ref:`Completion_handler<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ac5f7f79f0ee553d93b7bf7405d7621d0>` completion_handler,
+			:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` completion_ctx,
+			Args&&... args
+			);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>` :ref:`Create<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1a2e0037bf3ab01661092ec19570e9dfde>`(Args&&... args);
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<:ref:`Vehicle_request<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request>`> :ref:`Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>`;
+		typedef std::weak_ptr<:ref:`Vehicle_request<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request>`> :ref:`Weak_ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1abbbeccf4fba0155902ce8da5c69dfe69>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>`, std::string> :ref:`Completion_handler<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ac5f7f79f0ee553d93b7bf7405d7621d0>`;
+
+		// enums
+	
+		enum :ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>`;
+
+		// classes
+	
+		class :ref:`Handle<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle>`;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>` :ref:`Create<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1af304eb7adf94a8e9ffdaeaea12c2e250>`(Args&&... args);
+	
+		void :ref:`Set_completion_result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1acc320de96ea19e9673ba42f7ee620100>`(:ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>` result, const std::string&);
+		void :ref:`Complete<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1af2450af0a9ea440759eb6309a64d7301>`();
+		void :ref:`Abort<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1aa1cd1ebfb07bdd7bf868178e888f3c41>`();
+		:ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>` :ref:`Get_completion_result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ab0d6573ba324e666ac3013e50735f48a>`();
+		bool :ref:`Is_completed<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a1fb80240282f5cac0e67e3d985ffc941>`() const;
+		void :ref:`Add_ref<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a72dc44dbde439febea27974a5b9c14b5>`();
+		void :ref:`Release_ref<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a27f0097b59b87a63d54c6a18f8ff0761>`();
+
+.. _details-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Vehicle <doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle>` request with specific payload.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1ae6c2ab59752393bc8496eb71ff6b4c01:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Vehicle_request_spec> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1a05205252c44579885ddf4b4825544c7f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Vehicle_request_spec> Weak_ptr
+
+Pointer type.
+
+Fields
+------
+
+.. index:: pair: variable; payload
+.. _doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1a3b58159bbef2e7674e2aefbf5c4174ef:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Payload payload
+
+Specific payload of the request.
+
+Construction
+------------
+
+.. index:: pair: function; Vehicle_request_spec
+.. _doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1ae9d76b6817fb6b7bfa713519014f53e4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	Vehicle_request_spec(
+		:ref:`Completion_handler<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ac5f7f79f0ee553d93b7bf7405d7621d0>` completion_handler,
+		:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` completion_ctx,
+		Args&&... args
+		)
+
+Construct vehicle request with specific payload.
+
+Template arguments:
+
+* *Args* Arguments passed to payload constructor.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec_1a2e0037bf3ab01661092ec19570e9dfde:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>` Create(Args&&... args)
+
+Create an instance.
+

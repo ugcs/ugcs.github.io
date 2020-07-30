@@ -1,0 +1,47 @@
+.. index:: pair: struct; ugcs::vsm::Action::Mapper<Action::Type::CHANGE_SPEED>
+.. _doxid-da/d96/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_h_a_n_g_e___s_p_e_e_d_01_4:
+
+template struct ugcs::vsm::Action::Mapper<Action::Type::CHANGE_SPEED>
+=====================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Type mapper for change speed action. :ref:`More...<details-da/d96/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_h_a_n_g_e___s_p_e_e_d_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <change_speed_action.h>
+	
+	template <>
+	struct Mapper<Action::Type::CHANGE_SPEED>
+	{
+		// typedefs
+	
+		typedef :ref:`Change_speed_action<doxid-d5/d1e/classugcs_1_1vsm_1_1_change__speed__action>` :ref:`type<doxid-da/d96/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_h_a_n_g_e___s_p_e_e_d_01_4_1a8c954454596fcdabfb9191bf5ac9a23a>`;
+	};
+.. _details-da/d96/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_h_a_n_g_e___s_p_e_e_d_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Type mapper for change speed action.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; type
+.. _doxid-da/d96/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_h_a_n_g_e___s_p_e_e_d_01_4_1a8c954454596fcdabfb9191bf5ac9a23a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Change_speed_action<doxid-d5/d1e/classugcs_1_1vsm_1_1_change__speed__action>` type
+
+Real type.
+

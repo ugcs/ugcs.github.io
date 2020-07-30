@@ -1,0 +1,310 @@
+.. index:: pair: page; Field types and semantics
+.. _doxid-d3/d7e/ucs_vsm_fields_page:
+
+Field types and semantics
+=========================
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1field_messages:
+
+Field messages
+~~~~~~~~~~~~~~
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1field_value:
+
+Field_value message
+-------------------
+
+All values communicated between VSM and UCS are sent as protobuf's :ref:`Field_value message <doxid-d3/d7e/ucs_vsm_fields_page_1field_value>`. It is used in telemetry, commands, mission items, vehicle parameters. This message is a container for any value passed between VSM and UCS. In addition to value itself it has some additional features:
+
+* Can contain value of different types: string, bool, int, float, double, enum.
+
+* It can have special values like "N/A"
+
+* All string values are UTF8 encoded.
+
+============  ==========  =========================================================================  
+Name          Type        Description                                                                
+============  ==========  =========================================================================  
+meta_value    Meta_value  If this field is present the value of the field is one of Meta_value enum  
+int_value     sint64      Present if value is integer or enumeration                                 
+float_value   float       Present if value is of type float                                          
+double_value  double      Present if value is of type double                                         
+string_value  string      Present if value is utf8 string                                            
+bool_value    bool        Present if value is of type bool                                           
+============  ==========  =========================================================================
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1field_registration:
+
+Field registration
+------------------
+
+Before any value can be sent/received it must be registered first via :ref:`Register_field message <doxid-d3/d7e/ucs_vsm_fields_page_1register_field>` which is sent as part of register_vehicle_message. Field regirstration has several purposes:
+
+* Tell the UgCS system what fields are supported and bind them to unique ID. This ID will be used as reference in sugsequent **Telemetry_field** and **Parameter_field** messages.
+
+* Specify the semantic of the field
+
+* Possibility to define custom fields with custom type, range or enumeration.
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1parameter_field:
+
+Parameter_field message
+-----------------------
+
+This message is a container for any value passed as command parameter.
+
+========  ===========  ============================================================================================================  
+Name      Type         Description                                                                                                   
+========  ===========  ============================================================================================================  
+field_id  uint32       Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via  
+value     Field_value  Value of the field                                                                                            
+========  ===========  ============================================================================================================
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1Property_field:
+
+Property_field message
+----------------------
+
+VSM can add arbitrary properties in addition to supported values to each device it registers. These are key/value pairs. Prpoerty value type is not specified by protocol and can be set implicitly by setting appropriate field in **Property_field.value**.
+
+=====  ===========  =========================================  
+Name   Type         Description                                
+=====  ===========  =========================================  
+name   string       Device-wide unique name for the property.  
+value  Field_value  Value of the field                         
+=====  ===========  =========================================
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1Telemetry_field:
+
+Telemetry_field message
+-----------------------
+
+In addition to value and id Telemetry_field requires field timestamp when the value was acquired. This time is consistent across all fields, i.e. all timestamps are taken from single clock source. Typically it will be the realtime clock of the host running the VSM. This is to ensure telemetry data consistency across the system.
+
+==============  ===========  ========================================================================================================================  
+Name            Type         Description                                                                                                               
+==============  ===========  ========================================================================================================================  
+field_id        uint32       Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via              
+ms_since_epoch  uint64       Time in ms this value was gathered since begin_of_epoch which set in Register_vehicle message. Used in telemetry fields.  
+value           Field_value  Value of the field                                                                                                        
+==============  ===========  ========================================================================================================================
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1register_field:
+
+Register_field message
+----------------------
+
+Description of field definition message **Register_field**. (See also :ref:`ucs_vsm.proto <doxid-d0/dba/ucs_vsm_proto_page>`)
+
+=============  ====================  ===================================================================================================================  
+Field name     Field type            Description                                                                                                          
+=============  ====================  ===================================================================================================================  
+name           string                Name of parameter. Unique within current session                                                                     
+field_id       uint32                Session specific ID mapped to this parameter.                                                                        
+semantic       Field_semantic        parameter type from                                                                                                  
+min_value      Field_value           Minimum supported value for this parameter.                                                                          
+max_value      Field_value           Maximum supported value for this parameter.                                                                          
+default_value  Field_value           Default value for this parameter. Vehicle will use this value if parameter is not present in received mission item.  
+enumeration    Register_enumeration  Contains a list of supported enum values when type==                                                                 
+=============  ====================  ===================================================================================================================
+
+If min_value == max_value it means that parameter is not user editable and should be always set to default_value.
+
+For enumerations min_value and max_value are ignored. Range is implicitly set by the set of defined *enumeration* values.
+
+
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1field_semantic:
+
+Field semantic
+~~~~~~~~~~~~~~
+
+Each field has a type which is called "semantic" because in adition to generic type (float, string) it defines its range, frame of reference, and unit.
+
+For example, FIELD_SEMANTIC_LATITUDE is number of type double, unit is radians and it holds geodetic latitude from equator with positive direction North. This semantic can be used to define fields containing geodetic latitude.
+
+The list of supported semantics along with their descriptions can be found in :ref:`Protobuf enumerations <doxid-d0/dba/ucs_vsm_proto_page_1proto_enums>`.
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1built_in_fields:
+
+Built in fields
+---------------
+
+There are fields which are recognized by the UgCS system by their name and are used in core functionality.
+
+======================  ================================  ==========================================================  
+Field name              Semantic                          Description                                                 
+======================  ================================  ==========================================================  
+latitude                FIELD_SEMANTIC_LATITUDE                                                                       
+longitude               FIELD_SEMANTIC_LONGITUDE                                                                      
+altitude_amsl           FIELD_SEMANTIC_ALTITUDE_AMSL                                                                  
+altitude_agl            FIELD_SEMANTIC_ALTITUDE_AGL                                                                   
+altitude_raw            FIELD_SEMANTIC_ALTITUDE_RAW                                                                   
+heading                 FIELD_SEMANTIC_HEADING                                                                        
+course                  FIELD_SEMANTIC_COURSE                                                                         
+ground_speed            FIELD_SEMANTIC_GROUND_SPEED                                                                   
+air_speed               FIELD_SEMANTIC_AIR_SPEED                                                                      
+vertical_speed          FIELD_SEMANTIC_VERTICAL_SPEED                                                                 
+main_voltage            FIELD_SEMANTIC_MAIN_VOLTAGE                                                                   
+satellite_count         FIELD_SEMANTIC_SATELLITE_COUNT                                                                
+gps_fix                 FIELD_SEMANTIC_GPS_FIX_TYPE       See                                                         
+roll                    FIELD_SEMANTIC_ROLL                                                                           
+pitch                   FIELD_SEMANTIC_PITCH                                                                          
+rc_link_quality         FIELD_SEMANTIC_LINK_QUALITY                                                                   
+gcs_link_quality        FIELD_SEMANTIC_LINK_QUALITY                                                                   
+uplink_present          FIELD_SEMANTIC_BOOL                                                                           
+downlink_present        FIELD_SEMANTIC_BOOL                                                                           
+fov_h                   FIELD_SEMANTIC_FOV_H                                                                          
+fov_v                   FIELD_SEMANTIC_FOV_V                                                                          
+is_armed                FIELD_SEMANTIC_BOOL                                                                           
+control_mode            FIELD_SEMANTIC_CONTROL_MODE       See                                                         
+adsb_icao               FIELD_SEMANTIC_ICAO                                                                           
+adsb_registration       FIELD_SEMANTIC_STRING                                                                         
+adsb_flight             FIELD_SEMANTIC_STRING                                                                         
+adsb_altitude_internal  FIELD_SEMANTIC_BOOL                                                                           
+adsb_error_xpdr         FIELD_SEMANTIC_BOOL                                                                           
+adsb_error_icao         FIELD_SEMANTIC_BOOL                                                                           
+adsb_error_gps          FIELD_SEMANTIC_BOOL                                                                           
+adsb_error_squitter     FIELD_SEMANTIC_BOOL                                                                           
+adsb_error_temperature  FIELD_SEMANTIC_BOOL                                                                           
+adsb_ident_active       FIELD_SEMANTIC_BOOL                                                                           
+adsb_transponder_mode   FIELD_SEMANTIC_ADSB_MODE                                                                      
+adsb_squawk             FIELD_SEMANTIC_SQUAWK                                                                         
+home_altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL                                                                  
+home_latitude           FIELD_SEMANTIC_LATITUDE                                                                       
+home_longitude          FIELD_SEMANTIC_LONGITUDE                                                                      
+altitude_origin         FIELD_SEMANTIC_ALTITUDE_AMSL                                                                  
+rc_loss_action          FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from                       
+gps_loss_action         FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from                       
+low_battery_action      FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from                       
+safe_altitude           FIELD_SEMANTIC_ALTITUDE_AMSL                                                                  
+ground_elevation        FIELD_SEMANTIC_GROUND_ELEVATION                                                               
+acceptance_radius       FIELD_SEMANTIC_ACCEPTANCE_RADIUS                                                              
+loiter_radius           FIELD_SEMANTIC_LOITER_RADIUS                                                                  
+heading                 FIELD_SEMANTIC_HEADING                                                                        
+rth_altitude_amsl       FIELD_SEMANTIC_ALTITUDE_AMSL      Vehicle will climb to this altitude before going home       
+altitude_final_amsl     FIELD_SEMANTIC_ALTITUDE_AMSL      Vehicle will descend to given altitude after reaching home  
+follow_terrain          FIELD_SEMANTIC_BOOL                                                                           
+======================  ================================  ==========================================================
+
+
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1field_enums:
+
+Built-in enumerations
+~~~~~~~~~~~~~~~~~~~~~
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1enum_gps_fix:
+
+Gps_fix_type enum
+-----------------
+
+FIELD_SEMANTIC_GPS_FIX_TYPE
+
+====  =================  
+Name  Value              
+====  =================  
+none  GPS_FIX_TYPE_NONE  
+2D    GPS_FIX_TYPE_2D    
+3D    GPS_FIX_TYPE_3D    
+Diff  GPS_FIX_TYPE_DIFF  
+RTK   GPS_FIX_TYPE_RTK   
+====  =================
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1enum_failsafe_action:
+
+Failsafe_action enum
+--------------------
+
+Used to specify failsafe actions supported by vehicle. Each vehicle reports supported actions upon registration.
+
+========  ========================  =======================  
+Name      Value                     Description              
+========  ========================  =======================  
+rth       FAILSAFE_ACTION_RTH       Return to home position  
+land      FAILSAFE_ACTION_LAND      Land immediately         
+wait      FAILSAFE_ACTION_WAIT      Wait                     
+continue  FAILSAFE_ACTION_CONTINUE  Continue with mission    
+========  ========================  =======================
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1enum_control_mode:
+
+Control_mode enum
+-----------------
+
+Currently supported control modes
+
+============  =========================  ================================================================  
+Name          Value                      Description                                                       
+============  =========================  ================================================================  
+manual        CONTROL_MODE_MANUAL        Vehicle is controlled via RC transmitter                          
+auto          CONTROL_MODE_AUTO          Autpoilot controls the vehicle. No manual input possible          
+click_go      CONTROL_MODE_CLICK_GO      Vehicle navigates to the waypoint sent from client interactively  
+joystick      CONTROL_MODE_JOYSTICK      Vehicle is controlled directly via manual input from GS           
+active_track  CONTROL_MODE_ACTIVE_TRACK  Vehicle is automatically tracking an object                       
+============  =========================  ================================================================
+
+
+
+
+
+.. _doxid-d3/d7e/ucs_vsm_fields_page_1enum_adsb_mode:
+
+Adsb_mode enum
+--------------
+
+Sagetech adsb transponder modes
+
+====  ==============  =================================================================  
+Name  Value           Description                                                        
+====  ==============  =================================================================  
+off   ADSB_MODE_OFF   Transponder turned off                                             
+stby  ADSB_MODE_STBY  Transponder in standby mode                                        
+on    ADSB_MODE_ON    Transponder is actively transmitting. Altitude is not transmitted  
+alt   ADSB_MODE_ALT   Transponder is actively. Altitude is being transmitted, too.       
+====  ==============  =================================================================
+

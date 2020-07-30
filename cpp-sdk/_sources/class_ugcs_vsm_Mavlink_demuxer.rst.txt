@@ -1,0 +1,304 @@
+.. index:: pair: class; ugcs::vsm::Mavlink_demuxer
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer:
+
+class ugcs::vsm::Mavlink_demuxer
+================================
+
+.. toctree::
+	:hidden:
+
+	struct_ugcs_vsm_Mavlink_demuxer_Duplicate_handler_dummy_struct.rst
+	class_ugcs_vsm_Mavlink_demuxer_Callback.rst
+	class_ugcs_vsm_Mavlink_demuxer_Callback_base.rst
+
+Overview
+~~~~~~~~
+
+Mavlink message demultiplexer based on message, system and component identifiers. :ref:`More...<details-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <mavlink_demuxer.h>
+	
+	class Mavlink_demuxer
+	{
+	public:
+		// typedefs
+	
+		typedef signed :ref:`Message_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a0a28b018845d428eeadbd81dbbbbceac>`;
+		typedef int64_t :ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>`;
+		typedef signed :ref:`Component_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a674aa126e8a42d83160fb5c86e0f56c9>`;
+		typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`Duplicate_handler_dummy_struct<doxid-d4/dde/structugcs_1_1vsm_1_1_mavlink__demuxer_1_1_duplicate__handler__dummy__struct>`,> :target:`Duplicate_handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1aa43566c259e3905652258296982d77a2>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, typename :ref:`mavlink::Message<doxid-db/d5b/classugcs_1_1vsm_1_1mavlink_1_1_message>`<message_id, Extention_type>::Ptr> :ref:`Handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a3e652e2de462847c4bf50ff265d33f2a>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<bool, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`mavlink::MESSAGE_ID_TYPE<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1a30f251ed942b4f043ec4948e2d9ae1a3>`, :ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>`, uint8_t, uint32_t> :ref:`Default_handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a16a9bca3f0e3cb6895ad5a9a2651336e>`;
+
+		// structs
+	
+		struct :ref:`Duplicate_handler_dummy_struct<doxid-d4/dde/structugcs_1_1vsm_1_1_mavlink__demuxer_1_1_duplicate__handler__dummy__struct>`;
+
+		// classes
+	
+		template <mavlink::MESSAGE_ID_TYPE message_id, class Extention_type>
+		class :ref:`Callback<doxid-da/d47/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback>`;
+	
+		class :ref:`Callback_base<doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base>`;
+
+		// fields
+	
+		static constexpr :ref:`Message_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a0a28b018845d428eeadbd81dbbbbceac>` :ref:`MESSAGE_ID_ANY<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a5b3c8e958153b01bfdb34e135a3cf9ce>` = -1;
+		static constexpr :ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>` :ref:`SYSTEM_ID_ANY<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4799f59e1203775d7753c31a20ed5d6d>` = -1;
+		static constexpr :ref:`Component_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a674aa126e8a42d83160fb5c86e0f56c9>` :ref:`COMPONENT_ID_ANY<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4b01ee4dac4f5acbd12fcec987b97778>` = -1;
+
+		// construction
+	
+		:ref:`Mavlink_demuxer<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1afc13b65f23f1e3a485538bdd24d6c3b0>`(const Mavlink_demuxer&);
+
+		// methods
+	
+		void :ref:`Disable<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a48a12dccd29a0c0c8931079ec8b3ab7d>`();
+		void :ref:`Register_default_handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1af3071747303f1999db434a82793e1edc>`(:ref:`Default_handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a16a9bca3f0e3cb6895ad5a9a2651336e>` handler);
+	
+		template <mavlink::MESSAGE_ID_TYPE message_id, class Extention_type>
+		Key :ref:`Register_handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a98812a0e9d98674717499119b9181c58>`(
+			:ref:`Handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a3e652e2de462847c4bf50ff265d33f2a>`<message_id, Extention_type> handler,
+			:ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>` system_id = :ref:`SYSTEM_ID_ANY<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4799f59e1203775d7753c31a20ed5d6d>`,
+			:ref:`Component_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a674aa126e8a42d83160fb5c86e0f56c9>` component_id = :ref:`COMPONENT_ID_ANY<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4b01ee4dac4f5acbd12fcec987b97778>`,
+			:ref:`Request_processor::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` processor = nullptr
+			);
+	
+		bool :ref:`Demux<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a920103f713d684ea6fa88b80d234a1d5>`(
+			:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buffer,
+			:ref:`mavlink::MESSAGE_ID_TYPE<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1a30f251ed942b4f043ec4948e2d9ae1a3>` message_id,
+			:ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>` system_id,
+			uint8_t component_id,
+			uint32_t request_id
+			);
+	
+		void :ref:`Unregister_handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1ab9ed055f1bdeb5e0a2aac816acd8d76a>`(Key&);
+	};
+.. _details-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Mavlink message demultiplexer based on message, system and component identifiers.
+
+Supposed to be conveniently used with :ref:`Mavlink_decoder <doxid-d5/da3/classugcs_1_1vsm_1_1_mavlink__decoder>`. Messages from different mavlink extensions but with same identifiers can not be demultiplexed simultaneously.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Message_id
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a0a28b018845d428eeadbd81dbbbbceac:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef signed Message_id
+
+Helper type for Mavlink message id which is able to hold special values.
+
+.. index:: pair: typedef; System_id
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef int64_t System_id
+
+Helper type for Mavlink system id which is able to hold special values.
+
+.. index:: pair: typedef; Component_id
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a674aa126e8a42d83160fb5c86e0f56c9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef signed Component_id
+
+Helper type for Mavlink component id which is able to hold special values.
+
+.. index:: pair: typedef; Handler
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a3e652e2de462847c4bf50ff265d33f2a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, typename :ref:`mavlink::Message<doxid-db/d5b/classugcs_1_1vsm_1_1mavlink_1_1_message>`<message_id, Extention_type>::Ptr> Handler
+
+Handler type for the specific demultiplexed Mavlink message.
+
+.. index:: pair: typedef; Default_handler
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a16a9bca3f0e3cb6895ad5a9a2651336e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<bool, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`mavlink::MESSAGE_ID_TYPE<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1a30f251ed942b4f043ec4948e2d9ae1a3>`, :ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>`, uint8_t, uint32_t> Default_handler
+
+Default handler which is called for all Mavlink messages which does not have a handler.
+
+:ref:`Io_buffer <doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer>` contains the raw payload data.
+
+
+
+.. rubric:: Returns:
+
+*true* message will be resubmitted to demuxer for further processing, otherwise *false*.
+
+Fields
+------
+
+.. index:: pair: variable; MESSAGE_ID_ANY
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a5b3c8e958153b01bfdb34e135a3cf9ce:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr :ref:`Message_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a0a28b018845d428eeadbd81dbbbbceac>` MESSAGE_ID_ANY = -1
+
+Special value representing any Mavlink message id.
+
+.. index:: pair: variable; SYSTEM_ID_ANY
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4799f59e1203775d7753c31a20ed5d6d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr :ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>` SYSTEM_ID_ANY = -1
+
+Special value representing any Mavlink system id.
+
+.. index:: pair: variable; COMPONENT_ID_ANY
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4b01ee4dac4f5acbd12fcec987b97778:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr :ref:`Component_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a674aa126e8a42d83160fb5c86e0f56c9>` COMPONENT_ID_ANY = -1
+
+Special value representing any Mavlink component id.
+
+Construction
+------------
+
+.. index:: pair: function; Mavlink_demuxer
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1afc13b65f23f1e3a485538bdd24d6c3b0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Mavlink_demuxer(const Mavlink_demuxer&)
+
+Delete copy constructor.
+
+Methods
+-------
+
+.. index:: pair: function; Disable
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a48a12dccd29a0c0c8931079ec8b3ab7d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Disable()
+
+Should be called prior to intention to delete the instance.
+
+.. index:: pair: function; Register_default_handler
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1af3071747303f1999db434a82793e1edc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Register_default_handler(:ref:`Default_handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a16a9bca3f0e3cb6895ad5a9a2651336e>` handler)
+
+Register default handler.
+
+Called when more specific handler does not exist. Always called from the thread, which calls :ref:`Demux <doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a920103f713d684ea6fa88b80d234a1d5>` method.
+
+.. index:: pair: function; Register_handler
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a98812a0e9d98674717499119b9181c58:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <mavlink::MESSAGE_ID_TYPE message_id, class Extention_type>
+	Key Register_handler(
+		:ref:`Handler<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a3e652e2de462847c4bf50ff265d33f2a>`<message_id, Extention_type> handler,
+		:ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>` system_id = :ref:`SYSTEM_ID_ANY<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4799f59e1203775d7753c31a20ed5d6d>`,
+		:ref:`Component_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a674aa126e8a42d83160fb5c86e0f56c9>` component_id = :ref:`COMPONENT_ID_ANY<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4b01ee4dac4f5acbd12fcec987b97778>`,
+		:ref:`Request_processor::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` processor = nullptr
+		)
+
+Register handler for specific Mavlink message, system id and component id.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- handler
+
+		- Handler taking specific Mavlink message.
+
+	*
+		- system_id
+
+		- System id to call the handler for, or :ref:`SYSTEM_ID_ANY <doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4799f59e1203775d7753c31a20ed5d6d>` to call the handler for any system id.
+
+	*
+		- component_id
+
+		- Component id to call the handler for, or :ref:`COMPONENT_ID_ANY <doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a4b01ee4dac4f5acbd12fcec987b97778>` to call the handler for any component id.
+
+	*
+		- processor
+
+		- If given, specifies request processor in which context the handler should be executed, otherwise handler is executed from the thread which calls :ref:`Demux <doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a920103f713d684ea6fa88b80d234a1d5>` method.
+
+
+
+.. rubric:: Returns:
+
+Valid registration key which can be used to unregister the handler later.
+
+.. index:: pair: function; Demux
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a920103f713d684ea6fa88b80d234a1d5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Demux(
+		:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buffer,
+		:ref:`mavlink::MESSAGE_ID_TYPE<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1a30f251ed942b4f043ec4948e2d9ae1a3>` message_id,
+		:ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>` system_id,
+		uint8_t component_id,
+		uint32_t request_id
+		)
+
+Demultiplex Mavlink message.
+
+
+
+.. rubric:: Returns:
+
+*true* if message was handled by some non-default handler, otherwise *false*.
+
+.. index:: pair: function; Unregister_handler
+.. _doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1ab9ed055f1bdeb5e0a2aac816acd8d76a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Unregister_handler(Key&)
+
+Unregister handler using registration key.
+
+Key is invalidated upon exit from the method.
+

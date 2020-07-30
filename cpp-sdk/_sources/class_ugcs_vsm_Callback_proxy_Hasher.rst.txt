@@ -1,0 +1,47 @@
+.. index:: pair: class; ugcs::vsm::Callback_proxy::Hasher
+.. _doxid-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher:
+
+class ugcs::vsm::Callback_proxy::Hasher
+=======================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` proxy hasher based on referenced callback. :ref:`More...<details-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <callback.h>
+	
+	class Hasher
+	{
+	public:
+		// methods
+	
+		size_t :ref:`operator ()<doxid-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher_1ac599240886359899ba5a6ea327c59f21>` (const :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`& proxy) const;
+	};
+.. _details-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` proxy hasher based on referenced callback.
+
+Methods
+-------
+
+.. index:: pair: function; operator()
+.. _doxid-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher_1ac599240886359899ba5a6ea327c59f21:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t operator () (const :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`& proxy) const
+
+Hash value operator.
+

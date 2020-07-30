@@ -1,0 +1,241 @@
+.. index:: pair: enum; Type
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced:
+
+enum ugcs::vsm::Action::Type
+============================
+
+Overview
+~~~~~~~~
+
+Types of vehicle actions as part of task (mission). :ref:`More...<details-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <action.h>
+
+	enum Type
+	{
+	    :ref:`MOVE<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedaf7f93635f8e193a924ae4a691bb66b8f>`,
+	    :ref:`WAIT<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedad5cc6a0064b5c25ba37826aa3fda910c>`,
+	    :ref:`PAYLOAD_STEERING<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda2c8af0e2aaf3eaf21a9dccb44b349234>`,
+	    :ref:`TAKEOFF<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda8fabc74a4ed0781d663336cbf8c9c53d>`,
+	    :ref:`LANDING<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda7ab0a1cfd85cc3da16cd3e3ad7448524>`,
+	    :ref:`CHANGE_SPEED<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda8544c0622c084acfc00334c7e05c3a0e>`,
+	    :ref:`SET_HOME<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda04fc91bb3ffc8b8a797cd9d374cd203a>`,
+	    :ref:`POI<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda187da83771c1b8646aeb9eb895fa15c0>`,
+	    :ref:`HEADING<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedacc65dd7b535ac7fc2363aeb572cc2a8e>`,
+	    :ref:`CAMERA_CONTROL<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda7e46634b32a77f9cc869f5d960899995>`,
+	    :ref:`CAMERA_TRIGGER<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda3cd03ab958c6f8853181a8b56f13e504>`,
+	    :ref:`PANORAMA<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedab031801604858863af682a18ae2e3078>`,
+	    :ref:`TASK_ATTRIBUTES<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedadb288e2ca277aea1f124277574f27374>`,
+	    :ref:`CAMERA_SERIES_BY_TIME<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda254d4019d9a76957fe425b0697d2d315>`,
+	    :ref:`CAMERA_SERIES_BY_DISTANCE<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda9e5356475649964b127794a40e2b7116>`,
+	    :ref:`SET_PARAMETER<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedaf5f8b83977bb0da8fb9b6a7e9c1c4719>`,
+	    :ref:`SET_SERVO<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda4c20e9e698b764ad5a96426cb80488d7>`,
+	    :ref:`REPEAT_SERVO<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedad88b64c10694695d668d684bf9709124>`,
+	    :ref:`VTOL_TRANSITION<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda30693129af78e09ea6d1b39436499c56>`,
+	};
+
+.. _details-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Types of vehicle actions as part of task (mission).
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; MOVE
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedaf7f93635f8e193a924ae4a691bb66b8f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MOVE
+
+Move action :ref:`ugcs::vsm::Move_action <doxid-db/ddf/classugcs_1_1vsm_1_1_move__action>`.
+
+.. index:: pair: enumvalue; WAIT
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedad5cc6a0064b5c25ba37826aa3fda910c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	WAIT
+
+Wait action :ref:`ugcs::vsm::Wait_action <doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action>`.
+
+.. index:: pair: enumvalue; PAYLOAD_STEERING
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda2c8af0e2aaf3eaf21a9dccb44b349234:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PAYLOAD_STEERING
+
+Payload steering action :ref:`ugcs::vsm::Payload_steering_action <doxid-dd/ddb/classugcs_1_1vsm_1_1_payload__steering__action>`.
+
+.. index:: pair: enumvalue; TAKEOFF
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda8fabc74a4ed0781d663336cbf8c9c53d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	TAKEOFF
+
+Takeoff action :ref:`ugcs::vsm::Takeoff_action <doxid-d9/db7/classugcs_1_1vsm_1_1_takeoff__action>`.
+
+.. index:: pair: enumvalue; LANDING
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda7ab0a1cfd85cc3da16cd3e3ad7448524:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	LANDING
+
+Landing action :ref:`ugcs::vsm::Landing_action <doxid-d8/d6a/classugcs_1_1vsm_1_1_landing__action>`.
+
+.. index:: pair: enumvalue; CHANGE_SPEED
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda8544c0622c084acfc00334c7e05c3a0e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CHANGE_SPEED
+
+Change speed action :ref:`ugcs::vsm::Change_speed_action <doxid-d5/d1e/classugcs_1_1vsm_1_1_change__speed__action>`.
+
+.. index:: pair: enumvalue; SET_HOME
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda04fc91bb3ffc8b8a797cd9d374cd203a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	SET_HOME
+
+Set home action :ref:`ugcs::vsm::Set_home_action <doxid-da/d05/classugcs_1_1vsm_1_1_set__home__action>`.
+
+.. index:: pair: enumvalue; POI
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda187da83771c1b8646aeb9eb895fa15c0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	POI
+
+Point of interest :ref:`ugcs::vsm::Poi_action <doxid-d0/d9a/classugcs_1_1vsm_1_1_poi__action>`.
+
+.. index:: pair: enumvalue; HEADING
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedacc65dd7b535ac7fc2363aeb572cc2a8e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	HEADING
+
+Heading :ref:`ugcs::vsm::Heading_action <doxid-d0/d66/classugcs_1_1vsm_1_1_heading__action>`.
+
+.. index:: pair: enumvalue; CAMERA_CONTROL
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda7e46634b32a77f9cc869f5d960899995:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CAMERA_CONTROL
+
+Camera control action :ref:`ugcs::vsm::Camera_control_action <doxid-d7/d35/classugcs_1_1vsm_1_1_camera__control__action>`.
+
+.. index:: pair: enumvalue; CAMERA_TRIGGER
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda3cd03ab958c6f8853181a8b56f13e504:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CAMERA_TRIGGER
+
+Camera trigger action :ref:`ugcs::vsm::Camera_trigger_action <doxid-d4/da7/classugcs_1_1vsm_1_1_camera__trigger__action>`.
+
+.. index:: pair: enumvalue; PANORAMA
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedab031801604858863af682a18ae2e3078:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PANORAMA
+
+Panorama action :ref:`ugcs::vsm::Panorama_action <doxid-de/d78/classugcs_1_1vsm_1_1_panorama__action>`.
+
+.. index:: pair: enumvalue; TASK_ATTRIBUTES
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedadb288e2ca277aea1f124277574f27374:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	TASK_ATTRIBUTES
+
+:ref:`Task <doxid-d6/d5d/classugcs_1_1vsm_1_1_task>` attributes action :ref:`ugcs::vsm::Task_attributes_action <doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action>`.
+
+.. index:: pair: enumvalue; CAMERA_SERIES_BY_TIME
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda254d4019d9a76957fe425b0697d2d315:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CAMERA_SERIES_BY_TIME
+
+Continuously shot camera in regular time intervals.
+
+.. index:: pair: enumvalue; CAMERA_SERIES_BY_DISTANCE
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda9e5356475649964b127794a40e2b7116:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CAMERA_SERIES_BY_DISTANCE
+
+Continuously shot camera in regular distance intervals.
+
+.. index:: pair: enumvalue; SET_PARAMETER
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedaf5f8b83977bb0da8fb9b6a7e9c1c4719:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	SET_PARAMETER
+
+Set mission parameter.
+
+see enum MAV_MISSION_PARAMETER_TYPE
+
+.. index:: pair: enumvalue; SET_SERVO
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda4c20e9e698b764ad5a96426cb80488d7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	SET_SERVO
+
+Set servo PWM.
+
+.. index:: pair: enumvalue; REPEAT_SERVO
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226acedad88b64c10694695d668d684bf9709124:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	REPEAT_SERVO
+
+Repeat servo movement between given PWM and 1500.
+
+.. index:: pair: enumvalue; VTOL_TRANSITION
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aceda30693129af78e09ea6d1b39436499c56:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	VTOL_TRANSITION
+
+VTOL transition action.
+

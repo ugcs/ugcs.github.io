@@ -1,0 +1,76 @@
+.. index:: pair: class; ugcs::vsm::mavlink::Value_array
+.. _doxid-d5/dd0/classugcs_1_1vsm_1_1mavlink_1_1_value__array:
+
+template class ugcs::vsm::mavlink::Value_array
+==============================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Field in MAVLink message which is array of MAVLink values. :ref:`More...<details-d5/dd0/classugcs_1_1vsm_1_1mavlink_1_1_value__array>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <mavlink.h>
+	
+	template <class TValue, size_t size>
+	class Value_array
+	{
+	public:
+		// methods
+	
+		TValue& :ref:`operator []<doxid-d5/dd0/classugcs_1_1vsm_1_1mavlink_1_1_value__array_1a7becc503c208ec7fd6bb7fa5cdfb9b9a>` (size_t index);
+		void :ref:`Reset<doxid-d5/dd0/classugcs_1_1vsm_1_1mavlink_1_1_value__array_1a5069d7dcf1a03a54090cc02851c88a3b>`();
+	};
+.. _details-d5/dd0/classugcs_1_1vsm_1_1mavlink_1_1_value__array:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Field in MAVLink message which is array of MAVLink values.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- TValue
+
+		- MAVLink value type. Should be Value<> template instantiation.
+
+	*
+		- size
+
+		- Array size.
+
+Methods
+-------
+
+.. index:: pair: function; operator[]
+.. _doxid-d5/dd0/classugcs_1_1vsm_1_1mavlink_1_1_value__array_1a7becc503c208ec7fd6bb7fa5cdfb9b9a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	TValue& operator [] (size_t index)
+
+Access operator.
+
+.. index:: pair: function; Reset
+.. _doxid-d5/dd0/classugcs_1_1vsm_1_1mavlink_1_1_value__array_1a5069d7dcf1a03a54090cc02851c88a3b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Reset()
+
+Reset all array values to UgCS default values.
+

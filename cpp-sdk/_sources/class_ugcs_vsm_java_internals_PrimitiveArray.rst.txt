@@ -1,0 +1,45 @@
+.. index:: pair: class; ugcs::vsm::java_internals::PrimitiveArray
+.. _doxid-d7/d38/classugcs_1_1vsm_1_1java__internals_1_1_primitive_array:
+
+template class ugcs::vsm::java_internals::PrimitiveArray
+========================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <java.h>
+	
+	template <typename T>
+	class PrimitiveArray: public :ref:`ugcs::vsm::java_internals::ArrayBase<doxid-d5/db7/classugcs_1_1vsm_1_1java__internals_1_1_array_base>`
+	{
+	public:
+		// methods
+	
+		:target:`ArrayBase<doxid-d7/d38/classugcs_1_1vsm_1_1java__internals_1_1_primitive_array_1af80fa39543fe8dd310e9a2719eac3219>`(
+			JNIEnv* env,
+			jobject array
+			);
+	};
+
+	// direct descendants
+
+	template <typename T>
+	class :ref:`Array<doxid-d1/d0e/classugcs_1_1vsm_1_1java__internals_1_1_array>`;
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// methods
+	
+		void :ref:`Release<doxid-d5/db7/classugcs_1_1vsm_1_1java__internals_1_1_array_base_1a0a1a948b8810666f0297df6ed086a976>`();
+

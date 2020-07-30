@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namespace ugcs::vsm::mavlink &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="namespace ugcs::vsm::mavlink::internal" href="namespace_ugcs_vsm_mavlink_internal.html" />
+    <link rel="prev" title="template class ugcs::vsm::java_internals::PrimitiveArray" href="class_ugcs_vsm_java_internals_PrimitiveArray.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#enum-values" class="nav-link">Enum Values</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#typedefs" class="nav-link">Typedefs</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="namespace-ugcs-vsm-mavlink">
+<span id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink"></span><span id="index-0"></span><h1>namespace ugcs::vsm::mavlink<a class="headerlink" href="#namespace-ugcs-vsm-mavlink" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>All MAVLink definitions reside in this namespace. <a class="reference internal" href="#details-d3-d55-namespaceugcs-1-1vsm-1-1mavlink"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">mavlink</span> <span class="p">{</span>
+
+<span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_ugcs_vsm_mavlink_internal.html#doxid-de-d90-namespaceugcs-1-1vsm-1-1mavlink-1-1internal"><span class="std std-ref">ugcs::vsm::mavlink::internal</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">int8_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24ac58892313aa0e54d78a7512cf896a11b"><span class="std std-ref">CHAR</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a36906aa1be5b36d05b55f294ed5cc26d"><span class="std std-ref">Char</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">int8_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24ab11c217dc23a268ffbcf70726dcfcaab"><span class="std std-ref">INT8</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1ad6d723e732a03dd25c2c15f57cee1874"><span></span><span class="n">Int8</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24acc79d10597e4abdc87b8727be0ddc59e"><span class="std std-ref">UINT8</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aacaaab8506153e6de74cf0a9a2f37653"><span></span><span class="n">Uint8</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">int16_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24a435d901590df003f0260bf2899ddc607"><span class="std std-ref">INT16</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aee04034e227cd2e5bafb82409391f8bb"><span></span><span class="n">Int16</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24a9a8abf5e775505b332ee1ec1c1c4c90d"><span class="std std-ref">UINT16</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a74eef4abe558aa7cb744f63ad30db96a"><span></span><span class="n">Uint16</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">int32_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24a6ada263ce43ded08bfa94ccefc7f348a"><span class="std std-ref">INT32</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a6e49bc92302ebbcdac3732996e5abf92"><span></span><span class="n">Int32</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24afe9e4be5c284e78233add1be0c3629e9"><span class="std std-ref">UINT32</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aceee49b6c5ab5b46616f596c959c5496"><span></span><span class="n">Uint32</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24a6726ff83a4572e1d49edd4bde9c43607"><span class="std std-ref">INT64</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a604e6de703e15fe50c70574bee66c09e"><span></span><span class="n">Int64</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24a9b3b0c1083c42c693644314d2d9be88e"><span class="std std-ref">UINT64</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abfdce8ec6d75c62d059286d6af26e125"><span></span><span class="n">Uint64</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24ab1fd49702a2a2d4938fa022ea070953e"><span class="std std-ref">FLOAT</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a98fb01c896d5c2076c744c24190e1d90"><span></span><span class="n">Float</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24ad039f6e6c3e3315879edf9984753393f"><span class="std std-ref">DOUBLE</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a8a61ce2a8e35d67c34582e29076e4ddb"><span></span><span class="n">Double</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24abc295135b6644ce9b2c156a0b9330a27"><span class="std std-ref">UINT8_VERSION</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a177c4314f5b0cd1a6c90554f181e12af"><span class="std std-ref">VERSION</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1ac8a55b8f50abacba0bf8f8783b4e1d57"><span></span><span class="n">Uint8_version</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="p">,</span> <span class="kt">uint16_t</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a965da12d9ea3e8b047202da751f104fd"><span class="std std-ref">Extra_byte_length_pair</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint32_t</span> <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a30f251ed942b4f043ec4948e2d9ae1a3"><span class="std std-ref">MESSAGE_ID_TYPE</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_mavlink_Payload_base.html#doxid-d5-d6b-classugcs-1-1vsm-1-1mavlink-1-1-payload-base-1a7a67ef431ac674af1ff0539bdff84be1"><span class="std std-ref">Payload_base::Ptr</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a8c0e960b4dc26a652e534d348a380f97"><span></span><span class="n">Payload_list</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span>
+<span class="p">{</span>
+    <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a177c4314f5b0cd1a6c90554f181e12af"><span class="std std-ref">VERSION</span></a><span></span>        <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4acbf539bb992b3be596f7e97dd18289a0"><span class="std std-ref">START_SIGN</span></a><span></span>     <span class="o">=</span> <span class="mh">0xfe</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a623d25df412eec845ec5fc1dedcd2ab7"><span class="std std-ref">START_SIGN2</span></a><span></span>    <span class="o">=</span> <span class="mh">0xfd</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a5f05a3803144a11f6f06781aa5b69f72"><span class="std std-ref">SYSTEM_ID_NONE</span></a><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a5872dbe3cc8f103bce2548fe47024ce2"><span class="std std-ref">SYSTEM_ID_ANY</span></a><span></span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24"><span class="std std-ref">Field_type_id</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="o">=</span> <span class="kt">void</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_mavlink_Field_default_value.html#doxid-d5-d92-structugcs-1-1vsm-1-1mavlink-1-1-field-default-value"><span class="std std-ref">Field_default_value</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_mavlink_Field_default_value-2.html#doxid-d5-d26-structugcs-1-1vsm-1-1mavlink-1-1-field-default-value-3-01-t-00-01typename-01std-1-1enable-if-d235aca3c2900fa86f80eb6212a21bc2"><span class="std std-ref">Field_default_value&lt;T, typename std::enable_if&lt;std::is_integral&lt;T&gt;::value&gt;::type&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_mavlink_Field_default_value-3.html#doxid-d0-d7d-structugcs-1-1vsm-1-1mavlink-1-1-field-default-value-3-01-t-00-01typename-01std-1-1enable-if-2da0e34fa40e3061fbaa644d02e3ab91"><span class="std std-ref">Field_default_value&lt;T, typename std::enable_if&lt;std::is_floating_point&lt;T&gt;::value&gt;::type&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">MESSAGE_ID_TYPE</span> <span class="n">message_id</span><span class="p">,</span> <span class="k">class</span> <span class="n">Extension_type</span> <span class="o">=</span> <span class="n">Extension</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_mavlink_Payload_type_mapper.html#doxid-df-d16-structugcs-1-1vsm-1-1mavlink-1-1-payload-type-mapper"><span class="std std-ref">Payload_type_mapper</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Checksum.html#doxid-da-d94-classugcs-1-1vsm-1-1mavlink-1-1-checksum"><span class="std std-ref">Checksum</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Extension.html#doxid-d9-dda-classugcs-1-1vsm-1-1mavlink-1-1-extension"><span class="std std-ref">Extension</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">MESSAGE_ID_TYPE</span> <span class="n">message_id</span><span class="p">,</span> <span class="k">class</span> <span class="n">Extension_type</span> <span class="o">=</span> <span class="n">Extension</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Message.html#doxid-db-d5b-classugcs-1-1vsm-1-1mavlink-1-1-message"><span class="std std-ref">Message</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span>
+    <span class="k">class</span> <span class="n">TData</span><span class="p">,</span>
+    <span class="n">internal</span><span class="o">::</span><span class="n">Field_descriptor</span><span class="o">*</span> <span class="n">fields</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg_name</span><span class="p">,</span>
+    <span class="n">MESSAGE_ID_TYPE</span> <span class="n">msg_id</span><span class="p">,</span>
+    <span class="kt">uint8_t</span> <span class="n">extra_byte</span>
+    <span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Payload.html#doxid-d5-d4a-classugcs-1-1vsm-1-1mavlink-1-1-payload"><span class="std std-ref">Payload</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Payload_base.html#doxid-d5-d6b-classugcs-1-1vsm-1-1mavlink-1-1-payload-base"><span class="std std-ref">Payload_base</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">Field_type_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">int32_t</span> <span class="n">initial_value</span> <span class="o">=</span> <span class="mi">0</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TValue</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value_array.html#doxid-d5-dd0-classugcs-1-1vsm-1-1mavlink-1-1-value-array"><span class="std std-ref">Value_array</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">size</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value_array-2.html#doxid-d8-d36-classugcs-1-1vsm-1-1mavlink-1-1-value-array-3-01-char-00-01size-01-4"><span class="std std-ref">Value_array&lt;Char, size&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="kt">size_t</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a43e0167adf8473cee60cbb6f89758170"><span></span><span class="n">MAVLINK_1_HEADER_LEN</span></span><span></span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="kt">size_t</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a53ac60b2317d920f0ce2bf415cecd193"><span></span><span class="n">MAVLINK_1_MIN_FRAME_LEN</span></span><span></span> <span class="o">=</span> <span class="n">MAVLINK_1_HEADER_LEN</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="kt">size_t</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a263ebd38409ec8714faa267b05d9fd2f"><span></span><span class="n">MAVLINK_2_HEADER_LEN</span></span><span></span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="kt">size_t</span> <span class="doxyrest-code-target target" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a869265f804288716a23b9d884a6bf2d7"><span></span><span class="n">MAVLINK_2_MIN_FRAME_LEN</span></span><span></span> <span class="o">=</span> <span class="n">MAVLINK_2_HEADER_LEN</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace mavlink</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d3-d55-namespaceugcs-1-1vsm-1-1mavlink"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>All MAVLink definitions reside in this namespace.</p>
+<div class="section" id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a177c4314f5b0cd1a6c90554f181e12af"><span id="index-1"></span><span></span><span class="n">VERSION</span></pre>
+<p>Current protocol version value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4acbf539bb992b3be596f7e97dd18289a0"><span id="index-2"></span><span></span><span class="n">START_SIGN</span></pre>
+<p>Starting byte of Mavlink packet.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a623d25df412eec845ec5fc1dedcd2ab7"><span id="index-3"></span><span></span><span class="n">START_SIGN2</span></pre>
+<p>Starting byte of Mavlink v2 packet.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a5f05a3803144a11f6f06781aa5b69f72"><span id="index-4"></span><span></span><span class="n">SYSTEM_ID_NONE</span></pre>
+<p>System_id value denoting an unknown system, or all systems depending on context.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1abf22de092438cb467f3541ff0029f1d4a5872dbe3cc8f103bce2548fe47024ce2"><span id="index-5"></span><span></span><span class="n">SYSTEM_ID_ANY</span></pre>
+<p>Special value representing any Mavlink system id.</p>
+</div>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a36906aa1be5b36d05b55f294ed5cc26d"><span id="index-6"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a><span></span><span class="o">&lt;</span><span class="kt">int8_t</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_mavlink_Field_type_id.html#doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1aa4234a0e49782a7dfdd9f2372798de24ac58892313aa0e54d78a7512cf896a11b"><span class="std std-ref">CHAR</span></a><span></span><span class="o">&gt;</span> <span class="n">Char</span></pre>
+<p><a class="reference internal" href="class_ugcs_vsm_mavlink_Value.html#doxid-df-d5e-classugcs-1-1vsm-1-1mavlink-1-1-value"><span class="std std-ref">Value</span></a> containers for all MAVLink types.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a965da12d9ea3e8b047202da751f104fd"><span id="index-7"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="p">,</span> <span class="kt">uint16_t</span><span class="o">&gt;</span> <span class="n">Extra_byte_length_pair</span></pre>
+<p>A pair of values representing CRC extra byte and length of the Mavlink message payload.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d3-d55-namespaceugcs-1-1vsm-1-1mavlink-1a30f251ed942b4f043ec4948e2d9ae1a3"><span id="index-8"></span><span></span><span class="k">typedef</span> <span class="kt">uint32_t</span> <span class="n">MESSAGE_ID_TYPE</span></pre>
+<p><a class="reference internal" href="class_ugcs_vsm_mavlink_Message.html#doxid-db-d5b-classugcs-1-1vsm-1-1mavlink-1-1-message"><span class="std std-ref">Message</span></a> id implementation type capable to hold a message id value from any extension (i.e.</p>
+<p>MESSAGE_ID from any extension can be assigned to this type).</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_java_internals_PrimitiveArray.html" title="previous page">template class ugcs::vsm::java_internals::PrimitiveArray</a>
+    <a class='right-next' id="next-link" href="namespace_ugcs_vsm_mavlink_internal.html" title="next page">namespace ugcs::vsm::mavlink::internal</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

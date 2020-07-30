@@ -1,0 +1,410 @@
+.. index:: pair: class; ugcs::vsm::Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer:
+
+class ugcs::vsm::Io_buffer
+==========================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Generic I/O buffer. :ref:`More...<details-d1/d0f/classugcs_1_1vsm_1_1_io__buffer>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <io_buffer.h>
+	
+	class Io_buffer: public std::enable_shared_from_this< Io_buffer >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Io_buffer> :ref:`Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`;
+		typedef std::weak_ptr<Io_buffer> :ref:`Weak_ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ad62c72068e09f630048566225eea2919>`;
+
+		// fields
+	
+		static const size_t :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`;
+
+		// construction
+	
+		:ref:`Io_buffer<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a64f2b21d2a529bdd6455dc87350c5df6>`(const Io_buffer& buf, size_t offset = 0, size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`);
+		:ref:`Io_buffer<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a21c3e481a6d14b3454af54e873397ec2>`(Io_buffer&& buf);
+	
+		:ref:`Io_buffer<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab4f4a612da04df9e051994404a1b2022>`(
+			std::shared_ptr<const std::vector<uint8_t>>&& data_vec,
+			size_t offset = 0,
+			size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`
+			);
+	
+		:ref:`Io_buffer<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a4ba6479fb6275f22b0e0ca3a4f7e4697>`(std::vector<uint8_t>&& data_vec, size_t offset = 0, size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`);
+		:ref:`Io_buffer<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1aeff5142354aef47d7f481d72be143ff2>`();
+		:ref:`Io_buffer<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a180734a67e7e5cea5ca3e93be23eb2d4>`(const std::string& data_str);
+		:ref:`Io_buffer<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1aeabc10a256a9de3bb98a5dd03a3a046c>`(const void* data, size_t len);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` :ref:`Create<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1aacf7cff8da0ef985b604ae5d446e4a49>`(Args&&... args);
+	
+		:ref:`Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` :ref:`Concatenate<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a00ba69dca94de42ed701305839ac03a8>`(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buf);
+		:ref:`Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` :ref:`Slice<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1abe986ec565413ba25a9c2ca7fa4f977c>`(size_t offset, size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`) const;
+		size_t :ref:`Get_length<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ae26b77883e3c5ccd01983c0b996a84e4>`() const;
+		const void* :ref:`Get_data<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a2a6498303040d704ffc4776b1e93ca53>`() const;
+		std::string :ref:`Get_string<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a9630b11c5394cfce886d395dcee22e3b>`() const;
+		std::string :ref:`Get_ascii<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a6e7876c0580618ce52ef9e15e1658546>`() const;
+		std::string :ref:`Get_hex<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a08046996a1d310f1ed755b314e6f375d>`() const;
+	};
+.. _details-d1/d0f/classugcs_1_1vsm_1_1_io__buffer:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Generic I/O buffer.
+
+Used for all I/O operations with network, filesystem, peripheral devices. Should always be passed by :ref:`Io_buffer::Ptr <doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` smart pointer type. This allows anyone to hold reference to the buffer until he needs to access data and release the buffer when it last reference released.
+
+Important: the buffer object is immutable - once it is created its data cannot be modified. It is required not confuse other reference holders. If modified buffer is required it can be easily created based on existing one via different constructors, operators and methods. :ref:`Create() <doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1aacf7cff8da0ef985b604ae5d446e4a49>` method should be used for obtaining :ref:`Io_buffer <doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer>` instance.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Io_buffer> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ad62c72068e09f630048566225eea2919:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Io_buffer> Weak_ptr
+
+Pointer type.
+
+Fields
+------
+
+.. index:: pair: variable; END
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static const size_t END
+
+Special value which references data end.
+
+Construction
+------------
+
+.. index:: pair: function; Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a64f2b21d2a529bdd6455dc87350c5df6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_buffer(const Io_buffer& buf, size_t offset = 0, size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`)
+
+Copy constructor.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buf
+
+		- Buffer to copy from.
+
+	*
+		- offset
+
+		- Offset in bytes to reference data in the source buffer.
+
+	*
+		- len
+
+		- Length in bytes of the referenced data. Value END indicates that all remaining data are taken.
+
+	*
+		- Invalid_param_exception
+
+		- if the specified offset or length exceeds the source buffer boundary.
+
+.. index:: pair: function; Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a21c3e481a6d14b3454af54e873397ec2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_buffer(Io_buffer&& buf)
+
+Move constructor.
+
+.. index:: pair: function; Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab4f4a612da04df9e051994404a1b2022:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_buffer(
+		std::shared_ptr<const std::vector<uint8_t>>&& data_vec,
+		size_t offset = 0,
+		size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`
+		)
+
+Construct from data provided in vector.
+
+Typical usage is for data which are firstly received from some I/O call.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- data_vec
+
+		- Vector with data. Should be dynamically allocated by "std::make_shared()". Keep in mind that it can be passed somewhere else only by shared pointer.
+
+	*
+		- offset
+
+		- Offset in data vector where this buffer data start from.
+
+	*
+		- len
+
+		- Length of the data referenced in the provided vector. Offset and length should not exceed vector boundary. Value END indicates that all remaining data in vector should be used.
+
+	*
+		- Invalid_param_exception
+
+		- if the specified offset or length exceeds the source buffer boundary.
+
+.. index:: pair: function; Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a4ba6479fb6275f22b0e0ca3a4f7e4697:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_buffer(std::vector<uint8_t>&& data_vec, size_t offset = 0, size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`)
+
+Construct from data provided in vector.
+
+See constructor which accepts "std::shared_ptr<const std::vector<uint8_t>> &&" for more details.
+
+.. index:: pair: function; Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1aeff5142354aef47d7f481d72be143ff2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_buffer()
+
+Construct empty buffer.
+
+.. index:: pair: function; Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a180734a67e7e5cea5ca3e93be23eb2d4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_buffer(const std::string& data_str)
+
+Construct buffer from string.
+
+Null terminator is not included in the data. Data are copied.
+
+.. index:: pair: function; Io_buffer
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1aeabc10a256a9de3bb98a5dd03a3a046c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_buffer(const void* data, size_t len)
+
+Construct buffer from provided bytes array.
+
+Data are copied.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- data
+
+		- Bytes array with data.
+
+	*
+		- len
+
+		- Number of bytes to take from data argument.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1aacf7cff8da0ef985b604ae5d446e4a49:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Concatenate
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a00ba69dca94de42ed701305839ac03a8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` Concatenate(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buf)
+
+Concatenate this buffer data with another buffer data and return new buffer object which contains resulted data.
+
+Note, that method complexity is linear if lengths of both buffers are not zero.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buf
+
+		- Buffer to concatenate with.
+
+
+
+.. rubric:: Returns:
+
+New buffer with data from this buffer and the specified one.
+
+.. index:: pair: function; Slice
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1abe986ec565413ba25a9c2ca7fa4f977c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` Slice(size_t offset, size_t len = :ref:`END<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ab78d4cf7b3f8055895f383341d32cf67>`) const
+
+Take slice from buffer data.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- offset
+
+		- Offset to start slice from.
+
+	*
+		- len
+
+		- Length of the slice data. Value END indicates that all remaining data should be taken.
+
+	*
+		- Invalid_param_exception
+
+		- if the specified offset or length exceeds the source buffer boundary.
+
+
+
+.. rubric:: Returns:
+
+New buffer with sliced data.
+
+.. index:: pair: function; Get_length
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1ae26b77883e3c5ccd01983c0b996a84e4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t Get_length() const
+
+Get length of the contained data.
+
+.. index:: pair: function; Get_data
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a2a6498303040d704ffc4776b1e93ca53:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const void* Get_data() const
+
+Get pointer to raw data stored in the buffer.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Invalid_op_exception
+
+		- if the buffer is empty.
+
+.. index:: pair: function; Get_string
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a9630b11c5394cfce886d395dcee22e3b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string Get_string() const
+
+Get buffer content as string.
+
+.. index:: pair: function; Get_ascii
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a6e7876c0580618ce52ef9e15e1658546:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string Get_ascii() const
+
+Get buffer data as string of characters.
+
+Non-printable chars are substituted with '.'
+
+.. index:: pair: function; Get_hex
+.. _doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a08046996a1d310f1ed755b314e6f375d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string Get_hex() const
+
+Get buffer data as hex string.
+

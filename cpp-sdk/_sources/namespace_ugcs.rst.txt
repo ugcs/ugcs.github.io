@@ -1,0 +1,32 @@
+.. index:: pair: namespace; ugcs
+.. _doxid-d1/d6b/namespaceugcs:
+
+namespace ugcs
+==============
+
+.. toctree::
+	:hidden:
+
+	namespace_ugcs_vsm.rst
+
+UGCS root namespace.
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace ugcs {
+
+	// namespaces
+
+	namespace :ref:`ugcs::vsm<doxid-dd/def/namespaceugcs_1_1vsm>`;
+		namespace :ref:`ugcs::vsm::callback_internal<doxid-df/d35/namespaceugcs_1_1vsm_1_1callback__internal>`;
+		namespace :ref:`ugcs::vsm::internal<doxid-d5/de6/namespaceugcs_1_1vsm_1_1internal>`;
+		namespace :ref:`ugcs::vsm::java_internals<doxid-d7/df7/namespaceugcs_1_1vsm_1_1java__internals>`;
+		namespace :ref:`ugcs::vsm::mavlink<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink>`;
+			namespace :ref:`ugcs::vsm::mavlink::internal<doxid-de/d90/namespaceugcs_1_1vsm_1_1mavlink_1_1internal>`;
+		namespace :ref:`ugcs::vsm::param_setter_internal<doxid-d1/dda/namespaceugcs_1_1vsm_1_1param__setter__internal>`;
+		namespace :ref:`ugcs::vsm::sockets<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets>`;
+
+	} // namespace ugcs

@@ -1,0 +1,597 @@
+.. index:: pair: class; ugcs::vsm::Request_container::Request
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request:
+
+class ugcs::vsm::Request_container::Request
+===========================================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Request_container_Request_Status.rst
+
+Overview
+~~~~~~~~
+
+Generic request for implementing inter-threads communications and asynchronous operations. :ref:`More...<details-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <request_container.h>
+	
+	class Request: public std::enable_shared_from_this< Request >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Request> :ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>`;
+		typedef std::weak_ptr<Request> :ref:`Weak_ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a45dfe7161da322165c89d41f02977a20>`;
+		typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<void>:::ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>`<> :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`;
+		typedef std::unique_lock<std::mutex> :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`;
+
+		// enums
+	
+		enum :ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>`;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` :ref:`Create<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a342da78756478193a27cc412074fb79f>`(Args&&... args);
+	
+		void :ref:`Set_processing_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a755601a56afa809b62bc7d011f951d15>`(const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_processing_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a249b5d2c020ce28f7e3ac65383dae8b7>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		void :ref:`Set_completion_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a12ec980ffc633959aed0359cd42536b8>`(const :ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`& context, const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_completion_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a561379a2b3407dbc62c971d84c7f371a>`(const :ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`& context, :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		void :ref:`Set_cancellation_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aeb438d485dfabe3e4b665f67b3558fc9>`(const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_cancellation_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a56a55660d8e9d10b7eb3a58a39176949>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		void :ref:`Set_done_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a5fe368011c095bd0f00f2b752bab24f4>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_done_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a010c1aa35213206c8f35c3ad209ff699>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` :ref:`Get_completion_context<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a5b0f2d53ac73c2a65816dcd85ac7fdfc>`(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`()) const;
+		void :ref:`Process<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8a139feb0121215d25eca6948aca0bcd>`(bool process_request);
+		void :ref:`Complete<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>`(:ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>` status = :ref:`Status::OK<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564>`, :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`());
+		void :ref:`Cancel<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a2ab0ebd9dc403ab769f81003a7bc66e0>`(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`());
+		void :ref:`Abort<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>`(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`());
+		:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` :ref:`Lock<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1af06238bd09e7b1343a4bae79db112bd7>`(bool acquire = true) const;
+		:ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>` :ref:`Get_status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1ad301ad9a0cf52a0dfcbb76ff48b2a1cb>`() const;
+		bool :ref:`Is_completed<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1afcf3c907ea9bce798e52703e21488cfb>`() const;
+		bool :ref:`Is_request_processing_needed<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a1ac36ba2cb811ae1089b3b9d062e6b24>`() const;
+		bool :ref:`Is_aborted<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8a1a29ee4cee0ff96b529d6720a794bf>`() const;
+		bool :ref:`Is_processing<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95d63a0765f8d76c8ed68993f8e0baf5>`() const;
+		bool :ref:`Is_completion_delivered<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8c61ba14b174a9d251bd120d235d08e9>`() const;
+		bool :ref:`Is_completion_delivering_started<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7a973a7fbb99e0eb94236c476bc52e8c>`() const;
+		bool :ref:`Is_done<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aaa6b4915a3771b1fe37656fd221a963b>`() const;
+	
+		bool :ref:`Wait_done<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aaf0304a3925911d23eda340d0a67946e>`(
+			bool process_ctx = true,
+			std::chrono::milliseconds timeout = std::chrono::milliseconds::zero()
+			);
+	
+		bool& :ref:`Timed_out<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a23d56ffa57d15acbcf427d15140b9596>`();
+	};
+
+	// direct descendants
+
+	class :ref:`Io_request<doxid-d8/dbb/classugcs_1_1vsm_1_1_io__request>`;
+	class :ref:`Ucs_request<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request>`;
+.. _details-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Generic request for implementing inter-threads communications and asynchronous operations.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Request> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a45dfe7161da322165c89d41f02977a20:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Request> Weak_ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<void>:::ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>`<> Handler
+
+:ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` denoting a handler of the request.
+
+.. index:: pair: typedef; Locker
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::unique_lock<std::mutex> Locker
+
+Smart lock object for request external locking.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a342da78756478193a27cc412074fb79f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Set_processing_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a755601a56afa809b62bc7d011f951d15:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_processing_handler(const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler)
+
+Set processing handler for the request.
+
+It is called when request is about to be processed in the target processor context.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- handler
+
+		- Processing handler to invoke.
+
+	*
+		- Invalid_op_exception
+
+		- if request not in pending state.
+
+.. index:: pair: function; Set_processing_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a249b5d2c020ce28f7e3ac65383dae8b7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_processing_handler(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler)
+
+
+
+.. rubric:: See also:
+
+:ref:`Set_processing_handler <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a755601a56afa809b62bc7d011f951d15>`
+
+.. index:: pair: function; Set_completion_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a12ec980ffc633959aed0359cd42536b8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_completion_handler(const :ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`& context, const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler)
+
+Set completion handler for the request.
+
+It is called when request is completed in the specified completion context.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- context
+
+		- Context where completion handler should be invoked.
+
+	*
+		- handler
+
+		- Completion handler to call when request is processed.
+
+	*
+		- Invalid_op_exception
+
+		- if request not in pending state.
+
+.. index:: pair: function; Set_completion_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a561379a2b3407dbc62c971d84c7f371a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_completion_handler(const :ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`& context, :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler)
+
+
+
+.. rubric:: See also:
+
+:ref:`Set_completion_handler <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a12ec980ffc633959aed0359cd42536b8>`
+
+.. index:: pair: function; Set_cancellation_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aeb438d485dfabe3e4b665f67b3558fc9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_cancellation_handler(const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler)
+
+Set request cancellation handler.
+
+It is fired when :ref:`Abort() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>` method is called between request processing started and :ref:`Complete() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>` is called (i.e. while request is in PROCESSING state). The second case is calling request :ref:`Cancel() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a2ab0ebd9dc403ab769f81003a7bc66e0>` method when request is either in input queue or being processed. Correct handling in the handler is taking lock on the request and checking its state (either PROCESSING or ABORTED). In PROCESSING state it is legal to call :ref:`Complete() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>` method (either instantly or by deferred invocation), or do nothing if cancellation is not supported or cannot be done in current state. In ABORTED state all platform resources should be released, no further submits for the request will be done.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- handler
+
+		- Cancellation handler.
+
+	*
+		- Invalid_op_exception
+
+		- if request is not in PENDING state.
+
+.. index:: pair: function; Set_cancellation_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a56a55660d8e9d10b7eb3a58a39176949:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_cancellation_handler(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler)
+
+
+
+.. rubric:: See also:
+
+:ref:`Set_cancellation_handler <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aeb438d485dfabe3e4b665f67b3558fc9>`
+
+.. index:: pair: function; Set_done_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a5fe368011c095bd0f00f2b752bab24f4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_done_handler(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler)
+
+Set request done handler.
+
+The handler is invoked when request is advanced to done state - no more actions are pending for it and it is destroyed. The handler is always called - in both normal completion or abortion scenario. If request is already done when this function is called, the handler is invoked immediately. Calling context is either completion, abortion or this method calling context.
+
+.. index:: pair: function; Set_done_handler
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a010c1aa35213206c8f35c3ad209ff699:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_done_handler(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler)
+
+
+
+.. rubric:: See also:
+
+:ref:`Set_done_handler <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a5fe368011c095bd0f00f2b752bab24f4>`.
+
+.. index:: pair: function; Get_completion_context
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a5b0f2d53ac73c2a65816dcd85ac7fdfc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` Get_completion_context(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`()) const
+
+Get completion context associated with the request.
+
+It might be null if request is already fully processed or not yet fully prepared.
+
+.. index:: pair: function; Process
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8a139feb0121215d25eca6948aca0bcd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Process(bool process_request)
+
+Process the request.
+
+Either processing or completion context is called depending on request state.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- process_request
+
+		- true if request processing is intended or false if completion notification processing is intended.
+
+	*
+		- Invalid_op_exception
+
+		- if the method is called more than once for processing and notification handling, or calling sequence is invalid.
+
+	*
+		- Nullptr_exception
+
+		- if corresponding handler is not set.
+
+.. index:: pair: function; Complete
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Complete(:ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>` status = :ref:`Status::OK<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564>`, :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`())
+
+Complete the request processing.
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` with the specified status is submitted to the associated completion context.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- status
+
+		- Completion status.
+
+	*
+		- locker
+
+		- Locker object which can have previously acquired lock for request internal state. It is released before the function exits.
+
+	*
+		- Invalid_param_exception
+
+		- if invalid status value specified.
+
+	*
+		- Invalid_op_exception
+
+		- if request is not in allowed state (e.g. processing not yet started).
+
+.. index:: pair: function; Cancel
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a2ab0ebd9dc403ab769f81003a7bc66e0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Cancel(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`())
+
+Cancel request processing.
+
+It does nothing if request already processed. This action behavior is defined by specific operation and processor. If unsure, it is always recommended to use :ref:`Abort() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>` instead of :ref:`Cancel() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a2ab0ebd9dc403ab769f81003a7bc66e0>`.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- locker
+
+		- Locker object which can have previously acquired lock for request internal state. It is released before the function exits.
+
+.. index:: pair: function; Abort
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Abort(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`())
+
+Call this method when request is not going to be processed by :ref:`Process() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8a139feb0121215d25eca6948aca0bcd>` method but is just removed from request queue.
+
+It also can be called when request is queued in some container so it later will be ignored when the container will try to process it. This method does nothing if request was already aborted or fully processed.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- locker
+
+		- Locker object which can have previously acquired lock for request internal state. It is released before the function exits.
+
+.. index:: pair: function; Lock
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1af06238bd09e7b1343a4bae79db112bd7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` Lock(bool acquire = true) const
+
+Acquire lock for request internal state.
+
+It is safe to assume that request state will not be changed while the lock is acquired (e.g. aborted). Use std::move to pass the returned object to :ref:`Complete() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>` or :ref:`Abort() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>` method if you atomic request completion or aborting.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- acquire
+
+		- Should the lock be acqired or not.
+
+
+
+.. rubric:: Returns:
+
+Lock object.
+
+.. index:: pair: function; Get_status
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1ad301ad9a0cf52a0dfcbb76ff48b2a1cb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>` Get_status() const
+
+Get request current status.
+
+.. index:: pair: function; Is_completed
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1afcf3c907ea9bce798e52703e21488cfb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_completed() const
+
+Check if request is completed.
+
+.. index:: pair: function; Is_request_processing_needed
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a1ac36ba2cb811ae1089b3b9d062e6b24:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_request_processing_needed() const
+
+Return true only if the request processing (i.e.
+
+Process(true)) is needed for this request, otherwise false.
+
+.. index:: pair: function; Is_aborted
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8a1a29ee4cee0ff96b529d6720a794bf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_aborted() const
+
+Check if request is aborted.
+
+.. index:: pair: function; Is_processing
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95d63a0765f8d76c8ed68993f8e0baf5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_processing() const
+
+Check if request is still processing.
+
+.. index:: pair: function; Is_completion_delivered
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8c61ba14b174a9d251bd120d235d08e9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_completion_delivered() const
+
+Check if the request completion notification is delivered.
+
+.. index:: pair: function; Is_completion_delivering_started
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7a973a7fbb99e0eb94236c476bc52e8c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_completion_delivering_started() const
+
+Check if the request completion handler already invoked (but might not be returned yet.
+
+.. index:: pair: function; Is_done
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aaa6b4915a3771b1fe37656fd221a963b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_done() const
+
+Check if request is fully processed, i.e.
+
+all handlers were invoked and no more actions pending.
+
+.. index:: pair: function; Wait_done
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aaf0304a3925911d23eda340d0a67946e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Wait_done(
+		bool process_ctx = true,
+		std::chrono::milliseconds timeout = std::chrono::milliseconds::zero()
+		)
+
+Wait for request is fully processed, i.e.
+
+all handlers were invoked and no more actions pending.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- process_ctx
+
+		- Process all requests in the associated completion context. This may be useful if the context is normally processed in the calling thread.
+
+	*
+		- timeout
+
+		- Timeout value for waiting. Zero value indicates indefinite waiting.
+
+
+
+.. rubric:: Returns:
+
+"true" if request was processed, "false" if the function returned by timeout expiration.
+
+.. index:: pair: function; Timed_out
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a23d56ffa57d15acbcf427d15140b9596:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool& Timed_out()
+
+Access timed_out member.
+
+This should be set/read under request lock
+

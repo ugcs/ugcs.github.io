@@ -1,0 +1,63 @@
+.. index:: pair: enum; Lock_result
+.. _doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3:
+
+enum ugcs::vsm::File_processor::Stream::Lock_result
+===================================================
+
+Overview
+~~~~~~~~
+
+Lock operation result. :ref:`More...<details-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <file_processor.h>
+
+	enum Lock_result
+	{
+	    :ref:`OK<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3ae0aa021e21dddbd6d8cecec71e9cf564>`,
+	    :ref:`BLOCKED<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3aeecba0068950a2df17c47e851e1eef14>`,
+	    :ref:`ERROR<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3abb1ca97ec761fc37101737ba0aa2e7c5>`,
+	};
+
+.. _details-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Lock operation result.
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; OK
+.. _doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3ae0aa021e21dddbd6d8cecec71e9cf564:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	OK
+
+Lock acquired.
+
+.. index:: pair: enumvalue; BLOCKED
+.. _doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3aeecba0068950a2df17c47e851e1eef14:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	BLOCKED
+
+Lock owned by other stream.
+
+.. index:: pair: enumvalue; ERROR
+.. _doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1a21004f3744b2bf1a3aaeaca2632489d3abb1ca97ec761fc37101737ba0aa2e7c5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ERROR
+
+Error while locking.
+

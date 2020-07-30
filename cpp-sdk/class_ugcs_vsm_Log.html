@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Log &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum ugcs::vsm::Log::Level" href="enum_ugcs_vsm_Log_Level.html" />
+    <link rel="prev" title="class ugcs::vsm::Local_interface" href="class_ugcs_vsm_Local_interface.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-log">
+<span id="doxid-d4-da6-classugcs-1-1vsm-1-1-log"></span><span id="index-0"></span><h1>class ugcs::vsm::Log<a class="headerlink" href="#class-ugcs-vsm-log" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Class for handling log output. <a class="reference internal" href="#details-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;log.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">Log</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Param_exception.html#doxid-d4-dff-classugcs-1-1vsm-1-1-param-exception"><span class="std std-ref">ugcs::vsm::Param_exception</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_ugcs_vsm_Log_Exception_dummy_struct.html#doxid-db-d03-structugcs-1-1vsm-1-1-log-1-1-exception-dummy-struct"><span class="std std-ref">Exception_dummy_struct</span></a><span></span><span class="p">,</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1acc5a756451d3ad588df404ed83fe901e"><span></span><span class="n">Exception</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Log_Exception_dummy_struct.html#doxid-db-d03-structugcs-1-1vsm-1-1-log-1-1-exception-dummy-struct"><span class="std std-ref">Exception_dummy_struct</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// classes</span>
+
+    <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Log_Platform_logger.html#doxid-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger"><span class="std std-ref">Platform_logger</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a332b26d41d622294ede55679c63b6c6c"><span class="std std-ref">Write_message_inst</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="p">...);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a71f2cd4486fe93e9018a9cfd125a2c42"><span class="std std-ref">Write_message_v_inst</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">va_list</span> <span class="n">args</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a0787799605aecb6e6b211bb5529773c7"><span class="std std-ref">Set_custom_log_inst</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">log_file</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a9dd501e4a127910a8cdafc2e333c1790"><span class="std std-ref">Set_max_custom_log_size_inst</span></a><span></span><span class="p">(</span><span class="kt">ssize_t</span> <span class="n">size</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a007b4ddb78993d010ce063e183f5d076"><span class="std std-ref">Set_max_custom_log_count_inst</span></a><span></span><span class="p">(</span><span class="kt">size_t</span> <span class="n">count</span><span class="p">);</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1aad04a079fc561c06ecfc352913bedb4a"><span class="std std-ref">Get_level_str</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">);</span>
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a2b01e045d1b55932ae2e46917bcea136"><span class="std std-ref">Get_basename</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">path</span><span class="p">);</span>
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a5b85661d7971c9e9a9ec8ae639df4e7d"><span class="std std-ref">Get_system_error</span></a><span></span><span class="p">();</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1ad77755f5797a2c0f7deb5bf0029056ad"><span class="std std-ref">Write_message</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="p">...);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a3b46f5546e0d1c7396b78f3db1a144d0"><span class="std std-ref">Write_message_v</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">va_list</span> <span class="n">args</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a67fab13e657953a3af513ba0d0fe196e"><span class="std std-ref">Set_level</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1ae65824a9ce273ed50410fbc3553ed611"><span class="std std-ref">Set_level</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">level</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a9fa97ed8b03079c252adff0cf7c3f74b"><span class="std std-ref">Set_custom_log</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">log_file</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a350fc5db7b8291eb8b9a6aeaba3546b9"><span class="std std-ref">Set_max_custom_log_size</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">size_str</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a7881e41d2aca28374fc193020f5fb7af"><span class="std std-ref">Set_max_custom_log_count</span></a><span></span><span class="p">(</span><span class="kt">size_t</span> <span class="n">count</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d4-da6-classugcs-1-1vsm-1-1-log"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Class for handling log output.</p>
+<p>A singleton object of this class is created when the first log output occurs. <a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a> output is written to a custom log file (if set by the Set_custom_log method) and to the platform specific logging facilities (if present and implemented).</p>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a332b26d41d622294ede55679c63b6c6c"><span id="index-1"></span><span></span><span class="kt">void</span> <span class="n">Write_message_inst</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="p">...)</span></pre>
+<p>Write formatted message to the log.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>level</p></td>
+<td><p><a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a> level.</p></td>
+</tr>
+<tr class="row-even"><td><p>msg</p></td>
+<td><p>Message format similar to format used in printf() function.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a71f2cd4486fe93e9018a9cfd125a2c42"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">Write_message_v_inst</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">va_list</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Write formatted message to the log.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>level</p></td>
+<td><p><a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a> level.</p></td>
+</tr>
+<tr class="row-even"><td><p>msg</p></td>
+<td><p>Message format similar to format used in printf() function.</p></td>
+</tr>
+<tr class="row-odd"><td><p>args</p></td>
+<td><p>Variable arguments list for format string.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a0787799605aecb6e6b211bb5529773c7"><span id="index-3"></span><span></span><span class="kt">void</span> <span class="n">Set_custom_log_inst</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">log_file</span><span class="p">)</span></pre>
+<p>Set custom file path for the instance itself, behaves like Set_custom_log.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a9dd501e4a127910a8cdafc2e333c1790"><span id="index-4"></span><span></span><span class="kt">void</span> <span class="n">Set_max_custom_log_size_inst</span><span class="p">(</span><span class="kt">ssize_t</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>The same as Set_max_custom_log_size, but for the instance.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>size</p></td>
+<td><p>Max size in bytes.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a007b4ddb78993d010ce063e183f5d076"><span id="index-5"></span><span></span><span class="kt">void</span> <span class="n">Set_max_custom_log_count_inst</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">count</span><span class="p">)</span></pre>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>size</p></td>
+<td><p>Max number of log files to keep.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1aad04a079fc561c06ecfc352913bedb4a"><span id="index-6"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">Get_level_str</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">)</span></pre>
+<p>Convert level value to readable string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a2b01e045d1b55932ae2e46917bcea136"><span id="index-7"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Get_basename</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">path</span><span class="p">)</span></pre>
+<p>Get base name (without leading directories) of file path.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a5b85661d7971c9e9a9ec8ae639df4e7d"><span id="index-8"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Get_system_error</span><span class="p">()</span></pre>
+<p>Platform-dependent convenience method to get descriptive string for last system error.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1ad77755f5797a2c0f7deb5bf0029056ad"><span id="index-9"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Write_message</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="p">...)</span></pre>
+<p>Write formatted message to the log.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>level</p></td>
+<td><p><a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a> level.</p></td>
+</tr>
+<tr class="row-even"><td><p>msg</p></td>
+<td><p>Message format similar to format used in printf() function.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a3b46f5546e0d1c7396b78f3db1a144d0"><span id="index-10"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Write_message_v</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">va_list</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Write formatted message to the log.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>level</p></td>
+<td><p><a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a> level.</p></td>
+</tr>
+<tr class="row-even"><td><p>msg</p></td>
+<td><p>Message format similar to format used in printf() function.</p></td>
+</tr>
+<tr class="row-odd"><td><p>args</p></td>
+<td><p>Variable arguments list for format string.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a67fab13e657953a3af513ba0d0fe196e"><span id="index-11"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Set_level</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">)</span></pre>
+<p>Set current log level for the application.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>level</p></td>
+<td><p>New global log level.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1ae65824a9ce273ed50410fbc3553ed611"><span id="index-12"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Set_level</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">level</span><span class="p">)</span></pre>
+<p>Set current log level.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>level</p></td>
+<td><p>Level symbolic name. Valid names: error, warning, info, debug.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_param_exception</p></td>
+<td><p>if invalid name specified.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a9fa97ed8b03079c252adff0cf7c3f74b"><span id="index-13"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Set_custom_log</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">log_file</span><span class="p">)</span></pre>
+<p>Set log file path for a custom (i.e.</p>
+<p>non system standard) logging. Custom logging is disabled until file name is set.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>log_file</p></td>
+<td><p>Full log file path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1acc5a756451d3ad588df404ed83fe901e"><span class="std std-ref">Log::Exception</span></a></p></td>
+<td><p>if log file could not be opened/created for appending.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a350fc5db7b8291eb8b9a6aeaba3546b9"><span id="index-14"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Set_max_custom_log_size</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">size_str</span><span class="p">)</span></pre>
+<p>Set maximum size of a single custom log file.</p>
+<p>When this size is reached, current log file is closed, re-named by appending a time stamp and a new custom log file is opened.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>size_str</p></td>
+<td><p>Human readable size, which is a number postfixed with a case insensitive multiplier:</p>
+<ul class="simple">
+<li><p>Gb, G, Gbyte, Gbytes - for Giga-bytes;</p></li>
+<li><p>Mb, M, Mbyte, Mbytes - for Mega-bytes;</p></li>
+<li><p>Kb, K, Kbyte, Kbytes - for Kilo-bytes;</p></li>
+<li><p>no postfix - for bytes;</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>Invalid_param_exception</p></td>
+<td><p>exception if multiplier is not recognized.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a7881e41d2aca28374fc193020f5fb7af"><span id="index-15"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Set_max_custom_log_count</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">count</span><span class="p">)</span></pre>
+<p>Set maximum number of log files to keep.</p>
+<p>Older log files will be deleted.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>count</p></td>
+<td><p>Number of old log files to keep. Default is 1.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Local_interface.html" title="previous page">class ugcs::vsm::Local_interface</a>
+    <a class='right-next' id="next-link" href="enum_ugcs_vsm_Log_Level.html" title="next page">enum ugcs::vsm::Log::Level</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

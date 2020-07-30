@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Request_container::Request &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum ugcs::vsm::Request_container::Request::Status" href="enum_ugcs_vsm_Request_container_Request_Status.html" />
+    <link rel="prev" title="enum ugcs::vsm::Request_container::Type" href="enum_ugcs_vsm_Request_container_Type.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#typedefs" class="nav-link">Typedefs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-request-container-request">
+<span id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request"></span><span id="index-0"></span><h1>class ugcs::vsm::Request_container::Request<a class="headerlink" href="#class-ugcs-vsm-request-container-request" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Generic request for implementing inter-threads communications and asynchronous operations. <a class="reference internal" href="#details-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;request_container.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">Request</span><span class="p">:</span> <span class="k">public</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_shared_from_this</span><span class="o">&lt;</span> <span class="n">Request</span> <span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Request</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Request</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a45dfe7161da322165c89d41f02977a20"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_base.html#doxid-dc-d4f-classugcs-1-1vsm-1-1-callback-base"><span class="std std-ref">Callback_base</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Ptr</span></a><span></span><span class="o">&lt;&gt;</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_lock</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_Request_container_Request_Status.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7e8d9e205f783c829fcb5bdda00f6f76"><span class="std std-ref">Status</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a342da78756478193a27cc412074fb79f"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a755601a56afa809b62bc7d011f951d15"><span class="std std-ref">Set_processing_handler</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a249b5d2c020ce28f7e3ac65383dae8b7"><span class="std std-ref">Set_processing_handler</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a12ec980ffc633959aed0359cd42536b8"><span class="std std-ref">Set_completion_handler</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Request_container::Ptr</span></a><span></span><span class="o">&amp;</span> <span class="n">context</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a561379a2b3407dbc62c971d84c7f371a"><span class="std std-ref">Set_completion_handler</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Request_container::Ptr</span></a><span></span><span class="o">&amp;</span> <span class="n">context</span><span class="p">,</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1aeb438d485dfabe3e4b665f67b3558fc9"><span class="std std-ref">Set_cancellation_handler</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a56a55660d8e9d10b7eb3a58a39176949"><span class="std std-ref">Set_cancellation_handler</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a5fe368011c095bd0f00f2b752bab24f4"><span class="std std-ref">Set_done_handler</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a010c1aa35213206c8f35c3ad209ff699"><span class="std std-ref">Set_done_handler</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">);</span>
+    <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Request_container::Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a5b0f2d53ac73c2a65816dcd85ac7fdfc"><span class="std std-ref">Get_completion_context</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">())</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a8a139feb0121215d25eca6948aca0bcd"><span class="std std-ref">Process</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">process_request</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a38c68dcf1ed20975e2a2c25ac1610d40"><span class="std std-ref">Complete</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Request_container_Request_Status.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7e8d9e205f783c829fcb5bdda00f6f76"><span class="std std-ref">Status</span></a><span></span> <span class="n">status</span> <span class="o">=</span> <a class="reference internal" href="enum_ugcs_vsm_Request_container_Request_Status.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564"><span class="std std-ref">Status::OK</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">());</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a2ab0ebd9dc403ab769f81003a7bc66e0"><span class="std std-ref">Cancel</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">());</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a68ac123b4c30999676a92bfb505fb769"><span class="std std-ref">Abort</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">());</span>
+    <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1af06238bd09e7b1343a4bae79db112bd7"><span class="std std-ref">Lock</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">acquire</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="enum_ugcs_vsm_Request_container_Request_Status.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7e8d9e205f783c829fcb5bdda00f6f76"><span class="std std-ref">Status</span></a><span></span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1ad301ad9a0cf52a0dfcbb76ff48b2a1cb"><span class="std std-ref">Get_status</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1afcf3c907ea9bce798e52703e21488cfb"><span class="std std-ref">Is_completed</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a1ac36ba2cb811ae1089b3b9d062e6b24"><span class="std std-ref">Is_request_processing_needed</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a8a1a29ee4cee0ff96b529d6720a794bf"><span class="std std-ref">Is_aborted</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95d63a0765f8d76c8ed68993f8e0baf5"><span class="std std-ref">Is_processing</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a8c61ba14b174a9d251bd120d235d08e9"><span class="std std-ref">Is_completion_delivered</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7a973a7fbb99e0eb94236c476bc52e8c"><span class="std std-ref">Is_completion_delivering_started</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1aaa6b4915a3771b1fe37656fd221a963b"><span class="std std-ref">Is_done</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1aaf0304a3925911d23eda340d0a67946e"><span class="std std-ref">Wait_done</span></a><span></span><span class="p">(</span>
+        <span class="kt">bool</span> <span class="n">process_ctx</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="o">::</span><span class="n">zero</span><span class="p">()</span>
+        <span class="p">);</span>
+
+    <span class="kt">bool</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a23d56ffa57d15acbcf427d15140b9596"><span class="std std-ref">Timed_out</span></a><span></span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="c1">// direct descendants</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Io_request.html#doxid-d8-dbb-classugcs-1-1vsm-1-1-io-request"><span class="std std-ref">Io_request</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Ucs_request.html#doxid-dc-df0-classugcs-1-1vsm-1-1-ucs-request"><span class="std std-ref">Ucs_request</span></a><span></span><span class="p">;</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Generic request for implementing inter-threads communications and asynchronous operations.</p>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Request</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a45dfe7161da322165c89d41f02977a20"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Request</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_base.html#doxid-dc-d4f-classugcs-1-1vsm-1-1-callback-base"><span class="std std-ref">Callback_base</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Ptr</span></a><span></span><span class="o">&lt;&gt;</span> <span class="n">Handler</span></pre>
+<p><a class="reference internal" href="class_ugcs_vsm_Callback.html#doxid-d6-d1e-classugcs-1-1vsm-1-1-callback"><span class="std std-ref">Callback</span></a> denoting a handler of the request.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span id="index-4"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_lock</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span> <span class="n">Locker</span></pre>
+<p>Smart lock object for request external locking.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a342da78756478193a27cc412074fb79f"><span id="index-5"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">static</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Create an instance.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a755601a56afa809b62bc7d011f951d15"><span id="index-6"></span><span></span><span class="kt">void</span> <span class="n">Set_processing_handler</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p>Set processing handler for the request.</p>
+<p>It is called when request is about to be processed in the target processor context.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>handler</p></td>
+<td><p>Processing handler to invoke.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_op_exception</p></td>
+<td><p>if request not in pending state.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a249b5d2c020ce28f7e3ac65383dae8b7"><span id="index-7"></span><span></span><span class="kt">void</span> <span class="n">Set_processing_handler</span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a755601a56afa809b62bc7d011f951d15"><span class="std std-ref">Set_processing_handler</span></a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a12ec980ffc633959aed0359cd42536b8"><span id="index-8"></span><span></span><span class="kt">void</span> <span class="n">Set_completion_handler</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Request_container::Ptr</span></a><span></span><span class="o">&amp;</span> <span class="n">context</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p>Set completion handler for the request.</p>
+<p>It is called when request is completed in the specified completion context.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>context</p></td>
+<td><p>Context where completion handler should be invoked.</p></td>
+</tr>
+<tr class="row-even"><td><p>handler</p></td>
+<td><p>Completion handler to call when request is processed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Invalid_op_exception</p></td>
+<td><p>if request not in pending state.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a561379a2b3407dbc62c971d84c7f371a"><span id="index-9"></span><span></span><span class="kt">void</span> <span class="n">Set_completion_handler</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Request_container::Ptr</span></a><span></span><span class="o">&amp;</span> <span class="n">context</span><span class="p">,</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a12ec980ffc633959aed0359cd42536b8"><span class="std std-ref">Set_completion_handler</span></a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1aeb438d485dfabe3e4b665f67b3558fc9"><span id="index-10"></span><span></span><span class="kt">void</span> <span class="n">Set_cancellation_handler</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p>Set request cancellation handler.</p>
+<p>It is fired when <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a68ac123b4c30999676a92bfb505fb769"><span class="std std-ref">Abort()</span></a> method is called between request processing started and <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a38c68dcf1ed20975e2a2c25ac1610d40"><span class="std std-ref">Complete()</span></a> is called (i.e. while request is in PROCESSING state). The second case is calling request <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a2ab0ebd9dc403ab769f81003a7bc66e0"><span class="std std-ref">Cancel()</span></a> method when request is either in input queue or being processed. Correct handling in the handler is taking lock on the request and checking its state (either PROCESSING or ABORTED). In PROCESSING state it is legal to call <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a38c68dcf1ed20975e2a2c25ac1610d40"><span class="std std-ref">Complete()</span></a> method (either instantly or by deferred invocation), or do nothing if cancellation is not supported or cannot be done in current state. In ABORTED state all platform resources should be released, no further submits for the request will be done.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>handler</p></td>
+<td><p>Cancellation handler.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_op_exception</p></td>
+<td><p>if request is not in PENDING state.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a56a55660d8e9d10b7eb3a58a39176949"><span id="index-11"></span><span></span><span class="kt">void</span> <span class="n">Set_cancellation_handler</span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1aeb438d485dfabe3e4b665f67b3558fc9"><span class="std std-ref">Set_cancellation_handler</span></a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a5fe368011c095bd0f00f2b752bab24f4"><span id="index-12"></span><span></span><span class="kt">void</span> <span class="n">Set_done_handler</span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p>Set request done handler.</p>
+<p>The handler is invoked when request is advanced to done state - no more actions are pending for it and it is destroyed. The handler is always called - in both normal completion or abortion scenario. If request is already done when this function is called, the handler is invoked immediately. Calling context is either completion, abortion or this method calling context.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a010c1aa35213206c8f35c3ad209ff699"><span id="index-13"></span><span></span><span class="kt">void</span> <span class="n">Set_done_handler</span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9d12ba30446f777d927b21e1332f9744"><span class="std std-ref">Handler</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">handler</span><span class="p">)</span></pre>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a5fe368011c095bd0f00f2b752bab24f4"><span class="std std-ref">Set_done_handler</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a5b0f2d53ac73c2a65816dcd85ac7fdfc"><span id="index-14"></span><a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Request_container::Ptr</span></a><span></span> <span class="n">Get_completion_context</span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">())</span> <span class="k">const</span></pre>
+<p>Get completion context associated with the request.</p>
+<p>It might be null if request is already fully processed or not yet fully prepared.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a8a139feb0121215d25eca6948aca0bcd"><span id="index-15"></span><span></span><span class="kt">void</span> <span class="n">Process</span><span class="p">(</span><span class="kt">bool</span> <span class="n">process_request</span><span class="p">)</span></pre>
+<p>Process the request.</p>
+<p>Either processing or completion context is called depending on request state.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>process_request</p></td>
+<td><p>true if request processing is intended or false if completion notification processing is intended.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_op_exception</p></td>
+<td><p>if the method is called more than once for processing and notification handling, or calling sequence is invalid.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nullptr_exception</p></td>
+<td><p>if corresponding handler is not set.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a38c68dcf1ed20975e2a2c25ac1610d40"><span id="index-16"></span><span></span><span class="kt">void</span> <span class="n">Complete</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Request_container_Request_Status.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7e8d9e205f783c829fcb5bdda00f6f76"><span class="std std-ref">Status</span></a><span></span> <span class="n">status</span> <span class="o">=</span> <a class="reference internal" href="enum_ugcs_vsm_Request_container_Request_Status.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564"><span class="std std-ref">Status::OK</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">())</span></pre>
+<p>Complete the request processing.</p>
+<p><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request"><span class="std std-ref">Request</span></a> with the specified status is submitted to the associated completion context.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>Completion status.</p></td>
+</tr>
+<tr class="row-even"><td><p>locker</p></td>
+<td><p>Locker object which can have previously acquired lock for request internal state. It is released before the function exits.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Invalid_param_exception</p></td>
+<td><p>if invalid status value specified.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_op_exception</p></td>
+<td><p>if request is not in allowed state (e.g. processing not yet started).</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a2ab0ebd9dc403ab769f81003a7bc66e0"><span id="index-17"></span><span></span><span class="kt">void</span> <span class="n">Cancel</span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">())</span></pre>
+<p>Cancel request processing.</p>
+<p>It does nothing if request already processed. This action behavior is defined by specific operation and processor. If unsure, it is always recommended to use <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a68ac123b4c30999676a92bfb505fb769"><span class="std std-ref">Abort()</span></a> instead of <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a2ab0ebd9dc403ab769f81003a7bc66e0"><span class="std std-ref">Cancel()</span></a>.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>locker</p></td>
+<td><p>Locker object which can have previously acquired lock for request internal state. It is released before the function exits.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a68ac123b4c30999676a92bfb505fb769"><span id="index-18"></span><span></span><span class="kt">void</span> <span class="n">Abort</span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">locker</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span><span class="p">())</span></pre>
+<p>Call this method when request is not going to be processed by <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a8a139feb0121215d25eca6948aca0bcd"><span class="std std-ref">Process()</span></a> method but is just removed from request queue.</p>
+<p>It also can be called when request is queued in some container so it later will be ignored when the container will try to process it. This method does nothing if request was already aborted or fully processed.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>locker</p></td>
+<td><p>Locker object which can have previously acquired lock for request internal state. It is released before the function exits.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1af06238bd09e7b1343a4bae79db112bd7"><span id="index-19"></span><a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95f0c7399b31760677f1a147adad2801"><span class="std std-ref">Locker</span></a><span></span> <span class="n">Lock</span><span class="p">(</span><span class="kt">bool</span> <span class="n">acquire</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Acquire lock for request internal state.</p>
+<p>It is safe to assume that request state will not be changed while the lock is acquired (e.g. aborted). Use std::move to pass the returned object to <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a38c68dcf1ed20975e2a2c25ac1610d40"><span class="std std-ref">Complete()</span></a> or <a class="reference internal" href="#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a68ac123b4c30999676a92bfb505fb769"><span class="std std-ref">Abort()</span></a> method if you atomic request completion or aborting.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>acquire</p></td>
+<td><p>Should the lock be acqired or not.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>Lock object.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1ad301ad9a0cf52a0dfcbb76ff48b2a1cb"><span id="index-20"></span><a class="reference internal" href="enum_ugcs_vsm_Request_container_Request_Status.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7e8d9e205f783c829fcb5bdda00f6f76"><span class="std std-ref">Status</span></a><span></span> <span class="n">Get_status</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get request current status.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1afcf3c907ea9bce798e52703e21488cfb"><span id="index-21"></span><span></span><span class="kt">bool</span> <span class="n">Is_completed</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if request is completed.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a1ac36ba2cb811ae1089b3b9d062e6b24"><span id="index-22"></span><span></span><span class="kt">bool</span> <span class="n">Is_request_processing_needed</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Return true only if the request processing (i.e.</p>
+<p>Process(true)) is needed for this request, otherwise false.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a8a1a29ee4cee0ff96b529d6720a794bf"><span id="index-23"></span><span></span><span class="kt">bool</span> <span class="n">Is_aborted</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if request is aborted.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a95d63a0765f8d76c8ed68993f8e0baf5"><span id="index-24"></span><span></span><span class="kt">bool</span> <span class="n">Is_processing</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if request is still processing.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a8c61ba14b174a9d251bd120d235d08e9"><span id="index-25"></span><span></span><span class="kt">bool</span> <span class="n">Is_completion_delivered</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if the request completion notification is delivered.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a7a973a7fbb99e0eb94236c476bc52e8c"><span id="index-26"></span><span></span><span class="kt">bool</span> <span class="n">Is_completion_delivering_started</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if the request completion handler already invoked (but might not be returned yet.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1aaa6b4915a3771b1fe37656fd221a963b"><span id="index-27"></span><span></span><span class="kt">bool</span> <span class="n">Is_done</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if request is fully processed, i.e.</p>
+<p>all handlers were invoked and no more actions pending.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1aaf0304a3925911d23eda340d0a67946e"><span id="index-28"></span><span></span><span class="kt">bool</span> <span class="n">Wait_done</span><span class="p">(</span>
+    <span class="kt">bool</span> <span class="n">process_ctx</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="o">::</span><span class="n">zero</span><span class="p">()</span>
+    <span class="p">)</span></pre>
+<p>Wait for request is fully processed, i.e.</p>
+<p>all handlers were invoked and no more actions pending.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>process_ctx</p></td>
+<td><p>Process all requests in the associated completion context. This may be useful if the context is normally processed in the calling thread.</p></td>
+</tr>
+<tr class="row-even"><td><p>timeout</p></td>
+<td><p>Timeout value for waiting. Zero value indicates indefinite waiting.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>“true” if request was processed, “false” if the function returned by timeout expiration.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a23d56ffa57d15acbcf427d15140b9596"><span id="index-29"></span><span></span><span class="kt">bool</span><span class="o">&amp;</span> <span class="n">Timed_out</span><span class="p">()</span></pre>
+<p>Access timed_out member.</p>
+<p>This should be set/read under request lock</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="enum_ugcs_vsm_Request_container_Type.html" title="previous page">enum ugcs::vsm::Request_container::Type</a>
+    <a class='right-next' id="next-link" href="enum_ugcs_vsm_Request_container_Request_Status.html" title="next page">enum ugcs::vsm::Request_container::Request::Status</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

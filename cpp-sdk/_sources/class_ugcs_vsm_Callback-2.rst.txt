@@ -1,0 +1,213 @@
+.. index:: pair: class; ugcs::vsm::Callback<Method, typename std::enable_if<callback_internal::Is_method_ptr<Method>()>::type, Class_ptr, Args...>
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7:
+
+template class ugcs::vsm::Callback<Method, typename std::enable_if<callback_internal::Is_method_ptr<Method>()>::type, Class_ptr, Args...>
+=========================================================================================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Generic callback which uses bound class method as callable. :ref:`More...<details-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <callback.h>
+	
+	template <class Method, class Class_ptr, typename... Args>
+	class Callback<Method, typename std::enable_if<callback_internal::Is_method_ptr<Method>()>::type, Class_ptr, Args...>: public :ref:`ugcs::vsm::Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`
+	{
+	public:
+		// typedefs
+	
+		typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<typename std::result_of<Method(Class_ptr, Args...)>::type> :ref:`Base_type<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a68067ddfeb49e6f788ce7ac4351af0a2>`;
+		typedef typename Base_type::template :ref:`Ptr<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ae72b2c5c88bc90dc9777bad4ed1ba097>`<:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`> :ref:`Ptr<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ae72b2c5c88bc90dc9777bad4ed1ba097>`;
+		typedef typename std::tuple_element<arg_idx, Args_tuple>::type :ref:`Arg_type<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a26530b9bf9660594c2cf1494ce19e980>`;
+
+		// construction
+	
+		:ref:`Callback<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a226ddea773d7951a11ff3a2c2995ea23>`(Method method, Class_ptr&& obj_ptr, Args&&... args);
+		:ref:`Callback<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a50c5cf305a7465f900fc93e9121bba29>`(:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`&&);
+
+		// methods
+	
+		static :ref:`Ptr<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ae72b2c5c88bc90dc9777bad4ed1ba097>` :ref:`Create<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ad7a2d561120fc4c86b8a33dda9457cc7>`(Method method, Class_ptr&& obj_ptr, Args&&... args);
+		virtual :ref:`Base_type::Result_t<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base_1a6ee65b00ef19b694f0c5e8c2a3227c75>` :ref:`operator ()<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a91a71ca01d8e88b72e00defaaee13d41>` ();
+	
+		template <size_t arg_idx>
+		:ref:`Arg_type<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a26530b9bf9660594c2cf1494ce19e980>`<arg_idx>& :ref:`Get_arg<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a8993415a11b881e8a449607b8916d3bf>`();
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// typedefs
+	
+		typedef Result :ref:`Result_t<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base_1a6ee65b00ef19b694f0c5e8c2a3227c75>`;
+
+		// classes
+	
+		template <class Callback = Callback_base>
+		class :ref:`Ptr<doxid-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr>`;
+
+		// methods
+	
+		virtual :ref:`Result_t<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base_1a6ee65b00ef19b694f0c5e8c2a3227c75>` :ref:`operator ()<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base_1a180102dddcd730493277e5ef4bd4e719>` () = 0;
+
+.. _details-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Generic callback which uses bound class method as callable.
+
+Use :ref:`Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>` for convenient instantiation. Specialized template version for class member function.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Class_ptr
+
+		- Pointer to class object (used with pointer semantic, can be any smart pointer as well).
+
+	*
+		- Class
+
+		- method to call.
+
+	*
+		- Args
+
+		- Arguments pack.
+
+
+
+.. rubric:: See also:
+
+:ref:`Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Base_type
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a68067ddfeb49e6f788ce7ac4351af0a2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<typename std::result_of<Method(Class_ptr, Args...)>::type> Base_type
+
+Base class type.
+
+.. index:: pair: typedef; Ptr
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ae72b2c5c88bc90dc9777bad4ed1ba097:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef typename Base_type::template :ref:`Ptr<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ae72b2c5c88bc90dc9777bad4ed1ba097>`<:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`> Ptr
+
+Callable pointer class type.
+
+.. index:: pair: typedef; Arg_type
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a26530b9bf9660594c2cf1494ce19e980:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef typename std::tuple_element<arg_idx, Args_tuple>::type Arg_type
+
+Get type of the specified argument.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- arg_idx
+
+		- Index of the argument. Should be in range [0, sizeof...(Args)).
+
+Construction
+------------
+
+.. index:: pair: function; Callback
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a226ddea773d7951a11ff3a2c2995ea23:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Callback(Method method, Class_ptr&& obj_ptr, Args&&... args)
+
+Constructor for class method bound callback.
+
+.. index:: pair: function; Callback
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a50c5cf305a7465f900fc93e9121bba29:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Callback(:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`&&)
+
+Move constructor.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ad7a2d561120fc4c86b8a33dda9457cc7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Ptr<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1ae72b2c5c88bc90dc9777bad4ed1ba097>` Create(Method method, Class_ptr&& obj_ptr, Args&&... args)
+
+Create callback instance.
+
+.. index:: pair: function; operator()
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a91a71ca01d8e88b72e00defaaee13d41:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual :ref:`Base_type::Result_t<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base_1a6ee65b00ef19b694f0c5e8c2a3227c75>` operator () ()
+
+Execute callback.
+
+.. index:: pair: function; Get_arg
+.. _doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a8993415a11b881e8a449607b8916d3bf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <size_t arg_idx>
+	:ref:`Arg_type<doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7_1a26530b9bf9660594c2cf1494ce19e980>`<arg_idx>& Get_arg()
+
+Get reference to an argument at the specified position.
+
+Template parameters:
+
+* *arg_idx* Index of the argument to get.
+
+
+
+.. rubric:: Returns:
+
+Reference to the stored argument.
+

@@ -1,0 +1,89 @@
+.. index:: pair: enum; Level
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee:
+
+enum ugcs::vsm::Log::Level
+==========================
+
+Overview
+~~~~~~~~
+
+Available log levels. :ref:`More...<details-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <log.h>
+
+	enum Level
+	{
+	    :ref:`DEBUGGING<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea6e0d2a351777f8e1349133544e885f8a>`,
+	    :ref:`INFO<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea551b723eafd6a31d444fcb2f5920fbd3>`,
+	    :ref:`WARNING<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea059e9861e0400dfbe05c98a841f3f96b>`,
+	    :ref:`ERROR<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eeabb1ca97ec761fc37101737ba0aa2e7c5>`,
+	    :ref:`MAX<doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea26a4b44a837bf97b972628509912b4a5>`       = ERROR,
+	};
+
+.. _details-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176ee:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Available log levels.
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; DEBUGGING
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea6e0d2a351777f8e1349133544e885f8a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	DEBUGGING
+
+Most verbose debug level.
+
+Should be used only for debug information output.
+
+.. index:: pair: enumvalue; INFO
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea551b723eafd6a31d444fcb2f5920fbd3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	INFO
+
+Informational messages.
+
+.. index:: pair: enumvalue; WARNING
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea059e9861e0400dfbe05c98a841f3f96b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	WARNING
+
+Warning messages which should be noticed by an operator.
+
+The error condition should be recoverable.
+
+.. index:: pair: enumvalue; ERROR
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eeabb1ca97ec761fc37101737ba0aa2e7c5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ERROR
+
+Non-recoverable errors which should be noticed by an operator.
+
+.. index:: pair: enumvalue; MAX
+.. _doxid-d4/da6/classugcs_1_1vsm_1_1_log_1a468b0c4e97929b53734d9beba1e176eea26a4b44a837bf97b972628509912b4a5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MAX
+
+Maximal level code.
+

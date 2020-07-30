@@ -1,0 +1,23 @@
+.. index:: pair: struct; ugcs::vsm::Properties::Not_found_exception_dummy_struct
+.. _doxid-db/d86/structugcs_1_1vsm_1_1_properties_1_1_not__found__exception__dummy__struct:
+
+struct ugcs::vsm::Properties::Not_found_exception_dummy_struct
+==============================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Thrown when a specified key not found. :ref:`More...<details-db/d86/structugcs_1_1vsm_1_1_properties_1_1_not__found__exception__dummy__struct>`
+
+.. _details-db/d86/structugcs_1_1vsm_1_1_properties_1_1_not__found__exception__dummy__struct:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Thrown when a specified key not found.
+
+Type for a new exception class differentiation.
+

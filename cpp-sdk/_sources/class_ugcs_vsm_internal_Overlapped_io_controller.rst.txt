@@ -1,0 +1,96 @@
+.. index:: pair: class; ugcs::vsm::internal::Overlapped_io_controller
+.. _doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller:
+
+class ugcs::vsm::internal::Overlapped_io_controller
+===================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Windows-specific implementation for I/O controller. :ref:`More...<details-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <overlapped_io_controller.h>
+	
+	class Overlapped_io_controller: public :ref:`ugcs::vsm::File_processor::Native_controller<doxid-d4/d55/classugcs_1_1vsm_1_1_file__processor_1_1_native__controller>`
+	{
+	public:
+		// methods
+	
+		virtual void :ref:`Enable<doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1ade38b4f566b3ff26c9c92976beff4e38>`();
+		virtual void :ref:`Disable<doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1ae78e635b080f0e07ca1fb6025a1c4967>`();
+		virtual void :ref:`Register_handle<doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1ad90c7a6891b5938146f3a98d10b9741a>`(:ref:`File_processor::Stream::Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`& handle);
+		virtual void :ref:`Unregister_handle<doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1a870624f5895dd3fab3a26ed5b8d68c01>`(:ref:`File_processor::Stream::Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`& handle);
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// methods
+	
+		virtual void :ref:`Enable<doxid-d4/d55/classugcs_1_1vsm_1_1_file__processor_1_1_native__controller_1adef24f99b91c2b8e334b109b3dbd4f9d>`() = 0;
+		virtual void :ref:`Disable<doxid-d4/d55/classugcs_1_1vsm_1_1_file__processor_1_1_native__controller_1af8279aabc8eac87eb7f9c20c41e5c0a6>`() = 0;
+		virtual void :ref:`Register_handle<doxid-d4/d55/classugcs_1_1vsm_1_1_file__processor_1_1_native__controller_1acb77d1182559fcf8d8bffe9eb32b2f8c>`(:ref:`Stream::Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`& handle) = 0;
+		virtual void :ref:`Unregister_handle<doxid-d4/d55/classugcs_1_1vsm_1_1_file__processor_1_1_native__controller_1a663897a4c5853bba28b45e4d39a79ee2>`(:ref:`Stream::Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`& handle) = 0;
+		static std::unique_ptr<:ref:`Native_controller<doxid-d4/d55/classugcs_1_1vsm_1_1_file__processor_1_1_native__controller>`> :ref:`Create<doxid-d4/d55/classugcs_1_1vsm_1_1_file__processor_1_1_native__controller_1a114967e059329ae40f425cf0d9d7992a>`();
+
+.. _details-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Windows-specific implementation for I/O controller.
+
+Methods
+-------
+
+.. index:: pair: function; Enable
+.. _doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1ade38b4f566b3ff26c9c92976beff4e38:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual void Enable()
+
+Enable the controller.
+
+.. index:: pair: function; Disable
+.. _doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1ae78e635b080f0e07ca1fb6025a1c4967:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual void Disable()
+
+Disable the controller.
+
+.. index:: pair: function; Register_handle
+.. _doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1ad90c7a6891b5938146f3a98d10b9741a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual void Register_handle(:ref:`File_processor::Stream::Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`& handle)
+
+Register new opened file handle.
+
+.. index:: pair: function; Unregister_handle
+.. _doxid-dc/dcb/classugcs_1_1vsm_1_1internal_1_1_overlapped__io__controller_1a870624f5895dd3fab3a26ed5b8d68c01:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual void Unregister_handle(:ref:`File_processor::Stream::Native_handle<doxid-d2/dda/classugcs_1_1vsm_1_1_file__processor_1_1_stream_1_1_native__handle>`& handle)
+
+Unregister previously registered file handle.
+

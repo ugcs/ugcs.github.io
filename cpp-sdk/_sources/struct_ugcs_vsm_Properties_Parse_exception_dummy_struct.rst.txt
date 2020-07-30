@@ -1,0 +1,23 @@
+.. index:: pair: struct; ugcs::vsm::Properties::Parse_exception_dummy_struct
+.. _doxid-d7/dc0/structugcs_1_1vsm_1_1_properties_1_1_parse__exception__dummy__struct:
+
+struct ugcs::vsm::Properties::Parse_exception_dummy_struct
+==========================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Thrown when text stream parsing fails. :ref:`More...<details-d7/dc0/structugcs_1_1vsm_1_1_properties_1_1_parse__exception__dummy__struct>`
+
+.. _details-d7/dc0/structugcs_1_1vsm_1_1_properties_1_1_parse__exception__dummy__struct:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Thrown when text stream parsing fails.
+
+Type for a new exception class differentiation.
+

@@ -1,0 +1,184 @@
+.. index:: pair: class; ugcs::vsm::Bo_value
+.. _doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value:
+
+template class ugcs::vsm::Bo_value
+==================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Helper class for byte-order-dependent value representation. :ref:`More...<details-d1/d8b/classugcs_1_1vsm_1_1_bo__value>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <endian.h>
+	
+	template <typename T, class Converter>
+	class Bo_value
+	{
+	public:
+		// construction
+	
+		:ref:`Bo_value<doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a03f2184d8856d39e4b893bb37f6c3954>`(T value = 0);
+
+		// methods
+	
+		Bo_value& :ref:`operator =<doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a356526b71a13785532a9f4405481b5e2>` (T value);
+		:ref:`operator T<doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a7e91ca79e6fc77637c187e6bf1508f71>` () const;
+		T :ref:`Get<doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1ac01ef2f97cd3ef03c3cc3ef2c7c931a9>`() const;
+		static T :ref:`Get<doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a5181aa010a15b82602e660f5e78992c5>`(const void* buffer);
+		static void :ref:`Set<doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a0cbcdbaf0093016144532c3a8b6e189c>`(void* buffer, const T value);
+	};
+.. _details-d1/d8b/classugcs_1_1vsm_1_1_bo__value:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Helper class for byte-order-dependent value representation.
+
+Construction
+------------
+
+.. index:: pair: function; Bo_value
+.. _doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a03f2184d8856d39e4b893bb37f6c3954:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Bo_value(T value = 0)
+
+Construct value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- Value in host byte order.
+
+Methods
+-------
+
+.. index:: pair: function; operator=
+.. _doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a356526b71a13785532a9f4405481b5e2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Bo_value& operator = (T value)
+
+Assign new value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- Value in host byte order.
+
+.. index:: pair: function; operator T
+.. _doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a7e91ca79e6fc77637c187e6bf1508f71:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator T () const
+
+Cast to underlying type.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Get
+.. _doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1ac01ef2f97cd3ef03c3cc3ef2c7c931a9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	T Get() const
+
+Get the value of underlying type.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Get
+.. _doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a5181aa010a15b82602e660f5e78992c5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static T Get(const void* buffer)
+
+Interpret byte buffer as a storage for underlying type and return host byte order value.
+
+Caller is responsible for the size of the input buffer.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buffer
+
+		- Input buffer with original value.
+
+
+
+.. rubric:: Returns:
+
+Value in host byte order.
+
+.. index:: pair: function; Set
+.. _doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value_1a0cbcdbaf0093016144532c3a8b6e189c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Set(void* buffer, const T value)
+
+Save value given in host order to byte buffer.
+
+Caller is responsible for the size of the buffer.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buffer
+
+		- Output buffer to save value to.
+
+	*
+		- value
+
+		- value in host byte order.
+

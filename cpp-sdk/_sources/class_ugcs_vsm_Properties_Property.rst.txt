@@ -1,0 +1,151 @@
+.. index:: pair: class; ugcs::vsm::Properties::Property
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property:
+
+class ugcs::vsm::Properties::Property
+=====================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+One property representation. :ref:`More...<details-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	class Property
+	{
+	public:
+		// fields
+	
+		std::string :ref:`str_repr<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a7b5802a06488433e1155a413ad18bc3a>`;
+		int32_t :ref:`int_repr<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a990793f14b7e791647495f19d1d5b6fd>`;
+		double :ref:`float_repr<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a5098bdfe5ac7478e3ecf194424083f9b>`;
+		bool :ref:`int_valid<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1aa5f82753a7b982870b8c0959d4fa96a8>`:1;
+		bool :ref:`float_valid<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a3a53e11163214d9fe7f74469078b5884>`:1;
+		std::string :ref:`description<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1aba948fe382536b7ce8ff9378a384fb83>`;
+		int :ref:`seq_number<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a7df6d602150c67e5e53021ec6280795c>` = -1;
+
+		// construction
+	
+		:ref:`Property<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1abad43a9aeebe3d63d4980e32500423ab>`(std::string&& value);
+		:ref:`Property<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1ad473248512b8576bb6cad5d625bc69a5>`(int32_t value);
+		:ref:`Property<doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a33a81f85e724028da6bb88b0abd443cd>`(double value);
+	};
+.. _details-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+One property representation.
+
+Fields
+------
+
+.. index:: pair: variable; str_repr
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a7b5802a06488433e1155a413ad18bc3a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string str_repr
+
+String representation of the property.
+
+.. index:: pair: variable; int_repr
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a990793f14b7e791647495f19d1d5b6fd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int32_t int_repr
+
+Integer representation of the property if possible.
+
+.. index:: pair: variable; float_repr
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a5098bdfe5ac7478e3ecf194424083f9b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	double float_repr
+
+Floating point number representation of the property if possible.
+
+.. index:: pair: variable; int_valid
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1aa5f82753a7b982870b8c0959d4fa96a8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool int_valid:1
+
+Flag indicates that integer representation is valid.
+
+.. index:: pair: variable; float_valid
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a3a53e11163214d9fe7f74469078b5884:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool float_valid:1
+
+Flag indicates that floating point number representation is valid.
+
+.. index:: pair: variable; description
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1aba948fe382536b7ce8ff9378a384fb83:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string description
+
+User description of the property.
+
+.. index:: pair: variable; seq_number
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a7df6d602150c67e5e53021ec6280795c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int seq_number = -1
+
+place in properties file
+
+Construction
+------------
+
+.. index:: pair: function; Property
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1abad43a9aeebe3d63d4980e32500423ab:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Property(std::string&& value)
+
+Construct property from string value.
+
+.. index:: pair: function; Property
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1ad473248512b8576bb6cad5d625bc69a5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Property(int32_t value)
+
+Construct property from integer value.
+
+.. index:: pair: function; Property
+.. _doxid-dc/d84/classugcs_1_1vsm_1_1_properties_1_1_property_1a33a81f85e724028da6bb88b0abd443cd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Property(double value)
+
+Construct property from floating point value.
+

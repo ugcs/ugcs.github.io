@@ -1,0 +1,1249 @@
+.. index:: pair: page; UCS-VSM Commands
+.. _doxid-d0/d07/ucs_vsm_commands_page:
+
+UCS-VSM Commands
+================
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1command_registering:
+
+Command registration
+~~~~~~~~~~~~~~~~~~~~
+
+Before commands can be issued to the vehicle VSM must inform UgCS about supported commands and mission items. This is done at the time of registering the vehicle with the system. Command registration includes description of supported parameters and their default values.
+
+For each command vehicle supports it must send a :ref:`Register_command message <doxid-d9/de8/ucs_vsm_registration_page_1register_command>` as part of Register_vehicle message before it can issue command via :ref:`Device_command message <doxid-d0/d07/ucs_vsm_commands_page_1device_command>`.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1device_command:
+
+Device_command message
+~~~~~~~~~~~~~~~~~~~~~~
+
+============  ===============  ===========================================================  
+Field name    Type             Description                                                  
+============  ===============  ===========================================================  
+command_id    uint32           Registered id for command. See                               
+parameters    Parameter_field  List of command specific parameters                          
+sub_commands  Vsm_command      List of sub commands for this command. Used when command is  
+============  ===============  ===========================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1device_commands:
+
+Commands natively supported by UgCS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Alphabetical list of supported vehicle commands available as subcommands for :ref:`Mission upload <doxid-d0/d07/ucs_vsm_commands_page_1c_mission_upload>` command and as standalone commands
+
+These are the commands natively supported by UgCS (commands with known semantic). By registering command from this list VSM notifies the UgCS that vehicle is capable to execute given command with given parameters.
+
+=======  ==================  ==========  =======  =================================================================================================  
+Command  Subsystem           In Mission  From UI  Description                                                                                        
+=======  ==================  ==========  =======  =================================================================================================  
+         ASDB                -           +        turn IDENT on                                                                                      
+         ASDB                -           +        turn transponder on/off                                                                            
+         FC                  -           +        ARM command is supported                                                                           
+         FC                  -           +        Start mission flight                                                                               
+         Camera              -           +        Switch camera on/off                                                                               
+         Camera              +           -        Trigger camera by distance                                                                         
+         Camera              +           -        Trigger camera by time                                                                             
+         Camera              -           +        Trigger camera shutter                                                                             
+         Camera              +           -        Trigger camera shutter                                                                             
+         Gimbal              -           +        Allows direct payload control from GS                                                              
+         FC                  -           +        Direct vehicle control (Joystick mode)                                                             
+         FC                  -           +        DISARM command is supported                                                                        
+         FC                  -           +        Emergency land (crash landing)                                                                     
+         FC                  -           +        Create route file to use with vaheicle native software                                             
+         FC                  -           +        Enter Click&Go mode                                                                                
+         FC                  -           +        Enter joystick control mode                                                                        
+         FC                  -           +        Land command                                                                                       
+         FC                  +           -        Landing waypoint                                                                                   
+         FC                  -           +        Enable manual control mode                                                                         
+         FC                  -           +        Delete the route from vehicle                                                                      
+         FC                  -           +        Mission can be paused from client                                                                  
+         FC                  -           +        Mission can be resumed from client                                                                 
+         FC                  -           +        Vehicle supports mission flight. Can contain commands marked here as available in mission.         
+         FC                  +           -        Specify next waypoint and start moving towards it                                                  
+         FC                  +           -        Do panorama                                                                                        
+         PAYLOAD_CONTROLLER  -           +        Custom payload command                                                                             
+         Camera              +           -        Camera control (tilt, roll, yaw, zoom)                                                             
+         FC                  +           +        Repeat servo movement back an forth                                                                
+         FC                  -           +        Return to HOME position is supported                                                               
+         Camera              -           +        Select this camera as video source                                                                 
+         FC                  -           +        Create cylindrical fence around home location                                                      
+         FC                  -           +        Retract or release gear                                                                            
+         FC                  +           -        Set vehicle heading                                                                                
+         FC                  +           -        Specify Home location                                                                              
+         FC, ADSB            +           +        Vehicle configuration. Contains a list of parameter definitions which can be set for the vehicle.  
+         FC                  +           +        Set Point Of Interest                                                                              
+         FC                  -           +        Set position offset of vehicle (i.e. moving relatively to current position)                        
+         FC                  -           +        Set heading of vehicle by turning relatively to current heading                                    
+         FC                  +           +        Set servo to given PWM value                                                                       
+         FC                  +           -        Set Ground speed                                                                                   
+         FC                  -           +        Select tension value for tethered drone                                                            
+         FC                  -           +        Takeoff command                                                                                    
+         FC                  +           -        Specify Takeoff point.                                                                             
+         FC                  +           -        Transition vehicle to fixed wing mode                                                              
+         FC                  +           -        Transition vehicle to VTOL mode                                                                    
+         FC                  -           +        Trigger sensor calibration                                                                         
+         FC                  +           -        Wait for specified time before proceeding to next mission item                                     
+         FC                  +           -        Wait until specified UTC time before proceeding to next mission item                               
+         FC                  -           +        Enter Click&Go mode, specify waypoint and start moving towards it                                  
+=======  ==================  ==========  =======  =================================================================================================
+
+Other commands can be defined by VSM via **Register_vehicle.register_command** message.
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_adsb_set_ident:
+
+ADSB IDENT
+----------
+
+Command ID: "adsb_set_ident"
+
+Description: Turn on IDENT
+
+Command has no parameters.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_adsb_set_mode:
+
+ADSB Set mode
+-------------
+
+Command ID: "adsb_set_mode"
+
+Description: Turn ADSB transponder on/standby/off
+
+Parameters
+
+====  ========================  ============================  
+Name  Type                      Description                   
+====  ========================  ============================  
+mode  FIELD_SEMANTIC_ADSB_MODE  Desired transponder mode see  
+====  ========================  ============================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_arm:
+
+Arm vehicle
+-----------
+
+Command ID: "arm"
+
+Description: Arm the motors.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_auto:
+
+Start mission
+-------------
+
+Command ID: "auto"
+
+Description: Put vehicle in AUTO control mode. Vehicle will setart flying mission if present.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_camera_power:
+
+Set camera power state
+----------------------
+
+Command ID: "camera_power"
+
+Description: Switch camera on/off
+
+===========  ===================  ===========  
+Name         Type                 Description  
+===========  ===================  ===========  
+power_state  FIELD_SEMANTIC_ENUM  See          
+===========  ===================  ===========
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1camera_power_states:
+
+Camera power states
++++++++++++++++++++
+
+======  =========================  ============  
+Name    Value                      Description   
+======  =========================  ============  
+on      CAMERA_POWER_STATE_ON      Power on      
+off     CAMERA_POWER_STATE_OFF     Power off     
+toggle  CAMERA_POWER_STATE_TOGGLE  Switch power  
+======  =========================  ============
+
+
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_camera_trigger_by_distance:
+
+Trigger camera by distance
+--------------------------
+
+Mission item ID: "camera_trigger_by_distance"
+
+Description: Initiate camera trigger on regular distance intervals starting from current position.
+
+Parameters
+
+========  ======================  ==========================================================  
+Name      Type                    Description                                                 
+========  ======================  ==========================================================  
+count     FIELD_SEMANTIC_INT      Number of consecutive trigger actions to perform.           
+delay     FIELD_SEMANTIC_NUMERIC  Time in seconds to wait for the first trigger               
+distance  FIELD_SEMANTIC_NUMERIC  Distance to travel in meters between consecutive triggers.  
+========  ======================  ==========================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_camera_trigger_by_time:
+
+Trigger camera by time
+----------------------
+
+Mission item ID: "camera_trigger_by_time"
+
+Description: Initiate camera trigger on regular time intervals sarting from current position.
+
+Parameters
+
+======  ======================  =================================================  
+Name    Type                    Description                                        
+======  ======================  =================================================  
+period  FIELD_SEMANTIC_NUMERIC  Time in seconds to wait between triggers.          
+delay   FIELD_SEMANTIC_NUMERIC  Time in seconds to wait for the first trigger      
+count   FIELD_SEMANTIC_INT      Number of consecutive trigger actions to perform.  
+======  ======================  =================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_camera_trigger_command:
+
+Trigger camera from user interface
+----------------------------------
+
+Mission item ID: "camera_trigger_command"
+
+Description: Initiate camera trigger at current WP
+
+Parameters
+
+=============  ===================  ===========  
+Name           Type                 Description  
+=============  ===================  ===========  
+trigger_state  FIELD_SEMANTIC_ENUM  Camera       
+=============  ===================  ===========
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1trigger_state_command:
+
+Camera trigger states
++++++++++++++++++++++
+
+============  =========================================  =================================  
+Name          Value                                      Description                        
+============  =========================================  =================================  
+video_start   CAMERA_COMMAND_TRIGGER_STATE_VIDEO_START   Start recording                    
+video_stop    CAMERA_COMMAND_TRIGGER_STATE_VIDEO_STOP    Stop recording or serial shooting  
+single_shot   CAMERA_COMMAND_TRIGGER_STATE_SINGLE_SHOT   Take a single photo                
+video_toggle  CAMERA_COMMAND_TRIGGER_STATE_VIDEO_TOGGLE  Switch video on/off                
+============  =========================================  =================================
+
+
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_camera_trigger_mission:
+
+Trigger camera
+--------------
+
+Mission item ID: "camera_trigger_mission"
+
+Description: Initiate camera trigger on regular time intervals sarting from current position.
+
+Parameters
+
+=====  ===================  ===========  
+Name   Type                 Description  
+=====  ===================  ===========  
+state  FIELD_SEMANTIC_ENUM  Camera       
+=====  ===================  ===========
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1trigger_state:
+
+Camera trigger state
+++++++++++++++++++++
+
+============  =========================================  =================================  
+Name          Value                                      Description                        
+============  =========================================  =================================  
+on            CAMERA_MISSION_TRIGGER_STATE_ON            Start recording                    
+off           CAMERA_MISSION_TRIGGER_STATE_OFF           Stop recording or serial shooting  
+single_photo  CAMERA_MISSION_TRIGGER_STATE_SINGLE_PHOTO  Take a single photo                
+serial_photo  CAMERA_MISSION_TRIGGER_STATE_SERIAL_PHOTO  Take a series of photos            
+============  =========================================  =================================
+
+
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_direct_payload_control:
+
+Direct Payload Control
+----------------------
+
+Command ID: "direct_payload_control"
+
+Description: Issue direct payload control command to the vehicle. Used to send joystick values to the vehicle payload.
+
+Parameters
+
+=====  ======================  ======================  
+Name   Type                    Description             
+=====  ======================  ======================  
+pitch  FIELD_SEMANTIC_NUMERIC  pitch value [-1 .. +1]  
+roll   FIELD_SEMANTIC_NUMERIC  roll value [-1 .. +1]   
+yaw    FIELD_SEMANTIC_NUMERIC  yaw value [-1 .. +1]    
+zoom   FIELD_SEMANTIC_NUMERIC  zoom value [-1 .. +1]   
+=====  ======================  ======================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_direct_vehicle_control:
+
+Direct Vehicle Control
+----------------------
+
+Command ID: "direct_vehicle_control"
+
+Description: Issue direct vehicle control command to the vehicle. Used to send joystick values to the vehicle.
+
+Parameters
+
+========  ======================  =========================  
+Name      Type                    Description                
+========  ======================  =========================  
+pitch     FIELD_SEMANTIC_NUMERIC  pitch value [-1 .. +1]     
+roll      FIELD_SEMANTIC_NUMERIC  roll value [-1 .. +1]      
+yaw       FIELD_SEMANTIC_NUMERIC  yaw value [-1 .. +1]       
+throttle  FIELD_SEMANTIC_NUMERIC  throttle value [-1 .. +1]  
+========  ======================  =========================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_disarm:
+
+Disarm vehicle
+--------------
+
+Command ID: "disarm"
+
+Description: Disarm the motors.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_emergency_land:
+
+Emergency Land
+--------------
+
+Command ID: "emergency_land"
+
+Description: Emergency Land. Immediately turn off motors.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_get_native_route:
+
+Get native route
+----------------
+
+Command ID: "get_native_route"
+
+Description:
+
+Convert mission to the UTF8 text file which can be used by vehicle's native application. All mission items are added to **Device_command.sub_commands** list. See also supported commands. The native route file is returned via Device_response.status field.
+
+Supported parameters:
+
+========  ===================  ===============================================================  
+Name      Type                 Description                                                      
+========  ===================  ===============================================================  
+use_crlf  FIELD_SEMANTIC_BOOL  Line endings to be used in returned file. true: CRLF, false: LF  
+========  ===================  ===============================================================
+
+Plus supports all the same parameters as :ref:`Mission upload <doxid-d0/d07/ucs_vsm_commands_page_1c_mission_upload>`
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_guided:
+
+Guided (Click&Go) mode
+----------------------
+
+Command ID: "guided"
+
+Description: Put vehicle in Click&Go control mode. Vehicle can be controlled via :ref:`Waypoint command <doxid-d0/d07/ucs_vsm_commands_page_1c_waypoint>` command.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_joystick:
+
+Joystick
+--------
+
+Command ID: "joystick"
+
+Description: Enter Joystick control mode.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_land_command:
+
+Land
+----
+
+Command ID: "land_command"
+
+Description: Land at current position
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_land_mission:
+
+Landing position
+----------------
+
+Mission item ID: "land_mission"
+
+Description: Specify landing position of the vehicle.
+
+Parameters
+
+=================  ================================  ================================================================================================================================  
+Name               Type                              Description                                                                                                                       
+=================  ================================  ================================================================================================================================  
+latitude           FIELD_SEMANTIC_LATITUDE           Geodetic latitude                                                                                                                 
+longitude          FIELD_SEMANTIC_LONGITUDE          Geodetic longitude                                                                                                                
+altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL      Altitude at which to begin descent.                                                                                               
+descent_rate       FIELD_SEMANTIC_VERTICAL_SPEED     Descent speed in m/s                                                                                                              
+ground_elevation   FIELD_SEMANTIC_GROUND_ELEVATION   Ground elevation at landing position (optional)                                                                                   
+acceptance_radius  FIELD_SEMANTIC_ACCEPTANCE_RADIUS  When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.  
+heading            FIELD_SEMANTIC_HEADING            Vehicle heading at the WP                                                                                                         
+follow_terrain     FIELD_SEMANTIC_BOOL               Vehicle moving to the WP in follow terrain mode. Altitude above terrain is calculated as altitude_amsl minus ground_elevation.    
+=================  ================================  ================================================================================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_manual:
+
+Manual control mode.
+--------------------
+
+Command ID: "manual"
+
+Description: Put vehicle in MANUAL control mode. Vehicle can be controlled via RC transmitter.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_mission_clear:
+
+Delete route from vehicle
+-------------------------
+
+Command ID: "mission_clear"
+
+Description: Deletes the current route from vehicle.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_mission_pause:
+
+Pause mission
+-------------
+
+Command ID: "mission_pause"
+
+Description: Pause mission execution (HOLD). This will put vehicle in either Click&Go or Joystick mode depending on autopilot.
+
+Supported parameters:
+
+===================  ======================  ========================================================================================================================  
+Name                 Type                    Description                                                                                                               
+===================  ======================  ========================================================================================================================  
+additional_altitude  FIELD_SEMANTIC_NUMERIC  After pause climb in given number of meters. This option is may be used for additional safety when flying near the earth  
+===================  ======================  ========================================================================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_mission_resume:
+
+Resume mission flight
+---------------------
+
+Command ID: "mission_resume"
+
+Description: Continue with mission.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_mission_upload:
+
+Mission upload
+--------------
+
+Command ID: "mission_upload"
+
+Description: Uploads mission to the vehicle. All mission items are added to **Device_command.sub_commands** list. See also supported commands.
+
+Some vehicles will return command_map along with the response which can be used to report command from mission the vehicle is executing currently. See message @ Mission_command_map.
+
+Supported parameters:
+
+==================  ============================  ======================================================================================  
+Name                Type                          Description                                                                             
+==================  ============================  ======================================================================================  
+altitude_origin     FIELD_SEMANTIC_ALTITUDE_AMSL  Altitude origin of the vehicle                                                          
+safe_altitude       FIELD_SEMANTIC_ALTITUDE_AMSL  Safe altitude. used for RTH and failsafe actions                                        
+rc_loss_action      FIELD_SEMANTIC_ENUM           Failsafe action on RC loss. See                                                         
+gps_loss_action     FIELD_SEMANTIC_ENUM           Failsafe action on GPS loss. See                                                        
+low_battery_action  FIELD_SEMANTIC_ENUM           Failsafe action on low battery. See                                                     
+rth_action          FIELD_SEMANTIC_ENUM           Action after RTH. See                                                                   
+rth_wait_altitude   FIELD_SEMANTIC_ALTITUDE_AMSL  Final altitude the drone should loiter after RTH. Used only when rth_action is "wait".  
+name                FIELD_SEMANTIC_STRING         User specified mission name                                                             
+==================  ============================  ======================================================================================
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1failsafe_values:
+
+Failsafe actions natively supported by UgCS
++++++++++++++++++++++++++++++++++++++++++++
+
+===========  ========================  ==================================================================  
+Action name  Value                     Description                                                         
+===========  ========================  ==================================================================  
+continue     FAILSAFE_ACTION_CONTINUE  Continue with mission. Effectively ignores the failsafe condition.  
+wait         FAILSAFE_ACTION_WAIT      Wait for failsafe condition to end and then continue with mission.  
+land         FAILSAFE_ACTION_LAND      Land immediately at current position.                               
+rth          FAILSAFE_ACTION_RTH       Climb to safe altitude defined by                                   
+===========  ========================  ==================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1rth_values:
+
+Vehicle behavior after Return To Home
++++++++++++++++++++++++++++++++++++++
+
+===========  ===============  ===============================================================================================================================================  
+Action name  Value            Description                                                                                                                                      
+===========  ===============  ===============================================================================================================================================  
+land         RTH_ACTION_LAND  Descend and land                                                                                                                                 
+wait         RTH_ACTION_WAIT  Do not land the vehicle but loiter at rth_wait_altitude. If rth_wait_altitude is not supported by autopilot then safe_altitude is used instead.  
+===========  ===============  ===============================================================================================================================================
+
+
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_move:
+
+Move command
+------------
+
+Mission item ID: "move"
+
+Description: Specifies the next waypoint. Upon encountering this item vehicle starts navigating to given coordinates using current speed and heading settings. Next mission item will be executed when vehicle arrives at the waypoint.
+
+Supported parameters:
+
+=================  ================================  ===========================================================================================================================================================  
+Name               Type                              Description                                                                                                                                                  
+=================  ================================  ===========================================================================================================================================================  
+latitude           FIELD_SEMANTIC_LATITUDE           Geodetic latitude                                                                                                                                            
+longitude          FIELD_SEMANTIC_LONGITUDE          Geodetic longitude                                                                                                                                           
+altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL                                                                                                                                                                   
+ground_elevation   FIELD_SEMANTIC_GROUND_ELEVATION   Elevation in meters (i.e. terrain height) underneath the position.                                                                                           
+turn_type          FIELD_SEMANTIC_ENUM               See                                                                                                                                                          
+acceptance_radius  FIELD_SEMANTIC_ACCEPTANCE_RADIUS  When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.                             
+loiter_radius      FIELD_SEMANTIC_LOITER_RADIUS      Radius of the point fly-by orbit in meters. Positive value stands for the CW direction, negative - CCW. Use 0 for no-braking pass through the target point.  
+wait_time          FIELD_SEMANTIC_NUMERIC            Seconds to wait at WP before preceeding to next WP                                                                                                           
+heading            FIELD_SEMANTIC_HEADING            Vehicle heading at the WP                                                                                                                                    
+follow_terrain     FIELD_SEMANTIC_BOOL               Vehicle moving to the WP in follow terrain mode. Altitude above terrain is calculated as altitude_amsl minus ground_elevation.                               
+=================  ================================  ===========================================================================================================================================================
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1turn_types:
+
+Vehicle turn types
+++++++++++++++++++
+
+=============  =======================  
+Name           Value                    
+=============  =======================  
+stop_and_turn  TURN_TYPE_STOP_AND_TURN  
+straight       TURN_TYPE_STRAIGHT       
+spline         TURN_TYPE_SPLINE         
+bank_turn      TURN_TYPE_BANK_TURN      
+=============  =======================
+
+
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_panorama:
+
+Panorama
+--------
+
+Mission item ID: "panorama"
+
+Description: Do panorama action.
+
+Parameters
+
+=====  ======================  =====================================================================================================================================================================================  
+Name   Type                    Description                                                                                                                                                                            
+=====  ======================  =====================================================================================================================================================================================  
+angle  FIELD_SEMANTIC_NUMERIC  Target panorama angle in a range [-2Pi, 2Pi]. If positive the rotation direction should be clockwise, if negative the rotation direction should be counter-clockwise. Set in radians.  
+mode   FIELD_SEMANTIC_ENUM     Camera mode. See                                                                                                                                                                       
+step   FIELD_SEMANTIC_NUMERIC  Absolute value of a step angle in case of a discrete shooting. Zero stands for a continuous rotation. Set in radians.                                                                  
+delay  FIELD_SEMANTIC_NUMERIC  Wait time in seconds for each step.                                                                                                                                                    
+speed  FIELD_SEMANTIC_NUMERIC  Angular speed in rad/sec.                                                                                                                                                              
+=====  ======================  =====================================================================================================================================================================================
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1panarama_mode:
+
+Camera mode for panorama
+++++++++++++++++++++++++
+
+=====  ===================  =========================  
+Name   Value                Description                
+=====  ===================  =========================  
+photo  PANORAMA_MODE_PHOTO  Take a photo on each step  
+video  PANORAMA_MODE_VIDEO  Do not stop on each step   
+=====  ===================  =========================
+
+
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_payload_command:
+
+Send payload command
+--------------------
+
+Mission item ID: "payload_command"
+
+Description: Send to onboard computer a specific payload command encoded as a byte string.
+
+Parameters
+
+=======  =====================  ============================================================  
+Name     Type                   Description                                                   
+=======  =====================  ============================================================  
+command  FIELD_SEMANTIC_STRING  Specific payload command arguments encoded as a byte string.  
+=======  =====================  ============================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_payload_control:
+
+Set payload attitude
+--------------------
+
+Mission item ID: "payload_control"
+
+Description: Move payload to given angles and zoom level. This is replacement of previous MAV_CMD_DO_PAYLOAD_CONTROL command.
+
+Parameters
+
+==========  ======================  =========================================================================  
+Name        Type                    Description                                                                
+==========  ======================  =========================================================================  
+tilt        FIELD_SEMANTIC_PITCH    Camera tilt relative to vehicle horizontal plane. Positive is up.          
+roll        FIELD_SEMANTIC_ROLL     Camera roll relative to vehicle horizontal plane. Roll right is positive.  
+yaw         FIELD_SEMANTIC_YAW      Camera way angle relative to vehicle nose. Positive is right.              
+zoom_level  FIELD_SEMANTIC_NUMERIC  Device specific zoom value.                                                
+==========  ======================  =========================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_repeat_servo:
+
+Repeat Servo
+------------
+
+Mission item ID: "repeat_servo"
+
+Description: Move servo to given position and back the specified amount of times. Set servo to given **pwm**, wait for **delay**, set servo to default position, wait for **delay**.
+
+Repeat **count** sets how many times to execute the above sequence. It means that after sequence finishes servo is left at default position. Deafult position is autopilot specific and cannot be specified here.
+
+Parameters
+
+========  ======================  =====================================================  
+Name      Type                    Description                                            
+========  ======================  =====================================================  
+servo_id  FIELD_SEMANTIC_NUMERIC  Vehicle specific servo ID                              
+pwm       FIELD_SEMANTIC_NUMERIC  PWM rate in microseconds. Typical range is 1100..1900  
+delay     FIELD_SEMANTIC_NUMERIC  Delay in seconds                                       
+count     FIELD_SEMANTIC_NUMERIC  How many times to repeat the sequence                  
+========  ======================  =====================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_return_to_home:
+
+Return to Home
+--------------
+
+Command ID: "return_to_home"
+
+Description: Return to Home position.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_select_as_video_source:
+
+Select camera as video source
+-----------------------------
+
+Command ID: "select_as_video_source"
+
+Description: Select this camera as source for video feed. Each camera which can be used as video source should register this command.
+
+There are no parameters for this command.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_fence:
+
+Set Fence
+---------
+
+Command ID: "set_fence"
+
+Description: Create cylindrical fence around Home Location. RTH will be triggered if vehicle tries to leave specified limits.
+
+Parameters
+
+===============  ============================  =========================================================================  
+Name             Type                          Description                                                                
+===============  ============================  =========================================================================  
+altitude_amsl    FIELD_SEMANTIC_ALTITUDE_AMSL  Fence altitude in meters                                                   
+altitude_origin  FIELD_SEMANTIC_ALTITUDE_AMSL  Altitude origin in meters AMSL. Typically this should be the HL altitude.  
+radius           FIELD_SEMANTIC_NUMERIC        FEnce radius in meters. Max ground distance from Home Location             
+===============  ============================  =========================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_gear_state:
+
+Set Gear State
+--------------
+
+Command ID: "set_gear_state"
+
+Description: Retract or release gear
+
+Parameters
+
+=======  ===================  =========================================  
+Name     Type                 Description                                
+=======  ===================  =========================================  
+release  FIELD_SEMANTIC_BOOL  true - release gear, false - retract gear  
+=======  ===================  =========================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_heading:
+
+Heading
+-------
+
+Mission item ID: "set_heading"
+
+Description: Change the heading of vehicle. This makes sense only for copter style vehicles when heading does not specify direction of flight.
+
+**IMPORTANT:** "heading" mission item overrides any heading changes which are implicitly specified by payload control mission items in case payload yaw is controlled by vehicle heading.
+
+Parameters
+
+=======  ======================  ===================================  
+Name     Type                    Description                          
+=======  ======================  ===================================  
+heading  FIELD_SEMANTIC_HEADING  Heading angle in radians from North  
+=======  ======================  ===================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_home:
+
+Set home position
+-----------------
+
+Mission item ID: "set_home"
+
+Description: Specify home position of the vehicle. This is the location the vehicle will return on Return_To_Home command or in case of failsafe event and when failsafe is set to return to home.
+
+Parameters
+
+================  ===============================  ============================================  
+Name              Type                             Description                                   
+================  ===============================  ============================================  
+latitude          FIELD_SEMANTIC_LATITUDE          Geodetic latitude                             
+longitude         FIELD_SEMANTIC_LONGITUDE         Geodetic longitude                            
+altitude_amsl     FIELD_SEMANTIC_ALTITUDE_AMSL     Home position altitude                        
+ground_elevation  FIELD_SEMANTIC_GROUND_ELEVATION  Ground elevation at home position (optional)  
+================  ===============================  ============================================
+
+List of supported payload mission items with detailed description of each item in the following sections.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_parameter:
+
+Set vehicle parameter
+---------------------
+
+Mission item ID: "set_parameter"
+
+Description: Set vehicle parameters.
+
+Supported FC parameters:
+
+===========================  ======================  ===========  
+Name                         Type                    Description  
+===========================  ======================  ===========  
+landing_flare_altitude       FIELD_SEMANTIC_NUMERIC               
+landing_flare_time           FIELD_SEMANTIC_NUMERIC               
+min_landing_pitch            FIELD_SEMANTIC_NUMERIC               
+landing_flare_damp           FIELD_SEMANTIC_NUMERIC               
+landing_approach_airspeed    FIELD_SEMANTIC_NUMERIC               
+landing_speed_weighting      FIELD_SEMANTIC_NUMERIC               
+max_auto_flight_pitch        FIELD_SEMANTIC_NUMERIC               
+max_pitch                    FIELD_SEMANTIC_NUMERIC               
+min_throttle                 FIELD_SEMANTIC_NUMERIC               
+landing_sink_rate            FIELD_SEMANTIC_NUMERIC               
+landing_rangefinder_enabled  FIELD_SEMANTIC_NUMERIC               
+min_rangefinder_distance     FIELD_SEMANTIC_NUMERIC               
+===========================  ======================  ===========
+
+Supported ADSB parameters:
+
+=================  ======================  ==============  
+Name               Type                    Description     
+=================  ======================  ==============  
+adsb_icao          FIELD_SEMANTIC_NUMERIC  24 bit integer  
+adsb_registration  FIELD_SEMANTIC_STRING                   
+adsb_flight_id     FIELD_SEMANTIC_STRING                   
+adsb_squawk        FIELD_SEMANTIC_NUMERIC  12 bit integer  
+=================  ======================  ==============
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_poi:
+
+Point Of Interest
+-----------------
+
+Mission item ID: "set_poi"
+
+Description: Set Point Of Interest.
+
+Parameters
+
+=============  ============================  =======================================  
+Name           Type                          Description                              
+=============  ============================  =======================================  
+latitude       FIELD_SEMANTIC_LATITUDE       Geodetic latitude                        
+longitude      FIELD_SEMANTIC_LONGITUDE      Geodetic longitude                       
+altitude_amsl  FIELD_SEMANTIC_ALTITUDE_AMSL  Altitude AMSL                            
+active         FIELD_SEMANTIC_BOOL           true: start poi, false: end poi action.  
+=============  ============================  =======================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_position_offset:
+
+Set Position Offset
+-------------------
+
+Command ID: "set_position_offset"
+
+Description: Issue vehicle to change it position relatively to current position in body frame.
+
+Parameters
+
+====  ======================  ===============================================  
+Name  Type                    Description                                      
+====  ======================  ===============================================  
+x     FIELD_SEMANTIC_NUMERIC  offset in X-axis in meters (positive - forward)  
+y     FIELD_SEMANTIC_NUMERIC  offset in Y-axis in meters (positive - right)    
+z     FIELD_SEMANTIC_NUMERIC  offset in Z-axis in meters (positive - down)     
+====  ======================  ===============================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_relative_heading:
+
+Set Relative Heading
+--------------------
+
+Command ID: "set_relative_heading"
+
+Description: Issue vehicle to change it heading relatively to current heading.
+
+Parameters
+
+================  ======================  ============================================================================  
+Name              Type                    Description                                                                   
+================  ======================  ============================================================================  
+relative_heading  FIELD_SEMANTIC_NUMERIC  turning around Z-Axis in radians relative to current heading (positive - CW)  
+================  ======================  ============================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_servo:
+
+Set Servo
+---------
+
+Mission item ID: "set_servo"
+
+Description: Move servo to given position and hold.
+
+Parameters
+
+========  ======================  =====================================================  
+Name      Type                    Description                                            
+========  ======================  =====================================================  
+servo_id  FIELD_SEMANTIC_NUMERIC  Vehicle specific servo ID                              
+pwm       FIELD_SEMANTIC_NUMERIC  PWM rate in microseconds. Typical range is 1100..1900  
+========  ======================  =====================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_speed:
+
+Set Speed
+---------
+
+Mission item ID: "set_speed"
+
+Description: Set the maximum ground speed which will be used by vehicle from now on. This is the horizontal component of speed.
+
+Parameters
+
+==============  =============================  ===================  
+Name            Type                           Description          
+==============  =============================  ===================  
+ground_speed    FIELD_SEMANTIC_GROUND_SPEED    Ground speed in m/s  
+vertical_speed  FIELD_SEMANTIC_VERTICAL_SPEED  Climb speed in m/s   
+==============  =============================  ===================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_set_tension:
+
+Set Tension
+-----------
+
+Command ID: "set_tension"
+
+Description: Set tension value for the winch in Newtons
+
+Parameters
+
+=======  ======================  =============  
+Name     Type                    Description    
+=======  ======================  =============  
+tension  FIELD_SEMANTIC_NUMERIC  tension value  
+=======  ======================  =============
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_takeoff_command:
+
+Takeoff
+-------
+
+Command ID: "takeoff_command"
+
+Description: Takeoff from current position
+
+Parameters
+
+=================  ==========================================  =============================  
+Name               Type                                        Description                    
+=================  ==========================================  =============================  
+relative_altitude  FIELD_SEMANTIC_ALTITUDE_RAW, META_VALUE_NA  relative altitude for takeoff  
+=================  ==========================================  =============================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_takeoff_mission:
+
+Takeoff position
+----------------
+
+Mission item ID: "takeoff_mission"
+
+Description: Specify takeoff position of the vehicle.
+
+Parameters
+
+=================  ================================  =================================================================================================================================================================================================================================  
+Name               Type                              Description                                                                                                                                                                                                                        
+=================  ================================  =================================================================================================================================================================================================================================  
+latitude           FIELD_SEMANTIC_LATITUDE           Geodetic latitude                                                                                                                                                                                                                  
+longitude          FIELD_SEMANTIC_LONGITUDE          Geodetic longitude                                                                                                                                                                                                                 
+altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL      Takeoff target altitude. Vehicle will ascend to this altitude before proceeding to given latitude and longitude. If vehicle is airborne and is above target altitude it will proceed to given latitude and longitude immediately.  
+climb_rate         FIELD_SEMANTIC_VERTICAL_SPEED     Climb speed in m/s                                                                                                                                                                                                                 
+ground_elevation   FIELD_SEMANTIC_GROUND_ELEVATION   Ground elevation at takeoff position (optional)                                                                                                                                                                                    
+acceptance_radius  FIELD_SEMANTIC_ACCEPTANCE_RADIUS  When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.                                                                                                   
+heading            FIELD_SEMANTIC_HEADING            Vehicle heading at the WP                                                                                                                                                                                                          
+=================  ================================  =================================================================================================================================================================================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_transition_fixed:
+
+Transition to fixed wing flight
+-------------------------------
+
+Mission item ID: "transition_fixed"
+
+Description: Put the fixed wing VTOL capable vehicle in fixed wing flight mode.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_transition_vtol:
+
+Transition to VTOL flight
+-------------------------
+
+Mission item ID: "transition_vtol"
+
+Description: Put the fixed wing VTOL capable vehicle in copter-like mode.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_trigger_calibration:
+
+Trigger sensor calibration
+--------------------------
+
+Mission item ID: "trigger_calibration"
+
+Description: Starts vehicle sensor calibration sequence. Vehicle must be stationary in on the ground, disarmed.
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_wait:
+
+Wait
+----
+
+Mission item ID: "wait"
+
+Description: Wait for given number of seconds in current position before continuing with next mission item. Specify time==N/A to wait indefinitely.
+
+Parameters
+
+====  ======================  =============================================================================  
+Name  Type                    Description                                                                    
+====  ======================  =============================================================================  
+time  FIELD_SEMANTIC_NUMERIC  Number of seconds to wait. If the field value is N/A, then wait indefinitely.  
+====  ======================  =============================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_wait_until:
+
+Wait
+----
+
+Mission item ID: "wait_until"
+
+Description: Wait until given time before continuing with next mission item. Specify time==N/A to wait indefinitely.
+
+Parameters
+
+====  ========================  ================================================================  
+Name  Type                      Description                                                       
+====  ========================  ================================================================  
+time  FIELD_SEMANTIC_TIMESTAMP  Milliseconds of UTC time since Unix epoch (1970-01-01T00:00:00Z)  
+====  ========================  ================================================================
+
+
+
+
+
+.. _doxid-d0/d07/ucs_vsm_commands_page_1c_waypoint:
+
+Waypoint command
+----------------
+
+Command ID: "waypoint"
+
+Description: Specifies the single waypoint. Used while vehicle is in Click&Go control mode.
+
+Supported parameters:
+
+=================  ================================  ================================================================================================================================  
+Name               Type                              Description                                                                                                                       
+=================  ================================  ================================================================================================================================  
+latitude           FIELD_SEMANTIC_LATITUDE           Geodetic latitude                                                                                                                 
+longitude          FIELD_SEMANTIC_LONGITUDE          Geodetic longitude                                                                                                                
+altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL                                                                                                                                        
+altitude_origin    FIELD_SEMANTIC_ALTITUDE_AMSL      Altitude origin of the vehicle                                                                                                    
+ground_speed       FIELD_SEMANTIC_GROUND_SPEED       Ground speed in m/s                                                                                                               
+vertical_speed     FIELD_SEMANTIC_VERTICAL_SPEED     Climb speed in m/s                                                                                                                
+acceptance_radius  FIELD_SEMANTIC_ACCEPTANCE_RADIUS  When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.  
+heading            FIELD_SEMANTIC_HEADING            Vehicle heading at the WP                                                                                                         
+=================  ================================  ================================================================================================================================
+

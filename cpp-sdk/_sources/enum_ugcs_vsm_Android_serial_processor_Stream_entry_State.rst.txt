@@ -1,0 +1,45 @@
+.. index:: pair: enum; State
+.. _doxid-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25:
+
+enum ugcs::vsm::Android_serial_processor::Stream_entry::State
+=============================================================
+
+Overview
+~~~~~~~~
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <android_serial_processor.h>
+
+	enum State
+	{
+	    :target:`INITIAL<doxid-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25a91d26e4b2b105c74655093c9becd30b7>`,
+	    :target:`FAILED<doxid-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25ab9e14d9b2886bcff408b85aefa780419>`,
+	    :ref:`OPEN_REQUESTED<doxid-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25a0020848960a1c7e06f2417c2ac698ddc>`,
+	    :target:`OPENED<doxid-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25ae670c2408064392c6da7d0b721f7349c>`,
+	    :target:`CLOSED<doxid-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25a110ccf2f5d2ff4eda1fd1a494293467d>`,
+	};
+
+.. _details-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; OPEN_REQUESTED
+.. _doxid-d8/ddc/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream__entry_1a3324bb4cc9938e555854a2f6cceaed25a0020848960a1c7e06f2417c2ac698ddc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	OPEN_REQUESTED
+
+Open requested from :ref:`Java <doxid-d5/d6d/classugcs_1_1vsm_1_1_java>` side.
+

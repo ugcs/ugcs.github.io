@@ -1,0 +1,47 @@
+.. index:: pair: struct; ugcs::vsm::Action::Mapper<Action::Type::MOVE>
+.. _doxid-da/de6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_m_o_v_e_01_4:
+
+template struct ugcs::vsm::Action::Mapper<Action::Type::MOVE>
+=============================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Type mapper from move action. :ref:`More...<details-da/de6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_m_o_v_e_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <move_action.h>
+	
+	template <>
+	struct Mapper<Action::Type::MOVE>
+	{
+		// typedefs
+	
+		typedef :ref:`Move_action<doxid-db/ddf/classugcs_1_1vsm_1_1_move__action>` :ref:`type<doxid-da/de6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_m_o_v_e_01_4_1ace293e007a66b051ed688946d70b0d66>`;
+	};
+.. _details-da/de6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_m_o_v_e_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Type mapper from move action.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; type
+.. _doxid-da/de6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_m_o_v_e_01_4_1ace293e007a66b051ed688946d70b0d66:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Move_action<doxid-db/ddf/classugcs_1_1vsm_1_1_move__action>` type
+
+Real type.
+

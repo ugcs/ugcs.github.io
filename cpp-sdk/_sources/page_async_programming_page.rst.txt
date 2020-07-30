@@ -1,0 +1,510 @@
+.. index:: pair: page; Asynchronous programming framework
+.. _doxid-d4/da8/async_programming_page:
+
+Asynchronous programming framework
+==================================
+
+Since VSM interacts with physical devices (thus doing a lot of various I/O operations), handles communications with other UgCS components (UCS server), asynchronous programming paradigm concept is supported by most of operations implemented in VSMs. It allows convenient creation of event-based applications.
+
+
+
+.. _doxid-d4/da8/async_programming_page_1callbacks_section:
+
+Callbacks
+~~~~~~~~~
+
+Callback is the simplest entity a VSM asynchronous programming framework. All asynchronous handlers are represented as callback objects (:ref:`ugcs::vsm::Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`). Such an object encapsulates the copy of a callable entity (function pointer, class method pointer, lambda, callable object) and copy of all arguments to it. It is similar to std::bind() but provides additional features, such as possibility to use non-copyable objects as arguments (using move semantic), change stored arguments value. Callback usually created by :ref:`ugcs::vsm::Make_callback() <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>` function.
+
+Let's say there is a function to be used as callback:
+
+.. ref-code-block:: cpp
+
+	/* Target function for callback. */
+	int
+	Sample_callback_function(int arg)
+	{
+	    :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Sample callback function, arg: %d", arg);
+	    return arg + 10;
+	}
+
+Note that a function can have a return value or may be returning void, depending on developer needs. Callback object can be created as follows:
+
+.. ref-code-block:: cpp
+
+	auto func_cbk = :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(Sample_callback_function, 10);
+
+It binds value 10 as the argument for the callback. After that callback can be called (invoked, executed):
+
+.. ref-code-block:: cpp
+
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Callback call result: %d", func_cbk());
+
+This will output:
+
+.. code-block:: cpp
+
+	2013-10-01 12:54:50.572 - <DEBUG> [async_workflow.cpp:7] Sample callback function, arg: 10
+	2013-10-01 12:54:50.572 - <DEBUG> [async_workflow.cpp:20] Callback call result: 20
+
+Object method also can be bound as callback. Let's say there is a class:
+
+.. ref-code-block:: cpp
+
+	class Sample_class {
+	public:
+	    int
+	    Sample_callback_method(int arg)
+	    {
+	        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Sample callback method, arg: %d", arg);
+	        return arg + 10;
+	    }
+	};
+
+Its method can be bound:
+
+.. ref-code-block:: cpp
+
+	Sample_class class_instance;
+	auto method_cbk = :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(&Sample_class::Sample_callback_method,
+	                                     &class_instance, 10);
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Callback call result: %d", method_cbk());
+
+Note that the first argument after the method pointer should be a pointer to the class instance to bound the callback to. It may be a plain C++ pointer or any smart pointer (it should have pointer semantic dereferencing operator defined). The output:
+
+.. code-block:: cpp
+
+	2013-10-01 13:48:15.843 - <DEBUG> [async_workflow.cpp:19] Sample callback method, arg: 10
+	2013-10-01 13:48:15.843 - <DEBUG> [async_workflow.cpp:45] Callback call result: 20
+
+Another callback target can be callable object i.e. instance of a class which has the function call operator overloaded:
+
+.. ref-code-block:: cpp
+
+	class Callable_class {
+	public:
+	    int x;
+	
+	    Callable_class(int x):
+	        x(x)
+	    {}
+	
+	    int
+	    operator ()(int y)
+	    {
+	        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Sample callback method, arg: %d", y);
+	        return x + y;
+	    }
+	};
+
+The callable object instance passed as the first parameter to :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>` function:
+
+.. ref-code-block:: cpp
+
+	Callable_class callable_instance(10);
+	auto callable_cbk = :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(callable_instance, 10);
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Callback call result: %d", callable_cbk());
+
+C++ has built-in callable objects lambda functions which also can be used as callback target:
+
+.. ref-code-block:: cpp
+
+	auto lambda_cbk = :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(
+	    [](int arg)
+	    {
+	        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Sample lambda callback, arg: %d", arg);
+	        return arg + 10;
+	    },
+	    10);
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Callback call result: %d", lambda_cbk());
+
+In all cases when some callable entity is used to create a callback, developer should ensure that the entity lifetime is not less than the created callback lifetime, otherwise the behavior of the application is not defined (usually crash). If plain pointer to a class instance is passed, make sure it is not deleted before the last callback instance is destroyed. In general usage of plain pointer should be avoided and some kind of `smartpointers <http://en.cppreference.com/w/cpp/memory/shared_ptr>`__ used instead in order to automatically control objects lifetime.
+
+
+
+.. _doxid-d4/da8/async_programming_page_1enforcing_callback_prototype:
+
+Enforcing callback prototype
+----------------------------
+
+In the examples above callbacks are created with arbitrary prototypes. Usually the callback is passed to some API which stores it as a handler of some event. Often the event has some parameters which should be passed to the handler. Also the callback return value may be used for some purpose by the caller. So in this case the API may want to restrict prototypes for passed callbacks - especially to enforce the type of the return value and types for some number of the first mandatory arguments. These first arguments are then provided by the handler caller and may contain event parameters. All the rest arguments are bound to the user provided values as before.
+
+Required callback prototype is specified via :ref:`ugcs::vsm::Callback_proxy <doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>` object:
+
+.. ref-code-block:: cpp
+
+	typedef :ref:`ugcs::vsm::Callback_proxy\<int, double> <doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>` Sample_handler_type;
+
+The first template parameter defines callback return type (which also can be void) and the rest optional arguments are types the first enforced arguments the callback should be able to accept. In this example, the callback should return *int* and should have the first argument of *double* type. The rest arguments are defined by the user.
+
+Now *Sample_handler_type* is the type for callback the API method can accept:
+
+.. ref-code-block:: cpp
+
+	void
+	Some_api_method(Sample_handler_type handler)
+	{
+	    :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Callback result: %d", handler(20));
+	}
+
+Note that :ref:`ugcs::vsm::Make_callback() <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>` returns object which type is dependent from user defined arguments. The :ref:`ugcs::vsm::Callback_proxy <doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>` class is designed in such a way that it can be created from any callback object which has compatible prototype return value type and types of the specified number of the first arguments.
+
+Now there is an API call which accepts callback with the enforced prototype. Since the enforced arguments occupy the same storage as the arguments specified by the user, some initial values should be provided to :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>` function. For a user it might be inconvenient to define these initial values because he/she does not know which values are suitable to be initial ones. Instead the API developer should provide a so called builder function which provides suitable initial values for the enforced arguments and hides them from the user. This is done by using :ref:`DEFINE_CALLBACK_BUILDER <doxid-da/d05/callback_8h_1aa8f8b02e868d6b8ae25772a955b6d7d7>` macro:
+
+.. ref-code-block:: cpp
+
+	:ref:`DEFINE_CALLBACK_BUILDER <doxid-da/d05/callback_8h_1aa8f8b02e868d6b8ae25772a955b6d7d7>`(Sample_handler_builder, (double), (3.14))
+
+It defines the function *Sample_handler_builder* which returns a callback with one enforced argument of type *double* and its initial value *3.14*.
+
+Now the API user can utilize this builder function to create a callback suitable for passing to the API function:
+
+.. ref-code-block:: cpp
+
+	auto My_callback_target = [](double enforced_arg, int user_arg)
+	    {
+	        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Callback called, enforced argument %f user argument %d",
+	            enforced_arg, user_arg);
+	        return 30;
+	    };
+	Some_api_method(Sample_handler_builder(My_callback_target, 10));
+
+Here user provides only a custom argument of type *int* (10) and the enforced argument of type *double* is hidden at this moment.
+
+The output is:
+
+.. code-block:: cpp
+
+	2013-10-01 18:26:14.712 - <DEBUG> [async_workflow.cpp:105] Callback called, enforced argument 20.000000 user argument 10
+	2013-10-01 18:26:14.712 - <DEBUG> [async_workflow.cpp:89] Callback result: 30
+
+Note that initial value of the enforced argument is replaced by a new value (*20*) at the time of handler invocation in *Some_api_method*. There is a possibility to preserve the current value of the enforced arguments by using :ref:`ugcs::vsm::Callback_proxy::Invoke() <doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a9777aee410a7c87f26fd57a10247477f>` method. Before that the values can be set any number of times using :ref:`ugcs::vsm::Callback_proxy::Set_args() <doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a891dd9644ddff55f4f834a23dde7c7fd>` and :ref:`ugcs::vsm::Callback_proxy::Set_arg() <doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ab628cbdc529e3666b9aecbe59bc4edd2>` methods.
+
+
+
+
+
+
+
+.. _doxid-d4/da8/async_programming_page_1requests_and_contexts_section:
+
+Requests and contexts
+~~~~~~~~~~~~~~~~~~~~~
+
+The plain callbacks described above are just wrappers for user provided entry points. It is not enough for creating asynchronous processing workflow higher level abstractions are needed. Requests and contexts are designed for that purpose.
+
+All potentially blocking operations in VSM SDK are implemented using asynchronous programming pattern. The diagram below illustrates a typical workflow for an asynchronous operation.
+
+.. image:: ../../async_workflow.png
+
+
+
+.. image:: ../../async_workflow.png
+	:width: 18
+	:alt: Asynchronous workflow
+
+By "context" there is meant an execution context in which the processing or completion notification handler (i.e. callback) is executed. The framework provides ability to run contexts in any threads and time moments. For example, there can be several contexts which can be run explicitly in the current thread by calling :ref:`ugcs::vsm::Request_waiter::Wait_and_process() <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a74b1331d9dfe058530c2e8b922a03eb6>` method, or have a dedicated thread wrapped in the convenience class :ref:`ugcs::vsm::Request_worker <doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker>` for running of contexts. Typically request processors (a component or service which processes a user request) has its own execution context usually served in a dedicated thread. Completion context is the one which will handle the request completion notification. In the diagram below user context (i.e. from which the request was initiated) is different from desired completion context. Often the user code may be running in the same context which is provided as completion context for a request. However in some cases it could be desirable to process notification in different context and the SDK provides such ability.
+
+Simple example of the workflow:
+
+.. ref-code-block:: cpp
+
+	/* Create waiter object for our contexts. */
+	:ref:`ugcs::vsm::Request_waiter::Ptr <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter = :ref:`ugcs::vsm::Request_waiter::Create <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a091f8971c953ca128e84d91567b00b52>`();
+	/* Create processor for requests. */
+	:ref:`ugcs::vsm::Request_processor::Ptr <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` processor = :ref:`ugcs::vsm::Request_processor::Create <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1aa503edaf7008fa1a923113518e074018>`("Processor", waiter);
+	/* Create completion context for notifications processing. */
+	:ref:`ugcs::vsm::Request_completion_context::Ptr <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx =
+	        :ref:`ugcs::vsm::Request_completion_context::Create <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1aa503edaf7008fa1a923113518e074018>`("Completion context", waiter);
+
+Instances of processor and completion contexts are created. In this example they will run in one execution context so they will share one :ref:`ugcs::vsm::Request_waiter <doxid-dd/def/namespaceugcs_1_1vsm_1a6df49f1cd8c0bee4e2575bc29e3e683a>` object which is responsible for contexts synchronization. Note that the creation is done by static member function *Create()* and a smart pointer is returned to the user. This is a common approach for the most high-level objects in the SDK. The returned pointer is `std::shared_ptr <http://en.cppreference.com/w/cpp/memory/shared_ptr>`__ instance so that the object is automatically destroyed when the last reference is released (no more pointer instances existing).
+
+After the instances are created, they should be enabled to be able to accept requests.
+
+.. ref-code-block:: cpp
+
+	processor->Enable();
+	comp_ctx->Enable();
+
+Now a request can be created:
+
+.. ref-code-block:: cpp
+
+	:ref:`ugcs::vsm::Request::Ptr <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` req = :ref:`ugcs::vsm::Request::Create <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a342da78756478193a27cc412074fb79f>`();
+	req->Set_processing_handler(
+	    :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(
+	        [](int arg, :ref:`ugcs::vsm::Request::Ptr <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` req)
+	        {
+	            :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Processing handler called, arg %d", arg);
+	            req->Complete();
+	        }, 10, req));
+	req->Set_completion_handler(comp_ctx,
+	    :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(
+	        [](int arg)
+	        {
+	            :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Completion notification handler called, arg %d", arg);
+	        }, 20));
+
+At least a processing handler should be mandatory assigned to the request. A completion handler is optional if it is not provided the request will be processed and no notification is issued. The request pointer is passed as a processing handler parameter. :ref:`ugcs::vsm::Request::Complete() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>` method should be called at some point when the request processing is completed. It is not mandatory to call it in the processing handler a particular processor can store it somewhere in its internal structures and complete the request later, e.g. when some I/O operation is completed. Note that the completion context is provided among with a completion callback in :ref:`ugcs::vsm::Request::Set_completion_handler() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a12ec980ffc633959aed0359cd42536b8>` method. Context for request processing is depending from the processor the request will be submitted to:
+
+.. ref-code-block:: cpp
+
+	processor->Submit_request(req);
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Request submitted");
+
+Now the request is submitted to the processor requests queue. If it would be running in a separate thread, it could be processed in background asynchronously. But in the example there is no processor dedicated thread, so processing should be done explicitly:
+
+.. ref-code-block:: cpp
+
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Before processor running");
+	waiter->Wait_and_process({processor});
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("After processor running");
+
+:ref:`ugcs::vsm::Request_waiter::Wait_and_process() <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a74b1331d9dfe058530c2e8b922a03eb6>` method accepts a list of containers which should be served. It could accept both the processor and completion context here but for illustrative reasons only processor is provided. In the context of this call the processing handler will be called where :ref:`ugcs::vsm::Request::Complete() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>` method places the request in the completed state into completion context queue. It can be served now:
+
+.. ref-code-block:: cpp
+
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Before completion context running");
+	waiter->Wait_and_process({comp_ctx});
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("After completion context running");
+
+The completion handler is called in this context and the request is fully processed after that.
+
+When contexts are not longer needed they should be terminated by :ref:`ugcs::vsm::Request_container::Disable() <doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aa68b072400c148d77a5fab4529e68d8e>` method:
+
+.. ref-code-block:: cpp
+
+	processor->Disable();
+	comp_ctx->Disable();
+
+Many of SDK classes have Enable()/Disable() methods. One could think they are redundant, because class destructors can do the clean up work but it is not true. C++ does not have the garbage collector so even when using smart pointers there could be cyclic references between objects. And when the last external (from developer point of view) reference is released, internal references could still exist and form so called isolation islands preventing destructor calling. In the managed languages like Java and Python the garbage collector runs in the background and detects and destroys such islands. In C++ it is not possible, so developer still needs to keep in mind possible cyclic references and break them manually before reference releasing. One of the most important functions of Disable() methods in the SDK classes is breaking internal cyclic references to avoid memory leaks.
+
+The output of this example:
+
+.. code-block:: cpp
+
+	2013-10-02 13:54:10.618 - <DEBUG> [async_workflow.cpp:148] Request submitted
+	2013-10-02 13:54:10.618 - <DEBUG> [async_workflow.cpp:152] Before processor running
+	2013-10-02 13:54:10.618 - <DEBUG> [async_workflow.cpp:135] Processing handler called, arg 10
+	2013-10-02 13:54:10.618 - <DEBUG> [async_workflow.cpp:154] After processor running
+	2013-10-02 13:54:10.618 - <DEBUG> [async_workflow.cpp:158] Before completion context running
+	2013-10-02 13:54:10.618 - <DEBUG> [async_workflow.cpp:142] Completion notification handler called, arg 20
+	2013-10-02 13:54:10.618 - <DEBUG> [async_workflow.cpp:160] After completion context running
+
+
+
+.. _doxid-d4/da8/async_programming_page_1serving_in_sep_threads:
+
+Serving contexts in dedicated threads
+-------------------------------------
+
+Previous example can be modified so that processor and completion contexts are served by a separate thread. This is quite typical task so the convenience class exists :ref:`ugcs::vsm::Request_worker <doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker>`.
+
+.. ref-code-block:: cpp
+
+	/* Demonstrate contexts serving in a separated thread. */
+	:ref:`ugcs::vsm::Request_worker::Ptr <doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a24f61987e7b9b6cfd179e9a1c86125de>` worker = :ref:`ugcs::vsm::Request_worker::Create <doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1abe7b9cf9d6e427c71e7c1e52d373b527>`("Another thread",
+	    std::initializer_list<ugcs::vsm::Request_container::Ptr>{processor, comp_ctx});
+	/* Enable all attached containers. */
+	worker->Enable_containers();
+	/* Enable the worker. This will launch its thread. */
+	worker->Enable();
+
+Here a worker object is created and contexts are attached to it.
+
+:ref:`ugcs::vsm::Request_worker <doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker>` object itself is a completion context and is served similarly as the attached contexts.
+
+After that the attached containers are enabled as well as the worker object itself. When it is done a separate thread is spawned where all the attached containers are served. Request submitted to the processor will be executed in the worker thread.
+
+.. ref-code-block:: cpp
+
+	req = :ref:`ugcs::vsm::Request::Create <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a342da78756478193a27cc412074fb79f>`();
+	req->Set_processing_handler(
+	    :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(
+	        [](int arg, :ref:`ugcs::vsm::Request::Ptr <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` req)
+	        {
+	            :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Processing handler called, arg %d", arg);
+	            req->Complete();
+	        }, 10, req));
+	req->Set_completion_handler(comp_ctx,
+	    :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(
+	        [](int arg)
+	        {
+	            :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Completion notification handler called, arg %d", arg);
+	        }, 20));
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Before request submission");
+	processor->Submit_request(req);
+	/* Give a chance to process the request in a parallel thread. */
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+	:ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("After request submission");
+
+	/* Disable attached containers and the worker itself. */
+	worker->Disable_containers();
+	worker->Disable();
+
+The output is:
+
+.. code-block:: cpp
+
+	2013-10-02 14:09:54.690 - <DEBUG> [async_workflow.cpp:193] Before request submission
+	2013-10-02 14:09:54.690 - <DEBUG> [async_workflow.cpp:184] Processing handler called, arg 10
+	2013-10-02 14:09:54.690 - <DEBUG> [async_workflow.cpp:191] Completion notification handler called, arg 20
+	2013-10-02 14:09:55.690 - <DEBUG> [async_workflow.cpp:197] After request submission
+
+As it is seen the both processing and completion handlers were called right after submission. It was done in a separate worker thread.
+
+
+
+
+
+.. _doxid-d4/da8/async_programming_page_1creating_own_processor_section:
+
+Creating own processor
+----------------------
+
+In the previous example :ref:`ugcs::vsm::Request_processor <doxid-dd/def/namespaceugcs_1_1vsm_1aaf87aa8291eb8db5efaf3dd1c72153cf>` class was used to process requests. But actually this class does not provide any useful service. All the processing was done by a processing handler provided by the user. This is not a usual pattern because processors are created for providing some service like I/O with some device or network. So they will have their own processing handlers which do the stuff. Also request creation is the thing the user is not supposed to do. The processor usually provides methods which accept request parameters and a result handler with a completion context. The request creation is done inside the processor. Simplest typical processor declaration looks as follows:
+
+.. ref-code-block:: cpp
+
+	class Sample_processor: public :ref:`ugcs::vsm::Request_processor <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context>` {
+	    :ref:`DEFINE_COMMON_CLASS <doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d>`(Sample_processor, :ref:`ugcs::vsm::Request_processor <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context>`)
+	public:
+	    /* Type for result handler. */
+	    typedef :ref:`ugcs::vsm::Callback_proxy\<void, double> <doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>` Handler;
+	    /* Builder for handler. */
+	    :ref:`DEFINE_CALLBACK_BUILDER <doxid-da/d05/callback_8h_1aa8f8b02e868d6b8ae25772a955b6d7d7>`(Make_handler, (double), (3.14));
+	
+	    Sample_processor() : :ref:`ugcs <doxid-d1/d6b/namespaceugcs>`::vsm:::ref:`Request_processor <doxid-dd/def/namespaceugcs_1_1vsm_1aaf87aa8291eb8db5efaf3dd1c72153cf>`("Sample processor") {}
+	
+	    /* The method for accessing processor provided services. */
+	    :ref:`ugcs::vsm::Operation_waiter <doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>`
+	    Sample_api_method(/* Some request parameter. */
+	                      int param,
+	                      /* Result handler. Default one does nothing thus discarding
+	                       * the result.
+	                       */
+	                      Handler handler = ugcs::vsm::Make_dummy_callback<void, double>(),
+	                      /* Completion context for result handler invocation. Default
+	                       * value will use processor context.
+	                       */
+	                      :ref:`ugcs::vsm::Request_completion_context::Ptr <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = nullptr);
+	
+	private:
+	    /* Default completion context if the caller does not provide own one. */
+	    :ref:`ugcs::vsm::Request_completion_context::Ptr <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` def_comp_ctx;
+	    /* Worker with dedicated thread for this processor. */
+	    :ref:`ugcs::vsm::Request_worker::Ptr <doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1a24f61987e7b9b6cfd179e9a1c86125de>` worker;
+	
+	    /* Request processing handler. It is always invoked in the processor dedicated thread. */
+	    void
+	    Process_api_call(int param, :ref:`ugcs::vsm::Request::Ptr <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request, Handler handler);
+	
+	    /* Called when the processor is enabled. */
+	    virtual void
+	    :ref:`On_enable <doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1af51d0c99a3437d4dd52fccc4cc0f1afe>`() override;
+	
+	    /* Called when the processor is enabled. */
+	    virtual void
+	    :ref:`On_disable <doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a5fe483b1424749eef29a433dc8ddb6ba>`() override;
+	};
+
+All processors should be derived from :ref:`ugcs::vsm::Request_processor <doxid-dd/def/namespaceugcs_1_1vsm_1aaf87aa8291eb8db5efaf3dd1c72153cf>` class. Also the convenience macro :ref:`DEFINE_COMMON_CLASS <doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d>` is used to create some typical methods (like Create()) and types (like Ptr). This processor service is available via *Sample_api_method()*. The result is returned via a result handler which may be provided as the method argument. The handler type has the restricted prototype with the corresponding builder method. Member *def_comp_ctx* is default completion context which is used when the user does not provide one. Also the processor has *worker* member in order to have its own dedicated thread.
+
+Methods *On_enable()* and *On_disable()* are called by the framework when the processor is enabled or disabled. They may be overridden if the custom processor needs to intercept these events. Possible implementation:
+
+.. ref-code-block:: cpp
+
+	void
+	Sample_processor::On_enable()
+	{
+	    :ref:`ugcs::vsm::Request_processor::On_enable <doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1af51d0c99a3437d4dd52fccc4cc0f1afe>`();
+	    def_comp_ctx = :ref:`ugcs::vsm::Request_completion_context::Create <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1aa503edaf7008fa1a923113518e074018>`("Completion context");
+	    def_comp_ctx->Enable();
+	    worker = :ref:`ugcs::vsm::Request_worker::Create <doxid-d4/dcf/classugcs_1_1vsm_1_1_request__worker_1abe7b9cf9d6e427c71e7c1e52d373b527>`("Worker",
+	        std::initializer_list<ugcs::vsm::Request_container::Ptr>{Shared_from_this(), def_comp_ctx});
+	    worker->Enable();
+	}
+	
+	void
+	Sample_processor::On_disable()
+	{
+	    Set_disabled();
+	    worker->Disable();
+	    def_comp_ctx->Disable();
+	    def_comp_ctx = nullptr;
+	    worker = nullptr;
+	}
+
+Worker is created with the processor itself and default completion context attached. Note that the base class methods also should be called.
+
+.. ref-code-block:: cpp
+
+	:ref:`ugcs::vsm::Operation_waiter <doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>`
+	Sample_processor::Sample_api_method(int param,
+	                                    Handler handler,
+	                                    :ref:`ugcs::vsm::Request_completion_context::Ptr <doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx)
+	{
+	    :ref:`ugcs::vsm::Request::Ptr <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` req = :ref:`ugcs::vsm::Request::Create <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a342da78756478193a27cc412074fb79f>`();
+	    req->Set_processing_handler(
+	        :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(&Sample_processor::Process_api_call, Shared_from_this(),
+	                           param, req, handler));
+	    req->Set_completion_handler(comp_ctx ? comp_ctx : def_comp_ctx,
+	                                handler);
+	    Submit_request(req);
+	    return req;
+	}
+
+This is a typical implementation of an API call a new request is created and own private method is assigned as a processing handler with all necessary arguments enclosed. Usually a request itself also should be enclosed among with the call parameters. The user provided handler is passed in order to provide ability to set the result there later. An alternative approach may be to create own request type which is derived from :ref:`ugcs::vsm::Request <doxid-dd/def/namespaceugcs_1_1vsm_1a98ac69eea094e0fbb1a059fc0b03d7f4>` class and store all parameters there.
+
+Completion handler is the one specified by the user and either default or user specified completion context.
+
+The request is then submitted to the processor itself.
+
+The call returns :ref:`ugcs::vsm::Operation_waiter <doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` object which is user handle for the request. It can be used, for example, to synchronize with the request execution or to cancel it.
+
+Now the request processing method implementation:
+
+.. ref-code-block:: cpp
+
+	void
+	Sample_processor::Process_api_call(int param, :ref:`ugcs::vsm::Request::Ptr <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request,
+	                                   Handler handler)
+	{
+	    auto lock = request->Lock();
+	    if (!request->Is_processing()) {
+	        /* It might be canceled. */
+	        return;
+	    }
+	    handler.Set_args(param * 2);
+	    request->Complete(:ref:`ugcs::vsm::Request::Status::OK <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564>`, std::move(lock));
+	}
+
+It is called in the processor thread and there is no concurrency with other requests all of them are serialized in the processor requests queue. In many cases it significantly simplifies the processor design by eliminating parallel programming problems like locking and any other kind of synchronization in case all the work is done in a processor context which is a single thread.
+
+The lock to the request is acquired since the request state may be changed from some other thread (e.g. request may be canceled). Under the lock the request state is checked and the argument for the user completion handler is set actually it is the the API call result. After it is done, the request is completed by calling :ref:`ugcs::vsm::Request::Complete() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>` method. The lock is passed there to make it atomically.
+
+Now the simplest custom processor is fully defined and can be tested.
+
+.. ref-code-block:: cpp
+
+	Sample_processor::Ptr processor = Sample_processor::Create();
+	processor->Enable();
+
+	auto handler = Sample_processor::Make_handler(
+	    [](double result, int user_param)
+	    {
+	        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("Request completed, result %f, user param %d", result, user_param);
+	    }, 30);
+	processor->Sample_api_method(10, handler);
+	/* Give a chance to process the request in a parallel thread. */
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+
+	processor->Disable();
+
+The output is
+
+.. code-block:: cpp
+
+	2013-10-02 17:40:52.873 - <DEBUG> [async_workflow.cpp:312] Request completed, result 20.000000, user param 30
+
+There is the source for all examples in this article: :ref:`async_workflow.cpp <doxid-d8/d89/async_workflow_8cpp-example>`
+

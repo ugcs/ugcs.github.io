@@ -1,0 +1,43 @@
+.. index:: pair: class; ugcs::vsm::Quaternion
+.. _doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion:
+
+class ugcs::vsm::Quaternion
+===========================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <quaternion.h>
+	
+	class Quaternion
+	{
+	public:
+		// fields
+	
+		float :target:`x<doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion_1a7560fc4358a6cd89485f7c5b6503dce9>` = 0;
+		float :target:`y<doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion_1a4565e7530c7f89cbf5b42d3af4d46cf4>` = 0;
+		float :target:`z<doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion_1a2690c9a060c9251c3005eebba05403b6>` = 0;
+		float :target:`w<doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion_1ace80992b747fd13071530f0f314c987b>` = 1;
+
+		// methods
+	
+		void :target:`Multiply<doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion_1a8803635e9bdcaf8c61cc30d0be741dbd>`(const Quaternion& q);
+	
+		void :target:`Get_eulers<doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion_1a7e78e9001df1275f24e051a5e15ed0b1>`(
+			float& pitch,
+			float& roll,
+			float& yaw
+			);
+	
+		void :target:`Set_from_eulers<doxid-df/dcd/classugcs_1_1vsm_1_1_quaternion_1ad1cbb05acf0c7af8a0612f1c8dabf947>`(
+			float pitch,
+			float roll,
+			float yaw
+			);
+	};

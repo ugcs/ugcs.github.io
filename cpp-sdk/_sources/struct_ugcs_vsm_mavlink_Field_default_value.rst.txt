@@ -1,0 +1,11 @@
+.. index:: pair: struct; ugcs::vsm::mavlink::Field_default_value
+.. _doxid-d5/d92/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value:
+
+template struct ugcs::vsm::mavlink::Field_default_value
+=======================================================
+
+.. toctree::
+	:hidden:
+
+Default value for a Mavlink field.
+
