@@ -1,0 +1,11 @@
+.. index:: pair: struct; ugcs::vsm::callback_internal::Callback_args_checker
+.. _doxid-de/d3f/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker:
+
+template struct ugcs::vsm::callback_internal::Callback_args_checker
+===================================================================
+
+.. toctree::
+	:hidden:
+
+Helper structure for checking callback argument types.
+

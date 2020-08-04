@@ -1,0 +1,550 @@
+.. index:: pair: class; ugcs::vsm::Io_stream
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream:
+
+class ugcs::vsm::Io_stream
+==========================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Io_stream_State.rst
+	enum_ugcs_vsm_Io_stream_Type.rst
+
+Overview
+~~~~~~~~
+
+Abstract I/O stream interface. :ref:`More...<details-d7/dc6/classugcs_1_1vsm_1_1_io__stream>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <io_stream.h>
+	
+	class Io_stream: public std::enable_shared_from_this< Io_stream >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Io_stream> :ref:`Ptr<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adb1bb7a5387d65f5cd701bf65705c966>`;
+		typedef std::weak_ptr<Io_stream> :ref:`Weak_ptr<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1aead2850047ad407e02e6b388fb1d74bc>`;
+		typedef :ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard>`<:ref:`Io_stream::Ptr<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adb1bb7a5387d65f5cd701bf65705c966>`> :ref:`Ref<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a534252726a25aeb3c0598f7d9a80a0a1>`;
+		typedef int64_t :ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`> :ref:`Write_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a6853ca850b7f78f7e4bd28cc0c991850>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`> :ref:`Read_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0807cf8bf8fe3d009d1d00c872d76531>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void> :ref:`Close_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1af75df5614ea608c625760ecb1f4b6531>`;
+
+		// enums
+	
+		enum :ref:`State<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053>`;
+		enum :ref:`Type<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0b>`;
+
+		// fields
+	
+		static const :ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` :ref:`OFFSET_NONE<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a50c5048c33356dbca76feed7e50e9cc3>`;
+		static const :ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` :ref:`OFFSET_END<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adbd879429e07a03fb271dea51f0b4149>`;
+
+		// construction
+	
+		:ref:`Io_stream<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a39026101714335ddc4062397a0bef1e9>`(const Io_stream&);
+		:ref:`Io_stream<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1acdfcab3354c11c8b8f844a3579a4eda9>`(:ref:`Type<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0b>` type);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adb1bb7a5387d65f5cd701bf65705c966>` :ref:`Create<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1aa33997d1fd85028ec8f48bc98f256deb>`(Args&&... args);
+	
+		static const char* :ref:`Io_result_as_char<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a257a8dae7a29d823813503d92fa4844c>`(const :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>` res);
+		void :ref:`Add_ref<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1add696832c265134f895704fbc980aed6>`();
+		void :ref:`Release_ref<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0be5868ee613163912be2dbe657885e4>`();
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Write<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a1da8e87e4e77334481c273bc5787c2dc>`(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buffer, :ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` offset, :ref:`Write_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a6853ca850b7f78f7e4bd28cc0c991850>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`());
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Write<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1abe77ea76fbda5c6e6817ca2f254786fe>`(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buffer, :ref:`Write_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a6853ca850b7f78f7e4bd28cc0c991850>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`());
+	
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Read<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a394d6ff64258f2e1a2bee4b820f0dfe6>`(
+			size_t max_to_read,
+			size_t min_to_read,
+			:ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` offset,
+			:ref:`Read_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0807cf8bf8fe3d009d1d00c872d76531>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(),
+			:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`()
+			);
+	
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Read<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a513c7643ad813297b3761c93f0ec950c>`(
+			size_t max_to_read,
+			size_t min_to_read = 1,
+			:ref:`Read_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0807cf8bf8fe3d009d1d00c872d76531>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(),
+			:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`()
+			);
+	
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Close<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a99e1e6b6ced4b5e30d509631fbcd879a>`(:ref:`Close_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1af75df5614ea608c625760ecb1f4b6531>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`());
+		:ref:`State<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053>` :ref:`Get_state<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a36032e57353b9c16eab2c9b4114a7c9f>`() const;
+		bool :ref:`Is_closed<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a9978a75e949f05b0bcffb733f424b262>`() const;
+		std::string :ref:`Get_name<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a4fb2c70c7c8764aa1a99b14116c9f5e5>`() const;
+		:ref:`Type<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0b>` :target:`Get_type<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1abd3a6e63fc149cd8500d9e0a82770a54>`() const;
+	};
+
+	// direct descendants
+
+	class :ref:`Stream<doxid-d6/d1a/classugcs_1_1vsm_1_1_android__serial__processor_1_1_stream>`;
+	class :ref:`Stream<doxid-dd/dfd/classugcs_1_1vsm_1_1_file__processor_1_1_stream>`;
+	class :ref:`Stream<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream>`;
+.. _details-d7/dc6/classugcs_1_1vsm_1_1_io__stream:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Abstract I/O stream interface.
+
+All SDK objects which supports reading and/or writing raw bytes (like network connections, files, serial connections) implement this interface.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adb1bb7a5387d65f5cd701bf65705c966:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Io_stream> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1aead2850047ad407e02e6b388fb1d74bc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Io_stream> Weak_ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Ref
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a534252726a25aeb3c0598f7d9a80a0a1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard>`<:ref:`Io_stream::Ptr<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adb1bb7a5387d65f5cd701bf65705c966>`> Ref
+
+Guard object.
+
+.. index:: pair: typedef; Offset
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef int64_t Offset
+
+Offset for read/write operations.
+
+Used by streams which support offsets (like files).
+
+.. index:: pair: typedef; Write_handler
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a6853ca850b7f78f7e4bd28cc0c991850:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`> Write_handler
+
+Default prototype for write operation completion handler.
+
+.. index:: pair: typedef; Read_handler
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0807cf8bf8fe3d009d1d00c872d76531:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`> Read_handler
+
+Default prototype for read operation completion handler.
+
+.. index:: pair: typedef; Close_handler
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1af75df5614ea608c625760ecb1f4b6531:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void> Close_handler
+
+Default prototype for close operation completion handler.
+
+Fields
+------
+
+.. index:: pair: variable; OFFSET_NONE
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a50c5048c33356dbca76feed7e50e9cc3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static const :ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` OFFSET_NONE
+
+Offset special value which indicates that the offset value is not specified.
+
+.. index:: pair: variable; OFFSET_END
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adbd879429e07a03fb271dea51f0b4149:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static const :ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` OFFSET_END
+
+Offset special value which indicates that the offset value corresponds to the stream end (e.g.
+
+append operation).
+
+Construction
+------------
+
+.. index:: pair: function; Io_stream
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a39026101714335ddc4062397a0bef1e9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_stream(const Io_stream&)
+
+There is no sense in copying the stream.
+
+Multiple users of the same stream should copy the shared pointer Ptr.
+
+.. index:: pair: function; Io_stream
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1acdfcab3354c11c8b8f844a3579a4eda9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Io_stream(:ref:`Type<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0b>` type)
+
+Constructor.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1aa33997d1fd85028ec8f48bc98f256deb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1adb1bb7a5387d65f5cd701bf65705c966>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Io_result_as_char
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a257a8dae7a29d823813503d92fa4844c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static const char* Io_result_as_char(const :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>` res)
+
+Convert Io_result value to character string.
+
+.. index:: pair: function; Add_ref
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1add696832c265134f895704fbc980aed6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Add_ref()
+
+Add reference to the stream.
+
+.. index:: pair: function; Release_ref
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0be5868ee613163912be2dbe657885e4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Release_ref()
+
+Release reference for the stream.
+
+The stream is closed when last reference is released.
+
+.. index:: pair: function; Write
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a1da8e87e4e77334481c273bc5787c2dc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Write(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buffer, :ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` offset, :ref:`Write_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a6853ca850b7f78f7e4bd28cc0c991850>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`())
+
+Initiate write operation.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buffer
+
+		- Buffer with data to write.
+
+	*
+		- offset
+
+		- Write offset in the stream if supported. Value OFFSET_NONE indicates that stream-maintained offset should be used.
+
+	*
+		- completion_handler
+
+		- Handler to invoke when the operation is completed.
+
+	*
+		- comp_ctx
+
+		- Completion context for the operation.
+
+	*
+		- Invalid_param_exception
+
+		- If handler is set without completion context or vice versa.
+
+
+
+.. rubric:: Returns:
+
+Waiter object which can be used for synchronization and control.
+
+.. index:: pair: function; Write
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1abe77ea76fbda5c6e6817ca2f254786fe:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Write(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buffer, :ref:`Write_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a6853ca850b7f78f7e4bd28cc0c991850>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`())
+
+Initiate write operation.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- buffer
+
+		- Buffer with data to write.
+
+	*
+		- completion_handler
+
+		- Handler to invoke when the operation is completed.
+
+	*
+		- comp_ctx
+
+		- Completion context for the operation.
+
+	*
+		- Invalid_param_exception
+
+		- If handler is set without completion context or vice versa.
+
+
+
+.. rubric:: Returns:
+
+Waiter object which can be used for synchronization and control.
+
+.. index:: pair: function; Read
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a394d6ff64258f2e1a2bee4b820f0dfe6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Read(
+		size_t max_to_read,
+		size_t min_to_read,
+		:ref:`Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` offset,
+		:ref:`Read_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0807cf8bf8fe3d009d1d00c872d76531>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(),
+		:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`()
+		)
+
+Initiate read operation.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- max_to_read
+
+		- Maximal number of bytes to read from the stream. Less bytes can be read in fact.
+
+	*
+		- min_to_read
+
+		- Minimal number of bytes to read from the stream. The operation is not completed until the specified minimal number of bytes is read.
+
+	*
+		- offset
+
+		- Read offset in the stream if supported. Value OFFSET_NONE indicates that stream-maintained offset should be used.
+
+	*
+		- completion_handler
+
+		- Handler to invoke when the operation is completed.
+
+	*
+		- comp_ctx
+
+		- Completion context for the operation.
+
+	*
+		- Invalid_param_exception
+
+		- If handler is set without completion context or vice versa.
+
+	*
+		- Invalid_param_exception
+
+		- If Max to read is less then Min to read.
+
+
+
+.. rubric:: Returns:
+
+Waiter object which can be used for synchronization and control.
+
+.. index:: pair: function; Read
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a513c7643ad813297b3761c93f0ec950c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Read(
+		size_t max_to_read,
+		size_t min_to_read = 1,
+		:ref:`Read_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a0807cf8bf8fe3d009d1d00c872d76531>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(),
+		:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`()
+		)
+
+Initiate read operation.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- max_to_read
+
+		- Maximal number of bytes to read from the stream. Less bytes can be read in fact. If max_to_read is set to 0, then it is determined automatically based on stream type: TCP: max_to_read = MAX_TCP_PAYLOAD_SIZE_TO_READ UDP: max_to_read = MIN_UDP_PAYLOAD_SIZE_TO_READ serial and other stream types: max_to_read = min_to_read
+
+	*
+		- min_to_read
+
+		- Minimal number of bytes to read from the stream. The operation is not completed until the specified minimal number of bytes is read.
+
+	*
+		- completion_handler
+
+		- Handler to invoke when the operation is completed.
+
+	*
+		- comp_ctx
+
+		- Completion context for the operation.
+
+	*
+		- Invalid_param_exception
+
+		- If handler is set without completion context or vice versa.
+
+	*
+		- Invalid_param_exception
+
+		- If Max to read is less then Min to read.
+
+
+
+.. rubric:: Returns:
+
+Waiter object which can be used for synchronization and control.
+
+.. index:: pair: function; Close
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a99e1e6b6ced4b5e30d509631fbcd879a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` Close(:ref:`Close_handler<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1af75df5614ea608c625760ecb1f4b6531>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`())
+
+Initiate stream close operation.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- completion_handler
+
+		- Completion handler for the operation.
+
+	*
+		- comp_ctx
+
+		- Completion context for the operation.
+
+	*
+		- Invalid_param_exception
+
+		- If handler is set without completion context or vice versa.
+
+
+
+.. rubric:: Returns:
+
+Waiter object which can be used for synchronization and control.
+
+.. index:: pair: function; Get_state
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a36032e57353b9c16eab2c9b4114a7c9f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`State<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053>` Get_state() const
+
+Get current state of the stream.
+
+.. index:: pair: function; Is_closed
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a9978a75e949f05b0bcffb733f424b262:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_closed() const
+
+Checks if stream is closed or not.
+
+.. index:: pair: function; Get_name
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a4fb2c70c7c8764aa1a99b14116c9f5e5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string Get_name() const
+
+Get human readable stream name.
+

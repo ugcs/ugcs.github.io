@@ -1,0 +1,11 @@
+.. index:: pair: struct; ugcs::vsm::Action::Format_exception_dummy_struct
+.. _doxid-d8/d4a/structugcs_1_1vsm_1_1_action_1_1_format__exception__dummy__struct:
+
+struct ugcs::vsm::Action::Format_exception_dummy_struct
+=======================================================
+
+.. toctree::
+	:hidden:
+
+Thrown when internal action representation is in a wrong format.
+

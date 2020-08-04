@@ -1,0 +1,51 @@
+.. index:: pair: struct; ugcs::vsm::mavlink::Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type>
+.. _doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91:
+
+template struct ugcs::vsm::mavlink::Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type>
+===========================================================================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Partial specialization for floating point types. :ref:`More...<details-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <mavlink.h>
+	
+	template <class T>
+	struct Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type>
+	{
+		// fields
+	
+		static constexpr T :target:`value<doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91_1a261862a01069bef98ae4ce2a18a2b1ff>` = std::numeric_limits<T>::quiet_NaN();
+
+		// methods
+	
+		static bool :ref:`Is_default<doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91_1ac332aecd80f03b10a6540f200a58e3d7>`(T val);
+	};
+.. _details-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Partial specialization for floating point types.
+
+Methods
+-------
+
+.. index:: pair: function; Is_default
+.. _doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91_1ac332aecd80f03b10a6540f200a58e3d7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static bool Is_default(T val)
+
+Default value checker.
+

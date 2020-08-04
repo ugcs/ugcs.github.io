@@ -1,0 +1,251 @@
+.. index:: pair: class; ugcs::vsm::Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard:
+
+template class ugcs::vsm::Reference_guard
+=========================================
+
+.. toctree::
+	:hidden:
+
+	class_ugcs_vsm_Reference_guard_Hasher.rst
+
+Overview
+~~~~~~~~
+
+Reference guard objects keep references for managed objects. :ref:`More...<details-d2/d2c/classugcs_1_1vsm_1_1_reference__guard>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <reference_guard.h>
+	
+	template <typename Class_ptr>
+	class Reference_guard
+	{
+	public:
+		// classes
+	
+		class :ref:`Hasher<doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher>`;
+
+		// fields
+	
+		decltype(*std::declval<Class_ptr>() :ref:`operator*<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1ab9ba647d1b00bd2461f831f73acf2728>`)();
+
+		// construction
+	
+		:ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1abb88b6b66d605193f0361562f1f852fa>`(std::nullptr_t ptr = nullptr);
+		:ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a1a8e9a7623a440d608f2b8f8cb0f7fc7>`(const Class_ptr& ptr);
+		:ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a090506204e3aeab5e1cae75aba2beacc>`(Class_ptr&& ptr);
+		:ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a7d61dc6876a1b7a97d806ffea66f9b8f>`(const Reference_guard<Class_ptr>& ref);
+		:ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a44483bb6211f294f1227fc9bbe7f3d3b>`(Reference_guard<Class_ptr>&& ref);
+	
+		template <typename Src_class_ptr>
+		:ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1aedfa36ff574407d9d05dff34587b1e74>`(const Reference_guard<Src_class_ptr>& ref);
+	
+		template <typename Src_class_ptr>
+		:ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1afdb7c185cd43d3dd18737825cb8e149d>`(Reference_guard<Src_class_ptr>&& ref);
+
+		// methods
+	
+		Reference_guard<Class_ptr>& :ref:`operator =<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1af35b9f75872b6cc46d9363f4a376ed84>` (const Reference_guard<Class_ptr>& ref);
+		Reference_guard<Class_ptr>& :ref:`operator =<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a010cb14802f9113fe81a2b9c0a1a8473>` (Reference_guard<Class_ptr>&& ref);
+		Reference_guard<Class_ptr>& :ref:`operator =<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a96ad79b4d196d52e7fa2c505f922432a>` (std::nullptr_t ref  __attribute__(unused));
+		bool :ref:`operator ==<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a09b63467ee4feff3d5894271bdb7e200>` (const Reference_guard<Class_ptr>& ref) const;
+		bool :ref:`operator !=<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a8e456d107b5d3b3c11a44d673444eced>` (const Reference_guard<Class_ptr>& ref) const;
+		:ref:`operator bool<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1ab85794f8be49c7457f4b5e48d101ea70>` () const;
+		Class_ptr :ref:`operator -><doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a86332448537499a693dfb81615f0b5c4>` ();
+		const Class_ptr :ref:`operator -><doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a561a50e7c4e12075b63711fb7180bc9d>` () const;
+	};
+.. _details-d2/d2c/classugcs_1_1vsm_1_1_reference__guard:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Reference guard objects keep references for managed objects.
+
+The managed object should have Add_ref() and Release_ref() methods which are called by the guarded object. Release_ref() can tear down the object when last reference is released. Both Add_ref() and Release_ref() should be thread-safe.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Class_ptr
+
+		- Type for referenced object pointer. It can be either plain pointer or any smart pointer class.
+
+Fields
+------
+
+.. index:: pair: variable; operator*
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1ab9ba647d1b00bd2461f831f73acf2728:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	decltype(*std::declval<Class_ptr>() operator*)()
+
+Dereference is transparent.
+
+Construction
+------------
+
+.. index:: pair: function; Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1abb88b6b66d605193f0361562f1f852fa:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard(std::nullptr_t ptr = nullptr)
+
+Construct an empty guard which doesn't have managed object.
+
+.. index:: pair: function; Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a1a8e9a7623a440d608f2b8f8cb0f7fc7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard(const Class_ptr& ptr)
+
+Construct guard object.
+
+.. index:: pair: function; Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a090506204e3aeab5e1cae75aba2beacc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard(Class_ptr&& ptr)
+
+Construct guard by moving managed object to the guard.
+
+.. index:: pair: function; Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a7d61dc6876a1b7a97d806ffea66f9b8f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard(const Reference_guard<Class_ptr>& ref)
+
+Copy guard object.
+
+.. index:: pair: function; Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a44483bb6211f294f1227fc9bbe7f3d3b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard(Reference_guard<Class_ptr>&& ref)
+
+Move guard object.
+
+.. index:: pair: function; Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1aedfa36ff574407d9d05dff34587b1e74:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename Src_class_ptr>
+	Reference_guard(const Reference_guard<Src_class_ptr>& ref)
+
+Copy guard object.
+
+.. index:: pair: function; Reference_guard
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1afdb7c185cd43d3dd18737825cb8e149d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename Src_class_ptr>
+	Reference_guard(Reference_guard<Src_class_ptr>&& ref)
+
+Move guard object.
+
+Methods
+-------
+
+.. index:: pair: function; operator=
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1af35b9f75872b6cc46d9363f4a376ed84:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard<Class_ptr>& operator = (const Reference_guard<Class_ptr>& ref)
+
+Copy assignment.
+
+.. index:: pair: function; operator=
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a010cb14802f9113fe81a2b9c0a1a8473:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard<Class_ptr>& operator = (Reference_guard<Class_ptr>&& ref)
+
+Move assignment.
+
+.. index:: pair: function; operator=
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a96ad79b4d196d52e7fa2c505f922432a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Reference_guard<Class_ptr>& operator = (std::nullptr_t ref  __attribute__(unused))
+
+nullptr assignment.
+
+.. index:: pair: function; operator==
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a09b63467ee4feff3d5894271bdb7e200:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator == (const Reference_guard<Class_ptr>& ref) const
+
+Guards are equal when managed object pointers are equal.
+
+.. index:: pair: function; operator!=
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a8e456d107b5d3b3c11a44d673444eced:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator != (const Reference_guard<Class_ptr>& ref) const
+
+Guards are not equal when managed object pointers are not equal.
+
+.. index:: pair: function; operator bool
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1ab85794f8be49c7457f4b5e48d101ea70:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator bool () const
+
+Guards yields to true when managed object does exist.
+
+.. index:: pair: function; operator->
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a86332448537499a693dfb81615f0b5c4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Class_ptr operator -> ()
+
+Member access is transparent.
+
+.. index:: pair: function; operator->
+.. _doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard_1a561a50e7c4e12075b63711fb7180bc9d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const Class_ptr operator -> () const
+
+Member access is transparent.
+

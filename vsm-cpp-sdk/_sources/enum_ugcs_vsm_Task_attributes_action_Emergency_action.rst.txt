@@ -1,0 +1,85 @@
+.. index:: pair: enum; Emergency_action
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599e:
+
+enum ugcs::vsm::Task_attributes_action::Emergency_action
+========================================================
+
+Overview
+~~~~~~~~
+
+:ref:`Action <doxid-dc/d7a/classugcs_1_1vsm_1_1_action>` to perform in case of emergency. :ref:`More...<details-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599e>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <task_attributes_action.h>
+
+	enum Emergency_action
+	{
+	    :ref:`GO_HOME<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea624c51e4242d2faea1bfdda011457251>`,
+	    :ref:`LAND<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea13f7e58a63feaf4a06f36069e82b56b3>`,
+	    :ref:`WAIT<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea156408bbc6db66d220f3565cd59e0314>`,
+	    :ref:`CONTINUE<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ead0797192461626d42ae6497baa3a1166>`,
+	    :ref:`DO_NOT_CHANGE<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea1f70c701259f5a3ded85a20f91652bdf>`,
+	};
+
+.. _details-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599e:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Action <doxid-dc/d7a/classugcs_1_1vsm_1_1_action>` to perform in case of emergency.
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; GO_HOME
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea624c51e4242d2faea1bfdda011457251:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	GO_HOME
+
+Return and land at the home position.
+
+.. index:: pair: enumvalue; LAND
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea13f7e58a63feaf4a06f36069e82b56b3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	LAND
+
+Land at the current position.
+
+.. index:: pair: enumvalue; WAIT
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea156408bbc6db66d220f3565cd59e0314:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	WAIT
+
+Hover at the current position.
+
+.. index:: pair: enumvalue; CONTINUE
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ead0797192461626d42ae6497baa3a1166:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CONTINUE
+
+Continue the task.
+
+.. index:: pair: enumvalue; DO_NOT_CHANGE
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599ea1f70c701259f5a3ded85a20f91652bdf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	DO_NOT_CHANGE
+
+do not change
+

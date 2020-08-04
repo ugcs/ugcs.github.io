@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Property &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum ugcs::vsm::Property::Value_spec" href="enum_ugcs_vsm_Property_Value_spec.html" />
+    <link rel="prev" title="class ugcs::vsm::Properties::Property" href="class_ugcs_vsm_Properties_Property.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#typedefs" class="nav-link">Typedefs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-property">
+<span id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property"></span><span id="index-0"></span><h1>class ugcs::vsm::Property<a class="headerlink" href="#class-ugcs-vsm-property" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;property.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">Property</span><span class="p">:</span> <span class="k">public</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_shared_from_this</span><span class="o">&lt;</span> <span class="n">Property</span> <span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Property</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Property</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a56feb2e726ee6f29f21fd9b175ae466f"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_Property_Value_spec.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aaed13ada56592b68886939638ef2e65a"><span class="std std-ref">Value_spec</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_Property_Value_type.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a09db7d8a6c3e7e57b8c226d93b5c2ac0"><span class="std std-ref">Value_type</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a8c520a2d38ecee3d43cae889f8c3ce1f"><span></span><span class="n">Property</span></span><span></span><span class="p">(</span>
+        <span class="kt">int</span> <span class="n">id</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <span class="n">proto</span><span class="o">::</span><span class="n">Field_semantic</span> <span class="n">semantic</span>
+        <span class="p">);</span>
+
+    <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aacf05c1e966f6c8575449e8849567a71"><span></span><span class="n">Property</span></span><span></span><span class="p">(</span>
+        <span class="kt">int</span> <span class="n">id</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <a class="reference internal" href="enum_ugcs_vsm_Property_Value_type.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a09db7d8a6c3e7e57b8c226d93b5c2ac0"><span class="std std-ref">Value_type</span></a><span></span> <span class="n">type</span>
+        <span class="p">);</span>
+
+    <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a6e5e9ece7ae5787c0d1af2a872e5b59d"><span></span><span class="n">Property</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">Property::Ptr</span></a><span></span><span class="p">);</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+    <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ad377cb42258b890c6a4c252230aa38ba"><span></span><span class="n">Property</span></span><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <span class="n">Type</span> <span class="n">value</span><span class="p">,</span>
+        <span class="n">proto</span><span class="o">::</span><span class="n">Field_semantic</span> <span class="n">sem</span> <span class="o">=</span> <span class="n">proto</span><span class="o">::</span><span class="n">FIELD_SEMANTIC_DEFAULT</span>
+        <span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a070627bd5fcd4cc7e155c1ab7afb322a"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ab3d8293a5218785bfb07e88326fb9c53"><span></span><span class="n">Add_enum</span></span><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">value</span>
+        <span class="p">);</span>
+
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a391bf8c307181dacf8cc796a5131ec07"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a5a75acfed1bb60eb9289deaceb1c230e"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="kt">double</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a8a21afb675ff4547837fb539b30f13dd"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a2491cb12a61ea24bd45ff252c070f5d2"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1acd378ed6c95b9dd52e693746d56331b9"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ae2ff13ebd0a0f601809f64b17cd1de91"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a30dca0f1675717c9d3f8d459e211caa9"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">List_value</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a943ff4e4d5269de149c28a992aecc76a"><span></span><span class="n">Set_value_na</span></span><span></span><span class="p">();</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a1c3bf8982ccbc23a4640e6c427963de9"><span></span><span class="n">Set_value</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">Field_value</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a58507857f0197096bd22b226191f7173"><span></span><span class="n">Register</span></span><span></span><span class="p">(</span><span class="n">proto</span><span class="o">::</span><span class="n">Register_field</span><span class="o">*</span> <span class="n">field</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1acedc0ba0114ceacc99bdfdb284665e13"><span></span><span class="n">Write_as_property</span></span><span></span><span class="p">(</span><span class="n">proto</span><span class="o">::</span><span class="n">Property_field</span><span class="o">*</span> <span class="n">field</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a779e84ec35dc93ee3a4f47274b5219b6"><span></span><span class="n">Write_as_parameter</span></span><span></span><span class="p">(</span><span class="n">proto</span><span class="o">::</span><span class="n">Parameter_field</span><span class="o">*</span> <span class="n">field</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ac1eb6ed32f10c1412820bd7673a76120"><span></span><span class="n">Write_as_telemetry</span></span><span></span><span class="p">(</span><span class="n">proto</span><span class="o">::</span><span class="n">Telemetry_field</span><span class="o">*</span> <span class="n">field</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ae2f6134e8f53f9143fc1acf330f9936d"><span></span><span class="n">Set_timeout</span></span><span></span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">Property::Ptr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a1bf008f26305675d2c4311b3c5405a94"><span></span><span class="n">Min_value</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">Property::Ptr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ad2d328cd0ddbe5cc42543c3c90baf0a6"><span></span><span class="n">Max_value</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">Property::Ptr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a13d9b6886d12503a5607fc54e59b5a1d"><span></span><span class="n">Default_value</span></span><span></span><span class="p">();</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a172985e4e518b524ce26dd9daf630c26"><span></span><span class="n">Get_value</span></span><span></span><span class="p">(</span><span class="kt">bool</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a3b1e464c09042cc4ce1bee319d639883"><span></span><span class="n">Get_value</span></span><span></span><span class="p">(</span><span class="kt">float</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a6b6a748f4ced62d8db571c79b5ba9338"><span></span><span class="n">Get_value</span></span><span></span><span class="p">(</span><span class="kt">double</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a37ab4d36af9aa3caa888ea67dd1e0234"><span></span><span class="n">Get_value</span></span><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ae001621062d22283a324abf315a1cdf5"><span></span><span class="n">Get_value</span></span><span></span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a67324bf9e3def870a6d5aa01d19ea9f2"><span></span><span class="n">Get_value</span></span><span></span><span class="p">(</span><span class="kt">int64_t</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1ab8865cd69c15a90933607a0a9016e449"><span></span><span class="n">Get_value</span></span><span></span><span class="p">(</span><span class="n">proto</span><span class="o">::</span><span class="n">List_value</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a73cf1e75dad50462213cb597aea7c4a9"><span></span><span class="n">Is_value_na</span></span><span></span><span class="p">();</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a2aeda2adb91e9e9aeb9a14c079b97f15"><span></span><span class="n">Is_changed</span></span><span></span><span class="p">();</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a67259b5cdb3432a42c29b9c0f37698ae"><span></span><span class="n">Set_changed</span></span><span></span><span class="p">();</span>
+    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1af30291771987a1da8c1a40331f7f03c9"><span></span><span class="n">Get_id</span></span><span></span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1acc0d8c86c9de6df34585f2cbc024436a"><span></span><span class="n">Get_name</span></span><span></span><span class="p">();</span>
+    <span class="n">proto</span><span class="o">::</span><span class="n">Field_semantic</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1adbfa0457a0b5a61e4fd609fc1c10ff9a"><span></span><span class="n">Get_semantic</span></span><span></span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a2023641a22e8f462fb8c49b016ca56b7"><span></span><span class="n">Get_update_time</span></span><span></span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a17647e3010fc2b998a0f8158481d5472"><span></span><span class="n">Dump_value</span></span><span></span><span class="p">();</span>
+
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a6c3e4e2051e0cb7def684d258018948c"><span></span><span class="n">Fields_are_equal</span></span><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">Field_value</span><span class="o">&amp;</span> <span class="n">val1</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">Field_value</span><span class="o">&amp;</span> <span class="n">val2</span>
+        <span class="p">);</span>
+
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a1cd7e4d7ad93d5c0dfc4f606349c248d"><span></span><span class="n">Is_equal</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Property</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d2-d7c-classugcs-1-1vsm-1-1-property"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Property</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a56feb2e726ee6f29f21fd9b175ae466f"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Property</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
+<p>Pointer type.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a070627bd5fcd4cc7e155c1ab7afb322a"><span id="index-3"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">static</span> <a class="reference internal" href="#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Create an instance.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Properties_Property.html" title="previous page">class ugcs::vsm::Properties::Property</a>
+    <a class='right-next' id="next-link" href="enum_ugcs_vsm_Property_Value_spec.html" title="next page">enum ugcs::vsm::Property::Value_spec</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

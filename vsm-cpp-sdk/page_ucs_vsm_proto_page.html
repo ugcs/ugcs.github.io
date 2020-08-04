@@ -1,0 +1,945 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ucs_vsm.proto &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Vehicle registration with UCS" href="page_ucs_vsm_registration_page.html" />
+    <link rel="prev" title="UCS-VSM communications protocol" href="page_ucs_vsm_protocol_page.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="page_vehicle_interface_page.html">Device interface</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="page_async_programming_page.html">Asynchronous programming framework</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="page_service_discovery_page.html">Automatic Service Discovery</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="page_ucs_vsm_protocol_page.html">UCS-VSM communications protocol</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="">ucs_vsm.proto</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_registration_page.html">Vehicle registration with UCS</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_fields_page.html">Field types and semantics</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_telemetry_page.html">Telemetry protocol</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_commands_page.html">UCS-VSM Commands</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_protocol_examples_page.html">UCS-VSM protocol example</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_protocol_wire_format_page.html">UCS-VSM protocol wire format</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#protobuf-definition-files" class="nav-link">Protobuf definition files</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#protobuf-message-definitions" class="nav-link">Protobuf Message definitions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#protobuf-enumerations" class="nav-link">Protobuf enumerations</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="ucs-vsm-proto">
+<span id="doxid-d0-dba-ucs-vsm-proto-page"></span><span id="index-0"></span><h1>ucs_vsm.proto<a class="headerlink" href="#ucs-vsm-proto" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="protobuf-definition-files">
+<span id="doxid-d0-dba-ucs-vsm-proto-page-1proto-files"></span><h2>Protobuf definition files<a class="headerlink" href="#protobuf-definition-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="protobuf-message-definitions">
+<span id="doxid-d0-dba-ucs-vsm-proto-page-1proto-messages"></span><h3>Protobuf Message definitions<a class="headerlink" href="#protobuf-message-definitions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight literal-block"><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">LITE_RUNTIME</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">ugcs</span><span class="p">.</span><span class="n">vsm</span><span class="p">.</span><span class="n">proto</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">java_package</span> <span class="o">=</span> <span class="s">&quot;com.ugcs.ucs.vsm.proto&quot;</span><span class="p">;</span>
+<span class="n">option</span> <span class="n">java_outer_classname</span> <span class="o">=</span> <span class="s">&quot;VsmMessagesProto&quot;</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="s">&quot;ucs_vsm_defs.proto&quot;</span><span class="p">;</span>
+
+<span class="c1">// VSM-UCS Transport protocol wire format definition</span>
+<span class="c1">//</span>
+<span class="c1">// Frame wire format:</span>
+<span class="c1">// &lt;length&gt;&lt;data&gt;</span>
+<span class="c1">// length   Size of data in bytes encoded as LEB128 (https://en.wikipedia.org/wiki/LEB128)</span>
+<span class="c1">// data     Message data of type Vsm_message</span>
+<span class="c1">//</span>
+<span class="c1">// Having only one message type allows us to avoid sending message ID on the wire with each message.</span>
+
+<span class="c1">// Generic message</span>
+<span class="n">message</span> <span class="n">Vsm_message</span> <span class="p">{</span>
+
+    <span class="c1">// Uniquely identifies the connected device. Exception is register_peer payload when this field is zero.</span>
+    <span class="c1">// This id is generated when Register_device message is created.</span>
+    <span class="c1">// It defines the context (session) for all subsequent communications with the device (in both directions).</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">device_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Unique message id. This will be put into response if response is required. Can be omitted if response is not required.</span>
+    <span class="c1">// Request message_id if this message is a response to particular request.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">message_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Indicates that peer will wait for response on this command.</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">response_required</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Used to detect duplicate connections between ucs and vsm.</span>
+    <span class="c1">// This must be the first message sent from ucs and VSM on new connection.</span>
+    <span class="c1">// In this case device_id==0 which means this message is for peer application not device.</span>
+    <span class="c1">// No device specific payloads can be present if device_id==0.</span>
+    <span class="n">optional</span> <span class="n">Register_peer</span> <span class="n">register_peer</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="n">Register_device</span> <span class="n">register_device</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="n">Unregister_device</span> <span class="n">unregister_device</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="n">repeated</span> <span class="n">Device_command</span> <span class="n">device_commands</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// If this field is present then this is a response to previously sent request.</span>
+    <span class="c1">// If message_id is present, too then it contains the message_id from the corresponding request.</span>
+    <span class="n">optional</span> <span class="n">Device_response</span> <span class="n">device_response</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Device can send this message any time it wants to report some info to ucs.</span>
+    <span class="n">optional</span> <span class="n">Device_status</span> <span class="n">device_status</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Used to tell the unique application ID to detect concurrent connections and for version compatibility.</span>
+<span class="n">message</span> <span class="n">Register_peer</span> <span class="p">{</span>
+
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">peer_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Type and version of peer.</span>
+    <span class="c1">// Application can use this information to detect the level of compatibility.</span>
+    <span class="c1">// It can decide to continue to use, close or ignore the connection.</span>
+    <span class="n">optional</span> <span class="n">Peer_type</span> <span class="n">peer_type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">version_minor</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">version_major</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">version_build</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Peer name</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Register various kinds of devices.</span>
+<span class="n">message</span> <span class="n">Register_device</span> <span class="p">{</span>
+
+    <span class="c1">// begin_of_epoch is used to optimize space used for timestamp in each telemetry field.</span>
+    <span class="c1">// the absolute time is calculated as begin_of_epoch + timestamp.</span>
+    <span class="c1">// Milliseconds since 1970-01-01 00:00:00 UTC.</span>
+    <span class="c1">// This value is vehicle registration time. Thus UCS</span>
+    <span class="c1">// could show a warning about out of sync time between ucs and VSM if the value</span>
+    <span class="c1">// differs from current time a lot.</span>
+    <span class="n">required</span> <span class="n">uint64</span> <span class="n">begin_of_epoch</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Vehicle, Adsb receiver, RTK base station, etc...</span>
+    <span class="n">required</span> <span class="n">Device_type</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// User definable key-value pairs</span>
+    <span class="n">repeated</span> <span class="n">Property_field</span> <span class="n">properties</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// flight controller, gimbal, cameras, etc...</span>
+    <span class="n">repeated</span> <span class="n">Register_subsystem</span> <span class="n">subsystems</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Invalidates the specified Vsm_message.device_id</span>
+<span class="c1">// Presence of this payload means that device has disconnected and all its state should be dropped.</span>
+<span class="c1">// Use this to drop any context established via Register_device message.</span>
+<span class="c1">// Important: Automatically unregisters all subsystems registered under this device.</span>
+<span class="n">message</span> <span class="n">Unregister_device</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Device_status</span> <span class="p">{</span>
+
+    <span class="c1">// place to put raw data received from vehicle or debug messages from VSM.</span>
+    <span class="n">repeated</span> <span class="n">string</span> <span class="n">status_messages</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Device telemetry</span>
+    <span class="n">repeated</span> <span class="n">Telemetry_field</span> <span class="n">telemetry_fields</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// current command availability</span>
+    <span class="n">repeated</span> <span class="n">Command_availability</span> <span class="n">command_availability</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Device_response</span> <span class="p">{</span>
+
+    <span class="c1">// Response code. on previously sent request.</span>
+    <span class="n">required</span> <span class="n">Status_code</span> <span class="n">code</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// array of values to create localized error string for given Status_code.</span>
+    <span class="n">repeated</span> <span class="n">string</span> <span class="n">arguments</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// place to put raw data received from vehicle or debug messages from VSM.</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">status</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// VSM generated mission ID which is later reported in telemetry as current_mission_id</span>
+    <span class="c1">// It is used to tell the server the validity of mission_command_map.</span>
+    <span class="c1">// Server should drop the mission map as soon as VSM reports different current_mission_id.</span>
+    <span class="c1">// Server must ignore the reported curent_command values until it gets a valid current_mission_id.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">mission_id</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Command mapping between mission uploaded to the vehicle and mission received by server.</span>
+    <span class="c1">// Server must keep this map tied to specific vehicle instance until vehicle</span>
+    <span class="c1">// explicitly reports current_mission_id different from this one.</span>
+    <span class="c1">// Server should use this map to map reported current_command only while VSM reports the same current_mission_id.</span>
+    <span class="c1">// I.e. server should keep the map but not use it if VSM reports current_mission_id==N/A.</span>
+    <span class="n">repeated</span> <span class="n">Mission_command_map</span> <span class="n">mission_command_map</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Used to report progress of a pending command.</span>
+    <span class="c1">// Peer can send this any number of times before sending final response.</span>
+    <span class="c1">// Range: [0..1]</span>
+    <span class="n">optional</span> <span class="kt">float</span> <span class="n">progress</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Mission_command_map</span> <span class="p">{</span>
+
+    <span class="c1">// Current command ID reported by the VSM as current_command telemetry field.</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">vehicle_command_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Corresponding command index in mission_upload sub_commands array. 0-based.</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">mission_command_idx</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Device_command</span> <span class="p">{</span>
+
+    <span class="c1">// Command id (Must be from previously registered commands)</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">command_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// list of command parameters.</span>
+    <span class="n">repeated</span> <span class="n">Parameter_field</span> <span class="n">parameters</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// List of subcommands (E.g. mission items)</span>
+    <span class="n">repeated</span> <span class="n">Device_command</span> <span class="n">sub_commands</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Telemetry_field</span> <span class="p">{</span>
+
+    <span class="c1">// Session wide unique field id defined via Register_field message</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">field_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Time in ms this value was gathered since begin_of_epoch which set in Register_device message.</span>
+    <span class="c1">// NOTE: this value is calculated using system_clock and must not be assumed monotonic.</span>
+    <span class="c1">// It can have negative values if system_clock is turned back while VSM is running.</span>
+    <span class="n">required</span> <span class="n">sint64</span> <span class="n">ms_since_epoch</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="n">required</span> <span class="n">Field_value</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Parameter_field</span> <span class="p">{</span>
+
+    <span class="c1">// Unique field id defined via Register_field message</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">field_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">required</span> <span class="n">Field_value</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Property_field</span> <span class="p">{</span>
+
+    <span class="c1">// parameter name used to send some value without registering first.</span>
+    <span class="n">required</span> <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">required</span> <span class="n">Field_value</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Specifies the value type.</span>
+    <span class="n">required</span> <span class="n">Field_semantic</span> <span class="n">semantic</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Field_value</span> <span class="p">{</span>
+
+    <span class="c1">// If this is present field value is one of supported &quot;meta&quot; values.</span>
+    <span class="n">optional</span> <span class="n">Meta_value</span> <span class="n">meta_value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// value holders for various regular field types.</span>
+    <span class="n">optional</span> <span class="n">sint64</span> <span class="n">int_value</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="kt">float</span> <span class="n">float_value</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">double_value</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">string_value</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">bool_value</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="n">List_value</span> <span class="n">list_value</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="n">optional</span> <span class="n">bytes</span> <span class="n">bytes_value</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">List_value</span> <span class="p">{</span>
+
+    <span class="n">repeated</span> <span class="n">Field_value</span> <span class="n">values</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// VSM can enable/disable specific command at runtime</span>
+<span class="n">message</span> <span class="n">Command_availability</span> <span class="p">{</span>
+
+    <span class="c1">// command_id</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// capability is supported by vehicle</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">is_available</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// capability can be used on the vehicle, currently</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">is_enabled</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// VSM must send this message before it can be used or Command_availability can be sent.</span>
+<span class="n">message</span> <span class="n">Register_command</span> <span class="p">{</span>
+
+    <span class="c1">// Name of command</span>
+    <span class="n">required</span> <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Session specific id for name.</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// parameters supported by command.</span>
+    <span class="n">repeated</span> <span class="n">Register_field</span> <span class="n">parameters</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// this command is available as mission item</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">available_in_mission</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">message</span> <span class="n">Register_subsystem</span> <span class="p">{</span>
+
+    <span class="c1">// Type of subsystem</span>
+    <span class="n">required</span> <span class="n">Subsystem_type</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Subsystem properties</span>
+    <span class="n">repeated</span> <span class="n">Property_field</span> <span class="n">properties</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Telemetry fields supported by subsystem</span>
+    <span class="n">repeated</span> <span class="n">Register_field</span> <span class="n">telemetry_fields</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Commands supported by subsystem</span>
+    <span class="n">repeated</span> <span class="n">Register_command</span> <span class="n">commands</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Used to send definitions of vehicle supported parameters and telemetry fields to UCS</span>
+<span class="n">message</span> <span class="n">Register_field</span> <span class="p">{</span>
+
+    <span class="c1">// Name of telemetry field.</span>
+    <span class="n">required</span> <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Session specific field id.</span>
+    <span class="n">required</span> <span class="n">uint32</span> <span class="n">field_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Required for any defined field. Specifies the value type.</span>
+    <span class="n">required</span> <span class="n">Field_semantic</span> <span class="n">semantic</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Default value to show in client.</span>
+    <span class="c1">// If min_value == max_value it means that parameter is not user changeable and should be set to default_value.</span>
+    <span class="n">optional</span> <span class="n">Field_value</span> <span class="n">default_value</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Minimum value of field</span>
+    <span class="n">optional</span> <span class="n">Field_value</span> <span class="n">min_value</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Maximum value of field</span>
+    <span class="n">optional</span> <span class="n">Field_value</span> <span class="n">max_value</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// User defined enumeration when field_semantic == FIELD_SEMANTIC_ENUM.</span>
+    <span class="n">repeated</span> <span class="n">Field_enumeration</span> <span class="n">enumeration</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Used to send definitions of user-defined enumerations used in telemetry and parameters.</span>
+<span class="n">message</span> <span class="n">Field_enumeration</span> <span class="p">{</span>
+
+    <span class="c1">// Value of enum field</span>
+    <span class="c1">// The value of id must be constant for the field it is defined for.</span>
+    <span class="c1">// I.e. it cannot be session specific. These values are saved directly in telemetry database.</span>
+    <span class="n">required</span> <span class="n">int32</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Description of the value</span>
+    <span class="n">required</span> <span class="n">string</span> <span class="n">description</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span></pre>
+</div>
+<div class="section" id="protobuf-enumerations">
+<span id="doxid-d0-dba-ucs-vsm-proto-page-1proto-enums"></span><h3>Protobuf enumerations<a class="headerlink" href="#protobuf-enumerations" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight literal-block"><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">LITE_RUNTIME</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">ugcs</span><span class="p">.</span><span class="n">vsm</span><span class="p">.</span><span class="n">proto</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">java_package</span> <span class="o">=</span> <span class="s">&quot;com.ugcs.ucs.vsm.proto&quot;</span><span class="p">;</span>
+<span class="n">option</span> <span class="n">java_outer_classname</span> <span class="o">=</span> <span class="s">&quot;VsmDefinitionsProto&quot;</span><span class="p">;</span>
+
+<span class="k">enum</span> <span class="n">Peer_type</span> <span class="p">{</span>
+    <span class="n">PEER_TYPE_SERVER</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PEER_TYPE_VSM</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">PEER_TYPE_VSM_ANDROID</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">PEER_TYPE_VSM_IOS</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Response code sent by VSM to UCS</span>
+<span class="k">enum</span> <span class="n">Status_code</span> <span class="p">{</span>
+    <span class="n">STATUS_OK</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c1">// Generic error</span>
+    <span class="n">STATUS_FAILED</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="c1">// Command is not supported</span>
+    <span class="n">STATUS_INVALID_COMMAND</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="c1">// Command parameters are invalid</span>
+    <span class="c1">// Cannot use STATUS_INVALID_PARAMETER because it clashes with define in winnt.h</span>
+    <span class="n">STATUS_INVALID_PARAM</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="c1">// Invalid session id</span>
+    <span class="n">STATUS_INVALID_SESSION_ID</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="c1">// Used to notify peer that command is in progress.</span>
+    <span class="n">STATUS_IN_PROGRESS</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Used in property &quot;vehicle_type&quot; for Device of type DEVICE_TYPE_VEHICLE</span>
+<span class="k">enum</span> <span class="n">Vehicle_type</span> <span class="p">{</span>
+    <span class="n">VEHICLE_TYPE_GROUND</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">VEHICLE_TYPE_FIXED_WING</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">VEHICLE_TYPE_MULTICOPTER</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">VEHICLE_TYPE_HELICOPTER</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">VEHICLE_TYPE_VTOL</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>          <span class="c1">// Vehicle is capable of both fixed wing and multicopter style of flight.</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Meta_value</span> <span class="p">{</span>
+    <span class="n">META_VALUE_NA</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Built in subsystem types natively supported by UgCS. Used in Register_subsystem.type field.</span>
+<span class="c1">// Each subsystem can register a arbitrary set of properties, commands and telemetry.</span>
+<span class="c1">// Each subsystem has a set of properties, commands and telemetry fields which are supported natively by UgCS.</span>
+<span class="c1">// Refer to UCS-VSM protocol documentation.</span>
+<span class="k">enum</span> <span class="n">Subsystem_type</span> <span class="p">{</span>
+    <span class="n">SUBSYSTEM_TYPE_USER</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// Can be used for any other subsystem not mentioned below.</span>
+    <span class="n">SUBSYSTEM_TYPE_FLIGHT_CONTROLLER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">SUBSYSTEM_TYPE_GIMBAL</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">SUBSYSTEM_TYPE_CAMERA</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">SUBSYSTEM_TYPE_ADSB_TRANSPONDER</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="n">SUBSYSTEM_TYPE_WINCH</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>   <span class="c1">// Airmast winch</span>
+    <span class="n">SUBSYSTEM_TYPE_HANGAR</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="n">SUBSYSTEM_TYPE_GPR</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">//  Ground penetrating radar</span>
+    <span class="n">SUBSYSTEM_TYPE_ADSB_RECEIVER</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>    <span class="c1">// Onboard adsb receiver for vehicle</span>
+    <span class="n">SUBSYSTEM_TYPE_ADSB_VEHICLE</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>    <span class="c1">// Used to report telemetry for devices of type DEVICE_TYPE_ADSB_VEHICLE</span>
+    <span class="n">SUBSYSTEM_TYPE_WEATHER_STATION</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Built in device types natively supported by UgCS. Used in Register_device.type field.</span>
+<span class="c1">// Each device can register a arbitrary sets of properties and subsystems.</span>
+<span class="c1">// Some device types have properties which are supported natively by UgCS. Some of them are required.</span>
+<span class="c1">// Refer to UCS-VSM protocol documentation.</span>
+<span class="k">enum</span> <span class="n">Device_type</span> <span class="p">{</span>
+
+    <span class="c1">// Real vehicle which can be controlled by UgCS</span>
+    <span class="n">DEVICE_TYPE_VEHICLE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="c1">// Device capable of executing vehicle specific commands but does not represent real vehicle.</span>
+    <span class="c1">// Used to provide vehicle specific functionality without an actual vehicle.</span>
+    <span class="c1">// The native route file is returned via Device_response.status field.</span>
+    <span class="n">DEVICE_TYPE_VEHICLE_COMMAND_PROCESSOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Adsb receiver connected directly to VSM</span>
+    <span class="n">DEVICE_TYPE_ADSB_RECEIVER</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Vehicle reported by ADSB receiver with its own telemetry</span>
+    <span class="n">DEVICE_TYPE_ADSB_VEHICLE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Device capable of sending RTK</span>
+    <span class="n">DEVICE_TYPE_RTK_BASE_STATION</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Built in telemetry enums</span>
+
+<span class="k">enum</span> <span class="n">Gps_fix_type</span> <span class="p">{</span>
+    <span class="n">GPS_FIX_TYPE_NONE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">GPS_FIX_TYPE_2D</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">GPS_FIX_TYPE_3D</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">GPS_FIX_TYPE_DIFF</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">GPS_FIX_TYPE_RTK_FIXED</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="n">GPS_FIX_TYPE_RTK_FLOAT</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Control_mode</span> <span class="p">{</span>
+    <span class="n">CONTROL_MODE_MANUAL</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">CONTROL_MODE_AUTO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">CONTROL_MODE_CLICK_GO</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">CONTROL_MODE_JOYSTICK</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">CONTROL_MODE_ACTIVE_TRACK</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Flight_mode</span> <span class="p">{</span>
+    <span class="n">FLIGHT_MODE_WAYPOINTS</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Vehicle is navigating mission waypoints</span>
+    <span class="n">FLIGHT_MODE_RTH</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>        <span class="c1">// Vehicle is returning home</span>
+    <span class="n">FLIGHT_MODE_LAND</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>       <span class="c1">// Vehicle is landing</span>
+    <span class="n">FLIGHT_MODE_TAKEOFF</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>    <span class="c1">// Vehicle is taking off</span>
+    <span class="n">FLIGHT_MODE_HOLD</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>       <span class="c1">// Vehicle is holding position.</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Autopilot_status</span> <span class="p">{</span>
+    <span class="n">AUTOPILOT_STATUS_STANDBY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Vehicle is standby, grounded</span>
+    <span class="n">AUTOPILOT_STATUS_ACTIVE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>    <span class="c1">// Vehicle is active, airborne</span>
+    <span class="n">AUTOPILOT_STATUS_CRITICAL</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// Vehicle is in critical state, failsafe is on</span>
+    <span class="n">AUTOPILOT_STATUS_EMERGENCY</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// Vehicle is in emergency or crashed</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Dock_part_status</span> <span class="p">{</span>
+    <span class="n">DOCK_PART_OPENED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">DOCK_PART_CLOSED</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">DOCK_PART_OPENING</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">DOCK_PART_CLOSING</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// These types match the Type Code/Emitter Category byte of ADSB message.</span>
+<span class="c1">// Do not modify the values!</span>
+<span class="k">enum</span> <span class="n">Adsb_emitter_type</span> <span class="p">{</span>
+    <span class="c1">// Category A subtypes</span>
+    <span class="n">ADSB_EMITTER_TYPE_NO_INFO_A</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_LIGHT</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_SMALL</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_LARGE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_HIGH_VORTEX_LARGE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_HEAVY</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_HIGH_PERFORMANCE</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_ROTORCRAFT</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="c1">// Category B subtypes</span>
+    <span class="n">ADSB_EMITTER_TYPE_NO_INFO_B</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_GLIDER_SAILPLANE</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_LIGHTER_THAN_AIR</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_SKYDIVER</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_ULTRALIGHT_PARAGLIDER</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_13</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_UAV</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_SPACE_TRANS_ATMOSPHERIC</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+    <span class="c1">// Category C subtypes</span>
+    <span class="n">ADSB_EMITTER_TYPE_NO_INFO_C</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_SURFACE_EMERGENCY</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_SURFACE_SERVICE</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_POINT_OBSTACLE</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_CLUSTER_OBSTACLE</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_LINE_OBSTACLE</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_22</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_23</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
+    <span class="c1">// Category D subtypes</span>
+    <span class="n">ADSB_EMITTER_TYPE_NO_INFO_D</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_25</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_26</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_27</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_28</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_29</span> <span class="o">=</span> <span class="mi">29</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_30</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+    <span class="n">ADSB_EMITTER_TYPE_RESERVED_31</span> <span class="o">=</span> <span class="mi">31</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Adsb_altitude_source</span> <span class="p">{</span>
+    <span class="n">ADSB_ALTITUDE_SOURCE_BARO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">ADSB_ALTITUDE_SOURCE_GNSS</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Built in command parameter enums</span>
+
+<span class="k">enum</span> <span class="n">Adsb_mode</span> <span class="p">{</span>
+    <span class="n">ADSB_MODE_OFF</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">ADSB_MODE_STBY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">ADSB_MODE_ON</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">ADSB_MODE_ALT</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Failsafe_action</span> <span class="p">{</span>
+    <span class="n">FAILSAFE_ACTION_RTH</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">FAILSAFE_ACTION_LAND</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">FAILSAFE_ACTION_WAIT</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">FAILSAFE_ACTION_CONTINUE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Action after RTH</span>
+<span class="k">enum</span> <span class="n">Rth_action</span> <span class="p">{</span>
+    <span class="n">RTH_ACTION_LAND</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">RTH_ACTION_WAIT</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Camera_power_state</span> <span class="p">{</span>
+    <span class="n">CAMERA_POWER_STATE_ON</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">CAMERA_POWER_STATE_OFF</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">CAMERA_POWER_STATE_TOGGLE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Camera_video_source</span> <span class="p">{</span>
+    <span class="n">CAMERA_VIDEO_SOURCE_PRIMARY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">CAMERA_VIDEO_SOURCE_SECONDARY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Camera_command_trigger_state</span> <span class="p">{</span>
+    <span class="n">CAMERA_COMMAND_TRIGGER_STATE_SINGLE_SHOT</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">CAMERA_COMMAND_TRIGGER_STATE_VIDEO_START</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">CAMERA_COMMAND_TRIGGER_STATE_VIDEO_STOP</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">CAMERA_COMMAND_TRIGGER_STATE_VIDEO_TOGGLE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Camera_mission_trigger_state</span> <span class="p">{</span>
+    <span class="n">CAMERA_MISSION_TRIGGER_STATE_ON</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">CAMERA_MISSION_TRIGGER_STATE_OFF</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">CAMERA_MISSION_TRIGGER_STATE_SINGLE_PHOTO</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">CAMERA_MISSION_TRIGGER_STATE_SERIAL_PHOTO</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Panorama_mode</span> <span class="p">{</span>
+    <span class="n">PANORAMA_MODE_PHOTO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PANORAMA_MODE_VIDEO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span> <span class="n">Turn_type</span> <span class="p">{</span>
+    <span class="n">TURN_TYPE_STOP_AND_TURN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TURN_TYPE_STRAIGHT</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">TURN_TYPE_SPLINE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">TURN_TYPE_BANK_TURN</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Field/parameter type (semantic)</span>
+<span class="k">enum</span> <span class="n">Field_semantic</span> <span class="p">{</span>
+
+    <span class="c1">// Used internally.</span>
+    <span class="n">FIELD_SEMANTIC_DEFAULT</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c1">// Description, Units, Data type, Range, Origin, Positive direction</span>
+
+    <span class="c1">// Geodetic latitude, radians, double, -Pi/2..Pi/2, equator, north</span>
+    <span class="n">FIELD_SEMANTIC_LATITUDE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Geodetic longitude, radians, double, -Pi..Pi, Greenwich meridian, East</span>
+    <span class="n">FIELD_SEMANTIC_LONGITUDE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// WGS84 altitude, meters, numeric</span>
+    <span class="n">FIELD_SEMANTIC_ALTITUDE_AMSL</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Altitude AGL, meters, numeric</span>
+    <span class="n">FIELD_SEMANTIC_ALTITUDE_AGL</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Raw altitude reading from vehicle. Typically above home location., meters, numeric</span>
+    <span class="n">FIELD_SEMANTIC_ALTITUDE_RAW</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Vehicle nose angle, radians, numeric, 0..2Pi, North, East</span>
+    <span class="n">FIELD_SEMANTIC_HEADING</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Battery voltage, volts, numeric</span>
+    <span class="n">FIELD_SEMANTIC_VOLTAGE</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Air speed, m/s, numeric</span>
+    <span class="n">FIELD_SEMANTIC_AIR_SPEED</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// Ground speed, m/s, numeric</span>
+    <span class="n">FIELD_SEMANTIC_GROUND_SPEED</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// Climb speed, m/s, numeric</span>
+    <span class="n">FIELD_SEMANTIC_VERTICAL_SPEED</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+    <span class="c1">// GNSS satellite count, numeric</span>
+    <span class="n">FIELD_SEMANTIC_SATELLITE_COUNT</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+    <span class="c1">// Fix type, numeric, enum Gps_fix_type</span>
+    <span class="n">FIELD_SEMANTIC_GPS_FIX_TYPE</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+
+    <span class="c1">// Roll angle, radians, numeric, -Pi..Pi, Horizon, right</span>
+    <span class="n">FIELD_SEMANTIC_ROLL</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+
+    <span class="c1">// Pitch angle, radians, numeric, -Pi..Pi, Horizon, up</span>
+    <span class="n">FIELD_SEMANTIC_PITCH</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+    <span class="c1">// Yaw angle, radians, numeric, 0..2Pi, unspecified, East</span>
+    <span class="n">FIELD_SEMANTIC_YAW</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
+    <span class="c1">// RC link quality, , numeric, [0..1]</span>
+    <span class="n">FIELD_SEMANTIC_RC_LINK_QUALITY</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
+
+    <span class="c1">// Battery current, amperes, numeric</span>
+    <span class="n">FIELD_SEMANTIC_CURRENT</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+
+    <span class="c1">// Groundstation datalink quality, , numeric, [0..1]</span>
+    <span class="n">FIELD_SEMANTIC_GCS_LINK_QUALITY</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+
+    <span class="c1">// Camera Field-of-view horizontal angle, radians, numeric, 0..Pi</span>
+    <span class="n">FIELD_SEMANTIC_FOV_H</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
+
+    <span class="c1">// Camera Field-of-view veritcal angle, radians, numeric, 0..Pi</span>
+    <span class="n">FIELD_SEMANTIC_FOV_V</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
+
+    <span class="c1">// Current control mode, int, enum Control_mode</span>
+    <span class="n">FIELD_SEMANTIC_CONTROL_MODE</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+
+    <span class="c1">// Terrain elevation AMSL, meters, numeric</span>
+    <span class="n">FIELD_SEMANTIC_GROUND_ELEVATION</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span>
+
+    <span class="c1">// Waypoint acceptance radius, meters, numeric</span>
+    <span class="n">FIELD_SEMANTIC_ACCEPTANCE_RADIUS</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span>
+
+    <span class="c1">// Waypoint loiter radius, meters, numeric</span>
+    <span class="n">FIELD_SEMANTIC_LOITER_RADIUS</span> <span class="o">=</span> <span class="mi">29</span><span class="p">;</span>
+
+    <span class="c1">// ADSB icao code, 24 bits, numeric, represented as hex</span>
+    <span class="n">FIELD_SEMANTIC_ICAO</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+
+    <span class="c1">// ADSB transponder mode, enum, Adsb_mode, numeric</span>
+    <span class="n">FIELD_SEMANTIC_ADSB_MODE</span> <span class="o">=</span> <span class="mi">31</span><span class="p">;</span>
+
+    <span class="c1">// ADSB squawk code, 12 bits, numeric, represented as octal</span>
+    <span class="n">FIELD_SEMANTIC_SQUAWK</span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span>
+
+    <span class="c1">// Time interval, milliseconds, numeric, represented as time</span>
+    <span class="n">FIELD_SEMANTIC_MILLISECONDS</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+
+    <span class="c1">// Battery capacity percentage, numeric, [0..1]</span>
+    <span class="n">FIELD_SEMANTIC_CAPACITY_LEVEL</span> <span class="o">=</span> <span class="mi">34</span><span class="p">;</span>
+
+    <span class="c1">// Vehicle flight mode, enum, Flight_mode</span>
+    <span class="n">FIELD_SEMANTIC_FLIGHT_MODE</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
+
+    <span class="c1">// Autopilot status, enum</span>
+    <span class="n">FIELD_SEMANTIC_AUTOPILOT_STATUS</span> <span class="o">=</span> <span class="mi">36</span><span class="p">;</span>
+
+    <span class="c1">// Time since Unix epoch (1970-01-01T00:00:00Z), int64, milliseconds</span>
+    <span class="n">FIELD_SEMANTIC_TIMESTAMP</span> <span class="o">=</span> <span class="mi">37</span><span class="p">;</span>
+
+    <span class="c1">// Temperature, celsius, numeric</span>
+    <span class="n">FIELD_SEMANTIC_TEMPERATURE</span> <span class="o">=</span> <span class="mi">38</span><span class="p">;</span>
+
+    <span class="c1">// Humidity, percentage, numeric, [0..100]</span>
+    <span class="n">FIELD_SEMANTIC_HUMIDITY</span> <span class="o">=</span> <span class="mi">39</span><span class="p">;</span>
+
+    <span class="c1">// Precipitation, mm/hour, numeric, [0,2..150]</span>
+    <span class="n">FIELD_SEMANTIC_PRECIPITATION</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+
+
+    <span class="c1">// Generic types used for user-defined telemetry fields.</span>
+
+    <span class="c1">// Value can be of any type. Field can hold any one of supported values.</span>
+    <span class="c1">// VSM will determine the value type depending on which value is present in Field_value.</span>
+    <span class="c1">// The order is: double, int, string, bool, list.</span>
+    <span class="c1">// For example, if field contains both int and string values then string value will be ignored.</span>
+    <span class="n">FIELD_SEMANTIC_ANY</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+    <span class="c1">// Generic number type. Exact type (float, int, etc...) will be detected automatically</span>
+    <span class="n">FIELD_SEMANTIC_NUMERIC</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
+
+    <span class="c1">// boolean</span>
+    <span class="n">FIELD_SEMANTIC_BOOL</span> <span class="o">=</span> <span class="mi">104</span><span class="p">;</span>
+
+    <span class="c1">// utf8 string</span>
+    <span class="n">FIELD_SEMANTIC_STRING</span> <span class="o">=</span> <span class="mi">105</span><span class="p">;</span>
+
+    <span class="c1">// enum. Possible values defined via Register_enumeration message.</span>
+    <span class="n">FIELD_SEMANTIC_ENUM</span> <span class="o">=</span> <span class="mi">106</span><span class="p">;</span>
+
+    <span class="c1">// list.</span>
+    <span class="n">FIELD_SEMANTIC_LIST</span> <span class="o">=</span> <span class="mi">107</span><span class="p">;</span>
+
+    <span class="c1">// Unformatted binary data</span>
+    <span class="n">FIELD_SEMANTIC_BINARY</span> <span class="o">=</span> <span class="mi">108</span><span class="p">;</span>
+<span class="p">}</span></pre>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="page_ucs_vsm_protocol_page.html" title="previous page">UCS-VSM communications protocol</a>
+    <a class='right-next' id="next-link" href="page_ucs_vsm_registration_page.html" title="next page">Vehicle registration with UCS</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

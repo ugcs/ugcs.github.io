@@ -1,0 +1,19 @@
+.. index:: pair: enum; Operation
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a63afd1fd224363cba9a82199600fa87f:
+
+enum ugcs::vsm::internal::Poll_io_controller::Io_cb::Operation
+==============================================================
+
+Operation type.
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <poll_io_controller.h>
+
+	enum Operation
+	{
+	    :target:`READ<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a63afd1fd224363cba9a82199600fa87fa3466fab4975481651940ed328aa990e4>`,
+	    :target:`WRITE<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a63afd1fd224363cba9a82199600fa87fad4b9e47f65b6e79b010582f15785867e>`,
+	};
+

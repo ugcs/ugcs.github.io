@@ -1,0 +1,80 @@
+.. index:: pair: enum; State
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053:
+
+enum ugcs::vsm::Io_stream::State
+================================
+
+Overview
+~~~~~~~~
+
+Stream states. :ref:`More...<details-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <io_stream.h>
+
+	enum State
+	{
+	    :ref:`CLOSED<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053a110ccf2f5d2ff4eda1fd1a494293467d>`,
+	    :ref:`OPENING<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053a71a74f5026f5642a42a229e04cf1efdc>`,
+	    :ref:`OPENING_PASSIVE<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053a1ec2c7f8249f4e11811bd5ce27ff724c>`,
+	    :ref:`OPENED<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053ae670c2408064392c6da7d0b721f7349c>`,
+	};
+
+.. _details-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Stream states.
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; CLOSED
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053a110ccf2f5d2ff4eda1fd1a494293467d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CLOSED
+
+Stream is closed.
+
+Also initial state.
+
+.. index:: pair: enumvalue; OPENING
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053a71a74f5026f5642a42a229e04cf1efdc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	OPENING
+
+Stream is being opened and is not yet ready for reading/writing.
+
+This process may fail.
+
+.. index:: pair: enumvalue; OPENING_PASSIVE
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053a1ec2c7f8249f4e11811bd5ce27ff724c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	OPENING_PASSIVE
+
+Stream is being passively opened and is not yet ready for reading/writing.
+
+(listening socket) This process may fail.
+
+.. index:: pair: enumvalue; OPENED
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1ab24797305a121874a41b8f4f8420e053ae670c2408064392c6da7d0b721f7349c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	OPENED
+
+Stream is opened and is ready for read/write operations.
+

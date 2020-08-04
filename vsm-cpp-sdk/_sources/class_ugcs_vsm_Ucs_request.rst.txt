@@ -1,0 +1,146 @@
+.. index:: pair: class; ugcs::vsm::Ucs_request
+.. _doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request:
+
+class ugcs::vsm::Ucs_request
+============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <device.h>
+	
+	class Ucs_request: public :ref:`ugcs::vsm::Request_container::Request<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>`
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Ucs_request> :ref:`Ptr<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a652d814cf8c5922dad29094a80be313c>`;
+		typedef std::weak_ptr<Ucs_request> :ref:`Weak_ptr<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1abd0ace526d5a8d3934f989acc855fa65>`;
+
+		// fields
+	
+		:ref:`Proto_msg_ptr<doxid-dd/def/namespaceugcs_1_1vsm_1a66d7df9d50892a6f2b835e2b89f325e5>` :target:`response<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1ab38133689c4e8ccdaf0a2f263f308526>` = nullptr;
+		uint32_t :target:`stream_id<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1ae877f5d8b1d697ca61b3bd1743b72987>` = 0;
+		ugcs::vsm::proto::Vsm_message :target:`request<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1aa25ba8ed4099f33e3be9d52100a902a9>`;
+
+		// construction
+	
+		:target:`Ucs_request<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a38e36755cdc15520dd53a5d9f902c73c>`(ugcs::vsm::proto::Vsm_message);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a652d814cf8c5922dad29094a80be313c>` :ref:`Create<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a149ce6b993878a5819dff10be0cfb46f>`(Args&&... args);
+	
+		void :target:`Complete<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a1bbd33c27a48a4155135dcc8733f1769>`(
+			ugcs::vsm::proto::Status_code = ugcs::vsm::proto::STATUS_OK,
+			const std::string& description = std::string()
+			);
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<:ref:`Request<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>`> :ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>`;
+		typedef std::weak_ptr<:ref:`Request<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>`> :ref:`Weak_ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a45dfe7161da322165c89d41f02977a20>`;
+		typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<void>:::ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>`<> :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`;
+		typedef std::unique_lock<std::mutex> :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`;
+
+		// enums
+	
+		enum :ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>`;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` :ref:`Create<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a342da78756478193a27cc412074fb79f>`(Args&&... args);
+	
+		void :ref:`Set_processing_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a755601a56afa809b62bc7d011f951d15>`(const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_processing_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a249b5d2c020ce28f7e3ac65383dae8b7>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		void :ref:`Set_completion_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a12ec980ffc633959aed0359cd42536b8>`(const :ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`& context, const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_completion_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a561379a2b3407dbc62c971d84c7f371a>`(const :ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`& context, :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		void :ref:`Set_cancellation_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aeb438d485dfabe3e4b665f67b3558fc9>`(const :ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_cancellation_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a56a55660d8e9d10b7eb3a58a39176949>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		void :ref:`Set_done_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a5fe368011c095bd0f00f2b752bab24f4>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`& handler);
+		void :ref:`Set_done_handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a010c1aa35213206c8f35c3ad209ff699>`(:ref:`Handler<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9d12ba30446f777d927b21e1332f9744>`&& handler);
+		:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` :ref:`Get_completion_context<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a5b0f2d53ac73c2a65816dcd85ac7fdfc>`(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`()) const;
+		void :ref:`Process<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8a139feb0121215d25eca6948aca0bcd>`(bool process_request);
+		void :ref:`Complete<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>`(:ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>` status = :ref:`Status::OK<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564>`, :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`());
+		void :ref:`Cancel<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a2ab0ebd9dc403ab769f81003a7bc66e0>`(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`());
+		void :ref:`Abort<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>`(:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` locker = :ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>`());
+		:ref:`Locker<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95f0c7399b31760677f1a147adad2801>` :ref:`Lock<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1af06238bd09e7b1343a4bae79db112bd7>`(bool acquire = true) const;
+		:ref:`Status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>` :ref:`Get_status<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1ad301ad9a0cf52a0dfcbb76ff48b2a1cb>`() const;
+		bool :ref:`Is_completed<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1afcf3c907ea9bce798e52703e21488cfb>`() const;
+		bool :ref:`Is_request_processing_needed<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a1ac36ba2cb811ae1089b3b9d062e6b24>`() const;
+		bool :ref:`Is_aborted<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8a1a29ee4cee0ff96b529d6720a794bf>`() const;
+		bool :ref:`Is_processing<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a95d63a0765f8d76c8ed68993f8e0baf5>`() const;
+		bool :ref:`Is_completion_delivered<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a8c61ba14b174a9d251bd120d235d08e9>`() const;
+		bool :ref:`Is_completion_delivering_started<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7a973a7fbb99e0eb94236c476bc52e8c>`() const;
+		bool :ref:`Is_done<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aaa6b4915a3771b1fe37656fd221a963b>`() const;
+	
+		bool :ref:`Wait_done<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1aaf0304a3925911d23eda340d0a67946e>`(
+			bool process_ctx = true,
+			std::chrono::milliseconds timeout = std::chrono::milliseconds::zero()
+			);
+	
+		bool& :ref:`Timed_out<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a23d56ffa57d15acbcf427d15140b9596>`();
+
+.. _details-dc/df0/classugcs_1_1vsm_1_1_ucs__request:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a652d814cf8c5922dad29094a80be313c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Ucs_request> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1abd0ace526d5a8d3934f989acc855fa65:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Ucs_request> Weak_ptr
+
+Pointer type.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a149ce6b993878a5819dff10be0cfb46f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a652d814cf8c5922dad29094a80be313c>` Create(Args&&... args)
+
+Create an instance.
+

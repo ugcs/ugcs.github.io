@@ -1,0 +1,49 @@
+.. index:: pair: class; ugcs::vsm::Vehicle::Hasher
+.. _doxid-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher:
+
+class ugcs::vsm::Vehicle::Hasher
+================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`Hasher <doxid-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher>` for :ref:`Vehicle <doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle>` shared pointer. :ref:`More...<details-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <vehicle.h>
+	
+	class Hasher
+	{
+	public:
+		// methods
+	
+		size_t :ref:`operator ()<doxid-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher_1abe2ef9a4029ba62a771e310833775835>` (const :ref:`Vehicle::Ptr<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a98c6f32009651b83459aeca73323a73b>`& ptr) const;
+	};
+.. _details-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Hasher <doxid-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher>` for :ref:`Vehicle <doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle>` shared pointer.
+
+Used when vehicle pointer is stored in some container.
+
+Methods
+-------
+
+.. index:: pair: function; operator()
+.. _doxid-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher_1abe2ef9a4029ba62a771e310833775835:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t operator () (const :ref:`Vehicle::Ptr<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a98c6f32009651b83459aeca73323a73b>`& ptr) const
+
+Get hash value.
+

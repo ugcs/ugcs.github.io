@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Io_buffer &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class ugcs::vsm::Io_request" href="class_ugcs_vsm_Io_request.html" />
+    <link rel="prev" title="struct ugcs::vsm::Http_parser::string_compare_ignore_case" href="struct_ugcs_vsm_Http_parser_string_compare_ignore_case.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#typedefs" class="nav-link">Typedefs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fields" class="nav-link">Fields</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#construction" class="nav-link">Construction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-io-buffer">
+<span id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer"></span><span id="index-0"></span><h1>class ugcs::vsm::Io_buffer<a class="headerlink" href="#class-ugcs-vsm-io-buffer" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Generic I/O buffer. <a class="reference internal" href="#details-d1-d0f-classugcs-1-1vsm-1-1-io-buffer"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;io_buffer.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">Io_buffer</span><span class="p">:</span> <span class="k">public</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_shared_from_this</span><span class="o">&lt;</span> <span class="n">Io_buffer</span> <span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Io_buffer</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Io_buffer</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ad62c72068e09f630048566225eea2919"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">size_t</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a64f2b21d2a529bdd6455dc87350c5df6"><span class="std std-ref">Io_buffer</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Io_buffer</span><span class="o">&amp;</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a21c3e481a6d14b3454af54e873397ec2"><span class="std std-ref">Io_buffer</span></a><span></span><span class="p">(</span><span class="n">Io_buffer</span><span class="o">&amp;&amp;</span> <span class="n">buf</span><span class="p">);</span>
+
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab4f4a612da04df9e051994404a1b2022"><span class="std std-ref">Io_buffer</span></a><span></span><span class="p">(</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;&gt;&amp;&amp;</span> <span class="n">data_vec</span><span class="p">,</span>
+        <span class="kt">size_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span>
+        <span class="p">);</span>
+
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a4ba6479fb6275f22b0e0ca3a4f7e4697"><span class="std std-ref">Io_buffer</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;&amp;&amp;</span> <span class="n">data_vec</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1aeff5142354aef47d7f481d72be143ff2"><span class="std std-ref">Io_buffer</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a180734a67e7e5cea5ca3e93be23eb2d4"><span class="std std-ref">Io_buffer</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">data_str</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1aeabc10a256a9de3bb98a5dd03a3a046c"><span class="std std-ref">Io_buffer</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1aacf7cff8da0ef985b604ae5d446e4a49"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a00ba69dca94de42ed701305839ac03a8"><span class="std std-ref">Concatenate</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Io_buffer::Ptr</span></a><span></span> <span class="n">buf</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1abe986ec565413ba25a9c2ca7fa4f977c"><span class="std std-ref">Slice</span></a><span></span><span class="p">(</span><span class="kt">size_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">size_t</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ae26b77883e3c5ccd01983c0b996a84e4"><span class="std std-ref">Get_length</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a2a6498303040d704ffc4776b1e93ca53"><span class="std std-ref">Get_data</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a9630b11c5394cfce886d395dcee22e3b"><span class="std std-ref">Get_string</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a6e7876c0580618ce52ef9e15e1658546"><span class="std std-ref">Get_ascii</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a08046996a1d310f1ed755b314e6f375d"><span class="std std-ref">Get_hex</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d1-d0f-classugcs-1-1vsm-1-1-io-buffer"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Generic I/O buffer.</p>
+<p>Used for all I/O operations with network, filesystem, peripheral devices. Should always be passed by <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Io_buffer::Ptr</span></a> smart pointer type. This allows anyone to hold reference to the buffer until he needs to access data and release the buffer when it last reference released.</p>
+<p>Important: the buffer object is immutable - once it is created its data cannot be modified. It is required not confuse other reference holders. If modified buffer is required it can be easily created based on existing one via different constructors, operators and methods. <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1aacf7cff8da0ef985b604ae5d446e4a49"><span class="std std-ref">Create()</span></a> method should be used for obtaining <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer"><span class="std std-ref">Io_buffer</span></a> instance.</p>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Io_buffer</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ad62c72068e09f630048566225eea2919"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Io_buffer</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
+<p>Pointer type.</p>
+</div>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span id="index-3"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="kt">size_t</span> <span class="n">END</span></pre>
+<p>Special value which references data end.</p>
+</div>
+<div class="section" id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a64f2b21d2a529bdd6455dc87350c5df6"><span id="index-4"></span><span></span><span class="n">Io_buffer</span><span class="p">(</span><span class="k">const</span> <span class="n">Io_buffer</span><span class="o">&amp;</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span><span class="p">)</span></pre>
+<p>Copy constructor.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>buf</p></td>
+<td><p>Buffer to copy from.</p></td>
+</tr>
+<tr class="row-even"><td><p>offset</p></td>
+<td><p>Offset in bytes to reference data in the source buffer.</p></td>
+</tr>
+<tr class="row-odd"><td><p>len</p></td>
+<td><p>Length in bytes of the referenced data. Value END indicates that all remaining data are taken.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_param_exception</p></td>
+<td><p>if the specified offset or length exceeds the source buffer boundary.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a21c3e481a6d14b3454af54e873397ec2"><span id="index-5"></span><span></span><span class="n">Io_buffer</span><span class="p">(</span><span class="n">Io_buffer</span><span class="o">&amp;&amp;</span> <span class="n">buf</span><span class="p">)</span></pre>
+<p>Move constructor.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab4f4a612da04df9e051994404a1b2022"><span id="index-6"></span><span></span><span class="n">Io_buffer</span><span class="p">(</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;&gt;&amp;&amp;</span> <span class="n">data_vec</span><span class="p">,</span>
+    <span class="kt">size_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span>
+    <span class="p">)</span></pre>
+<p>Construct from data provided in vector.</p>
+<p>Typical usage is for data which are firstly received from some I/O call.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>data_vec</p></td>
+<td><p>Vector with data. Should be dynamically allocated by “std::make_shared()”. Keep in mind that it can be passed somewhere else only by shared pointer.</p></td>
+</tr>
+<tr class="row-even"><td><p>offset</p></td>
+<td><p>Offset in data vector where this buffer data start from.</p></td>
+</tr>
+<tr class="row-odd"><td><p>len</p></td>
+<td><p>Length of the data referenced in the provided vector. Offset and length should not exceed vector boundary. Value END indicates that all remaining data in vector should be used.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_param_exception</p></td>
+<td><p>if the specified offset or length exceeds the source buffer boundary.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a4ba6479fb6275f22b0e0ca3a4f7e4697"><span id="index-7"></span><span></span><span class="n">Io_buffer</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;&amp;&amp;</span> <span class="n">data_vec</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span><span class="p">)</span></pre>
+<p>Construct from data provided in vector.</p>
+<p>See constructor which accepts “std::shared_ptr&lt;const std::vector&lt;uint8_t&gt;&gt; &amp;&amp;” for more details.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1aeff5142354aef47d7f481d72be143ff2"><span id="index-8"></span><span></span><span class="n">Io_buffer</span><span class="p">()</span></pre>
+<p>Construct empty buffer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a180734a67e7e5cea5ca3e93be23eb2d4"><span id="index-9"></span><span></span><span class="n">Io_buffer</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">data_str</span><span class="p">)</span></pre>
+<p>Construct buffer from string.</p>
+<p>Null terminator is not included in the data. Data are copied.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1aeabc10a256a9de3bb98a5dd03a3a046c"><span id="index-10"></span><span></span><span class="n">Io_buffer</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">)</span></pre>
+<p>Construct buffer from provided bytes array.</p>
+<p>Data are copied.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>data</p></td>
+<td><p>Bytes array with data.</p></td>
+</tr>
+<tr class="row-even"><td><p>len</p></td>
+<td><p>Number of bytes to take from data argument.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1aacf7cff8da0ef985b604ae5d446e4a49"><span id="index-11"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">static</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Create an instance.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a00ba69dca94de42ed701305839ac03a8"><span id="index-12"></span><a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Concatenate</span><span class="p">(</span><a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Io_buffer::Ptr</span></a><span></span> <span class="n">buf</span><span class="p">)</span></pre>
+<p>Concatenate this buffer data with another buffer data and return new buffer object which contains resulted data.</p>
+<p>Note, that method complexity is linear if lengths of both buffers are not zero.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>buf</p></td>
+<td><p>Buffer to concatenate with.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>New buffer with data from this buffer and the specified one.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1abe986ec565413ba25a9c2ca7fa4f977c"><span id="index-13"></span><a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Slice</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <a class="reference internal" href="#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ab78d4cf7b3f8055895f383341d32cf67"><span class="std std-ref">END</span></a><span></span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Take slice from buffer data.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>offset</p></td>
+<td><p>Offset to start slice from.</p></td>
+</tr>
+<tr class="row-even"><td><p>len</p></td>
+<td><p>Length of the slice data. Value END indicates that all remaining data should be taken.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Invalid_param_exception</p></td>
+<td><p>if the specified offset or length exceeds the source buffer boundary.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>New buffer with sliced data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1ae26b77883e3c5ccd01983c0b996a84e4"><span id="index-14"></span><span></span><span class="kt">size_t</span> <span class="n">Get_length</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get length of the contained data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a2a6498303040d704ffc4776b1e93ca53"><span id="index-15"></span><span></span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">Get_data</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get pointer to raw data stored in the buffer.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Invalid_op_exception</p></td>
+<td><p>if the buffer is empty.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a9630b11c5394cfce886d395dcee22e3b"><span id="index-16"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Get_string</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get buffer content as string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a6e7876c0580618ce52ef9e15e1658546"><span id="index-17"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Get_ascii</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get buffer data as string of characters.</p>
+<p>Non-printable chars are substituted with ‘.’</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a08046996a1d310f1ed755b314e6f375d"><span id="index-18"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Get_hex</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get buffer data as hex string.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="struct_ugcs_vsm_Http_parser_string_compare_ignore_case.html" title="previous page">struct ugcs::vsm::Http_parser::string_compare_ignore_case</a>
+    <a class='right-next' id="next-link" href="class_ugcs_vsm_Io_request.html" title="next page">class ugcs::vsm::Io_request</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

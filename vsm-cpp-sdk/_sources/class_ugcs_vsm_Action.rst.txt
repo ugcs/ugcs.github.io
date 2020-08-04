@@ -1,0 +1,253 @@
+.. index:: pair: class; ugcs::vsm::Action
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action:
+
+class ugcs::vsm::Action
+=======================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Action_Type.rst
+	struct_ugcs_vsm_Action_Format_exception_dummy_struct.rst
+	struct_ugcs_vsm_Action_Mapper.rst
+	struct_ugcs_vsm_Action_Mapper-2.rst
+	struct_ugcs_vsm_Action_Mapper-3.rst
+	struct_ugcs_vsm_Action_Mapper-4.rst
+	struct_ugcs_vsm_Action_Mapper-5.rst
+	struct_ugcs_vsm_Action_Mapper-6.rst
+	struct_ugcs_vsm_Action_Mapper-7.rst
+	struct_ugcs_vsm_Action_Mapper-8.rst
+	struct_ugcs_vsm_Action_Mapper-9.rst
+	struct_ugcs_vsm_Action_Mapper-10.rst
+	struct_ugcs_vsm_Action_Mapper-11.rst
+	struct_ugcs_vsm_Action_Mapper-12.rst
+	struct_ugcs_vsm_Action_Mapper-13.rst
+	struct_ugcs_vsm_Action_Mapper-14.rst
+	struct_ugcs_vsm_Action_Mapper-15.rst
+	struct_ugcs_vsm_Action_Mapper-16.rst
+	struct_ugcs_vsm_Action_Mapper-17.rst
+	struct_ugcs_vsm_Action_Mapper-18.rst
+	struct_ugcs_vsm_Action_Mapper-19.rst
+
+Overview
+~~~~~~~~
+
+Generic action. :ref:`More...<details-dc/d7a/classugcs_1_1vsm_1_1_action>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <action.h>
+	
+	class Action: public std::enable_shared_from_this< Action >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Action> :ref:`Ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a>`;
+		typedef std::weak_ptr<Action> :ref:`Weak_ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a9798e1bd2f6fd447f2e1b2e0f32a3763>`;
+		typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`Format_exception_dummy_struct<doxid-d8/d4a/structugcs_1_1vsm_1_1_action_1_1_format__exception__dummy__struct>`,> :target:`Format_exception<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1ac00b4775ae858fca8fc9c2907a644b8a>`;
+
+		// enums
+	
+		enum :ref:`Type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>`;
+
+		// structs
+	
+		struct :ref:`Format_exception_dummy_struct<doxid-d8/d4a/structugcs_1_1vsm_1_1_action_1_1_format__exception__dummy__struct>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::REPEAT_SERVO><doxid-d4/d0a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_r_e_p_e_a_t___s_e_r_v_o_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::POI><doxid-d1/d31/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_p_o_i_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::PAYLOAD_STEERING><doxid-d6/d93/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_p_a_y_l_o_a_d___s_t_e_e_r_i_n_g_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::PANORAMA><doxid-d9/d36/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_p_a_n_o_r_a_m_a_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::SET_HOME><doxid-da/dc6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___h_o_m_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::TAKEOFF><doxid-df/db7/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_t_a_k_e_o_f_f_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::SET_SERVO><doxid-de/d1a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_s_e_t___s_e_r_v_o_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::TASK_ATTRIBUTES><doxid-d3/d94/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_t_a_s_k___a_t_t_r_i_b_u_t_e_s_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::VTOL_TRANSITION><doxid-d5/d10/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_v_t_o_l___t_r_a_n_s_i_t_i_o_n_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::MOVE><doxid-da/de6/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_m_o_v_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::HEADING><doxid-d4/dbe/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_h_e_a_d_i_n_g_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_CONTROL><doxid-dc/d57/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___c_o_n_t_r_o_l_01_4>`;
+	
+		template <Type type_val>
+		struct :ref:`Mapper<doxid-da/d7c/structugcs_1_1vsm_1_1_action_1_1_mapper>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::LANDING><doxid-d5/d51/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_l_a_n_d_i_n_g_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_SERIES_BY_DISTANCE><doxid-dd/d32/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___d_i_s_t_a_n_c_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_TRIGGER><doxid-d1/d04/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___t_r_i_g_g_e_r_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CAMERA_SERIES_BY_TIME><doxid-d4/d8c/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_a_m_e_r_a___s_e_r_i_e_s___b_y___t_i_m_e_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::CHANGE_SPEED><doxid-da/d96/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_c_h_a_n_g_e___s_p_e_e_d_01_4>`;
+	
+		template <>
+		struct :ref:`Mapper<Action::Type::WAIT><doxid-df/d7a/structugcs_1_1vsm_1_1_action_1_1_mapper_3_01_action_1_1_type_1_1_w_a_i_t_01_4>`;
+
+		// fields
+	
+		int :target:`command_id<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a0417c592be2e060264012c7dd7aebfbd>` = -1;
+
+		// construction
+	
+		:ref:`Action<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1aa5ecfe64cc88ca70e47e6140421b0d0e>`(:ref:`Type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>` type);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a>` :ref:`Create<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1aa9cf43a60d1c94283a102604c0d1b287>`(Args&&... args);
+	
+		:ref:`Type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>` :ref:`Get_type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1abf94ade9dc8302843e174f2ce20e9133>`() const;
+		void :target:`Set_id<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a0da4be7ed684d474669fdb5e3427ba20>`(int id);
+		std::string :ref:`Get_name<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1ab175b3e364b4aadd05f614301b14de43>`();
+	
+		template <Type type_val>
+		:ref:`Mapper<doxid-da/d7c/structugcs_1_1vsm_1_1_action_1_1_mapper>`<type_val>::type::Ptr :ref:`Get_action<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1afa1b44b7522526e19d771946cd2c5dff>`();
+	};
+
+	// direct descendants
+
+	class :ref:`Camera_control_action<doxid-d7/d35/classugcs_1_1vsm_1_1_camera__control__action>`;
+	class :ref:`Camera_series_by_distance_action<doxid-d3/d3d/classugcs_1_1vsm_1_1_camera__series__by__distance__action>`;
+	class :ref:`Camera_series_by_time_action<doxid-db/df3/classugcs_1_1vsm_1_1_camera__series__by__time__action>`;
+	class :ref:`Camera_trigger_action<doxid-d4/da7/classugcs_1_1vsm_1_1_camera__trigger__action>`;
+	class :ref:`Change_speed_action<doxid-d5/d1e/classugcs_1_1vsm_1_1_change__speed__action>`;
+	class :ref:`Heading_action<doxid-d0/d66/classugcs_1_1vsm_1_1_heading__action>`;
+	class :ref:`Landing_action<doxid-d8/d6a/classugcs_1_1vsm_1_1_landing__action>`;
+	class :ref:`Move_action<doxid-db/ddf/classugcs_1_1vsm_1_1_move__action>`;
+	class :ref:`Panorama_action<doxid-de/d78/classugcs_1_1vsm_1_1_panorama__action>`;
+	class :ref:`Payload_steering_action<doxid-dd/ddb/classugcs_1_1vsm_1_1_payload__steering__action>`;
+	class :ref:`Poi_action<doxid-d0/d9a/classugcs_1_1vsm_1_1_poi__action>`;
+	class :ref:`Repeat_servo_action<doxid-d8/d6e/classugcs_1_1vsm_1_1_repeat__servo__action>`;
+	class :ref:`Set_home_action<doxid-da/d05/classugcs_1_1vsm_1_1_set__home__action>`;
+	class :ref:`Set_servo_action<doxid-d7/dab/classugcs_1_1vsm_1_1_set__servo__action>`;
+	class :ref:`Takeoff_action<doxid-d9/db7/classugcs_1_1vsm_1_1_takeoff__action>`;
+	class :ref:`Task_attributes_action<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action>`;
+	class :ref:`Vtol_transition_action<doxid-d7/db9/classugcs_1_1vsm_1_1_vtol__transition__action>`;
+	class :ref:`Wait_action<doxid-dc/daf/classugcs_1_1vsm_1_1_wait__action>`;
+.. _details-dc/d7a/classugcs_1_1vsm_1_1_action:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Generic action.
+
+Specific actions are determined by :ref:`Get_type <doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1abf94ade9dc8302843e174f2ce20e9133>` method.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Action> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a9798e1bd2f6fd447f2e1b2e0f32a3763:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Action> Weak_ptr
+
+Pointer type.
+
+Construction
+------------
+
+.. index:: pair: function; Action
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1aa5ecfe64cc88ca70e47e6140421b0d0e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Action(:ref:`Type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>` type)
+
+Construct action of specific type.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1aa9cf43a60d1c94283a102604c0d1b287:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a007a63a9fd002ec1c5f4ecc809a62c5a>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Get_type
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1abf94ade9dc8302843e174f2ce20e9133:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Type<doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1a70048937fa290403b4226dbb6226aced>` Get_type() const
+
+Get action type.
+
+.. index:: pair: function; Get_name
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1ab175b3e364b4aadd05f614301b14de43:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string Get_name()
+
+Get human readable name of the action.
+
+.. index:: pair: function; Get_action
+.. _doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1afa1b44b7522526e19d771946cd2c5dff:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <Type type_val>
+	:ref:`Mapper<doxid-da/d7c/structugcs_1_1vsm_1_1_action_1_1_mapper>`<type_val>::type::Ptr Get_action()
+
+Get pointer to specific action as determined by :ref:`Get_type <doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1abf94ade9dc8302843e174f2ce20e9133>`.
+
+
+
+.. rubric:: Returns:
+
+Non-null shared pointer to specific action if type value given in template parameter is equal with the type returned by :ref:`Get_type <doxid-dc/d7a/classugcs_1_1vsm_1_1_action_1abf94ade9dc8302843e174f2ce20e9133>`, otherwise empty shared pointer is returned.
+

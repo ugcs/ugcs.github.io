@@ -1,0 +1,212 @@
+.. index:: pair: class; ugcs::vsm::Shared_memory
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory:
+
+class ugcs::vsm::Shared_memory
+==============================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Shared_memory_Open_result.rst
+
+Overview
+~~~~~~~~
+
+Platform independent implementation of system-wide named shared memory used for interprocess communications. :ref:`More...<details-d8/dfc/classugcs_1_1vsm_1_1_shared__memory>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <shared_memory.h>
+	
+	class Shared_memory: public std::enable_shared_from_this< Shared_memory >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Shared_memory> :ref:`Ptr<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1afef0ffd9f4013f4504b9c9069b0355f4>`;
+		typedef std::weak_ptr<Shared_memory> :ref:`Weak_ptr<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1af5cb9f4ac04801ccc2b938c1a9af7bfd>`;
+
+		// enums
+	
+		enum :ref:`Open_result<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a2c8dcbc5b59c0aa402c4a9c00b13afde>`;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1afef0ffd9f4013f4504b9c9069b0355f4>` :ref:`Create<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a7e54511e1e627bb905323f7a47a1377b>`(Args&&... args);
+	
+		static bool :ref:`Delete<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a365d99d490f9ff78d65b4e3a8cb31f57>`(const std::string& name);
+		static :ref:`Ptr<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1afef0ffd9f4013f4504b9c9069b0355f4>` :ref:`Create<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1abea443bd77cd378dbe9c7fdbc0fe7bb2>`();
+		virtual :ref:`Open_result<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a2c8dcbc5b59c0aa402c4a9c00b13afde>` :ref:`Open<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a5b91e524ee94231ba7b45c76e8cf1bae>`(const std::string& name, const size_t size) = 0;
+		virtual void :ref:`Close<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a1e9dcb21cac19a0df5acd8a993a3ea1c>`() = 0;
+		virtual void* :ref:`Get<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a45ed93f69aff87c6eb07bc669314e28f>`();
+	};
+.. _details-d8/dfc/classugcs_1_1vsm_1_1_shared__memory:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Platform independent implementation of system-wide named shared memory used for interprocess communications.
+
+Workflow: 1) Call :ref:`Shared_memory::Create() <doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1abea443bd77cd378dbe9c7fdbc0fe7bb2>` to create class instance. 2) Call :ref:`Shared_memory::Open() <doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a5b91e524ee94231ba7b45c76e8cf1bae>` to open or create shared memory. 3) Call :ref:`Shared_memory::Get() <doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a45ed93f69aff87c6eb07bc669314e28f>` to Get the pointer to shared memory.
+
+The pointer is valid until object is closed. Object is closed:
+
+* explicitly via call to :ref:`Close() <doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a1e9dcb21cac19a0df5acd8a993a3ea1c>`
+
+* implicitly when calling :ref:`Open() <doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a5b91e524ee94231ba7b45c76e8cf1bae>` on the same instance.
+
+* in destructor.
+
+User must be aware of the following platform specific differences in shared memory semantics: Windows: 1) When the last handle to memory is closed the OS destroys the memory. (Note: OS closes all open handles on application termination/crash) 2) By default the memory is created in Session Kernel object namespace. 3) Shared memory cannot be explicitly deleted. Implemented via CreateFileMapping() and friends.
+
+Linux: 1) Shared memory persists in the system until explicitly deleted or system restarted. 2) It is accessible from any session of its creator user. Implemented via shm_open() and friends.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1afef0ffd9f4013f4504b9c9069b0355f4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Shared_memory> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1af5cb9f4ac04801ccc2b938c1a9af7bfd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Shared_memory> Weak_ptr
+
+Pointer type.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a7e54511e1e627bb905323f7a47a1377b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1afef0ffd9f4013f4504b9c9069b0355f4>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Delete
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a365d99d490f9ff78d65b4e3a8cb31f57:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static bool Delete(const std::string& name)
+
+Deletes the named memory.
+
+(Linux-only) Does not affect any opened memory with this name.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- name
+
+		- Shared memory name.
+
+
+
+.. rubric:: Returns:
+
+true Shared memory deleted. false error occurred.
+
+.. index:: pair: function; Create
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1abea443bd77cd378dbe9c7fdbc0fe7bb2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Ptr<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1afef0ffd9f4013f4504b9c9069b0355f4>` Create()
+
+Creates Platform specific class instance.
+
+This does not create the memory itself, you should call :ref:`Open() <doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a5b91e524ee94231ba7b45c76e8cf1bae>` to create the named memory.
+
+
+
+.. rubric:: Returns:
+
+shared_ptr<Shared_memory> of newly created instance
+
+.. index:: pair: function; Open
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a5b91e524ee94231ba7b45c76e8cf1bae:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual :ref:`Open_result<doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a2c8dcbc5b59c0aa402c4a9c00b13afde>` Open(const std::string& name, const size_t size) = 0
+
+Open/create shared memory.
+
+Closes previously opened memory if any.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- name
+
+		- Name of memory object
+
+	*
+		- size
+
+		- size in bytes. Will return error if size==0
+
+
+
+.. rubric:: Returns:
+
+OPEN_RESULT_OK Opened existing shared memory. OPEN_RESULT_CREATED Created new shared memory. OPEN_RESULT_ERROR Error while creating shared memory. Previously opened memory is closed.
+
+.. index:: pair: function; Close
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a1e9dcb21cac19a0df5acd8a993a3ea1c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual void Close() = 0
+
+Closes previously opened memory.
+
+.. index:: pair: function; Get
+.. _doxid-d8/dfc/classugcs_1_1vsm_1_1_shared__memory_1a45ed93f69aff87c6eb07bc669314e28f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual void* Get()
+
+Returns the pointer to shared memory.
+
+
+
+.. rubric:: Returns:
+
+pointer to shared memory. Returns nullptr if not opened.
+

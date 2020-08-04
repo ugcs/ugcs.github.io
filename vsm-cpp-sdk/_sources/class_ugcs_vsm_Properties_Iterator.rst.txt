@@ -1,0 +1,193 @@
+.. index:: pair: class; ugcs::vsm::Properties::Iterator
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator:
+
+class ugcs::vsm::Properties::Iterator
+=====================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Stored properties iterator. :ref:`More...<details-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <properties.h>
+	
+	class Iterator
+	{
+	public:
+		// construction
+	
+		:ref:`Iterator<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1a45ce5b1d1f4a9c2189a6a0dbbfcac123>`(
+			const Table_type::const_iterator& iterator,
+			const Table_type::const_iterator& end_iterator,
+			const std::string& prefix = std::string(),
+			char separator = '.'
+			);
+
+		// methods
+	
+		std::string :ref:`operator *<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1a0248c779c85ff7dd407133756ee6a1c4>` () const;
+		const std::string* :ref:`operator -><doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1aa3e083253aa43529b7aae85c4dc5be05>` () const;
+		bool :ref:`operator ==<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1abc00e070b9134011b5d3c5e4a503eb90>` (const Iterator& it) const;
+		bool :ref:`operator !=<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1ac68e1f0b80ddce3039c622247290560b>` (const Iterator& it) const;
+		void :ref:`operator ++<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1ab0d2dfa8093841c2bec0662a6b9004f7>` ();
+		void :ref:`operator ++<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1a3f3d24028cec404285cae5b3def5b83b>` (int);
+		std::string :ref:`operator []<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1aaf1b1c937e03f40ddee8dd2efe972d09>` (size_t comp_idx);
+		int :target:`Get_count<doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1a2dd8ba1ca14946e0763b7423b7ce56f7>`();
+	};
+.. _details-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Stored properties iterator.
+
+Construction
+------------
+
+.. index:: pair: function; Iterator
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1a45ce5b1d1f4a9c2189a6a0dbbfcac123:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Iterator(
+		const Table_type::const_iterator& iterator,
+		const Table_type::const_iterator& end_iterator,
+		const std::string& prefix = std::string(),
+		char separator = '.'
+		)
+
+Construct new iterator which iterates values starting from the given prefix.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- iterator
+
+		- Start from.
+
+	*
+		- end_iterator
+
+		- End.
+
+	*
+		- prefix
+
+		- Prefix for filtering.
+
+	*
+		- separator
+
+		- Path nodes separator.
+
+Methods
+-------
+
+.. index:: pair: function; operator*
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1a0248c779c85ff7dd407133756ee6a1c4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string operator * () const
+
+Get the value.
+
+.. index:: pair: function; operator->
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1aa3e083253aa43529b7aae85c4dc5be05:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const std::string* operator -> () const
+
+Get the value.
+
+.. index:: pair: function; operator==
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1abc00e070b9134011b5d3c5e4a503eb90:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator == (const Iterator& it) const
+
+Equality check method.
+
+.. index:: pair: function; operator!=
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1ac68e1f0b80ddce3039c622247290560b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator != (const Iterator& it) const
+
+Non-equality check method.
+
+.. index:: pair: function; operator++
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1ab0d2dfa8093841c2bec0662a6b9004f7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void operator ++ ()
+
+Prefix increment operator.
+
+.. index:: pair: function; operator++
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1a3f3d24028cec404285cae5b3def5b83b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void operator ++ (int)
+
+Postfix increment operator.
+
+.. index:: pair: function; operator[]
+.. _doxid-d4/d1e/classugcs_1_1vsm_1_1_properties_1_1_iterator_1aaf1b1c937e03f40ddee8dd2efe972d09:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string operator [] (size_t comp_idx)
+
+Get component of name with the specified index.
+
+Components are separated by separator character specified in :ref:`Properties::begin() <doxid-d8/d68/classugcs_1_1vsm_1_1_properties_1a91859359543e7af355c5ff72d6ad6d36>` method.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- comp_idx
+
+		- Component index.
+
+	*
+		- Invalid_param_exception
+
+		- if index is out of range.
+
+
+
+.. rubric:: Returns:
+
+String for component.
+

@@ -1,0 +1,47 @@
+.. index:: pair: struct; ugcs::vsm::callback_internal::Callback_args_checker<Callback, 0>
+.. _doxid-d0/df4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_010_01_4:
+
+template struct ugcs::vsm::callback_internal::Callback_args_checker<Callback, 0>
+================================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+No arguments to check case. :ref:`More...<details-d0/df4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_010_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <callback.h>
+	
+	template <class Callback>
+	struct Callback_args_checker<Callback, 0>
+	{
+		// fields
+	
+		static constexpr static bool :ref:`value<doxid-d0/df4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_010_01_4_1a8755a56f940e538e8d2bd951886c1061>` = true;
+	};
+.. _details-d0/df4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_010_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+No arguments to check case.
+
+Fields
+------
+
+.. index:: pair: variable; value
+.. _doxid-d0/df4/structugcs_1_1vsm_1_1callback__internal_1_1_callback__args__checker_3_01_callback_00_010_01_4_1a8755a56f940e538e8d2bd951886c1061:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr static bool value = true
+
+Always passes the check.
+

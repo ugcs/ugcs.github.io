@@ -1,0 +1,23 @@
+.. index:: pair: struct; ugcs::vsm::File_processor::Not_found_exception_dummy_struct
+.. _doxid-da/d1d/structugcs_1_1vsm_1_1_file__processor_1_1_not__found__exception__dummy__struct:
+
+struct ugcs::vsm::File_processor::Not_found_exception_dummy_struct
+==================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+File not found. :ref:`More...<details-da/d1d/structugcs_1_1vsm_1_1_file__processor_1_1_not__found__exception__dummy__struct>`
+
+.. _details-da/d1d/structugcs_1_1vsm_1_1_file__processor_1_1_not__found__exception__dummy__struct:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+File not found.
+
+Thrown when a specified filesystem path does not exist. Type for a new exception class differentiation.
+

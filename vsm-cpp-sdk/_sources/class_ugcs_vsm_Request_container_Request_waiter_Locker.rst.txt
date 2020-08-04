@@ -1,0 +1,162 @@
+.. index:: pair: class; ugcs::vsm::Request_container::Request_waiter::Locker
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker:
+
+class ugcs::vsm::Request_container::Request_waiter::Locker
+==========================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Helper class for RAII-based locking and notifying :ref:`Request_waiter <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter>` objects. :ref:`More...<details-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <request_container.h>
+	
+	class Locker
+	{
+	public:
+		// construction
+	
+		:ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a47664f560d2286e7a9e1c4aa89005c98>`(:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter, bool want_notify = false);
+		:ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a1013a663f857221b1ad02c1525e5914d>`(const Locker&);
+		:ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a3a36d65ad2bc85dcd0d1195e50e12694>`(Locker&&);
+
+		// methods
+	
+		void :ref:`Lock<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a66f2f41e7f3f365545a524c084ba4da5>`();
+		void :ref:`Unlock<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1ae8090e969edaa3ca0339b93922775215>`();
+		bool :ref:`Want_notify<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a22ff7f040c1989ed44a6973d553bbe34>`() const;
+		bool :ref:`Is_same_waiter<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a97dfc866e31ed818d9fe8de8c97e37f3>`(const :ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>`&) const;
+	};
+.. _details-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Helper class for RAII-based locking and notifying :ref:`Request_waiter <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter>` objects.
+
+Obtained via :ref:`Request_waiter::Lock <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a0fbf3d49770621805d92efeb52f0677e>` and :ref:`Request_waiter::Lock_notify <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1abc1622663e12f80b21b1f0e36ff0c431>` methods.
+
+Construction
+------------
+
+.. index:: pair: function; Locker
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a47664f560d2286e7a9e1c4aa89005c98:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Locker(:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter, bool want_notify = false)
+
+Construct locker object.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- waiter
+
+		- Associated waiter object.
+
+	*
+		- want_notify
+
+		- Automatically call waiter :ref:`Request_waiter::Notify() <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a70f7a5640fae099002db8a9fea19da4c>` method when the lock is released.
+
+.. index:: pair: function; Locker
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a1013a663f857221b1ad02c1525e5914d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Locker(const Locker&)
+
+Disable copying.
+
+.. index:: pair: function; Locker
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a3a36d65ad2bc85dcd0d1195e50e12694:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Locker(Locker&&)
+
+Enable moving.
+
+Methods
+-------
+
+.. index:: pair: function; Lock
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a66f2f41e7f3f365545a524c084ba4da5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Lock()
+
+Lock the waiter explicitly.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Invalid_op_exception
+
+		- if already locked.
+
+.. index:: pair: function; Unlock
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1ae8090e969edaa3ca0339b93922775215:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Unlock()
+
+Unlock the waiter explicitly.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Invalid_op_exception
+
+		- if already unlocked.
+
+.. index:: pair: function; Want_notify
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a22ff7f040c1989ed44a6973d553bbe34:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Want_notify() const
+
+Is locker wants a notify.
+
+.. index:: pair: function; Is_same_waiter
+.. _doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker_1a97dfc866e31ed818d9fe8de8c97e37f3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_same_waiter(const :ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>`&) const
+
+Check if locker is bound to this waiter.
+

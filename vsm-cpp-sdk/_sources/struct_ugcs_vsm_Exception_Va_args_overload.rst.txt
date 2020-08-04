@@ -1,0 +1,35 @@
+.. index:: pair: struct; ugcs::vsm::Exception::Va_args_overload
+.. _doxid-de/d6e/structugcs_1_1vsm_1_1_exception_1_1_va__args__overload:
+
+struct ugcs::vsm::Exception::Va_args_overload
+=============================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Dummy structure to explicitly indicate the constructor overload for variable arguments (i.e. :ref:`More...<details-de/d6e/structugcs_1_1vsm_1_1_exception_1_1_va__args__overload>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <exception.h>
+	
+	struct Va_args_overload
+	{
+		// fields
+	
+		char :target:`dummy<doxid-de/d6e/structugcs_1_1vsm_1_1_exception_1_1_va__args__overload_1a8aa764cbe80f08e3a2e690a9ec58c175>`;
+	};
+.. _details-de/d6e/structugcs_1_1vsm_1_1_exception_1_1_va__args__overload:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Dummy structure to explicitly indicate the constructor overload for variable arguments (i.e.
+
+printf style).
+

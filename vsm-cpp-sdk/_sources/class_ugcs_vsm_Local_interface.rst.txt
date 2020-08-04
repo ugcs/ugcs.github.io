@@ -1,0 +1,31 @@
+.. index:: pair: class; ugcs::vsm::Local_interface
+.. _doxid-dd/de5/classugcs_1_1vsm_1_1_local__interface:
+
+class ugcs::vsm::Local_interface
+================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <socket_processor.h>
+	
+	class Local_interface
+	{
+	public:
+		// fields
+	
+		std::string :target:`name<doxid-dd/de5/classugcs_1_1vsm_1_1_local__interface_1a27d73604475f8df390981112bfdb5089>`;
+		bool :target:`is_multicast<doxid-dd/de5/classugcs_1_1vsm_1_1_local__interface_1ab489b713c96b5ed1729b8e18a439288a>` = false;
+		bool :target:`is_loopback<doxid-dd/de5/classugcs_1_1vsm_1_1_local__interface_1a94cf65dd2610912b762677401bf0f3bb>` = false;
+		std::vector<Socket_address::Ptr> :target:`adresses<doxid-dd/de5/classugcs_1_1vsm_1_1_local__interface_1a8856df8c37de380cc5350a0d9cf8711e>`;
+
+		// construction
+	
+		:target:`Local_interface<doxid-dd/de5/classugcs_1_1vsm_1_1_local__interface_1ace8ef2828c77503a6615ab994a71aa3e>`(const std::string& name);
+	};

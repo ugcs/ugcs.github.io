@@ -1,0 +1,49 @@
+.. index:: pair: class; ugcs::vsm::Java::Env
+.. _doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env:
+
+class ugcs::vsm::Java::Env
+==========================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <java.h>
+	
+	class Env
+	{
+	public:
+		// construction
+	
+		:target:`Env<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env_1a122858d2d4142e5231d4d5df901790f6>`(JNIEnv* env);
+
+		// methods
+	
+		JNIEnv* :target:`operator -><doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env_1a934b5bd8c6692015e0347823a9dbfe0e>` ();
+	
+		template <typename T_ret, typename... T_args>
+		T_ret :target:`CallMethod<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env_1a3e664d7c04675144e5bf85457cb281a2>`(
+			jobject obj,
+			const std::string& method_name,
+			const std::string& method_signature,
+			T_args... args
+			);
+	
+		template <typename T_ret, typename... T_args>
+		T_ret :target:`CallVsmMethod<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env_1a706ec5bd978bdf5803b17a6e76c3a1ad>`(
+			const std::string& method_name,
+			const std::string& method_signature,
+			T_args... args
+			);
+	
+		template <typename T>
+		:ref:`Array<doxid-d5/d6d/classugcs_1_1vsm_1_1_java_1a0ff07eb773aaee0fae2c7b23dc3ca805>`<T> :target:`GetArray<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env_1a2de9e843dbd408c9584aea5c9b19e301>`(jobject array);
+	
+		std::string :target:`GetString<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env_1ac4be594c8787c670978243f1340ad7e6>`(jobject s);
+		jstring :target:`WrapString<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env_1a90d2ca4fde01391f31e43d00a0b20b3c>`(const std::string& s);
+	};

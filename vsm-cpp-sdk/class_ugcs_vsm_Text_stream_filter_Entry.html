@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Text_stream_filter::Entry &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class ugcs::vsm::Timer_processor" href="class_ugcs_vsm_Timer_processor.html" />
+    <link rel="prev" title="class ugcs::vsm::Text_stream_filter" href="class_ugcs_vsm_Text_stream_filter.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fields" class="nav-link">Fields</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-text-stream-filter-entry">
+<span id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry"></span><span id="index-0"></span><h1>class ugcs::vsm::Text_stream_filter::Entry<a class="headerlink" href="#class-ugcs-vsm-text-stream-filter-entry" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Represents user match entry. <a class="reference internal" href="#details-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">class</span> <span class="n">Entry</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html#doxid-df-d53-classugcs-1-1vsm-1-1-text-stream-filter-1a7ec9e03c2b7c40f67315a3ee8be2a489"><span class="std std-ref">Entry_handle</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a807c4d5e50f15fada968f8e51a24b211"><span></span><span class="n">handle</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">regex</span> <a class="reference internal" href="#doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a8d474317c86514d676f5631447e57914"><span class="std std-ref">re</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html#doxid-df-d53-classugcs-1-1vsm-1-1-text-stream-filter-1a610330904638c04f8a8c0ad6d0f0212a"><span class="std std-ref">Match_handler</span></a><span></span> <a class="reference internal" href="#doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a7f081809a7891442995bb56e67d752b3"><span class="std std-ref">handler</span></a><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">smatch</span> <a class="reference internal" href="#doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1af4c381583841192288008bfa49a5772f"><span class="std std-ref">match</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html#doxid-df-d53-classugcs-1-1vsm-1-1-text-stream-filter-1af8dcea168ed4e2ce48afab87cd5bb38f"><span class="std std-ref">Lines_list</span></a><span></span> <a class="reference internal" href="#doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a70a6a2df7b74b812573cba0f2b48fbf6"><span class="std std-ref">lines</span></a><span></span><span class="p">;</span>
+    <span class="kt">size_t</span> <a class="reference internal" href="#doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a666d54ec290ed765ba9743da949edf2b"><span class="std std-ref">ctx_lines_before</span></a><span></span><span class="p">;</span>
+    <span class="kt">size_t</span> <span class="doxyrest-code-target target" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1aa41366bf938f1a143174ef4066166e8e"><span></span><span class="n">ctx_lines_after</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <a class="reference internal" href="#doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a94ec100f84568a3327b3385fccc79216"><span class="std std-ref">timeout</span></a><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="o">::</span><span class="n">zero</span><span class="p">();</span>
+    <a class="reference internal" href="class_ugcs_vsm_Timer_processor_Timer.html#doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a6de713d04a33015ffae93d34bc12c793"><span class="std std-ref">Timer_processor::Timer::Ptr</span></a><span></span> <a class="reference internal" href="#doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a9ee68d17dbfbed2a01aee460640497db"><span class="std std-ref">timer</span></a><span></span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1ac777ca99cbfe2636adad8a583d715e67"><span></span><span class="n">Entry</span></span><span></span><span class="p">(</span>
+        <a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html#doxid-df-d53-classugcs-1-1vsm-1-1-text-stream-filter-1a7ec9e03c2b7c40f67315a3ee8be2a489"><span class="std std-ref">Entry_handle</span></a><span></span> <span class="n">handle</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="o">&amp;</span> <span class="n">re</span><span class="p">,</span>
+        <a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html#doxid-df-d53-classugcs-1-1vsm-1-1-text-stream-filter-1a610330904638c04f8a8c0ad6d0f0212a"><span class="std std-ref">Match_handler</span></a><span></span> <span class="n">handler</span><span class="p">,</span>
+        <span class="kt">size_t</span> <span class="n">ctx_lines_before</span><span class="p">,</span>
+        <span class="kt">size_t</span> <span class="n">ctx_lines_after</span>
+        <span class="p">);</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Represents user match entry.</p>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a8d474317c86514d676f5631447e57914"><span id="index-1"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">regex</span> <span class="n">re</span></pre>
+<p>Regular expression for this entry.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a7f081809a7891442995bb56e67d752b3"><span id="index-2"></span><a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html#doxid-df-d53-classugcs-1-1vsm-1-1-text-stream-filter-1a610330904638c04f8a8c0ad6d0f0212a"><span class="std std-ref">Match_handler</span></a><span></span> <span class="n">handler</span></pre>
+<p>User provided handler.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1af4c381583841192288008bfa49a5772f"><span id="index-3"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">smatch</span> <span class="n">match</span></pre>
+<p>Matched data when match found.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a70a6a2df7b74b812573cba0f2b48fbf6"><span id="index-4"></span><a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html#doxid-df-d53-classugcs-1-1vsm-1-1-text-stream-filter-1af8dcea168ed4e2ce48afab87cd5bb38f"><span class="std std-ref">Lines_list</span></a><span></span> <span class="n">lines</span></pre>
+<p>Matched lines.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a666d54ec290ed765ba9743da949edf2b"><span id="index-5"></span><span></span><span class="kt">size_t</span> <span class="n">ctx_lines_before</span></pre>
+<p>Number of lines to capture before and after matched line.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a94ec100f84568a3327b3385fccc79216"><span id="index-6"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="o">::</span><span class="n">zero</span><span class="p">()</span></pre>
+<p>Timeout, zero if not specified.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d94-classugcs-1-1vsm-1-1-text-stream-filter-1-1-entry-1a9ee68d17dbfbed2a01aee460640497db"><span id="index-7"></span><a class="reference internal" href="class_ugcs_vsm_Timer_processor_Timer.html#doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a6de713d04a33015ffae93d34bc12c793"><span class="std std-ref">Timer_processor::Timer::Ptr</span></a><span></span> <span class="n">timer</span> <span class="o">=</span> <span class="k">nullptr</span></pre>
+<p>Timeout timer handle if timeout required.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Text_stream_filter.html" title="previous page">class ugcs::vsm::Text_stream_filter</a>
+    <a class='right-next' id="next-link" href="class_ugcs_vsm_Timer_processor.html" title="next page">class ugcs::vsm::Timer_processor</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

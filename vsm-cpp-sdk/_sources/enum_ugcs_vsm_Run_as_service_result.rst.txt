@@ -1,0 +1,38 @@
+.. index:: pair: enum; Run_as_service_result
+.. _doxid-dd/def/namespaceugcs_1_1vsm_1a361de3a18cbbf4c72a6ebf1f4d978925:
+
+enum ugcs::vsm::Run_as_service_result
+=====================================
+
+Overview
+~~~~~~~~
+
+Result of Run_as_service function SERVICE_RESULT_OK = 0: Was invoked as service and is about to end. :ref:`More...<details-dd/def/namespaceugcs_1_1vsm_1a361de3a18cbbf4c72a6ebf1f4d978925>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <run_as_service.h>
+
+	enum Run_as_service_result
+	{
+	    :target:`SERVICE_RESULT_OK<doxid-dd/def/namespaceugcs_1_1vsm_1a361de3a18cbbf4c72a6ebf1f4d978925aaae922897936f5455103805f6c29129f>`                = 0,
+	    :target:`SERVICE_RESULT_ERROR<doxid-dd/def/namespaceugcs_1_1vsm_1a361de3a18cbbf4c72a6ebf1f4d978925a3f5587f997a4fffdbf3936e8c87d9a71>`             = 1,
+	    :target:`SERVICE_RESULT_NORMAL_INVOCATION<doxid-dd/def/namespaceugcs_1_1vsm_1a361de3a18cbbf4c72a6ebf1f4d978925ad2cdcae38f0bc3c818b5f7d8112db942>` = -1,
+	};
+
+.. _details-dd/def/namespaceugcs_1_1vsm_1a361de3a18cbbf4c72a6ebf1f4d978925:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Result of Run_as_service function SERVICE_RESULT_OK = 0: Was invoked as service and is about to end.
+
+(service has stopped).
+
+* OR - Service specific parameters processed successfully. Application should terminate normally on this return code.
+
+SERVICE_RESULT_ERROR: Error while Service specific parameters processing. Application should terminate with error on this return code.
+
+SERVICE_RESULT_NORMAL_INVOCATION -1: Was not invoked as service AND no service\* parameters given. Application should continue as if launched normally (not as service).
+

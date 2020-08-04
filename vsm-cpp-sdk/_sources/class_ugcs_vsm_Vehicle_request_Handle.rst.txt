@@ -1,0 +1,104 @@
+.. index:: pair: class; ugcs::vsm::Vehicle_request::Handle
+.. _doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle:
+
+class ugcs::vsm::Vehicle_request::Handle
+========================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`Handle <doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle>` of the request passed to the SDK user. :ref:`More...<details-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <vehicle_request.h>
+	
+	class Handle
+	{
+	public:
+		// construction
+	
+		:ref:`Handle<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1a99d4535849f620ba041fbcfb841de512>`();
+		:ref:`Handle<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1a0d080b2df9e410c4a153ecd35101f458>`(:ref:`Vehicle_request::Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>` vehicle_request);
+
+		// methods
+	
+		:ref:`operator bool<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1aee264ffabed4c9cd89f06cb6134f4115>` () const;
+	
+		void :target:`Fail<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1a3d4b06636484a304372a6b55265faa9c>`(
+			const char* format = nullptr,
+			...
+			);
+	
+		void :target:`Fail_v<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1a9526e84f9aeb362d08a3f53a5defd60d>`(
+			const char* format,
+			va_list fmt_args
+			);
+	
+		void :target:`Fail<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1ae6048cb76edb6e7e73259b7d6a95def9>`(const std::string& reason);
+		void :target:`Succeed<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1a8416c792f4e12f4f94e88b1489e341c7>`();
+	};
+
+	// direct descendants
+
+	class :ref:`Handle<doxid-d6/d6a/classugcs_1_1vsm_1_1_vehicle__request__spec_1_1_handle>`;
+.. _details-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Handle <doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle>` of the request passed to the SDK user.
+
+Used to expose only the necessary base interface for the user and hide other methods of the main request class. Passed by value, as this is effectively only a pointer wrapper.
+
+Construction
+------------
+
+.. index:: pair: function; Handle
+.. _doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1a99d4535849f620ba041fbcfb841de512:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Handle()
+
+Construct initially invalid handle.
+
+.. index:: pair: function; Handle
+.. _doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1a0d080b2df9e410c4a153ecd35101f458:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Handle(:ref:`Vehicle_request::Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>` vehicle_request)
+
+Construct handle instance with managed vehicle request.
+
+Called by SDK only.
+
+Methods
+-------
+
+.. index:: pair: function; operator bool
+.. _doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle_1aee264ffabed4c9cd89f06cb6134f4115:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator bool () const
+
+:ref:`Handle <doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle>` validness check.
+
+:ref:`Handle <doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle>` is considered valid if it points to some vehicle request which is not yet completed.
+
+
+
+.. rubric:: Returns:
+
+true if handle is valid, otherwise false.
+

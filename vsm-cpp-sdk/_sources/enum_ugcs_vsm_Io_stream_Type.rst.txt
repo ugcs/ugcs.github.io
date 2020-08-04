@@ -1,0 +1,25 @@
+.. index:: pair: enum; Type
+.. _doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0b:
+
+enum ugcs::vsm::Io_stream::Type
+===============================
+
+Stream types.
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <io_stream.h>
+
+	enum Type
+	{
+	    :target:`FILE<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0ba9fc5887c030f7a3e19821ebec457e719>`,
+	    :target:`SERIAL<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0ba7b804a28d6154ab8007287532037f1d0>`,
+	    :target:`ANDROID_SERIAL<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0ba92c9b0e1ac6e48acf13e4238b6292dbf>`,
+	    :target:`TCP<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0bab136ef5f6a01d816991fe3cf7a6ac763>`,
+	    :target:`UDP<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0baf5ef036b4d8b630721e51fe23489fbc9>`,
+	    :target:`UDP_MULTICAST<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0ba17c1e685688336bee2c4deffca929395>`,
+	    :target:`CAN<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0ba6d5050f7a97e7e2e881a4e09dfbd6087>`,
+	    :target:`UNDEFINED<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a924a1e691d3c068343b0d148fcc8db0ba0db45d2a4141101bdfe48e3314cfbca3>`,
+	};
+

@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Serial_processor::Stream::Mode &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class ugcs::vsm::Service_discovery_processor" href="class_ugcs_vsm_Service_discovery_processor.html" />
+    <link rel="prev" title="class ugcs::vsm::Serial_processor::Stream" href="class_ugcs_vsm_Serial_processor_Stream.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-serial-processor-stream-mode">
+<span id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode"></span><span id="index-0"></span><h1>class ugcs::vsm::Serial_processor::Stream::Mode<a class="headerlink" href="#class-ugcs-vsm-serial-processor-stream-mode" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Communication mode parameters for a serial port. <a class="reference internal" href="#details-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;serial_processor.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">Mode</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="n">Mode</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a253567b0192a182b0c316686e5922585"><span class="std std-ref">Baud</span></a><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">baud</span><span class="p">);</span>
+    <span class="n">Mode</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a7817c2ac21b61e33ec0b602a2a0865db"><span class="std std-ref">Char_size</span></a><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+    <span class="n">Mode</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1ab28d63ce1333cc65eadbc5bbe79208bb"><span class="std std-ref">Stop_bit</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">enable</span><span class="p">);</span>
+    <span class="n">Mode</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a5fc7b89d48253da153f5ff102e21c6ab"><span class="std std-ref">Parity_check</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">enable</span><span class="p">);</span>
+    <span class="n">Mode</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a29380854f5165d2558a8fecb5f9d46f0"><span class="std std-ref">Parity</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">is_odd</span><span class="p">);</span>
+    <span class="n">Mode</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a127d5bf8e03bea95ec29e53f19c97837"><span class="std std-ref">Read_timeout</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <span class="n">timeout</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a990a00886393e2748dbaca98ffcd2d57"><span></span><span class="n">Get_baud</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a1036af1923d08686491fbdff9dba5fe5"><span></span><span class="n">Get_char_size</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a94fc1c72ab00778a4203795a500b57b9"><span></span><span class="n">Get_stop_bit</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a3622898f695a06dd650a5da762c1d602"><span></span><span class="n">Get_parity_check</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a09d9e317e6a1716e2183cc35400c00a8"><span></span><span class="n">Get_parity</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Communication mode parameters for a serial port.</p>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a253567b0192a182b0c316686e5922585"><span id="index-1"></span><span></span><span class="n">Mode</span><span class="o">&amp;</span> <span class="n">Baud</span><span class="p">(</span><span class="kt">int</span> <span class="n">baud</span><span class="p">)</span></pre>
+<p>Set baud rate.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>baud</p></td>
+<td><p>Baud rate. The value is rounded to the closest allowed one.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a7817c2ac21b61e33ec0b602a2a0865db"><span id="index-2"></span><span></span><span class="n">Mode</span><span class="o">&amp;</span> <span class="n">Char_size</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>Set character size.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>size</p></td>
+<td><p>Character size in bits.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1ab28d63ce1333cc65eadbc5bbe79208bb"><span id="index-3"></span><span></span><span class="n">Mode</span><span class="o">&amp;</span> <span class="n">Stop_bit</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enable</span><span class="p">)</span></pre>
+<p>Set number of stop bits.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>enable</p></td>
+<td><p>Two stop bits if “true”, one stop bit otherwise.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a5fc7b89d48253da153f5ff102e21c6ab"><span id="index-4"></span><span></span><span class="n">Mode</span><span class="o">&amp;</span> <span class="n">Parity_check</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enable</span><span class="p">)</span></pre>
+<p>Set parity check/generation mode.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>enable</p></td>
+<td><p>Enable parity check on input and generation on output when “true”.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a29380854f5165d2558a8fecb5f9d46f0"><span id="index-5"></span><span></span><span class="n">Mode</span><span class="o">&amp;</span> <span class="n">Parity</span><span class="p">(</span><span class="kt">bool</span> <span class="n">is_odd</span><span class="p">)</span></pre>
+<p>Set parity mode.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>is_odd</p></td>
+<td><p>If “true”, then parity for input and output is odd; otherwise even parity is used.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode-1a127d5bf8e03bea95ec29e53f19c97837"><span id="index-6"></span><span></span><span class="n">Mode</span><span class="o">&amp;</span> <span class="n">Read_timeout</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <span class="n">timeout</span><span class="p">)</span></pre>
+<p>Set read timeout.</p>
+<p>It specifies the minimum amount of time to wait for data, if maximum number of requested bytes is not received. Note that maximum supported value is platform specific.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>timeout</p></td>
+<td><p>Read timeout.</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid_param_exception</p></td>
+<td><p>if negative timeout is specified.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Serial_processor_Stream.html" title="previous page">class ugcs::vsm::Serial_processor::Stream</a>
+    <a class='right-next' id="next-link" href="class_ugcs_vsm_Service_discovery_processor.html" title="next page">class ugcs::vsm::Service_discovery_processor</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.. index:: pair: namespace; ugcs::vsm::param_setter_internal
+.. _doxid-d1/dda/namespaceugcs_1_1vsm_1_1param__setter__internal:
+
+namespace ugcs::vsm::param_setter_internal
+==========================================
+
+.. toctree::
+	:hidden:
+
+	class_ugcs_vsm_param_setter_internal_Param_setter.rst
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace param_setter_internal {
+
+	// classes
+
+	template <typename... Params>
+	class :ref:`Param_setter<doxid-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter>`;
+
+	} // namespace param_setter_internal

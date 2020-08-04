@@ -1,0 +1,11 @@
+.. index:: pair: struct; ugcs::vsm::Debug_assert_exception_dummy_struct
+.. _doxid-dd/d48/structugcs_1_1vsm_1_1_debug__assert__exception__dummy__struct:
+
+struct ugcs::vsm::Debug_assert_exception_dummy_struct
+=====================================================
+
+.. toctree::
+	:hidden:
+
+:ref:`Exception <doxid-de/de2/classugcs_1_1vsm_1_1_exception>` to throw when debugging assertion fires.
+

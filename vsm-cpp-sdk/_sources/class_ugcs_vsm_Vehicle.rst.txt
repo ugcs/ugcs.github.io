@@ -1,0 +1,298 @@
+.. index:: pair: class; ugcs::vsm::Vehicle
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle:
+
+class ugcs::vsm::Vehicle
+========================
+
+.. toctree::
+	:hidden:
+
+	class_ugcs_vsm_Vehicle_Command_map.rst
+	class_ugcs_vsm_Vehicle_Hasher.rst
+
+Overview
+~~~~~~~~
+
+Base class for user-defined vehicles. :ref:`More...<details-d2/d96/classugcs_1_1vsm_1_1_vehicle>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <vehicle.h>
+	
+	class Vehicle: public :ref:`ugcs::vsm::Device<doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Vehicle> :ref:`Ptr<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a98c6f32009651b83459aeca73323a73b>`;
+		typedef std::weak_ptr<Vehicle> :ref:`Weak_ptr<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1adfa7c287bbfd6f0cd36e541d3e202a1b>`;
+
+		// classes
+	
+		class :ref:`Command_map<doxid-d6/d77/classugcs_1_1vsm_1_1_vehicle_1_1_command__map>`;
+		class :ref:`Hasher<doxid-df/d9f/classugcs_1_1vsm_1_1_vehicle_1_1_hasher>`;
+
+		// construction
+	
+		:ref:`Vehicle<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a75fcb3b3e550bc822dc54fadd31f1389>`(
+			proto::Device_type type = proto::DEVICE_TYPE_VEHICLE,
+			:ref:`Request_processor::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` processor = nullptr,
+			:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` completion_ctx = nullptr
+			);
+	
+		:ref:`Vehicle<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1af8c02e4ee24d6b23e3a3691a869abfcd>`(const Vehicle&);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad9c9ed99461ccb9f2429196f7857e292>` :ref:`Create<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1af9673fe69ebb67dce79d3ea491e350c7>`(Args&&... args);
+	
+		void :ref:`Process_requests<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a2dfb2d8de22de4739d6fd21dab0c1b35>`();
+		void :ref:`Set_serial_number<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1adcc2858ef4f4e1b4f7399968f444808a>`(const std::string&);
+		const std::string& :ref:`Get_serial_number<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a55050598c24e9e2f46a61d72b88ee1de>`() const;
+		const std::string& :ref:`Get_model_name<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a5ef3a5c8462b784a37976f358e730f43>`() const;
+		void :ref:`Set_model_name<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1ac9d8a101c3cf6909428bb37f110dcb14>`(const std::string&);
+		void :ref:`Set_port_name<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a56cbf266834826ed8979e6101501e07f>`(const std::string&);
+		const std::string& :ref:`Get_port_name<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a7bbcb372b68a4a588dc4a8bb4fa97705>`() const;
+		const std::string& :ref:`Get_frame_type<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1ad993fc24c7a6ad251bbe75211769b40d>`() const;
+		void :ref:`Set_frame_type<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a445df7ee6c976c5f0b48a83966de1baf>`(const std::string&);
+		proto::Vehicle_type :target:`Get_vehicle_type<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a5925790bcd0a0ef45da11e6ba1a0a9d5>`() const;
+		void :target:`Set_vehicle_type<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a1ec2309829045f1ca701fb875fa86f00>`(proto::Vehicle_type);
+		bool :target:`Is_vehicle_type<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a7e647240c9922cf1edb578b6615e8d1a>`(proto::Vehicle_type type);
+		bool :target:`Is_copter<doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a535838d380230b351dce84c7a336e62c>`();
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<:ref:`Device<doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`> :ref:`Ptr<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad9c9ed99461ccb9f2429196f7857e292>`;
+		typedef std::weak_ptr<:ref:`Device<doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`> :ref:`Weak_ptr<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad07c41941c9ec0a59301ed38b9ba5942>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, std::vector<:ref:`Property::Ptr<doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>`>> :ref:`Command_handler<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1af0eb56fb692dd21112daeebfd7a2584e>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, uint32_t, :ref:`Proto_msg_ptr<doxid-dd/def/namespaceugcs_1_1vsm_1a66d7df9d50892a6f2b835e2b89f325e5>`> :ref:`Response_sender<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad72345b199dee030579178db5240b8a0>`;
+
+		// classes
+	
+		class :ref:`Commit_scope<doxid-db/dff/classugcs_1_1vsm_1_1_device_1_1_commit__scope>`;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad9c9ed99461ccb9f2429196f7857e292>` :ref:`Create<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1af1e47e8e98d8745973a0da208f6523db>`(Args&&... args);
+	
+		static void :ref:`Set_failsafe_actions<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1af82a3acd4379cfe8d9d152bafcc985dc>`(:ref:`Property::Ptr<doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` p, std::initializer_list<proto::Failsafe_action> actions);
+		void :ref:`Enable<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a6d1d13dd8ae61480c6a063b6e085d844>`();
+		void :ref:`Disable<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a2fc5001dbdeaa3e47fd988c203c3a166>`();
+		bool :ref:`Is_enabled<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a9800ebd49a7ba31060a4b7d232d9b2e5>`();
+	
+		void :ref:`On_ucs_message<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1acfdf9d8bfe2c8b2f749deff588170614>`(
+			ugcs::vsm::proto::Vsm_message message,
+			:ref:`Response_sender<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad72345b199dee030579178db5240b8a0>` completion_handler = :ref:`Response_sender<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad72345b199dee030579178db5240b8a0>`(),
+			:ref:`ugcs::vsm::Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` completion_ctx = nullptr
+			);
+	
+		void :ref:`Register<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a9bc15fb7e37180b5b09357a6af29e29a>`(ugcs::vsm::proto::Vsm_message&);
+	
+		template <typename Type>
+		:ref:`Property::Ptr<doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` :ref:`Set_property<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a5cfc3a6e1e3f32d2c567d007b37b90cd>`(
+			const std::string& name,
+			Type value,
+			proto::Field_semantic semantic = proto::FIELD_SEMANTIC_DEFAULT
+			);
+	
+		uint32_t :ref:`Get_session_id<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a3e07507101776db19e4fe5a8a17906dd>`();
+		:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` :ref:`Get_completion_ctx<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a51a82107edf49f6a9066c2476f7e4319>`();
+		void :ref:`Register<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a0860b35371009af5441b9c8dd1131e52>`();
+		void :ref:`Unregister<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a9f981bfe9678573faa7f331092810d95>`();
+		bool :ref:`Is_registered<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a3084185690a6b4a1877939b896c5af4e>`();
+		std::string :ref:`Dump_command<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ab5dde826022e51795a64a0302273db61>`(const ugcs::vsm::proto::Device_command&);
+		:ref:`Subsystem::Ptr<doxid-de/d9d/classugcs_1_1vsm_1_1_subsystem_1a7d007a86146a44b950019a007a0bf192>` :ref:`Add_subsystem<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1aae34befc926d3fe246e2949e71fe3c33>`(proto::Subsystem_type);
+		:ref:`Request_processor::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` :ref:`Get_processing_ctx<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a80b756992fdfc476ea136486275d8030>`();
+		virtual void :ref:`Handle_ucs_info<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a4ce277ef7d82d30aee555d0fafc0f21a>`(std::vector<:ref:`Ucs_info<doxid-df/d62/structugcs_1_1vsm_1_1_ucs__info>`>);
+
+.. _details-d2/d96/classugcs_1_1vsm_1_1_vehicle:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Base class for user-defined vehicles.
+
+It contains interface to SDK services which can be used as base class methods calls, and abstract interface which must be implemented by the device. Instance creation should be done by :ref:`Vehicle::Create() <doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1af9673fe69ebb67dce79d3ea491e350c7>` method.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a98c6f32009651b83459aeca73323a73b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Vehicle> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1adfa7c287bbfd6f0cd36e541d3e202a1b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Vehicle> Weak_ptr
+
+Pointer type.
+
+Construction
+------------
+
+.. index:: pair: function; Vehicle
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a75fcb3b3e550bc822dc54fadd31f1389:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Vehicle(
+		proto::Device_type type = proto::DEVICE_TYPE_VEHICLE,
+		:ref:`Request_processor::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` processor = nullptr,
+		:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` completion_ctx = nullptr
+		)
+
+Constructor for a base class.
+
+Create common telemetry fields and commands.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- create_thread
+
+		- If *true*, then separate thread is automatically created for vehicle instance which allows to using blocking methods in the context of this vehicle without blocking other vehicles, otherwise vehicle instance thread is not created and user is supposed to call :ref:`Vehicle::Process_requests <doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a2dfb2d8de22de4739d6fd21dab0c1b35>` method to process requests pending for this vehicle. It is recommended to leave this value as default, i.e. "true".
+
+.. index:: pair: function; Vehicle
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1af8c02e4ee24d6b23e3a3691a869abfcd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Vehicle(const Vehicle&)
+
+Disable copying.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1af9673fe69ebb67dce79d3ea491e350c7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad9c9ed99461ccb9f2429196f7857e292>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Process_requests
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a2dfb2d8de22de4739d6fd21dab0c1b35:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Process_requests()
+
+Process requests assigned to vehicle in user thread, i.e.
+
+the thread which calls this method. Supposed to be called only when vehicle is created without its own thread.
+
+.. index:: pair: function; Set_serial_number
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1adcc2858ef4f4e1b4f7399968f444808a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_serial_number(const std::string&)
+
+Set serial number.
+
+.. index:: pair: function; Get_serial_number
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a55050598c24e9e2f46a61d72b88ee1de:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const std::string& Get_serial_number() const
+
+Get serial number of the vehicle.
+
+.. index:: pair: function; Get_model_name
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a5ef3a5c8462b784a37976f358e730f43:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const std::string& Get_model_name() const
+
+Get model name of the vehicle.
+
+.. index:: pair: function; Set_model_name
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1ac9d8a101c3cf6909428bb37f110dcb14:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_model_name(const std::string&)
+
+Set model name of the vehicle.
+
+.. index:: pair: function; Set_port_name
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a56cbf266834826ed8979e6101501e07f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_port_name(const std::string&)
+
+Set port name.
+
+.. index:: pair: function; Get_port_name
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a7bbcb372b68a4a588dc4a8bb4fa97705:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const std::string& Get_port_name() const
+
+Get port name the vehicle is connected to.
+
+.. index:: pair: function; Get_frame_type
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1ad993fc24c7a6ad251bbe75211769b40d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const std::string& Get_frame_type() const
+
+Get frame type of the vehicle.
+
+.. index:: pair: function; Set_frame_type
+.. _doxid-d2/d96/classugcs_1_1vsm_1_1_vehicle_1a445df7ee6c976c5f0b48a83966de1baf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_frame_type(const std::string&)
+
+Set frame type of the vehicle.
+

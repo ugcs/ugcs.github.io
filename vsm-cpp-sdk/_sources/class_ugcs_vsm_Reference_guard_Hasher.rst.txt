@@ -1,0 +1,47 @@
+.. index:: pair: class; ugcs::vsm::Reference_guard::Hasher
+.. _doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher:
+
+class ugcs::vsm::Reference_guard::Hasher
+========================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`Hasher <doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher>` class for reference type. :ref:`More...<details-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <reference_guard.h>
+	
+	class Hasher
+	{
+	public:
+		// methods
+	
+		size_t :ref:`operator ()<doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher_1a63459d240f741ff80f47cfaea8f4f13d>` (const :ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard>`& ref) const;
+	};
+.. _details-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Hasher <doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher>` class for reference type.
+
+Methods
+-------
+
+.. index:: pair: function; operator()
+.. _doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher_1a63459d240f741ff80f47cfaea8f4f13d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t operator () (const :ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard>`& ref) const
+
+Calculate hash value.
+

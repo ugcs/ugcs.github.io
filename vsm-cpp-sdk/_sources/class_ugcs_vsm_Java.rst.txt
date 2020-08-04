@@ -1,0 +1,63 @@
+.. index:: pair: class; ugcs::vsm::Java
+.. _doxid-d5/d6d/classugcs_1_1vsm_1_1_java:
+
+class ugcs::vsm::Java
+=====================
+
+.. toctree::
+	:hidden:
+
+	class_ugcs_vsm_Java_Env.rst
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <java.h>
+	
+	class Java
+	{
+	public:
+		// typedefs
+	
+		typedef :ref:`java_internals::Array<doxid-d1/d0e/classugcs_1_1vsm_1_1java__internals_1_1_array>`<T> :target:`Array<doxid-d5/d6d/classugcs_1_1vsm_1_1_java_1a0ff07eb773aaee0fae2c7b23dc3ca805>`;
+
+		// classes
+	
+		class :ref:`Env<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env>`;
+
+		// methods
+	
+		static void :target:`Initialize<doxid-d5/d6d/classugcs_1_1vsm_1_1_java_1a7237bad8a943784c9621fe81cb41de8e>`(
+			JNIEnv* env,
+			jobject vsm_obj
+			);
+	
+		static void :ref:`Detach_current_thread<doxid-d5/d6d/classugcs_1_1vsm_1_1_java_1a5b24de3ab63001e56062bdd80faed339>`();
+		static :ref:`Env<doxid-d0/df7/classugcs_1_1vsm_1_1_java_1_1_env>` :target:`Get_env<doxid-d5/d6d/classugcs_1_1vsm_1_1_java_1a19b096a383fbc66d48bf882cf24fa55f>`(JNIEnv* env = nullptr);
+	};
+.. _details-d5/d6d/classugcs_1_1vsm_1_1_java:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Methods
+-------
+
+.. index:: pair: function; Detach_current_thread
+.. _doxid-d5/d6d/classugcs_1_1vsm_1_1_java_1a5b24de3ab63001e56062bdd80faed339:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static void Detach_current_thread()
+
+Must be called before attached to VM thread is exiting.
+

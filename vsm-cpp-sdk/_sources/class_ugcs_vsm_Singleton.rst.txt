@@ -1,0 +1,100 @@
+.. index:: pair: class; ugcs::vsm::Singleton
+.. _doxid-d5/dcf/classugcs_1_1vsm_1_1_singleton:
+
+template class ugcs::vsm::Singleton
+===================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Helper class for implementing singletons. :ref:`More...<details-d5/dcf/classugcs_1_1vsm_1_1_singleton>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <singleton.h>
+	
+	template <class T>
+	class Singleton
+	{
+	public:
+		// construction
+	
+		:ref:`Singleton<doxid-d5/dcf/classugcs_1_1vsm_1_1_singleton_1a635f54583824693a81310cecd34c8db6>`(const Singleton&);
+		:target:`Singleton<doxid-d5/dcf/classugcs_1_1vsm_1_1_singleton_1a4ec72485e4d9d1c1a5baff27786cd77e>`();
+
+		// methods
+	
+		template <typename... Args>
+		std::shared_ptr<T> :ref:`Get_instance<doxid-d5/dcf/classugcs_1_1vsm_1_1_singleton_1acc4355b78b50b5324df49949ffa7f776>`(Args&&... args);
+	};
+.. _details-d5/dcf/classugcs_1_1vsm_1_1_singleton:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Helper class for implementing singletons.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- T
+
+		- type for instantiated class.
+
+Construction
+------------
+
+.. index:: pair: function; Singleton
+.. _doxid-d5/dcf/classugcs_1_1vsm_1_1_singleton_1a635f54583824693a81310cecd34c8db6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Singleton(const Singleton&)
+
+Disable copying.
+
+Methods
+-------
+
+.. index:: pair: function; Get_instance
+.. _doxid-d5/dcf/classugcs_1_1vsm_1_1_singleton_1acc4355b78b50b5324df49949ffa7f776:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	std::shared_ptr<T> Get_instance(Args&&... args)
+
+Get singleton instance.
+
+The same instance is returned until the last reference is released. In case the target class does not have default constructor and the constructor arguments are not provided, the new instance is not created - nullptr is returned if it was not previously created.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- args
+
+		- Arguments to constructor if any.
+
+
+
+.. rubric:: Returns:
+
+Global singleton instance.
+

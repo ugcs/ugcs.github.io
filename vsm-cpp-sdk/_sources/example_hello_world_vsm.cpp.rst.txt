@@ -1,0 +1,292 @@
+.. index:: pair: example; hello_world_vsm.cpp
+.. _doxid-d5/d58/hello_world_vsm_8cpp-example:
+
+hello_world_vsm.cpp
+===================
+
+C++ source code example for "Hello world" VSM application.
+
+C++ source code example for "Hello world" VSM application. See :ref:`corresponding tutorial <doxid-d8/db6/hello_world_vsm_page>`.
+
+.. ref-code-block:: cpp
+
+	// Copyright (c) 2018, Smart Projects Holdings Ltd
+	// All rights reserved.
+	// See LICENSE file for license details.
+	
+	/* Main include file for VSM SDK. Should be included in all VSM applications. */
+	#include <ugcs/vsm/vsm.h>
+	:ref:`DEFINE_DEFAULT_VSM_NAME <doxid-d5/d64/defs_8h_1ab7a7a41e616d883b2be558184217fff1>`;
+	
+	/* Custom vehicle defined by VSM developer. */
+	class Custom_vehicle:public :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`
+	{
+	    /* To add shared pointer capability to this class. */
+	    :ref:`DEFINE_COMMON_CLASS <doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d>`(Custom_vehicle, :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`)
+	public:
+	    /* Custom constructor. Vehicle, autopilot and capabilities are fixed,
+	     * but serial number and model name are passed to the constructor.
+	     */
+	    Custom_vehicle(const std::string& serial_number):
+	        Device(:ref:`ugcs <doxid-d1/d6b/namespaceugcs>`::vsm::proto::DEVICE_TYPE_VEHICLE)
+	    {
+	        /* This parameter is mandatory
+	         */
+	        :ref:`Set_property <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a5cfc3a6e1e3f32d2c567d007b37b90cd>`("vehicle_type", ugcs::vsm::proto::VEHICLE_TYPE_MULTICOPTER);
+	
+	        /* This parameter is optional
+	         */
+	        :ref:`Set_property <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a5cfc3a6e1e3f32d2c567d007b37b90cd>`("serial_number", serial_number);
+	
+	        /* Create flight_controller component
+	         */
+	        flight_controller = :ref:`Add_subsystem <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1aae34befc926d3fe246e2949e71fe3c33>`(ugcs::vsm::proto::SUBSYSTEM_TYPE_FLIGHT_CONTROLLER);
+	
+	        // autopilot_type is mandatory.
+	        flight_controller->Set_property("autopilot_type", "my_t");
+	
+	        /* Create telemetry fields
+	         * The exact type of the field is derived from name. */
+	        t_control_mode = flight_controller->Add_telemetry("control_mode");
+	        t_main_voltage = flight_controller->Add_telemetry("main_voltage");
+	        t_heading = flight_controller->Add_telemetry("heading");
+	        t_altitude_raw = flight_controller->Add_telemetry("altitude_raw");
+	
+	        /* For telemetry fields without hardcoded type it can be specified explicitly. */
+	        t_uplink_present = flight_controller->Add_telemetry("uplink_present", ugcs::vsm::proto::FIELD_SEMANTIC_BOOL);
+	        t_is_armed = flight_controller->Add_telemetry("is_armed", ugcs::vsm::proto::FIELD_SEMANTIC_BOOL);
+	        t_downlink_present = flight_controller->Add_telemetry("downlink_present", :ref:`ugcs::vsm::Property::VALUE_TYPE_BOOL <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1a09db7d8a6c3e7e57b8c226d93b5c2ac0ab085e7a0e043d9d633b7ec4170dd42aa>`);
+	
+	        /* Create commands which are available as standalone commands */
+	        c_mission_upload = flight_controller->Add_command("mission_upload", false);
+	        c_arm = flight_controller->Add_command("arm", false);
+	        c_disarm = flight_controller->Add_command("disarm", false);
+	
+	        /* Create commands which can be issued as part of mission */
+	        c_move = flight_controller->Add_command("move", true);
+	        c_move->Add_parameter("latitude");
+	        c_move->Add_parameter("longitude");
+	        c_move->Add_parameter("altitude_amsl");
+	        c_move->Add_parameter("acceptance_radius");
+	        c_move->Add_parameter("loiter_radius", :ref:`ugcs::vsm::Property::VALUE_TYPE_FLOAT <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1a09db7d8a6c3e7e57b8c226d93b5c2ac0ae3f38466a6272370e00eda62e94f1bcd>`);
+	        c_move->Add_parameter("wait_time", :ref:`ugcs::vsm::Property::VALUE_TYPE_FLOAT <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1a09db7d8a6c3e7e57b8c226d93b5c2ac0ae3f38466a6272370e00eda62e94f1bcd>`);
+	        c_move->Add_parameter("heading");
+	        c_move->Add_parameter("ground_elevation");
+	    }
+	
+	    /* Override enable method to perform initialization. In this example -
+	     * just start telemetry simulation timer.
+	     */
+	    virtual void
+	    :ref:`On_enable <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a38228457ccd1b320bb91c6f2313dd890>`() override
+	    {
+	        timer = :ref:`ugcs::vsm::Timer_processor::Get_instance <doxid-dc/dae/classugcs_1_1vsm_1_1_timer__processor_1a19a7b34dd02aba6468e644d1c91026aa>`()->Create_timer(
+	                /* Telemetry with 1 second granularity. */
+	                std::chrono::seconds(1),
+	                /* Send_telemetry method will be called on timer. Smart pointer
+	                 * is used to reference vehicle instance. Plain 'this' could also
+	                 * be used here, but it is generally not recommended. */
+	                :ref:`ugcs::vsm::Make_callback <doxid-dd/def/namespaceugcs_1_1vsm_1ad0409b84278bc4bc1c8db2c993681dad>`(&Custom_vehicle::Send_telemetry, Shared_from_this()),
+	                /* Execution will be done in default vehicle context,
+	                 * which is served by dedicated vehicle thread together with
+	                 * vehicle requests so additional synchronization is not necessary.
+	                 */
+	                :ref:`Get_completion_ctx <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a51a82107edf49f6a9066c2476f7e4319>`());
+	
+	        /* Report current control mode to the UgCS */
+	        t_control_mode->Set_value(ugcs::vsm::proto::CONTROL_MODE_MANUAL);
+	
+	        /* Report link state to the UgCS */
+	        t_downlink_present->Set_value(true);
+	        t_uplink_present->Set_value(true);
+	
+	        /* Tell UgCS about available commands.
+	         * Command availability can be changed during runtime via this call and
+	         * VSM can determine which command buttons to show in the client UI. */
+	        c_arm->Set_available();
+	        c_disarm->Set_available();
+	        c_mission_upload->Set_available();
+	
+	        /* Mission upload is always enabled.
+	        * Command state (enabled/disabled) can be changed during runtime via this call and
+	        * VSM can determine which command buttons to show as enabled in the client UI. */
+	        c_mission_upload->Set_enabled();
+	        :ref:`Commit_to_ucs <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad261b87ce5aa01a5e2e2fca3b0570e19>`();
+	    }
+	    virtual void
+	    :ref:`On_disable <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a4739000876fd6baede39204a415b25f2>`() override
+	    {
+	        /* Turn off the timer. */
+	        timer->Cancel();
+	    }
+	    /* Handler for a command submitted for the vehicle by UgCS. */
+	    void
+	    :ref:`Handle_ucs_command <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a50a07cfc783da975225fb59f5962d053>`(:ref:`ugcs::vsm::Ucs_request::Ptr <doxid-dc/df0/classugcs_1_1vsm_1_1_ucs__request_1a652d814cf8c5922dad29094a80be313c>` ucs_request)
+	    {
+	        for (int c = 0; c < ucs_request->request.device_commands_size(); c++) {
+	            auto &vsm_cmd = ucs_request->request.device_commands(c);
+	
+	            auto cmd = :ref:`Get_command <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1af5411d70f637c4fba369ee864480233f>`(vsm_cmd.command_id());
+	
+	            :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("COMMAND %s (%d) received",
+	                cmd->Get_name().c_str(),
+	                vsm_cmd.command_id());
+	
+	            :ref:`ugcs::vsm::Property_list <doxid-d2/d2d/classugcs_1_1vsm_1_1_property__list>` params;
+	
+	            try {
+	                if        (cmd == c_arm) {
+	
+	                    :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Vehicle armed!");
+	                    /* Start yaw spinning and climbing. */
+	                    yaw_speed = 0.1;
+	                    climb_speed = 0.5;
+	
+	                    /* Simulate armed vehicle */
+	                    is_armed = true;
+	
+	                } else if (cmd == c_disarm) {
+	
+	                    :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Vehicle disarmed.");
+	                    /* Stop yaw spinning and climbing. */
+	                    yaw_speed = 0;
+	                    climb_speed = 0;
+	
+	                    /* Simulate disarmed vehicle */
+	                    is_armed = false;
+	
+	                } else if (cmd == c_disarm) {
+	
+	                    :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Vehicle disarmed.");
+	                    /* Stop yaw spinning and climbing. */
+	                    yaw_speed = 0;
+	                    climb_speed = 0;
+	
+	                    /* Simulate disarmed vehicle */
+	                    is_armed = false;
+	
+	                } else if (cmd == c_mission_upload) {
+	
+	                    /* Iterate over all mission commands */
+	                    for (int item_count = 0; item_count < vsm_cmd.sub_commands_size(); item_count++) {
+	                        auto vsm_scmd = vsm_cmd.sub_commands(item_count);
+	                        auto cmd = :ref:`Get_command <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1af5411d70f637c4fba369ee864480233f>`(vsm_scmd.command_id());
+	                        if (cmd == c_move) {
+	                            /* Only move is supported by this vehicle */
+	                            :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("MISSION item %d %s (%d)",
+	                                item_count, cmd->Get_name().c_str(),
+	                                vsm_scmd.command_id());
+	                            params = cmd->Build_parameter_list(vsm_scmd);
+	                            float alt;
+	                            params.:ref:`Get_value <doxid-d2/d2d/classugcs_1_1vsm_1_1_property__list_1a55157bda7d2d9c2523fcaf9582885533>`("altitude", alt);
+	                            :ref:`LOG_DEBUG <doxid-d7/d7f/log_8h_1a5c01521cd0033d3db4fb914d19865125>`("Move to altitude of %.2f meters.", alt);
+	                        }
+	                    }
+	
+	                } else {
+	                    :ref:`VSM_EXCEPTION <doxid-dd/d2d/exception_8h_1a7fc579418b7ef463578555dcb09e31a4>`(:ref:`ugcs::vsm::Action::Format_exception <doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`, "Unsupported command");
+	                }
+	                ucs_request->Complete();
+	            } catch (const std::exception& ex) {
+	                ucs_request->Complete(ugcs::vsm::proto::STATUS_INVALID_PARAM, std::string(ex.what()));
+	            }
+	        }
+	    }
+	private:
+	
+	    /* Generate and send simulated telemetry data to UgCS. */
+	    bool
+	    Send_telemetry()
+	    {
+	
+	        /* Report current heading. */
+	        t_heading->Set_value(yaw);
+	
+	        /* Simulate some spinning between [-Pi;+Pi]. */
+	        if ((yaw += yaw_speed) >= :ref:`M_PI <doxid-df/db1/math_8h_1ae71449b1cc6e6250b91f539153a7a0d3>`) {
+	            yaw = -:ref:`M_PI <doxid-df/db1/math_8h_1ae71449b1cc6e6250b91f539153a7a0d3>`;
+	        }
+	
+	        /* Simulate climbing high to the sky. */
+	        altitude += climb_speed;
+	        t_altitude_raw->Set_value(altitude);
+	
+	        /* Report also some battery value. */
+	        t_main_voltage->Set_value(13.5);
+	
+	        /* Enable ARM command if vehicle is disarmed. */
+	        c_arm->Set_enabled(!is_armed);
+	
+	        /* Enable DISARM command if vehicle is armed. */
+	        c_disarm->Set_enabled(is_armed);
+	
+	        /* Report armed state to the UgCS */
+	        t_is_armed->Set_value(is_armed);
+	
+	        /* Send the updated telemetry fields and command states to UgCS
+	         * SDK will send only modified values thus saving bandwidth */
+	        :ref:`Commit_to_ucs <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad261b87ce5aa01a5e2e2fca3b0570e19>`();
+	
+	        :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("send tm");
+	        /* Return true to reschedule the same timer again. */
+	        return true;
+	    }
+	    std::string serial_number;
+	    :ref:`ugcs::vsm::Timer_processor::Timer::Ptr <doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6de713d04a33015ffae93d34bc12c793>` timer;
+	
+	    double yaw = 0;
+	
+	    double yaw_speed = 0;
+	
+	    double altitude = 0;
+	
+	    double climb_speed = 0;
+	
+	    bool is_armed = false;
+	
+	    :ref:`ugcs::vsm::Subsystem::Ptr <doxid-de/d9d/classugcs_1_1vsm_1_1_subsystem_1a7d007a86146a44b950019a007a0bf192>` flight_controller = nullptr;
+	
+	    /* Define supported telemetry fields */
+	    :ref:`ugcs::vsm::Property::Ptr <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` t_control_mode = nullptr;
+	    :ref:`ugcs::vsm::Property::Ptr <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` t_is_armed = nullptr;
+	    :ref:`ugcs::vsm::Property::Ptr <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` t_uplink_present = nullptr;
+	    :ref:`ugcs::vsm::Property::Ptr <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` t_downlink_present = nullptr;
+	    :ref:`ugcs::vsm::Property::Ptr <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` t_main_voltage = nullptr;
+	    :ref:`ugcs::vsm::Property::Ptr <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` t_heading = nullptr;
+	    :ref:`ugcs::vsm::Property::Ptr <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1aeebb4298421f309c17fd1754364ebdc1>` t_altitude_raw = nullptr;
+	
+	    /* Define supported commands */
+	    :ref:`ugcs::vsm::Vsm_command::Ptr <doxid-d6/d45/classugcs_1_1vsm_1_1_vsm__command_1ad0aa4abe8012affcd2adb658d5510f73>` c_mission_upload = nullptr;
+	    :ref:`ugcs::vsm::Vsm_command::Ptr <doxid-d6/d45/classugcs_1_1vsm_1_1_vsm__command_1ad0aa4abe8012affcd2adb658d5510f73>` c_move = nullptr;
+	    :ref:`ugcs::vsm::Vsm_command::Ptr <doxid-d6/d45/classugcs_1_1vsm_1_1_vsm__command_1ad0aa4abe8012affcd2adb658d5510f73>` c_arm = nullptr;
+	    :ref:`ugcs::vsm::Vsm_command::Ptr <doxid-d6/d45/classugcs_1_1vsm_1_1_vsm__command_1ad0aa4abe8012affcd2adb658d5510f73>` c_disarm = nullptr;
+	};
+	
+	int main(int, char* [])
+	{
+	    /* First of all, initialize SDK infrastructure and services. */
+	    :ref:`ugcs::vsm::Initialize <doxid-dd/def/namespaceugcs_1_1vsm_1a6a4d1d5dbdddf89a76e16382defa66fa>`();
+	    /* Create vehicle instance with hard-coded serial number. */
+	    Custom_vehicle::Ptr vehicle = Custom_vehicle::Create("asd123456");
+	    /* Should be always called right after vehicle instance creation. */
+	    vehicle->Enable();
+	    /* Should be always called after Enable once all the necessary detection is done
+	     * and parameters set.
+	     */
+	    vehicle->Register();
+	    /* Now vehicle is visible to UgCS. Requests for the vehicle will be executed
+	     * in a dedicated vehicle thread. In a real VSM, there should be some
+	     * supervision logic which monitors the connection with a vehicle and
+	     * disables it when connection is totally lost. Here it is assumed that
+	     * vehicle is always connected, so just wait indefinitely.
+	     */
+	    std::condition_variable cond;
+	    std::mutex mutex;
+	    std::unique_lock<std::mutex> lock(mutex);
+	    cond.wait(lock); /* Infinite wait. */
+	    /* Disable the vehicle, considered to be deleted after that. */
+	    vehicle->Disable();
+	    /* Gracefully terminate SDK infrastructure and services. */
+	    :ref:`ugcs::vsm::Terminate <doxid-dd/def/namespaceugcs_1_1vsm_1a68e200f95017008b9119e042a114f587>`();
+	    return 0;
+	}

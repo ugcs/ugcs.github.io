@@ -1,0 +1,155 @@
+.. index:: pair: page; Device interface
+.. _doxid-da/d5e/vehicle_interface_page:
+
+Device interface
+================
+
+
+
+.. _doxid-da/d5e/vehicle_interface_page_1brief:
+
+Brief
+~~~~~
+
+Device interface is the main concept to be used by VSM developer to add custom devices to UgCS. The interface itself is represented by a base class :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>` which should be inherited to implement specific device types. For example:
+
+.. ref-code-block:: cpp
+
+	class Custom_vehicle:public :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`
+	{
+	    /* To add shared pointer capability to this class. */
+	    :ref:`DEFINE_COMMON_CLASS <doxid-d5/d60/utils_8h_1add7ad4e26c0e697e6eadb8da66c3e60d>`(Custom_vehicle, :ref:`ugcs::vsm::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device>`)
+
+As a result, new class denotes a specific vehicle type which can interact with UgCS. Separate instance of this class should be created for each physical vehicle connected to the VSM application. That is, if there are two vehicles of the same type which should be simultaneously managed by UgCS, two class instances should be created (see :ref:`Creation <doxid-da/d5e/vehicle_interface_page_1instance_creation>`).
+
+UgCS is a distributed system with multiple VSM applications and each vehicle is globally identified by a unique combination of case sensitive *vehicle_name* and *serial_number* string values. They are used in overloaded Fill_register_msg method and can not be changed during vehicle class instance lifetime. Same model name and serial number values in different VSM applications denotes the same physical vehicle. It is up to VSM application developer to identify physical vehicles and their model names and serial numbers. The exact content of model name and serial number is not enforced, however it is recommended to provide some human readable values, for example:
+
+.. code-block:: cpp
+
+	Model name: Arducopter
+	Serial number: 1
+	
+	Model name: MD4-200
+	Serial number: 12345
+
+If there is absolutely no technical way to identify a vehicle using vehicle specific protocol, a mapping from physical communication port/interface to vehicle may be used, for example:
+
+.. code-block:: cpp
+
+	Serial COM1: Vehicle 1
+	Serial COM2: Vehicle 2
+	WiFi network: Vehicle 3
+	USB device: Vehicle 4
+
+In this case, end-user of the UgCS should be informed about such mapping.
+
+Vehicle and autopilot types should be also set in ugcs::vsm::Device::Fill_register_msg(). This is to inform UgCS about the features supported by a particular vehicle. The support for additional features is specified by registering commands and telemetry fields. See also :ref:`Telemetry <doxid-da/d5e/vehicle_interface_page_1telemetry>` and commands.
+
+By default, all device instances are created with a dedicated thread to facilitate parallelization of multi-vehicle VSM applications and safeguard from one vehicle affecting another. See :ref:`ugcs::vsm::Device::Device <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a1eb709bfab445c201058086c0808b387>` and :ref:`Asynchronous programming framework <doxid-d4/da8/async_programming_page>`.
+
+
+
+
+
+.. _doxid-da/d5e/vehicle_interface_page_1instance_creation:
+
+Creation
+~~~~~~~~
+
+As a general rule, the instance of specific vehicle class is created when physical vehicle is connected to VSM and identified (model name and serial number) or some specific vehicle is predefined and VSM is awaiting its connection. Creation is done as follows:
+
+.. ref-code-block:: cpp
+
+
+	/* Create vehicle instance with hard-coded serial number. */
+	Custom_vehicle::Ptr vehicle = Custom_vehicle::Create("asd123456");
+
+Right after the instance is created, it should be enabled by calling :ref:`ugcs::vsm::Device::Enable <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a6d1d13dd8ae61480c6a063b6e085d844>` method. It is necessary to complete additional low level initialization actions which are not possible to implement in class constructor, for example, to use shared pointer to the class instance which is being created. Derived vehicle class may override :ref:`ugcs::vsm::Device::On_enable() <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a38228457ccd1b320bb91c6f2313dd890>` method to implement vehicle class specific initializations. This initialization is not expected to fail. Vehicle instance should be ready to accept vehicle requests (see :ref:`Vehicle commands <doxid-da/d5e/vehicle_interface_page_1vehicle_requests_section>`) right after :ref:`ugcs::vsm::Device::On_enable() <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a38228457ccd1b320bb91c6f2313dd890>` method is completed. See also :ref:`Deletion <doxid-da/d5e/vehicle_interface_page_1instance_deletion>`.
+
+
+
+
+
+.. _doxid-da/d5e/vehicle_interface_page_1instance_deletion:
+
+Deletion
+~~~~~~~~
+
+Class instance deletion (i.e. memory releasing) happens automatically thanks to shared pointer usage, but before releasing the last reference to instance pointer, :ref:`ugcs::vsm::Device::Disable() <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a2fc5001dbdeaa3e47fd988c203c3a166>` method should be called to perform finalization and cleanup actions like breaking of shared pointer circular dependencies:
+
+.. ref-code-block:: cpp
+
+	/* Disable the vehicle, considered to be deleted after that. */
+	vehicle->Disable();
+
+Derived vehicle class may override :ref:`ugcs::vsm::Device::On_disable() <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1a4739000876fd6baede39204a415b25f2>` method to implement vehicle class specific finalization.
+
+
+
+
+
+.. _doxid-da/d5e/vehicle_interface_page_1telemetry:
+
+Telemetry
+~~~~~~~~~
+
+Vehicle can define and use arbitrary set of telemetry fileds with different types. Supported telemetry fields are registered in ugcs::vsm::Device::Fill_register_msg(). Telemetry is updated by setting new value via :ref:`ugcs::vsm::Property::Set_value() <doxid-d2/d7c/classugcs_1_1vsm_1_1_property_1a391bf8c307181dacf8cc796a5131ec07>` call. All updated values are sent to UgCS via :ref:`ugcs::vsm::Device::Commit_to_ucs() <doxid-d1/dfa/classugcs_1_1vsm_1_1_device_1ad261b87ce5aa01a5e2e2fca3b0570e19>` call. It is up to VSM application developer to decide about the frequency of telemetry reports generation.
+
+Example:
+
+.. ref-code-block:: cpp
+
+	bool
+	Send_telemetry()
+	{
+
+	    /* Report current heading. */
+	    t_heading->Set_value(yaw);
+
+	    /* Simulate some spinning between [-Pi;+Pi]. */
+	    if ((yaw += yaw_speed) >= :ref:`M_PI <doxid-df/db1/math_8h_1ae71449b1cc6e6250b91f539153a7a0d3>`) {
+	        yaw = -:ref:`M_PI <doxid-df/db1/math_8h_1ae71449b1cc6e6250b91f539153a7a0d3>`;
+	    }
+
+	    /* Simulate climbing high to the sky. */
+	    altitude += climb_speed;
+	    t_altitude_raw->Set_value(altitude);
+
+	    /* Report also some battery value. */
+	    t_main_voltage->Set_value(13.5);
+
+	    /* Enable ARM command if vehicle is disarmed. */
+	    c_arm->Set_enabled(!is_armed);
+
+	    /* Enable DISARM command if vehicle is armed. */
+	    c_disarm->Set_enabled(is_armed);
+
+	    /* Report armed state to the UgCS */
+	    t_is_armed->Set_value(is_armed);
+
+	    /* Send the updated telemetry fields and command states to UgCS
+	     * SDK will send only modified values thus saving bandwidth */
+	    Commit_to_ucs();
+
+	    :ref:`LOG <doxid-d7/d7f/log_8h_1a159ca84d25a5487d8e81e4438725df19>`("send tm");
+	    /* Return true to reschedule the same timer again. */
+	    return true;
+	}
+
+See :ref:`Telemetry protocol <doxid-de/d20/ucs_vsm_telemetry_page>` for the description of all built-in telemetry parameters. Reported subset of telemetry parameters depends on capabilities of a specific vehicle and is controlled by VSM application developer.
+
+
+
+
+
+.. _doxid-da/d5e/vehicle_interface_page_1vehicle_requests_section:
+
+Vehicle commands
+~~~~~~~~~~~~~~~~
+
+UgCS controls vehicles by sending command requests to them, which in turn should be processed by the vehicle and result is reported back to UgCS. All supported vehicle commands should be registered in the overloaded Fill_register_msg() method. When Vehicle receives command the overloaded method Handle_ucs_command() is called. The processing of a request can be done asynchronously by storing the handle and returning from Handle_ucs_command() method. VSM could implement multiple commands in parralel if vehicle supports it.
+
+The raw payload of vehicle request can be accessed via Ucs_request::request and response can be accessed via Ucs_request::response. The response will be sent back to the UgCS once Ucs_request::Complete() is called.
+
+See :ref:`"Hello world" VSM application <doxid-d8/db6/hello_world_vsm_page>` tutorial for examples of vehicle requests usage.
+

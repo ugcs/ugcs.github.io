@@ -1,0 +1,178 @@
+.. index:: pair: class; ugcs::vsm::mavlink::Value
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value:
+
+template class ugcs::vsm::mavlink::Value
+========================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Field value in MAVLink message. :ref:`More...<details-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <mavlink.h>
+	
+	template <typename T, Field_type_id id, int32_t initial_value = 0>
+	class Value
+	{
+	public:
+		// construction
+	
+		:ref:`Value<doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a0e76349c0f0747ac40100203ba6e2172>`(T value = initial_value);
+
+		// methods
+	
+		Value& :ref:`operator =<doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a1ef2fb1150b541e7322185c12ca5f7f5>` (T value);
+		:ref:`operator T<doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a145426690d220edf752f2c1545c48efd>` () const;
+		T :ref:`Get<doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1adb63113b3a0441551d77b36e25e31455>`() const;
+		constexpr :ref:`Field_type_id<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24>` :ref:`Get_type_id<doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a87a6ce55d566f6ac57c0d49ccc738276>`();
+		void :ref:`Reset<doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a878422960a30da27856e51011d4bc1fa>`();
+		bool :ref:`Is_reset<doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a70d8de2fcf8825f5a39168011c8b98f3>`() const;
+	};
+.. _details-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Field value in MAVLink message.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- T
+
+		- Integer underlying type.
+
+	*
+		- id
+
+		- ID for the type.
+
+	*
+		- initial_value
+
+		- Initial value for the field. It's type is fixed to integer because floating point numbers cannot be template parameters.
+
+Construction
+------------
+
+.. index:: pair: function; Value
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a0e76349c0f0747ac40100203ba6e2172:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Value(T value = initial_value)
+
+Construct value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- :ref:`Value <doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value>` in host byte order.
+
+Methods
+-------
+
+.. index:: pair: function; operator=
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a1ef2fb1150b541e7322185c12ca5f7f5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Value& operator = (T value)
+
+Assign new value.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- value
+
+		- :ref:`Value <doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value>` in host byte order.
+
+.. index:: pair: function; operator T
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a145426690d220edf752f2c1545c48efd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator T () const
+
+Cast to underlying type.
+
+
+
+.. rubric:: Returns:
+
+:ref:`Value <doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value>` in host byte order.
+
+.. index:: pair: function; Get
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1adb63113b3a0441551d77b36e25e31455:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	T Get() const
+
+Get the value of underlying type.
+
+
+
+.. rubric:: Returns:
+
+:ref:`Value <doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value>` in host byte order.
+
+.. index:: pair: function; Get_type_id
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a87a6ce55d566f6ac57c0d49ccc738276:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	constexpr :ref:`Field_type_id<doxid-d3/d55/namespaceugcs_1_1vsm_1_1mavlink_1aa4234a0e49782a7dfdd9f2372798de24>` Get_type_id()
+
+Get type ID for this value.
+
+.. index:: pair: function; Reset
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a878422960a30da27856e51011d4bc1fa:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Reset()
+
+Reset to default value used in UgCS as a "not present" indication.
+
+.. index:: pair: function; Is_reset
+.. _doxid-df/d5e/classugcs_1_1vsm_1_1mavlink_1_1_value_1a70d8de2fcf8825f5a39168011c8b98f3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_reset() const
+
+Check, if the field is reset.
+

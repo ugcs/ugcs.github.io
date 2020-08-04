@@ -1,0 +1,26 @@
+.. index:: pair: struct; ugcs::vsm::Http_parser::string_compare_ignore_case
+.. _doxid-da/d0e/structugcs_1_1vsm_1_1_http__parser_1_1string__compare__ignore__case:
+
+struct ugcs::vsm::Http_parser::string_compare_ignore_case
+=========================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <http_parser.h>
+	
+	struct string_compare_ignore_case
+	{
+		// methods
+	
+		bool :target:`operator ()<doxid-da/d0e/structugcs_1_1vsm_1_1_http__parser_1_1string__compare__ignore__case_1aff6d35cc1f14e575c71518c9c6754385>` (
+			const std::string& lhs,
+			const std::string& rhs
+			) const;
+	};

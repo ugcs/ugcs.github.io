@@ -1,0 +1,296 @@
+.. index:: pair: class; ugcs::vsm::Callback_proxy
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy:
+
+template class ugcs::vsm::Callback_proxy
+========================================
+
+.. toctree::
+	:hidden:
+
+	class_ugcs_vsm_Callback_proxy_Hasher.rst
+
+Overview
+~~~~~~~~
+
+Helper class for proxying callback invocation. :ref:`More...<details-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <callback.h>
+	
+	template <class Result, typename... Args>
+	class Callback_proxy
+	{
+	public:
+		// typedefs
+	
+		typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<Result> :ref:`Callback_type<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a51ae7be0944a2b29aeac52ee6ea8df51>`;
+		typedef typename Callback_type::template Ptr<> :ref:`Callback_ptr<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a49a9a04d85f893be6a3001d3d5333e4f>`;
+		typedef typename std::tuple_element<arg_idx, Args_ref_tuple>::type :ref:`Arg_ref_type<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1af70339c157759880977b6d51471444b6>`;
+		typedef typename std::tuple_element<arg_idx, Args_ptr_tuple>::type :ref:`Arg_ptr_type<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a7e6b99fed88638d6afcde3141eb3c140>`;
+
+		// classes
+	
+		class :ref:`Hasher<doxid-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher>`;
+
+		// construction
+	
+		:ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a70cdf9a7d3aed24b3c6b3d899c7070f4>`();
+	
+		template <class Callback_ptr>
+		:ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a57263a233f34f3efbf21d60f70b74eea>`(:ref:`Callback_ptr<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a49a9a04d85f893be6a3001d3d5333e4f>` cbk);
+
+		// methods
+	
+		template <typename... Invoke_args>
+		void :ref:`Set_args<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a891dd9644ddff55f4f834a23dde7c7fd>`(Invoke_args&&... invoke_args) const;
+	
+		template <typename... Invoke_args>
+		Result :ref:`operator ()<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ac8b6dd283ea7a0fc94075ee81203496b>` (Invoke_args&&... invoke_args) const;
+	
+		Result :ref:`Invoke<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a9777aee410a7c87f26fd57a10247477f>`() const;
+		:ref:`Callback_ptr<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a49a9a04d85f893be6a3001d3d5333e4f>` :ref:`Get_callback<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ad13c95211ce323cdfb6f045d7389766f>`();
+		:ref:`operator bool<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a9fe1e440377865720467b43865b777ff>` () const;
+		:ref:`operator Callback_ptr<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ad7b62d3ce8a2f981208fc3af49af34f9>` ();
+	
+		template <size_t arg_idx>
+		:ref:`Arg_ref_type<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1af70339c157759880977b6d51471444b6>`<arg_idx> :ref:`Get_arg<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a10bb4e620d21e51b9f5c072cd33fcd6e>`();
+	
+		template <size_t arg_idx, typename Arg_type>
+		void :ref:`Set_arg<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ab628cbdc529e3666b9aecbe59bc4edd2>`(Arg_type&& arg);
+	
+		bool :ref:`operator ==<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ab457d696835c1ad28c73c63d68b6c456>` (const Callback_proxy& other) const;
+		bool :ref:`operator !=<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1aa3c4be3e4bfa6b489b02c2f82cf4eb1d>` (const Callback_proxy& other) const;
+	};
+.. _details-d0/db9/classugcs_1_1vsm_1_1_callback__proxy:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Helper class for proxying callback invocation.
+
+It is aware of specified number of first arguments to the target callback.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Result
+
+		- Type of the callback invocation result.
+
+	*
+		- Args
+
+		- Type of the first arguments.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Callback_type
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a51ae7be0944a2b29aeac52ee6ea8df51:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<Result> Callback_type
+
+Base type of the underlying callback object.
+
+.. index:: pair: typedef; Callback_ptr
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a49a9a04d85f893be6a3001d3d5333e4f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef typename Callback_type::template Ptr<> Callback_ptr
+
+Pointer to the underlying callback object.
+
+.. index:: pair: typedef; Arg_ref_type
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1af70339c157759880977b6d51471444b6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef typename std::tuple_element<arg_idx, Args_ref_tuple>::type Arg_ref_type
+
+Creates reference type to the argument with index *arg_idx*.
+
+.. index:: pair: typedef; Arg_ptr_type
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a7e6b99fed88638d6afcde3141eb3c140:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef typename std::tuple_element<arg_idx, Args_ptr_tuple>::type Arg_ptr_type
+
+Creates pointer type to the argument with index *arg_idx*.
+
+Construction
+------------
+
+.. index:: pair: function; Callback_proxy
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a70cdf9a7d3aed24b3c6b3d899c7070f4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Callback_proxy()
+
+Default constructor creates unbound instance.
+
+.. index:: pair: function; Callback_proxy
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a57263a233f34f3efbf21d60f70b74eea:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class Callback_ptr>
+	Callback_proxy(:ref:`Callback_ptr<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a49a9a04d85f893be6a3001d3d5333e4f>` cbk)
+
+Constructs instance bound to the provided callback object.
+
+Methods
+-------
+
+.. index:: pair: function; Set_args
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a891dd9644ddff55f4f834a23dde7c7fd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Invoke_args>
+	void Set_args(Invoke_args&&... invoke_args) const
+
+Set arguments values for callback invocation.
+
+.. index:: pair: function; operator()
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ac8b6dd283ea7a0fc94075ee81203496b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Invoke_args>
+	Result operator () (Invoke_args&&... invoke_args) const
+
+Invoke the callback with the specified first arguments.
+
+.. index:: pair: function; Invoke
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a9777aee410a7c87f26fd57a10247477f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Result Invoke() const
+
+Invoke the callback with the previously set argument values.
+
+.. index:: pair: function; Get_callback
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ad13c95211ce323cdfb6f045d7389766f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Callback_ptr<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a49a9a04d85f893be6a3001d3d5333e4f>` Get_callback()
+
+Get the associated callback.
+
+.. index:: pair: function; operator bool
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a9fe1e440377865720467b43865b777ff:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator bool () const
+
+Check if the proxy object is bound to some callback object.
+
+.. index:: pair: function; operator Callback_ptr
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ad7b62d3ce8a2f981208fc3af49af34f9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator Callback_ptr ()
+
+Support implicit cast to callback base class.
+
+.. index:: pair: function; Get_arg
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1a10bb4e620d21e51b9f5c072cd33fcd6e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <size_t arg_idx>
+	:ref:`Arg_ref_type<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1af70339c157759880977b6d51471444b6>`<arg_idx> Get_arg()
+
+Get reference to an argument at the specified position.
+
+Template parameters:
+
+* *arg_idx* Index of the argument to get.
+
+
+
+.. rubric:: Returns:
+
+Reference to the stored argument.
+
+.. index:: pair: function; Set_arg
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ab628cbdc529e3666b9aecbe59bc4edd2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <size_t arg_idx, typename Arg_type>
+	void Set_arg(Arg_type&& arg)
+
+Set argument value at the specified position.
+
+Template parameters:
+
+* *arg_idx* Argument position.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- arg
+
+		- Argument value.
+
+.. index:: pair: function; operator==
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1ab457d696835c1ad28c73c63d68b6c456:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator == (const Callback_proxy& other) const
+
+Equality operator.
+
+Proxies pointing to the same callback are considered the same.
+
+.. index:: pair: function; operator!=
+.. _doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy_1aa3c4be3e4bfa6b489b02c2f82cf4eb1d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator != (const Callback_proxy& other) const
+
+Non-equality operator.
+
+Proxies pointing to the different callbacks are considered different.
+

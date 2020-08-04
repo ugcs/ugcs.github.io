@@ -1,0 +1,34 @@
+.. index:: pair: class; ugcs::vsm::Crc32
+.. _doxid-d5/def/classugcs_1_1vsm_1_1_crc32:
+
+class ugcs::vsm::Crc32
+======================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <crc32.h>
+	
+	class Crc32
+	{
+	public:
+		// methods
+	
+		void :target:`Reset<doxid-d5/def/classugcs_1_1vsm_1_1_crc32_1adc42988d9638f3ec839e02b9f7ecef30>`();
+		uint32_t :target:`Add_byte<doxid-d5/def/classugcs_1_1vsm_1_1_crc32_1ad1e150672b3d42771562cbda9ea73a09>`(uint8_t b);
+		uint32_t :target:`Add_short<doxid-d5/def/classugcs_1_1vsm_1_1_crc32_1a425abac3280cba9410d3a20c6dc93195>`(uint16_t b);
+		uint32_t :target:`Add_int<doxid-d5/def/classugcs_1_1vsm_1_1_crc32_1a8c9da6ac8421802af0916a8393ef1715>`(uint32_t b);
+	
+		uint32_t :target:`Add_buffer<doxid-d5/def/classugcs_1_1vsm_1_1_crc32_1a6ee8608e38f51998bb027c77995acd9c>`(
+			void* b,
+			size_t len
+			);
+	
+		uint32_t :target:`Get<doxid-d5/def/classugcs_1_1vsm_1_1_crc32_1a1655e2c80152c988456c5d9ccd5bd183>`();
+	};

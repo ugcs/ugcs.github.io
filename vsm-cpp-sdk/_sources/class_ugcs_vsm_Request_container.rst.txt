@@ -1,0 +1,332 @@
+.. index:: pair: class; ugcs::vsm::Request_container
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container:
+
+class ugcs::vsm::Request_container
+==================================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Request_container_Type.rst
+	class_ugcs_vsm_Request_container_Request.rst
+	class_ugcs_vsm_Request_container_Request_waiter.rst
+
+Overview
+~~~~~~~~
+
+Generic container for queued requests. :ref:`More...<details-d3/d1f/classugcs_1_1vsm_1_1_request__container>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <request_container.h>
+	
+	class Request_container: public std::enable_shared_from_this< Request_container >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Request_container> :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`;
+		typedef std::weak_ptr<Request_container> :ref:`Weak_ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a77243b55b39633082db0c3728a8a85b0>`;
+
+		// enums
+	
+		enum :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>`;
+
+		// classes
+	
+		class :ref:`Request<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>`;
+		class :ref:`Request_waiter<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter>`;
+
+		// construction
+	
+		:ref:`Request_container<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a6f987fcab9f10ab1812601dbad9316e3>`(const std::string& name, :ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter = :ref:`Request_waiter::Create<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a091f8971c953ca128e84d91567b00b52>`());
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` :ref:`Create<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ad29f54929b9e5f8645ec52a1e45adb12>`(Args&&... args);
+	
+		virtual :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` :ref:`Get_type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a0d3beca821012a86a256c28e7dfc4fde>`() const;
+		bool :ref:`Check_type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ac38d8f9f00ad0a9d4b449dff33b0cdab>`(:ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` mask);
+		void :ref:`Submit_request<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aeee82d0de5351f069e41e3317a3f5ba8>`(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request);
+		void :ref:`Submit_request_locked<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a6aae7a556f97447859ea1cd406ca90f1>`(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request, :ref:`Request_waiter::Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` locker);
+		int :ref:`Process_requests<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a580718bc6c93f68817a75779c269c7c0>`(int requests_limit = 0);
+		int :ref:`Process_requests<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a9101999857946b533c5473db74995dcb>`(std::unique_lock<std::mutex>& lock, int requests_limit = 0);
+		void :ref:`Set_waiter<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ae5bc52cbb72f4009abbdb749c84ea9d8>`(:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter);
+		:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` :ref:`Get_waiter<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a97a3a455484bfd258139f1d9b69ea0c8>`() const;
+		const std::string& :ref:`Get_name<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ab9745410bec2e31145de2ad61aec1038>`();
+		void :ref:`Enable<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aad7864e6f1e03e84d869cbca8dc3df06>`();
+		void :ref:`Disable<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aa68b072400c148d77a5fab4529e68d8e>`();
+		bool :ref:`Is_enabled<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a787201d195b1038a816d4c81785f2765>`() const;
+	};
+
+	// direct descendants
+
+	template <bool is_processor>
+	class :ref:`Request_context<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context>`;
+.. _details-d3/d1f/classugcs_1_1vsm_1_1_request__container:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Generic container for queued requests.
+
+It provides interface for submitting requests into the container and executing associated handlers for queued requests.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Request_container> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a77243b55b39633082db0c3728a8a85b0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Request_container> Weak_ptr
+
+Pointer type.
+
+Construction
+------------
+
+.. index:: pair: function; Request_container
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a6f987fcab9f10ab1812601dbad9316e3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Request_container(const std::string& name, :ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter = :ref:`Request_waiter::Create<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a091f8971c953ca128e84d91567b00b52>`())
+
+Create container with default associated waiter.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ad29f54929b9e5f8645ec52a1e45adb12:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Get_type
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a0d3beca821012a86a256c28e7dfc4fde:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual :ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` Get_type() const
+
+Get this container type.
+
+.. index:: pair: function; Check_type
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ac38d8f9f00ad0a9d4b449dff33b0cdab:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Check_type(:ref:`Type<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a280c53ec8f1a1aa04116d4b84d30c1ab>` mask)
+
+Check if the container type conforms the specified characteristic mask.
+
+.. index:: pair: function; Submit_request
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aeee82d0de5351f069e41e3317a3f5ba8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Submit_request(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request)
+
+Submit request to this container for further processing or notification handlers invocation.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- request
+
+		- :ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` to submit.
+
+.. index:: pair: function; Submit_request_locked
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a6aae7a556f97447859ea1cd406ca90f1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Submit_request_locked(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request, :ref:`Request_waiter::Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` locker)
+
+The same as Submit_request, but with previously acquired lock of the associated waiter.
+
+Lock should be with notify.
+
+.. index:: pair: function; Process_requests
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a580718bc6c93f68817a75779c269c7c0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int Process_requests(int requests_limit = 0)
+
+Process all currently queued requests.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- requests_limit
+
+		- Limit of requests to process at once. Zero means no limit.
+
+
+
+.. rubric:: Returns:
+
+Number of requests processed.
+
+.. index:: pair: function; Process_requests
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a9101999857946b533c5473db74995dcb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int Process_requests(std::unique_lock<std::mutex>& lock, int requests_limit = 0)
+
+Process all currently queued requests.
+
+This version does not lock the waiter but uses provided mutex instead assuming it is locked when called. Intended for use from :ref:`Request_waiter::Wait_and_process <doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a74b1331d9dfe058530c2e8b922a03eb6>`.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- lock
+
+		- External lock to use for protecting queue access.
+
+	*
+		- requests_limit
+
+		- Limit of requests to process at once. Zero means no limit.
+
+
+
+.. rubric:: Returns:
+
+Number of requests processed.
+
+.. index:: pair: function; Set_waiter
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ae5bc52cbb72f4009abbdb749c84ea9d8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_waiter(:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` waiter)
+
+Set request waiter associated with this container.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- waiter
+
+		- Waiter object.
+
+.. index:: pair: function; Get_waiter
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a97a3a455484bfd258139f1d9b69ea0c8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Request_waiter::Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` Get_waiter() const
+
+Get request waiter associated with this container.
+
+.. index:: pair: function; Get_name
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1ab9745410bec2e31145de2ad61aec1038:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const std::string& Get_name()
+
+Get the name of the container.
+
+.. index:: pair: function; Enable
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aad7864e6f1e03e84d869cbca8dc3df06:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Enable()
+
+Enable the container.
+
+The container is ready to accept requests after that. Derived class can start dedicated threads there.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Invalid_op_exception
+
+		- if the container is already enabled.
+
+.. index:: pair: function; Disable
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aa68b072400c148d77a5fab4529e68d8e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Disable()
+
+Disable the container.
+
+All requests which are submitted after this method is called will be aborted. It is up to container implementation to decide whether to process or abort requests which are already submitted or being processed. If a container has dedicated threads, it should terminate them (should be done synchronously in :ref:`On_disable() <doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a5fe483b1424749eef29a433dc8ddb6ba>` method). Method must be called from the same thread as :ref:`Enable <doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1aad7864e6f1e03e84d869cbca8dc3df06>` method.
+
+.. index:: pair: function; Is_enabled
+.. _doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a787201d195b1038a816d4c81785f2765:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_enabled() const
+
+Check if the container is currently enabled.
+

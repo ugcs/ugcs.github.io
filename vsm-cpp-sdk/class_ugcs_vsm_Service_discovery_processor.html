@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Service_discovery_processor &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class ugcs::vsm::Set_home_action" href="class_ugcs_vsm_Set_home_action.html" />
+    <link rel="prev" title="class ugcs::vsm::Serial_processor::Stream::Mode" href="class_ugcs_vsm_Serial_processor_Stream_Mode.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#inherited-members" class="nav-link">Inherited Members</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#typedefs" class="nav-link">Typedefs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-service-discovery-processor">
+<span id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor"></span><span id="index-0"></span><h1>class ugcs::vsm::Service_discovery_processor<a class="headerlink" href="#class-ugcs-vsm-service-discovery-processor" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;service_discovery_processor.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">Service_discovery_processor</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context"><span class="std std-ref">ugcs::vsm::Request_context</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Service_discovery_processor</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1afd400107c8876d62fbaacdfd555008e3"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Service_discovery_processor</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aef299242aadfadeb1db1f904dabaa558"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">Callback_proxy</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1ae8a986f070fe12613d3c6202f4898002"><span class="std std-ref">Detection_handler</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1ae7508d192e846b7a9acf2683c9aede30"><span></span><span class="n">Service_discovery_processor</span></span><span></span><span class="p">(</span><span class="n">Socket_address</span><span class="o">::</span><span class="n">Ptr</span> <span class="n">muticast_adress</span> <span class="o">=</span> <span class="n">Socket_address</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="n">DEFAULT_DISCOVERY_ADDRESS</span><span class="p">,</span> <span class="n">DEFAULT_DISCOVERY_PORT</span><span class="p">));</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a1a93b051bddcabc2d3182d971cd7fa04"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a4b1e8a2ebddc4aa9d9d225216d4431c2"><span class="std std-ref">Get_instance</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">__Callable</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">__Args</span><span class="o">&gt;</span>
+    <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa74fcb8e05e681318ab12d894f2e2593"><span class="std std-ref">__DEFINE_CALLBACK_BUILDER_BODY</span></a><span></span><span class="p">(</span>
+        <span class="n">Make_detection_handler</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">bool</span><span class="p">),</span>
+        <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span>
+        <span class="p">);</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a625cb3d26f5fb4ca6e40d56d3601283f"><span class="std std-ref">Advertise_service</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">location</span>
+        <span class="p">);</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a2809577621a88a79c0de665e80ec7b5e"><span class="std std-ref">Unadvertise_service</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">location</span>
+        <span class="p">);</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa92b1d285b5e15c5522f369d56ef7004"><span class="std std-ref">Subscribe_for_service</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">,</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1ae8a986f070fe12613d3c6202f4898002"><span class="std std-ref">Detection_handler</span></a><span></span> <span class="n">handler</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a470f700b033c20641c2076b2e76b9ccf"><span class="std std-ref">Request_processor::Ptr</span></a><span></span> <span class="n">context</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a8d1a6c0e6b5ec34b65acab60f92d016a"><span class="std std-ref">Search_for_service</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa110e572a49040805e17f387bc085c24"><span class="std std-ref">Unsubscribe_from_service</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<div class="section" id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container"><span class="std std-ref">Request_container</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container"><span class="std std-ref">Request_container</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a77243b55b39633082db0c3728a8a85b0"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context"><span class="std std-ref">Request_context</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a470f700b033c20641c2076b2e76b9ccf"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context"><span class="std std-ref">Request_context</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1adbab27f2c1072dce5c5c2486ee9ecb07"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_Request_container_Type.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a280c53ec8f1a1aa04116d4b84d30c1ab"><span class="std std-ref">Type</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// classes</span>
+
+    <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request"><span class="std std-ref">Request</span></a><span></span><span class="p">;</span>
+    <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter"><span class="std std-ref">Request_waiter</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1ad29f54929b9e5f8645ec52a1e45adb12"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="enum_ugcs_vsm_Request_container_Type.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a280c53ec8f1a1aa04116d4b84d30c1ab"><span class="std std-ref">Type</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a0d3beca821012a86a256c28e7dfc4fde"><span class="std std-ref">Get_type</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1ac38d8f9f00ad0a9d4b449dff33b0cdab"><span class="std std-ref">Check_type</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Request_container_Type.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a280c53ec8f1a1aa04116d4b84d30c1ab"><span class="std std-ref">Type</span></a><span></span> <span class="n">mask</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1aeee82d0de5351f069e41e3317a3f5ba8"><span class="std std-ref">Submit_request</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Request_container_Request.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Request::Ptr</span></a><span></span> <span class="n">request</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a6aae7a556f97447859ea1cd406ca90f1"><span class="std std-ref">Submit_request_locked</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Request_container_Request.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Request::Ptr</span></a><span></span> <span class="n">request</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter_Locker.html#doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker"><span class="std std-ref">Request_waiter::Locker</span></a><span></span> <span class="n">locker</span><span class="p">);</span>
+    <span class="kt">int</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a580718bc6c93f68817a75779c269c7c0"><span class="std std-ref">Process_requests</span></a><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">requests_limit</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="kt">int</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a9101999857946b533c5473db74995dcb"><span class="std std-ref">Process_requests</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">unique_lock</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;&amp;</span> <span class="n">lock</span><span class="p">,</span> <span class="kt">int</span> <span class="n">requests_limit</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1ae5bc52cbb72f4009abbdb749c84ea9d8"><span class="std std-ref">Set_waiter</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a3d3b944e71e1b2c4bb50a670bf5502d4"><span class="std std-ref">Request_waiter::Ptr</span></a><span></span> <span class="n">waiter</span><span class="p">);</span>
+    <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a3d3b944e71e1b2c4bb50a670bf5502d4"><span class="std std-ref">Request_waiter::Ptr</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a97a3a455484bfd258139f1d9b69ea0c8"><span class="std std-ref">Get_waiter</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1ab9745410bec2e31145de2ad61aec1038"><span class="std std-ref">Get_name</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1aad7864e6f1e03e84d869cbca8dc3df06"><span class="std std-ref">Enable</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1aa68b072400c148d77a5fab4529e68d8e"><span class="std std-ref">Disable</span></a><span></span><span class="p">();</span>
+    <span class="kt">bool</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a787201d195b1038a816d4c81785f2765"><span class="std std-ref">Is_enabled</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1aa503edaf7008fa1a923113518e074018"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="enum_ugcs_vsm_Request_container_Type.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a280c53ec8f1a1aa04116d4b84d30c1ab"><span class="std std-ref">Type</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a93add2d34731e5e8a0450e555fac5479"><span class="std std-ref">Get_type</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a6f987fcab9f10ab1812601dbad9316e3"><span class="std std-ref">Request_container</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a3d3b944e71e1b2c4bb50a670bf5502d4"><span class="std std-ref">Request_waiter::Ptr</span></a><span></span> <span class="n">waiter</span> <span class="o">=</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a091f8971c953ca128e84d91567b00b52"><span class="std std-ref">Request_waiter::Create</span></a><span></span><span class="p">());</span></pre>
+</div>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1afd400107c8876d62fbaacdfd555008e3"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Service_discovery_processor</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aef299242aadfadeb1db1f904dabaa558"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Service_discovery_processor</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1ae8a986f070fe12613d3c6202f4898002"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">Callback_proxy</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;</span> <span class="n">Detection_handler</span></pre>
+<p>Detector function.</p>
+<p>User must supply this function via <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa92b1d285b5e15c5522f369d56ef7004"><span class="std std-ref">Subscribe_for_service()</span></a> call. It should follow the signature:</p>
+<p>void Handler(string type, string name, string location, string instance_id, bool alive)</p>
+<p>Handler parameters: The Handler will get invoked when NOTIFY or M-SEARCH response is received for given service type.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p>service type</p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>service name</p></td>
+</tr>
+<tr class="row-odd"><td><p>location</p></td>
+<td><p>location uri</p></td>
+</tr>
+<tr class="row-even"><td><p>instance_id</p></td>
+<td><p>random (unique) string which can be used to distinguish services with equal names to prevent multiple connections to the same service via multiple locations.</p></td>
+</tr>
+<tr class="row-odd"><td><p>alive</p></td>
+<td><p>true if message is ssdp::alive. false if message is ssdp::byebye.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a1a93b051bddcabc2d3182d971cd7fa04"><span id="index-4"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Create an instance.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a4b1e8a2ebddc4aa9d9d225216d4431c2"><span id="index-5"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Request_container.html#doxid-d3-d1f-classugcs-1-1vsm-1-1-request-container-1a369d2f23ce01b27fe6ffe39de81e49c6"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Get_instance</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Get global or create new object instance.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa74fcb8e05e681318ab12d894f2e2593"><span id="index-6"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">__Callable</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">__Args</span><span class="o">&gt;</span>
+<span class="n">__DEFINE_CALLBACK_BUILDER_BODY</span><span class="p">(</span>
+    <span class="n">Make_detection_handler</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">bool</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span>
+    <span class="p">)</span></pre>
+<p>Builder for detection handler.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a625cb3d26f5fb4ca6e40d56d3601283f"><span id="index-7"></span><span></span><span class="kt">void</span> <span class="n">Advertise_service</span><span class="p">(</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">location</span>
+    <span class="p">)</span></pre>
+<p>Sends out the NOTIFY ssdp:alive on all available interfaces.</p>
+<p>Responds to M-SEARCH requests for given type.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>location</p></td>
+<td><p>Can contain special tag {local_address}, which will be replaced by the address of interface when sending out responses and notifications. Thus user application does not need to know local ip addresses even if dns is not used. Example: “<a class="reference external" href="http:/">http:/</a>/{local_address}:12345/my_service/location.point” The broadcasted packet will have ‘Location:’ header like this: “Location: <a class="reference external" href="http://192.168.1.112:12345/my_service/location.point">http://192.168.1.112:12345/my_service/location.point</a>”</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a2809577621a88a79c0de665e80ec7b5e"><span id="index-8"></span><span></span><span class="kt">void</span> <span class="n">Unadvertise_service</span><span class="p">(</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">location</span>
+    <span class="p">)</span></pre>
+<p>Sends out the NOTIFY ssdp:byebye on all available interfaces.</p>
+<p>Stop responding to M-SEARCH requests for given type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa92b1d285b5e15c5522f369d56ef7004"><span id="index-9"></span><span></span><span class="kt">void</span> <span class="n">Subscribe_for_service</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">,</span> <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1ae8a986f070fe12613d3c6202f4898002"><span class="std std-ref">Detection_handler</span></a><span></span> <span class="n">handler</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a470f700b033c20641c2076b2e76b9ccf"><span class="std std-ref">Request_processor::Ptr</span></a><span></span> <span class="n">context</span><span class="p">)</span></pre>
+<p>Sends out the M-SEARCH on all available interfaces.</p>
+<p>Calls handler on each NOTIFY ssdp:alive and M-SEARCH response for given service type. handler must be valid callback until <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa110e572a49040805e17f387bc085c24"><span class="std std-ref">Unsubscribe_from_service()</span></a> called.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1a8d1a6c0e6b5ec34b65acab60f92d016a"><span id="index-10"></span><span></span><span class="kt">void</span> <span class="n">Search_for_service</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">)</span></pre>
+<p>Sends out the M-SEARCH on all available interfaces.</p>
+<p>In order to receive responses <a class="reference internal" href="#doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa92b1d285b5e15c5522f369d56ef7004"><span class="std std-ref">Subscribe_for_service()</span></a> must be called beforehand. Does nothing if there are no active subscriptions.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d17-classugcs-1-1vsm-1-1-service-discovery-processor-1aa110e572a49040805e17f387bc085c24"><span id="index-11"></span><span></span><span class="kt">void</span> <span class="n">Unsubscribe_from_service</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">)</span></pre>
+<p>Remove service type from subscription list.</p>
+<p>Detection handlers will not be called for this service type.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Serial_processor_Stream_Mode.html" title="previous page">class ugcs::vsm::Serial_processor::Stream::Mode</a>
+    <a class='right-next' id="next-link" href="class_ugcs_vsm_Set_home_action.html" title="next page">class ugcs::vsm::Set_home_action</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+.. index:: pair: struct; ugcs::vsm::internal::Poll_io_controller::Io_cb
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb:
+
+struct ugcs::vsm::internal::Poll_io_controller::Io_cb
+=====================================================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_internal_Poll_io_controller_Io_cb_Operation.rst
+
+Overview
+~~~~~~~~
+
+Control block for I/O operation. :ref:`More...<details-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <poll_io_controller.h>
+	
+	struct Io_cb
+	{
+		// typedefs
+	
+		typedef void (*:ref:`Callback<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a56529b22ff75f61218bb46e7b827e3f1>`)(Io_cb &);
+
+		// enums
+	
+		enum :ref:`Operation<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a63afd1fd224363cba9a82199600fa87f>`;
+
+		// fields
+	
+		int :ref:`fd<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a663f83d5a2ec4da4fa7674f43ca89135>`;
+		:ref:`Operation<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a63afd1fd224363cba9a82199600fa87f>` :ref:`op<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a8f649aded61b8a8d96313ed91ddfbb70>`;
+		void* :ref:`buf<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a2b0cbd44c8e4a48f1148f620fba6b14a>`;
+		size_t :ref:`size<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a9fe102ec40ec5c0482b69182c29d1f54>`;
+		:ref:`Io_stream::Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` :ref:`offset<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a7275c5b3df509c165de2531643cfa164>`;
+		:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` :ref:`cbk<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a197e7857c0642c2f6851b5a935337943>`;
+		int :ref:`error<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1ae6c2c6faab2e251229bc5b72e4a18d7a>`;
+		ssize_t :ref:`return_value<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a3080e979a5cfeec1b841800df450fb79>`;
+	};
+
+	// direct descendants
+
+	struct :ref:`Io_cb<doxid-d8/d53/structugcs_1_1vsm_1_1internal_1_1_posix__file__handle_1_1_io__cb>`;
+.. _details-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Control block for I/O operation.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Callback
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a56529b22ff75f61218bb46e7b827e3f1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef void (*Callback)(Io_cb &)
+
+:ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` for completed operation.
+
+Fields
+------
+
+.. index:: pair: variable; fd
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a663f83d5a2ec4da4fa7674f43ca89135:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int fd
+
+File descriptor.
+
+.. index:: pair: variable; op
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a8f649aded61b8a8d96313ed91ddfbb70:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Operation<doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a63afd1fd224363cba9a82199600fa87f>` op
+
+Requested operation.
+
+.. index:: pair: variable; buf
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a2b0cbd44c8e4a48f1148f620fba6b14a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void* buf
+
+Data buffer.
+
+.. index:: pair: variable; size
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a9fe102ec40ec5c0482b69182c29d1f54:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t size
+
+Data size.
+
+.. index:: pair: variable; offset
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a7275c5b3df509c165de2531643cfa164:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Io_stream::Offset<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a30574fccaad9e587c15270e3fa3d5925>` offset
+
+File offset.
+
+.. index:: pair: variable; cbk
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a197e7857c0642c2f6851b5a935337943:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` cbk
+
+:ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` to call when operation is completed.
+
+.. index:: pair: variable; error
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1ae6c2c6faab2e251229bc5b72e4a18d7a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int error
+
+Operation error code.
+
+.. index:: pair: variable; return_value
+.. _doxid-dd/dbb/structugcs_1_1vsm_1_1internal_1_1_poll__io__controller_1_1_io__cb_1a3080e979a5cfeec1b841800df450fb79:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ssize_t return_value
+
+Operation return value, typically transfer size.
+

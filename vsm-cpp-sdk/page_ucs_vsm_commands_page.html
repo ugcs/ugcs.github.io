@@ -1,0 +1,2048 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCS-VSM Commands &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="UCS-VSM protocol example" href="page_ucs_vsm_protocol_examples_page.html" />
+    <link rel="prev" title="Telemetry protocol" href="page_ucs_vsm_telemetry_page.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="page_vehicle_interface_page.html">Device interface</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="page_async_programming_page.html">Asynchronous programming framework</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="page_service_discovery_page.html">Automatic Service Discovery</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="page_ucs_vsm_protocol_page.html">UCS-VSM communications protocol</a>
+                  <ul>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_proto_page.html">ucs_vsm.proto</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_registration_page.html">Vehicle registration with UCS</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_fields_page.html">Field types and semantics</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_telemetry_page.html">Telemetry protocol</a>
+                      </li>
+                  
+                      <li class="active">
+                          <a href="">UCS-VSM Commands</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_protocol_examples_page.html">UCS-VSM protocol example</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="page_ucs_vsm_protocol_wire_format_page.html">UCS-VSM protocol wire format</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#command-registration" class="nav-link">Command registration</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#device-command-message" class="nav-link">Device_command message</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#commands-natively-supported-by-ugcs" class="nav-link">Commands natively supported by UgCS</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adsb-ident" class="nav-link">ADSB IDENT</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adsb-set-mode" class="nav-link">ADSB Set mode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#arm-vehicle" class="nav-link">Arm vehicle</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#start-mission" class="nav-link">Start mission</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-camera-power-state" class="nav-link">Set camera power state</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#camera-power-states" class="nav-link">Camera power states</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#trigger-camera-by-distance" class="nav-link">Trigger camera by distance</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#trigger-camera-by-time" class="nav-link">Trigger camera by time</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#trigger-camera-from-user-interface" class="nav-link">Trigger camera from user interface</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#camera-trigger-states" class="nav-link">Camera trigger states</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#trigger-camera" class="nav-link">Trigger camera</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#camera-trigger-state" class="nav-link">Camera trigger state</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#direct-payload-control" class="nav-link">Direct Payload Control</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#direct-vehicle-control" class="nav-link">Direct Vehicle Control</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#disarm-vehicle" class="nav-link">Disarm vehicle</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#emergency-land" class="nav-link">Emergency Land</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#get-native-route" class="nav-link">Get native route</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#guided-click-go-mode" class="nav-link">Guided (Click&Go) mode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#joystick" class="nav-link">Joystick</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#land" class="nav-link">Land</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#landing-position" class="nav-link">Landing position</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#manual-control-mode" class="nav-link">Manual control mode.</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#delete-route-from-vehicle" class="nav-link">Delete route from vehicle</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#pause-mission" class="nav-link">Pause mission</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#resume-mission-flight" class="nav-link">Resume mission flight</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#mission-upload" class="nav-link">Mission upload</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#failsafe-actions-natively-supported-by-ugcs" class="nav-link">Failsafe actions natively supported by UgCS</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#vehicle-behavior-after-return-to-home" class="nav-link">Vehicle behavior after Return To Home</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#move-command" class="nav-link">Move command</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#vehicle-turn-types" class="nav-link">Vehicle turn types</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#panorama" class="nav-link">Panorama</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#camera-mode-for-panorama" class="nav-link">Camera mode for panorama</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#send-payload-command" class="nav-link">Send payload command</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-payload-attitude" class="nav-link">Set payload attitude</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#repeat-servo" class="nav-link">Repeat Servo</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#return-to-home" class="nav-link">Return to Home</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#select-camera-as-video-source" class="nav-link">Select camera as video source</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-fence" class="nav-link">Set Fence</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-gear-state" class="nav-link">Set Gear State</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#heading" class="nav-link">Heading</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-home-position" class="nav-link">Set home position</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-vehicle-parameter" class="nav-link">Set vehicle parameter</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#point-of-interest" class="nav-link">Point Of Interest</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-position-offset" class="nav-link">Set Position Offset</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-relative-heading" class="nav-link">Set Relative Heading</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-servo" class="nav-link">Set Servo</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-speed" class="nav-link">Set Speed</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-tension" class="nav-link">Set Tension</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#takeoff" class="nav-link">Takeoff</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#takeoff-position" class="nav-link">Takeoff position</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#transition-to-fixed-wing-flight" class="nav-link">Transition to fixed wing flight</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#transition-to-vtol-flight" class="nav-link">Transition to VTOL flight</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#trigger-sensor-calibration" class="nav-link">Trigger sensor calibration</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#wait" class="nav-link">Wait</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#doxid-d0-d07-ucs-vsm-commands-page-1c-wait-until" class="nav-link">Wait</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#waypoint-command" class="nav-link">Waypoint command</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="ucs-vsm-commands">
+<span id="doxid-d0-d07-ucs-vsm-commands-page"></span><span id="index-0"></span><h1>UCS-VSM Commands<a class="headerlink" href="#ucs-vsm-commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="command-registration">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1command-registering"></span><h2>Command registration<a class="headerlink" href="#command-registration" title="Permalink to this headline">¶</a></h2>
+<p>Before commands can be issued to the vehicle VSM must inform UgCS about supported commands and mission items. This is done at the time of registering the vehicle with the system. Command registration includes description of supported parameters and their default values.</p>
+<p>For each command vehicle supports it must send a <a class="reference internal" href="page_ucs_vsm_registration_page.html#doxid-d9-de8-ucs-vsm-registration-page-1register-command"><span class="std std-ref">Register_command message</span></a> as part of Register_vehicle message before it can issue command via <a class="reference internal" href="#doxid-d0-d07-ucs-vsm-commands-page-1device-command"><span class="std std-ref">Device_command message</span></a>.</p>
+</div>
+<div class="section" id="device-command-message">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1device-command"></span><h2>Device_command message<a class="headerlink" href="#device-command-message" title="Permalink to this headline">¶</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 17%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>command_id</p></td>
+<td><p>uint32</p></td>
+<td><p>Registered id for command. See</p></td>
+</tr>
+<tr class="row-odd"><td><p>parameters</p></td>
+<td><p>Parameter_field</p></td>
+<td><p>List of command specific parameters</p></td>
+</tr>
+<tr class="row-even"><td><p>sub_commands</p></td>
+<td><p>Vsm_command</p></td>
+<td><p>List of sub commands for this command. Used when command is</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="commands-natively-supported-by-ugcs">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1device-commands"></span><h2>Commands natively supported by UgCS<a class="headerlink" href="#commands-natively-supported-by-ugcs" title="Permalink to this headline">¶</a></h2>
+<p>Alphabetical list of supported vehicle commands available as subcommands for <a class="reference internal" href="#doxid-d0-d07-ucs-vsm-commands-page-1c-mission-upload"><span class="std std-ref">Mission upload</span></a> command and as standalone commands</p>
+<p>These are the commands natively supported by UgCS (commands with known semantic). By registering command from this list VSM notifies the UgCS that vehicle is capable to execute given command with given parameters.</p>
+<table class="table">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 13%" />
+<col style="width: 7%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Subsystem</p></th>
+<th class="head"><p>In Mission</p></th>
+<th class="head"><p>From UI</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Other commands can be defined by VSM via <strong>Register_vehicle.register_command</strong> message.</p>
+<div class="section" id="adsb-ident">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-adsb-set-ident"></span><h3>ADSB IDENT<a class="headerlink" href="#adsb-ident" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “adsb_set_ident”</p>
+<p>Description: Turn on IDENT</p>
+<p>Command has no parameters.</p>
+</div>
+<div class="section" id="adsb-set-mode">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-adsb-set-mode"></span><h3>ADSB Set mode<a class="headerlink" href="#adsb-set-mode" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “adsb_set_mode”</p>
+<p>Description: Turn ADSB transponder on/standby/off</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 43%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mode</p></td>
+<td><p>FIELD_SEMANTIC_ADSB_MODE</p></td>
+<td><p>Desired transponder mode see</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arm-vehicle">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-arm"></span><h3>Arm vehicle<a class="headerlink" href="#arm-vehicle" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “arm”</p>
+<p>Description: Arm the motors.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="start-mission">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-auto"></span><h3>Start mission<a class="headerlink" href="#start-mission" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “auto”</p>
+<p>Description: Put vehicle in AUTO control mode. Vehicle will setart flying mission if present.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="set-camera-power-state">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-camera-power"></span><h3>Set camera power state<a class="headerlink" href="#set-camera-power-state" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “camera_power”</p>
+<p>Description: Switch camera on/off</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 46%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>power_state</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>See</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="camera-power-states">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1camera-power-states"></span><h4>Camera power states<a class="headerlink" href="#camera-power-states" title="Permalink to this headline">¶</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 58%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>on</p></td>
+<td><p>CAMERA_POWER_STATE_ON</p></td>
+<td><p>Power on</p></td>
+</tr>
+<tr class="row-odd"><td><p>off</p></td>
+<td><p>CAMERA_POWER_STATE_OFF</p></td>
+<td><p>Power off</p></td>
+</tr>
+<tr class="row-even"><td><p>toggle</p></td>
+<td><p>CAMERA_POWER_STATE_TOGGLE</p></td>
+<td><p>Switch power</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="trigger-camera-by-distance">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-camera-trigger-by-distance"></span><h3>Trigger camera by distance<a class="headerlink" href="#trigger-camera-by-distance" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “camera_trigger_by_distance”</p>
+<p>Description: Initiate camera trigger on regular distance intervals starting from current position.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 25%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>count</p></td>
+<td><p>FIELD_SEMANTIC_INT</p></td>
+<td><p>Number of consecutive trigger actions to perform.</p></td>
+</tr>
+<tr class="row-odd"><td><p>delay</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Time in seconds to wait for the first trigger</p></td>
+</tr>
+<tr class="row-even"><td><p>distance</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Distance to travel in meters between consecutive triggers.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-camera-by-time">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-camera-trigger-by-time"></span><h3>Trigger camera by time<a class="headerlink" href="#trigger-camera-by-time" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “camera_trigger_by_time”</p>
+<p>Description: Initiate camera trigger on regular time intervals sarting from current position.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 29%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>period</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Time in seconds to wait between triggers.</p></td>
+</tr>
+<tr class="row-odd"><td><p>delay</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Time in seconds to wait for the first trigger</p></td>
+</tr>
+<tr class="row-even"><td><p>count</p></td>
+<td><p>FIELD_SEMANTIC_INT</p></td>
+<td><p>Number of consecutive trigger actions to perform.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-camera-from-user-interface">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-camera-trigger-command"></span><h3>Trigger camera from user interface<a class="headerlink" href="#trigger-camera-from-user-interface" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “camera_trigger_command”</p>
+<p>Description: Initiate camera trigger at current WP</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 44%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>trigger_state</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>Camera</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="camera-trigger-states">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1trigger-state-command"></span><h4>Camera trigger states<a class="headerlink" href="#camera-trigger-states" title="Permalink to this headline">¶</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 48%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>video_start</p></td>
+<td><p>CAMERA_COMMAND_TRIGGER_STATE_VIDEO_START</p></td>
+<td><p>Start recording</p></td>
+</tr>
+<tr class="row-odd"><td><p>video_stop</p></td>
+<td><p>CAMERA_COMMAND_TRIGGER_STATE_VIDEO_STOP</p></td>
+<td><p>Stop recording or serial shooting</p></td>
+</tr>
+<tr class="row-even"><td><p>single_shot</p></td>
+<td><p>CAMERA_COMMAND_TRIGGER_STATE_SINGLE_SHOT</p></td>
+<td><p>Take a single photo</p></td>
+</tr>
+<tr class="row-odd"><td><p>video_toggle</p></td>
+<td><p>CAMERA_COMMAND_TRIGGER_STATE_VIDEO_TOGGLE</p></td>
+<td><p>Switch video on/off</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="trigger-camera">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-camera-trigger-mission"></span><h3>Trigger camera<a class="headerlink" href="#trigger-camera" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “camera_trigger_mission”</p>
+<p>Description: Initiate camera trigger on regular time intervals sarting from current position.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 54%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>state</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>Camera</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="camera-trigger-state">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1trigger-state"></span><h4>Camera trigger state<a class="headerlink" href="#camera-trigger-state" title="Permalink to this headline">¶</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 48%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>on</p></td>
+<td><p>CAMERA_MISSION_TRIGGER_STATE_ON</p></td>
+<td><p>Start recording</p></td>
+</tr>
+<tr class="row-odd"><td><p>off</p></td>
+<td><p>CAMERA_MISSION_TRIGGER_STATE_OFF</p></td>
+<td><p>Stop recording or serial shooting</p></td>
+</tr>
+<tr class="row-even"><td><p>single_photo</p></td>
+<td><p>CAMERA_MISSION_TRIGGER_STATE_SINGLE_PHOTO</p></td>
+<td><p>Take a single photo</p></td>
+</tr>
+<tr class="row-odd"><td><p>serial_photo</p></td>
+<td><p>CAMERA_MISSION_TRIGGER_STATE_SERIAL_PHOTO</p></td>
+<td><p>Take a series of photos</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="direct-payload-control">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-direct-payload-control"></span><h3>Direct Payload Control<a class="headerlink" href="#direct-payload-control" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “direct_payload_control”</p>
+<p>Description: Issue direct payload control command to the vehicle. Used to send joystick values to the vehicle payload.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 45%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pitch</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>pitch value [-1 .. +1]</p></td>
+</tr>
+<tr class="row-odd"><td><p>roll</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>roll value [-1 .. +1]</p></td>
+</tr>
+<tr class="row-even"><td><p>yaw</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>yaw value [-1 .. +1]</p></td>
+</tr>
+<tr class="row-odd"><td><p>zoom</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>zoom value [-1 .. +1]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="direct-vehicle-control">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-direct-vehicle-control"></span><h3>Direct Vehicle Control<a class="headerlink" href="#direct-vehicle-control" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “direct_vehicle_control”</p>
+<p>Description: Issue direct vehicle control command to the vehicle. Used to send joystick values to the vehicle.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 40%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pitch</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>pitch value [-1 .. +1]</p></td>
+</tr>
+<tr class="row-odd"><td><p>roll</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>roll value [-1 .. +1]</p></td>
+</tr>
+<tr class="row-even"><td><p>yaw</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>yaw value [-1 .. +1]</p></td>
+</tr>
+<tr class="row-odd"><td><p>throttle</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>throttle value [-1 .. +1]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="disarm-vehicle">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-disarm"></span><h3>Disarm vehicle<a class="headerlink" href="#disarm-vehicle" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “disarm”</p>
+<p>Description: Disarm the motors.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="emergency-land">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-emergency-land"></span><h3>Emergency Land<a class="headerlink" href="#emergency-land" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “emergency_land”</p>
+<p>Description: Emergency Land. Immediately turn off motors.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="get-native-route">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-get-native-route"></span><h3>Get native route<a class="headerlink" href="#get-native-route" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “get_native_route”</p>
+<p>Description:</p>
+<p>Convert mission to the UTF8 text file which can be used by vehicle’s native application. All mission items are added to <strong>Device_command.sub_commands</strong> list. See also supported commands. The native route file is returned via Device_response.status field.</p>
+<p>Supported parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 21%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>use_crlf</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>Line endings to be used in returned file. true: CRLF, false: LF</p></td>
+</tr>
+</tbody>
+</table>
+<p>Plus supports all the same parameters as <a class="reference internal" href="#doxid-d0-d07-ucs-vsm-commands-page-1c-mission-upload"><span class="std std-ref">Mission upload</span></a></p>
+</div>
+<div class="section" id="guided-click-go-mode">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-guided"></span><h3>Guided (Click&amp;Go) mode<a class="headerlink" href="#guided-click-go-mode" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “guided”</p>
+<p>Description: Put vehicle in Click&amp;Go control mode. Vehicle can be controlled via <a class="reference internal" href="#doxid-d0-d07-ucs-vsm-commands-page-1c-waypoint"><span class="std std-ref">Waypoint command</span></a> command.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="joystick">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-joystick"></span><h3>Joystick<a class="headerlink" href="#joystick" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “joystick”</p>
+<p>Description: Enter Joystick control mode.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="land">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-land-command"></span><h3>Land<a class="headerlink" href="#land" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “land_command”</p>
+<p>Description: Land at current position</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="landing-position">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-land-mission"></span><h3>Landing position<a class="headerlink" href="#landing-position" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “land_mission”</p>
+<p>Description: Specify landing position of the vehicle.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>Geodetic latitude</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>Geodetic longitude</p></td>
+</tr>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Altitude at which to begin descent.</p></td>
+</tr>
+<tr class="row-odd"><td><p>descent_rate</p></td>
+<td><p>FIELD_SEMANTIC_VERTICAL_SPEED</p></td>
+<td><p>Descent speed in m/s</p></td>
+</tr>
+<tr class="row-even"><td><p>ground_elevation</p></td>
+<td><p>FIELD_SEMANTIC_GROUND_ELEVATION</p></td>
+<td><p>Ground elevation at landing position (optional)</p></td>
+</tr>
+<tr class="row-odd"><td><p>acceptance_radius</p></td>
+<td><p>FIELD_SEMANTIC_ACCEPTANCE_RADIUS</p></td>
+<td><p>When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.</p></td>
+</tr>
+<tr class="row-even"><td><p>heading</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>Vehicle heading at the WP</p></td>
+</tr>
+<tr class="row-odd"><td><p>follow_terrain</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>Vehicle moving to the WP in follow terrain mode. Altitude above terrain is calculated as altitude_amsl minus ground_elevation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="manual-control-mode">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-manual"></span><h3>Manual control mode.<a class="headerlink" href="#manual-control-mode" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “manual”</p>
+<p>Description: Put vehicle in MANUAL control mode. Vehicle can be controlled via RC transmitter.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="delete-route-from-vehicle">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-mission-clear"></span><h3>Delete route from vehicle<a class="headerlink" href="#delete-route-from-vehicle" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “mission_clear”</p>
+<p>Description: Deletes the current route from vehicle.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="pause-mission">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-mission-pause"></span><h3>Pause mission<a class="headerlink" href="#pause-mission" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “mission_pause”</p>
+<p>Description: Pause mission execution (HOLD). This will put vehicle in either Click&amp;Go or Joystick mode depending on autopilot.</p>
+<p>Supported parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 14%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>additional_altitude</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>After pause climb in given number of meters. This option is may be used for additional safety when flying near the earth</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="resume-mission-flight">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-mission-resume"></span><h3>Resume mission flight<a class="headerlink" href="#resume-mission-flight" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “mission_resume”</p>
+<p>Description: Continue with mission.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="mission-upload">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-mission-upload"></span><h3>Mission upload<a class="headerlink" href="#mission-upload" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “mission_upload”</p>
+<p>Description: Uploads mission to the vehicle. All mission items are added to <strong>Device_command.sub_commands</strong> list. See also supported commands.</p>
+<p>Some vehicles will return command_map along with the response which can be used to report command from mission the vehicle is executing currently. See message &#64; Mission_command_map.</p>
+<p>Supported parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 21%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>altitude_origin</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Altitude origin of the vehicle</p></td>
+</tr>
+<tr class="row-odd"><td><p>safe_altitude</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Safe altitude. used for RTH and failsafe actions</p></td>
+</tr>
+<tr class="row-even"><td><p>rc_loss_action</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>Failsafe action on RC loss. See</p></td>
+</tr>
+<tr class="row-odd"><td><p>gps_loss_action</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>Failsafe action on GPS loss. See</p></td>
+</tr>
+<tr class="row-even"><td><p>low_battery_action</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>Failsafe action on low battery. See</p></td>
+</tr>
+<tr class="row-odd"><td><p>rth_action</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>Action after RTH. See</p></td>
+</tr>
+<tr class="row-even"><td><p>rth_wait_altitude</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Final altitude the drone should loiter after RTH. Used only when rth_action is “wait”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>User specified mission name</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="failsafe-actions-natively-supported-by-ugcs">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1failsafe-values"></span><h4>Failsafe actions natively supported by UgCS<a class="headerlink" href="#failsafe-actions-natively-supported-by-ugcs" title="Permalink to this headline">¶</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 24%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Action name</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>continue</p></td>
+<td><p>FAILSAFE_ACTION_CONTINUE</p></td>
+<td><p>Continue with mission. Effectively ignores the failsafe condition.</p></td>
+</tr>
+<tr class="row-odd"><td><p>wait</p></td>
+<td><p>FAILSAFE_ACTION_WAIT</p></td>
+<td><p>Wait for failsafe condition to end and then continue with mission.</p></td>
+</tr>
+<tr class="row-even"><td><p>land</p></td>
+<td><p>FAILSAFE_ACTION_LAND</p></td>
+<td><p>Land immediately at current position.</p></td>
+</tr>
+<tr class="row-odd"><td><p>rth</p></td>
+<td><p>FAILSAFE_ACTION_RTH</p></td>
+<td><p>Climb to safe altitude defined by</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="vehicle-behavior-after-return-to-home">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1rth-values"></span><h4>Vehicle behavior after Return To Home<a class="headerlink" href="#vehicle-behavior-after-return-to-home" title="Permalink to this headline">¶</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Action name</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>land</p></td>
+<td><p>RTH_ACTION_LAND</p></td>
+<td><p>Descend and land</p></td>
+</tr>
+<tr class="row-odd"><td><p>wait</p></td>
+<td><p>RTH_ACTION_WAIT</p></td>
+<td><p>Do not land the vehicle but loiter at rth_wait_altitude. If rth_wait_altitude is not supported by autopilot then safe_altitude is used instead.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="move-command">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-move"></span><h3>Move command<a class="headerlink" href="#move-command" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “move”</p>
+<p>Description: Specifies the next waypoint. Upon encountering this item vehicle starts navigating to given coordinates using current speed and heading settings. Next mission item will be executed when vehicle arrives at the waypoint.</p>
+<p>Supported parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 16%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>Geodetic latitude</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>Geodetic longitude</p></td>
+</tr>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ground_elevation</p></td>
+<td><p>FIELD_SEMANTIC_GROUND_ELEVATION</p></td>
+<td><p>Elevation in meters (i.e. terrain height) underneath the position.</p></td>
+</tr>
+<tr class="row-even"><td><p>turn_type</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>See</p></td>
+</tr>
+<tr class="row-odd"><td><p>acceptance_radius</p></td>
+<td><p>FIELD_SEMANTIC_ACCEPTANCE_RADIUS</p></td>
+<td><p>When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.</p></td>
+</tr>
+<tr class="row-even"><td><p>loiter_radius</p></td>
+<td><p>FIELD_SEMANTIC_LOITER_RADIUS</p></td>
+<td><p>Radius of the point fly-by orbit in meters. Positive value stands for the CW direction, negative - CCW. Use 0 for no-braking pass through the target point.</p></td>
+</tr>
+<tr class="row-odd"><td><p>wait_time</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Seconds to wait at WP before preceeding to next WP</p></td>
+</tr>
+<tr class="row-even"><td><p>heading</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>Vehicle heading at the WP</p></td>
+</tr>
+<tr class="row-odd"><td><p>follow_terrain</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>Vehicle moving to the WP in follow terrain mode. Altitude above terrain is calculated as altitude_amsl minus ground_elevation.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="vehicle-turn-types">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1turn-types"></span><h4>Vehicle turn types<a class="headerlink" href="#vehicle-turn-types" title="Permalink to this headline">¶</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>stop_and_turn</p></td>
+<td><p>TURN_TYPE_STOP_AND_TURN</p></td>
+</tr>
+<tr class="row-odd"><td><p>straight</p></td>
+<td><p>TURN_TYPE_STRAIGHT</p></td>
+</tr>
+<tr class="row-even"><td><p>spline</p></td>
+<td><p>TURN_TYPE_SPLINE</p></td>
+</tr>
+<tr class="row-odd"><td><p>bank_turn</p></td>
+<td><p>TURN_TYPE_BANK_TURN</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="panorama">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-panorama"></span><h3>Panorama<a class="headerlink" href="#panorama" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “panorama”</p>
+<p>Description: Do panorama action.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 11%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>angle</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Target panorama angle in a range [-2Pi, 2Pi]. If positive the rotation direction should be clockwise, if negative the rotation direction should be counter-clockwise. Set in radians.</p></td>
+</tr>
+<tr class="row-odd"><td><p>mode</p></td>
+<td><p>FIELD_SEMANTIC_ENUM</p></td>
+<td><p>Camera mode. See</p></td>
+</tr>
+<tr class="row-even"><td><p>step</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Absolute value of a step angle in case of a discrete shooting. Zero stands for a continuous rotation. Set in radians.</p></td>
+</tr>
+<tr class="row-odd"><td><p>delay</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Wait time in seconds for each step.</p></td>
+</tr>
+<tr class="row-even"><td><p>speed</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Angular speed in rad/sec.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="camera-mode-for-panorama">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1panarama-mode"></span><h4>Camera mode for panorama<a class="headerlink" href="#camera-mode-for-panorama" title="Permalink to this headline">¶</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 39%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>photo</p></td>
+<td><p>PANORAMA_MODE_PHOTO</p></td>
+<td><p>Take a photo on each step</p></td>
+</tr>
+<tr class="row-odd"><td><p>video</p></td>
+<td><p>PANORAMA_MODE_VIDEO</p></td>
+<td><p>Do not stop on each step</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="send-payload-command">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-payload-command"></span><h3>Send payload command<a class="headerlink" href="#send-payload-command" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “payload_command”</p>
+<p>Description: Send to onboard computer a specific payload command encoded as a byte string.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 24%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>command</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>Specific payload command arguments encoded as a byte string.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-payload-attitude">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-payload-control"></span><h3>Set payload attitude<a class="headerlink" href="#set-payload-attitude" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “payload_control”</p>
+<p>Description: Move payload to given angles and zoom level. This is replacement of previous MAV_CMD_DO_PAYLOAD_CONTROL command.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 21%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tilt</p></td>
+<td><p>FIELD_SEMANTIC_PITCH</p></td>
+<td><p>Camera tilt relative to vehicle horizontal plane. Positive is up.</p></td>
+</tr>
+<tr class="row-odd"><td><p>roll</p></td>
+<td><p>FIELD_SEMANTIC_ROLL</p></td>
+<td><p>Camera roll relative to vehicle horizontal plane. Roll right is positive.</p></td>
+</tr>
+<tr class="row-even"><td><p>yaw</p></td>
+<td><p>FIELD_SEMANTIC_YAW</p></td>
+<td><p>Camera way angle relative to vehicle nose. Positive is right.</p></td>
+</tr>
+<tr class="row-odd"><td><p>zoom_level</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Device specific zoom value.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="repeat-servo">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-repeat-servo"></span><h3>Repeat Servo<a class="headerlink" href="#repeat-servo" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “repeat_servo”</p>
+<p>Description: Move servo to given position and back the specified amount of times. Set servo to given <strong>pwm</strong>, wait for <strong>delay</strong>, set servo to default position, wait for <strong>delay</strong>.</p>
+<p>Repeat <strong>count</strong> sets how many times to execute the above sequence. It means that after sequence finishes servo is left at default position. Deafult position is autopilot specific and cannot be specified here.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 27%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>servo_id</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Vehicle specific servo ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>pwm</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>PWM rate in microseconds. Typical range is 1100..1900</p></td>
+</tr>
+<tr class="row-even"><td><p>delay</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Delay in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p>count</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>How many times to repeat the sequence</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="return-to-home">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-return-to-home"></span><h3>Return to Home<a class="headerlink" href="#return-to-home" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “return_to_home”</p>
+<p>Description: Return to Home position.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="select-camera-as-video-source">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-select-as-video-source"></span><h3>Select camera as video source<a class="headerlink" href="#select-camera-as-video-source" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “select_as_video_source”</p>
+<p>Description: Select this camera as source for video feed. Each camera which can be used as video source should register this command.</p>
+<p>There are no parameters for this command.</p>
+</div>
+<div class="section" id="set-fence">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-fence"></span><h3>Set Fence<a class="headerlink" href="#set-fence" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “set_fence”</p>
+<p>Description: Create cylindrical fence around Home Location. RTH will be triggered if vehicle tries to leave specified limits.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 24%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Fence altitude in meters</p></td>
+</tr>
+<tr class="row-odd"><td><p>altitude_origin</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Altitude origin in meters AMSL. Typically this should be the HL altitude.</p></td>
+</tr>
+<tr class="row-even"><td><p>radius</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>FEnce radius in meters. Max ground distance from Home Location</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-gear-state">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-gear-state"></span><h3>Set Gear State<a class="headerlink" href="#set-gear-state" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “set_gear_state”</p>
+<p>Description: Retract or release gear</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 28%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>release</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>true - release gear, false - retract gear</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="heading">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-heading"></span><h3>Heading<a class="headerlink" href="#heading" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “set_heading”</p>
+<p>Description: Change the heading of vehicle. This makes sense only for copter style vehicles when heading does not specify direction of flight.</p>
+<p><strong>IMPORTANT:</strong> “heading” mission item overrides any heading changes which are implicitly specified by payload control mission items in case payload yaw is controlled by vehicle heading.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 34%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>heading</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>Heading angle in radians from North</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-home-position">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-home"></span><h3>Set home position<a class="headerlink" href="#set-home-position" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “set_home”</p>
+<p>Description: Specify home position of the vehicle. This is the location the vehicle will return on Return_To_Home command or in case of failsafe event and when failsafe is set to return to home.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 34%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>Geodetic latitude</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>Geodetic longitude</p></td>
+</tr>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Home position altitude</p></td>
+</tr>
+<tr class="row-odd"><td><p>ground_elevation</p></td>
+<td><p>FIELD_SEMANTIC_GROUND_ELEVATION</p></td>
+<td><p>Ground elevation at home position (optional)</p></td>
+</tr>
+</tbody>
+</table>
+<p>List of supported payload mission items with detailed description of each item in the following sections.</p>
+</div>
+<div class="section" id="set-vehicle-parameter">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-parameter"></span><h3>Set vehicle parameter<a class="headerlink" href="#set-vehicle-parameter" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “set_parameter”</p>
+<p>Description: Set vehicle parameters.</p>
+<p>Supported FC parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 37%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>landing_flare_altitude</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>landing_flare_time</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>min_landing_pitch</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>landing_flare_damp</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>landing_approach_airspeed</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>landing_speed_weighting</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>max_auto_flight_pitch</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>max_pitch</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>min_throttle</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>landing_sink_rate</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>landing_rangefinder_enabled</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>min_rangefinder_distance</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Supported ADSB parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 42%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>adsb_icao</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>24 bit integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_registration</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>adsb_flight_id</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>adsb_squawk</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>12 bit integer</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="point-of-interest">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-poi"></span><h3>Point Of Interest<a class="headerlink" href="#point-of-interest" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “set_poi”</p>
+<p>Description: Set Point Of Interest.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 35%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>Geodetic latitude</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>Geodetic longitude</p></td>
+</tr>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Altitude AMSL</p></td>
+</tr>
+<tr class="row-odd"><td><p>active</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>true: start poi, false: end poi action.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-position-offset">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-position-offset"></span><h3>Set Position Offset<a class="headerlink" href="#set-position-offset" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “set_position_offset”</p>
+<p>Description: Issue vehicle to change it position relatively to current position in body frame.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 30%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>x</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>offset in X-axis in meters (positive - forward)</p></td>
+</tr>
+<tr class="row-odd"><td><p>y</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>offset in Y-axis in meters (positive - right)</p></td>
+</tr>
+<tr class="row-even"><td><p>z</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>offset in Z-axis in meters (positive - down)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-relative-heading">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-relative-heading"></span><h3>Set Relative Heading<a class="headerlink" href="#set-relative-heading" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “set_relative_heading”</p>
+<p>Description: Issue vehicle to change it heading relatively to current heading.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>relative_heading</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>turning around Z-Axis in radians relative to current heading (positive - CW)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-servo">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-servo"></span><h3>Set Servo<a class="headerlink" href="#set-servo" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “set_servo”</p>
+<p>Description: Move servo to given position and hold.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 27%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>servo_id</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Vehicle specific servo ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>pwm</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>PWM rate in microseconds. Typical range is 1100..1900</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-speed">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-speed"></span><h3>Set Speed<a class="headerlink" href="#set-speed" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “set_speed”</p>
+<p>Description: Set the maximum ground speed which will be used by vehicle from now on. This is the horizontal component of speed.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 47%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ground_speed</p></td>
+<td><p>FIELD_SEMANTIC_GROUND_SPEED</p></td>
+<td><p>Ground speed in m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>vertical_speed</p></td>
+<td><p>FIELD_SEMANTIC_VERTICAL_SPEED</p></td>
+<td><p>Climb speed in m/s</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="set-tension">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-set-tension"></span><h3>Set Tension<a class="headerlink" href="#set-tension" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “set_tension”</p>
+<p>Description: Set tension value for the winch in Newtons</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 52%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tension</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>tension value</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="takeoff">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-takeoff-command"></span><h3>Takeoff<a class="headerlink" href="#takeoff" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “takeoff_command”</p>
+<p>Description: Takeoff from current position</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 48%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>relative_altitude</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_RAW, META_VALUE_NA</p></td>
+<td><p>relative altitude for takeoff</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="takeoff-position">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-takeoff-mission"></span><h3>Takeoff position<a class="headerlink" href="#takeoff-position" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “takeoff_mission”</p>
+<p>Description: Specify takeoff position of the vehicle.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 12%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>Geodetic latitude</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>Geodetic longitude</p></td>
+</tr>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Takeoff target altitude. Vehicle will ascend to this altitude before proceeding to given latitude and longitude. If vehicle is airborne and is above target altitude it will proceed to given latitude and longitude immediately.</p></td>
+</tr>
+<tr class="row-odd"><td><p>climb_rate</p></td>
+<td><p>FIELD_SEMANTIC_VERTICAL_SPEED</p></td>
+<td><p>Climb speed in m/s</p></td>
+</tr>
+<tr class="row-even"><td><p>ground_elevation</p></td>
+<td><p>FIELD_SEMANTIC_GROUND_ELEVATION</p></td>
+<td><p>Ground elevation at takeoff position (optional)</p></td>
+</tr>
+<tr class="row-odd"><td><p>acceptance_radius</p></td>
+<td><p>FIELD_SEMANTIC_ACCEPTANCE_RADIUS</p></td>
+<td><p>When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.</p></td>
+</tr>
+<tr class="row-even"><td><p>heading</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>Vehicle heading at the WP</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="transition-to-fixed-wing-flight">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-transition-fixed"></span><h3>Transition to fixed wing flight<a class="headerlink" href="#transition-to-fixed-wing-flight" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “transition_fixed”</p>
+<p>Description: Put the fixed wing VTOL capable vehicle in fixed wing flight mode.</p>
+</div>
+<div class="section" id="transition-to-vtol-flight">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-transition-vtol"></span><h3>Transition to VTOL flight<a class="headerlink" href="#transition-to-vtol-flight" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “transition_vtol”</p>
+<p>Description: Put the fixed wing VTOL capable vehicle in copter-like mode.</p>
+</div>
+<div class="section" id="trigger-sensor-calibration">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-trigger-calibration"></span><h3>Trigger sensor calibration<a class="headerlink" href="#trigger-sensor-calibration" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “trigger_calibration”</p>
+<p>Description: Starts vehicle sensor calibration sequence. Vehicle must be stationary in on the ground, disarmed.</p>
+</div>
+<div class="section" id="wait">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-wait"></span><h3>Wait<a class="headerlink" href="#wait" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “wait”</p>
+<p>Description: Wait for given number of seconds in current position before continuing with next mission item. Specify time==N/A to wait indefinitely.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 21%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>time</p></td>
+<td><p>FIELD_SEMANTIC_NUMERIC</p></td>
+<td><p>Number of seconds to wait. If the field value is N/A, then wait indefinitely.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="doxid-d0-d07-ucs-vsm-commands-page-1c-wait-until">
+<span id="id1"></span><h3>Wait<a class="headerlink" href="#doxid-d0-d07-ucs-vsm-commands-page-1c-wait-until" title="Permalink to this headline">¶</a></h3>
+<p>Mission item ID: “wait_until”</p>
+<p>Description: Wait until given time before continuing with next mission item. Specify time==N/A to wait indefinitely.</p>
+<p>Parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 26%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>time</p></td>
+<td><p>FIELD_SEMANTIC_TIMESTAMP</p></td>
+<td><p>Milliseconds of UTC time since Unix epoch (1970-01-01T00:00:00Z)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="waypoint-command">
+<span id="doxid-d0-d07-ucs-vsm-commands-page-1c-waypoint"></span><h3>Waypoint command<a class="headerlink" href="#waypoint-command" title="Permalink to this headline">¶</a></h3>
+<p>Command ID: “waypoint”</p>
+<p>Description: Specifies the single waypoint. Used while vehicle is in Click&amp;Go control mode.</p>
+<p>Supported parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>FIELD_SEMANTIC_LATITUDE</p></td>
+<td><p>Geodetic latitude</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>FIELD_SEMANTIC_LONGITUDE</p></td>
+<td><p>Geodetic longitude</p></td>
+</tr>
+<tr class="row-even"><td><p>altitude_amsl</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>altitude_origin</p></td>
+<td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
+<td><p>Altitude origin of the vehicle</p></td>
+</tr>
+<tr class="row-even"><td><p>ground_speed</p></td>
+<td><p>FIELD_SEMANTIC_GROUND_SPEED</p></td>
+<td><p>Ground speed in m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>vertical_speed</p></td>
+<td><p>FIELD_SEMANTIC_VERTICAL_SPEED</p></td>
+<td><p>Climb speed in m/s</p></td>
+</tr>
+<tr class="row-even"><td><p>acceptance_radius</p></td>
+<td><p>FIELD_SEMANTIC_ACCEPTANCE_RADIUS</p></td>
+<td><p>When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.</p></td>
+</tr>
+<tr class="row-odd"><td><p>heading</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>Vehicle heading at the WP</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="page_ucs_vsm_telemetry_page.html" title="previous page">Telemetry protocol</a>
+    <a class='right-next' id="next-link" href="page_ucs_vsm_protocol_examples_page.html" title="next page">UCS-VSM protocol example</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

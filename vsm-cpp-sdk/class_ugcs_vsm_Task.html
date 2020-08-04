@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Task &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class ugcs::vsm::Task_attributes_action" href="class_ugcs_vsm_Task_attributes_action.html" />
+    <link rel="prev" title="class ugcs::vsm::Takeoff_action" href="class_ugcs_vsm_Takeoff_action.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fields" class="nav-link">Fields</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#construction" class="nav-link">Construction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-task">
+<span id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task"></span><span id="index-0"></span><h1>class ugcs::vsm::Task<a class="headerlink" href="#class-ugcs-vsm-task" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action"><span class="std std-ref">Action</span></a> plan for a single vehicle. <a class="reference internal" href="#details-d6-d5d-classugcs-1-1vsm-1-1-task"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;task.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">Task</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Action::Ptr</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a3e4eabaec2d1b97301198e21c2f9ae74"><span class="std std-ref">actions</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Task_attributes_action.html#doxid-dd-d7d-classugcs-1-1vsm-1-1-task-attributes-action-1a29e3d9777c44f0a33d738eaf5ad73fa1"><span class="std std-ref">Task_attributes_action::Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a761f3c33efc8be94d2ee6174d9c4eadd"><span class="std std-ref">attributes</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property_list.html#doxid-d2-d2d-classugcs-1-1vsm-1-1-property-list"><span class="std std-ref">Property_list</span></a><span></span> <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a5e6f29f449cdfdd6cdab1ece3592a9cb"><span class="std std-ref">parameters</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1a66d7df9d50892a6f2b835e2b89f325e5"><span class="std std-ref">Proto_msg_ptr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a9eba82e404b9108d8a4fc1f9550b6bc4"><span></span><span class="n">ucs_response</span></span><span></span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1aa683ca23951e7887c31dc18757f6e128"><span></span><span class="n">return_native_route</span></span><span></span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1aa4a77db731ae9c8846c5c500c47e596d"><span></span><span class="n">use_crlf_in_native_route</span></span><span></span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a5ce8b98c1e9ee1326d4dfd479858eb47"><span class="std std-ref">Task</span></a><span></span><span class="p">(</span><span class="kt">size_t</span> <span class="n">reserved_size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1a1d5969d08d3302af816a9752f141632b"><span class="std std-ref">Wgs84_position</span></a><span></span> <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a65ceb537a8d78a2224da1edf12d800d0"><span class="std std-ref">Get_home_position</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">double</span> <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1ad202c8c360e8f091668eecfca74dea48"><span class="std std-ref">Get_home_position_altitude</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">double</span> <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1aecc8138512a19f1f65f007fdcd5ec582"><span class="std std-ref">Get_takeoff_altitude</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a0edd1c6320b14dc0ac5cd4c610e63482"><span class="std std-ref">Set_takeoff_altitude</span></a><span></span><span class="p">(</span><span class="kt">double</span> <span class="n">altitude</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d6-d5d-classugcs-1-1vsm-1-1-task"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action"><span class="std std-ref">Action</span></a> plan for a single vehicle.</p>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a3e4eabaec2d1b97301198e21c2f9ae74"><span id="index-1"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Action::Ptr</span></a><span></span><span class="o">&gt;</span> <span class="n">actions</span></pre>
+<p><a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action"><span class="std std-ref">Action</span></a> list of the task .</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a761f3c33efc8be94d2ee6174d9c4eadd"><span id="index-2"></span><a class="reference internal" href="class_ugcs_vsm_Task_attributes_action.html#doxid-dd-d7d-classugcs-1-1vsm-1-1-task-attributes-action-1a29e3d9777c44f0a33d738eaf5ad73fa1"><span class="std std-ref">Task_attributes_action::Ptr</span></a><span></span> <span class="n">attributes</span></pre>
+<p><a class="reference internal" href="#doxid-d6-d5d-classugcs-1-1vsm-1-1-task"><span class="std std-ref">Task</span></a> attributes action.</p>
+<p>If nullptr, then vehicle defaults should be used.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a5e6f29f449cdfdd6cdab1ece3592a9cb"><span id="index-3"></span><a class="reference internal" href="class_ugcs_vsm_Property_list.html#doxid-d2-d2d-classugcs-1-1vsm-1-1-property-list"><span class="std std-ref">Property_list</span></a><span></span> <span class="n">parameters</span></pre>
+<p>Parameter list for the task .</p>
+</div>
+<div class="section" id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a5ce8b98c1e9ee1326d4dfd479858eb47"><span id="index-4"></span><span></span><span class="n">Task</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">reserved_size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></pre>
+<p>Constructor.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>reserved_size</p></td>
+<td><p>Initial size of the actions vector.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a65ceb537a8d78a2224da1edf12d800d0"><span id="index-5"></span><a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1a1d5969d08d3302af816a9752f141632b"><span class="std std-ref">Wgs84_position</span></a><span></span> <span class="n">Get_home_position</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Retrieve home position from action.</p>
+<p>Either get SET_HOME or the first MOVE action.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1ad202c8c360e8f091668eecfca74dea48"><span id="index-6"></span><span></span><span class="kt">double</span> <span class="n">Get_home_position_altitude</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get terrain height at home position in meters.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1aecc8138512a19f1f65f007fdcd5ec582"><span id="index-7"></span><span></span><span class="kt">double</span> <span class="n">Get_takeoff_altitude</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get take-off altitude, that is the absolute altitude of the position where the vehicle was or will be launched.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-d5d-classugcs-1-1vsm-1-1-task-1a0edd1c6320b14dc0ac5cd4c610e63482"><span id="index-8"></span><span></span><span class="kt">void</span> <span class="n">Set_takeoff_altitude</span><span class="p">(</span><span class="kt">double</span> <span class="n">altitude</span><span class="p">)</span></pre>
+<p>Internal SDK method.</p>
+<p>Used to set the take-off altitude. VSM user is not supposed to use it.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Takeoff_action.html" title="previous page">class ugcs::vsm::Takeoff_action</a>
+    <a class='right-next' id="next-link" href="class_ugcs_vsm_Task_attributes_action.html" title="next page">class ugcs::vsm::Task_attributes_action</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

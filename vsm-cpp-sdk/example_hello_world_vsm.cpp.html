@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello_world_vsm.cpp &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Global Namespace" href="global.html" />
+    <link rel="prev" title="async_workflow.cpp" href="example_async_workflow.cpp.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="example_Hello_world_VSM_CMakeLists.txt.html">Hello_world_VSM/CMakeLists.txt</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="example_async_workflow.cpp.html">async_workflow.cpp</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">hello_world_vsm.cpp</a>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="hello-world-vsm-cpp">
+<span id="doxid-d5-d58-hello-world-vsm-8cpp-example"></span><span id="index-0"></span><h1>hello_world_vsm.cpp<a class="headerlink" href="#hello-world-vsm-cpp" title="Permalink to this headline">¶</a></h1>
+<p>C++ source code example for “Hello world” VSM application.</p>
+<p>C++ source code example for “Hello world” VSM application. See <a class="reference internal" href="page_hello_world_vsm_page.html#doxid-d8-db6-hello-world-vsm-page"><span class="std std-ref">corresponding tutorial</span></a>.</p>
+<pre class="highlight literal-block"><span></span><span class="c1">// Copyright (c) 2018, Smart Projects Holdings Ltd</span>
+<span class="c1">// All rights reserved.</span>
+<span class="c1">// See LICENSE file for license details.</span>
+
+<span class="cm">/* Main include file for VSM SDK. Should be included in all VSM applications. */</span>
+<span class="cp">#include</span> <span class="cpf">&lt;ugcs/vsm/vsm.h&gt;</span><span class="cp"></span>
+<a class="reference internal" href="global.html#doxid-d5-d64-defs-8h-1ab7a7a41e616d883b2be558184217fff1"><span class="std std-ref">DEFINE_DEFAULT_VSM_NAME</span></a><span></span><span class="p">;</span>
+
+<span class="cm">/* Custom vehicle defined by VSM developer. */</span>
+<span class="k">class</span> <span class="nl">Custom_vehicle</span><span class="p">:</span><span class="k">public</span> <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device"><span class="std std-ref">ugcs::vsm::Device</span></a><span></span>
+<span class="p">{</span>
+    <span class="cm">/* To add shared pointer capability to this class. */</span>
+    <a class="reference internal" href="global.html#doxid-d5-d60-utils-8h-1add7ad4e26c0e697e6eadb8da66c3e60d"><span class="std std-ref">DEFINE_COMMON_CLASS</span></a><span></span><span class="p">(</span><span class="n">Custom_vehicle</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device"><span class="std std-ref">ugcs::vsm::Device</span></a><span></span><span class="p">)</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="cm">/* Custom constructor. Vehicle, autopilot and capabilities are fixed,</span>
+<span class="cm">     * but serial number and model name are passed to the constructor.</span>
+<span class="cm">     */</span>
+    <span class="n">Custom_vehicle</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">serial_number</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">Device</span><span class="p">(</span><a class="reference internal" href="namespace_ugcs.html#doxid-d1-d6b-namespaceugcs"><span class="std std-ref">ugcs</span></a><span></span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">DEVICE_TYPE_VEHICLE</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* This parameter is mandatory</span>
+<span class="cm">         */</span>
+        <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device-1a5cfc3a6e1e3f32d2c567d007b37b90cd"><span class="std std-ref">Set_property</span></a><span></span><span class="p">(</span><span class="s">&quot;vehicle_type&quot;</span><span class="p">,</span> <span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">VEHICLE_TYPE_MULTICOPTER</span><span class="p">);</span>
+
+        <span class="cm">/* This parameter is optional</span>
+<span class="cm">         */</span>
+        <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device-1a5cfc3a6e1e3f32d2c567d007b37b90cd"><span class="std std-ref">Set_property</span></a><span></span><span class="p">(</span><span class="s">&quot;serial_number&quot;</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">);</span>
+
+        <span class="cm">/* Create flight_controller component</span>
+<span class="cm">         */</span>
+        <span class="n">flight_controller</span> <span class="o">=</span> <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device-1aae34befc926d3fe246e2949e71fe3c33"><span class="std std-ref">Add_subsystem</span></a><span></span><span class="p">(</span><span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">SUBSYSTEM_TYPE_FLIGHT_CONTROLLER</span><span class="p">);</span>
+
+        <span class="c1">// autopilot_type is mandatory.</span>
+        <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Set_property</span><span class="p">(</span><span class="s">&quot;autopilot_type&quot;</span><span class="p">,</span> <span class="s">&quot;my_t&quot;</span><span class="p">);</span>
+
+        <span class="cm">/* Create telemetry fields</span>
+<span class="cm">         * The exact type of the field is derived from name. */</span>
+        <span class="n">t_control_mode</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_telemetry</span><span class="p">(</span><span class="s">&quot;control_mode&quot;</span><span class="p">);</span>
+        <span class="n">t_main_voltage</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_telemetry</span><span class="p">(</span><span class="s">&quot;main_voltage&quot;</span><span class="p">);</span>
+        <span class="n">t_heading</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_telemetry</span><span class="p">(</span><span class="s">&quot;heading&quot;</span><span class="p">);</span>
+        <span class="n">t_altitude_raw</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_telemetry</span><span class="p">(</span><span class="s">&quot;altitude_raw&quot;</span><span class="p">);</span>
+
+        <span class="cm">/* For telemetry fields without hardcoded type it can be specified explicitly. */</span>
+        <span class="n">t_uplink_present</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_telemetry</span><span class="p">(</span><span class="s">&quot;uplink_present&quot;</span><span class="p">,</span> <span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">FIELD_SEMANTIC_BOOL</span><span class="p">);</span>
+        <span class="n">t_is_armed</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_telemetry</span><span class="p">(</span><span class="s">&quot;is_armed&quot;</span><span class="p">,</span> <span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">FIELD_SEMANTIC_BOOL</span><span class="p">);</span>
+        <span class="n">t_downlink_present</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_telemetry</span><span class="p">(</span><span class="s">&quot;downlink_present&quot;</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_Property_Value_type.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a09db7d8a6c3e7e57b8c226d93b5c2ac0ab085e7a0e043d9d633b7ec4170dd42aa"><span class="std std-ref">ugcs::vsm::Property::VALUE_TYPE_BOOL</span></a><span></span><span class="p">);</span>
+
+        <span class="cm">/* Create commands which are available as standalone commands */</span>
+        <span class="n">c_mission_upload</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_command</span><span class="p">(</span><span class="s">&quot;mission_upload&quot;</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+        <span class="n">c_arm</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_command</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+        <span class="n">c_disarm</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_command</span><span class="p">(</span><span class="s">&quot;disarm&quot;</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+
+        <span class="cm">/* Create commands which can be issued as part of mission */</span>
+        <span class="n">c_move</span> <span class="o">=</span> <span class="n">flight_controller</span><span class="o">-&gt;</span><span class="n">Add_command</span><span class="p">(</span><span class="s">&quot;move&quot;</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;latitude&quot;</span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;longitude&quot;</span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;altitude_amsl&quot;</span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;acceptance_radius&quot;</span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;loiter_radius&quot;</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_Property_Value_type.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a09db7d8a6c3e7e57b8c226d93b5c2ac0ae3f38466a6272370e00eda62e94f1bcd"><span class="std std-ref">ugcs::vsm::Property::VALUE_TYPE_FLOAT</span></a><span></span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;wait_time&quot;</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_Property_Value_type.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1a09db7d8a6c3e7e57b8c226d93b5c2ac0ae3f38466a6272370e00eda62e94f1bcd"><span class="std std-ref">ugcs::vsm::Property::VALUE_TYPE_FLOAT</span></a><span></span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;heading&quot;</span><span class="p">);</span>
+        <span class="n">c_move</span><span class="o">-&gt;</span><span class="n">Add_parameter</span><span class="p">(</span><span class="s">&quot;ground_elevation&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Override enable method to perform initialization. In this example -</span>
+<span class="cm">     * just start telemetry simulation timer.</span>
+<span class="cm">     */</span>
+    <span class="k">virtual</span> <span class="kt">void</span>
+    On_enable<span></span><span class="p">()</span> <span class="k">override</span>
+    <span class="p">{</span>
+        <span class="n">timer</span> <span class="o">=</span> <a class="reference internal" href="class_ugcs_vsm_Timer_processor.html#doxid-dc-dae-classugcs-1-1vsm-1-1-timer-processor-1a19a7b34dd02aba6468e644d1c91026aa"><span class="std std-ref">ugcs::vsm::Timer_processor::Get_instance</span></a><span></span><span class="p">()</span><span class="o">-&gt;</span><span class="n">Create_timer</span><span class="p">(</span>
+                <span class="cm">/* Telemetry with 1 second granularity. */</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+                <span class="cm">/* Send_telemetry method will be called on timer. Smart pointer</span>
+<span class="cm">                 * is used to reference vehicle instance. Plain &#39;this&#39; could also</span>
+<span class="cm">                 * be used here, but it is generally not recommended. */</span>
+                <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1ad0409b84278bc4bc1c8db2c993681dad"><span class="std std-ref">ugcs::vsm::Make_callback</span></a><span></span><span class="p">(</span><span class="o">&amp;</span><span class="n">Custom_vehicle</span><span class="o">::</span><span class="n">Send_telemetry</span><span class="p">,</span> <span class="n">Shared_from_this</span><span class="p">()),</span>
+                <span class="cm">/* Execution will be done in default vehicle context,</span>
+<span class="cm">                 * which is served by dedicated vehicle thread together with</span>
+<span class="cm">                 * vehicle requests so additional synchronization is not necessary.</span>
+<span class="cm">                 */</span>
+                <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device-1a51a82107edf49f6a9066c2476f7e4319"><span class="std std-ref">Get_completion_ctx</span></a><span></span><span class="p">());</span>
+
+        <span class="cm">/* Report current control mode to the UgCS */</span>
+        <span class="n">t_control_mode</span><span class="o">-&gt;</span><span class="n">Set_value</span><span class="p">(</span><span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">CONTROL_MODE_MANUAL</span><span class="p">);</span>
+
+        <span class="cm">/* Report link state to the UgCS */</span>
+        <span class="n">t_downlink_present</span><span class="o">-&gt;</span><span class="n">Set_value</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+        <span class="n">t_uplink_present</span><span class="o">-&gt;</span><span class="n">Set_value</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+
+        <span class="cm">/* Tell UgCS about available commands.</span>
+<span class="cm">         * Command availability can be changed during runtime via this call and</span>
+<span class="cm">         * VSM can determine which command buttons to show in the client UI. */</span>
+        <span class="n">c_arm</span><span class="o">-&gt;</span><span class="n">Set_available</span><span class="p">();</span>
+        <span class="n">c_disarm</span><span class="o">-&gt;</span><span class="n">Set_available</span><span class="p">();</span>
+        <span class="n">c_mission_upload</span><span class="o">-&gt;</span><span class="n">Set_available</span><span class="p">();</span>
+
+        <span class="cm">/* Mission upload is always enabled.</span>
+<span class="cm">        * Command state (enabled/disabled) can be changed during runtime via this call and</span>
+<span class="cm">        * VSM can determine which command buttons to show as enabled in the client UI. */</span>
+        <span class="n">c_mission_upload</span><span class="o">-&gt;</span><span class="n">Set_enabled</span><span class="p">();</span>
+        Commit_to_ucs<span></span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="kt">void</span>
+    On_disable<span></span><span class="p">()</span> <span class="k">override</span>
+    <span class="p">{</span>
+        <span class="cm">/* Turn off the timer. */</span>
+        <span class="n">timer</span><span class="o">-&gt;</span><span class="n">Cancel</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="cm">/* Handler for a command submitted for the vehicle by UgCS. */</span>
+    <span class="kt">void</span>
+    Handle_ucs_command<span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Ucs_request.html#doxid-dc-df0-classugcs-1-1vsm-1-1-ucs-request-1a652d814cf8c5922dad29094a80be313c"><span class="std std-ref">ugcs::vsm::Ucs_request::Ptr</span></a><span></span> <span class="n">ucs_request</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">ucs_request</span><span class="o">-&gt;</span><span class="n">request</span><span class="p">.</span><span class="n">device_commands_size</span><span class="p">();</span> <span class="n">c</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">auto</span> <span class="o">&amp;</span><span class="n">vsm_cmd</span> <span class="o">=</span> <span class="n">ucs_request</span><span class="o">-&gt;</span><span class="n">request</span><span class="p">.</span><span class="n">device_commands</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+
+            <span class="k">auto</span> <span class="n">cmd</span> <span class="o">=</span> Get_command<span></span><span class="p">(</span><span class="n">vsm_cmd</span><span class="p">.</span><span class="n">command_id</span><span class="p">());</span>
+
+            <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a159ca84d25a5487d8e81e4438725df19"><span class="std std-ref">LOG</span></a><span></span><span class="p">(</span><span class="s">&quot;COMMAND %s (%d) received&quot;</span><span class="p">,</span>
+                <span class="n">cmd</span><span class="o">-&gt;</span><span class="n">Get_name</span><span class="p">().</span><span class="n">c_str</span><span class="p">(),</span>
+                <span class="n">vsm_cmd</span><span class="p">.</span><span class="n">command_id</span><span class="p">());</span>
+
+            <a class="reference internal" href="class_ugcs_vsm_Property_list.html#doxid-d2-d2d-classugcs-1-1vsm-1-1-property-list"><span class="std std-ref">ugcs::vsm::Property_list</span></a><span></span> <span class="n">params</span><span class="p">;</span>
+
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="k">if</span>        <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="n">c_arm</span><span class="p">)</span> <span class="p">{</span>
+
+                    <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a5c01521cd0033d3db4fb914d19865125"><span class="std std-ref">LOG_DEBUG</span></a><span></span><span class="p">(</span><span class="s">&quot;Vehicle armed!&quot;</span><span class="p">);</span>
+                    <span class="cm">/* Start yaw spinning and climbing. */</span>
+                    <span class="n">yaw_speed</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span>
+                    <span class="n">climb_speed</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+
+                    <span class="cm">/* Simulate armed vehicle */</span>
+                    <span class="n">is_armed</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="n">c_disarm</span><span class="p">)</span> <span class="p">{</span>
+
+                    <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a5c01521cd0033d3db4fb914d19865125"><span class="std std-ref">LOG_DEBUG</span></a><span></span><span class="p">(</span><span class="s">&quot;Vehicle disarmed.&quot;</span><span class="p">);</span>
+                    <span class="cm">/* Stop yaw spinning and climbing. */</span>
+                    <span class="n">yaw_speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="n">climb_speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+                    <span class="cm">/* Simulate disarmed vehicle */</span>
+                    <span class="n">is_armed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="n">c_disarm</span><span class="p">)</span> <span class="p">{</span>
+
+                    <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a5c01521cd0033d3db4fb914d19865125"><span class="std std-ref">LOG_DEBUG</span></a><span></span><span class="p">(</span><span class="s">&quot;Vehicle disarmed.&quot;</span><span class="p">);</span>
+                    <span class="cm">/* Stop yaw spinning and climbing. */</span>
+                    <span class="n">yaw_speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="n">climb_speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+                    <span class="cm">/* Simulate disarmed vehicle */</span>
+                    <span class="n">is_armed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="n">c_mission_upload</span><span class="p">)</span> <span class="p">{</span>
+
+                    <span class="cm">/* Iterate over all mission commands */</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">item_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">item_count</span> <span class="o">&lt;</span> <span class="n">vsm_cmd</span><span class="p">.</span><span class="n">sub_commands_size</span><span class="p">();</span> <span class="n">item_count</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">auto</span> <span class="n">vsm_scmd</span> <span class="o">=</span> <span class="n">vsm_cmd</span><span class="p">.</span><span class="n">sub_commands</span><span class="p">(</span><span class="n">item_count</span><span class="p">);</span>
+                        <span class="k">auto</span> <span class="n">cmd</span> <span class="o">=</span> Get_command<span></span><span class="p">(</span><span class="n">vsm_scmd</span><span class="p">.</span><span class="n">command_id</span><span class="p">());</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="n">c_move</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="cm">/* Only move is supported by this vehicle */</span>
+                            <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a159ca84d25a5487d8e81e4438725df19"><span class="std std-ref">LOG</span></a><span></span><span class="p">(</span><span class="s">&quot;MISSION item %d %s (%d)&quot;</span><span class="p">,</span>
+                                <span class="n">item_count</span><span class="p">,</span> <span class="n">cmd</span><span class="o">-&gt;</span><span class="n">Get_name</span><span class="p">().</span><span class="n">c_str</span><span class="p">(),</span>
+                                <span class="n">vsm_scmd</span><span class="p">.</span><span class="n">command_id</span><span class="p">());</span>
+                            <span class="n">params</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">-&gt;</span><span class="n">Build_parameter_list</span><span class="p">(</span><span class="n">vsm_scmd</span><span class="p">);</span>
+                            <span class="kt">float</span> <span class="n">alt</span><span class="p">;</span>
+                            <span class="n">params</span><span class="p">.</span><a class="reference internal" href="class_ugcs_vsm_Property_list.html#doxid-d2-d2d-classugcs-1-1vsm-1-1-property-list-1a55157bda7d2d9c2523fcaf9582885533"><span class="std std-ref">Get_value</span></a><span></span><span class="p">(</span><span class="s">&quot;altitude&quot;</span><span class="p">,</span> <span class="n">alt</span><span class="p">);</span>
+                            <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a5c01521cd0033d3db4fb914d19865125"><span class="std std-ref">LOG_DEBUG</span></a><span></span><span class="p">(</span><span class="s">&quot;Move to altitude of %.2f meters.&quot;</span><span class="p">,</span> <span class="n">alt</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <a class="reference internal" href="global.html#doxid-dd-d2d-exception-8h-1a7fc579418b7ef463578555dcb09e31a4"><span class="std std-ref">VSM_EXCEPTION</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Param_exception.html#doxid-d4-dff-classugcs-1-1vsm-1-1-param-exception"><span class="std std-ref">ugcs::vsm::Action::Format_exception</span></a><span></span><span class="p">,</span> <span class="s">&quot;Unsupported command&quot;</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">ucs_request</span><span class="o">-&gt;</span><span class="n">Complete</span><span class="p">();</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">ucs_request</span><span class="o">-&gt;</span><span class="n">Complete</span><span class="p">(</span><span class="n">ugcs</span><span class="o">::</span><span class="n">vsm</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">STATUS_INVALID_PARAM</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">()));</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+
+    <span class="cm">/* Generate and send simulated telemetry data to UgCS. */</span>
+    <span class="kt">bool</span>
+    <span class="n">Send_telemetry</span><span class="p">()</span>
+    <span class="p">{</span>
+
+        <span class="cm">/* Report current heading. */</span>
+        <span class="n">t_heading</span><span class="o">-&gt;</span><span class="n">Set_value</span><span class="p">(</span><span class="n">yaw</span><span class="p">);</span>
+
+        <span class="cm">/* Simulate some spinning between [-Pi;+Pi]. */</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">yaw</span> <span class="o">+=</span> <span class="n">yaw_speed</span><span class="p">)</span> <span class="o">&gt;=</span> <a class="reference internal" href="global.html#doxid-df-db1-math-8h-1ae71449b1cc6e6250b91f539153a7a0d3"><span class="std std-ref">M_PI</span></a><span></span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">yaw</span> <span class="o">=</span> <span class="o">-</span><a class="reference internal" href="global.html#doxid-df-db1-math-8h-1ae71449b1cc6e6250b91f539153a7a0d3"><span class="std std-ref">M_PI</span></a><span></span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Simulate climbing high to the sky. */</span>
+        <span class="n">altitude</span> <span class="o">+=</span> <span class="n">climb_speed</span><span class="p">;</span>
+        <span class="n">t_altitude_raw</span><span class="o">-&gt;</span><span class="n">Set_value</span><span class="p">(</span><span class="n">altitude</span><span class="p">);</span>
+
+        <span class="cm">/* Report also some battery value. */</span>
+        <span class="n">t_main_voltage</span><span class="o">-&gt;</span><span class="n">Set_value</span><span class="p">(</span><span class="mf">13.5</span><span class="p">);</span>
+
+        <span class="cm">/* Enable ARM command if vehicle is disarmed. */</span>
+        <span class="n">c_arm</span><span class="o">-&gt;</span><span class="n">Set_enabled</span><span class="p">(</span><span class="o">!</span><span class="n">is_armed</span><span class="p">);</span>
+
+        <span class="cm">/* Enable DISARM command if vehicle is armed. */</span>
+        <span class="n">c_disarm</span><span class="o">-&gt;</span><span class="n">Set_enabled</span><span class="p">(</span><span class="n">is_armed</span><span class="p">);</span>
+
+        <span class="cm">/* Report armed state to the UgCS */</span>
+        <span class="n">t_is_armed</span><span class="o">-&gt;</span><span class="n">Set_value</span><span class="p">(</span><span class="n">is_armed</span><span class="p">);</span>
+
+        <span class="cm">/* Send the updated telemetry fields and command states to UgCS</span>
+<span class="cm">         * SDK will send only modified values thus saving bandwidth */</span>
+        Commit_to_ucs<span></span><span class="p">();</span>
+
+        <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a159ca84d25a5487d8e81e4438725df19"><span class="std std-ref">LOG</span></a><span></span><span class="p">(</span><span class="s">&quot;send tm&quot;</span><span class="p">);</span>
+        <span class="cm">/* Return true to reschedule the same timer again. */</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">serial_number</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Timer_processor_Timer.html#doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a6de713d04a33015ffae93d34bc12c793"><span class="std std-ref">ugcs::vsm::Timer_processor::Timer::Ptr</span></a><span></span> <span class="n">timer</span><span class="p">;</span>
+
+    <span class="kt">double</span> <span class="n">yaw</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kt">double</span> <span class="n">yaw_speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kt">double</span> <span class="n">altitude</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kt">double</span> <span class="n">climb_speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kt">bool</span> <span class="n">is_armed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <a class="reference internal" href="class_ugcs_vsm_Subsystem.html#doxid-de-d9d-classugcs-1-1vsm-1-1-subsystem-1a7d007a86146a44b950019a007a0bf192"><span class="std std-ref">ugcs::vsm::Subsystem::Ptr</span></a><span></span> <span class="n">flight_controller</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+
+    <span class="cm">/* Define supported telemetry fields */</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">ugcs::vsm::Property::Ptr</span></a><span></span> <span class="n">t_control_mode</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">ugcs::vsm::Property::Ptr</span></a><span></span> <span class="n">t_is_armed</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">ugcs::vsm::Property::Ptr</span></a><span></span> <span class="n">t_uplink_present</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">ugcs::vsm::Property::Ptr</span></a><span></span> <span class="n">t_downlink_present</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">ugcs::vsm::Property::Ptr</span></a><span></span> <span class="n">t_main_voltage</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">ugcs::vsm::Property::Ptr</span></a><span></span> <span class="n">t_heading</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Property.html#doxid-d2-d7c-classugcs-1-1vsm-1-1-property-1aeebb4298421f309c17fd1754364ebdc1"><span class="std std-ref">ugcs::vsm::Property::Ptr</span></a><span></span> <span class="n">t_altitude_raw</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+
+    <span class="cm">/* Define supported commands */</span>
+    <a class="reference internal" href="class_ugcs_vsm_Vsm_command.html#doxid-d6-d45-classugcs-1-1vsm-1-1-vsm-command-1ad0aa4abe8012affcd2adb658d5510f73"><span class="std std-ref">ugcs::vsm::Vsm_command::Ptr</span></a><span></span> <span class="n">c_mission_upload</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Vsm_command.html#doxid-d6-d45-classugcs-1-1vsm-1-1-vsm-command-1ad0aa4abe8012affcd2adb658d5510f73"><span class="std std-ref">ugcs::vsm::Vsm_command::Ptr</span></a><span></span> <span class="n">c_move</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Vsm_command.html#doxid-d6-d45-classugcs-1-1vsm-1-1-vsm-command-1ad0aa4abe8012affcd2adb658d5510f73"><span class="std std-ref">ugcs::vsm::Vsm_command::Ptr</span></a><span></span> <span class="n">c_arm</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="class_ugcs_vsm_Vsm_command.html#doxid-d6-d45-classugcs-1-1vsm-1-1-vsm-command-1ad0aa4abe8012affcd2adb658d5510f73"><span class="std std-ref">ugcs::vsm::Vsm_command::Ptr</span></a><span></span> <span class="n">c_disarm</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="p">[])</span>
+<span class="p">{</span>
+    <span class="cm">/* First of all, initialize SDK infrastructure and services. */</span>
+    <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1a6a4d1d5dbdddf89a76e16382defa66fa"><span class="std std-ref">ugcs::vsm::Initialize</span></a><span></span><span class="p">();</span>
+    <span class="cm">/* Create vehicle instance with hard-coded serial number. */</span>
+    <span class="n">Custom_vehicle</span><span class="o">::</span><span class="n">Ptr</span> <span class="n">vehicle</span> <span class="o">=</span> <span class="n">Custom_vehicle</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;asd123456&quot;</span><span class="p">);</span>
+    <span class="cm">/* Should be always called right after vehicle instance creation. */</span>
+    <span class="n">vehicle</span><span class="o">-&gt;</span><span class="n">Enable</span><span class="p">();</span>
+    <span class="cm">/* Should be always called after Enable once all the necessary detection is done</span>
+<span class="cm">     * and parameters set.</span>
+<span class="cm">     */</span>
+    <span class="n">vehicle</span><span class="o">-&gt;</span><span class="n">Register</span><span class="p">();</span>
+    <span class="cm">/* Now vehicle is visible to UgCS. Requests for the vehicle will be executed</span>
+<span class="cm">     * in a dedicated vehicle thread. In a real VSM, there should be some</span>
+<span class="cm">     * supervision logic which monitors the connection with a vehicle and</span>
+<span class="cm">     * disables it when connection is totally lost. Here it is assumed that</span>
+<span class="cm">     * vehicle is always connected, so just wait indefinitely.</span>
+<span class="cm">     */</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">condition_variable</span> <span class="n">cond</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">mutex</span> <span class="n">mutex</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">unique_lock</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span> <span class="n">lock</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+    <span class="n">cond</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">lock</span><span class="p">);</span> <span class="cm">/* Infinite wait. */</span>
+    <span class="cm">/* Disable the vehicle, considered to be deleted after that. */</span>
+    <span class="n">vehicle</span><span class="o">-&gt;</span><span class="n">Disable</span><span class="p">();</span>
+    <span class="cm">/* Gracefully terminate SDK infrastructure and services. */</span>
+    <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1a68e200f95017008b9119e042a114f587"><span class="std std-ref">ugcs::vsm::Terminate</span></a><span></span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="example_async_workflow.cpp.html" title="previous page">async_workflow.cpp</a>
+    <a class='right-next' id="next-link" href="global.html" title="next page">Global Namespace</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

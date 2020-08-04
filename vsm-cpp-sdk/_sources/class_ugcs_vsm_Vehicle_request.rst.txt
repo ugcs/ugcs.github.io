@@ -1,0 +1,222 @@
+.. index:: pair: class; ugcs::vsm::Vehicle_request
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request:
+
+class ugcs::vsm::Vehicle_request
+================================
+
+.. toctree::
+	:hidden:
+
+	enum_ugcs_vsm_Vehicle_request_Result.rst
+	class_ugcs_vsm_Vehicle_request_Handle.rst
+
+Overview
+~~~~~~~~
+
+Base class of a generic request for a vehicle. :ref:`More...<details-d7/dce/classugcs_1_1vsm_1_1_vehicle__request>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <vehicle_request.h>
+	
+	class Vehicle_request: public std::enable_shared_from_this< Vehicle_request >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Vehicle_request> :ref:`Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>`;
+		typedef std::weak_ptr<Vehicle_request> :ref:`Weak_ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1abbbeccf4fba0155902ce8da5c69dfe69>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>`, std::string> :ref:`Completion_handler<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ac5f7f79f0ee553d93b7bf7405d7621d0>`;
+
+		// enums
+	
+		enum :ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>`;
+
+		// classes
+	
+		class :ref:`Handle<doxid-d0/d06/classugcs_1_1vsm_1_1_vehicle__request_1_1_handle>`;
+
+		// construction
+	
+		:ref:`Vehicle_request<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ae7a76954e8180183dcd9664ff041226f>`(:ref:`Completion_handler<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ac5f7f79f0ee553d93b7bf7405d7621d0>` completion_handler, :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` completion_ctx);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>` :ref:`Create<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1af304eb7adf94a8e9ffdaeaea12c2e250>`(Args&&... args);
+	
+		void :ref:`Set_completion_result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1acc320de96ea19e9673ba42f7ee620100>`(:ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>` result, const std::string&);
+		void :ref:`Complete<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1af2450af0a9ea440759eb6309a64d7301>`();
+		void :ref:`Abort<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1aa1cd1ebfb07bdd7bf868178e888f3c41>`();
+		:ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>` :ref:`Get_completion_result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ab0d6573ba324e666ac3013e50735f48a>`();
+		bool :ref:`Is_completed<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a1fb80240282f5cac0e67e3d985ffc941>`() const;
+		void :ref:`Add_ref<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a72dc44dbde439febea27974a5b9c14b5>`();
+		void :ref:`Release_ref<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a27f0097b59b87a63d54c6a18f8ff0761>`();
+	};
+
+	// direct descendants
+
+	template <class Payload>
+	class :ref:`Vehicle_request_spec<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec>`;
+
+	template <>
+	class :ref:`Vehicle_request_spec<void><doxid-d0/d23/classugcs_1_1vsm_1_1_vehicle__request__spec_3_01void_01_4>`;
+.. _details-d7/dce/classugcs_1_1vsm_1_1_vehicle__request:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Base class of a generic request for a vehicle.
+
+It provides reference management methods for associated handles.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Vehicle_request> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1abbbeccf4fba0155902ce8da5c69dfe69:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Vehicle_request> Weak_ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Completion_handler
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ac5f7f79f0ee553d93b7bf7405d7621d0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>`, std::string> Completion_handler
+
+Completion handler type of the request.
+
+Construction
+------------
+
+.. index:: pair: function; Vehicle_request
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ae7a76954e8180183dcd9664ff041226f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Vehicle_request(:ref:`Completion_handler<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ac5f7f79f0ee553d93b7bf7405d7621d0>` completion_handler, :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` completion_ctx)
+
+Construct base request instance.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1af304eb7adf94a8e9ffdaeaea12c2e250:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ad12d0a27080cb9ad623fa6dc3bbe4c4f>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Set_completion_result
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1acc320de96ea19e9673ba42f7ee620100:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Set_completion_result(:ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>` result, const std::string&)
+
+Set completion result to be used when Complete method is called.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- result
+
+		- Result for Complete method.
+
+.. index:: pair: function; Complete
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1af2450af0a9ea440759eb6309a64d7301:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Complete()
+
+Should be called when vehicle request is completed by the user.
+
+Result, previously set by Set_completion_result is used.
+
+.. index:: pair: function; Abort
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1aa1cd1ebfb07bdd7bf868178e888f3c41:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Abort()
+
+Abort the request.
+
+Any pending or submitted processing or completion handler is aborted, if it is not yet being executed.
+
+.. index:: pair: function; Get_completion_result
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1ab0d6573ba324e666ac3013e50735f48a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Result<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a3a5f2dd1a66c9530931d45b964d1ff8b>` Get_completion_result()
+
+Get current completion result.
+
+.. index:: pair: function; Is_completed
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a1fb80240282f5cac0e67e3d985ffc941:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_completed() const
+
+Check if the request was completed.
+
+.. index:: pair: function; Add_ref
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a72dc44dbde439febea27974a5b9c14b5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Add_ref()
+
+Add reference from user handle.
+
+.. index:: pair: function; Release_ref
+.. _doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request_1a27f0097b59b87a63d54c6a18f8ff0761:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Release_ref()
+
+Release reference from user handle.
+
+When last references is released, request is automatically completed with currently set result.
+

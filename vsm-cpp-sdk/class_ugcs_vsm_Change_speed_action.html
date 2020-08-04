@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class ugcs::vsm::Change_speed_action &#8212; CPP VSM SDK  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class ugcs::vsm::Crc32" href="class_ugcs_vsm_Crc32.html" />
+    <link rel="prev" title="class ugcs::vsm::Cartesian_tuple" href="class_ugcs_vsm_Cartesian_tuple.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="index.html">
+      <img src="_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="namespace_std.html">namespace std</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="namespace_ugcs.html">namespace ugcs</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="struct_glob_t.html">struct glob_t</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#inherited-members" class="nav-link">Inherited Members</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#typedefs" class="nav-link">Typedefs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fields" class="nav-link">Fields</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#construction" class="nav-link">Construction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#methods" class="nav-link">Methods</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-ugcs-vsm-change-speed-action">
+<span id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action"></span><span id="index-0"></span><h1>class ugcs::vsm::Change_speed_action<a class="headerlink" href="#class-ugcs-vsm-change-speed-action" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Immediate change or vehicle airspeed. <a class="reference internal" href="#details-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;change_speed_action.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">Change_speed_action</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action"><span class="std std-ref">ugcs::vsm::Action</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Change_speed_action</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a8241dd7cdd026a60735b124982c35bd5"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Change_speed_action</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a1d8fe0ceef4a5c251477b5e8f6a5d6d6"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <span class="kt">double</span> <a class="reference internal" href="#doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1af5f729afcf2d195ff72418b28d1c0dbb"><span class="std std-ref">speed</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a440ec2e39862e6b7927e6abdd64c8de0"><span class="std std-ref">vertical_speed</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a7cf7f5f1309867f2c2eae8efbd4e66ea"><span class="std std-ref">Change_speed_action</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">h_speed</span><span class="p">,</span> <span class="kt">float</span> <span class="n">v_speed</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a9185f87cb52d78ad999bdfe8a6dcf099"><span class="std std-ref">Change_speed_action</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Property_list.html#doxid-d2-d2d-classugcs-1-1vsm-1-1-property-list"><span class="std std-ref">Property_list</span></a><span></span><span class="o">&amp;</span> <span class="n">p</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a200abbb09db53752098b4c1125b93268"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<div class="section" id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action"><span class="std std-ref">Action</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action"><span class="std std-ref">Action</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a9798e1bd2f6fd447f2e1b2e0f32a3763"><span class="std std-ref">Weak_ptr</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Param_exception.html#doxid-d4-dff-classugcs-1-1vsm-1-1-param-exception"><span class="std std-ref">ugcs::vsm::Param_exception</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_ugcs_vsm_Action_Format_exception_dummy_struct.html#doxid-d8-d4a-structugcs-1-1vsm-1-1-action-1-1-format-exception-dummy-struct"><span class="std std-ref">Format_exception_dummy_struct</span></a><span></span><span class="p">,</span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1ac00b4775ae858fca8fc9c2907a644b8a"><span class="std std-ref">Format_exception</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_ugcs_vsm_Action_Type.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a70048937fa290403b4226dbb6226aced"><span class="std std-ref">Type</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Format_exception_dummy_struct.html#doxid-d8-d4a-structugcs-1-1vsm-1-1-action-1-1-format-exception-dummy-struct"><span class="std std-ref">Format_exception_dummy_struct</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper.html#doxid-d4-d0a-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-r-e-p-e-a-t-s-e-r-v-o-01-4"><span class="std std-ref">Mapper&lt;Action::Type::REPEAT_SERVO&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-2.html#doxid-d1-d31-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-p-o-i-01-4"><span class="std std-ref">Mapper&lt;Action::Type::POI&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-3.html#doxid-d6-d93-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-p-a-y-l-o-a-d-s-t-e-e-r-i-n-g-01-4"><span class="std std-ref">Mapper&lt;Action::Type::PAYLOAD_STEERING&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-4.html#doxid-d9-d36-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-p-a-n-o-r-a-m-a-01-4"><span class="std std-ref">Mapper&lt;Action::Type::PANORAMA&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-5.html#doxid-da-dc6-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-s-e-t-h-o-m-e-01-4"><span class="std std-ref">Mapper&lt;Action::Type::SET_HOME&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-6.html#doxid-df-db7-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-t-a-k-e-o-f-f-01-4"><span class="std std-ref">Mapper&lt;Action::Type::TAKEOFF&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-7.html#doxid-de-d1a-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-s-e-t-s-e-r-v-o-01-4"><span class="std std-ref">Mapper&lt;Action::Type::SET_SERVO&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-8.html#doxid-d3-d94-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-t-a-s-k-a-t-t-r-i-b-u-t-e-s-01-4"><span class="std std-ref">Mapper&lt;Action::Type::TASK_ATTRIBUTES&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-9.html#doxid-d5-d10-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-v-t-o-l-t-r-a-n-s-i-t-i-o-n-01-4"><span class="std std-ref">Mapper&lt;Action::Type::VTOL_TRANSITION&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-10.html#doxid-da-de6-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-m-o-v-e-01-4"><span class="std std-ref">Mapper&lt;Action::Type::MOVE&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-11.html#doxid-d4-dbe-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-h-e-a-d-i-n-g-01-4"><span class="std std-ref">Mapper&lt;Action::Type::HEADING&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-12.html#doxid-dc-d57-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-c-a-m-e-r-a-c-o-n-t-r-o-l-01-4"><span class="std std-ref">Mapper&lt;Action::Type::CAMERA_CONTROL&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="n">Type</span> <span class="n">type_val</span><span class="o">&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-13.html#doxid-da-d7c-structugcs-1-1vsm-1-1-action-1-1-mapper"><span class="std std-ref">Mapper</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-14.html#doxid-d5-d51-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-l-a-n-d-i-n-g-01-4"><span class="std std-ref">Mapper&lt;Action::Type::LANDING&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-15.html#doxid-dd-d32-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-c-a-m-e-r-a-s-e-r-i-e-s-b-y-d-i-s-t-a-n-c-e-01-4"><span class="std std-ref">Mapper&lt;Action::Type::CAMERA_SERIES_BY_DISTANCE&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-16.html#doxid-d1-d04-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-c-a-m-e-r-a-t-r-i-g-g-e-r-01-4"><span class="std std-ref">Mapper&lt;Action::Type::CAMERA_TRIGGER&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-17.html#doxid-d4-d8c-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-c-a-m-e-r-a-s-e-r-i-e-s-b-y-t-i-m-e-01-4"><span class="std std-ref">Mapper&lt;Action::Type::CAMERA_SERIES_BY_TIME&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-18.html#doxid-da-d96-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-c-h-a-n-g-e-s-p-e-e-d-01-4"><span class="std std-ref">Mapper&lt;Action::Type::CHANGE_SPEED&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;&gt;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-19.html#doxid-df-d7a-structugcs-1-1vsm-1-1-action-1-1-mapper-3-01-action-1-1-type-1-1-w-a-i-t-01-4"><span class="std std-ref">Mapper&lt;Action::Type::WAIT&gt;</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <span class="kt">int</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a0417c592be2e060264012c7dd7aebfbd"><span class="std std-ref">command_id</span></a><span></span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+    <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1aa9cf43a60d1c94283a102604c0d1b287"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+
+    <a class="reference internal" href="enum_ugcs_vsm_Action_Type.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a70048937fa290403b4226dbb6226aced"><span class="std std-ref">Type</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1abf94ade9dc8302843e174f2ce20e9133"><span class="std std-ref">Get_type</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a0da4be7ed684d474669fdb5e3427ba20"><span class="std std-ref">Set_id</span></a><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1ab175b3e364b4aadd05f614301b14de43"><span class="std std-ref">Get_name</span></a><span></span><span class="p">();</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="n">Type</span> <span class="n">type_val</span><span class="o">&gt;</span>
+    <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-13.html#doxid-da-d7c-structugcs-1-1vsm-1-1-action-1-1-mapper"><span class="std std-ref">Mapper</span></a><span></span><span class="o">&lt;</span><span class="n">type_val</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">::</span><span class="n">Ptr</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1afa1b44b7522526e19d771946cd2c5dff"><span class="std std-ref">Get_action</span></a><span></span><span class="p">();</span></pre>
+</div>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Immediate change or vehicle airspeed.</p>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a8241dd7cdd026a60735b124982c35bd5"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Change_speed_action</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
+<p>Pointer type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a1d8fe0ceef4a5c251477b5e8f6a5d6d6"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Change_speed_action</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
+<p>Pointer type.</p>
+</div>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1af5f729afcf2d195ff72418b28d1c0dbb"><span id="index-3"></span><span></span><span class="kt">double</span> <span class="n">speed</span></pre>
+<p>Target ground speed in meters per second.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a440ec2e39862e6b7927e6abdd64c8de0"><span id="index-4"></span><span></span><span class="kt">float</span> <span class="n">vertical_speed</span></pre>
+<p>Target vertical speed in meters per second.</p>
+</div>
+<div class="section" id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a7cf7f5f1309867f2c2eae8efbd4e66ea"><span id="index-5"></span><span></span><span class="n">Change_speed_action</span><span class="p">(</span><span class="kt">float</span> <span class="n">h_speed</span><span class="p">,</span> <span class="kt">float</span> <span class="n">v_speed</span><span class="p">)</span></pre>
+<p>Construct action explicitly.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a9185f87cb52d78ad999bdfe8a6dcf099"><span id="index-6"></span><span></span><span class="n">Change_speed_action</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Property_list.html#doxid-d2-d2d-classugcs-1-1vsm-1-1-property-list"><span class="std std-ref">Property_list</span></a><span></span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span></pre>
+<p>Construct action from protobuf command.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d5-d1e-classugcs-1-1vsm-1-1-change-speed-action-1a200abbb09db53752098b4c1125b93268"><span id="index-7"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Create an instance.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Cartesian_tuple.html" title="previous page">class ugcs::vsm::Cartesian_tuple</a>
+    <a class='right-next' id="next-link" href="class_ugcs_vsm_Crc32.html" title="next page">class ugcs::vsm::Crc32</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

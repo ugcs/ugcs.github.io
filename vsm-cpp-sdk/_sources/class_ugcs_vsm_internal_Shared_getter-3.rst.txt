@@ -1,0 +1,65 @@
+.. index:: pair: class; ugcs::vsm::internal::Shared_getter
+.. _doxid-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter:
+
+template class ugcs::vsm::internal::Shared_getter
+=================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Helper class for working with classes which are derived from std::enable_shared_from_this. :ref:`More...<details-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <utils.h>
+	
+	template <class T, class Shared_base = void>
+	class Shared_getter
+	{
+	public:
+		// typedefs
+	
+		typedef Shared_base :ref:`Shared_base_type<doxid-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter_1ab25cb0d2493921315700cd6c64b615db>`;
+
+		// methods
+	
+		static std::shared_ptr<T> :ref:`Get<doxid-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter_1a3a93611436e2ce5f5623c614d7b9bcce>`(T* this_ptr);
+	};
+.. _details-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Helper class for working with classes which are derived from std::enable_shared_from_this.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Shared_base_type
+.. _doxid-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter_1ab25cb0d2493921315700cd6c64b615db:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef Shared_base Shared_base_type
+
+The type of base class.
+
+Methods
+-------
+
+.. index:: pair: function; Get
+.. _doxid-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter_1a3a93611436e2ce5f5623c614d7b9bcce:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static std::shared_ptr<T> Get(T* this_ptr)
+
+Get shared pointer to derived class.
+

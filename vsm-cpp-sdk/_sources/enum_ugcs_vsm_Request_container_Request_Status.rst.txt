@@ -1,0 +1,135 @@
+.. index:: pair: enum; Status
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76:
+
+enum ugcs::vsm::Request_container::Request::Status
+==================================================
+
+Overview
+~~~~~~~~
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` processing status which is returned by the handler or set internally. :ref:`More...<details-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76>`
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <request_container.h>
+
+	enum Status
+	{
+	    :ref:`PENDING<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ac69f06e1a9b016d133907b4e5f5864d2>`,
+	    :ref:`CANCELLATION_PENDING<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ad00c3efeb1b235e05fc4c8f095aa9699>`,
+	    :ref:`CANCELING<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76a6427d889b1a2683fc2871ccfc7ef48d6>`,
+	    :ref:`PROCESSING<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae133e9a63fd4950f19c2180be4047ecc>`,
+	    :ref:`ABORT_PENDING<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76adeae3b5a2035ecafe4cd386adf4f6748>`,
+	    :ref:`ABORTED<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76a4e6c860e5da10e31c5fd9cb76ddc2025>`,
+	    :ref:`RESULT_CODES<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76af88cb3efbf02e99fa23369a585f84b64>`,
+	    :ref:`OK<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564>`                   = RESULT_CODES,
+	    :ref:`CANCELED<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ad4539bffb6062bdcbd7e7cc1b1228926>`,
+	};
+
+.. _details-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` processing status which is returned by the handler or set internally.
+
+Enum Values
+-----------
+
+.. index:: pair: enumvalue; PENDING
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ac69f06e1a9b016d133907b4e5f5864d2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PENDING
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` is currently pending for processing.
+
+Should never be returned from handlers.
+
+.. index:: pair: enumvalue; CANCELLATION_PENDING
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ad00c3efeb1b235e05fc4c8f095aa9699:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CANCELLATION_PENDING
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` is not yet taken from processor input queue and :ref:`Cancel() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a2ab0ebd9dc403ab769f81003a7bc66e0>` method was called.
+
+.. index:: pair: enumvalue; CANCELING
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76a6427d889b1a2683fc2871ccfc7ef48d6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CANCELING
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` was taken from processor input queue in CANCELLATION_PENDING state.
+
+.. index:: pair: enumvalue; PROCESSING
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae133e9a63fd4950f19c2180be4047ecc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PROCESSING
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` processing handler was called and request is being processed.
+
+Should never be returned from the handler.
+
+.. index:: pair: enumvalue; ABORT_PENDING
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76adeae3b5a2035ecafe4cd386adf4f6748:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ABORT_PENDING
+
+Processing was aborted by calling :ref:`Abort() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>` method and request is submitted to the completion context for a completion handler release to be made.
+
+This is necessary to safely release the completion handler which might induce side effects potentially blocking the :ref:`Abort() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>` method caller and also to make sure that possible side effects are happening in a user provided context and not in the context of :ref:`Abort() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>` method caller.
+
+.. index:: pair: enumvalue; ABORTED
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76a4e6c860e5da10e31c5fd9cb76ddc2025:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ABORTED
+
+Processing was aborted by calling :ref:`Abort() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a68ac123b4c30999676a92bfb505fb769>` method and full cleanup is made.
+
+.. index:: pair: enumvalue; RESULT_CODES
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76af88cb3efbf02e99fa23369a585f84b64:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RESULT_CODES
+
+Result codes passed to :ref:`Complete() <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a38c68dcf1ed20975e2a2c25ac1610d40>` method should start from this value.
+
+.. index:: pair: enumvalue; OK
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ae0aa021e21dddbd6d8cecec71e9cf564:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	OK
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` successfully processed.
+
+.. index:: pair: enumvalue; CANCELED
+.. _doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a7e8d9e205f783c829fcb5bdda00f6f76ad4539bffb6062bdcbd7e7cc1b1228926:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CANCELED
+
+:ref:`Request <doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` was canceled.
+

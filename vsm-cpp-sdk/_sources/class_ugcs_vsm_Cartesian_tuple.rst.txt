@@ -1,0 +1,66 @@
+.. index:: pair: class; ugcs::vsm::Cartesian_tuple
+.. _doxid-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple:
+
+class ugcs::vsm::Cartesian_tuple
+================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Coordinates tuple for cartesian CS. :ref:`More...<details-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <coordinates.h>
+	
+	class Cartesian_tuple
+	{
+	public:
+		// fields
+	
+		double :ref:`x<doxid-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple_1ac7d7b5ef5e17bda6e7b6e4ba6d2e45c2>`;
+		double :target:`y<doxid-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple_1ac9afcc0357e1b72bb8890e768ea8e639>`;
+		double :target:`z<doxid-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple_1aaeb21d15cc101e43aaddbe286d7149e0>`;
+
+		// construction
+	
+		:ref:`Cartesian_tuple<doxid-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple_1a501cbd23d3343dff64effd8c847f6a17>`(double x, double y, double z);
+	};
+.. _details-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Coordinates tuple for cartesian CS.
+
+Fields
+------
+
+.. index:: pair: variable; x
+.. _doxid-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple_1ac7d7b5ef5e17bda6e7b6e4ba6d2e45c2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	double x
+
+In meters.
+
+Construction
+------------
+
+.. index:: pair: function; Cartesian_tuple
+.. _doxid-d4/da0/classugcs_1_1vsm_1_1_cartesian__tuple_1a501cbd23d3343dff64effd8c847f6a17:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Cartesian_tuple(double x, double y, double z)
+
+Construct the tuple with specific values.
+

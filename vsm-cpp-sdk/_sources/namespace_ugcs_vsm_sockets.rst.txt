@@ -1,0 +1,47 @@
+.. index:: pair: namespace; ugcs::vsm::sockets
+.. _doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets:
+
+namespace ugcs::vsm::sockets
+============================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace sockets {
+
+	// typedefs
+
+	typedef int :target:`Socket_handle<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1abfbf647d400a48705b524b4c70f41b07>`;
+
+	// global variables
+
+	const int :target:`SEND_FLAGS<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1ae6990a883af099bf1df61c49b160c794>` = 0;
+
+	// global functions
+
+	void :target:`Init_sockets<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1a9b1e5da1658e5ed5c596d7907e9302a2>`();
+	void :target:`Done_sockets<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1aa6fee201d2ce6ee38463b8b236d3ef9e>`();
+
+	int :target:`Create_socketpair<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1ad8d865d250ce249cfc02835216bde70b>`(
+		:ref:`Socket_handle<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1abfbf647d400a48705b524b4c70f41b07>`&,
+		:ref:`Socket_handle<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1abfbf647d400a48705b524b4c70f41b07>`&
+		);
+
+	int :target:`Close_socket<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1a5d02a3df8f6cdfb7cdd0f65427807157>`(:ref:`Socket_handle<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1abfbf647d400a48705b524b4c70f41b07>`);
+	bool :target:`Is_last_operation_pending<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1a283e175e2f7a91ac7717b3ef13ceaece>`();
+	int :target:`Make_nonblocking<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1a7c532640dd9b11b117299a47010f313e>`(:ref:`Socket_handle<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1abfbf647d400a48705b524b4c70f41b07>`);
+	int :target:`Disable_sigpipe<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1a8d0a5409ae81c2cf6f136bb642248c1f>`(:ref:`Socket_handle<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1abfbf647d400a48705b524b4c70f41b07>`);
+
+	int :target:`Prepare_for_listen<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1ad048f97ef9758bec9f602ed196d1c0ab>`(
+		:ref:`Socket_handle<doxid-d1/d2a/namespaceugcs_1_1vsm_1_1sockets_1abfbf647d400a48705b524b4c70f41b07>`,
+		bool is_multicast
+		);
+
+	} // namespace sockets

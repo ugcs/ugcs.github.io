@@ -1,0 +1,87 @@
+.. index:: pair: class; ugcs::vsm::Mavlink_demuxer::Callback_base
+.. _doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base:
+
+class ugcs::vsm::Mavlink_demuxer::Callback_base
+===============================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` base class to provide a unified interface to convert raw data buffer to specific Mavlink message and call associated handler. :ref:`More...<details-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	class Callback_base: public std::enable_shared_from_this< Callback_base >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Callback_base> :ref:`Ptr<doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1a37ef3066e00b1f589ab2dfa4f8030ef9>`;
+		typedef std::weak_ptr<Callback_base> :ref:`Weak_ptr<doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1a1072bd7fac838bf66b7da47e83f152e0>`;
+
+		// construction
+	
+		:target:`Callback_base<doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1ab85c6936a512311ad26c7f86c149bf64>`(:ref:`Request_processor::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` processor);
+
+		// methods
+	
+		template <typename... Args>
+		static Ptr :ref:`Create<doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1a5725fa80caaea9da748f00b5d366f9eb>`(Args&&... args);
+	
+		virtual void :target:`operator ()<doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1a6f3eb8518636ea545280d3360875357b>` (
+			:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>` buffer,
+			:ref:`System_id<doxid-d6/db5/classugcs_1_1vsm_1_1_mavlink__demuxer_1a9b7c746037858b13c805a236c3159199>` system_id,
+			uint8_t component_id,
+			uint32_t request_id
+			) = 0;
+	};
+.. _details-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Callback <doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` base class to provide a unified interface to convert raw data buffer to specific Mavlink message and call associated handler.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1a37ef3066e00b1f589ab2dfa4f8030ef9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Callback_base> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1a1072bd7fac838bf66b7da47e83f152e0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Callback_base> Weak_ptr
+
+Pointer type.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-dd/dbf/classugcs_1_1vsm_1_1_mavlink__demuxer_1_1_callback__base_1a5725fa80caaea9da748f00b5d366f9eb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static Ptr Create(Args&&... args)
+
+Create an instance.
+

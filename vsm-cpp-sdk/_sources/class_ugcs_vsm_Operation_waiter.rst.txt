@@ -1,0 +1,305 @@
+.. index:: pair: class; ugcs::vsm::Operation_waiter
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter:
+
+class ugcs::vsm::Operation_waiter
+=================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Class for synchronizing with request execution. :ref:`More...<details-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <operation_waiter.h>
+	
+	class Operation_waiter
+	{
+	public:
+		// typedefs
+	
+		typedef std::unique_ptr<Operation_waiter> :ref:`Ptr<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a84b73e7ed4845ca950558bdd936b5c9a>`;
+		typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Ptr<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a84b73e7ed4845ca950558bdd936b5c9a>`> :ref:`Timeout_handler<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a155b9b08400540c41e33223c4a182bc3>`;
+
+		// construction
+	
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a1ed259571de2550a64a217276221c2fa>`(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request = nullptr);
+	
+		template <class Request_type>
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1ac3b118d57cfe53c5f327a1235557e603>`(std::shared_ptr<Request_type> request);
+	
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a4e0ca5458f6eb5cbd4456c6169ae7fcd>`(Operation_waiter&&);
+		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a65e7ac8324e30e97c92fc7d24bbdc5f2>`(const Operation_waiter&);
+
+		// methods
+	
+		Operation_waiter& :ref:`operator =<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a47b34e3706deb4a262def60c4f6e3901>` (Operation_waiter&&);
+		Operation_waiter& :ref:`operator =<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1ae81c6ec1cd578f670d667e2e8eeee975>` (const Operation_waiter&);
+		:ref:`operator bool<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1ab3e29a6cb612d1260fafd9c5dfe51b31>` () const;
+	
+		bool :ref:`Wait<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1afcd691d54723e9c7af22a1db9e35b131>`(
+			bool process_ctx = true,
+			std::chrono::milliseconds timeout = std::chrono::milliseconds::zero()
+			);
+	
+		void :ref:`Timeout<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a5ff5e4e743dc8f8e3cf95e495af2bb94>`(
+			std::chrono::milliseconds timeout,
+			:ref:`Timeout_handler<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a155b9b08400540c41e33223c4a182bc3>` timeout_handler = :ref:`Timeout_handler<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a155b9b08400540c41e33223c4a182bc3>`(),
+			bool cancel_operation = true,
+			:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` ctx = nullptr
+			);
+	
+		void :ref:`Cancel<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a7a35ea219430078ddcf48193eb6fae68>`();
+		void :ref:`Abort<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a32de859dc270a1985a934e8a9e084908>`();
+		bool :ref:`Is_done<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a81f7c410c34b180f6cc96554317fdf19>`() const;
+	};
+.. _details-d0/d74/classugcs_1_1vsm_1_1_operation__waiter:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Class for synchronizing with request execution.
+
+Instance of this class should be returned by value from asynchronous methods of request processors. Only one instance is allowed (copying is disabled).
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a84b73e7ed4845ca950558bdd936b5c9a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::unique_ptr<Operation_waiter> Ptr
+
+Pointer type when used as argument in callbacks.
+
+.. index:: pair: typedef; Timeout_handler
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a155b9b08400540c41e33223c4a182bc3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`<void, :ref:`Ptr<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a84b73e7ed4845ca950558bdd936b5c9a>`> Timeout_handler
+
+Timeout handler prototype.
+
+Construction
+------------
+
+.. index:: pair: function; Operation_waiter
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a1ed259571de2550a64a217276221c2fa:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Operation_waiter(:ref:`Request::Ptr<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request_1a9fc856a23cf576b01649cabc8a6ce3ec>` request = nullptr)
+
+Construct operation waiter.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- request
+
+		- Associated request. No request is associated if nullptr. In such case it is dummy waiter object which behaves like its associated request is already done.
+
+.. index:: pair: function; Operation_waiter
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1ac3b118d57cfe53c5f327a1235557e603:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class Request_type>
+	Operation_waiter(std::shared_ptr<Request_type> request)
+
+Construct operation waiter from any type of request pointer.
+
+.. index:: pair: function; Operation_waiter
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a4e0ca5458f6eb5cbd4456c6169ae7fcd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Operation_waiter(Operation_waiter&&)
+
+Default move constructor.
+
+.. index:: pair: function; Operation_waiter
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a65e7ac8324e30e97c92fc7d24bbdc5f2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Operation_waiter(const Operation_waiter&)
+
+Copy constructor disabled.
+
+Having more than one copy of operation waiter is confusing and error prone.
+
+Methods
+-------
+
+.. index:: pair: function; operator=
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a47b34e3706deb4a262def60c4f6e3901:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Operation_waiter& operator = (Operation_waiter&&)
+
+Move assignment operator.
+
+If the waiter instance which is assigned to is not empty, it is properly destroyed.
+
+.. index:: pair: function; operator=
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1ae81c6ec1cd578f670d667e2e8eeee975:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Operation_waiter& operator = (const Operation_waiter&)
+
+Assignment operator is disabled.
+
+Having more than one copy of operation waiter is confusing and error prone.
+
+.. index:: pair: function; operator bool
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1ab3e29a6cb612d1260fafd9c5dfe51b31:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	operator bool () const
+
+Test the waiter has request associated.
+
+.. index:: pair: function; Wait
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1afcd691d54723e9c7af22a1db9e35b131:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Wait(
+		bool process_ctx = true,
+		std::chrono::milliseconds timeout = std::chrono::milliseconds::zero()
+		)
+
+Wait for request is fully processed, i.e.
+
+all handlers were invoked and no more actions pending.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- process_ctx
+
+		- Process all requests in the associated completion context. This may be useful if the context is normally processed in the calling thread.
+
+	*
+		- timeout
+
+		- Timeout value for waiting. Zero value indicates indefinite waiting.
+
+
+
+.. rubric:: Returns:
+
+"true" if request was processed, "false" if the function returned by timeout expiration.
+
+.. index:: pair: function; Timeout
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a5ff5e4e743dc8f8e3cf95e495af2bb94:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Timeout(
+		std::chrono::milliseconds timeout,
+		:ref:`Timeout_handler<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a155b9b08400540c41e33223c4a182bc3>` timeout_handler = :ref:`Timeout_handler<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a155b9b08400540c41e33223c4a182bc3>`(),
+		bool cancel_operation = true,
+		:ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` ctx = nullptr
+		)
+
+Schedule timeout for the operation.
+
+After the specified time the optional callback is invoked and the operation is optionally canceled.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- timeout
+
+		- Timeout for the operation.
+
+	*
+		- timeout_handler
+
+		- Handler which should be invoked when timeout elapses. The handler should have constant reference to :ref:`Operation_waiter::Ptr <doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a84b73e7ed4845ca950558bdd936b5c9a>` as the first argument.
+
+	*
+		- cancel_operation
+
+		- Cancel the operation after the timeout elapses if "true".
+
+	*
+		- ctx
+
+		- Context used for handler invocation. By default the handler is invoked in request completion context, which should be present in this case.
+
+.. index:: pair: function; Cancel
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a7a35ea219430078ddcf48193eb6fae68:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Cancel()
+
+Cancel the operation.
+
+This action behavior is defined by specific operation and processor.
+
+.. index:: pair: function; Abort
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a32de859dc270a1985a934e8a9e084908:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Abort()
+
+Abort the operation.
+
+Completion handler will not be executed, unless it has been already executed or execution already started.
+
+.. index:: pair: function; Is_done
+.. _doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter_1a81f7c410c34b180f6cc96554317fdf19:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_done() const
+
+Check if request is fully processed, i.e.
+
+all handlers were invoked and no more actions pending.
+

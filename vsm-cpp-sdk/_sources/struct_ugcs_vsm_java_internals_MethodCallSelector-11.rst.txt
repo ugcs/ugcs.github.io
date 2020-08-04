@@ -1,0 +1,30 @@
+.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<void>
+.. _doxid-de/d12/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01void_01_4:
+
+template struct ugcs::vsm::java_internals::MethodCallSelector<void>
+===================================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <java.h>
+	
+	template <>
+	struct MethodCallSelector<void>
+	{
+		// methods
+	
+		template <typename... T_args>
+		static void :target:`Call<doxid-de/d12/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01void_01_4_1ae654a1215e79789ad9e6aeff857b1b23>`(
+			JNIEnv* env,
+			jobject obj,
+			jmethodID method_id,
+			T_args... args
+			);
+	};

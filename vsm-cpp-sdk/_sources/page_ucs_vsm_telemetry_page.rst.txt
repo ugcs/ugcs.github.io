@@ -1,0 +1,124 @@
+.. index:: pair: page; Telemetry protocol
+.. _doxid-de/d20/ucs_vsm_telemetry_page:
+
+Telemetry protocol
+==================
+
+
+
+.. _doxid-de/d20/ucs_vsm_telemetry_page_1telemetry_registration:
+
+Telemetry field registration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before any telemetry can be sent to the UCS it must be registered.
+
+Each telemetry field supported by the vehicle should be registered via **Register_vehicle.register_flight_controller.telemetry_fields** message (See :ref:`Register_field message <doxid-d3/d7e/ucs_vsm_fields_page_1register_field>`).
+
+All telemetry values are considered valid until explicitly reported as N/A by the VSM.
+
+VSM will send N/A automatically depending on timeout upon field creation. This timeout value is used only by VSM-SDK and not communicated to UCS.
+
+
+
+.. _doxid-de/d20/ucs_vsm_telemetry_page_1telemetry_fields:
+
+Built in telemetry field names
+------------------------------
+
+VSM can register any set of telemetry fields but there are some built in telemetry field names which are treated specially by UCS.
+
+Registering different semantic for these values will lead to undesired results.
+
+======================  ===============================  ==================  ==============================================================================================  
+Field name              Semantic                         Subsystem           Notes                                                                                           
+======================  ===============================  ==================  ==============================================================================================  
+adsb_altitude           FIELD_SEMANTIC_ALTITUDE_AMSL     ADSB                                                                                                                
+adsb_altitude_internal  FIELD_SEMANTIC_BOOL              ADSB                                                                                                                
+adsb_error_gps          FIELD_SEMANTIC_BOOL              ADSB                                                                                                                
+adsb_error_icao         FIELD_SEMANTIC_BOOL              ADSB                                                                                                                
+adsb_error_squitter     FIELD_SEMANTIC_BOOL              ADSB                                                                                                                
+adsb_error_temperature  FIELD_SEMANTIC_BOOL              ADSB                                                                                                                
+adsb_error_xpdr         FIELD_SEMANTIC_BOOL              ADSB                                                                                                                
+adsb_flight             FIELD_SEMANTIC_STRING            ADSB                                                                                                                
+adsb_icao               FIELD_SEMANTIC_ICAO              ADSB                                                                                                                
+adsb_ident_active       FIELD_SEMANTIC_BOOL              ADSB                                                                                                                
+adsb_registration       FIELD_SEMANTIC_STRING            ADSB                                                                                                                
+adsb_squawk             FIELD_SEMANTIC_SQUAWK            ADSB                                                                                                                
+adsb_transponder_mode   FIELD_SEMANTIC_ADSB_MODE         ADSB                                                                                                                
+adsb_version            FIELD_SEMANTIC_STRING            ADSB                                                                                                                
+air_speed               FIELD_SEMANTIC_AIR_SPEED         FC                                                                                                                  
+altitude_agl            FIELD_SEMANTIC_ALTITUDE_AGL      FC                                                                                                                  
+altitude_amsl           FIELD_SEMANTIC_ALTITUDE_AMSL     FC                                                                                                                  
+altitude_origin         FIELD_SEMANTIC_ALTITUDE_AMSL     FC                                                                                                                  
+altitude_raw            FIELD_SEMANTIC_ALTITUDE_RAW      FC                                                                                                                  
+autopilot_status        FIELD_SEMANTIC_AUTOPILOT_STATUS  FC                                                                                                                  
+autopilot_status_text   FIELD_SEMANTIC_STRING            FC                                                                                                                  
+control_mode            FIELD_SEMANTIC_CONTROL_MODE      FC                                                                                                                  
+course                  FIELD_SEMANTIC_HEADING           FC                  Course over ground relative to North. Range 0..2Pi, East is positive                            
+current                 FIELD_SEMANTIC_NUMERIC           FC                  Main battery current in Amperes                                                                 
+current_command         FIELD_SEMANTIC_NUMERIC           FC                  Current command_id vehicle is executing now. Command number in mission as sent to the vehicle.  
+current_mission_id      FIELD_SEMANTIC_NUMERIC           FC                  Mission ID reported by VSM. VSM generates this on mission upload.                               
+downlink_present        FIELD_SEMANTIC_BOOL              FC                                                                                                                  
+fence_enabled           FIELD_SEMANTIC_BOOL              FC                  True if fence is enabled                                                                        
+field_of_view           FIELD_SEMANTIC_NUMERIC           Camera                                                                                                              
+flight_mode             FIELD_SEMANTIC_FLIGHT_MODE       FC                                                                                                                  
+gcs_link_quality        FIELD_SEMANTIC_LINK_QUALITY      FC                                                                                                                  
+gps_fix                 FIELD_SEMANTIC_GPS_FIX_TYPE      FC                                                                                                                  
+ground_speed            FIELD_SEMANTIC_GROUND_SPEED      FC                                                                                                                  
+heading                 FIELD_SEMANTIC_HEADING           FC                  Yaw relative to North. Range 0..2Pi, East is positive                                           
+home_altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL     FC                                                                                                                  
+home_altitude_raw       FIELD_SEMANTIC_ALTITUDE_RAW      FC                                                                                                                  
+home_latitude           FIELD_SEMANTIC_LATITUDE          FC                                                                                                                  
+home_longitude          FIELD_SEMANTIC_LONGITUDE         FC                                                                                                                  
+is_armed                FIELD_SEMANTIC_BOOL              FC                                                                                                                  
+latitude                FIELD_SEMANTIC_LATITUDE          FC                                                                                                                  
+longitude               FIELD_SEMANTIC_LONGITUDE         FC                                                                                                                  
+remaining_power_level   FIELD_SEMANTIC_CAPACITY_LEVEL    FC                  0..1                                                                                            
+main_voltage            FIELD_SEMANTIC_MAIN_VOLTAGE      FC                                                                                                                  
+motor_pwm_1             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motor_pwm_2             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motor_pwm_3             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motor_pwm_4             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motor_pwm_5             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motor_pwm_6             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motor_pwm_7             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motor_pwm_8             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+motors_ok               FIELD_SEMANTIC_BOOL              FC                  true - ok, false - not ok.                                                                      
+native_flight_mode      FIELD_SEMANTIC_STRING            FC                  Autopilot specific flight mode name                                                             
+pitch                   FIELD_SEMANTIC_PITCH             FC                  Pitch relative to horizon. Range -Pi..Pi, pitch up is positive                                  
+payload_status          FIELD_SEMANTIC_STRING            PAYLOAD_CONTROLLER  Status of an attached payload.                                                                  
+payload_data            FIELD_SEMANTIC_STRING            PAYLOAD_CONTROLLER  Any payload telemetry.                                                                          
+rc_link_quality         FIELD_SEMANTIC_LINK_QUALITY      FC                                                                                                                  
+roll                    FIELD_SEMANTIC_ROLL              FC                  Roll relative to horizon. Range -Pi..Pi, roll right is positive                                 
+safety_battery_active   FIELD_SEMANTIC_BOOL              Winch                                                                                                               
+safety_battery_voltage  FIELD_SEMANTIC_NUMERIC           Winch                                                                                                               
+satellite_count         FIELD_SEMANTIC_SATELLITE_COUNT   FC                                                                                                                  
+standby                 FIELD_SEMANTIC_BOOL              FC                  Standby means system is grounded and on standby. It can be launched any time.                   
+takeoff_latitude        FIELD_SEMANTIC_LATITUDE          FC                                                                                                                  
+takeoff_longitude       FIELD_SEMANTIC_LONGITUDE         FC                                                                                                                  
+target_altitude_amsl    FIELD_SEMANTIC_ALTITUDE_AMSL     FC                                                                                                                  
+target_altitude_raw     FIELD_SEMANTIC_ALTITUDE_RAW      FC                                                                                                                  
+target_latitude         FIELD_SEMANTIC_LATITUDE          FC                                                                                                                  
+target_longitude        FIELD_SEMANTIC_LONGITUDE         FC                                                                                                                  
+uplink_present          FIELD_SEMANTIC_BOOL              FC                                                                                                                  
+vertical_speed          FIELD_SEMANTIC_VERTICAL_SPEED    FC                                                                                                                  
+vibration_x             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+vibration_y             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+vibration_z             FIELD_SEMANTIC_NUMERIC           FC                                                                                                                  
+winch_connected         FIELD_SEMANTIC_BOOL              Winch                                                                                                               
+======================  ===============================  ==================  ==============================================================================================
+
+
+
+
+
+
+
+.. _doxid-de/d20/ucs_vsm_telemetry_page_1telemetry_sending:
+
+Sending telemetry data
+~~~~~~~~~~~~~~~~~~~~~~
+
+Any message from VSM can contain a set of telemetry fields from vehicle specified by **device_id** (Vsm_message.device_status.telemetry_fields).
+

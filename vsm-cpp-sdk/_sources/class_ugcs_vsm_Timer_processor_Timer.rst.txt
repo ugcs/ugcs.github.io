@@ -1,0 +1,132 @@
+.. index:: pair: class; ugcs::vsm::Timer_processor::Timer
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer:
+
+class ugcs::vsm::Timer_processor::Timer
+=======================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Represents timer instance. :ref:`More...<details-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <timer_processor.h>
+	
+	class Timer: public std::enable_shared_from_this< Timer >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Timer> :ref:`Ptr<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6de713d04a33015ffae93d34bc12c793>`;
+		typedef std::weak_ptr<Timer> :ref:`Weak_ptr<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6b8c519543c4431fa0cbcddb5441fffa>`;
+
+		// construction
+	
+		:ref:`Timer<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a5a4d158d7409a1ad2c02a9c2b620811e>`(const :ref:`Timer_processor::Ptr<doxid-dc/dae/classugcs_1_1vsm_1_1_timer__processor_1a9246bf3067073900f699cde33526dee7>`& processor, std::chrono::milliseconds interval);
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6de713d04a33015ffae93d34bc12c793>` :ref:`Create<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1ac09e88c790dab6beb807b9565c2f9207>`(Args&&... args);
+	
+		void :ref:`Cancel<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6ba963bfe705e534751eaf85ba763dc1>`();
+		bool :ref:`Is_running<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a7b1446444c0df6d3b4c94635fba432d4>`() const;
+		std::chrono::steady_clock::time_point :ref:`Get_fire_time<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a7269fa0278fff405890980c3fe469db6>`() const;
+	};
+.. _details-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Represents timer instance.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6de713d04a33015ffae93d34bc12c793:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Timer> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6b8c519543c4431fa0cbcddb5441fffa:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Timer> Weak_ptr
+
+Pointer type.
+
+Construction
+------------
+
+.. index:: pair: function; Timer
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a5a4d158d7409a1ad2c02a9c2b620811e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Timer(const :ref:`Timer_processor::Ptr<doxid-dc/dae/classugcs_1_1vsm_1_1_timer__processor_1a9246bf3067073900f699cde33526dee7>`& processor, std::chrono::milliseconds interval)
+
+Construct timer instance associated with a processor.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1ac09e88c790dab6beb807b9565c2f9207:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6de713d04a33015ffae93d34bc12c793>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Cancel
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a6ba963bfe705e534751eaf85ba763dc1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void Cancel()
+
+Cancel running timer.
+
+Do nothing if timer is not running.
+
+.. index:: pair: function; Is_running
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a7b1446444c0df6d3b4c94635fba432d4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Is_running() const
+
+Check if the timer still is running - i.e.
+
+will produce handler invocations.
+
+.. index:: pair: function; Get_fire_time
+.. _doxid-d9/df5/classugcs_1_1vsm_1_1_timer__processor_1_1_timer_1a7269fa0278fff405890980c3fe469db6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::chrono::steady_clock::time_point Get_fire_time() const
+
+Get time of next timer firing.
+

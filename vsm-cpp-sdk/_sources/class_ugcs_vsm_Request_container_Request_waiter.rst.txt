@@ -1,0 +1,258 @@
+.. index:: pair: class; ugcs::vsm::Request_container::Request_waiter
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter:
+
+class ugcs::vsm::Request_container::Request_waiter
+==================================================
+
+.. toctree::
+	:hidden:
+
+	class_ugcs_vsm_Request_container_Request_waiter_Locker.rst
+
+Overview
+~~~~~~~~
+
+Represents request synchronization entity which is used for request queues protected access, submission notifications and waiting. :ref:`More...<details-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <request_container.h>
+	
+	class Request_waiter: public std::enable_shared_from_this< Request_waiter >
+	{
+	public:
+		// typedefs
+	
+		typedef std::shared_ptr<Request_waiter> :ref:`Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>`;
+		typedef std::weak_ptr<Request_waiter> :ref:`Weak_ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a9148261db8542b255255c45e9520dcf7>`;
+		typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<bool>:::ref:`Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>`<> :ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>`;
+
+		// classes
+	
+		class :ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>`;
+
+		// methods
+	
+		template <typename... Args>
+		static :ref:`Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` :ref:`Create<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a091f8971c953ca128e84d91567b00b52>`(Args&&... args);
+	
+		virtual void :ref:`Notify<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a70f7a5640fae099002db8a9fea19da4c>`();
+		:ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` :ref:`Lock<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a0fbf3d49770621805d92efeb52f0677e>`();
+		:ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` :ref:`Lock_notify<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1abc1622663e12f80b21b1f0e36ff0c431>`();
+	
+		int :ref:`Wait_and_process<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a74b1331d9dfe058530c2e8b922a03eb6>`(
+			const std::initializer_list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers,
+			std::chrono::milliseconds timeout = std::chrono::milliseconds::zero(),
+			int requests_limit = 0,
+			:ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>` predicate = :ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>`()
+			);
+	
+		int :ref:`Wait_and_process<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a84a1912f694e0373acfca58d9ad18a5c>`(
+			const std::list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers,
+			std::chrono::milliseconds timeout = std::chrono::milliseconds::zero(),
+			int requests_limit = 0,
+			:ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>` predicate = :ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>`()
+			);
+	};
+
+	// direct descendants
+
+	class :ref:`Piped_request_waiter<doxid-da/dcf/classugcs_1_1vsm_1_1_piped__request__waiter>`;
+.. _details-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Represents request synchronization entity which is used for request queues protected access, submission notifications and waiting.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Ptr
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::shared_ptr<Request_waiter> Ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Weak_ptr
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a9148261db8542b255255c45e9520dcf7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef std::weak_ptr<Request_waiter> Weak_ptr
+
+Pointer type.
+
+.. index:: pair: typedef; Predicate
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`<bool>:::ref:`Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>`<> Predicate
+
+Predicate for wait operations.
+
+
+
+.. rubric:: Returns:
+
+"true" if wait condition met, "false" otherwise.
+
+Methods
+-------
+
+.. index:: pair: function; Create
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a091f8971c953ca128e84d91567b00b52:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	static :ref:`Ptr<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a3d3b944e71e1b2c4bb50a670bf5502d4>` Create(Args&&... args)
+
+Create an instance.
+
+.. index:: pair: function; Notify
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a70f7a5640fae099002db8a9fea19da4c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	virtual void Notify()
+
+Notify all listeners about request submission.
+
+.. index:: pair: function; Lock
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a0fbf3d49770621805d92efeb52f0677e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` Lock()
+
+Acquire lock for request getting.
+
+.. index:: pair: function; Lock_notify
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1abc1622663e12f80b21b1f0e36ff0c431:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Locker<doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` Lock_notify()
+
+Acquire lock for request submission.
+
+
+
+.. rubric:: Returns:
+
+:ref:`Locker <doxid-dc/d0c/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1_1_locker>` object which own the acquired lock (RAII helper). Once the locker is destroyed the waiter is unlocked and notified.
+
+.. index:: pair: function; Wait_and_process
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a74b1331d9dfe058530c2e8b922a03eb6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int Wait_and_process(
+		const std::initializer_list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers,
+		std::chrono::milliseconds timeout = std::chrono::milliseconds::zero(),
+		int requests_limit = 0,
+		:ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>` predicate = :ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>`()
+		)
+
+Wait for request submission.
+
+It blocks until request submitted or the specified timeout elapses. If there are some requests submitted they are processed. After processing the method exits.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- containers
+
+		- List of containers to check and wait for.
+
+	*
+		- timeout
+
+		- Timeout in milliseconds. Zero value indicates indefinite waiting.
+
+	*
+		- requests_limit
+
+		- Limit of requests to process at once. Zero means no limit.
+
+	*
+		- predicate
+
+		- Predicate to check during waiting. It overrides default predicate which checks number of processed requests.
+
+
+
+.. rubric:: Returns:
+
+Number of requests processed.
+
+.. index:: pair: function; Wait_and_process
+.. _doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1a84a1912f694e0373acfca58d9ad18a5c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int Wait_and_process(
+		const std::list<:ref:`Request_container::Ptr<doxid-d3/d1f/classugcs_1_1vsm_1_1_request__container_1a369d2f23ce01b27fe6ffe39de81e49c6>`>& containers,
+		std::chrono::milliseconds timeout = std::chrono::milliseconds::zero(),
+		int requests_limit = 0,
+		:ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>` predicate = :ref:`Predicate<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter_1ab17571509858321b071f62878c834002>`()
+		)
+
+Wait for request submission.
+
+It blocks until request submitted or the specified timeout elapses. If there are some requests submitted they are processed. After processing the method exits.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- containers
+
+		- List of containers to check and wait for.
+
+	*
+		- timeout
+
+		- Timeout in milliseconds. Zero value indicates indefinite waiting.
+
+	*
+		- requests_limit
+
+		- Limit of requests to process at once. Zero means no limit.
+
+	*
+		- predicate
+
+		- Predicate to check during waiting. It overrides default predicate which checks number of processed requests.
+
+
+
+.. rubric:: Returns:
+
+Number of requests processed.
+
