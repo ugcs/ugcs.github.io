@@ -76,10 +76,10 @@ jobs:
       run: |
         # remove all from 
       
-        rm -rf ./pages/cpp-sdk
-        mkdir -p ./pages/cpp-sdk
+        rm -rf ./pages/vsm-cpp-sdk
+        mkdir -p ./pages/vsm-cpp-sdk
               
-        cp -r ./cpp-sdk/doc/html2/* ./pages/cpp-sdk
+        cp -r ./cpp-sdk/doc/html2/* ./pages/vsm-cpp-sdk
       shell: bash
 
     - name: COMMIT REPO
