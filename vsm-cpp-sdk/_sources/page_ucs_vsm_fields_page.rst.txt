@@ -65,12 +65,12 @@ Parameter_field message
 
 This message is a container for any value passed as command parameter.
 
-========  ===========  ============================================================================================================  
-Name      Type         Description                                                                                                   
-========  ===========  ============================================================================================================  
-field_id  uint32       Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via  
-value     Field_value  Value of the field                                                                                            
-========  ===========  ============================================================================================================
+========  ===========  ===========================================================================================================================  
+Name      Type         Description                                                                                                                  
+========  ===========  ===========================================================================================================================  
+field_id  uint32       Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via register_field  
+value     Field_value  Value of the field                                                                                                           
+========  ===========  ===========================================================================================================================
 
 
 
@@ -101,13 +101,13 @@ Telemetry_field message
 
 In addition to value and id Telemetry_field requires field timestamp when the value was acquired. This time is consistent across all fields, i.e. all timestamps are taken from single clock source. Typically it will be the realtime clock of the host running the VSM. This is to ensure telemetry data consistency across the system.
 
-==============  ===========  ========================================================================================================================  
-Name            Type         Description                                                                                                               
-==============  ===========  ========================================================================================================================  
-field_id        uint32       Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via              
-ms_since_epoch  uint64       Time in ms this value was gathered since begin_of_epoch which set in Register_vehicle message. Used in telemetry fields.  
-value           Field_value  Value of the field                                                                                                        
-==============  ===========  ========================================================================================================================
+==============  ===========  ===========================================================================================================================  
+Name            Type         Description                                                                                                                  
+==============  ===========  ===========================================================================================================================  
+field_id        uint32       Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via register_field  
+ms_since_epoch  uint64       Time in ms this value was gathered since begin_of_epoch which set in Register_vehicle message. Used in telemetry fields.     
+value           Field_value  Value of the field                                                                                                           
+==============  ===========  ===========================================================================================================================
 
 
 
@@ -177,7 +177,7 @@ air_speed               FIELD_SEMANTIC_AIR_SPEED
 vertical_speed          FIELD_SEMANTIC_VERTICAL_SPEED                                                                 
 main_voltage            FIELD_SEMANTIC_MAIN_VOLTAGE                                                                   
 satellite_count         FIELD_SEMANTIC_SATELLITE_COUNT                                                                
-gps_fix                 FIELD_SEMANTIC_GPS_FIX_TYPE       See                                                         
+gps_fix                 FIELD_SEMANTIC_GPS_FIX_TYPE       See enum_gps_fix                                            
 roll                    FIELD_SEMANTIC_ROLL                                                                           
 pitch                   FIELD_SEMANTIC_PITCH                                                                          
 rc_link_quality         FIELD_SEMANTIC_LINK_QUALITY                                                                   
@@ -187,7 +187,7 @@ downlink_present        FIELD_SEMANTIC_BOOL
 fov_h                   FIELD_SEMANTIC_FOV_H                                                                          
 fov_v                   FIELD_SEMANTIC_FOV_V                                                                          
 is_armed                FIELD_SEMANTIC_BOOL                                                                           
-control_mode            FIELD_SEMANTIC_CONTROL_MODE       See                                                         
+control_mode            FIELD_SEMANTIC_CONTROL_MODE       See enum_control_mode                                       
 adsb_icao               FIELD_SEMANTIC_ICAO                                                                           
 adsb_registration       FIELD_SEMANTIC_STRING                                                                         
 adsb_flight             FIELD_SEMANTIC_STRING                                                                         
@@ -204,9 +204,9 @@ home_altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL
 home_latitude           FIELD_SEMANTIC_LATITUDE                                                                       
 home_longitude          FIELD_SEMANTIC_LONGITUDE                                                                      
 altitude_origin         FIELD_SEMANTIC_ALTITUDE_AMSL                                                                  
-rc_loss_action          FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from                       
-gps_loss_action         FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from                       
-low_battery_action      FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from                       
+rc_loss_action          FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from enum_failsafe_action  
+gps_loss_action         FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from enum_failsafe_action  
+low_battery_action      FIELD_SEMANTIC_ENUM               VSM can regsiter possible values from enum_failsafe_action  
 safe_altitude           FIELD_SEMANTIC_ALTITUDE_AMSL                                                                  
 ground_elevation        FIELD_SEMANTIC_GROUND_ELEVATION                                                               
 acceptance_radius       FIELD_SEMANTIC_ACCEPTANCE_RADIUS                                                              

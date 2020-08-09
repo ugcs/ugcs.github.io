@@ -676,7 +676,9 @@ Assertion action which is done when assertion fires.
 
 	#define DEFINE_CALLBACK_BUILDER(__name, __types, __values)
 
-Define callback builder function. Use when forced arguments required. Usage example:
+Define callback builder function.
+
+Use when forced arguments required. Usage example:
 
 .. ref-code-block:: cpp
 

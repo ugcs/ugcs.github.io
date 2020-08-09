@@ -6,6 +6,8 @@ Tutorials
 
 Most of SDK concepts are described in these tutorials:
 
+Most of SDK concepts are described in these tutorials:
+
 * :ref:`"Hello world" VSM application <doxid-d8/db6/hello_world_vsm_page>`
 
 .. toctree::

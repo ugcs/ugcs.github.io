@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UCS-VSM Commands &#8212; CPP VSM SDK  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
@@ -476,9 +476,9 @@
 <span id="doxid-d0-d07-ucs-vsm-commands-page-1device-command"></span><h2>Device_command message<a class="headerlink" href="#device-command-message" title="Permalink to this headline">¶</a></h2>
 <table class="table">
 <colgroup>
-<col style="width: 14%" />
-<col style="width: 17%" />
-<col style="width: 69%" />
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 74%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Field name</p></th>
@@ -489,7 +489,7 @@
 <tbody>
 <tr class="row-even"><td><p>command_id</p></td>
 <td><p>uint32</p></td>
-<td><p>Registered id for command. See</p></td>
+<td><p>Registered id for command. See device_commands</p></td>
 </tr>
 <tr class="row-odd"><td><p>parameters</p></td>
 <td><p>Parameter_field</p></td>
@@ -497,7 +497,7 @@
 </tr>
 <tr class="row-even"><td><p>sub_commands</p></td>
 <td><p>Vsm_command</p></td>
-<td><p>List of sub commands for this command. Used when command is</p></td>
+<td><p>List of sub commands for this command. Used when command is c_mission_upload</p></td>
 </tr>
 </tbody>
 </table>
@@ -545,9 +545,9 @@
 <p>Parameters</p>
 <table class="table">
 <colgroup>
-<col style="width: 7%" />
-<col style="width: 43%" />
-<col style="width: 50%" />
+<col style="width: 6%" />
+<col style="width: 34%" />
+<col style="width: 61%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -558,7 +558,7 @@
 <tbody>
 <tr class="row-even"><td><p>mode</p></td>
 <td><p>FIELD_SEMANTIC_ADSB_MODE</p></td>
-<td><p>Desired transponder mode see</p></td>
+<td><p>Desired transponder mode see enum_adsb_mode</p></td>
 </tr>
 </tbody>
 </table>
@@ -581,9 +581,9 @@
 <p>Description: Switch camera on/off</p>
 <table class="table">
 <colgroup>
-<col style="width: 27%" />
-<col style="width: 46%" />
-<col style="width: 27%" />
+<col style="width: 21%" />
+<col style="width: 36%" />
+<col style="width: 43%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -594,7 +594,7 @@
 <tbody>
 <tr class="row-even"><td><p>power_state</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>See</p></td>
+<td><p>See camera_power_states</p></td>
 </tr>
 </tbody>
 </table>
@@ -1069,19 +1069,19 @@
 </tr>
 <tr class="row-even"><td><p>rc_loss_action</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>Failsafe action on RC loss. See</p></td>
+<td><p>Failsafe action on RC loss. See failsafe_values</p></td>
 </tr>
 <tr class="row-odd"><td><p>gps_loss_action</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>Failsafe action on GPS loss. See</p></td>
+<td><p>Failsafe action on GPS loss. See failsafe_values</p></td>
 </tr>
 <tr class="row-even"><td><p>low_battery_action</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>Failsafe action on low battery. See</p></td>
+<td><p>Failsafe action on low battery. See failsafe_values</p></td>
 </tr>
 <tr class="row-odd"><td><p>rth_action</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>Action after RTH. See</p></td>
+<td><p>Action after RTH. See rth_values</p></td>
 </tr>
 <tr class="row-even"><td><p>rth_wait_altitude</p></td>
 <td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
@@ -1267,7 +1267,7 @@
 </tr>
 <tr class="row-odd"><td><p>mode</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>Camera mode. See</p></td>
+<td><p>Camera mode. See panarama_mode</p></td>
 </tr>
 <tr class="row-even"><td><p>step</p></td>
 <td><p>FIELD_SEMANTIC_NUMERIC</p></td>
@@ -2040,7 +2040,7 @@
   <div class="container">
     <p>
           &copy; Copyright 2020, SPH Engineering.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.0.<br/>
     </p>
   </div>
 </footer>

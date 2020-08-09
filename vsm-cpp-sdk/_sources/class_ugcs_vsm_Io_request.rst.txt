@@ -235,5 +235,5 @@ Sets the result argument.
 
 Get the most recently set result value.
 
-XXX Return :ref:`Io_result::OTHER_FAILURE <doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>` if the result value was never set.
+XXX Return :ref:`Io_result::OTHER_FAILURE <doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>` if the result value was never set.
 

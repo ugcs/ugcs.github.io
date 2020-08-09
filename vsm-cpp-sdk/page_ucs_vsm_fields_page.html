@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Field types and semantics &#8212; CPP VSM SDK  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
@@ -344,8 +344,8 @@
 <table class="table">
 <colgroup>
 <col style="width: 6%" />
-<col style="width: 9%" />
-<col style="width: 85%" />
+<col style="width: 8%" />
+<col style="width: 87%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -356,7 +356,7 @@
 <tbody>
 <tr class="row-even"><td><p>field_id</p></td>
 <td><p>uint32</p></td>
-<td><p>Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via</p></td>
+<td><p>Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via register_field</p></td>
 </tr>
 <tr class="row-odd"><td><p>value</p></td>
 <td><p>Field_value</p></td>
@@ -397,8 +397,8 @@
 <p>In addition to value and id Telemetry_field requires field timestamp when the value was acquired. This time is consistent across all fields, i.e. all timestamps are taken from single clock source. Typically it will be the realtime clock of the host running the VSM. This is to ensure telemetry data consistency across the system.</p>
 <table class="table">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 7%" />
 <col style="width: 83%" />
 </colgroup>
 <thead>
@@ -410,7 +410,7 @@
 <tbody>
 <tr class="row-even"><td><p>field_id</p></td>
 <td><p>uint32</p></td>
-<td><p>Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via</p></td>
+<td><p>Uniquely identifies the field within current session. Asigned by VSM at the time of vehicle registration via register_field</p></td>
 </tr>
 <tr class="row-odd"><td><p>ms_since_epoch</p></td>
 <td><p>uint64</p></td>
@@ -544,7 +544,7 @@
 </tr>
 <tr class="row-even"><td><p>gps_fix</p></td>
 <td><p>FIELD_SEMANTIC_GPS_FIX_TYPE</p></td>
-<td><p>See</p></td>
+<td><p>See enum_gps_fix</p></td>
 </tr>
 <tr class="row-odd"><td><p>roll</p></td>
 <td><p>FIELD_SEMANTIC_ROLL</p></td>
@@ -584,7 +584,7 @@
 </tr>
 <tr class="row-even"><td><p>control_mode</p></td>
 <td><p>FIELD_SEMANTIC_CONTROL_MODE</p></td>
-<td><p>See</p></td>
+<td><p>See enum_control_mode</p></td>
 </tr>
 <tr class="row-odd"><td><p>adsb_icao</p></td>
 <td><p>FIELD_SEMANTIC_ICAO</p></td>
@@ -652,15 +652,15 @@
 </tr>
 <tr class="row-odd"><td><p>rc_loss_action</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>VSM can regsiter possible values from</p></td>
+<td><p>VSM can regsiter possible values from enum_failsafe_action</p></td>
 </tr>
 <tr class="row-even"><td><p>gps_loss_action</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>VSM can regsiter possible values from</p></td>
+<td><p>VSM can regsiter possible values from enum_failsafe_action</p></td>
 </tr>
 <tr class="row-odd"><td><p>low_battery_action</p></td>
 <td><p>FIELD_SEMANTIC_ENUM</p></td>
-<td><p>VSM can regsiter possible values from</p></td>
+<td><p>VSM can regsiter possible values from enum_failsafe_action</p></td>
 </tr>
 <tr class="row-even"><td><p>safe_altitude</p></td>
 <td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
@@ -866,7 +866,7 @@
   <div class="container">
     <p>
           &copy; Copyright 2020, SPH Engineering.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.0.<br/>
     </p>
   </div>
 </footer>

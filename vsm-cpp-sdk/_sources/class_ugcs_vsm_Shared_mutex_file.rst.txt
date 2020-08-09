@@ -37,7 +37,7 @@ Cross-platform named mutex. :ref:`More...<details-d6/df1/classugcs_1_1vsm_1_1_sh
 		static :ref:`Ptr<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aaeb61b482c9a57271a96de5a04b1f800>` :ref:`Create<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1aff6e769ffeb6e33c971ada6d4f25bd27>`(Args&&... args);
 	
 		template <class __Callable, typename... __Args>
-		:ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a5b1d5c295a98431122a25119597b75a9>`(Make_acquire_handler, (:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`));
+		:ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a5b1d5c295a98431122a25119597b75a9>`(Make_acquire_handler, (:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`));
 	
 		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Acquire<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1ad4137a16a157f1660f91f34a3053373d>`(:ref:`Acquire_handler<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02>` completion_handler, :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`());
 		:ref:`Operation_waiter<doxid-d0/d74/classugcs_1_1vsm_1_1_operation__waiter>` :ref:`Release<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a7f93e7c984d8e1badf667b01e65449ce>`(:ref:`Acquire_handler<doxid-d6/df1/classugcs_1_1vsm_1_1_shared__mutex__file_1a11b8671a7905d0f6f9cfbeaca0e25f02>` completion_handler = :ref:`Make_dummy_callback<doxid-dd/def/namespaceugcs_1_1vsm_1a4547da35caea4932ca2dfbc7e6ae5fb4>`<void, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`>(), :ref:`Request_completion_context::Ptr<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context_1a470f700b033c20641c2076b2e76b9ccf>` comp_ctx = :ref:`Request_temp_completion_context::Create<doxid-de/d3a/classugcs_1_1vsm_1_1_request__temp__completion__context_1a8c8c67d2b8325daaa6f55e6cca470b79>`());
@@ -155,7 +155,7 @@ Create an instance.
 	__DEFINE_CALLBACK_BUILDER_BODY(
 		Make_acquire_handler,
 		(:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`),
-		(:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`)
+		(:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`)
 		)
 
 Builder for acquire handler.
