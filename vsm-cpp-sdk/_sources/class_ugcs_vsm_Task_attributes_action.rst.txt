@@ -38,6 +38,8 @@ Overview
 		:ref:`Emergency_action<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599e>` :ref:`rc_loss<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a9162a189975fe7756c039afff7dd7172>`;
 		:ref:`Emergency_action<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599e>` :ref:`gnss_loss<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a56d66cbd00a32226ba04660094803845>`;
 		:ref:`Emergency_action<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599e>` :ref:`low_battery<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1aa2c337b8797c02f311bf3d408cfa0a9b>`;
+		float :ref:`altitude_origin<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1adfb4da3d2c800cd0c5c49141d5528f28>`;
+		bool :ref:`altitude_origin_set<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1af87e2e471f52ebf46f53042ecb007fb4>` = false;
 
 		// construction
 	
@@ -220,6 +222,26 @@ GPS, GLONASS etc.).
 	:ref:`Emergency_action<doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1a2e09c970f6db5229aff221c7d89a599e>` low_battery
 
 Type of action to perform in case of low battery.
+
+.. index:: pair: variable; altitude_origin
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1adfb4da3d2c800cd0c5c49141d5528f28:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	float altitude_origin
+
+altitude origin that is sent in mission upload request
+
+.. index:: pair: variable; altitude_origin_set
+.. _doxid-dd/d7d/classugcs_1_1vsm_1_1_task__attributes__action_1af87e2e471f52ebf46f53042ecb007fb4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool altitude_origin_set = false
+
+flag that check if altitude origin was sent
 
 Construction
 ------------

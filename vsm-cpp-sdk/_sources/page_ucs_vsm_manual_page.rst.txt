@@ -27,6 +27,7 @@ Manual
 |	:doc:`page_service_discovery_page`
 |	:doc:`page_ucs_vsm_protocol_page`
 |		:doc:`page_ucs_vsm_proto_page`
+|		:doc:`page_ucs_vsm_overview_page`
 |		:doc:`page_ucs_vsm_registration_page`
 |		:doc:`page_ucs_vsm_fields_page`
 |		:doc:`page_ucs_vsm_telemetry_page`
