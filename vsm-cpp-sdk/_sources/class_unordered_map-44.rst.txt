@@ -1,0 +1,11 @@
+.. index:: pair: class; unordered_map<uint32_t, ugcs::vsm::proto::Command_availability>
+.. _doxid-d5/df2/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_command__availability_01_4_1_1const__iterator:
+
+template class unordered_map<uint32_t, ugcs::vsm::proto::Command_availability>
+==============================================================================
+
+.. toctree::
+	:hidden:
+
+
+

@@ -1,0 +1,11 @@
+.. index:: pair: class; Callback_base<std::result_of<Method(Class_ptr, Args...)>::type>
+.. _doxid-db/d6b/class_callback__base_3_01std_1_1result__of_3_01_method_07_class__ptr_00_01_args_8_8_8_08_4_1_1type_01_4_1_1_ptr:
+
+template class Callback_base<std::result_of<Method(Class_ptr, Args...)>::type>
+==============================================================================
+
+.. toctree::
+	:hidden:
+
+
+

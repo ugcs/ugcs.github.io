@@ -1,0 +1,11 @@
+.. index:: pair: class; list<Request_container::Ptr>
+.. _doxid-d6/d4f/classlist_3_01_request__container_1_1_ptr_01_4_1_1const__reverse__iterator:
+
+template class list<Request_container::Ptr>
+===========================================
+
+.. toctree::
+	:hidden:
+
+
+

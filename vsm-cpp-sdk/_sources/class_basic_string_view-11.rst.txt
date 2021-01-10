@@ -1,0 +1,11 @@
+.. index:: pair: class; basic_string_view<char32_t>
+.. _doxid-d1/d9d/classbasic__string__view_3_01char32__t_01_4_1_1iterator:
+
+template class basic_string_view<char32_t>
+==========================================
+
+.. toctree::
+	:hidden:
+
+
+

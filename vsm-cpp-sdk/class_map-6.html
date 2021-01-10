@@ -1,0 +1,1571 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>template class map&lt;Tick_type, Timer::Ptr&gt; &#8212; CPP VSM SDK  documentation</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template class map&lt;std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case&gt;" href="class_map-7.html" />
+    <link rel="prev" title="template class map&lt;std::string, std::pair&lt;ugcs::vsm::Callback_proxy, Request_processor::Ptr&gt;&gt;" href="class_map-5.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="index.html">
+    
+      <img src="_static/logo.png" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="page_license_page.html">License</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="global.html">Global Namespace</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+            
+                <li class="">
+                    <a href="namespace_callback_internal.html">namespace callback_internal</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="namespace_std.html">namespace std</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="namespace_ugcs.html">namespace ugcs</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="struct_glob_t.html">struct glob_t</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_base.html">template class Callback_base<std::result_of<Callable(Args…)>::type></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_base-2.html">template class Callback_base<std::result_of<Method(Class_ptr, Args…)>::type></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_base-3.html">template class Callback_base<void></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_proxy.html">template class Callback_proxy<bool, std::smatch*, Lines_list*, Io_result></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_proxy-2.html">template class Callback_proxy<message_id, Extention_type></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_proxy-3.html">template class Callback_proxy<void, Io_buffer::Ptr, mavlink::MESSAGE_ID_TYPE, uint8_t, uint8_t, uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_proxy-4.html">template class Callback_proxy<bool, Io_buffer::Ptr, mavlink::MESSAGE_ID_TYPE, System_id, uint8_t, uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_proxy-5.html">template class Callback_proxy<void, Io_buffer::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_proxy-6.html">template class Callback_proxy<bool, const std::string*></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Callback_proxy-7.html">template class Callback_proxy<void, Result, std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Reference_guard.html">template class Reference_guard<Vehicle_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Reference_guard-2.html">template class Reference_guard<Io_stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Reference_guard-3.html">template class Reference_guard<Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_Reference_guard-4.html">template class Reference_guard<Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string.html">template class basic_string<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-2.html">template class basic_string<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-3.html">template class basic_string<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-4.html">template class basic_string<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-5.html">template class basic_string<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-6.html">template class basic_string<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-7.html">template class basic_string<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-8.html">template class basic_string<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-9.html">template class basic_string<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-10.html">template class basic_string<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-11.html">template class basic_string<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-12.html">template class basic_string<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-13.html">template class basic_string<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-14.html">template class basic_string<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-15.html">template class basic_string<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-16.html">template class basic_string<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-17.html">template class basic_string<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-18.html">template class basic_string<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-19.html">template class basic_string<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string-20.html">template class basic_string<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view.html">template class basic_string_view<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-2.html">template class basic_string_view<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-3.html">template class basic_string_view<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-4.html">template class basic_string_view<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-5.html">template class basic_string_view<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-6.html">template class basic_string_view<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-7.html">template class basic_string_view<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-8.html">template class basic_string_view<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-9.html">template class basic_string_view<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-10.html">template class basic_string_view<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-11.html">template class basic_string_view<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-12.html">template class basic_string_view<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-13.html">template class basic_string_view<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-14.html">template class basic_string_view<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-15.html">template class basic_string_view<char16_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-16.html">template class basic_string_view<char8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-17.html">template class basic_string_view<wchar_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-18.html">template class basic_string_view<char></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-19.html">template class basic_string_view<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_basic_string_view-20.html">template class basic_string_view<char32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list.html">template class list<Request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-2.html">template class list<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-3.html">template class list<Read_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-4.html">template class list<Read_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-5.html">template class list<Request_container::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-6.html">template class list<Write_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-7.html">template class list<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-8.html">template class list<Write_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-9.html">template class list<Request_container::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-10.html">template class list<Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-11.html">template class list<Io_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-12.html">template class list<Write_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-13.html">template class list<Write_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-14.html">template class list<Io_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-15.html">template class list<Request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-16.html">template class list<Read_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-17.html">template class list<Read_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-18.html">template class list<Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-19.html">template class list<Io_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-20.html">template class list<Read_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-21.html">template class list<Request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-22.html">template class list<Read_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-23.html">template class list<Read_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-24.html">template class list<Request_container::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-25.html">template class list<Write_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-26.html">template class list<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-27.html">template class list<Write_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-28.html">template class list<Io_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-29.html">template class list<Read_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-30.html">template class list<Write_request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-31.html">template class list<Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-32.html">template class list<Write_requests_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-33.html">template class list<Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-34.html">template class list<Request::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-35.html">template class list<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_list-36.html">template class list<Request_container::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map.html">template class map<std::string, My_socket></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-2.html">template class map<std::string, Property></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-3.html">template class map<std::string, My_socket></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-4.html">template class map<MESSAGE_ID_TYPE, Extra_byte_length_pair></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-5.html">template class map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>></a>
+                </li>
+            
+          
+            
+                <li class="active">
+                    <a href="">template class map<Tick_type, Timer::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-7.html">template class map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-8.html">template class map<int, File_desc></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-9.html">template class map<MESSAGE_ID_TYPE, Extra_byte_length_pair></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-10.html">template class map<int, Stream_entry::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-11.html">template class map<Entry_handle, Entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-12.html">template class map<Entry_handle, Entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-13.html">template class map<int, File_desc></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-14.html">template class map<int, File_desc></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-15.html">template class map<std::string, Property></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-16.html">template class map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-17.html">template class map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-18.html">template class map<Tick_type, Timer::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-19.html">template class map<int, Stream_entry::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-20.html">template class map<int, Stream_entry::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-21.html">template class map<Entry_handle, Entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-22.html">template class map<std::string, Property></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-23.html">template class map<std::string, My_socket></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-24.html">template class map<Tick_type, Timer::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-25.html">template class map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-26.html">template class map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-27.html">template class map<Entry_handle, Entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-28.html">template class map<Tick_type, Timer::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-29.html">template class map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-30.html">template class map<MESSAGE_ID_TYPE, Extra_byte_length_pair></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-31.html">template class map<std::string, Property></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-32.html">template class map<MESSAGE_ID_TYPE, Extra_byte_length_pair></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-33.html">template class map<std::string, My_socket></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-34.html">template class map<int, Stream_entry::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-35.html">template class map<int, File_desc></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_map-36.html">template class map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_set.html">template class set<Service_info></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_set-2.html">template class set<Service_info></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_set-3.html">template class set<Service_info></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_set-4.html">template class set<Service_info></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-2.html">template class unordered_map<uint32_t, uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-3.html">template class unordered_map<int, Stats></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-4.html">template class unordered_map<int, std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-5.html">template class unordered_map<uint32_t, Vehicle_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-6.html">template class unordered_map<uint32_t, Vehicle_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-7.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Command_availability></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-8.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-9.html">template class unordered_map<int, Stats></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-10.html">template class unordered_map<int, std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-11.html">template class unordered_map<int, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-12.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Command_availability></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-13.html">template class unordered_map<int, int></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-14.html">template class unordered_map<uint32_t, uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-15.html">template class unordered_map<int, Vsm_command::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-16.html">template class unordered_map<Socket_address::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-17.html">template class unordered_map<int, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-18.html">template class unordered_map<Io_stream::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-19.html">template class unordered_map<int, int></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-20.html">template class unordered_map<std::string, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-21.html">template class unordered_map<uint32_t, Server_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-22.html">template class unordered_map<uint32_t, Server_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-23.html">template class unordered_map<int, std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-24.html">template class unordered_map<Socket_address::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-25.html">template class unordered_map<int, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-26.html">template class unordered_map<int, Stats></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-27.html">template class unordered_map<int, std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-28.html">template class unordered_map<int, Vsm_command::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-29.html">template class unordered_map<int, int></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-30.html">template class unordered_map<uint32_t, uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-31.html">template class unordered_map<uint32_t, Vehicle_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-32.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-33.html">template class unordered_map<uint32_t, Server_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-34.html">template class unordered_map<Io_stream::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-35.html">template class unordered_map<std::string, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-36.html">template class unordered_map<uint32_t, uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-37.html">template class unordered_map<uint32_t, Vehicle_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-38.html">template class unordered_map<Socket_address::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-39.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-40.html">template class unordered_map<uint32_t, Server_context></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-41.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Command_availability></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-42.html">template class unordered_map<std::string, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-43.html">template class unordered_map<std::string, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-44.html">template class unordered_map<uint32_t, ugcs::vsm::proto::Command_availability></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-45.html">template class unordered_map<Socket_address::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-46.html">template class unordered_map<int, Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-47.html">template class unordered_map<int, Vsm_command::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-48.html">template class unordered_map<Io_stream::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-49.html">template class unordered_map<int, Stats></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-50.html">template class unordered_map<int, int></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-51.html">template class unordered_map<int, Vsm_command::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_map-52.html">template class unordered_map<Io_stream::Ptr, Stream::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_multimap.html">template class unordered_multimap<Key, Callback_base::Ptr, Key::Hasher></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_multimap-2.html">template class unordered_multimap<Key, Callback_base::Ptr, Key::Hasher></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_multimap-3.html">template class unordered_multimap<Key, Callback_base::Ptr, Key::Hasher></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_multimap-4.html">template class unordered_multimap<Key, Callback_base::Ptr, Key::Hasher></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_set.html">template class unordered_set<uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_set-2.html">template class unordered_set<uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_set-3.html">template class unordered_set<uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_unordered_set-4.html">template class unordered_set<uint32_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector.html">template class vector<pollfd></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-2.html">template class vector<Socket_address::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-3.html">template class vector<Action::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-4.html">template class vector<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-5.html">template class vector<Cache_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-6.html">template class vector<Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-7.html">template class vector<Action::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-8.html">template class vector<uint8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-9.html">template class vector<pollfd></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-10.html">template class vector<Subsystem::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-11.html">template class vector<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-12.html">template class vector<uint8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-13.html">template class vector<Action::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-14.html">template class vector<Cache_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-15.html">template class vector<Socket_address::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-16.html">template class vector<pollfd></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-17.html">template class vector<Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-18.html">template class vector<Action::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-19.html">template class vector<Cache_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-20.html">template class vector<Cache_entry></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-21.html">template class vector<pollfd></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-22.html">template class vector<Socket_address::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-23.html">template class vector<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-24.html">template class vector<Socket_address::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-25.html">template class vector<Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-26.html">template class vector<Property::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-27.html">template class vector<Subsystem::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-28.html">template class vector<Subsystem::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-29.html">template class vector<uint8_t></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-30.html">template class vector<std::string></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-31.html">template class vector<Subsystem::Ptr></a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="class_vector-32.html">template class vector<uint8_t></a>
+                </li>
+            
+          
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="template-class-map-tick-type-timer-ptr">
+<span id="doxid-df-d09-classmap-3-01-tick-type-00-01-timer-1-1-ptr-01-4-1-1iterator"></span><span id="index-0"></span><h1>template class map&lt;Tick_type, Timer::Ptr&gt;<a class="headerlink" href="#template-class-map-tick-type-timer-ptr" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="class_map-5.html" title="previous page">template class map&lt;std::string, std::pair&lt;ugcs::vsm::Callback_proxy, Request_processor::Ptr&gt;&gt;</a>
+    <a class='right-next' id="next-link" href="class_map-7.html" title="next page">template class map&lt;std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case&gt;</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, SPH Engineering.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

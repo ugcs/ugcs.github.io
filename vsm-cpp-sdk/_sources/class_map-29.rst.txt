@@ -1,0 +1,11 @@
+.. index:: pair: class; map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case>
+.. _doxid-de/d38/classmap_3_01std_1_1string_00_01std_1_1string_00_01ugcs_1_1vsm_1_1_http__parser_1_1string__compadf5d6fc443c1d4c3e7ea280550056000:
+
+template class map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case>
+================================================================================================
+
+.. toctree::
+	:hidden:
+
+
+

@@ -75,10 +75,10 @@ All MAVLink definitions reside in this namespace. :ref:`More...<details-d3/d55/n
 	struct :ref:`Field_default_value<doxid-d5/d92/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value>`;
 
 	template <class T>
-	struct :ref:`Field_default_value<T, typename std::enable_if<std::is_integral<T>::value>::type><doxid-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2>`;
+	struct :ref:`Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type><doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91>`;
 
 	template <class T>
-	struct :ref:`Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type><doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91>`;
+	struct :ref:`Field_default_value<T, typename std::enable_if<std::is_integral<T>::value>::type><doxid-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2>`;
 
 	template <MESSAGE_ID_TYPE message_id, class Extension_type = Extension>
 	struct :ref:`Payload_type_mapper<doxid-df/d16/structugcs_1_1vsm_1_1mavlink_1_1_payload__type__mapper>`;

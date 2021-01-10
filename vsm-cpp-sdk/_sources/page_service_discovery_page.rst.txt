@@ -46,8 +46,8 @@ There are three messages invloved. They are HTTP messages without body, formatte
    	USN: Ardupilot VSM
    	Location: 192.168.1.33:5556
    	ID: 12345678
-
-There is a field "ID" added to the response and notify message. It specifies the service instance. Service client can use the ID field to distinguish between several locations of the same service instance to avoud multiple simultaneous connections. The ID is randomly generated on VSM startup and does change with each restart.
+   
+   There is a field "ID" added to the response and notify message. It specifies the service instance. Service client can use the ID field to distinguish between several locations of the same service instance to avoud multiple simultaneous connections. The ID is randomly generated on VSM startup and does change with each restart.
 
 
 

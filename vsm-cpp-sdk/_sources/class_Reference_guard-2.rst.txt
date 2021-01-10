@@ -1,0 +1,47 @@
+.. index:: pair: class; Reference_guard<Io_stream::Ptr>
+.. _doxid-d2/d17/class_reference__guard_3_01_io__stream_1_1_ptr_01_4_1_1_hasher:
+
+template class Reference_guard<Io_stream::Ptr>
+==============================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	template <>
+	class Reference_guard<Io_stream::Ptr>
+	{
+	public:
+		// methods
+	
+		size_t :ref:`operator ()<doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher_1a63459d240f741ff80f47cfaea8f4f13d>` (const :ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard>`& ref) const;
+	};
+.. _details-d2/d17/class_reference__guard_3_01_io__stream_1_1_ptr_01_4_1_1_hasher:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Methods
+-------
+
+.. index:: pair: function; operator()
+.. _doxid-d3/d25/classugcs_1_1vsm_1_1_reference__guard_1_1_hasher_1a63459d240f741ff80f47cfaea8f4f13d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t operator () (const :ref:`Reference_guard<doxid-d2/d2c/classugcs_1_1vsm_1_1_reference__guard>`& ref) const
+
+Calculate hash value.
+

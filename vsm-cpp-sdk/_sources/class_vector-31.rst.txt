@@ -1,0 +1,11 @@
+.. index:: pair: class; vector<Subsystem::Ptr>
+.. _doxid-d2/dbc/classvector_3_01_subsystem_1_1_ptr_01_4_1_1const__iterator:
+
+template class vector<Subsystem::Ptr>
+=====================================
+
+.. toctree::
+	:hidden:
+
+
+

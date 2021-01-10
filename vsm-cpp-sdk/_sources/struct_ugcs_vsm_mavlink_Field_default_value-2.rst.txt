@@ -1,8 +1,8 @@
-.. index:: pair: struct; ugcs::vsm::mavlink::Field_default_value<T, typename std::enable_if<std::is_integral<T>::value>::type>
-.. _doxid-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2:
+.. index:: pair: struct; ugcs::vsm::mavlink::Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type>
+.. _doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91:
 
-template struct ugcs::vsm::mavlink::Field_default_value<T, typename std::enable_if<std::is_integral<T>::value>::type>
-=====================================================================================================================
+template struct ugcs::vsm::mavlink::Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type>
+===========================================================================================================================
 
 .. toctree::
 	:hidden:
@@ -10,7 +10,7 @@ template struct ugcs::vsm::mavlink::Field_default_value<T, typename std::enable_
 Overview
 ~~~~~~~~
 
-Partial specialization for integer types. :ref:`More...<details-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2>`
+Partial specialization for floating point types. :ref:`More...<details-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91>`
 
 
 .. ref-code-block:: cpp
@@ -19,41 +19,28 @@ Partial specialization for integer types. :ref:`More...<details-d5/d26/structugc
 	#include <mavlink.h>
 	
 	template <class T>
-	struct Field_default_value<T, typename std::enable_if<std::is_integral<T>::value>::type>
+	struct Field_default_value<T, typename std::enable_if<std::is_floating_point<T>::value>::type>
 	{
 		// fields
 	
-		static constexpr T :ref:`value<doxid-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2_1a8753d8d349a78e23bc3a692dc29db60e>` = std::numeric_limits<T>::max();
+		static constexpr T :target:`value<doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91_1a261862a01069bef98ae4ce2a18a2b1ff>` = std::numeric_limits<T>::quiet_NaN();
 
 		// methods
 	
-		static bool :ref:`Is_default<doxid-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2_1ada09520c1366566a34576d49110a0754>`(T val);
+		static bool :ref:`Is_default<doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91_1ac332aecd80f03b10a6540f200a58e3d7>`(T val);
 	};
-.. _details-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2:
+.. _details-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91:
 
 Detailed Documentation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Partial specialization for integer types.
-
-Fields
-------
-
-.. index:: pair: variable; value
-.. _doxid-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2_1a8753d8d349a78e23bc3a692dc29db60e:
-
-.. ref-code-block:: cpp
-	:class: doxyrest-title-code-block
-
-	static constexpr T value = std::numeric_limits<T>::max()
-
-Default value.
+Partial specialization for floating point types.
 
 Methods
 -------
 
 .. index:: pair: function; Is_default
-.. _doxid-d5/d26/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_d235aca3c2900fa86f80eb6212a21bc2_1ada09520c1366566a34576d49110a0754:
+.. _doxid-d0/d7d/structugcs_1_1vsm_1_1mavlink_1_1_field__default__value_3_01_t_00_01typename_01std_1_1enable__if_2da0e34fa40e3061fbaa644d02e3ab91_1ac332aecd80f03b10a6540f200a58e3d7:
 
 .. ref-code-block:: cpp
 	:class: doxyrest-title-code-block

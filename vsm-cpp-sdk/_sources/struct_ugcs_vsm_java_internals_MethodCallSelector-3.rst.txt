@@ -1,8 +1,8 @@
-.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jlong>
-.. _doxid-de/d48/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jlong_01_4:
+.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jint>
+.. _doxid-d5/dba/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jint_01_4:
 
-template struct ugcs::vsm::java_internals::MethodCallSelector<jlong>
-====================================================================
+template struct ugcs::vsm::java_internals::MethodCallSelector<jint>
+===================================================================
 
 .. toctree::
 	:hidden:
@@ -16,12 +16,12 @@ template struct ugcs::vsm::java_internals::MethodCallSelector<jlong>
 	#include <java.h>
 	
 	template <>
-	struct MethodCallSelector<jlong>
+	struct MethodCallSelector<jint>
 	{
 		// methods
 	
 		template <typename... T_args>
-		static jlong :target:`Call<doxid-de/d48/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jlong_01_4_1a79a9e51826cd5765223a7957b1e90af7>`(
+		static jint :target:`Call<doxid-d5/dba/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jint_01_4_1a9ce8f3b609612c38c37ceb7dae9eb6a8>`(
 			JNIEnv* env,
 			jobject obj,
 			jmethodID method_id,

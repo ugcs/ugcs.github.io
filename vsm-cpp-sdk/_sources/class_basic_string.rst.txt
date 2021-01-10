@@ -1,0 +1,11 @@
+.. index:: pair: class; basic_string<char32_t>
+.. _doxid-df/dca/classbasic__string_3_01char32__t_01_4_1_1const__reverse__iterator:
+
+template class basic_string<char32_t>
+=====================================
+
+.. toctree::
+	:hidden:
+
+
+

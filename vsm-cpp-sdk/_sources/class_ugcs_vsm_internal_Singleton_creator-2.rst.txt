@@ -1,8 +1,8 @@
-.. index:: pair: class; ugcs::vsm::internal::Singleton_creator
-.. _doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator:
+.. index:: pair: class; ugcs::vsm::internal::Singleton_creator<T, typename std::enable_if<std::is_default_constructible<T>::value>::type>
+.. _doxid-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4:
 
-template class ugcs::vsm::internal::Singleton_creator
-=====================================================
+template class ugcs::vsm::internal::Singleton_creator<T, typename std::enable_if<std::is_default_constructible<T>::value>::type>
+================================================================================================================================
 
 .. toctree::
 	:hidden:
@@ -10,7 +10,7 @@ template class ugcs::vsm::internal::Singleton_creator
 Overview
 ~~~~~~~~
 
-Helper class for singletons instantiation. :ref:`More...<details-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator>`
+Specialization for class which has default constructor. :ref:`More...<details-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4>`
 
 
 .. ref-code-block:: cpp
@@ -18,43 +18,27 @@ Helper class for singletons instantiation. :ref:`More...<details-d1/d79/classugc
 
 	#include <singleton.h>
 	
-	template <class T, class = void>
-	class Singleton_creator
+	template <class T>
+	class Singleton_creator<T, typename std::enable_if<std::is_default_constructible<T>::value>::type>
 	{
 	public:
 		// methods
 	
-		static std::shared_ptr<T> :ref:`Create<doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1af3d0203ee388b5c02349131798bee770>`();
-	
 		template <typename... Args>
-		static std::shared_ptr<T> :ref:`Create<doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1ae604bb3061e08e8a4e4615f2da6d60d7>`(Args&&... args);
+		static std::shared_ptr<T> :ref:`Create<doxid-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4_1ac2d22e3136c47698663fb259338a2e6a>`(Args&&... args);
 	};
-.. _details-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator:
+.. _details-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4:
 
 Detailed Documentation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Helper class for singletons instantiation.
-
-It deals with classes both having and not having default constructor.
+Specialization for class which has default constructor.
 
 Methods
 -------
 
 .. index:: pair: function; Create
-.. _doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1af3d0203ee388b5c02349131798bee770:
-
-.. ref-code-block:: cpp
-	:class: doxyrest-title-code-block
-
-	static std::shared_ptr<T> Create()
-
-Get singleton instance for a class which does not have default constructor.
-
-It is never created without arguments, so return null.
-
-.. index:: pair: function; Create
-.. _doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_1ae604bb3061e08e8a4e4615f2da6d60d7:
+.. _doxid-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4_1ac2d22e3136c47698663fb259338a2e6a:
 
 .. ref-code-block:: cpp
 	:class: doxyrest-title-code-block
@@ -62,23 +46,5 @@ It is never created without arguments, so return null.
 	template <typename... Args>
 	static std::shared_ptr<T> Create(Args&&... args)
 
-Create singleton instance.
-
-
-
-.. rubric:: Parameters:
-
-.. list-table::
-	:widths: 20 80
-
-	*
-		- args
-
-		- Arguments for singleton class constructor.
-
-
-
-.. rubric:: Returns:
-
-Pointer to the created object.
+Always can create an instance.
 

@@ -1,0 +1,11 @@
+.. index:: pair: class; map<std::string, My_socket>
+.. _doxid-d9/d45/classmap_3_01std_1_1string_00_01_my__socket_01_4_1_1const__reverse__iterator:
+
+template class map<std::string, My_socket>
+==========================================
+
+.. toctree::
+	:hidden:
+
+
+

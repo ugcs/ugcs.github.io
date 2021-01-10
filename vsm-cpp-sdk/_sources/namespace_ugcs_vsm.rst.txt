@@ -186,11 +186,11 @@ All VSM SDK functionality resides in this namespace. :ref:`More...<details-dd/de
 	template <typename T, class Converter>
 	class :ref:`Bo_value<doxid-d1/d8b/classugcs_1_1vsm_1_1_bo__value>`;
 
-	template <class Callable, class Enable, typename... Args>
-	class :ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`;
-
 	template <class Method, class Class_ptr, typename... Args>
 	class :ref:`Callback<Method, typename std::enable_if<callback_internal::Is_method_ptr<Method>()>::type, Class_ptr, Args...><doxid-da/dcb/classugcs_1_1vsm_1_1_callback_3_01_method_00_01typename_01std_1_1enable__if_3_01callback__interncb92c10a2e07958c1219d8896620d7b7>`;
+
+	template <class Callable, class Enable, typename... Args>
+	class :ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`;
 
 	template <typename Result>
 	class :ref:`Callback_base<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base>`;
@@ -287,11 +287,11 @@ All VSM SDK functionality resides in this namespace. :ref:`More...<details-dd/de
 	class :ref:`Vehicle_command<doxid-d8/dbd/classugcs_1_1vsm_1_1_vehicle__command>`;
 	class :ref:`Vehicle_request<doxid-d7/dce/classugcs_1_1vsm_1_1_vehicle__request>`;
 
-	template <class Payload>
-	class :ref:`Vehicle_request_spec<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec>`;
-
 	template <>
 	class :ref:`Vehicle_request_spec<void><doxid-d0/d23/classugcs_1_1vsm_1_1_vehicle__request__spec_3_01void_01_4>`;
+
+	template <class Payload>
+	class :ref:`Vehicle_request_spec<doxid-d0/da2/classugcs_1_1vsm_1_1_vehicle__request__spec>`;
 
 	class :ref:`Vsm_command<doxid-d6/d45/classugcs_1_1vsm_1_1_vsm__command>`;
 	class :ref:`Vtol_transition_action<doxid-d7/db9/classugcs_1_1vsm_1_1_vtol__transition__action>`;
@@ -431,7 +431,7 @@ All VSM SDK functionality resides in this namespace. :ref:`More...<details-dd/de
 	constexpr double :ref:`Be<doxid-dd/def/namespaceugcs_1_1vsm_1a47f48f40b6a1fe8c2699803592964ccf>`(double x);
 
 	template <class __Callable, typename... __Args>
-	:ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1a879e61e323dd6aeb33b70230536b5c73>`(Make_write_callback, (:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`));
+	:ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1a879e61e323dd6aeb33b70230536b5c73>`(Make_write_callback, (:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`));
 
 	template <typename... Params>
 	:ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>`<:ref:`param_setter_internal::Param_setter<doxid-d3/d19/classugcs_1_1vsm_1_1param__setter__internal_1_1_param__setter>`<Params...>, void, Params...>::Ptr :ref:`Make_setter<doxid-dd/def/namespaceugcs_1_1vsm_1aa774b6acdfda077ce20fee1f0f5c0a53>`(Params&... params);
@@ -455,16 +455,16 @@ All VSM SDK functionality resides in this namespace. :ref:`More...<details-dd/de
 	:ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1ad4b7c02a7b6e3d044f81e92abfbc18f4>`(
 		Make_socket_connect_callback,
 		(:ref:`Socket_stream::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`),
-		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`)
+		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`)
 		);
 
-	typename __Args :ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1ae978e837c093e6644172aeb55acc9cf9>`(Make_socket_listen_callback, (:ref:`Socket_listener::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`));
-	typename __Args typename __Args :ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1a76ec0103fa8fa09633c98c07acf36310>`(Make_socket_accept_callback, (:ref:`Socket_stream::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`));
+	typename __Args :ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1ae978e837c093e6644172aeb55acc9cf9>`(Make_socket_listen_callback, (:ref:`Socket_listener::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`));
+	typename __Args typename __Args :ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1a76ec0103fa8fa09633c98c07acf36310>`(Make_socket_accept_callback, (:ref:`Socket_stream::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`), (nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`));
 
 	typename __Args typename __Args typename __Args :ref:`__DEFINE_CALLBACK_BUILDER_BODY<doxid-dd/def/namespaceugcs_1_1vsm_1a3f57b48043261f16064951389868404b>`(
 		Make_socket_read_from_callback,
 		(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`, Socket_address::Ptr),
-		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`, nullptr)
+		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`, nullptr)
 		);
 
 	uint32_t :target:`Get_unique_id<doxid-dd/def/namespaceugcs_1_1vsm_1a3ce13d93395d53fbdc5c631c1f868620>`();
@@ -1450,7 +1450,7 @@ Convert float type from BE to host format.
 	__DEFINE_CALLBACK_BUILDER_BODY(
 		Make_write_callback,
 		(:ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`),
-		(:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`)
+		(:ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`)
 		)
 
 Convenience builder for write operation callbacks.
@@ -1599,7 +1599,7 @@ true - service specific parameters were found and handled successfully. when run
 	__DEFINE_CALLBACK_BUILDER_BODY(
 		Make_socket_connect_callback,
 		(:ref:`Socket_stream::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`),
-		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`)
+		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`)
 		)
 
 Convenience builder for socket connect operation callbacks.
@@ -1615,7 +1615,7 @@ Convenience builder for socket listen operation callbacks.
 	typename __Args __DEFINE_CALLBACK_BUILDER_BODY(
 		Make_socket_listen_callback,
 		(:ref:`Socket_listener::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`),
-		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`)
+		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`)
 		)
 
 Convenience builder for socket accept operation callbacks.
@@ -1629,7 +1629,7 @@ Convenience builder for socket accept operation callbacks.
 	typename __Args typename __Args __DEFINE_CALLBACK_BUILDER_BODY(
 		Make_socket_accept_callback,
 		(:ref:`Socket_stream::Ref<doxid-d4/d3c/classugcs_1_1vsm_1_1_socket__processor_1_1_stream_1a3ac30f4fddc1fb6d3884ec90a1ab4894>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`),
-		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`)
+		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`)
 		)
 
 Convenience builder for socket Read_from operation callbacks.
@@ -1643,7 +1643,7 @@ Convenience builder for socket Read_from operation callbacks.
 	typename __Args typename __Args typename __Args __DEFINE_CALLBACK_BUILDER_BODY(
 		Make_socket_read_from_callback,
 		(:ref:`Io_buffer::Ptr<doxid-d1/d0f/classugcs_1_1vsm_1_1_io__buffer_1a538a51ee0b037d1ebc88b5d25dfac361>`, :ref:`Io_result<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712>`, Socket_address::Ptr),
-		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712ae0aa021e21dddbd6d8cecec71e9cf564>`, nullptr)
+		(nullptr, :ref:`Io_result::OTHER_FAILURE<doxid-dd/def/namespaceugcs_1_1vsm_1a0e37a17f83be9c1d2f04595f500a5712af9baf91eead5f56f404ed72738219049>`, nullptr)
 		)
 
 Convenience builder for Read operation callbacks.

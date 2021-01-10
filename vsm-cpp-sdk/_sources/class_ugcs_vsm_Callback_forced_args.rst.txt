@@ -19,7 +19,7 @@ Helper class for defining custom callback creation functions which force several
 	#include <callback.h>
 	
 	template <class Callable, class Forced_args_tuple, typename... Args>
-	class Callback_forced_args: public callback_internal::Callback_forced_args_helper:: template Callback_ptr< Forced_args_tuple >
+	class Callback_forced_args: public callback_internal::Callback_forced_args_helper< Callable, void, Args... >:: template Callback_ptr
 	{
 	public:
 		// typedefs

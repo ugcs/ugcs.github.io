@@ -1,0 +1,11 @@
+.. index:: pair: class; map<MESSAGE_ID_TYPE, Extra_byte_length_pair>
+.. _doxid-d5/dbd/classmap_3_01_m_e_s_s_a_g_e___i_d___t_y_p_e_00_01_extra__byte__length__pair_01_4_1_1const__reverse__iterator:
+
+template class map<MESSAGE_ID_TYPE, Extra_byte_length_pair>
+===========================================================
+
+.. toctree::
+	:hidden:
+
+
+

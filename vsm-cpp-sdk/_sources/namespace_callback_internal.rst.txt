@@ -1,0 +1,25 @@
+.. index:: pair: namespace; callback_internal
+.. _doxid-df/d87/namespacecallback__internal:
+
+namespace callback_internal
+===========================
+
+.. toctree::
+	:hidden:
+
+	namespace_callback_internal_Callback_forced_args_helper.rst
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace callback_internal {
+
+	// namespaces
+
+	namespace :ref:`callback_internal::Callback_forced_args_helper<doxid-dd/d0c/namespacecallback__internal_1_1_callback__forced__args__helper>`;
+
+	} // namespace callback_internal

@@ -1,0 +1,11 @@
+.. index:: pair: class; vector<uint8_t>
+.. _doxid-d3/d81/classvector_3_01uint8__t_01_4_1_1reverse__iterator:
+
+template class vector<uint8_t>
+==============================
+
+.. toctree::
+	:hidden:
+
+
+

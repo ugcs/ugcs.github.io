@@ -1,8 +1,8 @@
-.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jfloat>
-.. _doxid-df/db9/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jfloat_01_4:
+.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jchar>
+.. _doxid-df/dc3/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jchar_01_4:
 
-template struct ugcs::vsm::java_internals::MethodCallSelector<jfloat>
-=====================================================================
+template struct ugcs::vsm::java_internals::MethodCallSelector<jchar>
+====================================================================
 
 .. toctree::
 	:hidden:
@@ -16,12 +16,12 @@ template struct ugcs::vsm::java_internals::MethodCallSelector<jfloat>
 	#include <java.h>
 	
 	template <>
-	struct MethodCallSelector<jfloat>
+	struct MethodCallSelector<jchar>
 	{
 		// methods
 	
 		template <typename... T_args>
-		static jfloat :target:`Call<doxid-df/db9/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jfloat_01_4_1ad97725d5737dca404a2e8e83cb93377e>`(
+		static jchar :target:`Call<doxid-df/dc3/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jchar_01_4_1a0e1d516ed9fa1e83064b0c0ff5eea8b2>`(
 			JNIEnv* env,
 			jobject obj,
 			jmethodID method_id,

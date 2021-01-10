@@ -57,7 +57,7 @@ Device is a set of subsystems of different types. Vehicle registration should re
 ================  ==============  ===================================================================================================================  
 Field name        Type            Description                                                                                                          
 ================  ==============  ===================================================================================================================  
-type              Subsystem_type  Value from subsystem_types                                                                                           
+type              Subsystem_type  Value from                                                                                                           
 properties        Property_field  key-value pairs for device specific information                                                                      
 telemetry_fields  Register_field  List of telemetry fields sent by the VSM. See                                                                        
 commands                          List of available commands and mission items accepted by device. See vehicle_commands and mission_items for details  
@@ -92,12 +92,12 @@ Flight controller subsystem
 
 There is one required property and one optional property for flight controller subsystem:
 
-==================  ======  ========  =========================================================================  
-Subsystem property  Type    Required  Description                                                                
-==================  ======  ========  =========================================================================  
-autopilot_type      string  yes       Any user defined name. UgCS natively supports values from autopilot_list.  
-autopilot_serial    string  no        Autopilot serial number if it can be read from autopilot                   
-==================  ======  ========  =========================================================================
+==================  ======  ========  =========================================================  
+Subsystem property  Type    Required  Description                                                
+==================  ======  ========  =========================================================  
+autopilot_type      string  yes       Any user defined name. UgCS natively supports values from  
+autopilot_serial    string  no        Autopilot serial number if it can be read from autopilot   
+==================  ======  ========  =========================================================
 
 
 

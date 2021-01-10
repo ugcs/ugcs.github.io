@@ -1,0 +1,11 @@
+.. index:: pair: class; unordered_set<uint32_t>
+.. _doxid-d5/d99/classunordered__set_3_01uint32__t_01_4_1_1reverse__iterator:
+
+template class unordered_set<uint32_t>
+======================================
+
+.. toctree::
+	:hidden:
+
+
+

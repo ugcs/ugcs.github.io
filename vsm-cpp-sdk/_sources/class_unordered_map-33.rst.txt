@@ -1,0 +1,11 @@
+.. index:: pair: class; unordered_map<uint32_t, Server_context>
+.. _doxid-d6/da5/classunordered__map_3_01uint32__t_00_01_server__context_01_4_1_1const__iterator:
+
+template class unordered_map<uint32_t, Server_context>
+======================================================
+
+.. toctree::
+	:hidden:
+
+
+

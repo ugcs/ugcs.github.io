@@ -1,8 +1,8 @@
-.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jdouble>
-.. _doxid-de/d75/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jdouble_01_4:
+.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jbyte>
+.. _doxid-d0/d31/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jbyte_01_4:
 
-template struct ugcs::vsm::java_internals::MethodCallSelector<jdouble>
-======================================================================
+template struct ugcs::vsm::java_internals::MethodCallSelector<jbyte>
+====================================================================
 
 .. toctree::
 	:hidden:
@@ -16,12 +16,12 @@ template struct ugcs::vsm::java_internals::MethodCallSelector<jdouble>
 	#include <java.h>
 	
 	template <>
-	struct MethodCallSelector<jdouble>
+	struct MethodCallSelector<jbyte>
 	{
 		// methods
 	
 		template <typename... T_args>
-		static jdouble :target:`Call<doxid-de/d75/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jdouble_01_4_1a923615ca55bd37ed8445abac852b7168>`(
+		static jbyte :target:`Call<doxid-d0/d31/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jbyte_01_4_1a6d1e68f72c1a0793b6174127eab0ea19>`(
 			JNIEnv* env,
 			jobject obj,
 			jmethodID method_id,

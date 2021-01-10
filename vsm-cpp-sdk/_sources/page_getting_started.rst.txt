@@ -4,7 +4,7 @@
 Getting Started
 ===============
 
-:target:`doxid-d1/d66/getting_started_1md__github_workspace_cpp-sdk_readme`
+:target:`doxid-d1/d66/getting_started_1md__github_workspace_cpp_sdk_readme`
 
 C++ VSM SDK for `Universal ground Control Software <http://www.ugcs.com/>`__.
 

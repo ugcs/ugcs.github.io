@@ -1,0 +1,11 @@
+.. index:: pair: class; unordered_map<uint32_t, Vehicle_context>
+.. _doxid-d9/d1e/classunordered__map_3_01uint32__t_00_01_vehicle__context_01_4_1_1iterator:
+
+template class unordered_map<uint32_t, Vehicle_context>
+=======================================================
+
+.. toctree::
+	:hidden:
+
+
+

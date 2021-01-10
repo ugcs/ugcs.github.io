@@ -7,10 +7,233 @@ Global Namespace
 .. toctree::
 	:hidden:
 
+	namespace_callback_internal.rst
 	namespace_std.rst
 	namespace_ugcs.rst
 	struct_glob_t.rst
 	class_Adsb_vehicle.rst
+	class_Callback_base.rst
+	class_Callback_base-2.rst
+	class_Callback_base-3.rst
+	class_Callback_proxy.rst
+	class_Callback_proxy-2.rst
+	class_Callback_proxy-3.rst
+	class_Callback_proxy-4.rst
+	class_Callback_proxy-5.rst
+	class_Callback_proxy-6.rst
+	class_Callback_proxy-7.rst
+	class_Reference_guard.rst
+	class_Reference_guard-2.rst
+	class_Reference_guard-3.rst
+	class_Reference_guard-4.rst
+	class_basic_string.rst
+	class_basic_string-2.rst
+	class_basic_string-3.rst
+	class_basic_string-4.rst
+	class_basic_string-5.rst
+	class_basic_string-6.rst
+	class_basic_string-7.rst
+	class_basic_string-8.rst
+	class_basic_string-9.rst
+	class_basic_string-10.rst
+	class_basic_string-11.rst
+	class_basic_string-12.rst
+	class_basic_string-13.rst
+	class_basic_string-14.rst
+	class_basic_string-15.rst
+	class_basic_string-16.rst
+	class_basic_string-17.rst
+	class_basic_string-18.rst
+	class_basic_string-19.rst
+	class_basic_string-20.rst
+	class_basic_string_view.rst
+	class_basic_string_view-2.rst
+	class_basic_string_view-3.rst
+	class_basic_string_view-4.rst
+	class_basic_string_view-5.rst
+	class_basic_string_view-6.rst
+	class_basic_string_view-7.rst
+	class_basic_string_view-8.rst
+	class_basic_string_view-9.rst
+	class_basic_string_view-10.rst
+	class_basic_string_view-11.rst
+	class_basic_string_view-12.rst
+	class_basic_string_view-13.rst
+	class_basic_string_view-14.rst
+	class_basic_string_view-15.rst
+	class_basic_string_view-16.rst
+	class_basic_string_view-17.rst
+	class_basic_string_view-18.rst
+	class_basic_string_view-19.rst
+	class_basic_string_view-20.rst
+	class_list.rst
+	class_list-2.rst
+	class_list-3.rst
+	class_list-4.rst
+	class_list-5.rst
+	class_list-6.rst
+	class_list-7.rst
+	class_list-8.rst
+	class_list-9.rst
+	class_list-10.rst
+	class_list-11.rst
+	class_list-12.rst
+	class_list-13.rst
+	class_list-14.rst
+	class_list-15.rst
+	class_list-16.rst
+	class_list-17.rst
+	class_list-18.rst
+	class_list-19.rst
+	class_list-20.rst
+	class_list-21.rst
+	class_list-22.rst
+	class_list-23.rst
+	class_list-24.rst
+	class_list-25.rst
+	class_list-26.rst
+	class_list-27.rst
+	class_list-28.rst
+	class_list-29.rst
+	class_list-30.rst
+	class_list-31.rst
+	class_list-32.rst
+	class_list-33.rst
+	class_list-34.rst
+	class_list-35.rst
+	class_list-36.rst
+	class_map.rst
+	class_map-2.rst
+	class_map-3.rst
+	class_map-4.rst
+	class_map-5.rst
+	class_map-6.rst
+	class_map-7.rst
+	class_map-8.rst
+	class_map-9.rst
+	class_map-10.rst
+	class_map-11.rst
+	class_map-12.rst
+	class_map-13.rst
+	class_map-14.rst
+	class_map-15.rst
+	class_map-16.rst
+	class_map-17.rst
+	class_map-18.rst
+	class_map-19.rst
+	class_map-20.rst
+	class_map-21.rst
+	class_map-22.rst
+	class_map-23.rst
+	class_map-24.rst
+	class_map-25.rst
+	class_map-26.rst
+	class_map-27.rst
+	class_map-28.rst
+	class_map-29.rst
+	class_map-30.rst
+	class_map-31.rst
+	class_map-32.rst
+	class_map-33.rst
+	class_map-34.rst
+	class_map-35.rst
+	class_map-36.rst
+	class_set.rst
+	class_set-2.rst
+	class_set-3.rst
+	class_set-4.rst
+	class_unordered_map.rst
+	class_unordered_map-2.rst
+	class_unordered_map-3.rst
+	class_unordered_map-4.rst
+	class_unordered_map-5.rst
+	class_unordered_map-6.rst
+	class_unordered_map-7.rst
+	class_unordered_map-8.rst
+	class_unordered_map-9.rst
+	class_unordered_map-10.rst
+	class_unordered_map-11.rst
+	class_unordered_map-12.rst
+	class_unordered_map-13.rst
+	class_unordered_map-14.rst
+	class_unordered_map-15.rst
+	class_unordered_map-16.rst
+	class_unordered_map-17.rst
+	class_unordered_map-18.rst
+	class_unordered_map-19.rst
+	class_unordered_map-20.rst
+	class_unordered_map-21.rst
+	class_unordered_map-22.rst
+	class_unordered_map-23.rst
+	class_unordered_map-24.rst
+	class_unordered_map-25.rst
+	class_unordered_map-26.rst
+	class_unordered_map-27.rst
+	class_unordered_map-28.rst
+	class_unordered_map-29.rst
+	class_unordered_map-30.rst
+	class_unordered_map-31.rst
+	class_unordered_map-32.rst
+	class_unordered_map-33.rst
+	class_unordered_map-34.rst
+	class_unordered_map-35.rst
+	class_unordered_map-36.rst
+	class_unordered_map-37.rst
+	class_unordered_map-38.rst
+	class_unordered_map-39.rst
+	class_unordered_map-40.rst
+	class_unordered_map-41.rst
+	class_unordered_map-42.rst
+	class_unordered_map-43.rst
+	class_unordered_map-44.rst
+	class_unordered_map-45.rst
+	class_unordered_map-46.rst
+	class_unordered_map-47.rst
+	class_unordered_map-48.rst
+	class_unordered_map-49.rst
+	class_unordered_map-50.rst
+	class_unordered_map-51.rst
+	class_unordered_map-52.rst
+	class_unordered_multimap.rst
+	class_unordered_multimap-2.rst
+	class_unordered_multimap-3.rst
+	class_unordered_multimap-4.rst
+	class_unordered_set.rst
+	class_unordered_set-2.rst
+	class_unordered_set-3.rst
+	class_unordered_set-4.rst
+	class_vector.rst
+	class_vector-2.rst
+	class_vector-3.rst
+	class_vector-4.rst
+	class_vector-5.rst
+	class_vector-6.rst
+	class_vector-7.rst
+	class_vector-8.rst
+	class_vector-9.rst
+	class_vector-10.rst
+	class_vector-11.rst
+	class_vector-12.rst
+	class_vector-13.rst
+	class_vector-14.rst
+	class_vector-15.rst
+	class_vector-16.rst
+	class_vector-17.rst
+	class_vector-18.rst
+	class_vector-19.rst
+	class_vector-20.rst
+	class_vector-21.rst
+	class_vector-22.rst
+	class_vector-23.rst
+	class_vector-24.rst
+	class_vector-25.rst
+	class_vector-26.rst
+	class_vector-27.rst
+	class_vector-28.rst
+	class_vector-29.rst
+	class_vector-30.rst
+	class_vector-31.rst
+	class_vector-32.rst
 
 Overview
 ~~~~~~~~
@@ -24,6 +247,8 @@ Overview
 	
 	// namespaces
 
+	namespace :ref:`callback_internal<doxid-df/d87/namespacecallback__internal>`;
+		namespace :ref:`callback_internal::Callback_forced_args_helper<doxid-dd/d0c/namespacecallback__internal_1_1_callback__forced__args__helper>`;
 	namespace :ref:`std<doxid-d8/dcc/namespacestd>`;
 	namespace :ref:`ugcs<doxid-d1/d6b/namespaceugcs>`;
 		namespace :ref:`ugcs::vsm<doxid-dd/def/namespaceugcs_1_1vsm>`;
@@ -42,6 +267,672 @@ Overview
 	// classes
 
 	class :ref:`Adsb_vehicle<doxid-d0/dfd/class_adsb__vehicle>`;
+
+	template <>
+	class :ref:`Callback_base<std::result_of<Callable(Args...)>::type><doxid-d9/dd0/class_callback__base_3_01std_1_1result__of_3_01_callable_07_args_8_8_8_08_4_1_1type_01_4_1_1_ptr>`;
+
+	template <>
+	class :ref:`Callback_base<std::result_of<Method(Class_ptr, Args...)>::type><doxid-db/d6b/class_callback__base_3_01std_1_1result__of_3_01_method_07_class__ptr_00_01_args_8_8_8_08_4_1_1type_01_4_1_1_ptr>`;
+
+	template <>
+	class :ref:`Callback_base<void><doxid-d4/daf/class_callback__base_3_01void_01_4_1_1_ptr>`;
+
+	template <>
+	class :ref:`Callback_proxy<bool, std::smatch*, Lines_list*, Io_result><doxid-d0/d0a/class_callback__proxy_3_01bool_00_01std_1_1smatch_01_5_00_01_lines__list_01_5_00_01_io__result_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Callback_proxy<message_id, Extention_type><doxid-dd/df6/class_callback__proxy_3_01message__id_00_01_extention__type_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Callback_proxy<void, Io_buffer::Ptr, mavlink::MESSAGE_ID_TYPE, uint8_t, uint8_t, uint32_t><doxid-d7/d1e/class_callback__proxy_3_01void_00_01_io__buffer_1_1_ptr_00_01mavlink_1_1_m_e_s_s_a_g_e___i_d___tba6554ea33e91bd17e20abcd62264989>`;
+
+	template <>
+	class :ref:`Callback_proxy<bool, Io_buffer::Ptr, mavlink::MESSAGE_ID_TYPE, System_id, uint8_t, uint32_t><doxid-d2/d90/class_callback__proxy_3_01bool_00_01_io__buffer_1_1_ptr_00_01mavlink_1_1_m_e_s_s_a_g_e___i_d___t9354553c4e5e21856c21a68dd20aca2f>`;
+
+	template <>
+	class :ref:`Callback_proxy<void, Io_buffer::Ptr><doxid-d2/d12/class_callback__proxy_3_01void_00_01_io__buffer_1_1_ptr_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Callback_proxy<bool, const std::string*><doxid-da/d5f/class_callback__proxy_3_01bool_00_01const_01std_1_1string_01_5_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Callback_proxy<void, Result, std::string><doxid-d4/da6/class_callback__proxy_3_01void_00_01_result_00_01std_1_1string_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Reference_guard<Vehicle_request::Ptr><doxid-dd/daa/class_reference__guard_3_01_vehicle__request_1_1_ptr_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Reference_guard<Io_stream::Ptr><doxid-d2/d17/class_reference__guard_3_01_io__stream_1_1_ptr_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Reference_guard<Ptr><doxid-df/d9d/class_reference__guard_3_01_ptr_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`Reference_guard<Stream::Ptr><doxid-dd/d1a/class_reference__guard_3_01_stream_1_1_ptr_01_4_1_1_hasher>`;
+
+	template <>
+	class :ref:`basic_string<char32_t><doxid-df/dca/classbasic__string_3_01char32__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char8_t><doxid-d1/dff/classbasic__string_3_01char8__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char16_t><doxid-d6/ddc/classbasic__string_3_01char16__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char32_t><doxid-d6/d0a/classbasic__string_3_01char32__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char><doxid-d2/d3b/classbasic__string_3_01char_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char16_t><doxid-de/d76/classbasic__string_3_01char16__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char><doxid-d8/d15/classbasic__string_3_01char_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string<char><doxid-d9/da1/classbasic__string_3_01char_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<wchar_t><doxid-dd/daa/classbasic__string_3_01wchar__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string<char><doxid-dc/d20/classbasic__string_3_01char_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char8_t><doxid-d1/dd3/classbasic__string_3_01char8__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string<char16_t><doxid-d7/d0d/classbasic__string_3_01char16__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string<char32_t><doxid-de/dc4/classbasic__string_3_01char32__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string<char16_t><doxid-d5/d6b/classbasic__string_3_01char16__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char32_t><doxid-d2/d61/classbasic__string_3_01char32__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char8_t><doxid-d5/d32/classbasic__string_3_01char8__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<wchar_t><doxid-d5/daf/classbasic__string_3_01wchar__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string<char8_t><doxid-d0/dcf/classbasic__string_3_01char8__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string<wchar_t><doxid-d3/d2c/classbasic__string_3_01wchar__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string<wchar_t><doxid-d9/df6/classbasic__string_3_01wchar__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char><doxid-df/de7/classbasic__string__view_3_01char_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char16_t><doxid-d8/da4/classbasic__string__view_3_01char16__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char><doxid-d6/d00/classbasic__string__view_3_01char_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<wchar_t><doxid-dc/dc2/classbasic__string__view_3_01wchar__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<wchar_t><doxid-d1/db6/classbasic__string__view_3_01wchar__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char8_t><doxid-d3/db6/classbasic__string__view_3_01char8__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char><doxid-db/d26/classbasic__string__view_3_01char_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char16_t><doxid-d2/dba/classbasic__string__view_3_01char16__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char16_t><doxid-d3/dab/classbasic__string__view_3_01char16__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char32_t><doxid-db/dbd/classbasic__string__view_3_01char32__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char32_t><doxid-d1/d9d/classbasic__string__view_3_01char32__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char8_t><doxid-d1/def/classbasic__string__view_3_01char8__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<wchar_t><doxid-d5/d91/classbasic__string__view_3_01wchar__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char8_t><doxid-d6/d4e/classbasic__string__view_3_01char8__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char16_t><doxid-d1/d2c/classbasic__string__view_3_01char16__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char8_t><doxid-da/db9/classbasic__string__view_3_01char8__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<wchar_t><doxid-dc/d24/classbasic__string__view_3_01wchar__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char><doxid-d1/d12/classbasic__string__view_3_01char_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char32_t><doxid-d8/d15/classbasic__string__view_3_01char32__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`basic_string_view<char32_t><doxid-d8/d02/classbasic__string__view_3_01char32__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Request::Ptr><doxid-d5/d62/classlist_3_01_request_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<std::string><doxid-da/d7d/classlist_3_01std_1_1string_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Read_requests_entry><doxid-d0/d0f/classlist_3_01_read__requests__entry_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Read_request::Ptr><doxid-d1/dc6/classlist_3_01_read__request_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Request_container::Ptr><doxid-d1/d1e/classlist_3_01_request__container_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Write_request::Ptr><doxid-d0/d0a/classlist_3_01_write__request_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<std::string><doxid-d9/de9/classlist_3_01std_1_1string_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Write_requests_entry><doxid-d8/d51/classlist_3_01_write__requests__entry_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Request_container::Ptr><doxid-d4/d6e/classlist_3_01_request__container_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Ptr><doxid-dd/d21/classlist_3_01_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Io_request::Ptr><doxid-d3/d88/classlist_3_01_io__request_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Write_requests_entry><doxid-dc/dad/classlist_3_01_write__requests__entry_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Write_request::Ptr><doxid-d7/d5c/classlist_3_01_write__request_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Io_request::Ptr><doxid-d9/df8/classlist_3_01_io__request_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Request::Ptr><doxid-df/d6b/classlist_3_01_request_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Read_request::Ptr><doxid-dd/d08/classlist_3_01_read__request_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Read_requests_entry><doxid-de/deb/classlist_3_01_read__requests__entry_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Ptr><doxid-dd/d75/classlist_3_01_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`list<Io_request::Ptr><doxid-da/d0b/classlist_3_01_io__request_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Read_request::Ptr><doxid-df/d0d/classlist_3_01_read__request_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Request::Ptr><doxid-d2/d95/classlist_3_01_request_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Read_requests_entry><doxid-d1/d41/classlist_3_01_read__requests__entry_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Read_request::Ptr><doxid-d7/d32/classlist_3_01_read__request_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Request_container::Ptr><doxid-d0/dba/classlist_3_01_request__container_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Write_request::Ptr><doxid-d1/dd0/classlist_3_01_write__request_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<std::string><doxid-da/d7d/classlist_3_01std_1_1string_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Write_requests_entry><doxid-dd/da3/classlist_3_01_write__requests__entry_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Io_request::Ptr><doxid-d8/da4/classlist_3_01_io__request_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Read_requests_entry><doxid-d4/dcb/classlist_3_01_read__requests__entry_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Write_request::Ptr><doxid-d9/de3/classlist_3_01_write__request_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Ptr><doxid-d5/d25/classlist_3_01_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Write_requests_entry><doxid-d3/d79/classlist_3_01_write__requests__entry_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Ptr><doxid-d2/d44/classlist_3_01_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`list<Request::Ptr><doxid-dd/dd5/classlist_3_01_request_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<std::string><doxid-d1/d6e/classlist_3_01std_1_1string_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`list<Request_container::Ptr><doxid-d6/d4f/classlist_3_01_request__container_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, My_socket><doxid-df/da8/classmap_3_01std_1_1string_00_01_my__socket_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, Property><doxid-da/df6/classmap_3_01std_1_1string_00_01_property_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`map<std::string, My_socket><doxid-d7/de4/classmap_3_01std_1_1string_00_01_my__socket_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`map<MESSAGE_ID_TYPE, Extra_byte_length_pair><doxid-d8/d29/classmap_3_01_m_e_s_s_a_g_e___i_d___t_y_p_e_00_01_extra__byte__length__pair_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>><doxid-d8/d57/classmap_3_01std_1_1string_00_01std_1_1pair_3_01ugcs_1_1vsm_1_1_callback__proxy_00_01_request__p2e83b63a30d8e26da3656ab22b6094c8>`;
+
+	template <>
+	class :ref:`map<Tick_type, Timer::Ptr><doxid-df/d09/classmap_3_01_tick__type_00_01_timer_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case><doxid-db/db6/classmap_3_01std_1_1string_00_01std_1_1string_00_01ugcs_1_1vsm_1_1_http__parser_1_1string__compa861ec52f96cdf58a8ab935d29d7be5bf>`;
+
+	template <>
+	class :ref:`map<int, File_desc><doxid-d0/d4c/classmap_3_01int_00_01_file__desc_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<MESSAGE_ID_TYPE, Extra_byte_length_pair><doxid-d9/d93/classmap_3_01_m_e_s_s_a_g_e___i_d___t_y_p_e_00_01_extra__byte__length__pair_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`map<int, Stream_entry::Ptr><doxid-db/d18/classmap_3_01int_00_01_stream__entry_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`map<Entry_handle, Entry><doxid-d0/d38/classmap_3_01_entry__handle_00_01_entry_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`map<Entry_handle, Entry><doxid-db/dc1/classmap_3_01_entry__handle_00_01_entry_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`map<int, File_desc><doxid-d1/d8e/classmap_3_01int_00_01_file__desc_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`map<int, File_desc><doxid-d4/d6c/classmap_3_01int_00_01_file__desc_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`map<std::string, Property><doxid-de/d77/classmap_3_01std_1_1string_00_01_property_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case><doxid-de/d45/classmap_3_01std_1_1string_00_01std_1_1string_00_01ugcs_1_1vsm_1_1_http__parser_1_1string__compa3b3fab84efc38eae2b0b4624c6818c89>`;
+
+	template <>
+	class :ref:`map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>><doxid-d6/d55/classmap_3_01std_1_1string_00_01std_1_1pair_3_01ugcs_1_1vsm_1_1_callback__proxy_00_01_request__p543db70253718cf8dd40f39605ef77a7>`;
+
+	template <>
+	class :ref:`map<Tick_type, Timer::Ptr><doxid-d4/d16/classmap_3_01_tick__type_00_01_timer_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`map<int, Stream_entry::Ptr><doxid-d3/db0/classmap_3_01int_00_01_stream__entry_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`map<int, Stream_entry::Ptr><doxid-da/da5/classmap_3_01int_00_01_stream__entry_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<Entry_handle, Entry><doxid-d6/dbb/classmap_3_01_entry__handle_00_01_entry_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, Property><doxid-de/dd8/classmap_3_01std_1_1string_00_01_property_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, My_socket><doxid-d9/d45/classmap_3_01std_1_1string_00_01_my__socket_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<Tick_type, Timer::Ptr><doxid-d0/d3d/classmap_3_01_tick__type_00_01_timer_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>><doxid-d8/db9/classmap_3_01std_1_1string_00_01std_1_1pair_3_01ugcs_1_1vsm_1_1_callback__proxy_00_01_request__p98406c1f3c488b9cd06464af283d1014>`;
+
+	template <>
+	class :ref:`map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case><doxid-d6/d9b/classmap_3_01std_1_1string_00_01std_1_1string_00_01ugcs_1_1vsm_1_1_http__parser_1_1string__compa256e8379f545324644850b579fc2868c>`;
+
+	template <>
+	class :ref:`map<Entry_handle, Entry><doxid-da/d06/classmap_3_01_entry__handle_00_01_entry_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<Tick_type, Timer::Ptr><doxid-db/d4a/classmap_3_01_tick__type_00_01_timer_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, std::string, ugcs::vsm::Http_parser::string_compare_ignore_case><doxid-de/d38/classmap_3_01std_1_1string_00_01std_1_1string_00_01ugcs_1_1vsm_1_1_http__parser_1_1string__compadf5d6fc443c1d4c3e7ea280550056000>`;
+
+	template <>
+	class :ref:`map<MESSAGE_ID_TYPE, Extra_byte_length_pair><doxid-d5/dbd/classmap_3_01_m_e_s_s_a_g_e___i_d___t_y_p_e_00_01_extra__byte__length__pair_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, Property><doxid-de/d9f/classmap_3_01std_1_1string_00_01_property_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`map<MESSAGE_ID_TYPE, Extra_byte_length_pair><doxid-d1/d3e/classmap_3_01_m_e_s_s_a_g_e___i_d___t_y_p_e_00_01_extra__byte__length__pair_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, My_socket><doxid-da/dee/classmap_3_01std_1_1string_00_01_my__socket_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`map<int, Stream_entry::Ptr><doxid-d0/dce/classmap_3_01int_00_01_stream__entry_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`map<int, File_desc><doxid-d6/dc8/classmap_3_01int_00_01_file__desc_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`map<std::string, std::pair<ugcs::vsm::Callback_proxy, Request_processor::Ptr>><doxid-da/d66/classmap_3_01std_1_1string_00_01std_1_1pair_3_01ugcs_1_1vsm_1_1_callback__proxy_00_01_request__p9fc1651b4718291180eef84257a4c207>`;
+
+	template <>
+	class :ref:`set<Service_info><doxid-dc/d5e/classset_3_01_service__info_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`set<Service_info><doxid-dc/dbc/classset_3_01_service__info_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`set<Service_info><doxid-d9/d1c/classset_3_01_service__info_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`set<Service_info><doxid-da/de5/classset_3_01_service__info_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field><doxid-d0/d1a/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_telemetry__field_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, uint32_t><doxid-df/d31/classunordered__map_3_01uint32__t_00_01uint32__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Stats><doxid-de/ded/classunordered__map_3_01int_00_01_stats_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, std::string><doxid-d2/d07/classunordered__map_3_01int_00_01std_1_1string_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Vehicle_context><doxid-d9/d1e/classunordered__map_3_01uint32__t_00_01_vehicle__context_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Vehicle_context><doxid-d8/d49/classunordered__map_3_01uint32__t_00_01_vehicle__context_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Command_availability><doxid-d0/d18/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_command__availability_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field><doxid-d1/d55/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_telemetry__field_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Stats><doxid-d4/d91/classunordered__map_3_01int_00_01_stats_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, std::string><doxid-d7/d4c/classunordered__map_3_01int_00_01std_1_1string_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Property::Ptr><doxid-d6/dfa/classunordered__map_3_01int_00_01_property_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Command_availability><doxid-d8/dd0/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_command__availability_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, int><doxid-dc/d81/classunordered__map_3_01int_00_01int_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, uint32_t><doxid-d1/d56/classunordered__map_3_01uint32__t_00_01uint32__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Vsm_command::Ptr><doxid-db/dcc/classunordered__map_3_01int_00_01_vsm__command_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Socket_address::Ptr, Stream::Ptr><doxid-d5/d63/classunordered__map_3_01_socket__address_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Property::Ptr><doxid-d5/ded/classunordered__map_3_01int_00_01_property_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Io_stream::Ptr, Stream::Ptr><doxid-d8/d1d/classunordered__map_3_01_io__stream_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, int><doxid-d8/d0a/classunordered__map_3_01int_00_01int_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<std::string, Property::Ptr><doxid-db/d1a/classunordered__map_3_01std_1_1string_00_01_property_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Server_context><doxid-d4/d90/classunordered__map_3_01uint32__t_00_01_server__context_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Server_context><doxid-d7/d65/classunordered__map_3_01uint32__t_00_01_server__context_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, std::string><doxid-d5/d9c/classunordered__map_3_01int_00_01std_1_1string_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Socket_address::Ptr, Stream::Ptr><doxid-d0/dd3/classunordered__map_3_01_socket__address_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Property::Ptr><doxid-d1/d23/classunordered__map_3_01int_00_01_property_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Stats><doxid-d7/d39/classunordered__map_3_01int_00_01_stats_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, std::string><doxid-d4/d4f/classunordered__map_3_01int_00_01std_1_1string_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Vsm_command::Ptr><doxid-d4/daa/classunordered__map_3_01int_00_01_vsm__command_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, int><doxid-db/d31/classunordered__map_3_01int_00_01int_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, uint32_t><doxid-d6/d84/classunordered__map_3_01uint32__t_00_01uint32__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Vehicle_context><doxid-d9/d70/classunordered__map_3_01uint32__t_00_01_vehicle__context_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field><doxid-df/df5/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_telemetry__field_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Server_context><doxid-d6/da5/classunordered__map_3_01uint32__t_00_01_server__context_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Io_stream::Ptr, Stream::Ptr><doxid-d3/df8/classunordered__map_3_01_io__stream_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<std::string, Property::Ptr><doxid-d0/dd4/classunordered__map_3_01std_1_1string_00_01_property_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, uint32_t><doxid-d0/dc8/classunordered__map_3_01uint32__t_00_01uint32__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Vehicle_context><doxid-db/d2a/classunordered__map_3_01uint32__t_00_01_vehicle__context_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Socket_address::Ptr, Stream::Ptr><doxid-d9/de5/classunordered__map_3_01_socket__address_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Telemetry_field><doxid-d0/d2b/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_telemetry__field_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, Server_context><doxid-db/d5a/classunordered__map_3_01uint32__t_00_01_server__context_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Command_availability><doxid-d3/d5c/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_command__availability_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<std::string, Property::Ptr><doxid-d7/d76/classunordered__map_3_01std_1_1string_00_01_property_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<std::string, Property::Ptr><doxid-d2/d95/classunordered__map_3_01std_1_1string_00_01_property_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<uint32_t, ugcs::vsm::proto::Command_availability><doxid-d5/df2/classunordered__map_3_01uint32__t_00_01ugcs_1_1vsm_1_1proto_1_1_command__availability_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Socket_address::Ptr, Stream::Ptr><doxid-d0/d6b/classunordered__map_3_01_socket__address_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Property::Ptr><doxid-da/d2a/classunordered__map_3_01int_00_01_property_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Vsm_command::Ptr><doxid-d3/d6b/classunordered__map_3_01int_00_01_vsm__command_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Io_stream::Ptr, Stream::Ptr><doxid-da/dfe/classunordered__map_3_01_io__stream_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Stats><doxid-dd/dd3/classunordered__map_3_01int_00_01_stats_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, int><doxid-d3/dcb/classunordered__map_3_01int_00_01int_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_map<int, Vsm_command::Ptr><doxid-d1/dfb/classunordered__map_3_01int_00_01_vsm__command_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_map<Io_stream::Ptr, Stream::Ptr><doxid-db/d3e/classunordered__map_3_01_io__stream_1_1_ptr_00_01_stream_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_multimap<Key, Callback_base::Ptr, Key::Hasher><doxid-d4/df3/classunordered__multimap_3_01_key_00_01_callback__base_1_1_ptr_00_01_key_1_1_hasher_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_multimap<Key, Callback_base::Ptr, Key::Hasher><doxid-d6/d81/classunordered__multimap_3_01_key_00_01_callback__base_1_1_ptr_00_01_key_1_1_hasher_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`unordered_multimap<Key, Callback_base::Ptr, Key::Hasher><doxid-d9/dae/classunordered__multimap_3_01_key_00_01_callback__base_1_1_ptr_00_01_key_1_1_hasher_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_multimap<Key, Callback_base::Ptr, Key::Hasher><doxid-de/d67/classunordered__multimap_3_01_key_00_01_callback__base_1_1_ptr_00_01_key_1_1_hasher_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_set<uint32_t><doxid-d6/df5/classunordered__set_3_01uint32__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_set<uint32_t><doxid-d3/dbd/classunordered__set_3_01uint32__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`unordered_set<uint32_t><doxid-d5/d99/classunordered__set_3_01uint32__t_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`unordered_set<uint32_t><doxid-d0/d1e/classunordered__set_3_01uint32__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<pollfd><doxid-d2/d33/classvector_3_01pollfd_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Socket_address::Ptr><doxid-d4/dd3/classvector_3_01_socket__address_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Action::Ptr><doxid-d3/dc0/classvector_3_01_action_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<std::string><doxid-dd/d54/classvector_3_01std_1_1string_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Cache_entry><doxid-dd/da6/classvector_3_01_cache__entry_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Property::Ptr><doxid-db/d40/classvector_3_01_property_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Action::Ptr><doxid-da/dfc/classvector_3_01_action_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<uint8_t><doxid-d2/ddf/classvector_3_01uint8__t_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<pollfd><doxid-d2/d72/classvector_3_01pollfd_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Subsystem::Ptr><doxid-d8/de7/classvector_3_01_subsystem_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<std::string><doxid-d8/df0/classvector_3_01std_1_1string_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<uint8_t><doxid-d9/d3b/classvector_3_01uint8__t_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<Action::Ptr><doxid-dc/dad/classvector_3_01_action_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<Cache_entry><doxid-da/dd3/classvector_3_01_cache__entry_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<Socket_address::Ptr><doxid-d1/dfd/classvector_3_01_socket__address_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<pollfd><doxid-d8/d34/classvector_3_01pollfd_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<Property::Ptr><doxid-d9/da4/classvector_3_01_property_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<Action::Ptr><doxid-d7/dd5/classvector_3_01_action_1_1_ptr_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<Cache_entry><doxid-d2/ddc/classvector_3_01_cache__entry_01_4_1_1iterator>`;
+
+	template <>
+	class :ref:`vector<Cache_entry><doxid-d8/de6/classvector_3_01_cache__entry_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<pollfd><doxid-d2/dba/classvector_3_01pollfd_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<Socket_address::Ptr><doxid-d9/d90/classvector_3_01_socket__address_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<std::string><doxid-d9/d4c/classvector_3_01std_1_1string_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Socket_address::Ptr><doxid-db/d20/classvector_3_01_socket__address_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Property::Ptr><doxid-d0/d00/classvector_3_01_property_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Property::Ptr><doxid-d7/d9d/classvector_3_01_property_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<Subsystem::Ptr><doxid-d5/dfd/classvector_3_01_subsystem_1_1_ptr_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<Subsystem::Ptr><doxid-d2/df5/classvector_3_01_subsystem_1_1_ptr_01_4_1_1reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<uint8_t><doxid-de/db2/classvector_3_01uint8__t_01_4_1_1const__reverse__iterator>`;
+
+	template <>
+	class :ref:`vector<std::string><doxid-db/d9a/classvector_3_01std_1_1string_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<Subsystem::Ptr><doxid-d2/dbc/classvector_3_01_subsystem_1_1_ptr_01_4_1_1const__iterator>`;
+
+	template <>
+	class :ref:`vector<uint8_t><doxid-d3/d81/classvector_3_01uint8__t_01_4_1_1reverse__iterator>`;
 
 	// global functions
 

@@ -1,8 +1,8 @@
-.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jchar>
-.. _doxid-df/dc3/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jchar_01_4:
+.. index:: pair: struct; ugcs::vsm::java_internals::MethodCallSelector<jboolean>
+.. _doxid-dc/dc0/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jboolean_01_4:
 
-template struct ugcs::vsm::java_internals::MethodCallSelector<jchar>
-====================================================================
+template struct ugcs::vsm::java_internals::MethodCallSelector<jboolean>
+=======================================================================
 
 .. toctree::
 	:hidden:
@@ -16,12 +16,12 @@ template struct ugcs::vsm::java_internals::MethodCallSelector<jchar>
 	#include <java.h>
 	
 	template <>
-	struct MethodCallSelector<jchar>
+	struct MethodCallSelector<jboolean>
 	{
 		// methods
 	
 		template <typename... T_args>
-		static jchar :target:`Call<doxid-df/dc3/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jchar_01_4_1a0e1d516ed9fa1e83064b0c0ff5eea8b2>`(
+		static jboolean :target:`Call<doxid-dc/dc0/structugcs_1_1vsm_1_1java__internals_1_1_method_call_selector_3_01jboolean_01_4_1a49c1bb8c697c86afe92a2e2b35a22204>`(
 			JNIEnv* env,
 			jobject obj,
 			jmethodID method_id,

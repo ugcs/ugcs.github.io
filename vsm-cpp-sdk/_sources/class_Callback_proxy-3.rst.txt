@@ -1,0 +1,11 @@
+.. index:: pair: class; Callback_proxy<void, Io_buffer::Ptr, mavlink::MESSAGE_ID_TYPE, uint8_t, uint8_t, uint32_t>
+.. _doxid-d7/d1e/class_callback__proxy_3_01void_00_01_io__buffer_1_1_ptr_00_01mavlink_1_1_m_e_s_s_a_g_e___i_d___tba6554ea33e91bd17e20abcd62264989:
+
+template class Callback_proxy<void, Io_buffer::Ptr, mavlink::MESSAGE_ID_TYPE, uint8_t, uint8_t, uint32_t>
+=========================================================================================================
+
+.. toctree::
+	:hidden:
+
+
+

@@ -1,0 +1,11 @@
+.. index:: pair: class; basic_string_view<char>
+.. _doxid-db/d26/classbasic__string__view_3_01char_01_4_1_1const__reverse__iterator:
+
+template class basic_string_view<char>
+======================================
+
+.. toctree::
+	:hidden:
+
+
+

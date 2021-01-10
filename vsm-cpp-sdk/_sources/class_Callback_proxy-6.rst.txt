@@ -1,0 +1,47 @@
+.. index:: pair: class; Callback_proxy<bool, const std::string*>
+.. _doxid-da/d5f/class_callback__proxy_3_01bool_00_01const_01std_1_1string_01_5_01_4_1_1_hasher:
+
+template class Callback_proxy<bool, const std::string*>
+=======================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	template <>
+	class Callback_proxy<bool, const std::string*>
+	{
+	public:
+		// methods
+	
+		size_t :ref:`operator ()<doxid-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher_1ac599240886359899ba5a6ea327c59f21>` (const :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`& proxy) const;
+	};
+.. _details-da/d5f/class_callback__proxy_3_01bool_00_01const_01std_1_1string_01_5_01_4_1_1_hasher:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Methods
+-------
+
+.. index:: pair: function; operator()
+.. _doxid-d7/de4/classugcs_1_1vsm_1_1_callback__proxy_1_1_hasher_1ac599240886359899ba5a6ea327c59f21:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	size_t operator () (const :ref:`Callback_proxy<doxid-d0/db9/classugcs_1_1vsm_1_1_callback__proxy>`& proxy) const
+
+Hash value operator.
+

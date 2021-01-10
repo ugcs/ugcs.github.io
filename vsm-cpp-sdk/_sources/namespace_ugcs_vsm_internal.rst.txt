@@ -35,20 +35,20 @@ Overview
 	class :ref:`Poll_io_controller<doxid-d2/db0/classugcs_1_1vsm_1_1internal_1_1_poll__io__controller>`;
 	class :ref:`Posix_file_handle<doxid-d7/dce/classugcs_1_1vsm_1_1internal_1_1_posix__file__handle>`;
 
+	template <class T, class Shared_base = void>
+	class :ref:`Shared_getter<doxid-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter>`;
+
 	template <class T>
 	class :ref:`Shared_getter<T, void><doxid-d0/d30/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01void_01_4>`;
 
 	template <class T>
 	class :ref:`Shared_getter<T, T><doxid-d9/dd0/classugcs_1_1vsm_1_1internal_1_1_shared__getter_3_01_t_00_01_t_01_4>`;
 
-	template <class T, class Shared_base = void>
-	class :ref:`Shared_getter<doxid-db/d70/classugcs_1_1vsm_1_1internal_1_1_shared__getter>`;
+	template <class T, class = void>
+	class :ref:`Singleton_creator<doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator>`;
 
 	template <class T>
 	class :ref:`Singleton_creator<T, typename std::enable_if<std::is_default_constructible<T>::value>::type><doxid-dd/d8e/classugcs_1_1vsm_1_1internal_1_1_singleton__creator_3_01_t_00_01typename_01std_1_1enable__if_3_04b4c5b4400e62497913149cf824420f4>`;
-
-	template <class T, class = void>
-	class :ref:`Singleton_creator<doxid-d1/d79/classugcs_1_1vsm_1_1internal_1_1_singleton__creator>`;
 
 	class :ref:`Windows_file_handle<doxid-db/dbb/classugcs_1_1vsm_1_1internal_1_1_windows__file__handle>`;
 

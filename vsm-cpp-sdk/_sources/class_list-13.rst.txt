@@ -1,0 +1,11 @@
+.. index:: pair: class; list<Write_request::Ptr>
+.. _doxid-d7/d5c/classlist_3_01_write__request_1_1_ptr_01_4_1_1iterator:
+
+template class list<Write_request::Ptr>
+=======================================
+
+.. toctree::
+	:hidden:
+
+
+

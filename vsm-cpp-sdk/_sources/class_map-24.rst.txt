@@ -1,0 +1,11 @@
+.. index:: pair: class; map<Tick_type, Timer::Ptr>
+.. _doxid-d0/d3d/classmap_3_01_tick__type_00_01_timer_1_1_ptr_01_4_1_1reverse__iterator:
+
+template class map<Tick_type, Timer::Ptr>
+=========================================
+
+.. toctree::
+	:hidden:
+
+
+

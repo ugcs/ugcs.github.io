@@ -1,0 +1,11 @@
+.. index:: pair: class; vector<Action::Ptr>
+.. _doxid-da/dfc/classvector_3_01_action_1_1_ptr_01_4_1_1const__reverse__iterator:
+
+template class vector<Action::Ptr>
+==================================
+
+.. toctree::
+	:hidden:
+
+
+

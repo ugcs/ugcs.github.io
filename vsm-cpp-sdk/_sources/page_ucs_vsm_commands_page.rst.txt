@@ -24,13 +24,13 @@ For each command vehicle supports it must send a :ref:`Register_command message 
 Device_command message
 ~~~~~~~~~~~~~~~~~~~~~~
 
-============  ===============  ============================================================================  
-Field name    Type             Description                                                                   
-============  ===============  ============================================================================  
-command_id    uint32           Registered id for command. See device_commands                                
-parameters    Parameter_field  List of command specific parameters                                           
-sub_commands  Vsm_command      List of sub commands for this command. Used when command is c_mission_upload  
-============  ===============  ============================================================================
+============  ===============  ===========================================================  
+Field name    Type             Description                                                  
+============  ===============  ===========================================================  
+command_id    uint32           Registered id for command. See                               
+parameters    Parameter_field  List of command specific parameters                          
+sub_commands  Vsm_command      List of sub commands for this command. Used when command is  
+============  ===============  ===========================================================
 
 
 
@@ -129,11 +129,11 @@ Description: Turn ADSB transponder on/standby/off
 
 Parameters
 
-====  ========================  ===========================================  
-Name  Type                      Description                                  
-====  ========================  ===========================================  
-mode  FIELD_SEMANTIC_ADSB_MODE  Desired transponder mode see enum_adsb_mode  
-====  ========================  ===========================================
+====  ========================  ============================  
+Name  Type                      Description                   
+====  ========================  ============================  
+mode  FIELD_SEMANTIC_ADSB_MODE  Desired transponder mode see  
+====  ========================  ============================
 
 
 
@@ -178,11 +178,11 @@ Command ID: "camera_power"
 
 Description: Switch camera on/off
 
-===========  ===================  =======================  
-Name         Type                 Description              
-===========  ===================  =======================  
-power_state  FIELD_SEMANTIC_ENUM  See camera_power_states  
-===========  ===================  =======================
+===========  ===================  ===========  
+Name         Type                 Description  
+===========  ===================  ===========  
+power_state  FIELD_SEMANTIC_ENUM  See          
+===========  ===================  ===========
 
 
 
@@ -589,10 +589,10 @@ Name                Type                          Description
 ==================  ============================  ======================================================================================  
 altitude_origin     FIELD_SEMANTIC_ALTITUDE_AMSL  Altitude origin of the vehicle                                                          
 safe_altitude       FIELD_SEMANTIC_ALTITUDE_AMSL  Safe altitude. used for RTH and failsafe actions                                        
-rc_loss_action      FIELD_SEMANTIC_ENUM           Failsafe action on RC loss. See failsafe_values                                         
-gps_loss_action     FIELD_SEMANTIC_ENUM           Failsafe action on GPS loss. See failsafe_values                                        
-low_battery_action  FIELD_SEMANTIC_ENUM           Failsafe action on low battery. See failsafe_values                                     
-rth_action          FIELD_SEMANTIC_ENUM           Action after RTH. See rth_values                                                        
+rc_loss_action      FIELD_SEMANTIC_ENUM           Failsafe action on RC loss. See                                                         
+gps_loss_action     FIELD_SEMANTIC_ENUM           Failsafe action on GPS loss. See                                                        
+low_battery_action  FIELD_SEMANTIC_ENUM           Failsafe action on low battery. See                                                     
+rth_action          FIELD_SEMANTIC_ENUM           Action after RTH. See                                                                   
 rth_wait_altitude   FIELD_SEMANTIC_ALTITUDE_AMSL  Final altitude the drone should loiter after RTH. Used only when rth_action is "wait".  
 name                FIELD_SEMANTIC_STRING         User specified mission name                                                             
 ==================  ============================  ======================================================================================
@@ -698,7 +698,7 @@ Parameters
 Name   Type                    Description                                                                                                                                                                            
 =====  ======================  =====================================================================================================================================================================================  
 angle  FIELD_SEMANTIC_NUMERIC  Target panorama angle in a range [-2Pi, 2Pi]. If positive the rotation direction should be clockwise, if negative the rotation direction should be counter-clockwise. Set in radians.  
-mode   FIELD_SEMANTIC_ENUM     Camera mode. See panarama_mode                                                                                                                                                         
+mode   FIELD_SEMANTIC_ENUM     Camera mode. See                                                                                                                                                                       
 step   FIELD_SEMANTIC_NUMERIC  Absolute value of a step angle in case of a discrete shooting. Zero stands for a continuous rotation. Set in radians.                                                                  
 delay  FIELD_SEMANTIC_NUMERIC  Wait time in seconds for each step.                                                                                                                                                    
 speed  FIELD_SEMANTIC_NUMERIC  Angular speed in rad/sec.                                                                                                                                                              
