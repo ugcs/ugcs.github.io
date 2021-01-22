@@ -21,6 +21,19 @@ Pointer class type. :ref:`More...<details-de/dec/classugcs_1_1vsm_1_1_callback__
 	template <class Callback = Callback_base>
 	class Ptr: public std::shared_ptr< Callback_base >
 	{
+	public:
+		// typedefs
+	
+		typedef :ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` :ref:`Callback_type<doxid-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr_1a9b0766da56f0b9faeb494590bb74f6d8>`;
+
+		// construction
+	
+		template <typename... Args>
+		:ref:`Ptr<doxid-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr_1a9253a31759e720b210a7ae56cfe9be07>`(Args&&... args);
+
+		// methods
+	
+		:ref:`Result_t<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base_1a6ee65b00ef19b694f0c5e8c2a3227c75>` :ref:`operator ()<doxid-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr_1a8cdb701f9d1219f3820309cbef9c0c1c>` ();
 	};
 .. _details-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr:
 
@@ -30,4 +43,56 @@ Detailed Documentation
 Pointer class type.
 
 It is callable for convenient callback invocation.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Callback_type
+.. _doxid-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr_1a9b0766da56f0b9faeb494590bb74f6d8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	typedef :ref:`Callback<doxid-d6/d1e/classugcs_1_1vsm_1_1_callback>` Callback_type
+
+Type of target callback.
+
+Construction
+------------
+
+.. index:: pair: function; Ptr
+.. _doxid-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr_1a9253a31759e720b210a7ae56cfe9be07:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename... Args>
+	Ptr(Args&&... args)
+
+Constructor accepts the same arguments as std::shared_ptr.
+
+Methods
+-------
+
+.. index:: pair: function; operator()
+.. _doxid-de/dec/classugcs_1_1vsm_1_1_callback__base_1_1_ptr_1a8cdb701f9d1219f3820309cbef9c0c1c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Result_t<doxid-dc/d4f/classugcs_1_1vsm_1_1_callback__base_1a6ee65b00ef19b694f0c5e8c2a3227c75>` operator () ()
+
+Call the associated callback.
+
+
+
+.. rubric:: Parameters:
+
+.. list-table::
+	:widths: 20 80
+
+	*
+		- Nullptr_exception
+
+		- if the pointer is null.
 
