@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UCS-VSM Commands &#8212; CPP VSM SDK  documentation</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.101715efdecc9b59cb6e1ddfa685c31f.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,17 +20,13 @@
 
     
       
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="_static/js/index.d8bbf5861d671d414e1a.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -45,50 +42,66 @@
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
-    <a class="navbar-brand" href="index.html">
+
     
-      <img src="_static/logo.png" class="logo" alt="logo" />
+      
+      <a class="navbar-brand" href="index.html">
+        <img src="_static/logo.png" class="logo" alt="logo">
+      </a>
+      
     
-    </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
+    
     <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
       <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_license_page.html">License</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="examples.html">Examples</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="global.html">Global Namespace</a>
-        </li>
-        
+        <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_ucs_vsm_overview_page.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="page_ucs_vsm_manual_page.html">
+  Manual
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_tutorials_page.html">
+  Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_license_page.html">
+  License
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="global.html">
+  Global Namespace
+ </a>
+</li>
+
         
         <li class="nav-item">
             <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
@@ -96,18 +109,13 @@
         
       </ul>
 
-
-      
-
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
+      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
       </ul>
     </div>
 </div>
@@ -117,97 +125,82 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-    <div class="bd-toc-item active">
-    
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-          
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l2">
+  <a class="reference internal" href="page_vehicle_interface_page.html">
+   Device interface
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="page_async_programming_page.html">
+   Asynchronous programming framework
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="page_service_discovery_page.html">
+   Automatic Service Discovery
+  </a>
+ </li>
+ <li class="toctree-l2 current active">
+  <a class="reference internal" href="page_ucs_vsm_protocol_page.html">
+   UCS-VSM communications protocol
+  </a>
+  <ul class="current">
+   <li class="toctree-l3">
+    <a class="reference internal" href="page_ucs_vsm_proto_page.html">
+     ucs_vsm.proto
+    </a>
+   </li>
+   <li class="toctree-l3">
+    <a class="reference internal" href="page_ucs_vsm_overview_page.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l3">
+    <a class="reference internal" href="page_ucs_vsm_registration_page.html">
+     Vehicle registration with UCS
+    </a>
+   </li>
+   <li class="toctree-l3">
+    <a class="reference internal" href="page_ucs_vsm_fields_page.html">
+     Field types and semantics
+    </a>
+   </li>
+   <li class="toctree-l3">
+    <a class="reference internal" href="page_ucs_vsm_telemetry_page.html">
+     Telemetry protocol
+    </a>
+   </li>
+   <li class="toctree-l3 current active">
+    <a class="current reference internal" href="#">
+     UCS-VSM Commands
+    </a>
+   </li>
+   <li class="toctree-l3">
+    <a class="reference internal" href="page_ucs_vsm_protocol_examples_page.html">
+     UCS-VSM protocol example
+    </a>
+   </li>
+   <li class="toctree-l3">
+    <a class="reference internal" href="page_ucs_vsm_protocol_wire_format_page.html">
+     UCS-VSM protocol wire format
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+  </div>
+</nav>
+            </div>
             
-                <li class="">
-                    <a href="page_vehicle_interface_page.html">Device interface</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="page_async_programming_page.html">Asynchronous programming framework</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="page_service_discovery_page.html">Automatic Service Discovery</a>
-                </li>
-            
-          
-            
-  
-                <li class="active">
-                    <a href="page_ucs_vsm_protocol_page.html">UCS-VSM communications protocol</a>
-                    <ul>
-                    
-                        <li class="">
-                            <a href="page_ucs_vsm_proto_page.html">ucs_vsm.proto</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="page_ucs_vsm_overview_page.html">Overview</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="page_ucs_vsm_registration_page.html">Vehicle registration with UCS</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="page_ucs_vsm_fields_page.html">Field types and semantics</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="page_ucs_vsm_telemetry_page.html">Telemetry protocol</a>
-                        </li>
-                    
-                        <li class="active">
-                            <a href="">UCS-VSM Commands</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="page_ucs_vsm_protocol_examples_page.html">UCS-VSM protocol example</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="page_ucs_vsm_protocol_wire_format_page.html">UCS-VSM protocol wire format</a>
-                        </li>
-                    
-                    </ul>
-                </li>
-            
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
           
 
           
@@ -218,259 +211,318 @@
 </div>
 
 <nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#command-registration">
+   Command registration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#device-command-message">
+   Device_command message
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commands-natively-supported-by-ugcs">
+   Commands natively supported by UgCS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adsb-ident">
+     ADSB IDENT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adsb-set-mode">
+     ADSB Set mode
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arm-vehicle">
+     Arm vehicle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#start-mission">
+     Start mission
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-camera-power-state">
+     Set camera power state
+    </a>
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#command-registration" class="nav-link">Command registration</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#device-command-message" class="nav-link">Device_command message</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#commands-natively-supported-by-ugcs" class="nav-link">Commands natively supported by UgCS</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#adsb-ident" class="nav-link">ADSB IDENT</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#adsb-set-mode" class="nav-link">ADSB Set mode</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#arm-vehicle" class="nav-link">Arm vehicle</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#start-mission" class="nav-link">Start mission</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-camera-power-state" class="nav-link">Set camera power state</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#camera-power-states" class="nav-link">Camera power states</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#trigger-camera-by-distance" class="nav-link">Trigger camera by distance</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#trigger-camera-by-time" class="nav-link">Trigger camera by time</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#trigger-camera-from-user-interface" class="nav-link">Trigger camera from user interface</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#camera-trigger-states" class="nav-link">Camera trigger states</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#trigger-camera" class="nav-link">Trigger camera</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#camera-trigger-state" class="nav-link">Camera trigger state</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#direct-payload-control" class="nav-link">Direct Payload Control</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#direct-vehicle-control" class="nav-link">Direct Vehicle Control</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#disarm-vehicle" class="nav-link">Disarm vehicle</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#emergency-land" class="nav-link">Emergency Land</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#get-native-route" class="nav-link">Get native route</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#guided-click-go-mode" class="nav-link">Guided (Click&Go) mode</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#joystick" class="nav-link">Joystick</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#land" class="nav-link">Land</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#landing-position" class="nav-link">Landing position</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#manual-control-mode" class="nav-link">Manual control mode.</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#delete-route-from-vehicle" class="nav-link">Delete route from vehicle</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#pause-mission" class="nav-link">Pause mission</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#resume-mission-flight" class="nav-link">Resume mission flight</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#mission-upload" class="nav-link">Mission upload</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#failsafe-actions-natively-supported-by-ugcs" class="nav-link">Failsafe actions natively supported by UgCS</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#vehicle-behavior-after-return-to-home" class="nav-link">Vehicle behavior after Return To Home</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#move-command" class="nav-link">Move command</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#vehicle-turn-types" class="nav-link">Vehicle turn types</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#panorama" class="nav-link">Panorama</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#camera-mode-for-panorama" class="nav-link">Camera mode for panorama</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#send-payload-command" class="nav-link">Send payload command</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-payload-attitude" class="nav-link">Set payload attitude</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#repeat-servo" class="nav-link">Repeat Servo</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#return-to-home" class="nav-link">Return to Home</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#select-camera-as-video-source" class="nav-link">Select camera as video source</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-fence" class="nav-link">Set Fence</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-gear-state" class="nav-link">Set Gear State</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#heading" class="nav-link">Heading</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-home-position" class="nav-link">Set home position</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-vehicle-parameter" class="nav-link">Set vehicle parameter</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#point-of-interest" class="nav-link">Point Of Interest</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-position-offset" class="nav-link">Set Position Offset</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-relative-heading" class="nav-link">Set Relative Heading</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-servo" class="nav-link">Set Servo</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-speed" class="nav-link">Set Speed</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#set-tension" class="nav-link">Set Tension</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#takeoff" class="nav-link">Takeoff</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#takeoff-position" class="nav-link">Takeoff position</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#transition-to-fixed-wing-flight" class="nav-link">Transition to fixed wing flight</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#transition-to-vtol-flight" class="nav-link">Transition to VTOL flight</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#trigger-sensor-calibration" class="nav-link">Trigger sensor calibration</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#wait" class="nav-link">Wait</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#doxid-d0-d07-ucs-vsm-commands-page-1c-wait-until" class="nav-link">Wait</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#waypoint-command" class="nav-link">Waypoint command</a>
-        </li>
-    
-            </ul>
-        </li>
-    
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#camera-power-states">
+       Camera power states
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trigger-camera-by-distance">
+     Trigger camera by distance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trigger-camera-by-time">
+     Trigger camera by time
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trigger-camera-from-user-interface">
+     Trigger camera from user interface
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#camera-trigger-states">
+       Camera trigger states
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trigger-camera">
+     Trigger camera
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#camera-trigger-state">
+       Camera trigger state
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#direct-payload-control">
+     Direct Payload Control
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#direct-vehicle-control">
+     Direct Vehicle Control
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#disarm-vehicle">
+     Disarm vehicle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emergency-land">
+     Emergency Land
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-native-route">
+     Get native route
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#guided-click-go-mode">
+     Guided (Click&amp;Go) mode
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#joystick">
+     Joystick
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#land">
+     Land
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#landing-position">
+     Landing position
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-control-mode">
+     Manual control mode.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#delete-route-from-vehicle">
+     Delete route from vehicle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pause-mission">
+     Pause mission
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resume-mission-flight">
+     Resume mission flight
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mission-upload">
+     Mission upload
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#failsafe-actions-natively-supported-by-ugcs">
+       Failsafe actions natively supported by UgCS
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vehicle-behavior-after-return-to-home">
+       Vehicle behavior after Return To Home
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#move-command">
+     Move command
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vehicle-turn-types">
+       Vehicle turn types
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#panorama">
+     Panorama
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#camera-mode-for-panorama">
+       Camera mode for panorama
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#send-payload-command">
+     Send payload command
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-payload-attitude">
+     Set payload attitude
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repeat-servo">
+     Repeat Servo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#return-to-home">
+     Return to Home
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-camera-as-video-source">
+     Select camera as video source
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-fence">
+     Set Fence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-gear-state">
+     Set Gear State
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heading">
+     Heading
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-home-position">
+     Set home position
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-vehicle-parameter">
+     Set vehicle parameter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#point-of-interest">
+     Point Of Interest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-position-offset">
+     Set Position Offset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-relative-heading">
+     Set Relative Heading
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-servo">
+     Set Servo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-speed">
+     Set Speed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-tension">
+     Set Tension
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#takeoff">
+     Takeoff
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#takeoff-position">
+     Takeoff position
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transition-to-fixed-wing-flight">
+     Transition to fixed wing flight
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transition-to-vtol-flight">
+     Transition to VTOL flight
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trigger-sensor-calibration">
+     Trigger sensor calibration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wait">
+     Wait
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#doxid-d0-d07-ucs-vsm-commands-page-1c-wait-until">
+     Wait
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#waypoint-command">
+     Waypoint command
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
 
 
@@ -478,6 +530,9 @@
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -2054,7 +2109,7 @@
     </div>
 
     
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="_static/js/index.d8bbf5861d671d414e1a.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">

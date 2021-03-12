@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>template struct ugcs::vsm::Action::Mapper&lt;Action::Type::CAMERA_SERIES_BY_DISTANCE&gt; &#8212; CPP VSM SDK  documentation</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.101715efdecc9b59cb6e1ddfa685c31f.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,17 +20,13 @@
 
     
       
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="_static/js/index.d8bbf5861d671d414e1a.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -45,50 +42,66 @@
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
-    <a class="navbar-brand" href="index.html">
+
     
-      <img src="_static/logo.png" class="logo" alt="logo" />
+      
+      <a class="navbar-brand" href="index.html">
+        <img src="_static/logo.png" class="logo" alt="logo">
+      </a>
+      
     
-    </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
+    
     <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
       <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_ucs_vsm_overview_page.html">Overview</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_getting_started.html">Getting Started</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_ucs_vsm_manual_page.html">Manual</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_tutorials_page.html">Tutorials</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="page_license_page.html">License</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="examples.html">Examples</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="global.html">Global Namespace</a>
-        </li>
-        
+        <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_ucs_vsm_overview_page.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_ucs_vsm_manual_page.html">
+  Manual
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_tutorials_page.html">
+  Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="page_license_page.html">
+  License
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="global.html">
+  Global Namespace
+ </a>
+</li>
+
         
         <li class="nav-item">
             <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
@@ -96,18 +109,13 @@
         
       </ul>
 
-
-      
-
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
+      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
       </ul>
     </div>
 </div>
@@ -117,75 +125,529 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-    <div class="bd-toc-item active">
-    
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l2">
+  <a class="reference internal" href="namespace_callback_internal.html">
+   namespace callback_internal
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="namespace_std.html">
+   namespace std
+  </a>
+ </li>
+ <li class="toctree-l2 current active">
+  <a class="reference internal" href="namespace_ugcs.html">
+   namespace ugcs
+  </a>
+  <ul class="current">
+   <li class="toctree-l3 current active">
+    <a class="reference internal" href="namespace_ugcs_vsm.html">
+     namespace ugcs::vsm
+    </a>
+    <ul class="current">
+     <li class="toctree-l4">
+      <a class="reference internal" href="namespace_ugcs_vsm_callback_internal.html">
+       namespace ugcs::vsm::callback_internal
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="namespace_ugcs_vsm_internal.html">
+       namespace ugcs::vsm::internal
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="namespace_ugcs_vsm_java_internals.html">
+       namespace ugcs::vsm::java_internals
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="namespace_ugcs_vsm_mavlink.html">
+       namespace ugcs::vsm::mavlink
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="namespace_ugcs_vsm_param_setter_internal.html">
+       namespace ugcs::vsm::param_setter_internal
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="namespace_ugcs_vsm_sockets.html">
+       namespace ugcs::vsm::sockets
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="enum_ugcs_vsm_Io_result.html">
+       enum ugcs::vsm::Io_result
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="enum_ugcs_vsm_Run_as_service_result.html">
+       enum ugcs::vsm::Run_as_service_result
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="struct_ugcs_vsm_Debug_assert_exception_dummy_struct.html">
+       struct ugcs::vsm::Debug_assert_exception_dummy_struct
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="struct_ugcs_vsm_Internal_error_exception_dummy_struct.html">
+       struct ugcs::vsm::Internal_error_exception_dummy_struct
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="struct_ugcs_vsm_Invalid_op_exception_dummy_struct.html">
+       struct ugcs::vsm::Invalid_op_exception_dummy_struct
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="struct_ugcs_vsm_Invalid_param_exception_dummy_struct.html">
+       struct ugcs::vsm::Invalid_param_exception_dummy_struct
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="struct_ugcs_vsm_Nullptr_exception_dummy_struct.html">
+       struct ugcs::vsm::Nullptr_exception_dummy_struct
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="struct_ugcs_vsm_System_exception_dummy_struct.html">
+       struct ugcs::vsm::System_exception_dummy_struct
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="struct_ugcs_vsm_Ucs_info.html">
+       struct ugcs::vsm::Ucs_info
+      </a>
+     </li>
+     <li class="toctree-l4 current active">
+      <a class="reference internal" href="class_ugcs_vsm_Action.html">
+       class ugcs::vsm::Action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor.html">
+       class ugcs::vsm::Android_serial_processor
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Bo_value.html">
+       template class ugcs::vsm::Bo_value
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Callback.html">
+       template class ugcs::vsm::Callback&lt;Method, typename std::enable_if&lt;callback_internal::Is_method_ptr&lt;Method&gt;()&gt;::type, Class_ptr, Args…&gt;
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Callback-2.html">
+       template class ugcs::vsm::Callback
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Callback_base.html">
+       template class ugcs::vsm::Callback_base
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Callback_forced_args.html">
+       template class ugcs::vsm::Callback_forced_args
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html">
+       template class ugcs::vsm::Callback_proxy
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Camera_control_action.html">
+       class ugcs::vsm::Camera_control_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Camera_series_by_distance_action.html">
+       class ugcs::vsm::Camera_series_by_distance_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Camera_series_by_time_action.html">
+       class ugcs::vsm::Camera_series_by_time_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Camera_trigger_action.html">
+       class ugcs::vsm::Camera_trigger_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Cartesian_tuple.html">
+       class ugcs::vsm::Cartesian_tuple
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Change_speed_action.html">
+       class ugcs::vsm::Change_speed_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Crc32.html">
+       class ugcs::vsm::Crc32
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Cucs_processor.html">
+       class ugcs::vsm::Cucs_processor
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Derived_exception.html">
+       template class ugcs::vsm::Derived_exception
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Device.html">
+       class ugcs::vsm::Device
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Enum_set.html">
+       template class ugcs::vsm::Enum_set
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Exception.html">
+       class ugcs::vsm::Exception
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_File_processor.html">
+       class ugcs::vsm::File_processor
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Geodetic_tuple.html">
+       class ugcs::vsm::Geodetic_tuple
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Heading_action.html">
+       class ugcs::vsm::Heading_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Http_parser.html">
+       class ugcs::vsm::Http_parser
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Io_buffer.html">
+       class ugcs::vsm::Io_buffer
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Io_request.html">
+       class ugcs::vsm::Io_request
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Io_stream.html">
+       class ugcs::vsm::Io_stream
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Java.html">
+       class ugcs::vsm::Java
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Landing_action.html">
+       class ugcs::vsm::Landing_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Local_interface.html">
+       class ugcs::vsm::Local_interface
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Log.html">
+       class ugcs::vsm::Log
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Mavlink_decoder.html">
+       class ugcs::vsm::Mavlink_decoder
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Mavlink_demuxer.html">
+       class ugcs::vsm::Mavlink_demuxer
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Mavlink_encoder.html">
+       class ugcs::vsm::Mavlink_encoder
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Mavlink_stream.html">
+       class ugcs::vsm::Mavlink_stream
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Move_action.html">
+       class ugcs::vsm::Move_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Operation_waiter.html">
+       class ugcs::vsm::Operation_waiter
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Panorama_action.html">
+       class ugcs::vsm::Panorama_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Param_exception.html">
+       template class ugcs::vsm::Param_exception
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Payload_steering_action.html">
+       class ugcs::vsm::Payload_steering_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Piped_request_waiter.html">
+       class ugcs::vsm::Piped_request_waiter
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Poi_action.html">
+       class ugcs::vsm::Poi_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Position.html">
+       template class ugcs::vsm::Position
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Properties.html">
+       class ugcs::vsm::Properties
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Property.html">
+       class ugcs::vsm::Property
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Property_list.html">
+       class ugcs::vsm::Property_list
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Quaternion.html">
+       class ugcs::vsm::Quaternion
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Read_request.html">
+       class ugcs::vsm::Read_request
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Reference_guard.html">
+       template class ugcs::vsm::Reference_guard
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Repeat_servo_action.html">
+       class ugcs::vsm::Repeat_servo_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Request_container.html">
+       class ugcs::vsm::Request_container
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Request_context.html">
+       template class ugcs::vsm::Request_context
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Request_temp_completion_context.html">
+       class ugcs::vsm::Request_temp_completion_context
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Request_worker.html">
+       class ugcs::vsm::Request_worker
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Serial_processor.html">
+       class ugcs::vsm::Serial_processor
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Service_discovery_processor.html">
+       class ugcs::vsm::Service_discovery_processor
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Set_home_action.html">
+       class ugcs::vsm::Set_home_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Set_servo_action.html">
+       class ugcs::vsm::Set_servo_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Shared_memory.html">
+       class ugcs::vsm::Shared_memory
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Shared_mutex_file.html">
+       class ugcs::vsm::Shared_mutex_file
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Singleton.html">
+       template class ugcs::vsm::Singleton
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Socket_processor.html">
+       class ugcs::vsm::Socket_processor
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Subsystem.html">
+       class ugcs::vsm::Subsystem
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Takeoff_action.html">
+       class ugcs::vsm::Takeoff_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Task.html">
+       class ugcs::vsm::Task
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Task_attributes_action.html">
+       class ugcs::vsm::Task_attributes_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Text_stream_filter.html">
+       class ugcs::vsm::Text_stream_filter
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Timer_processor.html">
+       class ugcs::vsm::Timer_processor
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Ucs_request.html">
+       class ugcs::vsm::Ucs_request
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Vehicle.html">
+       class ugcs::vsm::Vehicle
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Vehicle_command.html">
+       class ugcs::vsm::Vehicle_command
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Vehicle_request.html">
+       class ugcs::vsm::Vehicle_request
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Vehicle_request_spec.html">
+       template class ugcs::vsm::Vehicle_request_spec&lt;void&gt;
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Vehicle_request_spec-2.html">
+       template class ugcs::vsm::Vehicle_request_spec
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Vsm_command.html">
+       class ugcs::vsm::Vsm_command
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Vtol_transition_action.html">
+       class ugcs::vsm::Vtol_transition_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Wait_action.html">
+       class ugcs::vsm::Wait_action
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Wgs84_datum.html">
+       class ugcs::vsm::Wgs84_datum
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Windows_wstring.html">
+       class ugcs::vsm::Windows_wstring
+      </a>
+     </li>
+     <li class="toctree-l4">
+      <a class="reference internal" href="class_ugcs_vsm_Write_request.html">
+       class ugcs::vsm::Write_request
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="struct_glob_t.html">
+   struct glob_t
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="class_Adsb_vehicle.html">
+   class Adsb_vehicle
+  </a>
+ </li>
+</ul>
+  </div>
+</nav>
+            </div>
             
-                <li class="">
-                    <a href="namespace_callback_internal.html">namespace callback_internal</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="namespace_std.html">namespace std</a>
-                </li>
-            
-          
-            
-  
-                <li class="active">
-                    <a href="namespace_ugcs.html">namespace ugcs</a>
-                    <ul>
-                    
-                        <li class="active">
-                            <a href="namespace_ugcs_vsm.html">namespace ugcs::vsm</a>
-                        </li>
-                    
-                    </ul>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="struct_glob_t.html">struct glob_t</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="class_Adsb_vehicle.html">class Adsb_vehicle</a>
-                </li>
-            
-          
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
           
 
           
@@ -196,23 +658,26 @@
 </div>
 
 <nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#overview" class="nav-link">Overview</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#detailed-documentation" class="nav-link">Detailed Documentation</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#typedefs" class="nav-link">Typedefs</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-    </ul>
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#detailed-documentation">
+   Detailed Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#typedefs">
+     Typedefs
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
 
 
@@ -220,6 +685,9 @@
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -271,7 +739,7 @@
     </div>
 
     
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="_static/js/index.d8bbf5861d671d414e1a.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
