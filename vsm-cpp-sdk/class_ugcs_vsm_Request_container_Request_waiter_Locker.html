@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Request_container::Request_waiter::Locker &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -698,11 +699,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-request-container-request-waiter-locker">
+  <section id="class-ugcs-vsm-request-container-request-waiter-locker">
 <span id="doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker"></span><span id="index-0"></span><h1>class ugcs::vsm::Request_container::Request_waiter::Locker<a class="headerlink" href="#class-ugcs-vsm-request-container-request-waiter-locker" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Helper class for RAII-based locking and notifying <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter"><span class="std std-ref">Request_waiter</span></a> objects. <a class="reference internal" href="#details-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;request_container.h&gt;</span><span class="cp"></span>
@@ -723,12 +724,12 @@
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker-1a22ff7f040c1989ed44a6973d553bbe34"><span class="std std-ref">Want_notify</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker-1a97dfc866e31ed818d9fe8de8c97e37f3"><span class="std std-ref">Is_same_waiter</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a3d3b944e71e1b2c4bb50a670bf5502d4"><span class="std std-ref">Request_waiter::Ptr</span></a><span></span><span class="o">&amp;</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Helper class for RAII-based locking and notifying <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter"><span class="std std-ref">Request_waiter</span></a> objects.</p>
 <p>Obtained via <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a0fbf3d49770621805d92efeb52f0677e"><span class="std std-ref">Request_waiter::Lock</span></a> and <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1abc1622663e12f80b21b1f0e36ff0c431"><span class="std std-ref">Request_waiter::Lock_notify</span></a> methods.</p>
-<div class="section" id="construction">
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker-1a47664f560d2286e7a9e1c4aa89005c98"><span id="index-1"></span><span></span><span class="n">Locker</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a3d3b944e71e1b2c4bb50a670bf5502d4"><span class="std std-ref">Request_waiter::Ptr</span></a><span></span> <span class="n">waiter</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">want_notify</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></pre>
 <p>Construct locker object.</p>
@@ -751,8 +752,8 @@
 <p>Disable copying.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker-1a3a36d65ad2bc85dcd0d1195e50e12694"><span id="index-3"></span><span></span><span class="n">Locker</span><span class="p">(</span><span class="n">Locker</span><span class="o">&amp;&amp;</span><span class="p">)</span></pre>
 <p>Enable moving.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker-1a66f2f41e7f3f365545a524c084ba4da5"><span id="index-4"></span><span></span><span class="kt">void</span> <span class="n">Lock</span><span class="p">()</span></pre>
 <p>Lock the waiter explicitly.</p>
@@ -786,9 +787,9 @@
 <p>Is locker wants a notify.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dc-d0c-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1-1-locker-1a97dfc866e31ed818d9fe8de8c97e37f3"><span id="index-7"></span><span></span><span class="kt">bool</span> <span class="n">Is_same_waiter</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1a3d3b944e71e1b2c4bb50a670bf5502d4"><span class="std std-ref">Request_waiter::Ptr</span></a><span></span><span class="o">&amp;</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Check if locker is bound to this waiter.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

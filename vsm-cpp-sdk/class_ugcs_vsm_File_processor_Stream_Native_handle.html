@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::File_processor::Stream::Native_handle &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-file-processor-stream-native-handle">
+  <section id="class-ugcs-vsm-file-processor-stream-native-handle">
 <span id="doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle"></span><span id="index-0"></span><h1>class ugcs::vsm::File_processor::Stream::Native_handle<a class="headerlink" href="#class-ugcs-vsm-file-processor-stream-native-handle" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Interface for platform native file handle. <a class="reference internal" href="#details-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;file_processor.h&gt;</span><span class="cp"></span>
@@ -753,17 +754,17 @@
 
 <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_internal_Posix_file_handle.html#doxid-d7-dce-classugcs-1-1vsm-1-1internal-1-1-posix-file-handle"><span class="std std-ref">Posix_file_handle</span></a><span></span><span class="p">;</span>
 <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_internal_Windows_file_handle.html#doxid-db-dbb-classugcs-1-1vsm-1-1internal-1-1-windows-file-handle"><span class="std std-ref">Windows_file_handle</span></a><span></span><span class="p">;</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Interface for platform native file handle.</p>
 <p>Platform-dependent class should be derived from this one.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1a2de77c6c5a0cf7fbcbeb655f5577acd6"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Native_handle</span><span class="o">&gt;</span> <span class="n">Unique_ptr</span></pre>
 <p>Unique pointer type.</p>
-</div>
-<div class="section" id="fields">
+</section>
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1a536ef3b73eb8a98cfa83502e306436cb"><span id="index-2"></span><a class="reference internal" href="class_ugcs_vsm_Read_request.html#doxid-d1-d78-classugcs-1-1vsm-1-1-read-request-1a2a58c202f3c3991a521d684d37eb2170"><span class="std std-ref">Read_request::Ptr</span></a><span></span> <span class="n">cur_read_request</span></pre>
 <p>Current read request.</p>
@@ -781,8 +782,8 @@
 <p>Holds reference to a stream while write operation is in progress.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1aec0618ac644e1e1aacbb27380bf2acd6"><span id="index-9"></span><a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a1ded5e2b5857bbb1b626998818eb47a0"><span class="std std-ref">Stream::Ptr</span></a><span></span> <span class="n">read_active</span></pre>
 <p>Holds reference to a stream while read operation is in progress.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1a18eaa9e16f9f0683853cf1f722e25db1"><span id="index-10"></span><span></span><span class="kt">void</span> <span class="n">Set_stream</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a1ded5e2b5857bbb1b626998818eb47a0"><span class="std std-ref">Stream::Ptr</span></a><span></span> <span class="n">stream</span><span class="p">)</span></pre>
 <p>Set associated stream.</p>
@@ -816,9 +817,9 @@
 <p>Process write operation abortion.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1a0103d1be17dd0f2f2f13e5f15c6f8f4a"><span id="index-20"></span><span></span><span class="kt">void</span> <span class="n">Handle_read_abort</span><span class="p">()</span></pre>
 <p>Process write operation abortion.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

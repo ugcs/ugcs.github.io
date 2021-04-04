@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Vehicle_request &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-vehicle-request">
+  <section id="class-ugcs-vsm-vehicle-request">
 <span id="doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request"></span><span id="index-0"></span><h1>class ugcs::vsm::Vehicle_request<a class="headerlink" href="#class-ugcs-vsm-vehicle-request" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Base class of a generic request for a vehicle. <a class="reference internal" href="#details-d7-dce-classugcs-1-1vsm-1-1-vehicle-request"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;vehicle_request.h&gt;</span><span class="cp"></span>
@@ -754,12 +755,12 @@
 
 <span class="k">template</span> <span class="o">&lt;&gt;</span>
 <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Vehicle_request_spec.html#doxid-d0-d23-classugcs-1-1vsm-1-1-vehicle-request-spec-3-01void-01-4"><span class="std std-ref">Vehicle_request_spec&lt;void&gt;</span></a><span></span><span class="p">;</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d7-dce-classugcs-1-1vsm-1-1-vehicle-request"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Base class of a generic request for a vehicle.</p>
 <p>It provides reference management methods for associated handles.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1ad12d0a27080cb9ad623fa6dc3bbe4c4f"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Vehicle_request</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
@@ -767,13 +768,13 @@
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1ac5f7f79f0ee553d93b7bf7405d7621d0"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">Callback_proxy</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_Vehicle_request_Result.html#doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1a3a5f2dd1a66c9530931d45b964d1ff8b"><span class="std std-ref">Result</span></a><span></span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">Completion_handler</span></pre>
 <p>Completion handler type of the request.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1ae7a76954e8180183dcd9664ff041226f"><span id="index-4"></span><span></span><span class="n">Vehicle_request</span><span class="p">(</span><a class="reference internal" href="#doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1ac5f7f79f0ee553d93b7bf7405d7621d0"><span class="std std-ref">Completion_handler</span></a><span></span> <span class="n">completion_handler</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a470f700b033c20641c2076b2e76b9ccf"><span class="std std-ref">Request_completion_context::Ptr</span></a><span></span> <span class="n">completion_ctx</span><span class="p">)</span></pre>
 <p>Construct base request instance.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1af304eb7adf94a8e9ffdaeaea12c2e250"><span id="index-5"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="#doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1ad12d0a27080cb9ad623fa6dc3bbe4c4f"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
@@ -807,9 +808,9 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dce-classugcs-1-1vsm-1-1-vehicle-request-1a27f0097b59b87a63d54c6a18f8ff0761"><span id="index-12"></span><span></span><span class="kt">void</span> <span class="n">Release_ref</span><span class="p">()</span></pre>
 <p>Release reference from user handle.</p>
 <p>When last references is released, request is automatically completed with currently set result.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

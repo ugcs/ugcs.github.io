@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>template class ugcs::vsm::Callback_proxy &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="template-class-ugcs-vsm-callback-proxy">
+  <section id="template-class-ugcs-vsm-callback-proxy">
 <span id="doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"></span><span id="index-0"></span><h1>template class ugcs::vsm::Callback_proxy<a class="headerlink" href="#template-class-ugcs-vsm-callback-proxy" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Helper class for proxying callback invocation. <a class="reference internal" href="#details-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;callback.h&gt;</span><span class="cp"></span>
@@ -756,8 +757,8 @@
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1ab457d696835c1ad28c73c63d68b6c456"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Callback_proxy</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1aa3c4be3e4bfa6b489b02c2f82cf4eb1d"><span class="std std-ref">operator !=</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Callback_proxy</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Helper class for proxying callback invocation.</p>
 <p>It is aware of specified number of first arguments to the target callback.</p>
@@ -776,7 +777,7 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a51ae7be0944a2b29aeac52ee6ea8df51"><span id="index-1"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_base.html#doxid-dc-d4f-classugcs-1-1vsm-1-1-callback-base"><span class="std std-ref">Callback_base</span></a><span></span><span class="o">&lt;</span><span class="n">Result</span><span class="o">&gt;</span> <span class="n">Callback_type</span></pre>
 <p>Base type of the underlying callback object.</p>
@@ -786,16 +787,16 @@
 <p>Creates reference type to the argument with index <em>arg_idx</em>.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a7e6b99fed88638d6afcde3141eb3c140"><span id="index-4"></span><span></span><span class="k">typedef</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">tuple_element</span><span class="o">&lt;</span><span class="n">arg_idx</span><span class="p">,</span> <span class="n">Args_ptr_tuple</span><span class="o">&gt;::</span><span class="n">type</span> <span class="n">Arg_ptr_type</span></pre>
 <p>Creates pointer type to the argument with index <em>arg_idx</em>.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a70cdf9a7d3aed24b3c6b3d899c7070f4"><span id="index-5"></span><span></span><span class="n">Callback_proxy</span><span class="p">()</span></pre>
 <p>Default constructor creates unbound instance.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a57263a233f34f3efbf21d60f70b74eea"><span id="index-6"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Callback_ptr</span><span class="o">&gt;</span>
 <span class="n">Callback_proxy</span><span class="p">(</span><a class="reference internal" href="#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a49a9a04d85f893be6a3001d3d5333e4f"><span class="std std-ref">Callback_ptr</span></a><span></span> <span class="n">cbk</span><span class="p">)</span></pre>
 <p>Constructs instance bound to the provided callback object.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a891dd9644ddff55f4f834a23dde7c7fd"><span id="index-7"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Invoke_args</span><span class="o">&gt;</span>
 <span class="kt">void</span> <span class="n">Set_args</span><span class="p">(</span><span class="n">Invoke_args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">invoke_args</span><span class="p">)</span> <span class="k">const</span></pre>
@@ -845,9 +846,9 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1aa3c4be3e4bfa6b489b02c2f82cf4eb1d"><span id="index-16"></span><span></span><span class="kt">bool</span> <span class="k">operator</span> <span class="o">!=</span> <span class="p">(</span><span class="k">const</span> <span class="n">Callback_proxy</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Non-equality operator.</p>
 <p>Proxies pointing to the different callbacks are considered different.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

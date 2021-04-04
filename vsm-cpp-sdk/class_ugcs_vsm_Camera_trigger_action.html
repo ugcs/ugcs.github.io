@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Camera_trigger_action &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -715,11 +716,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-camera-trigger-action">
+  <section id="class-ugcs-vsm-camera-trigger-action">
 <span id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action"></span><span id="index-0"></span><h1>class ugcs::vsm::Camera_trigger_action<a class="headerlink" href="#class-ugcs-vsm-camera-trigger-action" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Camera trigger action. <a class="reference internal" href="#details-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;camera_trigger_action.h&gt;</span><span class="cp"></span>
@@ -747,7 +748,7 @@
     <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
     <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1a571c870131ae7046a403459a9514a1ea"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
 <span class="p">};</span></pre>
-<div class="section" id="inherited-members">
+<section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
@@ -836,27 +837,27 @@
 
     <span class="k">template</span> <span class="o">&lt;</span><span class="n">Type</span> <span class="n">type_val</span><span class="o">&gt;</span>
     <a class="reference internal" href="struct_ugcs_vsm_Action_Mapper-13.html#doxid-da-d7c-structugcs-1-1vsm-1-1-action-1-1-mapper"><span class="std std-ref">Mapper</span></a><span></span><span class="o">&lt;</span><span class="n">type_val</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">::</span><span class="n">Ptr</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1afa1b44b7522526e19d771946cd2c5dff"><span class="std std-ref">Get_action</span></a><span></span><span class="p">();</span></pre>
-</div>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+</section>
+<section id="detailed-documentation">
 <span id="details-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Camera trigger action.</p>
 <p>Changes on-board camera trigger state or triggering mode.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1a894db84722b3ecd783ae5f4dd293b441"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Camera_trigger_action</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1aef3b3248762510888a246f18143cccd9"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Camera_trigger_action</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
 <p>Pointer type.</p>
-</div>
-<div class="section" id="fields">
+</section>
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1a3ca4acf876f313124701ebf1c5fc755c"><span id="index-3"></span><span></span><span class="n">proto</span><span class="o">::</span><span class="n">Camera_mission_trigger_state</span> <span class="n">state</span></pre>
 <p>Camera trigger state.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1a09759d088a526f7a24b862b688a6aa1a"><span id="index-4"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <span class="n">interval</span></pre>
 <p>Interval between two consequent camera shots in case of serial triggering (State::SERIAL_PHOTO).</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1ab9a997540e5de961c1d7720e99f1c8cd"><span id="index-5"></span><span></span><span class="n">Camera_trigger_action</span><span class="p">(</span>
     <span class="n">proto</span><span class="o">::</span><span class="n">Camera_mission_trigger_state</span> <span class="n">state</span><span class="p">,</span>
@@ -865,15 +866,15 @@
 <p>Construct camera trigger action explicitly.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1a6f14d2759e19308c3cdf2604f076926a"><span id="index-6"></span><span></span><span class="n">Camera_trigger_action</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Property_list.html#doxid-d2-d2d-classugcs-1-1vsm-1-1-property-list"><span class="std std-ref">Property_list</span></a><span></span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span></pre>
 <p>Construct action from protobuf command.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-da7-classugcs-1-1vsm-1-1-camera-trigger-action-1a571c870131ae7046a403459a9514a1ea"><span id="index-7"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Action.html#doxid-dc-d7a-classugcs-1-1vsm-1-1-action-1a007a63a9fd002ec1c5f4ecc809a62c5a"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
 <p>Create an instance.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

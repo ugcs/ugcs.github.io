@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::File_processor::Stream::Mode &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -698,11 +699,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-file-processor-stream-mode">
+  <section id="class-ugcs-vsm-file-processor-stream-mode">
 <span id="doxid-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode"></span><span id="index-0"></span><h1>class ugcs::vsm::File_processor::Stream::Mode<a class="headerlink" href="#class-ugcs-vsm-file-processor-stream-mode" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="#doxid-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode"><span class="std std-ref">Mode</span></a> for file opening. <a class="reference internal" href="#details-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;file_processor.h&gt;</span><span class="cp"></span>
@@ -721,11 +722,11 @@
 
     <a class="reference internal" href="#doxid-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode-1a1a1641d1d7a8b8e1c1e47c7c46fabe56"><span class="std std-ref">Mode</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">mode_str</span><span class="p">);</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="#doxid-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode"><span class="std std-ref">Mode</span></a> for file opening.</p>
-<div class="section" id="fields">
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode-1aaf88732e5d5a3708bf8f730e5b9fc1ba"><span id="index-1"></span><span></span><span class="kt">bool</span> <span class="nl">read</span><span class="p">:</span><span class="mi">1</span></pre>
 <p>Read access.</p>
@@ -738,8 +739,8 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode-1a87f3bf486b04cc10a94bec3cc150fae2"><span id="index-4"></span><span></span><span class="kt">bool</span> <span class="nl">should_not_exist</span><span class="p">:</span><span class="mi">1</span></pre>
 <p>File should not exist 1) When used with write access: If specified, opening fails if file is already existing.</p>
 <p>If not specified, new file is created if it does not exist. 2) When used with read access: If specified, file is created if file does not exist. If not specified, opening fails if file does not exist. NOTE ‘x’ with ‘r’ combination is not allowed in standard fopen() call. It is our extension to allow creation new file while opening it in read-only mode. (Does not mean that file on filesystem is read only.)</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-de-d57-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-mode-1a1a1641d1d7a8b8e1c1e47c7c46fabe56"><span id="index-5"></span><span></span><span class="n">Mode</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">mode_str</span><span class="p">)</span></pre>
 <p>Parse and validate mode string into binary structure.</p>
@@ -758,9 +759,9 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

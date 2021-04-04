@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::internal::Posix_file_handle &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -700,11 +701,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-internal-posix-file-handle">
+  <section id="class-ugcs-vsm-internal-posix-file-handle">
 <span id="doxid-d7-dce-classugcs-1-1vsm-1-1internal-1-1-posix-file-handle"></span><span id="index-0"></span><h1>class ugcs::vsm::internal::Posix_file_handle<a class="headerlink" href="#class-ugcs-vsm-internal-posix-file-handle" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>POSIX-specific implementation of system native file handle. <a class="reference internal" href="#details-d7-dce-classugcs-1-1vsm-1-1internal-1-1-posix-file-handle"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;posix_file_handle.h&gt;</span><span class="cp"></span>
@@ -726,7 +727,7 @@
         <span class="kt">mode_t</span> <span class="n">permissions</span> <span class="o">=</span> <span class="n">S_IRUSR</span><span class="o">|</span><span class="n">S_IWUSR</span><span class="o">|</span><span class="n">S_IRGRP</span><span class="o">|</span><span class="n">S_IROTH</span>
         <span class="p">);</span>
 <span class="p">};</span></pre>
-<div class="section" id="inherited-members">
+<section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
@@ -761,12 +762,12 @@
     <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream_Native_handle.html#doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1a6205971499052eb729f04ab1695c64b3"><span class="std std-ref">Close</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream_Native_handle.html#doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1afb43a987e84eecc0f64513e7bbbb38f3"><span class="std std-ref">Handle_write_abort</span></a><span></span><span class="p">();</span>
     <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream_Native_handle.html#doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1a0103d1be17dd0f2f2f13e5f15c6f8f4a"><span class="std std-ref">Handle_read_abort</span></a><span></span><span class="p">();</span></pre>
-</div>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+</section>
+<section id="detailed-documentation">
 <span id="details-d7-dce-classugcs-1-1vsm-1-1internal-1-1-posix-file-handle"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>POSIX-specific implementation of system native file handle.</p>
-<div class="section" id="construction">
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dce-classugcs-1-1vsm-1-1internal-1-1-posix-file-handle-1a564cdd3b364b5f639cd1ccce84a1ceeb"><span id="index-1"></span><span></span><span class="n">Posix_file_handle</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">,</span> <span class="kt">int</span> <span class="n">write_fd</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></pre>
 <p>Construct an instance based on already opened descriptors.</p>
@@ -776,9 +777,9 @@
     <span class="kt">mode_t</span> <span class="n">permissions</span> <span class="o">=</span> <span class="n">S_IRUSR</span><span class="o">|</span><span class="n">S_IWUSR</span><span class="o">|</span><span class="n">S_IRGRP</span><span class="o">|</span><span class="n">S_IROTH</span>
     <span class="p">)</span></pre>
 <p>Construct an instance by opening a file specified by path.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

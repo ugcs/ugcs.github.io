@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>UCS-VSM protocol wire format &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -224,13 +225,13 @@
               
               <div>
                 
-  <div class="section" id="ucs-vsm-protocol-wire-format">
+  <section id="ucs-vsm-protocol-wire-format">
 <span id="doxid-d0-d88-ucs-vsm-protocol-wire-format-page"></span><span id="index-0"></span><h1>UCS-VSM protocol wire format<a class="headerlink" href="#ucs-vsm-protocol-wire-format" title="Permalink to this headline">¶</a></h1>
 <p>The protocol data is sent over TCP connection. Protobuf does not specify message boundaries, so the simplest way to send multiple messages is to delimit them with message length. Data format is:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">message_size</span><span class="o">&gt;&lt;</span><span class="n">proto_message</span><span class="o">&gt;&lt;</span><span class="n">message_size</span><span class="o">&gt;&lt;</span><span class="n">proto_message</span><span class="o">&gt;&lt;</span><span class="n">message_size</span><span class="o">&gt;&lt;</span><span class="n">proto_message</span><span class="o">&gt;</span><span class="p">...</span>
 </pre></div>
 </div>
-</div>
+</section>
 
 
               </div>

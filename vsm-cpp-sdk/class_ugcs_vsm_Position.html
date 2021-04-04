@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>template class ugcs::vsm::Position &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -708,11 +709,11 @@
               
               <div>
                 
-  <div class="section" id="template-class-ugcs-vsm-position">
+  <section id="template-class-ugcs-vsm-position">
 <span id="doxid-df-d50-classugcs-1-1vsm-1-1-position"></span><span id="index-0"></span><h1>template class ugcs::vsm::Position<a class="headerlink" href="#template-class-ugcs-vsm-position" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Immutable position in a specified coordinates system. <a class="reference internal" href="#details-df-d50-classugcs-1-1vsm-1-1-position"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coordinates.h&gt;</span><span class="cp"></span>
@@ -744,28 +745,28 @@
     <span class="kt">double</span> <a class="reference internal" href="#doxid-df-d50-classugcs-1-1vsm-1-1-position-1a42cc53975b66724969854c2f2e7412bc"><span class="std std-ref">Earth_radius</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
     <span class="kt">double</span> <a class="reference internal" href="#doxid-df-d50-classugcs-1-1vsm-1-1-position-1adea14a49b6bdcdc267a184ddcdfc3ba4"><span class="std std-ref">Distance</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Position</span><span class="o">&amp;</span> <span class="n">pos</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-df-d50-classugcs-1-1vsm-1-1-position"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Immutable position in a specified coordinates system.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d50-classugcs-1-1vsm-1-1-position-1ab861ae0c8ac58ce1cb67b9531779c4c3"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">Datum</span> <span class="n">Datum_type</span></pre>
 <p>Associated datum.</p>
-</div>
-<div class="section" id="fields">
+</section>
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d50-classugcs-1-1vsm-1-1-position-1afd11328465d94ce2ce259465cdf73994"><span id="index-2"></span><span></span><span class="k">static</span> <span class="k">constexpr</span> <span class="kt">double</span> <span class="n">ECCENTRICITY_SQUARED</span> <span class="o">=</span><span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="n">Datum</span><span class="o">::</span><span class="n">FLATTENING</span><span class="p">)</span><span class="o">*</span> <span class="n">Datum</span><span class="o">::</span><span class="n">FLATTENING</span></pre>
 <p>Square of eccentricity of the reference ellipsoid.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d50-classugcs-1-1vsm-1-1-position-1aadbc58428c90fe8de3608e1939561306"><span id="index-3"></span><span></span><span class="n">Position</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Geodetic_tuple.html#doxid-dc-d3b-classugcs-1-1vsm-1-1-geodetic-tuple"><span class="std std-ref">Geodetic_tuple</span></a><span></span> <span class="n">tuple</span><span class="p">)</span></pre>
 <p>Construct position from geodetic coordinates.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d50-classugcs-1-1vsm-1-1-position-1a8eaab45c4253a008123195985d78a0c7"><span id="index-4"></span><span></span><span class="n">Position</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Cartesian_tuple.html#doxid-d4-da0-classugcs-1-1vsm-1-1-cartesian-tuple"><span class="std std-ref">Cartesian_tuple</span></a><span></span> <span class="n">tuple</span><span class="p">)</span></pre>
 <p>Construct position from ECEF coordinates.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d50-classugcs-1-1vsm-1-1-position-1a466020bfb970812aa9efa5d1e43c5f85"><span id="index-5"></span><a class="reference internal" href="class_ugcs_vsm_Geodetic_tuple.html#doxid-dc-d3b-classugcs-1-1vsm-1-1-geodetic-tuple"><span class="std std-ref">Geodetic_tuple</span></a><span></span> <span class="n">Get_geodetic</span><span class="p">()</span> <span class="k">const</span></pre>
 <p>Get representation in geodetic coordinates.</p>
@@ -781,9 +782,9 @@
 <p>The Earth’s mean radius of curvature (averaging over all directions) at a latitude of the position.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-df-d50-classugcs-1-1vsm-1-1-position-1adea14a49b6bdcdc267a184ddcdfc3ba4"><span id="index-11"></span><span></span><span class="kt">double</span> <span class="n">Distance</span><span class="p">(</span><span class="k">const</span> <span class="n">Position</span><span class="o">&amp;</span> <span class="n">pos</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Calculate the surface (altitude is not taken into account) distance in meters between this and given positions using spherical law of cosines formula and mean Earth radius of curvature between these points.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

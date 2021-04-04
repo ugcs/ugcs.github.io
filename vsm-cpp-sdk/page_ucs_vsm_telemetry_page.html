@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Telemetry protocol &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -246,15 +247,15 @@
               
               <div>
                 
-  <div class="section" id="telemetry-protocol">
+  <section id="telemetry-protocol">
 <span id="doxid-de-d20-ucs-vsm-telemetry-page"></span><span id="index-0"></span><h1>Telemetry protocol<a class="headerlink" href="#telemetry-protocol" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="telemetry-field-registration">
+<section id="telemetry-field-registration">
 <span id="doxid-de-d20-ucs-vsm-telemetry-page-1telemetry-registration"></span><h2>Telemetry field registration<a class="headerlink" href="#telemetry-field-registration" title="Permalink to this headline">¶</a></h2>
 <p>Before any telemetry can be sent to the UCS it must be registered.</p>
 <p>Each telemetry field supported by the vehicle should be registered via <strong>Register_vehicle.register_flight_controller.telemetry_fields</strong> message (See <a class="reference internal" href="page_ucs_vsm_fields_page.html#doxid-d3-d7e-ucs-vsm-fields-page-1register-field"><span class="std std-ref">Register_field message</span></a>).</p>
 <p>All telemetry values are considered valid until explicitly reported as N/A by the VSM.</p>
 <p>VSM will send N/A automatically depending on timeout upon field creation. This timeout value is used only by VSM-SDK and not communicated to UCS.</p>
-<div class="section" id="built-in-telemetry-field-names">
+<section id="built-in-telemetry-field-names">
 <span id="doxid-de-d20-ucs-vsm-telemetry-page-1telemetry-fields"></span><h3>Built in telemetry field names<a class="headerlink" href="#built-in-telemetry-field-names" title="Permalink to this headline">¶</a></h3>
 <p>VSM can register any set of telemetry fields but there are some built in telemetry field names which are treated specially by UCS.</p>
 <p>Registering different semantic for these values will lead to undesired results.</p>
@@ -645,13 +646,13 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="sending-telemetry-data">
+</section>
+</section>
+<section id="sending-telemetry-data">
 <span id="doxid-de-d20-ucs-vsm-telemetry-page-1telemetry-sending"></span><h2>Sending telemetry data<a class="headerlink" href="#sending-telemetry-data" title="Permalink to this headline">¶</a></h2>
 <p>Any message from VSM can contain a set of telemetry fields from vehicle specified by <strong>device_id</strong> (Vsm_message.device_status.telemetry_fields).</p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Mavlink_stream &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-mavlink-stream">
+  <section id="class-ugcs-vsm-mavlink-stream">
 <span id="doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream"></span><span id="index-0"></span><h1>class ugcs::vsm::Mavlink_stream<a class="headerlink" href="#class-ugcs-vsm-mavlink-stream" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Convenience class for interpreting an I/O stream as a stream of Mavlink messages. <a class="reference internal" href="#details-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;mavlink_stream.h&gt;</span><span class="cp"></span>
@@ -759,12 +760,12 @@
 
     <span class="kt">void</span> <a class="reference internal" href="#doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1a1af5e8ff3d5bf999ccf3f5bdf773048e"><span class="std std-ref">Disable</span></a><span></span><span class="p">();</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Convenience class for interpreting an I/O stream as a stream of Mavlink messages.</p>
 <p>It is assumed, that only one such class at a time is used with a given I/O stream.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1abd4e0d55fcd33be68608da19906fb828"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Mavlink_stream</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
@@ -772,15 +773,15 @@
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1a8e965d031fa4ed74a3845500650b87fd"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Mavlink_decoder.html#doxid-d5-da3-classugcs-1-1vsm-1-1-mavlink-decoder"><span class="std std-ref">Mavlink_decoder</span></a><span></span> <span class="n">Decoder</span></pre>
 <p>Type of the appropriate Mavlink decoder.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1a56177bcc2ae2fe06157b07f1bdefd496"><span id="index-4"></span><span></span><span class="n">Mavlink_stream</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Io_stream.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a534252726a25aeb3c0598f7d9a80a0a1"><span class="std std-ref">Io_stream::Ref</span></a><span></span> <span class="n">stream</span><span class="p">)</span></pre>
 <p>Construct Mavlink stream using a I/O stream.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1aba32675e415b3d48bff97ec9bf6c3c5f"><span id="index-5"></span><span></span><span class="n">Mavlink_stream</span><span class="p">(</span><span class="k">const</span> <span class="n">Mavlink_stream</span><span class="o">&amp;</span><span class="p">)</span></pre>
 <p>Disable copy constructor.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1aa4570f1cd51af44ea7122ba3a3d42ffa"><span id="index-6"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="#doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1abd4e0d55fcd33be68608da19906fb828"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
@@ -821,9 +822,9 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-d5c-classugcs-1-1vsm-1-1-mavlink-stream-1a1af5e8ff3d5bf999ccf3f5bdf773048e"><span id="index-15"></span><span></span><span class="kt">void</span> <span class="n">Disable</span><span class="p">()</span></pre>
 <p>Disable the class.</p>
 <p>Underlying I/O stream is freed, but not explicitly closed, because this stream could be passed for further processing. Unfinished write operations are aborted.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

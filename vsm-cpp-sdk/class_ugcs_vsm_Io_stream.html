@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Io_stream &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -708,11 +709,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-io-stream">
+  <section id="class-ugcs-vsm-io-stream">
 <span id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream"></span><span id="index-0"></span><h1>class ugcs::vsm::Io_stream<a class="headerlink" href="#class-ugcs-vsm-io-stream" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Abstract I/O stream interface. <a class="reference internal" href="#details-d7-dc6-classugcs-1-1vsm-1-1-io-stream"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;io_stream.h&gt;</span><span class="cp"></span>
@@ -783,12 +784,12 @@
 <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor_Stream.html#doxid-d6-d1a-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream"><span class="std std-ref">Stream</span></a><span></span><span class="p">;</span>
 <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream"><span class="std std-ref">Stream</span></a><span></span><span class="p">;</span>
 <span class="k">class</span> <a class="reference internal" href="class_ugcs_vsm_Socket_processor_Stream.html#doxid-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream"><span class="std std-ref">Stream</span></a><span></span><span class="p">;</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d7-dc6-classugcs-1-1vsm-1-1-io-stream"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Abstract I/O stream interface.</p>
 <p>All SDK objects which supports reading and/or writing raw bytes (like network connections, files, serial connections) implement this interface.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1adb1bb7a5387d65f5cd701bf65705c966"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Io_stream</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
@@ -805,24 +806,24 @@
 <p>Default prototype for read operation completion handler.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1af75df5614ea608c625760ecb1f4b6531"><span id="index-7"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">Callback_proxy</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">Close_handler</span></pre>
 <p>Default prototype for close operation completion handler.</p>
-</div>
-<div class="section" id="fields">
+</section>
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a50c5048c33356dbca76feed7e50e9cc3"><span id="index-8"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a30574fccaad9e587c15270e3fa3d5925"><span class="std std-ref">Offset</span></a><span></span> <span class="n">OFFSET_NONE</span></pre>
 <p>Offset special value which indicates that the offset value is not specified.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1adbd879429e07a03fb271dea51f0b4149"><span id="index-9"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a30574fccaad9e587c15270e3fa3d5925"><span class="std std-ref">Offset</span></a><span></span> <span class="n">OFFSET_END</span></pre>
 <p>Offset special value which indicates that the offset value corresponds to the stream end (e.g.</p>
 <p>append operation).</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a39026101714335ddc4062397a0bef1e9"><span id="index-10"></span><span></span><span class="n">Io_stream</span><span class="p">(</span><span class="k">const</span> <span class="n">Io_stream</span><span class="o">&amp;</span><span class="p">)</span></pre>
 <p>There is no sense in copying the stream.</p>
 <p>Multiple users of the same stream should copy the shared pointer Ptr.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1acdfcab3354c11c8b8f844a3579a4eda9"><span id="index-11"></span><span></span><span class="n">Io_stream</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Io_stream_Type.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a924a1e691d3c068343b0d148fcc8db0b"><span class="std std-ref">Type</span></a><span></span> <span class="n">type</span><span class="p">)</span></pre>
 <p>Constructor.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1aa33997d1fd85028ec8f48bc98f256deb"><span id="index-12"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1adb1bb7a5387d65f5cd701bf65705c966"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
@@ -991,9 +992,9 @@
 <p>Checks if stream is closed or not.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a4fb2c70c7c8764aa1a99b14116c9f5e5"><span id="index-23"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Get_name</span><span class="p">()</span> <span class="k">const</span></pre>
 <p>Get human readable stream name.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

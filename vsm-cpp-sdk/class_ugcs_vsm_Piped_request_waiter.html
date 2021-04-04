@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Piped_request_waiter &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -705,11 +706,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-piped-request-waiter">
+  <section id="class-ugcs-vsm-piped-request-waiter">
 <span id="doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter"></span><span id="index-0"></span><h1>class ugcs::vsm::Piped_request_waiter<a class="headerlink" href="#class-ugcs-vsm-piped-request-waiter" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Request waiter which uses a pipe to signal about request submissions. <a class="reference internal" href="#details-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;piped_request_waiter.h&gt;</span><span class="cp"></span>
@@ -732,7 +733,7 @@
     <span class="kt">void</span> <a class="reference internal" href="#doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter-1a85ce94ec4cf36d0da62aead78e56a04c"><span class="std std-ref">Ack</span></a><span></span><span class="p">();</span>
     <a class="reference internal" href="namespace_ugcs_vsm_sockets.html#doxid-d1-d2a-namespaceugcs-1-1vsm-1-1sockets-1abfbf647d400a48705b524b4c70f41b07"><span class="std std-ref">sockets::Socket_handle</span></a><span></span> <a class="reference internal" href="#doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter-1a28fadff66b764a756f1c3d8931491907"><span class="std std-ref">Get_wait_pipe</span></a><span></span><span class="p">();</span>
 <span class="p">};</span></pre>
-<div class="section" id="inherited-members">
+<section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
@@ -767,19 +768,19 @@
         <span class="kt">int</span> <span class="n">requests_limit</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1ab17571509858321b071f62878c834002"><span class="std std-ref">Predicate</span></a><span></span> <span class="n">predicate</span> <span class="o">=</span> <a class="reference internal" href="class_ugcs_vsm_Request_container_Request_waiter.html#doxid-d1-d94-classugcs-1-1vsm-1-1-request-container-1-1-request-waiter-1ab17571509858321b071f62878c834002"><span class="std std-ref">Predicate</span></a><span></span><span class="p">()</span>
         <span class="p">);</span></pre>
-</div>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+</section>
+<section id="detailed-documentation">
 <span id="details-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Request waiter which uses a pipe to signal about request submissions.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter-1a918818264a1eaec8df8e215110c303e9"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Piped_request_waiter</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter-1abac752473273f0d8984cbdcbb0de543c"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Piped_request_waiter</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
 <p>Pointer type.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter-1afa643c4758cdf8f486492653b14749a7"><span id="index-3"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="#doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter-1a918818264a1eaec8df8e215110c303e9"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
@@ -792,9 +793,9 @@
 <p>Consume one notification event.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-da-dcf-classugcs-1-1vsm-1-1-piped-request-waiter-1a28fadff66b764a756f1c3d8931491907"><span id="index-7"></span><a class="reference internal" href="namespace_ugcs_vsm_sockets.html#doxid-d1-d2a-namespaceugcs-1-1vsm-1-1sockets-1abfbf647d400a48705b524b4c70f41b07"><span class="std std-ref">sockets::Socket_handle</span></a><span></span> <span class="n">Get_wait_pipe</span><span class="p">()</span></pre>
 <p>Get the platform handler of the wait pipe.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

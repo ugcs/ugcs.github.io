@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Field types and semantics &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -310,11 +311,11 @@
               
               <div>
                 
-  <div class="section" id="field-types-and-semantics">
+  <section id="field-types-and-semantics">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page"></span><span id="index-0"></span><h1>Field types and semantics<a class="headerlink" href="#field-types-and-semantics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="field-messages">
+<section id="field-messages">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-messages"></span><h2>Field messages<a class="headerlink" href="#field-messages" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="field-value-message">
+<section id="field-value-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-value"></span><h3>Field_value message<a class="headerlink" href="#field-value-message" title="Permalink to this headline">¶</a></h3>
 <p>All values communicated between VSM and UCS are sent as protobuf’s <a class="reference internal" href="#doxid-d3-d7e-ucs-vsm-fields-page-1field-value"><span class="std std-ref">Field_value message</span></a>. It is used in telemetry, commands, mission items, vehicle parameters. This message is a container for any value passed between VSM and UCS. In addition to value itself it has some additional features:</p>
 <ul class="simple">
@@ -361,8 +362,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="field-registration">
+</section>
+<section id="field-registration">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-registration"></span><h3>Field registration<a class="headerlink" href="#field-registration" title="Permalink to this headline">¶</a></h3>
 <p>Before any value can be sent/received it must be registered first via <a class="reference internal" href="#doxid-d3-d7e-ucs-vsm-fields-page-1register-field"><span class="std std-ref">Register_field message</span></a> which is sent as part of register_vehicle_message. Field regirstration has several purposes:</p>
 <ul class="simple">
@@ -370,8 +371,8 @@
 <li><p>Specify the semantic of the field</p></li>
 <li><p>Possibility to define custom fields with custom type, range or enumeration.</p></li>
 </ul>
-</div>
-<div class="section" id="parameter-field-message">
+</section>
+<section id="parameter-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1parameter-field"></span><h3>Parameter_field message<a class="headerlink" href="#parameter-field-message" title="Permalink to this headline">¶</a></h3>
 <p>This message is a container for any value passed as command parameter.</p>
 <table class="table">
@@ -397,8 +398,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="property-field-message">
+</section>
+<section id="property-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1property-field"></span><h3>Property_field message<a class="headerlink" href="#property-field-message" title="Permalink to this headline">¶</a></h3>
 <p>VSM can add arbitrary properties in addition to supported values to each device it registers. These are key/value pairs. Prpoerty value type is not specified by protocol and can be set implicitly by setting appropriate field in <strong>Property_field.value</strong>.</p>
 <table class="table">
@@ -424,8 +425,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="telemetry-field-message">
+</section>
+<section id="telemetry-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1telemetry-field"></span><h3>Telemetry_field message<a class="headerlink" href="#telemetry-field-message" title="Permalink to this headline">¶</a></h3>
 <p>In addition to value and id Telemetry_field requires field timestamp when the value was acquired. This time is consistent across all fields, i.e. all timestamps are taken from single clock source. Typically it will be the realtime clock of the host running the VSM. This is to ensure telemetry data consistency across the system.</p>
 <table class="table">
@@ -455,8 +456,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="register-field-message">
+</section>
+<section id="register-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1register-field"></span><h3>Register_field message<a class="headerlink" href="#register-field-message" title="Permalink to this headline">¶</a></h3>
 <p>Description of field definition message <strong>Register_field</strong>. (See also <a class="reference internal" href="page_ucs_vsm_proto_page.html#doxid-d0-dba-ucs-vsm-proto-page"><span class="std std-ref">ucs_vsm.proto</span></a>)</p>
 <table class="table">
@@ -504,14 +505,14 @@
 </table>
 <p>If min_value == max_value it means that parameter is not user editable and should be always set to default_value.</p>
 <p>For enumerations min_value and max_value are ignored. Range is implicitly set by the set of defined <em>enumeration</em> values.</p>
-</div>
-</div>
-<div class="section" id="field-semantic">
+</section>
+</section>
+<section id="field-semantic">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-semantic"></span><h2>Field semantic<a class="headerlink" href="#field-semantic" title="Permalink to this headline">¶</a></h2>
 <p>Each field has a type which is called “semantic” because in adition to generic type (float, string) it defines its range, frame of reference, and unit.</p>
 <p>For example, FIELD_SEMANTIC_LATITUDE is number of type double, unit is radians and it holds geodetic latitude from equator with positive direction North. This semantic can be used to define fields containing geodetic latitude.</p>
 <p>The list of supported semantics along with their descriptions can be found in <a class="reference internal" href="page_ucs_vsm_proto_page.html#doxid-d0-dba-ucs-vsm-proto-page-1proto-enums"><span class="std std-ref">Protobuf enumerations</span></a>.</p>
-<div class="section" id="semantic-generic-types">
+<section id="semantic-generic-types">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1semantic-generic-types"></span><h3>Semantic generic types<a class="headerlink" href="#semantic-generic-types" title="Permalink to this headline">¶</a></h3>
 <p>Here is mapping generic types to sematic. Also it can be found in property.cpp.</p>
 <table class="table">
@@ -653,8 +654,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="built-in-fields">
+</section>
+<section id="built-in-fields">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1built-in-fields"></span><h3>Built in fields<a class="headerlink" href="#built-in-fields" title="Permalink to this headline">¶</a></h3>
 <p>There are fields which are recognized by the UgCS system by their name and are used in core functionality.</p>
 <table class="table">
@@ -872,11 +873,11 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="built-in-enumerations">
+</section>
+</section>
+<section id="built-in-enumerations">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-enums"></span><h2>Built-in enumerations<a class="headerlink" href="#built-in-enumerations" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="gps-fix-type-enum">
+<section id="gps-fix-type-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-gps-fix"></span><h3>Gps_fix_type enum<a class="headerlink" href="#gps-fix-type-enum" title="Permalink to this headline">¶</a></h3>
 <p>FIELD_SEMANTIC_GPS_FIX_TYPE</p>
 <table class="table">
@@ -907,8 +908,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="failsafe-action-enum">
+</section>
+<section id="failsafe-action-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-failsafe-action"></span><h3>Failsafe_action enum<a class="headerlink" href="#failsafe-action-enum" title="Permalink to this headline">¶</a></h3>
 <p>Used to specify failsafe actions supported by vehicle. Each vehicle reports supported actions upon registration.</p>
 <table class="table">
@@ -942,8 +943,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="control-mode-enum">
+</section>
+<section id="control-mode-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-control-mode"></span><h3>Control_mode enum<a class="headerlink" href="#control-mode-enum" title="Permalink to this headline">¶</a></h3>
 <p>Currently supported control modes</p>
 <table class="table">
@@ -981,8 +982,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="adsb-mode-enum">
+</section>
+<section id="adsb-mode-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-adsb-mode"></span><h3>Adsb_mode enum<a class="headerlink" href="#adsb-mode-enum" title="Permalink to this headline">¶</a></h3>
 <p>Sagetech adsb transponder modes</p>
 <table class="table">
@@ -1016,9 +1017,9 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

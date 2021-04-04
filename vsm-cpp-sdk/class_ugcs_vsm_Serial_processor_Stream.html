@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Serial_processor::Stream &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -710,11 +711,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-serial-processor-stream">
+  <section id="class-ugcs-vsm-serial-processor-stream">
 <span id="doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream"></span><span id="index-0"></span><h1>class ugcs::vsm::Serial_processor::Stream<a class="headerlink" href="#class-ugcs-vsm-serial-processor-stream" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="#doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream"><span class="std std-ref">Stream</span></a> which represents opened serial port. <a class="reference internal" href="#details-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;serial_processor.h&gt;</span><span class="cp"></span>
@@ -741,7 +742,7 @@
     <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
     <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a1ded5e2b5857bbb1b626998818eb47a0"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1a09b606786818407215860e0c361153c7"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
 <span class="p">};</span></pre>
-<div class="section" id="inherited-members">
+<section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
@@ -817,12 +818,12 @@
     <a class="reference internal" href="class_ugcs_vsm_Io_stream.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a30574fccaad9e587c15270e3fa3d5925"><span class="std std-ref">Offset</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a81e866f20d0ccd1c6496931e9dd2fa4e"><span class="std std-ref">Seek</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Io_stream.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a30574fccaad9e587c15270e3fa3d5925"><span class="std std-ref">Offset</span></a><span></span> <span class="n">pos</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">is_relative</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
     <a class="reference internal" href="class_ugcs_vsm_Operation_waiter.html#doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter"><span class="std std-ref">Operation_waiter</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a4569c55606a32b9c04dd563e4e0b3fda"><span class="std std-ref">Lock</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a6242dd592dfa1baa8d3087d6e6f7998d"><span class="std std-ref">Lock_handler</span></a><span></span> <span class="n">completion_handler</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a470f700b033c20641c2076b2e76b9ccf"><span class="std std-ref">Request_completion_context::Ptr</span></a><span></span> <span class="n">comp_ctx</span> <span class="o">=</span> <a class="reference internal" href="class_ugcs_vsm_Request_temp_completion_context.html#doxid-de-d3a-classugcs-1-1vsm-1-1-request-temp-completion-context-1a8c8c67d2b8325daaa6f55e6cca470b79"><span class="std std-ref">Request_temp_completion_context::Create</span></a><span></span><span class="p">(),</span> <span class="kt">bool</span> <span class="n">lock</span> <span class="o">=</span> <span class="nb">true</span><span class="p">);</span>
     <a class="reference internal" href="class_ugcs_vsm_Operation_waiter.html#doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter"><span class="std std-ref">Operation_waiter</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a2ec2781d9ecf3ec1892b8163f19ab268"><span class="std std-ref">Unlock</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a6242dd592dfa1baa8d3087d6e6f7998d"><span class="std std-ref">Lock_handler</span></a><span></span> <span class="n">completion_handler</span> <span class="o">=</span> <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1a4547da35caea4932ca2dfbc7e6ae5fb4"><span class="std std-ref">Make_dummy_callback</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_Io_result.html#doxid-dd-def-namespaceugcs-1-1vsm-1a0e37a17f83be9c1d2f04595f500a5712"><span class="std std-ref">Io_result</span></a><span></span><span class="o">&gt;</span><span class="p">(),</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a470f700b033c20641c2076b2e76b9ccf"><span class="std std-ref">Request_completion_context::Ptr</span></a><span></span> <span class="n">comp_ctx</span> <span class="o">=</span> <a class="reference internal" href="class_ugcs_vsm_Request_temp_completion_context.html#doxid-de-d3a-classugcs-1-1vsm-1-1-request-temp-completion-context-1a8c8c67d2b8325daaa6f55e6cca470b79"><span class="std std-ref">Request_temp_completion_context::Create</span></a><span></span><span class="p">());</span></pre>
-</div>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+</section>
+<section id="detailed-documentation">
 <span id="details-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="#doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream"><span class="std std-ref">Stream</span></a> which represents opened serial port.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1a5905f52a3567cf024e95423792a564b5"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Stream</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
@@ -830,8 +831,8 @@
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1a23cb3c93b30dfed1e9fa21b03e684359"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Reference_guard.html#doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard"><span class="std std-ref">Reference_guard</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a1ded5e2b5857bbb1b626998818eb47a0"><span class="std std-ref">Ptr</span></a><span></span><span class="o">&gt;</span> <span class="n">Ref</span></pre>
 <p>Reference type.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1af47b6aa83aeb4b58e2e62d2fe029760c"><span id="index-4"></span><span></span><span class="n">Stream</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Serial_processor.html#doxid-dc-dc8-classugcs-1-1vsm-1-1-serial-processor-1a8552a2146db5ee895e13dfa7110aec91"><span class="std std-ref">Serial_processor::Ptr</span></a><span></span> <span class="n">processor</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">port_name</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Serial_processor_Stream_Mode.html#doxid-d6-d02-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1-1-mode"><span class="std std-ref">Stream::Mode</span></a><span></span><span class="o">&amp;</span> <span class="n">mode</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream_Native_handle.html#doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle-1a2de77c6c5a0cf7fbcbeb655f5577acd6"><span class="std std-ref">Native_handle::Unique_ptr</span></a><span></span><span class="o">&amp;&amp;</span> <span class="n">native_handle</span><span class="p">)</span></pre>
 <p>Construct serial processor stream.</p>
@@ -856,15 +857,15 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d1-dde-classugcs-1-1vsm-1-1-serial-processor-1-1-stream-1a09b606786818407215860e0c361153c7"><span id="index-5"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Stream.html#doxid-dd-dfd-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1a1ded5e2b5857bbb1b626998818eb47a0"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
 <p>Create an instance.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

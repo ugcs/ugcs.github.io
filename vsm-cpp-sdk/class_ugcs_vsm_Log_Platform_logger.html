@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Log::Platform_logger &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -698,11 +699,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-log-platform-logger">
+  <section id="class-ugcs-vsm-log-platform-logger">
 <span id="doxid-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger"></span><span id="index-0"></span><h1>class ugcs::vsm::Log::Platform_logger<a class="headerlink" href="#class-ugcs-vsm-log-platform-logger" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Platform-specific logging handler. <a class="reference internal" href="#details-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;log.h&gt;</span><span class="cp"></span>
@@ -719,24 +720,24 @@
     <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Platform_logger</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger-1a99cf29cbd1449d563c45980cf430b5ac"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Log.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a><span></span><span class="o">&amp;</span> <span class="n">log</span><span class="p">);</span>
     <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger-1ac3181015d16994e9b678ce036e3feac2"><span class="std std-ref">Write_message</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">va_list</span> <span class="n">args</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Platform-specific logging handler.</p>
-<div class="section" id="construction">
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger-1ab034d744d71ef63f1552333459756a25"><span id="index-1"></span><span></span><span class="n">Platform_logger</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Log.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a><span></span><span class="o">&amp;</span> <span class="n">log</span><span class="p">)</span></pre>
 <p>Construct platform logger to work with abstract logger.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger-1a99cf29cbd1449d563c45980cf430b5ac"><span id="index-2"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Platform_logger</span><span class="o">&gt;</span> <span class="n">Create</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Log.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log"><span class="std std-ref">Log</span></a><span></span><span class="o">&amp;</span> <span class="n">log</span><span class="p">)</span></pre>
 <p>Create unique instance.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-db-dfd-classugcs-1-1vsm-1-1-log-1-1-platform-logger-1ac3181015d16994e9b678ce036e3feac2"><span id="index-3"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">Write_message</span><span class="p">(</span><a class="reference internal" href="enum_ugcs_vsm_Log_Level.html#doxid-d4-da6-classugcs-1-1vsm-1-1-log-1a468b0c4e97929b53734d9beba1e176ee"><span class="std std-ref">Level</span></a><span></span> <span class="n">level</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">va_list</span> <span class="n">args</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Write formatted message.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::internal::Poll_io_controller &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -700,11 +701,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-internal-poll-io-controller">
+  <section id="class-ugcs-vsm-internal-poll-io-controller">
 <span id="doxid-d2-db0-classugcs-1-1vsm-1-1internal-1-1-poll-io-controller"></span><span id="index-0"></span><h1>class ugcs::vsm::internal::Poll_io_controller<a class="headerlink" href="#class-ugcs-vsm-internal-poll-io-controller" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Linux-specific implementation for I/O controller. <a class="reference internal" href="#details-d2-db0-classugcs-1-1vsm-1-1internal-1-1-poll-io-controller"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;poll_io_controller.h&gt;</span><span class="cp"></span>
@@ -730,7 +731,7 @@
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-db0-classugcs-1-1vsm-1-1internal-1-1-poll-io-controller-1a201c8654b679c09bc96ce27e03e538d8"><span class="std std-ref">Queue_operation</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_ugcs_vsm_internal_Poll_io_controller_Io_cb.html#doxid-dd-dbb-structugcs-1-1vsm-1-1internal-1-1-poll-io-controller-1-1-io-cb"><span class="std std-ref">Io_cb</span></a><span></span><span class="o">&amp;</span> <span class="n">io_cb</span><span class="p">);</span>
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d2-db0-classugcs-1-1vsm-1-1internal-1-1-poll-io-controller-1ad2b957e2ff0553be14364dc9a8b62644"><span class="std std-ref">Cancel_operation</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_ugcs_vsm_internal_Poll_io_controller_Io_cb.html#doxid-dd-dbb-structugcs-1-1vsm-1-1internal-1-1-poll-io-controller-1-1-io-cb"><span class="std std-ref">Io_cb</span></a><span></span><span class="o">&amp;</span> <span class="n">io_cb</span><span class="p">);</span>
 <span class="p">};</span></pre>
-<div class="section" id="inherited-members">
+<section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// methods</span>
@@ -740,12 +741,12 @@
     <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Native_controller.html#doxid-d4-d55-classugcs-1-1vsm-1-1-file-processor-1-1-native-controller-1acb77d1182559fcf8d8bffe9eb32b2f8c"><span class="std std-ref">Register_handle</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_File_processor_Stream_Native_handle.html#doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle"><span class="std std-ref">Stream::Native_handle</span></a><span></span><span class="o">&amp;</span> <span class="n">handle</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Native_controller.html#doxid-d4-d55-classugcs-1-1vsm-1-1-file-processor-1-1-native-controller-1a663897a4c5853bba28b45e4d39a79ee2"><span class="std std-ref">Unregister_handle</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_File_processor_Stream_Native_handle.html#doxid-d2-dda-classugcs-1-1vsm-1-1-file-processor-1-1-stream-1-1-native-handle"><span class="std std-ref">Stream::Native_handle</span></a><span></span><span class="o">&amp;</span> <span class="n">handle</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_File_processor_Native_controller.html#doxid-d4-d55-classugcs-1-1vsm-1-1-file-processor-1-1-native-controller"><span class="std std-ref">Native_controller</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_ugcs_vsm_File_processor_Native_controller.html#doxid-d4-d55-classugcs-1-1vsm-1-1-file-processor-1-1-native-controller-1a114967e059329ae40f425cf0d9d7992a"><span class="std std-ref">Create</span></a><span></span><span class="p">();</span></pre>
-</div>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+</section>
+<section id="detailed-documentation">
 <span id="details-d2-db0-classugcs-1-1vsm-1-1internal-1-1-poll-io-controller"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Linux-specific implementation for I/O controller.</p>
-<div class="section" id="methods">
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-db0-classugcs-1-1vsm-1-1internal-1-1-poll-io-controller-1a3ec2f490e4db51c486784876a0044b28"><span id="index-1"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">Enable</span><span class="p">()</span></pre>
 <p>Enable the controller.</p>
@@ -786,9 +787,9 @@
 </table>
 <p class="rubric">Returns:</p>
 <p>True if cancelled, false if not cancelled (e.g. too late).</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Timer_processor::Timer &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-timer-processor-timer">
+  <section id="class-ugcs-vsm-timer-processor-timer">
 <span id="doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer"></span><span id="index-0"></span><h1>class ugcs::vsm::Timer_processor::Timer<a class="headerlink" href="#class-ugcs-vsm-timer-processor-timer" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Represents timer instance. <a class="reference internal" href="#details-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;timer_processor.h&gt;</span><span class="cp"></span>
@@ -733,23 +734,23 @@
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a7b1446444c0df6d3b4c94635fba432d4"><span class="std std-ref">Is_running</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
     <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="o">::</span><span class="n">time_point</span> <a class="reference internal" href="#doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a7269fa0278fff405890980c3fe469db6"><span class="std std-ref">Get_fire_time</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Represents timer instance.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a6de713d04a33015ffae93d34bc12c793"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Timer</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a6b8c519543c4431fa0cbcddb5441fffa"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Timer</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
 <p>Pointer type.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a5a4d158d7409a1ad2c02a9c2b620811e"><span id="index-3"></span><span></span><span class="n">Timer</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_ugcs_vsm_Timer_processor.html#doxid-dc-dae-classugcs-1-1vsm-1-1-timer-processor-1a9246bf3067073900f699cde33526dee7"><span class="std std-ref">Timer_processor::Ptr</span></a><span></span><span class="o">&amp;</span> <span class="n">processor</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span> <span class="n">interval</span><span class="p">)</span></pre>
 <p>Construct timer instance associated with a processor.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1ac09e88c790dab6beb807b9565c2f9207"><span id="index-4"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="#doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a6de713d04a33015ffae93d34bc12c793"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
@@ -762,9 +763,9 @@
 <p>will produce handler invocations.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d9-df5-classugcs-1-1vsm-1-1-timer-processor-1-1-timer-1a7269fa0278fff405890980c3fe469db6"><span id="index-7"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="o">::</span><span class="n">time_point</span> <span class="n">Get_fire_time</span><span class="p">()</span> <span class="k">const</span></pre>
 <p>Get time of next timer firing.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

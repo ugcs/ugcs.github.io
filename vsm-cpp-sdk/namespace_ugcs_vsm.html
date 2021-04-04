@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>namespace ugcs::vsm &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="namespace-ugcs-vsm">
+  <section id="namespace-ugcs-vsm">
 <span id="doxid-dd-def-namespaceugcs-1-1vsm"></span><span id="index-0"></span><h1>namespace ugcs::vsm<a class="headerlink" href="#namespace-ugcs-vsm" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>All VSM SDK functionality resides in this namespace. <a class="reference internal" href="#details-dd-def-namespaceugcs-1-1vsm"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">vsm</span> <span class="p">{</span>
@@ -1076,11 +1077,11 @@
 <span class="kt">void</span> <a class="reference internal" href="#doxid-dd-def-namespaceugcs-1-1vsm-1a68e200f95017008b9119e042a114f587"><span class="std std-ref">Terminate</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">save_config</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
 
 <span class="p">}</span> <span class="c1">// namespace vsm</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-dd-def-namespaceugcs-1-1vsm"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>All VSM SDK functionality resides in this namespace.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-def-namespaceugcs-1-1vsm-1a1d5969d08d3302af816a9752f141632b"><span id="index-1"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Position.html#doxid-df-d50-classugcs-1-1vsm-1-1-position"><span class="std std-ref">Position</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Wgs84_datum.html#doxid-df-dc3-classugcs-1-1vsm-1-1-wgs84-datum"><span class="std std-ref">Wgs84_datum</span></a><span></span><span class="o">&gt;</span> <span class="n">Wgs84_position</span></pre>
 <p><a class="reference internal" href="class_ugcs_vsm_Position.html#doxid-df-d50-classugcs-1-1vsm-1-1-position"><span class="std std-ref">Position</span></a> defined in WGS84 geodetic system.</p>
@@ -1133,14 +1134,14 @@
 <p><a class="reference internal" href="class_ugcs_vsm_Vehicle.html#doxid-d2-d96-classugcs-1-1vsm-1-1-vehicle"><span class="std std-ref">Vehicle</span></a> request for <a class="reference internal" href="class_ugcs_vsm_Task.html#doxid-d6-d5d-classugcs-1-1vsm-1-1-task"><span class="std std-ref">ugcs::vsm::Task</span></a> payload.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-def-namespaceugcs-1-1vsm-1ab87d0ca43b61d63e646a584d2c524a35"><span id="index-13"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Vehicle_request_spec-2.html#doxid-d0-da2-classugcs-1-1vsm-1-1-vehicle-request-spec"><span class="std std-ref">Vehicle_request_spec</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Vehicle_command.html#doxid-d8-dbd-classugcs-1-1vsm-1-1-vehicle-command"><span class="std std-ref">Vehicle_command</span></a><span></span><span class="o">&gt;</span> <span class="n">Vehicle_command_request</span></pre>
 <p><a class="reference internal" href="class_ugcs_vsm_Vehicle.html#doxid-d2-d96-classugcs-1-1vsm-1-1-vehicle"><span class="std std-ref">Vehicle</span></a> request for <a class="reference internal" href="class_ugcs_vsm_Vehicle_command.html#doxid-d8-dbd-classugcs-1-1vsm-1-1-vehicle-command"><span class="std std-ref">ugcs::vsm::Vehicle_command</span></a> payload.</p>
-</div>
-<div class="section" id="global-variables">
+</section>
+<section id="global-variables">
 <h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-def-namespaceugcs-1-1vsm-1a5588122951467d4d367e910060cb5020"><span id="index-14"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">regex_constants</span><span class="o">::</span><span class="n">syntax_option_type</span> <span class="n">platform_independent_filename_regex_matching_flag</span></pre>
 <p>This flag is used to support case insensitive file systems in regular expression matching.</p>
 <p>defined as regex::regex_constants::icase on windows (Ignore case when matching patterns) defined as regex::regex_constants::none on linux (All matching is case sensitive)</p>
-</div>
-<div class="section" id="global-functions">
+</section>
+<section id="global-functions">
 <h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-def-namespaceugcs-1-1vsm-1ad0409b84278bc4bc1c8db2c993681dad"><span id="index-15"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Callable</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <a class="reference internal" href="class_ugcs_vsm_Callback-2.html#doxid-d6-d1e-classugcs-1-1vsm-1-1-callback"><span class="std std-ref">Callback</span></a><span></span><span class="o">&lt;</span><span class="n">Callable</span><span class="p">,</span> <span class="kt">void</span><span class="p">,</span> <span class="n">Args</span><span class="p">...</span><span class="o">&gt;::</span><span class="n">Ptr</span> <span class="n">Make_callback</span><span class="p">(</span>
@@ -1643,9 +1644,9 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Android_serial_processor::Stream_entry &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-android-serial-processor-stream-entry">
+  <section id="class-ugcs-vsm-android-serial-processor-stream-entry">
 <span id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry"></span><span id="index-0"></span><h1>class ugcs::vsm::Android_serial_processor::Stream_entry<a class="headerlink" href="#class-ugcs-vsm-android-serial-processor-stream-entry" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">class</span> <span class="n">Stream_entry</span>
 <span class="p">{</span>
@@ -750,31 +751,31 @@
     <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a845cfc6a2cbf8ddbbeb5e207b80ec3da"><span></span><span class="n">Read_done</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Io_buffer.html#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Io_buffer::Ptr</span></a><span></span> <span class="n">data</span><span class="p">);</span>
     <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a867ebbee407b9c5c67b606392fdc06f0"><span></span><span class="n">Close</span></span><span></span><span class="p">();</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1addf64708204b6f4c9b90213e3bd74333"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Stream_entry</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a85500adf49a99001970b16698c4f71d3"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Stream_entry</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
 <p>Pointer type.</p>
-</div>
-<div class="section" id="fields">
+</section>
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1ac3196519b88007cce4ea1551dc11d670"><span id="index-3"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Write_request.html#doxid-d4-df0-classugcs-1-1vsm-1-1-write-request-1a06372238c834f4b54582985c1738539a"><span class="std std-ref">Write_request::Ptr</span></a><span></span><span class="o">&gt;</span> <span class="n">write_queue</span></pre>
 <p>Front element is the current active request.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a3a3635ece7b15bbdb1aea10973ec291e"><span id="index-4"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Read_request.html#doxid-d1-d78-classugcs-1-1vsm-1-1-read-request-1a2a58c202f3c3991a521d684d37eb2170"><span class="std std-ref">Read_request::Ptr</span></a><span></span><span class="o">&gt;</span> <span class="n">read_queue</span></pre>
 <p>Front element is the current active request.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d8-ddc-classugcs-1-1vsm-1-1-android-serial-processor-1-1-stream-entry-1a13979ea00c719cb2f8674b3edc84b411"><span id="index-5"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Android_serial_processor.html#doxid-d4-d2c-classugcs-1-1vsm-1-1-android-serial-processor-1a0c5600db737660bae2e2cecd50cc5e1d"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
 <p>Create an instance.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

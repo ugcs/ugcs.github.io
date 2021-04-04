@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>template struct ugcs::vsm::callback_internal::Callback_args_checker&lt;Callback, idx, Arg, Args…&gt; &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -698,11 +699,11 @@
               
               <div>
                 
-  <div class="section" id="template-struct-ugcs-vsm-callback-internal-callback-args-checker-callback-idx-arg-args">
+  <section id="template-struct-ugcs-vsm-callback-internal-callback-args-checker-callback-idx-arg-args">
 <span id="doxid-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4"></span><span id="index-0"></span><h1>template struct ugcs::vsm::callback_internal::Callback_args_checker&lt;Callback, idx, Arg, Args…&gt;<a class="headerlink" href="#template-struct-ugcs-vsm-callback-internal-callback-args-checker-callback-idx-arg-args" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Recursion unrolling template. <a class="reference internal" href="#details-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;callback.h&gt;</span><span class="cp"></span>
@@ -718,22 +719,22 @@
 
     <span class="k">static</span> <span class="k">constexpr</span> <span class="k">static</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4-1a3ecc153dfe530912ea00221b17355c40"><span class="std std-ref">value</span></a><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">is_convertible</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4-1a10a695f1570099fa04c20edfd664e310"><span class="std std-ref">Cbk_arg</span></a><span></span><span class="p">,</span> <span class="n">Arg</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&amp;&amp;</span>         <a class="reference internal" href="struct_ugcs_vsm_callback_internal_Callback_args_checker.html#doxid-de-d3f-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker"><span class="std std-ref">Callback_args_checker</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Callback-2.html#doxid-d6-d1e-classugcs-1-1vsm-1-1-callback"><span class="std std-ref">Callback</span></a><span></span><span class="p">,</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Args</span><span class="p">...</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Recursion unrolling template.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4-1a10a695f1570099fa04c20edfd664e310"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="k">typename</span> <span class="n">Callback</span><span class="o">::</span><span class="k">template</span> <span class="n">Arg_type</span><span class="o">&lt;</span><span class="n">idx</span><span class="o">&gt;</span> <span class="n">Cbk_arg</span></pre>
 <p>Corresponding real argument type in the callback.</p>
-</div>
-<div class="section" id="fields">
+</section>
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4-1a3ecc153dfe530912ea00221b17355c40"><span id="index-2"></span><span></span><span class="k">static</span> <span class="k">constexpr</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">value</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">is_convertible</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-dd-da4-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker-3-01-callback-00-01idx-00-01-arg-00-01-args-8-8-8-01-4-1a10a695f1570099fa04c20edfd664e310"><span class="std std-ref">Cbk_arg</span></a><span></span><span class="p">,</span> <span class="n">Arg</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&amp;&amp;</span>         <a class="reference internal" href="struct_ugcs_vsm_callback_internal_Callback_args_checker.html#doxid-de-d3f-structugcs-1-1vsm-1-1callback-internal-1-1-callback-args-checker"><span class="std std-ref">Callback_args_checker</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_ugcs_vsm_Callback-2.html#doxid-d6-d1e-classugcs-1-1vsm-1-1-callback"><span class="std std-ref">Callback</span></a><span></span><span class="p">,</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Args</span><span class="p">...</span><span class="o">&gt;::</span><span class="n">value</span></pre>
 <p>Indicates whether the check passed or failed.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Asynchronous programming framework &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -216,10 +217,10 @@
               
               <div>
                 
-  <div class="section" id="asynchronous-programming-framework">
+  <section id="asynchronous-programming-framework">
 <span id="doxid-d4-da8-async-programming-page"></span><span id="index-0"></span><h1>Asynchronous programming framework<a class="headerlink" href="#asynchronous-programming-framework" title="Permalink to this headline">¶</a></h1>
 <p>Since VSM interacts with physical devices (thus doing a lot of various I/O operations), handles communications with other UgCS components (UCS server), asynchronous programming paradigm concept is supported by most of operations implemented in VSMs. It allows convenient creation of event-based applications.</p>
-<div class="section" id="callbacks">
+<section id="callbacks">
 <span id="doxid-d4-da8-async-programming-page-1callbacks-section"></span><h2>Callbacks<a class="headerlink" href="#callbacks" title="Permalink to this headline">¶</a></h2>
 <p>Callback is the simplest entity a VSM asynchronous programming framework. All asynchronous handlers are represented as callback objects (<a class="reference internal" href="class_ugcs_vsm_Callback-2.html#doxid-d6-d1e-classugcs-1-1vsm-1-1-callback"><span class="std std-ref">ugcs::vsm::Callback</span></a>). Such an object encapsulates the copy of a callable entity (function pointer, class method pointer, lambda, callable object) and copy of all arguments to it. It is similar to std::bind() but provides additional features, such as possibility to use non-copyable objects as arguments (using move semantic), change stored arguments value. Callback usually created by <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1ad0409b84278bc4bc1c8db2c993681dad"><span class="std std-ref">ugcs::vsm::Make_callback()</span></a> function.</p>
 <p>Let’s say there is a function to be used as callback:</p>
@@ -289,7 +290,7 @@
     <span class="mi">10</span><span class="p">);</span>
 <a class="reference internal" href="global.html#doxid-d7-d7f-log-8h-1a159ca84d25a5487d8e81e4438725df19"><span class="std std-ref">LOG</span></a><span></span><span class="p">(</span><span class="s">&quot;Callback call result: %d&quot;</span><span class="p">,</span> <span class="n">lambda_cbk</span><span class="p">());</span></pre>
 <p>In all cases when some callable entity is used to create a callback, developer should ensure that the entity lifetime is not less than the created callback lifetime, otherwise the behavior of the application is not defined (usually crash). If plain pointer to a class instance is passed, make sure it is not deleted before the last callback instance is destroyed. In general usage of plain pointer should be avoided and some kind of <a class="reference external" href="http://en.cppreference.com/w/cpp/memory/shared_ptr">smartpointers</a> used instead in order to automatically control objects lifetime.</p>
-<div class="section" id="enforcing-callback-prototype">
+<section id="enforcing-callback-prototype">
 <span id="doxid-d4-da8-async-programming-page-1enforcing-callback-prototype"></span><h3>Enforcing callback prototype<a class="headerlink" href="#enforcing-callback-prototype" title="Permalink to this headline">¶</a></h3>
 <p>In the examples above callbacks are created with arbitrary prototypes. Usually the callback is passed to some API which stores it as a handler of some event. Often the event has some parameters which should be passed to the handler. Also the callback return value may be used for some purpose by the caller. So in this case the API may want to restrict prototypes for passed callbacks - especially to enforce the type of the return value and types for some number of the first mandatory arguments. These first arguments are then provided by the handler caller and may contain event parameters. All the rest arguments are bound to the user provided values as before.</p>
 <p>Required callback prototype is specified via <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">ugcs::vsm::Callback_proxy</span></a> object:</p>
@@ -320,9 +321,9 @@
 </pre></div>
 </div>
 <p>Note that initial value of the enforced argument is replaced by a new value (<em>20</em>) at the time of handler invocation in <em>Some_api_method</em>. There is a possibility to preserve the current value of the enforced arguments by using <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a9777aee410a7c87f26fd57a10247477f"><span class="std std-ref">ugcs::vsm::Callback_proxy::Invoke()</span></a> method. Before that the values can be set any number of times using <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1a891dd9644ddff55f4f834a23dde7c7fd"><span class="std std-ref">ugcs::vsm::Callback_proxy::Set_args()</span></a> and <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy-1ab628cbdc529e3666b9aecbe59bc4edd2"><span class="std std-ref">ugcs::vsm::Callback_proxy::Set_arg()</span></a> methods.</p>
-</div>
-</div>
-<div class="section" id="requests-and-contexts">
+</section>
+</section>
+<section id="requests-and-contexts">
 <span id="doxid-d4-da8-async-programming-page-1requests-and-contexts-section"></span><h2>Requests and contexts<a class="headerlink" href="#requests-and-contexts" title="Permalink to this headline">¶</a></h2>
 <p>The plain callbacks described above are just wrappers for user provided entry points. It is not enough for creating asynchronous processing workflow higher level abstractions are needed. Requests and contexts are designed for that purpose.</p>
 <p>All potentially blocking operations in VSM SDK are implemented using asynchronous programming pattern. The diagram below illustrates a typical workflow for an asynchronous operation.</p>
@@ -382,7 +383,7 @@
 <span class="mi">2013</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mo">02</span> <span class="mi">13</span><span class="o">:</span><span class="mi">54</span><span class="o">:</span><span class="mf">10.618</span> <span class="o">-</span> <span class="o">&lt;</span><span class="n">DEBUG</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">async_workflow</span><span class="p">.</span><span class="nl">cpp</span><span class="p">:</span><span class="mi">160</span><span class="p">]</span> <span class="n">After</span> <span class="n">completion</span> <span class="n">context</span> <span class="n">running</span>
 </pre></div>
 </div>
-<div class="section" id="serving-contexts-in-dedicated-threads">
+<section id="serving-contexts-in-dedicated-threads">
 <span id="doxid-d4-da8-async-programming-page-1serving-in-sep-threads"></span><h3>Serving contexts in dedicated threads<a class="headerlink" href="#serving-contexts-in-dedicated-threads" title="Permalink to this headline">¶</a></h3>
 <p>Previous example can be modified so that processor and completion contexts are served by a separate thread. This is quite typical task so the convenience class exists <a class="reference internal" href="class_ugcs_vsm_Request_worker.html#doxid-d4-dcf-classugcs-1-1vsm-1-1-request-worker"><span class="std std-ref">ugcs::vsm::Request_worker</span></a>.</p>
 <pre class="highlight literal-block"><span></span><span class="cm">/* Demonstrate contexts serving in a separated thread. */</span>
@@ -426,8 +427,8 @@
 </pre></div>
 </div>
 <p>As it is seen the both processing and completion handlers were called right after submission. It was done in a separate worker thread.</p>
-</div>
-<div class="section" id="creating-own-processor">
+</section>
+<section id="creating-own-processor">
 <span id="doxid-d4-da8-async-programming-page-1creating-own-processor-section"></span><h3>Creating own processor<a class="headerlink" href="#creating-own-processor" title="Permalink to this headline">¶</a></h3>
 <p>In the previous example <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1aaf87aa8291eb8db5efaf3dd1c72153cf"><span class="std std-ref">ugcs::vsm::Request_processor</span></a> class was used to process requests. But actually this class does not provide any useful service. All the processing was done by a processing handler provided by the user. This is not a usual pattern because processors are created for providing some service like I/O with some device or network. So they will have their own processing handlers which do the stuff. Also request creation is the thing the user is not supposed to do. The processor usually provides methods which accept request parameters and a result handler with a completion context. The request creation is done inside the processor. Simplest typical processor declaration looks as follows:</p>
 <pre class="highlight literal-block"><span></span><span class="k">class</span> <span class="nl">Sample_processor</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context"><span class="std std-ref">ugcs::vsm::Request_processor</span></a><span></span> <span class="p">{</span>
@@ -546,9 +547,9 @@
 </pre></div>
 </div>
 <p>There is the source for all examples in this article: <a class="reference internal" href="example_async_workflow.cpp.html#doxid-d8-d89-async-workflow-8cpp-example"><span class="std std-ref">async_workflow.cpp</span></a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

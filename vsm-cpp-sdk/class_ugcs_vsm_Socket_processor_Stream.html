@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Socket_processor::Stream &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -705,11 +706,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-socket-processor-stream">
+  <section id="class-ugcs-vsm-socket-processor-stream">
 <span id="doxid-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream"></span><span id="index-0"></span><h1>class ugcs::vsm::Socket_processor::Stream<a class="headerlink" href="#class-ugcs-vsm-socket-processor-stream" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Socket specific stream. <a class="reference internal" href="#details-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;socket_processor.h&gt;</span><span class="cp"></span>
@@ -766,7 +767,7 @@
 
     <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream-1a3468353399850b57de12a9214f4b1c53"><span></span><span class="n">Enable_broadcast</span></span><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">enable</span><span class="p">);</span>
 <span class="p">};</span></pre>
-<div class="section" id="inherited-members">
+<section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
@@ -820,12 +821,12 @@
     <span class="kt">bool</span> <a class="reference internal" href="class_ugcs_vsm_Io_stream.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a9978a75e949f05b0bcffb733f424b262"><span class="std std-ref">Is_closed</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
     <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="class_ugcs_vsm_Io_stream.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a4fb2c70c7c8764aa1a99b14116c9f5e5"><span class="std std-ref">Get_name</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
     <a class="reference internal" href="enum_ugcs_vsm_Io_stream_Type.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1a924a1e691d3c068343b0d148fcc8db0b"><span class="std std-ref">Type</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Io_stream.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1abd3a6e63fc149cd8500d9e0a82770a54"><span class="std std-ref">Get_type</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></pre>
-</div>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+</section>
+<section id="detailed-documentation">
 <span id="details-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Socket specific stream.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream-1a76cad2ccacd14aea6c8c20fd7c3bb09f"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Stream</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
@@ -833,8 +834,8 @@
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream-1a784ff9c780fe0fce62a165ca547d42a1"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">Callback_proxy</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="p">,</span> <a class="reference internal" href="class_ugcs_vsm_Io_buffer.html#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer-1a538a51ee0b037d1ebc88b5d25dfac361"><span class="std std-ref">Io_buffer::Ptr</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_ugcs_vsm_Io_result.html#doxid-dd-def-namespaceugcs-1-1vsm-1a0e37a17f83be9c1d2f04595f500a5712"><span class="std std-ref">Io_result</span></a><span></span><span class="p">,</span> <span class="n">Socket_address</span><span class="o">::</span><span class="n">Ptr</span><span class="o">&gt;</span> <span class="n">Read_from_handler</span></pre>
 <p>Default prototype for read operation completion handler.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d4-d3c-classugcs-1-1vsm-1-1-socket-processor-1-1-stream-1af0d0352e5657c91cbb8555a52e94b5bb"><span id="index-4"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="class_ugcs_vsm_Io_stream.html#doxid-d7-dc6-classugcs-1-1vsm-1-1-io-stream-1adb1bb7a5387d65f5cd701bf65705c966"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
@@ -850,9 +851,9 @@
     <span class="p">)</span></pre>
 <p>Used to write to udp socket.</p>
 <p>Wrapper for sendto() call.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

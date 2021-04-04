@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Operation_waiter &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-operation-waiter">
+  <section id="class-ugcs-vsm-operation-waiter">
 <span id="doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter"></span><span id="index-0"></span><h1>class ugcs::vsm::Operation_waiter<a class="headerlink" href="#class-ugcs-vsm-operation-waiter" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Class for synchronizing with request execution. <a class="reference internal" href="#details-d0-d74-classugcs-1-1vsm-1-1-operation-waiter"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;operation_waiter.h&gt;</span><span class="cp"></span>
@@ -752,19 +753,19 @@
     <span class="kt">void</span> <a class="reference internal" href="#doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a32de859dc270a1985a934e8a9e084908"><span class="std std-ref">Abort</span></a><span></span><span class="p">();</span>
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a81f7c410c34b180f6cc96554317fdf19"><span class="std std-ref">Is_done</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d0-d74-classugcs-1-1vsm-1-1-operation-waiter"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Class for synchronizing with request execution.</p>
 <p>Instance of this class should be returned by value from asynchronous methods of request processors. Only one instance is allowed (copying is disabled).</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a84b73e7ed4845ca950558bdd936b5c9a"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Operation_waiter</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type when used as argument in callbacks.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a155b9b08400540c41e33223c4a182bc3"><span id="index-2"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_ugcs_vsm_Callback_proxy.html#doxid-d0-db9-classugcs-1-1vsm-1-1-callback-proxy"><span class="std std-ref">Callback_proxy</span></a><span></span><span class="o">&lt;</span><span class="kt">void</span><span class="p">,</span> <a class="reference internal" href="#doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a84b73e7ed4845ca950558bdd936b5c9a"><span class="std std-ref">Ptr</span></a><span></span><span class="o">&gt;</span> <span class="n">Timeout_handler</span></pre>
 <p>Timeout handler prototype.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a1ed259571de2550a64a217276221c2fa"><span id="index-3"></span><span></span><span class="n">Operation_waiter</span><span class="p">(</span><a class="reference internal" href="class_ugcs_vsm_Request_container_Request.html#doxid-d2-d26-classugcs-1-1vsm-1-1-request-container-1-1-request-1a9fc856a23cf576b01649cabc8a6ce3ec"><span class="std std-ref">Request::Ptr</span></a><span></span> <span class="n">request</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">)</span></pre>
 <p>Construct operation waiter.</p>
@@ -788,8 +789,8 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a65e7ac8324e30e97c92fc7d24bbdc5f2"><span id="index-6"></span><span></span><span class="n">Operation_waiter</span><span class="p">(</span><span class="k">const</span> <span class="n">Operation_waiter</span><span class="o">&amp;</span><span class="p">)</span></pre>
 <p>Copy constructor disabled.</p>
 <p>Having more than one copy of operation waiter is confusing and error prone.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a47b34e3706deb4a262def60c4f6e3901"><span id="index-7"></span><span></span><span class="n">Operation_waiter</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="n">Operation_waiter</span><span class="o">&amp;&amp;</span><span class="p">)</span></pre>
 <p>Move assignment operator.</p>
@@ -860,9 +861,9 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-d74-classugcs-1-1vsm-1-1-operation-waiter-1a81f7c410c34b180f6cc96554317fdf19"><span id="index-14"></span><span></span><span class="kt">bool</span> <span class="n">Is_done</span><span class="p">()</span> <span class="k">const</span></pre>
 <p>Check if request is fully processed, i.e.</p>
 <p>all handlers were invoked and no more actions pending.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

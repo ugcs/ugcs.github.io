@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>template class ugcs::vsm::Reference_guard &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -703,11 +704,11 @@
               
               <div>
                 
-  <div class="section" id="template-class-ugcs-vsm-reference-guard">
+  <section id="template-class-ugcs-vsm-reference-guard">
 <span id="doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard"></span><span id="index-0"></span><h1>template class ugcs::vsm::Reference_guard<a class="headerlink" href="#template-class-ugcs-vsm-reference-guard" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Reference guard objects keep references for managed objects. <a class="reference internal" href="#details-d2-d2c-classugcs-1-1vsm-1-1-reference-guard"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;reference_guard.h&gt;</span><span class="cp"></span>
@@ -749,8 +750,8 @@
     <span class="n">Class_ptr</span> <a class="reference internal" href="#doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard-1a86332448537499a693dfb81615f0b5c4"><span class="std std-ref">operator -&gt;</span></a><span></span> <span class="p">();</span>
     <span class="k">const</span> <span class="n">Class_ptr</span> <a class="reference internal" href="#doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard-1a561a50e7c4e12075b63711fb7180bc9d"><span class="std std-ref">operator -&gt;</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d2-d2c-classugcs-1-1vsm-1-1-reference-guard"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Reference guard objects keep references for managed objects.</p>
 <p>The managed object should have Add_ref() and Release_ref() methods which are called by the guarded object. Release_ref() can tear down the object when last reference is released. Both Add_ref() and Release_ref() should be thread-safe.</p>
@@ -766,12 +767,12 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="fields">
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard-1ab9ba647d1b00bd2461f831f73acf2728"><span id="index-1"></span><span></span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">Class_ptr</span><span class="o">&gt;</span><span class="p">()</span> <span class="k">operator</span><span class="o">*</span><span class="p">)()</span></pre>
 <p>Dereference is transparent.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard-1abb88b6b66d605193f0361562f1f852fa"><span id="index-2"></span><span></span><span class="n">Reference_guard</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">nullptr_t</span> <span class="n">ptr</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">)</span></pre>
 <p>Construct an empty guard which doesn’t have managed object.</p>
@@ -789,8 +790,8 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard-1afdb7c185cd43d3dd18737825cb8e149d"><span id="index-8"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Src_class_ptr</span><span class="o">&gt;</span>
 <span class="n">Reference_guard</span><span class="p">(</span><span class="n">Reference_guard</span><span class="o">&lt;</span><span class="n">Src_class_ptr</span><span class="o">&gt;&amp;&amp;</span> <span class="n">ref</span><span class="p">)</span></pre>
 <p>Move guard object.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard-1af35b9f75872b6cc46d9363f4a376ed84"><span id="index-9"></span><span></span><span class="n">Reference_guard</span><span class="o">&lt;</span><span class="n">Class_ptr</span><span class="o">&gt;&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="n">Reference_guard</span><span class="o">&lt;</span><span class="n">Class_ptr</span><span class="o">&gt;&amp;</span> <span class="n">ref</span><span class="p">)</span></pre>
 <p>Copy assignment.</p>
@@ -808,9 +809,9 @@
 <p>Member access is transparent.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d2-d2c-classugcs-1-1vsm-1-1-reference-guard-1a561a50e7c4e12075b63711fb7180bc9d"><span id="index-16"></span><span></span><span class="k">const</span> <span class="n">Class_ptr</span> <span class="k">operator</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="k">const</span></pre>
 <p>Member access is transparent.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

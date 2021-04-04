@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>template class ugcs::vsm::Enum_set &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -698,11 +699,11 @@
               
               <div>
                 
-  <div class="section" id="template-class-ugcs-vsm-enum-set">
+  <section id="template-class-ugcs-vsm-enum-set">
 <span id="doxid-d0-dc3-classugcs-1-1vsm-1-1-enum-set"></span><span id="index-0"></span><h1>template class ugcs::vsm::Enum_set<a class="headerlink" href="#template-class-ugcs-vsm-enum-set" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Convenient set of enum values. <a class="reference internal" href="#details-d0-dc3-classugcs-1-1vsm-1-1-enum-set"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;enum_set.h&gt;</span><span class="cp"></span>
@@ -723,18 +724,18 @@
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d0-dc3-classugcs-1-1vsm-1-1-enum-set-1a172bf226bccc04f76ce40900ff204929"><span class="std std-ref">Is_set</span></a><span></span><span class="p">(</span><span class="n">Enum_type</span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
     <span class="kt">bool</span> <a class="reference internal" href="#doxid-d0-dc3-classugcs-1-1vsm-1-1-enum-set-1aab5825006bc15a05cb42179d13ef468b"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Enum_set</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d0-dc3-classugcs-1-1vsm-1-1-enum-set"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Convenient set of enum values.</p>
 <p>Enum_type should have field named LAST as a last enum item which is used to know the size of the enum.</p>
-<div class="section" id="construction">
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-dc3-classugcs-1-1vsm-1-1-enum-set-1aedb464da3074547efc48e382f15f1fbd"><span id="index-1"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Enum_types</span><span class="o">&gt;</span>
 <span class="n">Enum_set</span><span class="p">(</span><span class="n">Enum_types</span><span class="p">...</span> <span class="n">values</span><span class="p">)</span></pre>
 <p>Construct the set based on arbitrary set of values.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-dc3-classugcs-1-1vsm-1-1-enum-set-1a5e83f65249ea01c362ef4a2ff2b1a4ab"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">Set</span><span class="p">(</span><span class="n">Enum_type</span> <span class="n">value</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">present</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span></pre>
 <p>Set enum value presence to true or false.</p>
@@ -744,9 +745,9 @@
 <p>Check if enum value is present or not.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-dc3-classugcs-1-1vsm-1-1-enum-set-1aab5825006bc15a05cb42179d13ef468b"><span id="index-5"></span><span></span><span class="kt">bool</span> <span class="k">operator</span> <span class="o">==</span> <span class="p">(</span><span class="k">const</span> <span class="n">Enum_set</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Equality operator.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>UCS-VSM protocol example &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -298,12 +299,12 @@
               
               <div>
                 
-  <div class="section" id="ucs-vsm-protocol-example">
+  <section id="ucs-vsm-protocol-example">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page"></span><span id="index-0"></span><h1>UCS-VSM protocol example<a class="headerlink" href="#ucs-vsm-protocol-example" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="sample-scenario">
+<section id="sample-scenario">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1example-description"></span><h2>Sample scenario<a class="headerlink" href="#sample-scenario" title="Permalink to this headline">¶</a></h2>
 <p>This sample demonstrates UCS-VSM protocol in action.</p>
-<div class="section" id="scenario-description">
+<section id="scenario-description">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1example-sample-description"></span><h3>Scenario description<a class="headerlink" href="#scenario-description" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>We use sample vehicle with the following features:</p>
@@ -316,8 +317,8 @@
 </li>
 <li><p>Demonstrate vehicle registration, telemetry, mission upload and responses to requests.</p></li>
 </ul>
-</div>
-<div class="section" id="protocol-control-flow">
+</section>
+<section id="protocol-control-flow">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1example-flow"></span><h3>Protocol control flow<a class="headerlink" href="#protocol-control-flow" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
 <li><p>UCS establishes connection with VSM.</p>
@@ -339,11 +340,11 @@
 <p>VSM uses custom error reporting feature to send error description.</p>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="sample-messages">
+</section>
+</section>
+<section id="sample-messages">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1example-messages"></span><h2>Sample messages<a class="headerlink" href="#sample-messages" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ucs-notification-message">
+<section id="ucs-notification-message">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1ucs-notify"></span><h3>UCS notification message<a class="headerlink" href="#ucs-notification-message" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">UCS</span> <span class="n">to</span> <span class="nl">VSM</span><span class="p">:</span>
 
@@ -353,8 +354,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="vsm-notification-message">
+</section>
+<section id="vsm-notification-message">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1vsm-notify"></span><h3>VSM notification message<a class="headerlink" href="#vsm-notification-message" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">VSM</span> <span class="n">to</span> <span class="nl">UCS</span><span class="p">:</span>
 
@@ -364,8 +365,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="vehicle-registration-message">
+</section>
+<section id="vehicle-registration-message">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1vehicle-registration"></span><h3>Vehicle registration message<a class="headerlink" href="#vehicle-registration-message" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">VSM</span> <span class="n">to</span> <span class="nl">UCS</span><span class="p">:</span>
 
@@ -558,8 +559,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="telemetry-message">
+</section>
+<section id="telemetry-message">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1vehicle-telemetry-message"></span><h3>Telemetry message<a class="headerlink" href="#telemetry-message" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">VSM</span> <span class="n">to</span> <span class="nl">UCS</span><span class="p">:</span>
 
@@ -589,8 +590,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="command-availability-message">
+</section>
+<section id="command-availability-message">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1vehicle-command-availability"></span><h3>Command availability message<a class="headerlink" href="#command-availability-message" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">VSM</span> <span class="n">to</span> <span class="nl">UCS</span><span class="p">:</span>
 
@@ -609,8 +610,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="camera-trigger-command">
+</section>
+<section id="camera-trigger-command">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1camera-trigger-command"></span><h3>Camera trigger command<a class="headerlink" href="#camera-trigger-command" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">UCS</span> <span class="n">to</span> <span class="nl">VSM</span><span class="p">:</span>
 
@@ -628,8 +629,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="camera-trigger-response">
+</section>
+<section id="camera-trigger-response">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1camera-trigger-response"></span><h3>Camera trigger response<a class="headerlink" href="#camera-trigger-response" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">VSM</span> <span class="n">to</span> <span class="nl">UCS</span><span class="p">:</span>
 
@@ -641,8 +642,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="mission-upload-command">
+</section>
+<section id="mission-upload-command">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1mission-upload-command"></span><h3>Mission upload command<a class="headerlink" href="#mission-upload-command" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">UCS</span> <span class="n">to</span> <span class="nl">VSM</span><span class="p">:</span>
 
@@ -705,8 +706,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="mission-upload-response">
+</section>
+<section id="mission-upload-response">
 <span id="doxid-d0-dfa-ucs-vsm-protocol-examples-page-1mission-upload-response"></span><h3>Mission upload response<a class="headerlink" href="#mission-upload-response" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vsm_message</span> <span class="n">from</span> <span class="n">VSM</span> <span class="n">to</span> <span class="nl">UCS</span><span class="p">:</span>
 
@@ -720,9 +721,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
