@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>“Hello world” VSM application &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
+  <link href="_static/css/index.ee6fb81b276d6fba8a971ad8e9b95dd9.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -27,7 +26,7 @@
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1e043a052b0af929e4d8.js">
+  <link rel="preload" as="script" href="_static/js/index.c86189f1ce1b71a67eb6.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -40,28 +39,38 @@
     <link rel="prev" title="Tutorials" href="page_tutorials_page.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
+    <div class="container-fluid" id="banner"></div>
+
+    
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.png" class="logo" alt="logo">
+</a>
+
 
     
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
-      <a class="navbar-brand" href="index.html">
-        <img src="_static/logo.png" class="logo" alt="logo">
-      </a>
-      
-    
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        <li class="toctree-l1 nav-item">
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="page_ucs_vsm_overview_page.html">
   Overview
  </a>
@@ -103,14 +112,20 @@
  </a>
 </li>
 
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
-        </li>
-        
-      </ul>
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
 
-      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
@@ -118,7 +133,10 @@
           </a>
         </li>
       </ul>
+      </div>
+      
     </div>
+  </div>
 </div>
     </nav>
     
@@ -131,16 +149,16 @@
             <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l2 current active">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    “Hello world” VSM application
   </a>
  </li>
 </ul>
+
   </div>
 </nav>
             </div>
@@ -149,7 +167,10 @@
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -181,9 +202,13 @@
 </ul>
 
 </nav>
-
-
+              </div>
               
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
@@ -195,14 +220,14 @@
               
               <div>
                 
-  <section id="hello-world-vsm-application">
+  <div class="section" id="hello-world-vsm-application">
 <span id="doxid-d8-db6-hello-world-vsm-page"></span><span id="index-0"></span><h1>“Hello world” VSM application<a class="headerlink" href="#hello-world-vsm-application" title="Permalink to this headline">¶</a></h1>
 <p>Here is an example of a simple VSM application which demonstrates basic usage of the SDK. The source code of this example consists of two files:</p>
 <ul class="simple">
 <li><p>CMake makefile <a class="reference internal" href="example_Hello_world_VSM_CMakeLists.txt.html#doxid-dc-d9c-hello-world-v-s-m-2-c-make-lists-8txt-example"><span class="std std-ref">Hello_world_VSM/CMakeLists.txt</span></a>.</p></li>
 <li><p>C++ source code file <a class="reference internal" href="example_hello_world_vsm.cpp.html#doxid-d5-d58-hello-world-vsm-8cpp-example"><span class="std std-ref">hello_world_vsm.cpp</span></a>.</p></li>
 </ul>
-<section id="c-code">
+<div class="section" id="c-code">
 <span id="doxid-d8-db6-hello-world-vsm-page-1c-plus-plus-hello-world"></span><h2>C++ code<a class="headerlink" href="#c-code" title="Permalink to this headline">¶</a></h2>
 <p>Single header file should be included to get an access to the whole SDK functionality:</p>
 <pre class="highlight literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ugcs/vsm/vsm.h&gt;</span></pre>
@@ -419,23 +444,23 @@
 <span class="n">vehicle</span><span class="o">-&gt;</span><span class="n">Disable</span><span class="p">();</span>
 <span class="cm">/* Gracefully terminate SDK infrastructure and services. */</span>
 <a class="reference internal" href="namespace_ugcs_vsm.html#doxid-dd-def-namespaceugcs-1-1vsm-1a68e200f95017008b9119e042a114f587"><span class="std std-ref">ugcs::vsm::Terminate</span></a><span></span><span class="p">();</span></pre>
-</section>
-<section id="cmake-makefile">
+</div>
+<div class="section" id="cmake-makefile">
 <span id="doxid-d8-db6-hello-world-vsm-page-1cmake-hello-world"></span><h2>CMake makefile<a class="headerlink" href="#cmake-makefile" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="example_Hello_world_VSM_CMakeLists.txt.html#doxid-dc-d9c-hello-world-v-s-m-2-c-make-lists-8txt-example"><span class="std std-ref">Hello_world_VSM/CMakeLists.txt</span></a> is a minimal makefile for VSM application which provides static linkage with SDK library defined by <em>VSM_SDK_DIR</em> variable (either CMake or environment) and a default VSM configuration file via Build_vsm_config() function, which can be given custom source and destination config file locations. It can be considered as a template makefile for VSM applications. Makefile should be self-explanatory. For additional details refer to <a class="reference external" href="http://www.cmake.org">CMake official site</a>.</p>
-</section>
-<section id="compilation">
+</div>
+<div class="section" id="compilation">
 <span id="doxid-d8-db6-hello-world-vsm-page-1hello-world-vsm-compilation"></span><h2>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h2>
 <p>Prior to compiling the VSM application, SDK should be compiled and installed according to building_page. In the example, it is assumed that source and make file reside in the same directory and <em>VSM_SDK_DIR</em> <em>environment variable</em> points to the SDK installation folder.</p>
-<section id="building">
+<div class="section" id="building">
 <span id="doxid-d8-db6-hello-world-vsm-page-1hello-world-vsm-compilation-build"></span><h3>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
 <p>Now VSM application can be compiled and built in the same way as SDK using a single command with a build folder argument, for example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="n">build</span><span class="o">-</span><span class="n">debug</span><span class="o">-</span><span class="n">win</span> <span class="o">--</span> <span class="o">-</span><span class="n">j4</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
               </div>
@@ -453,17 +478,25 @@
 
       </div>
     </div>
-
     
-  <script src="_static/js/index.1e043a052b0af929e4d8.js"></script>
+  <script src="_static/js/index.c86189f1ce1b71a67eb6.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2020, SPH Engineering.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, SPH Engineering.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>

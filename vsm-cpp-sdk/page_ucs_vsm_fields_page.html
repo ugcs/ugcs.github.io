@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Field types and semantics &#8212; CPP VSM SDK  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
+  <link href="_static/css/index.ee6fb81b276d6fba8a971ad8e9b95dd9.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -27,7 +26,7 @@
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1e043a052b0af929e4d8.js">
+  <link rel="preload" as="script" href="_static/js/index.c86189f1ce1b71a67eb6.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -40,28 +39,38 @@
     <link rel="prev" title="Vehicle registration with UCS" href="page_ucs_vsm_registration_page.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
+    <div class="container-fluid" id="banner"></div>
+
+    
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.png" class="logo" alt="logo">
+</a>
+
 
     
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
-      <a class="navbar-brand" href="index.html">
-        <img src="_static/logo.png" class="logo" alt="logo">
-      </a>
-      
-    
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        <li class="toctree-l1 nav-item">
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="page_ucs_vsm_overview_page.html">
   Overview
  </a>
@@ -103,14 +112,20 @@
  </a>
 </li>
 
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
-        </li>
-        
-      </ul>
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://www.ugcs.com/">UgCS<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
 
-      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/ugcs/vsm-cpp-sdk" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
@@ -118,7 +133,10 @@
           </a>
         </li>
       </ul>
+      </div>
+      
     </div>
+  </div>
 </div>
     </nav>
     
@@ -131,66 +149,70 @@
             <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l2">
+ <li class="toctree-l1">
   <a class="reference internal" href="page_vehicle_interface_page.html">
    Device interface
   </a>
  </li>
- <li class="toctree-l2">
+ <li class="toctree-l1">
   <a class="reference internal" href="page_async_programming_page.html">
    Asynchronous programming framework
   </a>
  </li>
- <li class="toctree-l2">
+ <li class="toctree-l1">
   <a class="reference internal" href="page_service_discovery_page.html">
    Automatic Service Discovery
   </a>
  </li>
- <li class="toctree-l2 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="page_ucs_vsm_protocol_page.html">
    UCS-VSM communications protocol
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
   <ul class="current">
-   <li class="toctree-l3">
+   <li class="toctree-l2">
     <a class="reference internal" href="page_ucs_vsm_proto_page.html">
      ucs_vsm.proto
     </a>
    </li>
-   <li class="toctree-l3">
+   <li class="toctree-l2">
     <a class="reference internal" href="page_ucs_vsm_overview_page.html">
      Overview
     </a>
    </li>
-   <li class="toctree-l3">
+   <li class="toctree-l2">
     <a class="reference internal" href="page_ucs_vsm_registration_page.html">
      Vehicle registration with UCS
     </a>
    </li>
-   <li class="toctree-l3 current active">
+   <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Field types and semantics
     </a>
    </li>
-   <li class="toctree-l3">
+   <li class="toctree-l2">
     <a class="reference internal" href="page_ucs_vsm_telemetry_page.html">
      Telemetry protocol
     </a>
    </li>
-   <li class="toctree-l3">
+   <li class="toctree-l2">
     <a class="reference internal" href="page_ucs_vsm_commands_page.html">
      UCS-VSM Commands
     </a>
    </li>
-   <li class="toctree-l3">
+   <li class="toctree-l2">
     <a class="reference internal" href="page_ucs_vsm_protocol_examples_page.html">
      UCS-VSM protocol example
     </a>
    </li>
-   <li class="toctree-l3">
+   <li class="toctree-l2">
     <a class="reference internal" href="page_ucs_vsm_protocol_wire_format_page.html">
      UCS-VSM protocol wire format
     </a>
@@ -198,6 +220,7 @@
   </ul>
  </li>
 </ul>
+
   </div>
 </nav>
             </div>
@@ -206,7 +229,10 @@
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -297,9 +323,13 @@
 </ul>
 
 </nav>
-
-
+              </div>
               
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
@@ -311,11 +341,11 @@
               
               <div>
                 
-  <section id="field-types-and-semantics">
+  <div class="section" id="field-types-and-semantics">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page"></span><span id="index-0"></span><h1>Field types and semantics<a class="headerlink" href="#field-types-and-semantics" title="Permalink to this headline">¶</a></h1>
-<section id="field-messages">
+<div class="section" id="field-messages">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-messages"></span><h2>Field messages<a class="headerlink" href="#field-messages" title="Permalink to this headline">¶</a></h2>
-<section id="field-value-message">
+<div class="section" id="field-value-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-value"></span><h3>Field_value message<a class="headerlink" href="#field-value-message" title="Permalink to this headline">¶</a></h3>
 <p>All values communicated between VSM and UCS are sent as protobuf’s <a class="reference internal" href="#doxid-d3-d7e-ucs-vsm-fields-page-1field-value"><span class="std std-ref">Field_value message</span></a>. It is used in telemetry, commands, mission items, vehicle parameters. This message is a container for any value passed between VSM and UCS. In addition to value itself it has some additional features:</p>
 <ul class="simple">
@@ -362,8 +392,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="field-registration">
+</div>
+<div class="section" id="field-registration">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-registration"></span><h3>Field registration<a class="headerlink" href="#field-registration" title="Permalink to this headline">¶</a></h3>
 <p>Before any value can be sent/received it must be registered first via <a class="reference internal" href="#doxid-d3-d7e-ucs-vsm-fields-page-1register-field"><span class="std std-ref">Register_field message</span></a> which is sent as part of register_vehicle_message. Field regirstration has several purposes:</p>
 <ul class="simple">
@@ -371,8 +401,8 @@
 <li><p>Specify the semantic of the field</p></li>
 <li><p>Possibility to define custom fields with custom type, range or enumeration.</p></li>
 </ul>
-</section>
-<section id="parameter-field-message">
+</div>
+<div class="section" id="parameter-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1parameter-field"></span><h3>Parameter_field message<a class="headerlink" href="#parameter-field-message" title="Permalink to this headline">¶</a></h3>
 <p>This message is a container for any value passed as command parameter.</p>
 <table class="table">
@@ -398,8 +428,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="property-field-message">
+</div>
+<div class="section" id="property-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1property-field"></span><h3>Property_field message<a class="headerlink" href="#property-field-message" title="Permalink to this headline">¶</a></h3>
 <p>VSM can add arbitrary properties in addition to supported values to each device it registers. These are key/value pairs. Prpoerty value type is not specified by protocol and can be set implicitly by setting appropriate field in <strong>Property_field.value</strong>.</p>
 <table class="table">
@@ -425,8 +455,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="telemetry-field-message">
+</div>
+<div class="section" id="telemetry-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1telemetry-field"></span><h3>Telemetry_field message<a class="headerlink" href="#telemetry-field-message" title="Permalink to this headline">¶</a></h3>
 <p>In addition to value and id Telemetry_field requires field timestamp when the value was acquired. This time is consistent across all fields, i.e. all timestamps are taken from single clock source. Typically it will be the realtime clock of the host running the VSM. This is to ensure telemetry data consistency across the system.</p>
 <table class="table">
@@ -456,8 +486,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="register-field-message">
+</div>
+<div class="section" id="register-field-message">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1register-field"></span><h3>Register_field message<a class="headerlink" href="#register-field-message" title="Permalink to this headline">¶</a></h3>
 <p>Description of field definition message <strong>Register_field</strong>. (See also <a class="reference internal" href="page_ucs_vsm_proto_page.html#doxid-d0-dba-ucs-vsm-proto-page"><span class="std std-ref">ucs_vsm.proto</span></a>)</p>
 <table class="table">
@@ -505,14 +535,14 @@
 </table>
 <p>If min_value == max_value it means that parameter is not user editable and should be always set to default_value.</p>
 <p>For enumerations min_value and max_value are ignored. Range is implicitly set by the set of defined <em>enumeration</em> values.</p>
-</section>
-</section>
-<section id="field-semantic">
+</div>
+</div>
+<div class="section" id="field-semantic">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-semantic"></span><h2>Field semantic<a class="headerlink" href="#field-semantic" title="Permalink to this headline">¶</a></h2>
 <p>Each field has a type which is called “semantic” because in adition to generic type (float, string) it defines its range, frame of reference, and unit.</p>
 <p>For example, FIELD_SEMANTIC_LATITUDE is number of type double, unit is radians and it holds geodetic latitude from equator with positive direction North. This semantic can be used to define fields containing geodetic latitude.</p>
 <p>The list of supported semantics along with their descriptions can be found in <a class="reference internal" href="page_ucs_vsm_proto_page.html#doxid-d0-dba-ucs-vsm-proto-page-1proto-enums"><span class="std std-ref">Protobuf enumerations</span></a>.</p>
-<section id="semantic-generic-types">
+<div class="section" id="semantic-generic-types">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1semantic-generic-types"></span><h3>Semantic generic types<a class="headerlink" href="#semantic-generic-types" title="Permalink to this headline">¶</a></h3>
 <p>Here is mapping generic types to sematic. Also it can be found in property.cpp.</p>
 <table class="table">
@@ -654,8 +684,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="built-in-fields">
+</div>
+<div class="section" id="built-in-fields">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1built-in-fields"></span><h3>Built in fields<a class="headerlink" href="#built-in-fields" title="Permalink to this headline">¶</a></h3>
 <p>There are fields which are recognized by the UgCS system by their name and are used in core functionality.</p>
 <table class="table">
@@ -873,11 +903,11 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="built-in-enumerations">
+</div>
+</div>
+<div class="section" id="built-in-enumerations">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1field-enums"></span><h2>Built-in enumerations<a class="headerlink" href="#built-in-enumerations" title="Permalink to this headline">¶</a></h2>
-<section id="gps-fix-type-enum">
+<div class="section" id="gps-fix-type-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-gps-fix"></span><h3>Gps_fix_type enum<a class="headerlink" href="#gps-fix-type-enum" title="Permalink to this headline">¶</a></h3>
 <p>FIELD_SEMANTIC_GPS_FIX_TYPE</p>
 <table class="table">
@@ -908,8 +938,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="failsafe-action-enum">
+</div>
+<div class="section" id="failsafe-action-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-failsafe-action"></span><h3>Failsafe_action enum<a class="headerlink" href="#failsafe-action-enum" title="Permalink to this headline">¶</a></h3>
 <p>Used to specify failsafe actions supported by vehicle. Each vehicle reports supported actions upon registration.</p>
 <table class="table">
@@ -943,8 +973,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="control-mode-enum">
+</div>
+<div class="section" id="control-mode-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-control-mode"></span><h3>Control_mode enum<a class="headerlink" href="#control-mode-enum" title="Permalink to this headline">¶</a></h3>
 <p>Currently supported control modes</p>
 <table class="table">
@@ -982,8 +1012,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="adsb-mode-enum">
+</div>
+<div class="section" id="adsb-mode-enum">
 <span id="doxid-d3-d7e-ucs-vsm-fields-page-1enum-adsb-mode"></span><h3>Adsb_mode enum<a class="headerlink" href="#adsb-mode-enum" title="Permalink to this headline">¶</a></h3>
 <p>Sagetech adsb transponder modes</p>
 <table class="table">
@@ -1017,9 +1047,9 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
               </div>
@@ -1037,17 +1067,25 @@
 
       </div>
     </div>
-
     
-  <script src="_static/js/index.1e043a052b0af929e4d8.js"></script>
+  <script src="_static/js/index.c86189f1ce1b71a67eb6.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2020, SPH Engineering.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, SPH Engineering.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>
