@@ -19,24 +19,8 @@ telemetry parameter or full functional drone control client application.
 Release history
 ===============
 
-+-----------------------+-----------------------+-----------------------+
-| SDK version           | Date                  | Description           |
-+=======================+=======================+=======================+
-|                       |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| 2.11 (current master) | 2017/06/01            | SDK version           |
-|                       |                       | compatible with       |
-|                       |                       | latest UgCS version   |
-|                       |                       | https://www.ugcs.com/ |
-|                       |                       | en/page/download      |
-+-----------------------+-----------------------+-----------------------+
-| 2.10                  | 2016/10/14            | SDK version with      |
-|                       |                       | updated protobuf      |
-|                       |                       | version compatible    |
-|                       |                       | with                  |
-|                       |                       | https://www.ugcs.com/ |
-|                       |                       | en/page/version-2-10  |
-+-----------------------+-----------------------+-----------------------+
+Please find the release history and release notes at
+https://www.nuget.org/packages/ugcs-dotnet-sdk.
 
 Example of C# code
 ==================
@@ -46,19 +30,19 @@ https://github.com/ugcs/ugcs-dotnet-sdk/blob/master/UGCS.Example/UGCS.Console/Pr
 Prerequisites
 =============
 
-Visual Studio 2013 Community Edition
+Visual Studio 2017 Community Edition
 
-.Net Framework 3.5 or later
+.Net Framework 4.5 or later
 
-Nuget package manager (shall be a part of Visual Studio)
+NuGet package manager (shall be a part of Visual Studio)
 
-Installed UgCS application, 2.10 or later. Please note that SDK release
+Installed UgCS application, 3.7 or later. Please note that SDK release
 version should be the same as UgCS version
 https://www.ugcs.com/en/page/download
 
 **Note** : number of allowed UgCS client connections to UGCS Server
 depends on the license type. For Open and One versions only one
-connection allowed. For Pro 3 and Enterprise is unlimeted. This means
+connection allowed. For Pro 3 and Enterprise is unlimited. This means
 that for Open and One it is not possible to have UgCS standard client
 and your application running at the same time.
 
@@ -220,7 +204,6 @@ In our case object type “Vehicle”
        ObjectType = "Vehicle",
        RefreshDependencies = true
    };
-   getObjectListRequest.RefreshExcludes.Add("Avatar");
    getObjectListRequest.RefreshExcludes.Add("PayloadProfile");
    getObjectListRequest.RefreshExcludes.Add("Route");
    var task = messageExecutor.Submit<GetObjectListResponse>(getObjectListRequest);
@@ -351,12 +334,13 @@ Import mission from xml
 .. code:: c#
 
    var byteArray = File.ReadAllBytes("Demo mission.xml");
-   ImportMissionFromXmlRequest importMissionRequest = new ImportMissionFromXmlRequest()
+   ImportMissionRequest importMissionRequest = new ImportMissionRequest()
    {
        ClientId = clientId,
-       MissionXml = byteArray
+       MissionData = byteArray,
+       Filename = "Demo mission.xml"
    };
-   var importMissionResponse = messageExecutor.Submit<ImportMissionFromXmlResponse>(importMissionRequest);
+   var importMissionResponse = messageExecutor.Submit<ImportMissionResponse>(importMissionRequest);
    importMissionResponse.Wait();
 
    //importedMission contains imported mission from Demo mission.xml
@@ -371,7 +355,7 @@ Get mission from server
    {
        ClientId = clientId,
        ObjectType = "Mission",
-       ObjectId = importedMission.Id,
+       ObjectId = mission.Id,
        RefreshDependencies = true
    };
    var getMissionObjectResponse = messageExecutor.Submit<GetObjectResponse>(getMissionObjectRequest);
@@ -448,18 +432,19 @@ fetched. Zero means no limit.
 
 .. code:: c#
 
-   MessageFuture<GetTelemetryResponse> telemetryFuture = messageExecutor.Submit<GetTelemetryResponse>(new GetTelemetryRequest
+   DateTime utcTime = DateTime.Now.ToUniversalTime();
+   DateTime posixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+   TimeSpan span = utcTime - posixEpoch;
+   var beginningMilliseconds = (long)span.TotalMilliseconds;
+   GetTelemetryRequest telemetryRequest = new GetTelemetryRequest
    {
        ClientId = clientId,
-       Vehicle = vehicle,
-       ToTime = DateTimeUtilities.ToPosixMilliseconds(DateTime.Now),
-       FromTime = DateTimeUtilities.ToPosixMilliseconds(
-            DateTime.Now.Subtract(new TimeSpan(1, 0, 0))),
-       Limit = 0,
-       LimitSpecified = true,
-       ToTimeSpecified = true
-   });
-   GetTelemetryResponse telemetryResp = telemetryFuture.Value;
+       FromTime = beginningMilliseconds,
+       Limit = 10,
+       Vehicle = new Vehicle() { Id = 1 }
+   };
+   var responseTelemetry = messageExecutor.Submit<GetTelemetryResponse>(telemetryRequest);
+   responseTelemetry.Wait();
 
 Response object contains data in Telemetry property. Each object is of
 TelemetryDto type. Field “Type” contains field type, “Value” contains
@@ -629,28 +614,6 @@ The following types available:
 | TT_CAMERA_2_VIDEO_COUNT    |                                         |
 +----------------------------+-----------------------------------------+
 
-One more important things to note is that in the sample above we use
-Posix time. In the future releases of SDK we will include these
-functions in our SDK. But you can use the following code instead for
-now:
-
-.. code:: c#
-
-   public static readonly DateTime PosixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-
-   public static long ToPosixMilliseconds(this DateTime localTime)
-   {
-      DateTime utcTime = localTime.ToUniversalTime();
-      TimeSpan span = utcTime — PosixEpoch;
-      return (long)span.TotalMilliseconds;
-   }
-
-   public static DateTime FromPosixMilliseconds(long milliseconds)
-   {
-      TimeSpan span = TimeSpan.FromMilliseconds(milliseconds);
-      return (PosixEpoch + span).ToLocalTime();
-   }
-
 **Note** : telemetry recording is disabled in UgCS for Emulator by
 default. For development purposes is convenient to switch it on. To do
 that open <UgCS Installation
@@ -703,9 +666,9 @@ Code describes how to subscribe telemetry
    SubscriptionToken stTelemetry = new SubscriptionToken(subscribeEventResponseTelemetry.SubscriptionId, (
        (notification) =>
        {
-           foreach (var t in notification.Event.TelemetryEvent.Telemetry)
+           foreach (Telemetry t in notification.Event.TelemetryEvent.Telemetry)
            {
-               System.Console.WriteLine("Vehicle id: {0} Type: {1} Value {2}", t.Vehicle.Id, t.Type.ToString(), t.Value);
+               System.Console.WriteLine("Vehicle id: {0} Code: {1} Semantic {2} Subsystem {3} Value {4}", notification.Event.TelemetryEvent.Vehicle.Id, t.TelemetryField.Code, t.TelemetryField.Semantic, t.TelemetryField.Subsystem, getTelemetryValue(t.Value));
            }
        }
    ), telemetrySubscriptionWrapper);
@@ -725,23 +688,23 @@ Create new route
 
    Route route = new Route
    {
-       CreationTime = 123456789,
-       Name = "Route name",
+       CreationTime = ServiceHelpers.CreationTime(),
+       Name = routeName,
        Mission = mission
    };
+
    ChangeRouteVehicleProfileRequest request = new ChangeRouteVehicleProfileRequest
    {
-       ClientId = 1,
+       ClientId = _connect.AuthorizeHciResponse.ClientId,
        Route = route,
-       NewProfile = new VehicleProfile { Id = 1 }
+       NewProfile = new VehicleProfile { Id = vehicleProfile.Id }
    };
-   MessageFuture<ChangeRouteVehicleProfileResponse> future = Executor.Submit<ChangeRouteVehicleProfileResponse>(request);
-
+   MessageFuture<ChangeRouteVehicleProfileResponse> future =
+       _connect.Executor.Submit<ChangeRouteVehicleProfileResponse>(request);
    future.Wait();
    route = future.Value.Route;
-   route.HomeLocationSource = HomeLocationSource.HLS_FIRST_WAYPOINT;
+   route.Mission = mission;
    route.TrajectoryType = TrajectoryType.TT_STAIR;
-   route.AltitudeType = AltitudeType.AT_AGL;
    route.MaxAltitude = 50.0;
    route.SafeAltitude = 3.0;
    route.CheckAerodromeNfz = false;
@@ -755,7 +718,7 @@ Create new route
        Action = FailsafeAction.FA_GO_HOME,
        ActionSpecified = true,
        Reason = FailsafeReason.FR_RC_LOST,
-       ReasonSpecified = true
+       ReasonSpecified = true,
    });
    route.Failsafes.Add(new Failsafe()
    {
@@ -793,17 +756,19 @@ Add waypoint to route
 
 .. code:: c#
 
+   TraverseAlgorithm wpAlgorithm = _mappingRequestService.GetAlgoritmByClassName("com.ugcs.ucs.service.routing.impl.WaypointAlgorithm");
    SegmentDefinition newSegment = new SegmentDefinition
    {
        Uuid = Guid.NewGuid().ToString(),
-       AlgorithmClassName = "com.ugcs.ucs.service.routing.impl.WaypointAlgorithm"
+       AlgorithmClassName = wpAlgorithm.ImplementationClass
    };
-   newSegment.Figure = new Figure { Type = FigureType.FT_POINT };
+   newSegment.Figure = new Figure { Type = wpAlgorithm.FigureType };
+
    newSegment.ParameterValues.Add(new ParameterValue()
    {
        Name = "speed",
        Value = "5.0",
-       ValueSpecified = true
+       ValueSpecified = true,
    });
    newSegment.ParameterValues.Add(new ParameterValue()
    {
@@ -823,21 +788,30 @@ Add waypoint to route
        Value = "True",
        ValueSpecified = true
    });
+   //AGL, WGS84, RANGEFINDER (Only for Ardupilot)
+   newSegment.ParameterValues.Add(new ParameterValue()
+   {
+       Name = "altitudeType",
+       Value = "AGL", 
+       ValueSpecified = true
+   });
+
+
    newSegment.Figure.Points.Add(new FigurePoint()
    {
        AglAltitude = 20,
        AglAltitudeSpecified = true,
        AltitudeType = AltitudeType.AT_AGL,
        AltitudeTypeSpecified = true,
-       Latitude = 0.99443566874164979f,
+       Latitude = lat, //0.99443566874164979,
        LatitudeSpecified = true,
-       Longitude = 0.42015588448045021f,
+       Longitude = lng, //0.42015588448045021,
        LongitudeSpecified = true,
-       Order = 0,
        Wgs84Altitude = 0.0,
        Wgs84AltitudeSpecified = true
    });
-   route.Segments.Insert(0, newSegment);
+
+   route.Segments.Insert(index, newSegment);
 
 Calculating the route
 ~~~~~~~~~~~~~~~~~~~~~
@@ -849,11 +823,18 @@ Code below initiates roite calculation
    var updatedRoute = GetUpdatedRouteById(routeId);
    ProcessRouteRequest request = new ProcessRouteRequest
    {
-       ClientId = clientId,
-       Route = route
+       ClientId = _connect.AuthorizeHciResponse.ClientId,
+       Route = updatedRoute,
    };
-   MessageFuture<ProcessRouteResponse> task = messageExecutor.Submit<ProcessRouteResponse>(request);
+
+   MessageFuture<ProcessRouteResponse> task = _connect.Executor.Submit<ProcessRouteResponse>(request);
    task.Wait();
+
+   if (task.Exception != null || task.Value == null)
+   {
+       logger.LogException(task.Exception);
+       throw new Exception("Calculate error: " + task.Exception.Message);
+   }
    var processedRoute = task.Value.ProcessedRoute;
 
 Uploading the route
@@ -866,30 +847,11 @@ Code below upload ProcessedRoute to selected vehicle
 
    UploadRouteRequest request = new UploadRouteRequest
    {
-       ClientId = clientId,
+       ClientId = _connect.AuthorizeHciResponse.ClientId,
        ProcessedRoute = route,
        Vehicle = vehicle,
    };
    MessageFuture<UploadRouteResponse> task = messageExecutor.Submit<UploadRouteResponse>(request);
-   task.Wait();
-
-Getting/setting take-off point altitude
----------------------------------------
-
-Set takeoff point is Vehicle field update request to the server. Code below updates fields list.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code:: c#
-
-   var fields = new string[] { "altitudeOrigin" });
-   UpdateObjectFieldsRequest request = new UpdateObjectFieldsRequest
-   {
-       ClientId = clientId,
-       ObjectType = "Vehicle",
-       Object = new DomainObjectWrapper().Put(vehicle, "Vehicle"),
-   };
-   request.FieldNames.AddRange(fields);
-   var task = messageExecutor.Submit<UpdateObjectFieldsResponse>(request);
    task.Wait();
 
 Getting home position
@@ -908,33 +870,33 @@ Code below show how to send specific command to Vehicle
 
 .. code:: c#
 
-   SendCommandRequest request = new SendCommandRequest
+   var sendCommandRequestGuided = new SendCommandRequest
    {
        ClientId = clientId,
        Command = new UGCS.Sdk.Protocol.Encoding.Command
        {
-           Code = "CommandCode",
-           Subsystem = Subsystem.S_FLIGHT_CONTROLLER,
+           Code = "commandCode",
+           Subsystem = Subsystem.S_FLIGHT_CONTROLLER
        }
    };
-   request.Vehicles.Add(new Vehicle() { Id = vehicle.Id });
-   var responce = messageExecutor.Submit<SendCommandResponse>(request);
-   responce.Wait();
+   sendCommandRequestGuided.Vehicles.Add(new Vehicle { Id = 2 });
+   var sendCommandResponseGuided = messageExecutor.Submit<SendCommandResponse>(sendCommandRequestGuided);
+   sendCommandResponseGuided.Wait();
 
 Send command examples. Arm example:
 
 .. code:: c#
 
-   SendCommandRequest request = new SendCommandRequest
+   var sendCommandRequestGuided = new SendCommandRequest
    {
-        ClientId = 1,
-        Command = new UGCS.Sdk.Protocol.Encoding.Command
-        {
-            Code = "arm",
-            Subsystem = Subsystem.S_FLIGHT_CONTROLLER,
-        }
+       ClientId = clientId,
+       Command = new UGCS.Sdk.Protocol.Encoding.Command
+       {
+           Code = "arm",
+           Subsystem = Subsystem.S_FLIGHT_CONTROLLER
+       }
    };
-   request.Vehicles.Add(new Vehicle() { Id = 1 });
+   sendCommandRequestGuided.Vehicles.Add(new Vehicle { Id = 2 });
 
 Takeoff command with argument:
 
@@ -961,9 +923,9 @@ Click&Go command with argument:
 
 .. code:: c#
 
-   var sendCommandRequest = new SendCommandRequest
+    var sendCommandRequest = new SendCommandRequest
    {
-       ClientId = _connect.AuthorizeHciResponse.ClientId,
+       ClientId = clientId,
        Command = new UGCS.Sdk.Protocol.Encoding.Command
        {
            Code = "waypoint",
@@ -978,6 +940,7 @@ Click&Go command with argument:
                            new CommandArgument { Code = "ground_speed", Value = new Value { DoubleValue = 5.0 }},
                            new CommandArgument { Code = "heading", Value = new Value { DoubleValue = 0.017453292519943295 }}
                        });
+
    sendCommandRequest.Vehicles.Add(new Vehicle { Id = 2 });
    var sendCommandResponse = messageExecutor.Submit<SendCommandResponse>(sendCommandRequest);
 
