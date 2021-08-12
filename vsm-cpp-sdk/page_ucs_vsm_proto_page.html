@@ -392,6 +392,10 @@
 
     <span class="c1">// current command availability</span>
     <span class="n">repeated</span> <span class="n">Command_availability</span> <span class="n">command_availability</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// array with severity of status messages. Must be same size as status_messages or</span>
+    <span class="c1">// messages will be count as INFO</span>
+    <span class="n">repeated</span> <span class="n">Severity_code</span> <span class="n">messages_severity</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">message</span> <span class="n">Device_response</span> <span class="p">{</span>
@@ -443,6 +447,9 @@
 
     <span class="c1">// List of subcommands (E.g. mission items)</span>
     <span class="n">repeated</span> <span class="n">Device_command</span> <span class="n">sub_commands</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Ask VSM to ignore this errors while command execution</span>
+    <span class="n">repeated</span> <span class="n">Status_code</span> <span class="n">suppressErrors</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">message</span> <span class="n">Telemetry_field</span> <span class="p">{</span>
@@ -617,6 +624,20 @@
     <span class="n">STATUS_INVALID_SESSION_ID</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
     <span class="c1">// Used to notify peer that command is in progress.</span>
     <span class="n">STATUS_IN_PROGRESS</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="c1">// Command require altimeter, but no alive altimeter detected</span>
+    <span class="n">STATUS_ALTIMETER_REQUIRED</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="c1">// Cannot register another device due to license constraint</span>
+    <span class="n">STATUS_LICENSE_CONSTRAINT</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Response code sent by VSM to UCS</span>
+<span class="k">enum</span> <span class="n">Severity_code</span> <span class="p">{</span>
+    <span class="c1">// Info</span>
+    <span class="n">SEVERITY_INF</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c1">// Warning</span>
+    <span class="n">SEVERITY_WARN</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="c1">// Error</span>
+    <span class="n">SEVERITY_ERR</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// Used in property &quot;vehicle_type&quot; for Device of type DEVICE_TYPE_VEHICLE</span>
@@ -648,6 +669,7 @@
     <span class="n">SUBSYSTEM_TYPE_ADSB_RECEIVER</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>    <span class="c1">// Onboard adsb receiver for vehicle</span>
     <span class="n">SUBSYSTEM_TYPE_ADSB_VEHICLE</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>    <span class="c1">// Used to report telemetry for devices of type DEVICE_TYPE_ADSB_VEHICLE</span>
     <span class="n">SUBSYSTEM_TYPE_WEATHER_STATION</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">SUBSYSTEM_TYPE_VSM</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// Built in device types natively supported by UgCS. Used in Register_device.type field.</span>

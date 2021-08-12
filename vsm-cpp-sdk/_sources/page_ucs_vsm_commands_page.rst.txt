@@ -78,7 +78,7 @@ Command  Subsystem           In Mission  From UI  Description
          FC                  +           +        Repeat servo movement back an forth                                                                
          FC                  -           +        Return to HOME position is supported                                                               
          Camera              -           +        Select this camera as video source                                                                 
-         FC                  -           +        Create cylindrical fence around home location                                                      
+         FC                  -           +        Create polygonal fence or cylindrical fence around home location                                   
          FC                  -           +        Retract or release gear                                                                            
          FC                  +           -        Set vehicle heading                                                                                
          FC                  +           -        Specify Home location                                                                              
@@ -646,20 +646,21 @@ Description: Specifies the next waypoint. Upon encountering this item vehicle st
 
 Supported parameters:
 
-=================  ================================  ===========================================================================================================================================================  
-Name               Type                              Description                                                                                                                                                  
-=================  ================================  ===========================================================================================================================================================  
-latitude           FIELD_SEMANTIC_LATITUDE           Geodetic latitude                                                                                                                                            
-longitude          FIELD_SEMANTIC_LONGITUDE          Geodetic longitude                                                                                                                                           
-altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL                                                                                                                                                                   
-ground_elevation   FIELD_SEMANTIC_GROUND_ELEVATION   Elevation in meters (i.e. terrain height) underneath the position.                                                                                           
-turn_type          FIELD_SEMANTIC_ENUM               See                                                                                                                                                          
-acceptance_radius  FIELD_SEMANTIC_ACCEPTANCE_RADIUS  When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.                             
-loiter_radius      FIELD_SEMANTIC_LOITER_RADIUS      Radius of the point fly-by orbit in meters. Positive value stands for the CW direction, negative - CCW. Use 0 for no-braking pass through the target point.  
-wait_time          FIELD_SEMANTIC_NUMERIC            Seconds to wait at WP before preceeding to next WP                                                                                                           
-heading            FIELD_SEMANTIC_HEADING            Vehicle heading at the WP                                                                                                                                    
-follow_terrain     FIELD_SEMANTIC_BOOL               Vehicle moving to the WP in follow terrain mode. Altitude above terrain is calculated as altitude_amsl minus ground_elevation.                               
-=================  ================================  ===========================================================================================================================================================
+=================  ================================  ===================================================================================================================================================================================================================================================================================================================================================================  
+Name               Type                              Description                                                                                                                                                                                                                                                                                                                                                          
+=================  ================================  ===================================================================================================================================================================================================================================================================================================================================================================  
+latitude           FIELD_SEMANTIC_LATITUDE           Geodetic latitude                                                                                                                                                                                                                                                                                                                                                    
+longitude          FIELD_SEMANTIC_LONGITUDE          Geodetic longitude                                                                                                                                                                                                                                                                                                                                                   
+altitude_amsl      FIELD_SEMANTIC_ALTITUDE_AMSL                                                                                                                                                                                                                                                                                                                                                                           
+ground_elevation   FIELD_SEMANTIC_GROUND_ELEVATION   Elevation in meters (i.e. terrain height) underneath the position.                                                                                                                                                                                                                                                                                                   
+turn_type          FIELD_SEMANTIC_ENUM               See                                                                                                                                                                                                                                                                                                                                                                  
+acceptance_radius  FIELD_SEMANTIC_ACCEPTANCE_RADIUS  When the sphere with the radius centered at the target position is hit by the vehicle the target position is considered reached.                                                                                                                                                                                                                                     
+loiter_radius      FIELD_SEMANTIC_LOITER_RADIUS      Radius of the point fly-by orbit in meters. Positive value stands for the CW direction, negative - CCW. Use 0 for no-braking pass through the target point.                                                                                                                                                                                                          
+wait_time          FIELD_SEMANTIC_NUMERIC            Seconds to wait at WP before preceeding to next WP                                                                                                                                                                                                                                                                                                                   
+heading            FIELD_SEMANTIC_HEADING            Vehicle heading at the WP                                                                                                                                                                                                                                                                                                                                            
+follow_terrain     FIELD_SEMANTIC_BOOL               Vehicle moving to the WP in follow terrain mode. Altitude above terrain is calculated as altitude_amsl minus ground_elevation.                                                                                                                                                                                                                                       
+corner_radius      FIELD_SEMANTIC_NUMERIC            For an angle formed by three points A, B, C if ‘turn_type’ of B is ‘bank_turn’, the aircraft is never reached B because it round the path around B. The ‘corner_radius’ for B is the distance between B and the point where the vehicle stops moving straight to B and starts to move in an arc. Only make sense if ‘turn_type’ is ‘bank_turn’.  
+=================  ================================  ===================================================================================================================================================================================================================================================================================================================================================================
 
 
 
@@ -832,17 +833,20 @@ Set Fence
 
 Command ID: "set_fence"
 
-Description: Create cylindrical fence around Home Location. RTH will be triggered if vehicle tries to leave specified limits.
+Description: Create polygonal fence oar\and cylindrical fence around Home Location. RTH will be triggered if vehicle tries to leave specified limits.
 
 Parameters
 
-===============  ============================  =========================================================================  
-Name             Type                          Description                                                                
-===============  ============================  =========================================================================  
-altitude_amsl    FIELD_SEMANTIC_ALTITUDE_AMSL  Fence altitude in meters                                                   
-altitude_origin  FIELD_SEMANTIC_ALTITUDE_AMSL  Altitude origin in meters AMSL. Typically this should be the HL altitude.  
-radius           FIELD_SEMANTIC_NUMERIC        FEnce radius in meters. Max ground distance from Home Location             
-===============  ============================  =========================================================================
+===============  ============================  ============================================================================================================================================  
+Name             Type                          Description                                                                                                                                   
+===============  ============================  ============================================================================================================================================  
+altitude_amsl    FIELD_SEMANTIC_ALTITUDE_AMSL  Optional. Fence altitude in meters AMSL                                                                                                       
+altitude_origin  FIELD_SEMANTIC_ALTITUDE_AMSL  Optional. Altitude origin in meters AMSL. Typically this should be the HL altitude. This altitude is sent by server along with amsl altitude  
+altitude_raw     FIELD_SEMANTIC_ALTITUDE_RAW   Optional. Fence relative altitude in meters                                                                                                   
+radius           FIELD_SEMANTIC_NUMERIC        Optional. Fence radius in meters. Max ground distance from Home Location                                                                      
+latitudes        FIELD_SEMANTIC_LATITUDE       Optional. List of points latitudes that describe polygonal fence                                                                              
+longitudes       FIELD_SEMANTIC_LONGITUDE      Optional. List of points longitudes that describe polygonal fence                                                                             
+===============  ============================  ============================================================================================================================================
 
 
 

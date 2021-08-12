@@ -27,6 +27,10 @@ Convenience class for interpreting an I/O stream as a stream of Mavlink messages
 		typedef std::weak_ptr<Mavlink_stream> :ref:`Weak_ptr<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1af5ec59acf6d33c335f5c8a27de0c5a9d>`;
 		typedef :ref:`Mavlink_decoder<doxid-d5/da3/classugcs_1_1vsm_1_1_mavlink__decoder>` :ref:`Decoder<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1a8e965d031fa4ed74a3845500650b87fd>`;
 
+		// fields
+	
+		std::string :target:`name<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1a66fc744fe460c04a2d15f65784c36e0c>`;
+
 		// construction
 	
 		:ref:`Mavlink_stream<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1a56177bcc2ae2fe06157b07f1bdefd496>`(:ref:`Io_stream::Ref<doxid-d7/dc6/classugcs_1_1vsm_1_1_io__stream_1a534252726a25aeb3c0598f7d9a80a0a1>` stream);
@@ -64,6 +68,9 @@ Convenience class for interpreting an I/O stream as a stream of Mavlink messages
 			);
 	
 		void :ref:`Disable<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1a1af5e8ff3d5bf999ccf3f5bdf773048e>`();
+		void :target:`Increment_vehicle_counter<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1a30a998529528921ea2c4d22bf2b71209>`();
+		void :target:`Decrement_vehicle_counter<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1a0e27436c7ab61032d4976211b7b2c09d>`();
+		int :target:`Get_vehicle_counter<doxid-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream_1ab5ce330c5b8bb95fc64723a4ca90d97d>`();
 	};
 .. _details-db/d5c/classugcs_1_1vsm_1_1_mavlink__stream:
 

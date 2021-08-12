@@ -15,6 +15,7 @@ namespace ugcs::vsm
 	namespace_ugcs_vsm_sockets.rst
 	enum_ugcs_vsm_Io_result.rst
 	enum_ugcs_vsm_Run_as_service_result.rst
+	struct_ugcs_vsm_Altimeter_required_exception_dummy_struct.rst
 	struct_ugcs_vsm_Debug_assert_exception_dummy_struct.rst
 	struct_ugcs_vsm_Internal_error_exception_dummy_struct.rst
 	struct_ugcs_vsm_Invalid_op_exception_dummy_struct.rst
@@ -152,6 +153,7 @@ All VSM SDK functionality resides in this namespace. :ref:`More...<details-dd/de
 	typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`Invalid_op_exception_dummy_struct<doxid-dc/d6c/structugcs_1_1vsm_1_1_invalid__op__exception__dummy__struct>`,> :target:`Invalid_op_exception<doxid-dd/def/namespaceugcs_1_1vsm_1afba1cdc7be66bd2842cd42033f23de5e>`;
 	typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`Internal_error_exception_dummy_struct<doxid-d5/d7f/structugcs_1_1vsm_1_1_internal__error__exception__dummy__struct>`,> :target:`Internal_error_exception<doxid-dd/def/namespaceugcs_1_1vsm_1a7c17aba27ef032cb746a4d253669e581>`;
 	typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`System_exception_dummy_struct<doxid-d4/d2b/structugcs_1_1vsm_1_1_system__exception__dummy__struct>`,> :target:`System_exception<doxid-dd/def/namespaceugcs_1_1vsm_1ab46e603f9dae3c667e78a25079184fb6>`;
+	typedef :ref:`ugcs::vsm::Param_exception<doxid-d4/dff/classugcs_1_1vsm_1_1_param__exception>`<:ref:`Altimeter_required_exception_dummy_struct<doxid-da/d3f/structugcs_1_1vsm_1_1_altimeter__required__exception__dummy__struct>`,> :target:`Altimeter_required_exception<doxid-dd/def/namespaceugcs_1_1vsm_1a1d48d68818e6ae2d87602d2325d74258>`;
 	typedef :ref:`Request_container::Request_waiter<doxid-d1/d94/classugcs_1_1vsm_1_1_request__container_1_1_request__waiter>` :ref:`Request_waiter<doxid-dd/def/namespaceugcs_1_1vsm_1a6df49f1cd8c0bee4e2575bc29e3e683a>`;
 	typedef :ref:`Request_container::Request<doxid-d2/d26/classugcs_1_1vsm_1_1_request__container_1_1_request>` :ref:`Request<doxid-dd/def/namespaceugcs_1_1vsm_1a98ac69eea094e0fbb1a059fc0b03d7f4>`;
 	typedef :ref:`Request_context<doxid-d7/dcd/classugcs_1_1vsm_1_1_request__context>`<true> :ref:`Request_processor<doxid-dd/def/namespaceugcs_1_1vsm_1aaf87aa8291eb8db5efaf3dd1c72153cf>`;
@@ -170,6 +172,7 @@ All VSM SDK functionality resides in this namespace. :ref:`More...<details-dd/de
 
 	// structs
 
+	struct :ref:`Altimeter_required_exception_dummy_struct<doxid-da/d3f/structugcs_1_1vsm_1_1_altimeter__required__exception__dummy__struct>`;
 	struct :ref:`Debug_assert_exception_dummy_struct<doxid-dd/d48/structugcs_1_1vsm_1_1_debug__assert__exception__dummy__struct>`;
 	struct :ref:`Internal_error_exception_dummy_struct<doxid-d5/d7f/structugcs_1_1vsm_1_1_internal__error__exception__dummy__struct>`;
 	struct :ref:`Invalid_op_exception_dummy_struct<doxid-dc/d6c/structugcs_1_1vsm_1_1_invalid__op__exception__dummy__struct>`;

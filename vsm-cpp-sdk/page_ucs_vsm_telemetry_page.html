@@ -459,20 +459,40 @@
 <td><p>FC</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>gps_fix</p></td>
+<tr class="row-odd"><td><p>gimbal_roll</p></td>
+<td><p>FIELD_SEMANTIC_ROLL</p></td>
+<td><p>GIMBAL</p></td>
+<td><p>Gimbal roll in earth frame in degrees.</p></td>
+</tr>
+<tr class="row-even"><td><p>gimbal_pitch</p></td>
+<td><p>FIELD_SEMANTIC_PITCH</p></td>
+<td><p>GIMBAL</p></td>
+<td><p>Gimbal pitch in earth frame in degrees. -90 means looking down, 90 - up.</p></td>
+</tr>
+<tr class="row-odd"><td><p>gimbal_heading</p></td>
+<td><p>FIELD_SEMANTIC_HEADING</p></td>
+<td><p>GIMBAL</p></td>
+<td><p>Gimbal pitch in earth frame in degrees. Zero means north.</p></td>
+</tr>
+<tr class="row-even"><td><p>gps_fix</p></td>
 <td><p>FIELD_SEMANTIC_GPS_FIX_TYPE</p></td>
 <td><p>FC</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ground_speed</p></td>
+<tr class="row-odd"><td><p>ground_speed</p></td>
 <td><p>FIELD_SEMANTIC_GROUND_SPEED</p></td>
 <td><p>FC</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>heading</p></td>
+<tr class="row-even"><td><p>heading</p></td>
 <td><p>FIELD_SEMANTIC_HEADING</p></td>
 <td><p>FC</p></td>
 <td><p>Yaw relative to North. Range 0..2Pi, East is positive</p></td>
+</tr>
+<tr class="row-odd"><td><p>health_rangefinder</p></td>
+<td><p>FIELD_SEMANTIC_BOOL</p></td>
+<td><p>FC</p></td>
+<td><p>Health status of rangefinder sensor</p></td>
 </tr>
 <tr class="row-even"><td><p>home_altitude_amsl</p></td>
 <td><p>FIELD_SEMANTIC_ALTITUDE_AMSL</p></td>
@@ -669,7 +689,12 @@
 <td><p>FC</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>winch_connected</p></td>
+<tr class="row-odd"><td><p>video_stream_uri</p></td>
+<td><p>FIELD_SEMANTIC_STRING</p></td>
+<td><p>Camera</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>winch_connected</p></td>
 <td><p>FIELD_SEMANTIC_BOOL</p></td>
 <td><p>Winch</p></td>
 <td></td>

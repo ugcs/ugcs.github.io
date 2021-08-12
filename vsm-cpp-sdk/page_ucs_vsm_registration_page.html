@@ -245,6 +245,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vsm-message">
+   Vsm_message
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#register-device-message">
    Register_device message
   </a>
@@ -315,6 +320,60 @@
 <li><p>Tell server the mission items supported by device</p></li>
 <li><p>Tell server the commands supported by device</p></li>
 </ul>
+</div>
+<div class="section" id="vsm-message">
+<span id="doxid-d9-de8-ucs-vsm-registration-page-1vsm-message"></span><h2>Vsm_message<a class="headerlink" href="#vsm-message" title="Permalink to this headline">¶</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Field type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>device_id</p></td>
+<td><p>uint32</p></td>
+<td><p>Uniquely identifies the connected device. Exception is register_peer payload when this field is zero. This id is generated when Register_device message is created. It defines the context (session) for all subsequent communications with the device (in both directions).</p></td>
+</tr>
+<tr class="row-odd"><td><p>message_id</p></td>
+<td><p>uint32</p></td>
+<td><p>Unique message id. This will be put into response if response is required. Can be omitted if response is not required. Request message_id if this message is a response to particular request.</p></td>
+</tr>
+<tr class="row-even"><td><p>response_required</p></td>
+<td><p>bool</p></td>
+<td><p>Indicates that peer will wait for response on this message.</p></td>
+</tr>
+<tr class="row-odd"><td><p>register_peer</p></td>
+<td><p>Register_peer</p></td>
+<td><p>Used to detect duplicate connections between ucs ans vsm. This must be the first message sent from ucs and VSM on new connection. In this case device_id==0 which means this message is for peer application not device. No device specific payloads can be present if device_id==0.</p></td>
+</tr>
+<tr class="row-even"><td><p>register_device</p></td>
+<td><p>Register_device</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>unregister_device</p></td>
+<td><p>Unregister_device</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>device_command</p></td>
+<td><p>Device_command</p></td>
+<td><p>List of commands for device</p></td>
+</tr>
+<tr class="row-odd"><td><p>device_response</p></td>
+<td><p>device_response</p></td>
+<td><p>If this field is present then this is a response to previously sent request. If message_id is present, too then it contains the message_id from the corresponding request.</p></td>
+</tr>
+<tr class="row-even"><td><p>device_status</p></td>
+<td><p>Device_status</p></td>
+<td><p>Device can send this message any time it wants to report some info to ucs.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="register-device-message">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1register-device-message"></span><h2>Register_device message<a class="headerlink" href="#register-device-message" title="Permalink to this headline">¶</a></h2>
