@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Vehicle registration with UCS &#8212; CPP VSM SDK  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.f8312eac34e2432659a6ef7e609c047e.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,10 +24,10 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.c258f241e0e9126fa012.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -38,7 +39,10 @@
     <link rel="next" title="Field types and semantics" href="page_ucs_vsm_fields_page.html" />
     <link rel="prev" title="ucs_vsm.proto" href="page_ucs_vsm_proto_page.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -307,9 +311,9 @@
               
               <div>
                 
-  <div class="section" id="vehicle-registration-with-ucs">
+  <section id="vehicle-registration-with-ucs">
 <span id="doxid-d9-de8-ucs-vsm-registration-page"></span><span id="index-0"></span><h1>Vehicle registration with UCS<a class="headerlink" href="#vehicle-registration-with-ucs" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
+<section id="overview">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1registration-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Upon detecting a vehicle VSM sends <strong>Vsm_message</strong> with <a class="reference internal" href="#doxid-d9-de8-ucs-vsm-registration-page-1register-device-message"><span class="std std-ref">Register_device</span></a> payload. This request serves for several purposes:</p>
 <ul class="simple">
@@ -320,8 +324,8 @@
 <li><p>Tell server the mission items supported by device</p></li>
 <li><p>Tell server the commands supported by device</p></li>
 </ul>
-</div>
-<div class="section" id="vsm-message">
+</section>
+<section id="vsm-message">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1vsm-message"></span><h2>Vsm_message<a class="headerlink" href="#vsm-message" title="Permalink to this headline">¶</a></h2>
 <table class="table">
 <colgroup>
@@ -374,8 +378,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="register-device-message">
+</section>
+<section id="register-device-message">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1register-device-message"></span><h2>Register_device message<a class="headerlink" href="#register-device-message" title="Permalink to this headline">¶</a></h2>
 <table class="table">
 <colgroup>
@@ -408,8 +412,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="register-subsystem-message">
+</section>
+<section id="register-subsystem-message">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1register-subsystem-message"></span><h2>Register_subsystem message<a class="headerlink" href="#register-subsystem-message" title="Permalink to this headline">¶</a></h2>
 <p>Device is a set of subsystems of different types. Vehicle registration should register at least a flight controller (autopilot). Other subsystems are optional. There can be multiple instances of the same type (for example: two cameras).</p>
 <table class="table">
@@ -443,7 +447,7 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="subsystem-types">
+<section id="subsystem-types">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1subsystem-types"></span><h3>Subsystem types<a class="headerlink" href="#subsystem-types" title="Permalink to this headline">¶</a></h3>
 <table class="table">
 <colgroup>
@@ -476,8 +480,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="flight-controller-subsystem">
+</section>
+<section id="flight-controller-subsystem">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1subsystem-fc"></span><h3>Flight controller subsystem<a class="headerlink" href="#flight-controller-subsystem" title="Permalink to this headline">¶</a></h3>
 <p>There is one required property and one optional property for flight controller subsystem:</p>
 <table class="table">
@@ -507,9 +511,9 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="register-command-message">
+</section>
+</section>
+<section id="register-command-message">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1register-command"></span><h2>Register_command message<a class="headerlink" href="#register-command-message" title="Permalink to this headline">¶</a></h2>
 <p>Register_command message is used to register feature supported by vehicle with UgCS. Later VSM can dynamically enable/disable all previously registered commands via Command_availability message.</p>
 <table class="table">
@@ -548,8 +552,8 @@
 </tbody>
 </table>
 <p>Formal definition is found in <strong>Register_command</strong> message in <a class="reference internal" href="page_ucs_vsm_proto_page.html#doxid-d0-dba-ucs-vsm-proto-page"><span class="std std-ref">ucs_vsm.proto</span></a> file.</p>
-</div>
-<div class="section" id="autopilot-names">
+</section>
+<section id="autopilot-names">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1autopilot-list"></span><h2>Autopilot names<a class="headerlink" href="#autopilot-names" title="Permalink to this headline">¶</a></h2>
 <p>List of autopilots which can be reported by VSM when registering subsystem of type SUBSYSTEM_TYPE_FLIGHT_CONTROLLER and UgCS will know how to display them.</p>
 <table class="table">
@@ -640,8 +644,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="vehicle-frames">
+</section>
+<section id="vehicle-frames">
 <span id="doxid-d9-de8-ucs-vsm-registration-page-1frame-list"></span><h2>Vehicle frames<a class="headerlink" href="#vehicle-frames" title="Permalink to this headline">¶</a></h2>
 <p>VSM should tell the frame type upon vehicle registration. VSM can report any string as frame name. If non built-in values are reporthed then user will need to select the frame avatar for the vehicle manually. List of built-in frame names which can be reported by VSM <strong>Register_vehicle.frame_type</strong> field. ==================  =============================================================
 Name                Description
@@ -669,19 +673,30 @@ dji_matrice         DJI Matrice 100
 dji_inspire         DJI Inspire1
 yuneec_h520         Yuneec Typhoon H520
 ==================  =============================================================</p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="page_ucs_vsm_proto_page.html" title="previous page">ucs_vsm.proto</a>
-    <a class='right-next' id="next-link" href="page_ucs_vsm_fields_page.html" title="next page">Field types and semantics</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="page_ucs_vsm_proto_page.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">Previous</p>
+            <p class="prev-next-title">ucs_vsm.proto</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="page_ucs_vsm_fields_page.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">Next</p>
+        <p class="prev-next-title">Field types and semantics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -689,20 +704,19 @@ yuneec_h520         Yuneec Typhoon H520
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="_static/js/index.c258f241e0e9126fa012.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2020, SPH Engineering.<br/>
+    &copy; Copyright 2020, SPH Engineering.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

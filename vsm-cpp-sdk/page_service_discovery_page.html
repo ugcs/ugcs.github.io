@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Automatic Service Discovery &#8212; CPP VSM SDK  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.f8312eac34e2432659a6ef7e609c047e.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,10 +24,10 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.c258f241e0e9126fa012.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -38,7 +39,10 @@
     <link rel="next" title="UCS-VSM communications protocol" href="page_ucs_vsm_protocol_page.html" />
     <link rel="prev" title="Asynchronous programming framework" href="page_async_programming_page.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -275,10 +279,10 @@
               
               <div>
                 
-  <div class="section" id="automatic-service-discovery">
+  <section id="automatic-service-discovery">
 <span id="doxid-d0-d17-service-discovery-page"></span><span id="index-0"></span><h1>Automatic Service Discovery<a class="headerlink" href="#automatic-service-discovery" title="Permalink to this headline">¶</a></h1>
 <p>Automatic Service Discovery feature enables possibility to discover VSMs in case UgCS server and VSM is using dynamic addresses. Used SSDP protocol (<a class="reference external" href="https://tools.ietf.org/html/draft-cai-ssdp-v1-03">https://tools.ietf.org/html/draft-cai-ssdp-v1-03</a>) as basis and actual data from packet captures when Windows and iOS searches for various stuff on my LAN.</p>
-<div class="section" id="protocol-description">
+<section id="protocol-description">
 <span id="doxid-d0-d17-service-discovery-page-1decription"></span><h2>Protocol Description<a class="headerlink" href="#protocol-description" title="Permalink to this headline">¶</a></h2>
 <p>There are three messages invloved. They are HTTP messages without body, formatted according to HTTP specs, rfc7230.</p>
 <ol class="arabic">
@@ -313,8 +317,8 @@
 <p>There is a field “ID” added to the response and notify message. It specifies the service instance. Service client can use the ID field to distinguish between several locations of the same service instance to avoud multiple simultaneous connections. The ID is randomly generated on VSM startup and does change with each restart.</p>
 </li>
 </ol>
-</div>
-<div class="section" id="service-discovery-support-in-sdk">
+</section>
+<section id="service-discovery-support-in-sdk">
 <span id="doxid-d0-d17-service-discovery-page-1sdk-support"></span><h2>Service discovery support in SDK<a class="headerlink" href="#service-discovery-support-in-sdk" title="Permalink to this headline">¶</a></h2>
 <p>VSM SDK has support of automatic service discovery based on the above protocol.</p>
 <p>Both ends are implemented in SDK, so developer can create both service advertisers and service locators with minimal effort. Five functions provide interface to service discovery protocol:</p>
@@ -336,8 +340,8 @@
 </table>
 <p>See file <code class="docutils literal notranslate"><span class="pre">service_discovery_processor.h</span></code> for details.</p>
 <p>Service advertise support is already enabled by default and can be used by any VSM by adding lines to vsm.conf file.</p>
-</div>
-<div class="section" id="service-discovery-related-vsm-conf-file-parameters">
+</section>
+<section id="service-discovery-related-vsm-conf-file-parameters">
 <span id="doxid-d0-d17-service-discovery-page-1conf-file"></span><h2>Service discovery related vsm.conf file parameters<a class="headerlink" href="#service-discovery-related-vsm-conf-file-parameters" title="Permalink to this headline">¶</a></h2>
 <p>All parameters are optional: ===================================================  ============================================================================================================================================================================================================================================================================
 Parameter name                                       Description
@@ -367,19 +371,30 @@ service_discovery.vsm_name                           Automatically enables VSM d
 <span class="n">service_discovery</span><span class="p">.</span><span class="n">advertise</span><span class="mf">.1</span><span class="p">.</span><span class="n">location</span> <span class="o">=</span> <span class="nl">tcp</span><span class="p">:</span><span class="c1">//{local_address}:5556</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="page_async_programming_page.html" title="previous page">Asynchronous programming framework</a>
-    <a class='right-next' id="next-link" href="page_ucs_vsm_protocol_page.html" title="next page">UCS-VSM communications protocol</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="page_async_programming_page.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">Previous</p>
+            <p class="prev-next-title">Asynchronous programming framework</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="page_ucs_vsm_protocol_page.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">Next</p>
+        <p class="prev-next-title">UCS-VSM communications protocol</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -387,20 +402,19 @@ service_discovery.vsm_name                           Automatically enables VSM d
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="_static/js/index.c258f241e0e9126fa012.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2020, SPH Engineering.<br/>
+    &copy; Copyright 2020, SPH Engineering.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

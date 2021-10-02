@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>class Adsb_vehicle &#8212; CPP VSM SDK  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.f8312eac34e2432659a6ef7e609c047e.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,10 +24,10 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.c258f241e0e9126fa012.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -37,7 +38,10 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="struct glob_t" href="struct_glob_t.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -2063,11 +2067,11 @@
               
               <div>
                 
-  <div class="section" id="class-adsb-vehicle">
+  <section id="class-adsb-vehicle">
 <span id="doxid-d0-dfd-class-adsb-vehicle"></span><span id="index-0"></span><h1>class Adsb_vehicle<a class="headerlink" href="#class-adsb-vehicle" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;adsb_vehicle.h&gt;</span><span class="cp"></span>
 
@@ -2088,7 +2092,7 @@
     <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
     <span class="k">static</span> <a class="reference internal" href="#doxid-d0-dfd-class-adsb-vehicle-1a9a274b2e6d4bb405c09bdc5c08334cfc"><span class="std std-ref">Ptr</span></a><span></span> <a class="reference internal" href="#doxid-d0-dfd-class-adsb-vehicle-1afe76593caf6fa19db1367f71d88d88da"><span class="std std-ref">Create</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
 <span class="p">};</span></pre>
-<div class="section" id="inherited-members">
+<section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
@@ -2136,35 +2140,40 @@
     <a class="reference internal" href="class_ugcs_vsm_Subsystem.html#doxid-de-d9d-classugcs-1-1vsm-1-1-subsystem-1a7d007a86146a44b950019a007a0bf192"><span class="std std-ref">Subsystem::Ptr</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device-1aae34befc926d3fe246e2949e71fe3c33"><span class="std std-ref">Add_subsystem</span></a><span></span><span class="p">(</span><span class="n">proto</span><span class="o">::</span><span class="n">Subsystem_type</span><span class="p">);</span>
     <a class="reference internal" href="class_ugcs_vsm_Request_context.html#doxid-d7-dcd-classugcs-1-1vsm-1-1-request-context-1a470f700b033c20641c2076b2e76b9ccf"><span class="std std-ref">Request_processor::Ptr</span></a><span></span> <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device-1a80b756992fdfc476ea136486275d8030"><span class="std std-ref">Get_processing_ctx</span></a><span></span><span class="p">();</span>
     <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="class_ugcs_vsm_Device.html#doxid-d1-dfa-classugcs-1-1vsm-1-1-device-1a4ce277ef7d82d30aee555d0fafc0f21a"><span class="std std-ref">Handle_ucs_info</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="struct_ugcs_vsm_Ucs_info.html#doxid-df-d62-structugcs-1-1vsm-1-1-ucs-info"><span class="std std-ref">Ucs_info</span></a><span></span><span class="o">&gt;</span><span class="p">);</span></pre>
-</div>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+</section>
+<section id="detailed-documentation">
 <span id="details-d0-dfd-class-adsb-vehicle"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-dfd-class-adsb-vehicle-1a9a274b2e6d4bb405c09bdc5c08334cfc"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Adsb_vehicle</span><span class="o">&gt;</span> <span class="n">Ptr</span></pre>
 <p>Pointer type.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-dfd-class-adsb-vehicle-1a92046bdf9e152dc967c87add34435ee4"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Adsb_vehicle</span><span class="o">&gt;</span> <span class="n">Weak_ptr</span></pre>
 <p>Pointer type.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d0-dfd-class-adsb-vehicle-1afe76593caf6fa19db1367f71d88d88da"><span id="index-3"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span> <a class="reference internal" href="#doxid-d0-dfd-class-adsb-vehicle-1a9a274b2e6d4bb405c09bdc5c08334cfc"><span class="std std-ref">Ptr</span></a><span></span> <span class="n">Create</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
 <p>Create an instance.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="struct_glob_t.html" title="previous page">struct glob_t</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="struct_glob_t.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">Previous</p>
+            <p class="prev-next-title">struct glob_t</p>
+        </div>
+    </a>
+</div>
               
           </main>
           
@@ -2172,20 +2181,19 @@
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="_static/js/index.c258f241e0e9126fa012.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2020, SPH Engineering.<br/>
+    &copy; Copyright 2020, SPH Engineering.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

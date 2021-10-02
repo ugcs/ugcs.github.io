@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Getting Started &#8212; CPP VSM SDK  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.f8312eac34e2432659a6ef7e609c047e.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,10 +24,10 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.c258f241e0e9126fa012.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -38,7 +39,10 @@
     <link rel="next" title="Manual" href="page_ucs_vsm_manual_page.html" />
     <link rel="prev" title="Overview" href="page_ucs_vsm_overview_page.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -279,17 +283,17 @@
               
               <div>
                 
-  <div class="section" id="getting-started">
+  <section id="getting-started">
 <span id="doxid-d1-d66-getting-started"></span><span id="index-0"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p><span class="target" id="doxid-d1-d66-getting-started-1md-github-workspace-cpp-sdk-readme"></span></p>
 <p>C++ VSM SDK for <a class="reference external" href="http://www.ugcs.com/">Universal ground Control Software</a>.</p>
-<div class="section" id="general-information">
+<section id="general-information">
 <span id="doxid-d1-d66-getting-started-1general-information"></span><h2>General information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
 <p>C++ VSM SDK is implemented using C++ language (C++14 standard) which is also a requirement for SDK users code.</p>
 <p>VSM SDK uses CMake as its build system to keep it platform independent.</p>
 <p>Essentially what CMake does is it wraps the platform specific build commands/files under common interface. Out-of-source builds are supported and recommended.</p>
-</div>
-<div class="section" id="system-requirements">
+</section>
+<section id="system-requirements">
 <span id="doxid-d1-d66-getting-started-1system-req"></span><h2>System requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
 <p>Currently supported build toolchains/compilers and their respective versions are:</p>
 <ul class="simple">
@@ -312,16 +316,16 @@
 <li><p>OSX High Sierra and above</p></li>
 <li><p>Clang Apple LLVM version 9.0.0+</p></li>
 </ul>
-</div>
-<div class="section" id="setting-up-the-build-environment">
+</section>
+<section id="setting-up-the-build-environment">
 <span id="doxid-d1-d66-getting-started-1setting-up"></span><h2>Setting up the build environment<a class="headerlink" href="#setting-up-the-build-environment" title="Permalink to this headline">¶</a></h2>
 <p>Below are instructions on how to prepare build environment on Windows and Ubuntu Linux.</p>
 <p>After the required components are installed the workflow is identical on all platforms.</p>
 <p>Protobuf library must be either built from source or installed as precompiled package.</p>
 <p>See <a class="reference external" href="https://github.com/protocolbuffers/protobuf">https://github.com/protocolbuffers/protobuf</a> for details.</p>
-<div class="section" id="windows">
+<section id="windows">
 <span id="doxid-d1-d66-getting-started-1autotoc-md0"></span><h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="mingw">
+<section id="mingw">
 <span id="doxid-d1-d66-getting-started-1autotoc-md1"></span><h4>MinGW<a class="headerlink" href="#mingw" title="Permalink to this headline">¶</a></h4>
 <p>Download and install the latest MinGW-w64 from <a class="reference external" href="http://sourceforge.net/projects/mingw-w64">http://sourceforge.net/projects/mingw-w64</a>.</p>
 <p>Use <a class="reference external" href="http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer">MinGW installer</a>. When it asks for configuration you should input:</p>
@@ -332,37 +336,37 @@
 <li><p>Exception: dwarf for 32-bits, seh for 64-bits.</p></li>
 </ul>
 <p>Make sure mingw bin directory is added to PATH (E.g. C:mingwmingw64bin)</p>
-</div>
-<div class="section" id="cmake">
+</section>
+<section id="cmake">
 <span id="doxid-d1-d66-getting-started-1autotoc-md2"></span><h4>CMake<a class="headerlink" href="#cmake" title="Permalink to this headline">¶</a></h4>
 <p>Get the latest cmake from <a class="reference external" href="http://www.cmake.org">http://www.cmake.org</a>.</p>
 <p>Make sure cmake is added to PATH (E.g. C:Program Files (x86)CMakebin)</p>
-</div>
-<div class="section" id="python">
+</section>
+<section id="python">
 <span id="doxid-d1-d66-getting-started-1autotoc-md3"></span><h4>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h4>
 <p>Get the latest Python 2.7 from <a class="reference external" href="http://www.python.org/download/">http://www.python.org/download/</a></p>
 <p>Make sure python is added to PATH (E.g. C:Python27)</p>
-</div>
-</div>
-<div class="section" id="linux">
+</section>
+</section>
+<section id="linux">
 <span id="doxid-d1-d66-getting-started-1autotoc-md4"></span><h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
 <p>Ubuntu 16.04+ has all the required packages in default repositories.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># apt install gcc g++ cmake python2.7 libprotobuf-dev</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="macos-x">
+</section>
+<section id="macos-x">
 <span id="doxid-d1-d66-getting-started-1autotoc-md5"></span><h3>MacOS X<a class="headerlink" href="#macos-x" title="Permalink to this headline">¶</a></h3>
 <p>Your should use install latest XCode. After that you can run CMake in the same way as on other platforms.</p>
-</div>
-</div>
-<div class="section" id="doxid-d1-d66-getting-started-1ides-setup">
+</section>
+</section>
+<section id="doxid-d1-d66-getting-started-1ides-setup">
 <span id="ides-setup-optional"></span><h2>IDEs setup (optional)<a class="headerlink" href="#doxid-d1-d66-getting-started-1ides-setup" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="clion-setup">
+<section id="clion-setup">
 <span id="doxid-d1-d66-getting-started-1autotoc-md6"></span><h3>CLion setup<a class="headerlink" href="#clion-setup" title="Permalink to this headline">¶</a></h3>
 <p>TODO</p>
-</div>
-<div class="section" id="eclipse-setup">
+</section>
+<section id="eclipse-setup">
 <span id="doxid-d1-d66-getting-started-1autotoc-md7"></span><h3>Eclipse setup<a class="headerlink" href="#eclipse-setup" title="Permalink to this headline">¶</a></h3>
 <p>You should have the latest Java for eclipse to run.</p>
 <p>Some plugins are recommended for the development of VSM SDK itself. They are not required for standalone VSM development.</p>
@@ -376,9 +380,9 @@
 <li><p>Predefined build configurations for win and linux.</p></li>
 </ol>
 <p>Lastly under Project/Properties/C++General/Preprocessor Includes/Providers: Check the “CDT GCC built in compiler settings” checkbox.</p>
-</div>
-</div>
-<div class="section" id="compiling-sdk">
+</section>
+</section>
+<section id="compiling-sdk">
 <span id="doxid-d1-d66-getting-started-1compiling-sdk"></span><h2>Compiling SDK<a class="headerlink" href="#compiling-sdk" title="Permalink to this headline">¶</a></h2>
 <p>OEM manufacturers and enthusiasts are supposed to compile the SDK by themselves so source code is provided for them (<a class="reference external" href="https://github.com/UgCS/vsm-cpp-sdk">https://github.com/UgCS/vsm-cpp-sdk</a>), however they are not supposed to modify the SDK sources. If some functionality is missing, it is always worth to contact UgCS and suggest a proposal. Good proposals have a chance to be officially added to the SDK, so everybody can benefit from it.</p>
 <p>CMAKE (<a class="reference external" href="http://www.cmake.org/">http://www.cmake.org/</a>) cross-platform build system is used by VSM C++ SDK. You can use standard CMake variables to change the build process:</p>
@@ -387,7 +391,7 @@
 <li><p>CMAKE_INSTALL_PREFIX - change the installation directory of “make install” target. (Default is “/usr/local/” which installs the SDK in directory “/usr/local/opt/vsm-sdk”.)</p></li>
 </ul>
 <p>Python 2.6 (or later from branch 2.x) is needed for make file generation.</p>
-<div class="section" id="building-sdk-from-command-line">
+<section id="building-sdk-from-command-line">
 <span id="doxid-d1-d66-getting-started-1autotoc-md8"></span><h3>Building SDK from command line<a class="headerlink" href="#building-sdk-from-command-line" title="Permalink to this headline">¶</a></h3>
 <p>Assume you are working from your $HOME directory:</p>
 <ol class="arabic simple">
@@ -424,8 +428,8 @@
 </pre></div>
 </div>
 <p>Proceed to VSM build instructions</p>
-</div>
-<div class="section" id="building-ardupilot-vsm-from-command-line">
+</section>
+<section id="building-ardupilot-vsm-from-command-line">
 <span id="doxid-d1-d66-getting-started-1autotoc-md9"></span><h3>Building Ardupilot VSM from command line<a class="headerlink" href="#building-ardupilot-vsm-from-command-line" title="Permalink to this headline">¶</a></h3>
 <p>Assume you are working from your $HOME directory:</p>
 <ol class="arabic simple">
@@ -458,8 +462,8 @@
 <span class="n">If</span> <span class="n">build</span> <span class="n">suceeds</span> <span class="n">you</span><span class="sc">&#39;ll have vsm-ardupilot executable in current directory.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="building-vsm-sdk-for-android">
+</section>
+<section id="building-vsm-sdk-for-android">
 <span id="doxid-d1-d66-getting-started-1autotoc-md10"></span><h3>Building VSM SDK for Android<a class="headerlink" href="#building-vsm-sdk-for-android" title="Permalink to this headline">¶</a></h3>
 <p>Additional variables should be defined either as environemnt variables or as cmake “defines” via -D option.</p>
 <ul>
@@ -475,20 +479,31 @@
 <li><p>ANDROID_ABI_LIST can specify semicolon-separated list of target ABI (e.g. “armeabi;armeabi-v7a;x86”).</p></li>
 <li><p>ANDROID_PLATFORM can specify target Android platform (e.g. “android-19”)</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="page_ucs_vsm_overview_page.html" title="previous page">Overview</a>
-    <a class='right-next' id="next-link" href="page_ucs_vsm_manual_page.html" title="next page">Manual</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="page_ucs_vsm_overview_page.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">Previous</p>
+            <p class="prev-next-title">Overview</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="page_ucs_vsm_manual_page.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">Next</p>
+        <p class="prev-next-title">Manual</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -496,20 +511,19 @@
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="_static/js/index.c258f241e0e9126fa012.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2020, SPH Engineering.<br/>
+    &copy; Copyright 2020, SPH Engineering.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

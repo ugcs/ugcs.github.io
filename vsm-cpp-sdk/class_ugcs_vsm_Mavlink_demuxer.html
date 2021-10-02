@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>class ugcs::vsm::Mavlink_demuxer &#8212; CPP VSM SDK  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.f8312eac34e2432659a6ef7e609c047e.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,10 +24,10 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.c258f241e0e9126fa012.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -38,7 +39,10 @@
     <link rel="next" title="struct ugcs::vsm::Mavlink_demuxer::Duplicate_handler_dummy_struct" href="struct_ugcs_vsm_Mavlink_demuxer_Duplicate_handler_dummy_struct.html" />
     <link rel="prev" title="class ugcs::vsm::Mavlink_decoder" href="class_ugcs_vsm_Mavlink_decoder.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -2067,11 +2071,11 @@
               
               <div>
                 
-  <div class="section" id="class-ugcs-vsm-mavlink-demuxer">
+  <section id="class-ugcs-vsm-mavlink-demuxer">
 <span id="doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer"></span><span id="index-0"></span><h1>class ugcs::vsm::Mavlink_demuxer<a class="headerlink" href="#class-ugcs-vsm-mavlink-demuxer" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Mavlink message demultiplexer based on message, system and component identifiers. <a class="reference internal" href="#details-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer"><span class="std std-ref">More…</span></a></p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;mavlink_demuxer.h&gt;</span><span class="cp"></span>
@@ -2132,12 +2136,12 @@
 
     <span class="kt">void</span> <a class="reference internal" href="#doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1ab9ed055f1bdeb5e0a2aac816acd8d76a"><span class="std std-ref">Unregister_handler</span></a><span></span><span class="p">(</span><span class="n">Key</span><span class="o">&amp;</span><span class="p">);</span>
 <span class="p">};</span></pre>
-</div>
-<div class="section" id="detailed-documentation">
+</section>
+<section id="detailed-documentation">
 <span id="details-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Mavlink message demultiplexer based on message, system and component identifiers.</p>
 <p>Supposed to be conveniently used with <a class="reference internal" href="class_ugcs_vsm_Mavlink_decoder.html#doxid-d5-da3-classugcs-1-1vsm-1-1-mavlink-decoder"><span class="std std-ref">Mavlink_decoder</span></a>. Messages from different mavlink extensions but with same identifiers can not be demultiplexed simultaneously.</p>
-<div class="section" id="typedefs">
+<section id="typedefs">
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1a0a28b018845d428eeadbd81dbbbbceac"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="kt">signed</span> <span class="n">Message_id</span></pre>
 <p>Helper type for Mavlink message id which is able to hold special values.</p>
@@ -2152,8 +2156,8 @@
 <p><a class="reference internal" href="class_ugcs_vsm_Io_buffer.html#doxid-d1-d0f-classugcs-1-1vsm-1-1-io-buffer"><span class="std std-ref">Io_buffer</span></a> contains the raw payload data.</p>
 <p class="rubric">Returns:</p>
 <p><em>true</em> message will be resubmitted to demuxer for further processing, otherwise <em>false</em>.</p>
-</div>
-<div class="section" id="fields">
+</section>
+<section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1a5b3c8e958153b01bfdb34e135a3cf9ce"><span id="index-6"></span><span></span><span class="k">static</span> <span class="k">constexpr</span> <a class="reference internal" href="#doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1a0a28b018845d428eeadbd81dbbbbceac"><span class="std std-ref">Message_id</span></a><span></span> <span class="n">MESSAGE_ID_ANY</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></pre>
 <p>Special value representing any Mavlink message id.</p>
@@ -2161,13 +2165,13 @@
 <p>Special value representing any Mavlink system id.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1a4b01ee4dac4f5acbd12fcec987b97778"><span id="index-8"></span><span></span><span class="k">static</span> <span class="k">constexpr</span> <a class="reference internal" href="#doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1a674aa126e8a42d83160fb5c86e0f56c9"><span class="std std-ref">Component_id</span></a><span></span> <span class="n">COMPONENT_ID_ANY</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></pre>
 <p>Special value representing any Mavlink component id.</p>
-</div>
-<div class="section" id="construction">
+</section>
+<section id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1afc13b65f23f1e3a485538bdd24d6c3b0"><span id="index-9"></span><span></span><span class="n">Mavlink_demuxer</span><span class="p">(</span><span class="k">const</span> <span class="n">Mavlink_demuxer</span><span class="o">&amp;</span><span class="p">)</span></pre>
 <p>Delete copy constructor.</p>
-</div>
-<div class="section" id="methods">
+</section>
+<section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1a48a12dccd29a0c0c8931079ec8b3ab7d"><span id="index-10"></span><span></span><span class="kt">void</span> <span class="n">Disable</span><span class="p">()</span></pre>
 <p>Should be called prior to intention to delete the instance.</p>
@@ -2218,20 +2222,31 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-d6-db5-classugcs-1-1vsm-1-1-mavlink-demuxer-1ab9ed055f1bdeb5e0a2aac816acd8d76a"><span id="index-14"></span><span></span><span class="kt">void</span> <span class="n">Unregister_handler</span><span class="p">(</span><span class="n">Key</span><span class="o">&amp;</span><span class="p">)</span></pre>
 <p>Unregister handler using registration key.</p>
 <p>Key is invalidated upon exit from the method.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Mavlink_decoder.html" title="previous page">class ugcs::vsm::Mavlink_decoder</a>
-    <a class='right-next' id="next-link" href="struct_ugcs_vsm_Mavlink_demuxer_Duplicate_handler_dummy_struct.html" title="next page">struct ugcs::vsm::Mavlink_demuxer::Duplicate_handler_dummy_struct</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="class_ugcs_vsm_Mavlink_decoder.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">Previous</p>
+            <p class="prev-next-title">class ugcs::vsm::Mavlink_decoder</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="struct_ugcs_vsm_Mavlink_demuxer_Duplicate_handler_dummy_struct.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">Next</p>
+        <p class="prev-next-title">struct ugcs::vsm::Mavlink_demuxer::Duplicate_handler_dummy_struct</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -2239,20 +2254,19 @@
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="_static/js/index.c258f241e0e9126fa012.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2020, SPH Engineering.<br/>
+    &copy; Copyright 2020, SPH Engineering.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     
