@@ -4,11 +4,11 @@ var indexSectionsWithContent =
   1: "depstv",
   2: "v",
   3: "fgmorstv",
-  4: "ahiloprstv",
+  4: "achiloprstv",
   5: "v",
   6: "sv",
   7: "cfinos",
-  8: "fu"
+  8: "fsu"
 };
 
 var indexSectionNames =

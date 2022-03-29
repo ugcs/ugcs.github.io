@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['doublevalue',['DoubleValue',['../structVsTelemetry_1_1DoubleValue.html',1,'VsTelemetry']]]
+  ['doublevalue_3',['DoubleValue',['../structVsTelemetry_1_1DoubleValue.html',1,'VsTelemetry']]]
 ];
