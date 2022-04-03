@@ -60,7 +60,7 @@ jobs:
 
     - name: CPP-SDK SPHINX BUILD
       run: |
-        sudo pip install jinja2==2.11
+        sudo pip3 install jinja2==2.11
         sudo pip3 install sphinx
         sudo pip3 install pydata-sphinx-theme
         cd cpp-sdk/doc
